@@ -1,0 +1,151 @@
+﻿Peak memory usage: 46 MB
+Analysis results for brp.jani
+Experiment N=16, MAX=2, TD=1, TIME_BOUND=64
+
++ State space exploration
+  State size:  33 bytes
+  States:      3959
+  Transitions: 4244
+  Branches:    4593
+  Time:        0.0 s
+  Rate:        113114 states/s
+
++ Property T_1
+  Probability: 0
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  1
+    Time:        0.0 s
+
++ Property T_2
+  Probability: 0
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  1
+    Time:        0.0 s
+
++ Property T_A1
+  Probability: 0
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  1
+    Time:        0.0 s
+
++ Property T_A2
+  Probability: 0
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  1
+    Time:        0.0 s
+
++ Property P_A
+  Probability: 0
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  1
+    Time:        0.0 s
+
++ Property P_B
+  Probability: 0
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  1
+    Time:        0.0 s
+
++ Property P_1
+  Probability: 0.000423333443357766
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 2.35005704803786E-07
+    Iterations:  13
+    Time:        0.0 s
+
++ Property P_2
+  Probability: 2.64530890961023E-05
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 2.05561452068843E-07
+    Iterations:  14
+    Time:        0.0 s
+
++ Property P_3
+  Probability: 0.000185191226393368
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 3.32462409056221E-07
+    Iterations:  13
+    Time:        0.0 s
+
++ Property P_4
+  Probability: 8E-06
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.0 s
+
++ Property Dmax
+  Probability: 0.99957666007018
+  CDF:         { (0, 0.616283193899238), ..., (2, 0.616283193899238), (3, 0.910127020750394), ..., (5, 0.910127020750394), (6, 0.984557662091792), ..., (8, 0.984557662091792), (9, 0.997604915691637), ..., (11, 0.997604915691637), (12, 0.999364272603308), ..., (14, 0.999364272603308), (15, 0.999557303411534), ..., (17, 0.999557303411534), (18, 0.999575140431479), ..., (20, 0.999575140431479), (21, 0.999576560966776), ..., (23, 0.999576560966776), (24, 0.99957666007018), (25, 0.99957666007018) }
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 9.26098147627175E-09
+    Iterations:  77
+    Time:        0.0 s
+
++ Property Dmin
+  Probability: 0.99957666007018
+  CDF:         { (0, 0), ..., (31, 0), (32, 0.616283193899238), ..., (34, 0.616283193899238), (35, 0.910127020750394), ..., (37, 0.910127020750394), (38, 0.984557662091792), ..., (40, 0.984557662091792), (41, 0.997604915691637), ..., (43, 0.997604915691637), (44, 0.999364272603308), ..., (46, 0.999364272603308), (47, 0.999557303411534), ..., (49, 0.999557303411534), (50, 0.999575140431479), ..., (52, 0.999575140431479), (53, 0.999576560966776), ..., (55, 0.999576560966776), (56, 0.99957666007018), (57, 0.99957666007018) }
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 9.26098090378842E-09
+    Iterations:  217
+    Time:        0.0 s
+
++ Property Emax
+  Value: 33.4731564165206
+  Time:  0.0 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          3959
+    Time for min. prob. 1 states: 0.0 s
+
+  + Value iteration
+    Final error: 9.28199337237095E-07
+    Iterations:  36
+    Time:        0.0 s
+
++ Property Emin
+  Value: 1.48035359374461
+  Time:  0.0 s
+
+  + Precomputations
+    Max. prob. 0 states:          0
+    Time for max. prob. 0 states: 0.0 s
+    Max. prob. 1 states:          3959
+    Time for max. prob. 1 states: 0.0 s
+
+  + Value iteration
+    Final error: 4.31684611546201E-07
+    Iterations:  12
+    Time:        0.0 s

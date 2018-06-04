@@ -1,0 +1,84 @@
+{
+	"name": "Bounded Exponential Backoff",
+	"short": "BEB",
+	"type": "mdp",
+	"version": 1,
+	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
+	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
+	"source": "https://doi.org/10.1007/978-3-642-21461-5_4",
+	"description": "A Modest MDP model of the IEEE 802.3 exponential backoff procedure, adapted from the PRISM model of Giro et al. [1]. Each of `H´ hosts attempts up to `N´ times to transmit without collision on a shared communication channel using exponential backoff with a maximum backoff counter value of `K´.",
+	"references": [
+		"https://doi.org/10.1007/978-3-642-04081-8_23"
+	],
+	"parameters": [
+		{ "name": "H", "kind": "file", "description": "Number of hosts", "type": "positive integer" },
+		{ "name": "K", "kind": "file", "description": "Maximum value for backoff counter", "type": "positive integer" },
+		{ "name": "N", "kind": "open", "description": "Per-host number of tries before giving up", "type": "positive integer" }
+	],
+	"files": [
+		{
+			"file": "beb-3-4.jani",
+			"original-file": "beb-3.modest",
+			"conversion": {
+				"tool": "moconv",
+				"version": "3.0.50",
+				"url": "http://www.modestchecker.net/",
+				"command": "moconv.exe beb-3.modest -O beb-3-4.jani -E \"K=4\" --unroll-distrs"
+			},
+			"file-parameter-values": [
+				{ "name": "H", "value": 3 },
+				{ "name": "K", "value": 4 }
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{ "name": "N", "value": 3 }
+					],
+					"states": [
+						{ "number": 4528, "note": "mcsta" }
+					]
+				}
+			]
+		},
+		{
+			"file": "beb-4-8.jani",
+			"original-file": "beb-4.modest",
+			"conversion": {
+				"tool": "moconv",
+				"version": "3.0.50",
+				"url": "http://www.modestchecker.net/",
+				"command": "moconv.exe beb-4.modest -O beb-4-8.jani -E \"K=8\" --unroll-distrs"
+			},
+			"file-parameter-values": [
+				{ "name": "H", "value": 4 },
+				{ "name": "K", "value": 8 }
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{ "name": "N", "value": 7 }
+					],
+					"states": [
+						{ "number": 19401892, "note": "mcsta" }
+					]
+				}
+			]
+		}
+	],
+	"properties": [
+		{
+			"name": "LineSeized",
+			"type": "prob-reach-unbounded",
+			"description": "The maximum probability that some host managed to seize the line before any other gave up."
+		},
+		{
+			"name": "GaveUp",
+			"type": "prob-reach-unbounded",
+			"description": "The maximum probability that some host gave up before any other managed to seize the line."
+		}
+	],
+	"results": [
+		"results/beb-3-4.3.json",
+		"results/beb-4-8.7.json"
+	]
+}

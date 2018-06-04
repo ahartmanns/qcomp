@@ -1,0 +1,48 @@
+{
+	"file": "../beb-3-4.jani",
+	"log": "beb-3-4.3.txt",
+	"open-parameter-values": [
+		{ "name": "H", "value": 3 },
+		{ "name": "K", "value": 4 },
+		{ "name": "N", "value": 3 }
+	],
+	"date": "2018-06-05",
+	"tool": {
+		"name": "mcsta",
+		"version": "3.0.50",
+		"url": "http://www.modestchecker.net/",
+		"part-of": "the Modest Toolset",
+		"part-of-url": "http://www.modestchecker.net/"
+	},
+	"system": {
+		"cpu": "Intel Core i5-6600T",
+		"ram": "16",
+		"os": "Windows 10 1803 64-bit",
+		"runtime": ".NET Framework 4.7.2"
+	},
+	"command": "mcsta.exe beb-3-4.jani -S Memory -E \"N=3\" -O beb-3-4.3.txt",
+	"time": 1,
+	"data": [
+		{
+			"group": "State space exploration",
+			"values": [
+				{ "name": "time", "value": 0, "unit": "s" },
+				{ "name": "states", "value": 4528 },
+				{ "name": "transitions", "value": 4874 },
+				{ "name": "branches", "value": 6899 }
+			]
+		}
+	],
+	"results": [
+		{
+			"property": "LineSeized",
+			"value": 0.9166259765625,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "GaveUp",
+			"value": 0.0833740234375,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		}
+	]
+}

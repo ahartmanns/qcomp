@@ -1,0 +1,29 @@
+﻿Peak memory usage: 46 MB
+Analysis results for beb-3-4.jani
+Experiment N=3
+
++ State space exploration
+  State size:  16 bytes
+  States:      4528
+  Transitions: 4874
+  Branches:    6899
+  Time:        0.0 s
+  Rate:        92408 states/s
+
++ Property LineSeized
+  Probability: 0.9166259765625
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  8
+    Time:        0.0 s
+
++ Property GaveUp
+  Probability: 0.0833740234375
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  9
+    Time:        0.0 s

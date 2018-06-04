@@ -1,0 +1,110 @@
+{
+	"file": "../brp.jani",
+	"log": "mcsta.16-2-1-64.txt",
+	"open-parameter-values": [
+		{ "name": "N", "value": 16 },
+		{ "name": "MAX", "value": 2 },
+		{ "name": "TD", "value": 1 },
+		{ "name": "TIME_BOUND", "value": 64 }
+	],
+	"date": "2018-06-04",
+	"tool": {
+		"name": "mcsta",
+		"version": "3.0.50",
+		"url": "http://www.modestchecker.net/",
+		"part-of": "the Modest Toolset",
+		"part-of-url": "http://www.modestchecker.net/"
+	},
+	"system": {
+		"cpu": "Intel Core i7-4790",
+		"ram": "8",
+		"os": "Ubuntu 18.04 64-bit",
+		"runtime": "Mono 5.12.0.226"
+	},
+	"command": "mcsta.exe brp.jani -S Memory -E \"N=16,MAX=2,TD=1,TIME_BOUND=64\" -O mcsta.16-2-1-64.txt",
+	"time": 1,
+	"memory": 48,
+	"data": [
+		{
+			"group": "State space exploration",
+			"values": [
+				{ "name": "time", "value": 0, "unit": "s" },
+				{ "name": "states", "value": 3959 },
+				{ "name": "transitions", "value": 4244 },
+				{ "name": "branches", "value": 4593 }
+			]
+		}
+	],
+	"results": [
+		{
+			"property": "T_1",
+			"value": 0,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "T_2",
+			"value": 0,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "T_A1",
+			"value": 0,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "T_A2",
+			"value": 0,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "P_A",
+			"value": 0,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "P_B",
+			"value": 0,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "P_1",
+			"value": 0.000423333443357766,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "P_2",
+			"value": 2.64530890961023E-05,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "P_3",
+			"value": 0.000185191226393368,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "P_4",
+			"value": 8E-06,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "Dmax",
+			"value": 0.99957666007018,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "Dmin",
+			"value": 0.99957666007018,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "Emax",
+			"value": 33.4731564165206,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		},
+		{
+			"property": "Emin",
+			"value": 1.48035359374461,
+			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+		}
+	]
+}

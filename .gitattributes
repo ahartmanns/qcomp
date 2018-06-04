@@ -1,0 +1,10 @@
+* text=auto
+
+*.jani text
+*.js text
+*.json text
+*.md text
+*.modest text
+*.txt text
+
+*.pdf binary

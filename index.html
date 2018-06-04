@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>QMCC Benchmark Repository</title>
+	<link href="https://fonts.googleapis.com/css?family=Tajawal:400,700" rel="stylesheet">
+	<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js"></script>
+	<style>
+		html {
+			box-sizing: border-box;
+		}
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+		body {
+			margin: 16px auto; width: 67%; min-width: 640px; max-width: 1280px; padding: 0px;
+			font-family: 'Tajawal', sans-serif; font-size: 15px;
+			background-color: #FFFFFF; color: #000000;
+			hyphens: auto;
+		}
+		.light { color: #808080; }
+		.clickable { cursor: pointer; }
+		h1 {
+			font-size: 28px; font-weight: bold;
+			color: #404040;
+			padding: 0px; margin-top: 20px; margin-bottom: 16px;
+		}
+		h2 {
+			font-size: 20px; font-weight: bold;
+			color: #202020;
+			padding: 0px; margin-top: 16px; margin-bottom: 0px;
+		}
+		h3 {
+			font-size: 15px; font-weight: bold;
+			color: #000000;
+			padding: 0px; margin-top: 10px; margin-bottom: 0px;
+		}
+		h4 {
+			font-size: 13px; font-weight: bold;
+			color: #000000;
+			padding: 0px; margin-top: 5px; margin-bottom: 0px;
+		}
+		p {
+			padding: 0px; margin: 0.75ex 0px; line-height: 1.3;
+		}
+		ul {
+			padding: 0px; padding-left: 16px; margin: 0px;
+		}
+		li {
+			padding: 0px; margin: 0px; margin-bottom: 4px;
+		}
+		.compact li {
+			margin-bottom: 2px;
+		}
+		p, ul {
+			text-align: justify;
+		}
+		.linkcolour {
+			color: #4F85CA;
+		}
+		a {
+			text-decoration: none; color: #4F85CA;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		a:visited {
+			color: #000080;
+		}
+		a.nodec {
+			text-decoration: none;
+		}
+		a.nodec:hover {
+			text-decoration: none;
+		}
+		.tt {
+			font-family: 'Courier New', monospace; font-size: 105%;
+		}
+		.compact {
+			line-height: 1.3;
+		}
+		
+		/* Tables */
+		table {
+			margin: 0px; padding: 0px; border-collapse: collapse; empty-cells: show; border-spacing: 0px; border-width: 0px;
+		}
+		thead {
+		}
+		tr.evenrow {}
+		tr.oddrow {
+			/*background-color: #F0F0F0;*/
+		}
+		#modelsTable tr:hover {
+			background-color: #F0F0FF;
+		}
+		#modelsTable thead tr:hover {
+			background-color: #FFFFFF;
+		}
+		th {
+			margin: 0px; padding: 0px; padding-right: 1ex; font-weight: bold; text-align: left; vertical-align: baseline;
+		}
+		td {
+			margin: 0px; padding: 0px; padding-right: 1ex; vertical-align: baseline;
+		}
+		
+		/* Form elements */
+		fieldset {
+			font-size: 1em; border: 0px; padding: 0px; margin: 0px;
+		}
+		label, input, button, select {
+			font-size: inherit; padding: 0px 0.5ex; margin: 0px; font-family: 'Tajawal', sans-serif; 
+		}
+	</style>
+	<script>
+		// View model
+		var qmcc = {};
+		qmcc.params = [];
+		qmcc.modelTypes = [ "MDP", "MA", "PTA" ];
+		qmcc.models = ko.observableArray();
+		qmcc.filter = {
+			name: ko.observable(""),
+			type: ko.observable(undefined),
+			minStates: ko.observable(""),
+			maxStates: ko.observable("")
+		};
+		qmcc.sortBy = ko.observable("");
+		qmcc.sortAsc = ko.observable(true);
+		qmcc.filteredModels = ko.computed(function()
+		{
+			return this.models().filter(m =>
+				(m.name.toLowerCase().includes(this.filter.name().toLowerCase()) || m.short.toLowerCase().includes(this.filter.name().toLowerCase())) // name (via .name and .short)
+				&& (this.filter.type() === undefined || m.type === this.filter.type().toLowerCase()) // model type
+				&& (this.filter.minStates() === "" || isNaN(Number(this.filter.minStates())) || m.maxStates >= Number(this.filter.minStates())) // min. number of states
+				&& (this.filter.maxStates() === "" || isNaN(Number(this.filter.maxStates())) || m.minStates <= Number(this.filter.maxStates())) // max. number of states
+			);
+		}, qmcc);
+		qmcc.selectedModel = ko.observable(null);
+		qmcc.select = function(model)
+		{
+			loadResults(model);
+			qmcc.selectedModel(model);
+			history.replaceState(null, document.title, "#" + model.short.toLowerCase());
+			setTimeout(function() { document.getElementById("modelDiv").scrollIntoView(); }, 0);
+		};
+		qmcc.close = function()
+		{
+			history.replaceState(null, document.title, location.pathname + location.search);
+			qmcc.selectedModel(null);
+		}
+		
+		// Functions
+		function loadJson(path, callback) { fetch(path).then(response => response.json()).then(callback); }
+		function init()
+		{
+			var queryString = window.location.href.split("?");
+			if(queryString.length > 1) for(var param of queryString[1].split("&"))
+			{
+				var split = param.split("=");
+				qmcc.params.push({ name: split[0], value: split.length > 1 ? split[1] : true });
+			}
+			ko.applyBindings(qmcc);
+			var modelCount = -1;
+			loadJson("index.json", index =>
+			{
+				modelCount = index.length;
+				index.forEach(mr => loadJson(mr.path + "/index.json", model =>
+				{
+					model.path = mr.path;
+					if(model.references === undefined) model.references = [];
+					if(model.parameters === undefined) model.parameters = [];
+					if(model.results === undefined) model.results = [];
+					model.loadedResults = ko.observableArray();
+					model.minStates = getStateCount(model.files, Math.min, Number.MAX_SAFE_INTEGER);
+					model.maxStates = getStateCount(model.files, Math.max, 0);
+					model.author = separatePersonRef(model.author);
+					model.submitter = separatePersonRef(model.submitter);
+					qmcc.models.push(model);
+					if(qmcc.models().length === modelCount) onEndInit();
+				}));
+			});
+		}
+		function onEndInit()
+		{
+			if(window.location.hash !== "")
+			{
+				// Show the model whose short name was specified in the URL's #hash
+				for(var i = 0; i < qmcc.models().length; ++i)
+				{
+					if(qmcc.models()[i].short.toLowerCase() === window.location.hash.substr(1))
+					{
+						qmcc.select(qmcc.models()[i]);
+						break;
+					}
+				}
+				if(qmcc.selectedModel() === null) history.replaceState(null, document.title, location.pathname + location.search);
+			}
+		}
+		function toggleShowResultDetails(result)
+		{
+			result.showDetails(!result.showDetails());
+		}
+		function mergeResultsData(firstItem, secondItems)
+		{
+			if(secondItems !== undefined)
+			{
+				for(var i = 0; i < secondItems.length; ++i)
+				{
+					var rd = secondItems[i];
+					if(rd.group === undefined)
+					{
+						// Merge
+						if(rd.values !== undefined)
+						{
+							if(firstItem.values === undefined) firstItem.values = [];
+							firstItem.values = firstItem.values.concat(rd.values);
+						}
+						if(rd.data !== undefined)
+						{
+							if(firstItem.data === undefined) firstItem.data = [];
+							firstItem.data = firstItem.data.concat(rd.data);
+						}
+					}
+					else
+					{
+						// Append
+						if(firstItem.data === undefined) firstItem.data = [];
+						firstItem.data.push(rd);
+					}
+				}
+			}
+		}
+		function loadResults(model)
+		{
+			if(model.results === undefined) return; // results have already been loaded
+			var modelResults = model.results;
+			model.results = undefined;
+			modelResults.forEach(mr => loadJson(model.path + "/" + mr, result =>
+			{
+				result.model = model;
+				result.path = model.path + "/" + mr;
+				result.path = result.path.substr(0, result.path.lastIndexOf("/"));
+				result.resultData = { values: [ { name: "total time", value: result.time, unit: "s" } ] };
+				if(result.memory !== undefined) result.resultData.values.push({ name: "peak memory", value: result.memory, unit: "MB" });
+				if(result.data !== undefined) mergeResultsData(result.resultData, result.data);
+				mergeResultsData(result.resultData, result.results.map(r =>
+				{
+					var rdata = { group: "Property " + r.property, values: [ { name: "Result", value: r.value } ] };
+					mergeResultsData(rdata, r.data);
+					return rdata;
+				}));
+				result.showDetails = ko.observable(false);
+				model.loadedResults.push(result);
+			}));
+		}
+		function sortModels(sortBy)
+		{
+			var sortAsc = true;
+			var sortFun = null;
+			if(sortBy === "short") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.short == right.short ? 0 : (left.short < right.short ? -1 : 1));
+			else if(sortBy === "name") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.name == right.name ? 0 : (left.name < right.name ? -1 : 1));
+			else if(sortBy === "type") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.type == right.type ? 0 : (left.type < right.type ? -1 : 1));
+			else if(sortBy === "parameters") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.parameters.length - right.parameters.length);
+			else if(sortBy === "states") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.minStates - right.minStates === 0 ? left.maxStates - right.maxStates : left.minStates - right.minStates);
+			else if(sortBy === "properties") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.properties.length - right.properties.length);
+			else return; // should not happen
+			if(qmcc.sortBy() === sortBy) qmcc.sortAsc(!qmcc.sortAsc());
+			else qmcc.sortAsc(true);
+			sortAsc = qmcc.sortAsc();
+			qmcc.sortBy(sortBy);
+			qmcc.models.sort(sortFun);
+		}
+		function propertiesToShortList(properties)
+		{
+			var list = "";
+			var props = properties.filter(p => p.type == "prob-reach-unbounded");
+			if(props.length != 0) list += ", " + props.length.toLocaleString() + " × P";
+			props = properties.filter(p => p.type == "prob-reach-step-bounded");
+			if(props.length != 0) list += ", " + props.length.toLocaleString() + " × Ps";
+			props = properties.filter(p => p.type == "prob-reach-reward-bounded");
+			if(props.length != 0) list += ", " + props.length.toLocaleString() + " × Pr";
+			props = properties.filter(p => p.type == "exp-reward");
+			if(props.length != 0) list += ", " + props.length.toLocaleString() + " × E";
+			return list.length == 0 ? list : list.substr(2);
+		}
+		function propertyTypeToLongString(propertyType)
+		{
+			if(propertyType == "prob-reach-unbounded") return "unbounded probabilistic reachability";
+			else if(propertyType == "prob-reach-step-bounded") return "step-bounded probabilistic reachability";
+			else if(propertyType == "prob-reach-reward-bounded") return "reward-bounded probabilistic reachability";
+			else if(propertyType == "exp-reward") return "expected accumulated reachability reward";
+			else return propertyType;
+		}
+		function propertyTypeToShortString(propertyType)
+		{
+			if(propertyType == "prob-reach-unbounded") return "P";
+			else if(propertyType == "prob-reach-step-bounded") return "Ps";
+			else if(propertyType == "prob-reach-reward-bounded") return "Pr";
+			else if(propertyType == "exp-reward") return "E";
+			else return propertyType;
+		}
+		function getStateCount(files, op, states)
+		{
+			for(var i = 0; i < files.length; ++i)
+			{
+				var openParamValues = files[i]["open-parameter-values"];
+				for(var j = 0; j < openParamValues.length; ++j)
+				{
+					if(openParamValues[j].states !== undefined)
+					{
+						states = op(states, op(...openParamValues[j].states.map(s => s.number)));
+					}
+				}
+			}
+			return states;
+		}
+		function separatePersonRef(pref)
+		{
+			var name = pref.substr(0, pref.indexOf(" <"));
+			var email = pref.substr(pref.indexOf("<") + 1, pref.length - pref.indexOf("<") - 2);
+			return { "name": name, "email": email };
+		}
+		function getLinkTitle(url)
+		{
+			if(url.length > 16 && url.substr(0, 16) === "https://doi.org/") return "DOI " + url.substr(16);
+			else if(url.length > 8 && url.substr(0, 8) === "https://") return url.substr(8);
+			else if(url.length > 7 && url.substr(0, 7) === "http://") return url.substr(7);
+			else return url;
+		}
+		function formatText(text)
+		{
+			return text
+				.replace(/&/g, "&amp;")
+				.replace(/</g, "&lt;")
+				.replace(/>/g, "&gt;")
+				.replace(/`/g, "<span class=\"tt\">")
+				.replace(/´/g, "</span>");
+		}
+		function toVersionFileName(file, version)
+		{
+			return file.substr(0, file.lastIndexOf(".")) + ".v" + version.toString() + file.substr(file.lastIndexOf("."));
+		}
+	</script>
+</head>
+<body onload="init()">
+
+<h1>QMCC Benchmarks</h1>
+
+<div style="margin: 2.5ex 0ex 1ex 0ex; border: 1px solid #D0D0D0; padding: 1ex 1.5ex;">
+	<div style="position: absolute;"><div style="position: relative; top: -2.85ex; left: -0.5ex; padding: 0px 0.5ex; background-color: #FFFFFF; display: inline-block;">Search</div></div>
+	<div style="margin-top: 0.5ex;"></div>
+	<fieldset>
+		<input type="text" data-bind="value: filter.name, valueUpdate: 'input'" placeholder="Show all models" style="width: 32ex;" />
+		&nbsp;of type&nbsp;
+		<select data-bind="options: modelTypes, optionsCaption: '(all)', value: filter.type"></select>
+		&nbsp;with&nbsp;
+		<input type="text" data-bind="value: filter.minStates, valueUpdate: 'input'" placeholder="zero" style="width: 12ex;" />
+		-
+		<input type="text" data-bind="value: filter.maxStates, valueUpdate: 'input'" placeholder="infinity" style="width: 12ex;" />
+		&nbsp;states
+	</fieldset>
+</div>
+<div style="margin: 2.5ex 0ex 1ex 0ex; border: 1px solid #D0D0D0; padding: 1ex 1.5ex;">
+	<div style="position: absolute; pointer-events: none;"><div style="position: relative; top: -2.85ex; left: -0.5ex; padding: 0px 0.5ex; background-color: #FFFFFF; display: inline-block;">Models</div></div>
+	<div style="margin-top: 0.5ex;"></div>
+	<table id="modelsTable" data-bind="visible: filteredModels().length !== 0">
+		<thead>
+			<tr>
+				<th class="clickable" onClick="sortModels('short');">Model <span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'short' ? 'visible' : 'hidden' }"></span></th>
+				<th class="clickable" onClick="sortModels('name');">Name<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'name' ? 'visible' : 'hidden' }"></span></th>
+				<th class="clickable" onClick="sortModels('type');">Type<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'type' ? 'visible' : 'hidden' }"></span></th>
+				<th colspan="2" class="clickable" onClick="sortModels('parameters');">Parameters<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'parameters' ? 'visible' : 'hidden' }"></span></th>
+				<th colspan="3" class="clickable" style="text-align: center;" onClick="sortModels('states');">States<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'states' ? 'visible' : 'hidden' }"></span></th>
+				<th colspan="2" class="clickable" onClick="sortModels('properties');">Properties<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'properties' ? 'visible' : 'hidden' }"></span></th>
+			</tr>
+		</thead>
+		<tbody data-bind="foreach: filteredModels">
+			<tr class="clickable" data-bind="click: $root.select, css: { evenrow: $index() % 2 === 0, oddrow: $index() % 2 === 1 }">
+				<td data-bind="text: short"></td>
+				<td data-bind="text: name"></td>
+				<td data-bind="text: type.toUpperCase()"></td>
+				<td data-bind="text: parameters.length.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
+				<td data-bind="text: '&nbsp;(' + parameters.filter(p => p.kind == 'file').length.toLocaleString() + '/' + parameters.filter(p => p.kind == 'open').length.toLocaleString() + ')'" class="light"></td>
+				<td data-bind="text: minStates.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
+				<td class="light" style="text-align: center; padding-right: 0px;">&nbsp;-&nbsp;</td>
+				<td data-bind="text: maxStates.toLocaleString()"></td>
+				<td data-bind="text: properties.length.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
+				<td data-bind="text: '&nbsp;(' + propertiesToShortList(properties) + ')'" class="light"></td>
+			</tr>
+		</tbody>
+	</table>
+	<div data-bind="visible: filteredModels().length === 0" style="font-style: italic;">
+		No models found for the specified criteria.
+	</div>
+</div>
+<!-- ko if: selectedModel() !== null -->
+	<div id="modelDiv" data-bind="with: selectedModel" style="margin: 5ex 0ex 1ex 0ex; border: 1px solid #D0D0D0; padding: 1ex 1.5ex; position: relative;">
+		<div data-bind="click: $root.close" class="linkcolour clickable" style="position: absolute; top: 0px; right: 0.5ex; text-transform: uppercase; font-size: 90%;">
+			(<span style="font-size: 90%; font-weight: bold;">close</span>)
+		</div>
+		<h2 id="model" data-bind="text: name + ' (' + short + ')'" style="margin-top: 0px;"></h2>
+		<p>
+			<span data-bind="text: author.name === submitter.name && author.email === submitter.email ? 'Created and submitted by ' : 'Created by '"></span><a data-bind="text: author.name, attr: { href: 'mailto:' + author.email }"></a><span data-bind="visible: author.name !== submitter.name || author.email !== submitter.email"><br />Submitted by <a data-bind="text: submitter.name, attr: { href: 'mailto:' + submitter.email }"></a></span>.<br />
+			First presented in <a data-bind="text: getLinkTitle(source), attr: { href: source }"></a>.
+		</p>
+		<p data-bind="html: formatText(description)"></p>
+		<!-- ko if: references.length !== 0 -->
+			<table data-bind="foreach: references" class="compact">
+				<tr>
+					<td style="text-align: right;"><span data-bind="text: '[' + ($index() + 1).toLocaleString() + ']'"></span></td>
+					<td><a data-bind="text: getLinkTitle($data), attr: { href: $data }"></a></td>
+				</tr>
+			</table>
+		<!-- /ko -->
+		<!-- ko if: parameters.length !== 0 -->
+			<h3 id="parameters">Parameters</h3>
+			<table data-bind="foreach: parameters" class="compact">
+				<tr>
+					<td data-bind="text: name" class="tt"></td>
+					<td data-bind="text: type === undefined ? '' : '(' + type + ')'"></td>
+					<td data-bind="text: formatText(description) + (kind === 'file' ? ' (hard-coded in files)' : '')"></td>
+				</tr>
+			</table>
+		<!-- /ko -->
+		<h3 id="properties">Properties</h3>
+		<table data-bind="foreach: properties" class="compact">
+			<tr>
+				<td data-bind="text: name" class="tt"></td>
+				<td data-bind="text: '&nbsp;(' + propertyTypeToShortString(type) + ')', attr: { title: propertyTypeToLongString(type) }"></td>
+				<td data-bind="text: formatText(description)"></td>
+			</tr>
+		</table>
+		<h3 id="files">Files</h3>
+		<ul data-bind="foreach: files">
+			<li class="compact">
+				<a data-bind="text: file, attr: { href: $parent.path + '/' + file, download: toVersionFileName(file.substr(file.lastIndexOf('/') + 1), $parent.version) }"></a>
+				<span data-bind="visible: $data['file-parameter-values'].length !== 0">
+					(<span data-bind="foreach: $data['file-parameter-values']"><span data-bind="text: name" class="tt"></span>
+					<span>=</span>
+					<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['file-parameter-values'].length - 1">, </span></span>)
+				</span>
+				<span data-bind="if: $data['original-file'] !== undefined"><br />Original file: <a data-bind="text: $data['original-file'], attr: { href: $parent.path + '/' + $data['original-file'], download: toVersionFileName($data['original-file'].substr($data['original-file'].lastIndexOf('/') + 1), $parent.version) }"></a></span>
+				<span data-bind="visibility: $data['open-parameter-values'].length !== 0">
+					<br />Parameter settings:<br />
+					<ul data-bind="foreach: $data['open-parameter-values']">
+						<li>
+							<span data-bind="foreach: values">
+								<span data-bind="text: name" class="tt"></span>
+								<span>=</span>
+								<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent.values.length - 1">, </span>
+							</span>
+							<span data-bind="if: states !== undefined">
+								<br />
+								<table data-bind="foreach: states" class="compact">
+									<tr>
+										<td data-bind="text: number.toLocaleString() + ' states&nbsp;'" style="text-align: right; padding-right: 0px;"></td>
+										<td data-bind="text: '(' + note + ')'"></td>
+									</tr>
+								</table>
+							</span>
+						</li>
+					</ul>
+				</span>
+			</li>
+		</ul>
+		<!-- ko if: loadedResults().length !== 0 -->
+			<h3 id="results">Results</h3>
+			<ul data-bind="foreach: loadedResults">
+				<li class="compact">
+					<a data-bind="text: file.substr(file.lastIndexOf('/') + 1), attr: { href: path + '/' + file, download: toVersionFileName(file.substr(file.lastIndexOf('/') + 1), model.version) }"></a>
+					<!-- ko if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0 -->
+						/ <span data-bind="foreach: $data['open-parameter-values']"><span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['open-parameter-values'].length - 1">, </span></span>
+					<!-- /ko -->
+					/ <span data-bind="text: tool.name"></span>
+					<span data-bind="click: toggleShowResultDetails" class="linkcolour clickable" style="text-transform: uppercase; font-size: 90%;">(<span data-bind="text: showDetails() ? 'hide' : 'show'" style="font-size: 90%; font-weight: bold;"></span>)</span>
+					
+					<!-- ko if: showDetails -->
+					
+					<!-- ko if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0 -->
+						<br />
+						Parameters:
+						<span data-bind="foreach: $data['open-parameter-values']">
+							<span data-bind="text: name" class="tt"></span>
+							<span>=</span>
+							<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['open-parameter-values'].length - 1">, </span>
+						</span>
+					<!-- /ko -->
+					
+					<!-- Date, tool and system information -->
+					<p>
+					Results obtained on <span data-bind="text: date"></span>
+					with <!-- ko if: tool.url !== undefined --><a data-bind="text: tool.name, attr: { href: tool.url }"></a><!-- /ko --><!-- ko if: tool.url === undefined --><span data-bind="text: tool.name"></span><!-- /ko -->
+					version <span data-bind="text: tool.version"></span>
+					<!-- ko if: tool['part-of'] !== undefined -->
+						(part of <!-- ko if: tool['part-of-url'] !== undefined --><a data-bind="text: tool['part-of'], attr: { href: tool['part-of-url'] }"></a><!-- /ko --><!-- ko if: tool['part-of-url'] === undefined --><span data-bind="text: tool['part-of']"></span><!-- /ko -->)
+					<!-- /ko -->
+					on an <span data-bind="text: system.cpu"></span> system
+					with <span data-bind="text: system.ram.toLocaleString()"></span> GB RAM
+					running <span data-bind="text: system.os"></span><!-- ko if: system.runtime !== undefined --> and <span data-bind="text: system.runtime"></span><!-- /ko -->.
+					</p>
+										
+					<!-- Command line -->
+					<!-- ko if: $data.command !== undefined -->
+						<div style="margin: 2.5ex 0ex 1ex 0ex; border: 1px solid #D0D0D0; padding: 1ex 1.5ex;">
+							<div style="position: absolute;"><div style="position: relative; top: -2.67ex; left: -0.5ex; padding: 0px 0.5ex; background-color: #FFFFFF; display: inline-block;">Command</div></div>
+							<div style="margin-top: 0.5ex;"></div>
+							<p data-bind="text: command" class="tt" style="text-align: left; margin: 1ex -1.5ex -1ex -1.5ex; padding: 0ex 1.5ex 1ex 1.5ex; white-space: nowrap; overflow-x: scroll;"></p>
+						</div>
+					<!-- /ko -->
+
+					<!-- Template for data trees -->
+					<script type="text/html" id="resultdatatree">
+						<!-- ko if: $data.group !== undefined -->
+							<h4 data-bind="text: group"></h4>
+						<!-- /ko -->
+						<!-- ko if: $data.values !== undefined -->
+							<table data-bind="foreach: values">
+								<tr>
+									<td data-bind="text: name.substr(0, 1).toUpperCase() + name.substr(1) + ':'"></td>
+									<td>
+										<span data-bind="text: (typeof value === 'number' ? value.toString() : value) + ($data.unit === undefined ? '' : ' ' + unit)"></span>
+									</td>
+								</tr>
+							</table>
+						<!-- /ko -->
+						<!-- ko if: $data.data !== undefined -->
+							<ul data-bind="foreach: data">
+								<li data-bind="template: 'resultdatatree'"></li>
+							</ul>
+						<!-- /ko -->
+					</script>
+					
+					<!-- Property results -->
+					<div style="margin: 2.5ex 0ex 1ex 0ex; border: 1px solid #D0D0D0; padding: 1ex 1.5ex;">
+						<div style="position: absolute;"><div style="position: relative; top: -2.67ex; left: -0.5ex; padding: 0px 0.5ex; background-color: #FFFFFF; display: inline-block;">Results</div></div>
+						<div style="margin-top: 0.5ex;"></div>
+							<!-- ko template: { name: 'resultdatatree', data: resultData } -->
+							<!-- /ko -->
+					</div>
+					
+					<!-- /ko -->
+				</li>
+			</ul>
+		<!-- /ko -->
+	</div>
+<!-- /ko -->
+
+</body>
+</html>
