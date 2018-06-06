@@ -7,7 +7,7 @@
 	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"source": "https://doi.org/10.1007/978-3-642-21461-5_4",
-	"description": "A Modest MDP model of the IEEE 802.3 exponential backoff procedure, adapted from the PRISM model of Giro et al. [1]. Each of `H´ hosts attempts up to `N´ times to transmit without collision on a shared communication channel using exponential backoff with a maximum backoff counter value of `K´.",
+	"description": "A Modest MDP model of the IEEE 802.3 exponential backoff procedure, adapted from the PRISM model of Giro et al. [1]. Each of `H´ hosts attempts up to `N´ times to transmit without collision on a shared communication channel using exponential backoff with a maximum backoff counter value of `K´. All nondeterminism in this model is known to be spurious for the two specified properties, and the extremely large state spaces for higher values of `H´ collapse when methods such as partial order reduction are used.",
 	"references": [
 		"https://doi.org/10.1007/978-3-642-04081-8_23"
 	],
@@ -61,6 +61,54 @@
 					],
 					"states": [
 						{ "number": 19401892, "note": "mcsta" }
+					]
+				}
+			]
+		},
+		{
+			"file": "beb-5-16.jani",
+			"original-file": "beb-5.modest",
+			"conversion": {
+				"tool": "moconv",
+				"version": "3.0.50",
+				"url": "http://www.modestchecker.net/",
+				"command": "moconv.exe beb-5.modest -O beb-5-16.jani -E \"K=16\" --unroll-distrs"
+			},
+			"file-parameter-values": [
+				{ "name": "H", "value": 5 },
+				{ "name": "K", "value": 16 }
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{ "name": "N", "value": 15 }
+					],
+					"states": [
+						{ "order": 12 }
+					]
+				}
+			]
+		},
+		{
+			"file": "beb-6-16.jani",
+			"original-file": "beb-6.modest",
+			"conversion": {
+				"tool": "moconv",
+				"version": "3.0.50",
+				"url": "http://www.modestchecker.net/",
+				"command": "moconv.exe beb-6.modest -O beb-9-16.jani -E \"K=16\" --unroll-distrs"
+			},
+			"file-parameter-values": [
+				{ "name": "H", "value": 6 },
+				{ "name": "K", "value": 16 }
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{ "name": "N", "value": 15 }
+					],
+					"states": [
+						{ "order": 14 }
 					]
 				}
 			]
