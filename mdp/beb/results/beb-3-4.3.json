@@ -1,5 +1,6 @@
 {
 	"file": "../beb-3-4.jani",
+	"version": 1,
 	"log": "beb-3-4.3.txt",
 	"open-parameter-values": [
 		{ "name": "H", "value": 3 },
@@ -31,18 +32,16 @@
 				{ "name": "transitions", "value": 4874 },
 				{ "name": "branches", "value": 6899 }
 			]
-		}
-	],
-	"results": [
+		},
 		{
 			"property": "LineSeized",
 			"value": 0.9166259765625,
-			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+			"values": [ { "name": "time", "value": 0, "unit": "s" } ]
 		},
 		{
 			"property": "GaveUp",
 			"value": 0.0833740234375,
-			"data": [ { "values": [ { "name": "time", "value": 0, "unit": "s" } ] } ]
+			"values": [ { "name": "time", "value": 0, "unit": "s" } ]
 		}
 	]
 }

@@ -1,5 +1,6 @@
 {
 	"file": "../beb-4-8.jani",
+	"version": 1,
 	"log": "beb-4-8.7.txt",
 	"open-parameter-values": [
 		{ "name": "H", "value": 4 },
@@ -31,18 +32,16 @@
 				{ "name": "transitions", "value": 20164086 },
 				{ "name": "branches", "value": 34723782 }
 			]
-		}
-	],
-	"results": [
+		},
 		{
 			"property": "LineSeized",
 			"value": 0.999885498058698,
-			"data": [ { "values": [ { "name": "time", "value": 9, "unit": "s" } ] } ]
+			"values": [ { "name": "time", "value": 9, "unit": "s" } ]
 		},
 		{
 			"property": "GaveUp",
 			"value": 0.000114501547257759,
-			"data": [ { "values": [ { "name": "time", "value": 10, "unit": "s" } ] } ]
+			"values": [ { "name": "time", "value": 10, "unit": "s" } ]
 		}
 	]
 }

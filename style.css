@@ -1,0 +1,162 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 16px auto; width: 67%; min-width: 640px; max-width: 1280px; padding: 0px;
+	font-family: 'Tajawal', sans-serif; font-size: 15px;
+	background-color: #FFFFFF; color: #000000;
+	hyphens: auto;
+}
+
+.light { color: #808080; }
+.clickable { cursor: pointer; }
+
+h1 {
+	font-size: 28px; font-weight: bold;
+	color: #404040;
+	padding: 0px; margin-top: 20px; margin-bottom: 16px;
+}
+
+h2 {
+	font-size: 20px; font-weight: bold;
+	color: #202020;
+	padding: 0px; margin-top: 16px; margin-bottom: 0px;
+}
+
+h3 {
+	font-size: 15px; font-weight: bold;
+	color: #000000;
+	padding: 0px; margin-top: 10px; margin-bottom: 0px;
+}
+
+h4 {
+	font-size: 15px; font-weight: bold;
+	color: #000000;
+	padding: 0px; margin: 0px;
+}
+
+p {
+	padding: 0px; margin: 0.75ex 0px; line-height: 1.3;
+}
+
+ul {
+	padding: 0px; padding-left: 16px; margin: 0px;
+}
+
+li {
+	padding: 0px; margin: 0px; margin-bottom: 4px;
+}
+
+.compact li {
+	margin-bottom: 2px;
+}
+
+p {
+	margin: 0.75ex 0ex;
+}
+
+p, ul {
+	text-align: justify;
+}
+
+.linkcolour {
+	color: #4F85CA;
+}
+
+a {
+	text-decoration: none; color: #4F85CA;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #000080;
+}
+
+a.nodec {
+	text-decoration: none;
+}
+
+a.nodec:hover {
+	text-decoration: none;
+}
+
+.tt {
+	font-family: 'Courier New', monospace; font-size: 105%;
+}
+
+.compact {
+	line-height: 1.3;
+}
+
+
+/* Tables */
+
+table {
+	margin: 0px; padding: 0px; border-collapse: collapse; empty-cells: show; border-spacing: 0px; border-width: 0px;
+}
+
+thead {
+}
+
+tr.evenrow {}
+
+tr.oddrow {
+	/*background-color: #F0F0F0;*/
+}
+
+#modelsTable tr:hover {
+	background-color: #F0F0FF;
+}
+
+#modelsTable thead tr:hover {
+	background-color: #FFFFFF;
+}
+
+th {
+	margin: 0px; padding: 0px; padding-right: 1ex; font-weight: bold; text-align: left; vertical-align: baseline;
+}
+
+td {
+	margin: 0px; padding: 0px; padding-right: 1ex; vertical-align: baseline;
+}
+
+
+/* Form elements */
+
+fieldset {
+	font-size: 1em; border: 0px; padding: 0px; margin: 0px;
+}
+
+label, input, button, select {
+	font-size: inherit; padding: 0px 0.5ex; margin: 0px; font-family: 'Tajawal', sans-serif; 
+}
+
+
+/* Boxes */
+
+.box {
+	margin: 2.5ex 0ex 1ex 0ex; border: 1px solid #D0D0D0; padding: 1.5ex 1.5ex 1ex 1.5ex; position: relative;
+}
+
+.boxlabelo {
+	position: absolute; pointer-events: none; margin-bottom: 0.5ex;
+}
+
+.boxlabel {
+	position: relative; top: -3.35ex; left: -0.5ex; padding: 0px 0.5ex; background-color: #FFFFFF; display: inline-block;
+}
+.boxlabelc {
+	position: relative; top: -3.17ex; left: -0.5ex; padding: 0px 0.5ex; background-color: #FFFFFF; display: inline-block;
+}
+
+
+
+
