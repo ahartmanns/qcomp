@@ -1,7 +1,7 @@
 {
 	"file": "../beb-4-8.jani",
 	"version": 1,
-	"log": "beb-4-8.7.txt",
+	"log": "mcsta.4-8-7.txt",
 	"open-parameter-values": [
 		{ "name": "H", "value": 4 },
 		{ "name": "K", "value": 8 },
