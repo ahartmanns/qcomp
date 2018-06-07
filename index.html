@@ -253,6 +253,9 @@
 					<!-- Detailed results -->
 					<div class="box">
 						<div class="boxlabelo"><div class="boxlabelc">Results</div></div>
+						<p style="margin-top: 0ex;">
+							Log: <a data-bind="text: log.substr(log.lastIndexOf('/') + 1), attr: { href: path + '/' + log, download: toVersionFileName(log.substr(log.lastIndexOf('/') + 1), version) }"></a>
+						</p>
 						<!-- ko foreach: data -->
 							<!-- ko template: 'resultdatatree' -->
 							<!-- /ko -->
