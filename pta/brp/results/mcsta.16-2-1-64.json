@@ -1,6 +1,8 @@
 {
 	"file": "../brp.jani",
 	"version": 1,
+	"date": "2018-06-04",
+	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"log": "mcsta.16-2-1-64.txt",
 	"open-parameter-values": [
 		{ "name": "N", "value": 16 },
@@ -8,7 +10,6 @@
 		{ "name": "TD", "value": 1 },
 		{ "name": "TIME_BOUND", "value": 64 }
 	],
-	"date": "2018-06-04",
 	"tool": {
 		"name": "mcsta",
 		"version": "3.0.50",

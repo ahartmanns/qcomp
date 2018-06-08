@@ -96,6 +96,7 @@ function loadResults(model)
 		result.path = model.path + "/" + mr;
 		result.path = result.path.substr(0, result.path.lastIndexOf("/"));
 		result.showDetails = ko.observable(false);
+		result.submitter = separatePersonRef(result.submitter);
 		model.loadedResults.push(result);
 	}));
 }

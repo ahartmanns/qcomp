@@ -1,13 +1,14 @@
 {
 	"file": "../beb-3-4.jani",
 	"version": 1,
+	"date": "2018-06-05",
+	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"log": "mcsta.3-4-3.txt",
 	"open-parameter-values": [
 		{ "name": "H", "value": 3 },
 		{ "name": "K", "value": 4 },
 		{ "name": "N", "value": 3 }
 	],
-	"date": "2018-06-05",
 	"tool": {
 		"name": "mcsta",
 		"version": "3.0.50",

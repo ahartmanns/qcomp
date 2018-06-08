@@ -49,11 +49,7 @@ ul {
 }
 
 li {
-	padding: 0px; margin: 0px; margin-bottom: 4px;
-}
-
-.compact li {
-	margin-bottom: 2px;
+	padding: 0px; margin: 0px; margin-bottom: 2px;
 }
 
 p {
