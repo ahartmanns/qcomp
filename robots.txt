@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /ctmc/
+Disallow: /dtmc/
+Disallow: /ma/
+Disallow: /mdp/
+Disallow: /pta/
