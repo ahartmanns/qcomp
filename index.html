@@ -135,7 +135,7 @@
 					using the following command:
 				</div>
 				<div data-bind="text: conversion.command" class="tt" style="text-align: left; text-indent: -3ex; padding-left: 3ex;"></div>
-				<div data-bind="visibility: $data['open-parameter-values'].length !== 0">
+				<div data-bind="if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0">
 					Parameter settings:<br />
 					<ul data-bind="foreach: $data['open-parameter-values']">
 						<li>

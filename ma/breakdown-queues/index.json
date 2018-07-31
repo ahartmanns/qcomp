@@ -1,0 +1,49 @@
+{
+	"name": "Queueing System with Breakdowns",
+	"short": "breakdown-queues",
+	"type": "ma",
+	"version": 1,
+	"date": "2018-07-31",
+	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
+	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
+	"source": "https://doi.org/10.4121/uuid:1453a13b-10ae-418f-a1ae-4acf96028118",
+	"description": "A queueing system consisting of a buffered server processing tasks from ten sources of two different types (five each). All components (server and sources) can fail. There is a single repairman with a nondeterministic repair policy. The model corresponds to the system described in Section 4.4 of Kroese and Nicola [1] except for the centralised repairman with a single repair rate.",
+	"references": [
+		"https://doi.org/10.1016/S0166-5316(99)00036-X"
+	],
+	"files": [
+		{
+			"file": "breakdown-queues.jani",
+			"original-file": "breakdown-queues.modest",
+			"conversion": {
+				"tool": "moconv",
+				"version": "3.0.72",
+				"url": "http://www.modestchecker.net/",
+				"command": "moconv.exe breakdown-queues.modest -O breakdown-queues.jani"
+			},
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{ "number": 20583, "note": "mcsta" }
+					]
+				}
+			]
+		}
+	],
+	"properties": [
+		{
+			"name": "Min",
+			"type": "prob-reach-unbounded",
+			"description": "The minimum probability for the buffer to become full before ever being empty."
+		},
+		{
+			"name": "Max",
+			"type": "prob-reach-unbounded",
+			"description": "The maximum probability for the buffer to become full before ever being empty."
+		}
+	],
+	"results": [
+		"results/mcsta.json"
+	]
+}
