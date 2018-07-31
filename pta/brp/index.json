@@ -1,6 +1,6 @@
 {
 	"name": "Bounded Retransmission Protocol",
-	"short": "BRP",
+	"short": "brp",
 	"type": "pta",
 	"version": 1,
 	"date": "2018-06-04",

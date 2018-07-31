@@ -1,0 +1,63 @@
+﻿{
+	"file": "../bitcoin-attack.jani",
+	"version": 1,
+	"date": "2018-07-31",
+	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
+	"open-parameter-values": [
+		{ "name": "MALICIOUS", "value": 20 },
+		{ "name": "CD", "value": 6 }
+	],
+	"tool": {
+		"name": "mcsta",
+		"version": "3.0.72",
+		"url": "http://www.modestchecker.net/",
+		"part-of": "the Modest Toolset",
+		"part-of-url": "http://www.modestchecker.net/"
+	},
+	"system": {
+		"cpu": "Intel Core i7-4790",
+		"ram": 8,
+		"os": "Ubuntu 18.04",
+		"runtime": "Mono 5.12.0.301"
+	},
+	"command": "mcsta.exe ../bitcoin-attack.jani -S Memory -E \"MALICIOUS=20, CD=6\" -O mcsta.20-6.json Json",
+	"time": 0,
+	"memory": 44171264,
+	"data": [
+		{
+			"group": "State space exploration",
+			"values": [
+				{ "name": "State size", "value": 6, "unit": "B" },
+				{ "name": "States", "value": 177 },
+				{ "name": "Transitions", "value": 227 },
+				{ "name": "Branches", "value": 284 },
+				{ "name": "Time", "value": 0, "unit": "s" },
+				{ "name": "Rate", "value": 9833.3333333333339 }
+			]
+		},
+		{
+			"property": "T_MWinMin",
+			"value": 3736.0478467258331,
+			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Max. prob. 0 states", "value": 0 },
+						{ "name": "Time for max. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Max. prob. 1 states", "value": 177 },
+						{ "name": "Time for max. prob. 1 states", "value": 0, "unit": "s" }
+					]
+				},
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 9.9485427689884462E-07 },
+						{ "name": "Iterations", "value": 1352 },
+						{ "name": "Time", "value": 0, "unit": "s" }
+					]
+				}
+			]
+		}
+	]
+}

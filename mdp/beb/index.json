@@ -1,6 +1,6 @@
 {
 	"name": "Bounded Exponential Backoff",
-	"short": "BEB",
+	"short": "beb",
 	"type": "mdp",
 	"version": 1,
 	"date": "2018-06-05",
@@ -84,7 +84,7 @@
 						{ "name": "N", "value": 15 }
 					],
 					"states": [
-						{ "order": 12 }
+						{ "number": 1842013522945, "note": "Storm/dd" }
 					]
 				}
 			]
@@ -108,7 +108,7 @@
 						{ "name": "N", "value": 15 }
 					],
 					"states": [
-						{ "order": 14 }
+						{ "number": 361667872016064, "note": "Storm/dd" }
 					]
 				}
 			]
