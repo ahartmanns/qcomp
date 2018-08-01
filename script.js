@@ -60,6 +60,8 @@ function init()
 			model.maxStates = getStateCount(model.files, Math.max, 0);
 			model.author = separatePersonRef(model.author);
 			model.submitter = separatePersonRef(model.submitter);
+			if(model.notes === undefined) model.notes = "";
+			if(model.challenge !== undefined) model.notes += model.challenge;
 			qmcc.models.push(model);
 			if(qmcc.models().length === modelCount) onEndInit();
 		}));
@@ -110,6 +112,7 @@ function sortModels(sortBy)
 	else if(sortBy === "parameters") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.parameters.length - right.parameters.length);
 	else if(sortBy === "states") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.minStates - right.minStates === 0 ? left.maxStates - right.maxStates : left.minStates - right.minStates);
 	else if(sortBy === "properties") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.properties.length - right.properties.length);
+	else if(sortBy === "notes") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.notes == right.notes ? 0 : (left.notes < right.notes ? -1 : 1));
 	else return; // should not happen
 	if(qmcc.sortBy() === sortBy) qmcc.sortAsc(!qmcc.sortAsc());
 	else qmcc.sortAsc(true);

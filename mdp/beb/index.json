@@ -8,6 +8,7 @@
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"source": "https://doi.org/10.1007/978-3-642-21461-5_4",
 	"description": "A Modest MDP model of the IEEE 802.3 exponential backoff procedure, adapted from the PRISM model of Giro et al. [1]. Each of `H´ hosts attempts up to `N´ times to transmit without collision on a shared communication channel using exponential backoff with a maximum backoff counter value of `K´. All nondeterminism in this model is known to be spurious for the two specified properties, and the extremely large state spaces for higher values of `H´ collapse when methods such as partial order reduction are used.",
+	"challenge": "partial order reduction",
 	"references": [
 		"https://doi.org/10.1007/978-3-642-04081-8_23"
 	],

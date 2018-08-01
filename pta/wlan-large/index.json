@@ -8,6 +8,7 @@
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"source": "https://doi.org/10.1007/978-3-319-24953-7_10",
 	"description": "A Modest PTA model of IEEE 802.11 Wireless LAN with the original timing parameters from the standard, based on the PRISM case study with reduced timing parameters [1]. It models two stations trying to send a single packet each. The maximum value of their backoff counters is `K´.",
+	"challenge": "very long time bounds",
 	"references": [
 		"http://www.prismmodelchecker.org/casestudies/wlan.php"
 	],

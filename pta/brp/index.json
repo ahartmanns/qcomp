@@ -8,6 +8,7 @@
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"source": "https://doi.org/10.1109/QEST.2009.41",
 	"description": "A Modest PTA model of the bounded retransmission protocol [1], combining the previous untimed [2] and non-probabilistic [3] models. It models the transmission of one file from a sender to a receiver in `N´ chunks. The number of retransmissions per file is bounded by `MAX´, and the transmission delay of the probabilistic lossy channels between sender and receiver is `TD´.",
+	"notes": "scalable in multiple dimensions",
 	"references": [
 		"https://doi.org/10.1007/3-540-58085-9_75",
 		"https://doi.org/10.1007/3-540-44804-7_3",
