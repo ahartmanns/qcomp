@@ -20,7 +20,7 @@
 		"os": "Ubuntu 18.04",
 		"runtime": "Mono 5.12.0.301"
 	},
-	"command": "mcsta.exe ../bitcoin-attack.jani -S Memory -E \"MALICIOUS=20, CD=6\" -O mcsta.20-6.json Json",
+	"command": "mcsta.exe bitcoin-attack.jani -S Memory -E \"MALICIOUS=20, CD=6\" -O mcsta.20-6.json Json",
 	"time": 0,
 	"memory": 44171264,
 	"data": [

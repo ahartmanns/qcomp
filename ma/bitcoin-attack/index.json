@@ -43,7 +43,7 @@
 		},
 		{
 			"name": "P_MWinMax",
-			"type": "prob-reach-bounded",
+			"type": "prob-reach-reward-bounded",
 			"description": "The maximum probability that the malicious pool wins within 2 days."
 		}
 	],

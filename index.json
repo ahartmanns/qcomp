@@ -2,5 +2,6 @@
   { "path": "ma/bitcoin-attack" },
   { "path": "ma/breakdown-queues" },
   { "path": "mdp/beb" },
-  { "path": "pta/brp" }
+  { "path": "pta/brp" },
+  { "path": "pta/wlan-large" }
 ]
