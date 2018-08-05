@@ -35,7 +35,22 @@ qmcc.close = function()
 }
 
 // Functions
-function loadJson(path, callback) { fetch(path).then(response => response.json()).then(callback); }
+function loadJson(path, callback)
+{
+	fetch(path).then(response => response.text()).then(text =>
+	{
+		var json = "";
+		try
+		{
+			json = JSON.parse(text);
+		}
+		catch(e)
+		{
+			alert(path + ": " + e);
+		}
+		callback(json);
+	});
+}
 function init()
 {
 	var queryString = window.location.href.split("?");
