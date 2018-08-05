@@ -38,30 +38,43 @@
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabel">Models</div></div>
 	<table id="modelsTable" data-bind="visible: filteredModels().length !== 0">
+		<colgroup>
+			<col style="width: 20%;" />
+			<col style="width: 45%;" />
+			<col style="width: 7ex;" />
+			<col style="width: 2ex;" />
+			<col style="width: 7ex;" />
+			<col style="width: 7ex;" />
+			<col style="width: 2ex;" />
+			<col style="width: 7ex;" />
+			<col style="width: 3ex;" />
+			<col style="width: 17ex;" />
+			<col style="width: 35%;" />
+		</colgroup>
 		<thead>
 			<tr>
 				<th class="clickable" onClick="sortModels('short');">Model <span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'short' ? 'visible' : 'hidden' }"></span></th>
 				<th class="clickable" onClick="sortModels('name');">Name<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'name' ? 'visible' : 'hidden' }"></span></th>
 				<th class="clickable" onClick="sortModels('type');">Type<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'type' ? 'visible' : 'hidden' }"></span></th>
-				<th colspan="2" class="clickable" onClick="sortModels('parameters');">Parameters<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'parameters' ? 'visible' : 'hidden' }"></span></th>
-				<th colspan="3" class="clickable" style="text-align: center;" onClick="sortModels('states');">States<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'states' ? 'visible' : 'hidden' }"></span></th>
-				<th colspan="2" class="clickable" onClick="sortModels('properties');">Properties<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'properties' ? 'visible' : 'hidden' }"></span></th>
+				<th colspan="2" class="clickable" onClick="sortModels('parameters');">Params<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'parameters' ? 'visible' : 'hidden' }"></span></th>
+				<th colspan="3" class="clickable" style="text-align: center;" onClick="sortModels('states');">&nbsp;&nbsp;States<span data-bind="text: sortAsc() ? '▾' : '▴', style: { display: sortBy() === 'states' ? 'inline' : 'none' }"></span></th>
+				<th colspan="2" class="clickable" onClick="sortModels('properties');">&nbsp;&nbsp;Properties<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'properties' ? 'visible' : 'hidden' }"></span></th>
 				<th class="clickable" onClick="sortModels('notes');">Notes<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'notes' ? 'visible' : 'hidden' }"></span></th>
 			</tr>
 		</thead>
 		<tbody data-bind="foreach: filteredModels">
 			<tr class="clickable" data-bind="click: $root.select, css: { evenrow: $index() % 2 === 0, oddrow: $index() % 2 === 1 }">
-				<td data-bind="text: short"></td>
-				<td data-bind="text: name"></td>
-				<td data-bind="text: type.toUpperCase()"></td>
+				<td><div data-bind="text: short, attr: { title: short }" class="ellipsis"></div></td>
+				<td><div data-bind="text: name, attr: { title: name }" class="ellipsis"></div></td>
+				<td data-bind="text: type.toUpperCase(), attr: { title: CapitaliseFirst(modelTypeToLongString(type)) }"></td>
 				<td data-bind="text: parameters.length.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
 				<td data-bind="text: '&nbsp;(' + parameters.filter(p => p.kind == 'file').length.toLocaleString() + '/' + parameters.filter(p => p.kind == 'open').length.toLocaleString() + ')'" class="light"></td>
-				<td data-bind="html: minStates === maxStates ? '&nbsp;' : stateCountToHtmlString(minStates)" style="text-align: right; padding-right: 0px;"></td>
+				<td data-bind="html: minStates === maxStates ? '&nbsp;' : stateCountToHtmlString(minStates), attr: { title: minStates === maxStates ? '' : minStates.toLocaleString() }" style="text-align: right; padding-right: 0px;"></td>
 				<td class="light" data-bind="html: minStates === maxStates ? '&nbsp;' : '&nbsp;-&nbsp;'" style="text-align: center; padding-right: 0px;"></td>
-				<td data-bind="html: stateCountToHtmlString(maxStates)"></td>
+				<td data-bind="html: stateCountToHtmlString(maxStates), attr: { title: maxStates.toLocaleString() }"></td>
 				<td data-bind="text: properties.length.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
-				<td data-bind="text: '&nbsp;(' + propertiesToShortList(properties) + ')'" class="light"></td>
-				<td data-bind="text: notes.length === 0 ? '' : '(' + notes + ')'"></td>
+				<td class="light"><div data-bind="text: '&nbsp;(' + propertiesToShortList(properties) + ')', attr: { title: propertiesToShortList(properties) }" class="ellipsis"></div></td>
+				<td><div data-bind="text: notes.length === 0 ? '' : '(' + notes + ')', attr: { title: notes }" class="ellipsis"></div></td>
 			</tr>
 		</tbody>
 	</table>

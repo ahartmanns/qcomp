@@ -92,6 +92,10 @@ a.nodec:hover {
 	line-height: 1.3;
 }
 
+.ellipsis {
+	text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+}
+
 
 /* Tables */
 
@@ -106,6 +110,10 @@ tr.evenrow {}
 
 tr.oddrow {
 	/*background-color: #F0F0F0;*/
+}
+
+#modelsTable {
+	width: 100%; table-layout: fixed;
 }
 
 #modelsTable tr:hover {

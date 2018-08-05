@@ -69,6 +69,7 @@ function init()
 }
 function onEndInit()
 {
+	sortModels("short");
 	if(window.location.hash !== "")
 	{
 		// Show the model whose short name was specified in the URL's #hash
@@ -133,6 +134,15 @@ function propertiesToShortList(properties)
 	if(props.length != 0) list += ", " + props.length.toLocaleString() + " × E";
 	return list.length == 0 ? list : list.substr(2);
 }
+function modelTypeToLongString(modelType)
+{
+	if(modelType == "ctmc") return "continuous-time Markov chain";
+	else if(modelType == "dtmc") return "discrete-time Markov chain";
+	else if(modelType == "ma") return "Markov automaton";
+	else if(modelType == "mdp") return "Markov decision process";
+	else if(modelType == "pta") return "probabilistic timed automaton";
+	else return modelType;
+}
 function propertyTypeToLongString(propertyType)
 {
 	if(propertyType == "prob-reach-unbounded") return "unbounded probabilistic reachability";
@@ -193,7 +203,27 @@ function toVersionFileName(file, version)
 }
 function stateCountToHtmlString(count)
 {
-	return count >= 1000000 && Number.isInteger(Math.log10(count)) ? "~ 10<sup>" + Math.log10(count).toString() + "</sup>" : count.toLocaleString();
+	return count >= 1000000 && Number.isInteger(Math.log10(count)) ? "~ 10<sup>" + Math.log10(count).toString() + "</sup>" : numberToOrderString(count);
+}
+function numberToOrderString(number)
+{
+	if(number < 1000) return number.toLocaleString();
+	else if(number < 10000) return (number / 1000).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " k";
+	else if(number < 100000) return (number / 1000).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " k";
+	else if(number < 1000000) return (number / 1000).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " k";
+	else if(number < 10000000) return (number / 1000000).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " M";
+	else if(number < 100000000) return (number / 1000000).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " M";
+	else if(number < 1000000000) return (number / 1000000).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " M";
+	else if(number < 10000000000) return (number / 1000000000).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " G";
+	else if(number < 100000000000) return (number / 1000000000).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " G";
+	else if(number < 1000000000000) return (number / 1000000000).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " G";
+	else if(number < 10000000000000) return (number / 1000000000000).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " T";
+	else if(number < 100000000000000) return (number / 1000000000000).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " T";
+	else return (number / 1000000000000).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " T";
+}
+function CapitaliseFirst(str)
+{
+	return str.length === 0 ? str : str.charAt(0).toUpperCase() + str.slice(1)
 }
 function WriteMailLink(addr, text)
 {
