@@ -1,6 +1,6 @@
 ﻿{
 	"jani-version": 1,
-	"name": "beb-6.modest",
+	"name": "beb-6-16",
 	"type": "mdp",
 	"features": [ "derived-operators" ],
 	"actions": [

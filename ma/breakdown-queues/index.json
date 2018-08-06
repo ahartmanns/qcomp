@@ -34,12 +34,12 @@
 	"properties": [
 		{
 			"name": "Min",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The minimum probability for the buffer to become full before ever being empty."
 		},
 		{
 			"name": "Max",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability for the buffer to become full before ever being empty."
 		}
 	],

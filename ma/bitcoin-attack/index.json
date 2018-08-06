@@ -38,12 +38,12 @@
 	"properties": [
 		{
 			"name": "T_MWinMin",
-			"type": "exp-reward",
+			"type": "exp-time",
 			"description": "The minimum expected time until the malicious pool wins."
 		},
 		{
 			"name": "P_MWinMax",
-			"type": "prob-reach-reward-bounded",
+			"type": "prob-reach-time-bounded",
 			"description": "The maximum probability that the malicious pool wins within 2 days."
 		}
 	],

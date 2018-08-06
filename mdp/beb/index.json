@@ -118,12 +118,12 @@
 	"properties": [
 		{
 			"name": "LineSeized",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that some host managed to seize the line before any other gave up."
 		},
 		{
 			"name": "GaveUp",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that some host gave up before any other managed to seize the line."
 		}
 	],

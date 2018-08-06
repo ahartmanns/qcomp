@@ -59,72 +59,72 @@
 	"properties": [
 		{
 			"name": "T_1",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that there is more than one message in transit for each channel. Should be zero."
 		},
 		{
 			"name": "T_2",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that there is more than one message in transit in total. Should be zero."
 		},
 		{
 			"name": "T_A1",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability of premature timeout. Should be zero."
 		},
 		{
 			"name": "T_A2",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that the sender starts a new file before the receiver reacted to failure. Should be zero."
 		},
 		{
 			"name": "P_A",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that eventually the sender reports a certain unsuccessful transmission but the receiver got the complete file. Should be zero."
 		},
 		{
 			"name": "P_B",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that eventually the sender reports a certain successful transmission but the receiver did not get the complete file. Should be zero."
 		},
 		{
 			"name": "P_1",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that eventually the sender does not report a successful transmission."
 		},
 		{
 			"name": "P_2",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that eventually the sender reports an uncertainty on the success of the transmission."
 		},
 		{
 			"name": "P_3",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that eventually the sender reports an unsuccessful transmission after more than 8 chunks have been sent successfully."
 		},
 		{
 			"name": "P_4",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that eventually the receiver does not receive any chunk and the sender tried to send a chunk."
 		},
 		{
 			"name": "Dmax",
-			"type": "prob-reach-reward-bounded",
+			"type": "prob-reach-time-bounded",
 			"description": "The maximum probability that the sender reports a successful transmission within `TIME_BOUND´ time units."
 		},
 		{
 			"name": "Dmin",
-			"type": "prob-reach-reward-bounded",
+			"type": "prob-reach-time-bounded",
 			"description": "The minimum probability that the sender reports a successful transmission within `TIME_BOUND´ time units."
 		},
 		{
 			"name": "Emax",
-			"type": "exp-reward",
+			"type": "exp-time",
 			"description": "The maximum expected time until the transfer of the first file is finished (successfully or unsuccessfully)."
 		},
 		{
 			"name": "Emin",
-			"type": "exp-reward",
+			"type": "exp-time",
 			"description": "The minimum expected time until the transfer of the first file is finished (successfully or unsuccessfully)."
 		}
 	],

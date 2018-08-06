@@ -143,13 +143,18 @@
 					<span>=</span>
 					<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['file-parameter-values'].length - 1">, </span></span>)
 				</span>
-				<div data-bind="if: $data['original-file'] !== undefined">
-					Converted from <a data-bind="text: $data['original-file'], attr: { href: $parent.path + '/' + $data['original-file'], download: toVersionFileName($data['original-file'].substr($data['original-file'].lastIndexOf('/') + 1), $parent.version) }"></a>
-					with <a data-bind="text: conversion.tool, attr: { href: conversion.url }"></a>
-					version <span data-bind="text: conversion.version"></span>
-					using the following command:
-				</div>
-				<div data-bind="text: conversion.command" class="tt" style="text-align: left; text-indent: -3ex; padding-left: 3ex;"></div>
+				<!-- ko if: $data.originals !== undefined -->
+					<div>
+						Converted from
+						<!-- ko foreach: originals -->
+							<a data-bind="text: $data, attr: { href: $parents[1].path + '/' + $data, download: toVersionFileName($data.substr($data.lastIndexOf('/') + 1), $parents[1].version) }"></a><span data-bind="text: $index() === $parent.originals.length - 1 ? '' : $index() === $parent.originals.length - 2 ? ' and ' : ', '"></span>
+						<!-- /ko -->
+						with <a data-bind="text: conversion.tool, attr: { href: conversion.url }"></a>
+						version <span data-bind="text: conversion.version"></span>
+						using the following command<span data-bind="text: conversion.note === undefined ? '' : ' (and ' + conversion.note + ')'"></span>:
+					</div>
+					<div data-bind="text: conversion.command" class="tt" style="text-align: left; text-indent: -3ex; padding-left: 3ex;"></div>
+				<!-- /ko -->
 				<div data-bind="if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0">
 					Parameter settings:<br />
 					<ul data-bind="foreach: $data['open-parameter-values']">

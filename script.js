@@ -77,6 +77,17 @@ function init()
 			model.submitter = separatePersonRef(model.submitter);
 			if(model.notes === undefined) model.notes = "";
 			if(model.challenge !== undefined) model.notes += model.challenge;
+			if(model.files !== undefined)
+			{
+				for(var i = 0; i < model.files.length; ++i)
+				{
+					if(model.files[i]["original-file"] !== undefined)
+					{
+						if(typeof model.files[i]["original-file"] === "string") model.files[i].originals = [ model.files[i]["original-file"] ];
+						else model.files[i].originals = model.files[i]["original-file"];
+					}
+				}
+			}
 			qmcc.models.push(model);
 			if(qmcc.models().length === modelCount) onEndInit();
 		}));
@@ -139,14 +150,16 @@ function sortModels(sortBy)
 function propertiesToShortList(properties)
 {
 	var list = "";
-	var props = properties.filter(p => p.type == "prob-reach-unbounded");
+	var props = properties.filter(p => p.type == "prob-reach");
 	if(props.length != 0) list += ", " + props.length.toLocaleString() + " × P";
-	props = properties.filter(p => p.type == "prob-reach-step-bounded");
-	if(props.length != 0) list += ", " + props.length.toLocaleString() + " × Ps";
-	props = properties.filter(p => p.type == "prob-reach-reward-bounded");
-	if(props.length != 0) list += ", " + props.length.toLocaleString() + " × Pr";
-	props = properties.filter(p => p.type == "exp-reward");
+	props = properties.filter(p => p.type == "prob-reach-step-bounded" || p.type == "prob-reach-time-bounded" || p.type == "prob-reach-reward-bounded");
+	if(props.length != 0) list += ", " + props.length.toLocaleString() + " × Pb";
+	props = properties.filter(p => p.type == "exp-steps" || p.type == "exp-time" || p.type == "exp-reward");
 	if(props.length != 0) list += ", " + props.length.toLocaleString() + " × E";
+	props = properties.filter(p => p.type == "exp-steps-step-bounded" || p.type == "exp-steps-time-bounded" || p.type == "exp-steps-reward-bounded"
+		|| "exp-time-step-bounded" || p.type == "exp-time-time-bounded" || p.type == "exp-time-reward-bounded"
+		|| "exp-reward-step-bounded" || p.type == "exp-reward-time-bounded" || p.type == "exp-reward-reward-bounded");
+	if(props.length != 0) list += ", " + props.length.toLocaleString() + " × Eb";
 	return list.length == 0 ? list : list.substr(2);
 }
 function modelTypeToLongString(modelType)
@@ -160,18 +173,42 @@ function modelTypeToLongString(modelType)
 }
 function propertyTypeToLongString(propertyType)
 {
-	if(propertyType == "prob-reach-unbounded") return "unbounded probabilistic reachability";
+	if(propertyType == "prob-reach") return "probabilistic reachability";
 	else if(propertyType == "prob-reach-step-bounded") return "step-bounded probabilistic reachability";
+	else if(propertyType == "prob-reach-time-bounded") return "time-bounded probabilistic reachability";
 	else if(propertyType == "prob-reach-reward-bounded") return "reward-bounded probabilistic reachability";
-	else if(propertyType == "exp-reward") return "expected accumulated reachability reward";
+	else if(propertyType == "exp-steps") return "expected accumulated number of steps";
+	else if(propertyType == "exp-steps-step-bounded") return "step-bounded expected number of steps";
+	else if(propertyType == "exp-steps-time-bounded") return "time-bounded expected number of steps";
+	else if(propertyType == "exp-steps-reward-bounded") return "reward-bounded expected number of steps";
+	else if(propertyType == "exp-time") return "expected accumulated time";
+	else if(propertyType == "exp-time-step-bounded") return "step-bounded expected time";
+	else if(propertyType == "exp-time-time-bounded") return "time-bounded expected time";
+	else if(propertyType == "exp-time-reward-bounded") return "reward-bounded expected time";
+	else if(propertyType == "exp-reward") return "expected accumulated reward";
+	else if(propertyType == "exp-reward-step-bounded") return "step-bounded expected accumulated reward";
+	else if(propertyType == "exp-reward-time-bounded") return "time-bounded expected accumulated reward";
+	else if(propertyType == "exp-reward-reward-bounded") return "reward-bounded expected accumulated reward";
 	else return propertyType;
 }
 function propertyTypeToShortString(propertyType)
 {
-	if(propertyType == "prob-reach-unbounded") return "P";
-	else if(propertyType == "prob-reach-step-bounded") return "Ps";
-	else if(propertyType == "prob-reach-reward-bounded") return "Pr";
+	if(propertyType == "prob-reach") return "P";
+	else if(propertyType == "prob-reach-step-bounded") return "Pb";
+	else if(propertyType == "prob-reach-time-bounded") return "Pb";
+	else if(propertyType == "prob-reach-reward-bounded") return "Pb";
+	else if(propertyType == "exp-steps") return "E";
+	else if(propertyType == "exp-steps-step-bounded") return "Eb";
+	else if(propertyType == "exp-steps-time-bounded") return "Eb";
+	else if(propertyType == "exp-steps-reward-bounded") return "Eb";
+	else if(propertyType == "exp-time") return "E";
+	else if(propertyType == "exp-time-step-bounded") return "Eb";
+	else if(propertyType == "exp-time-time-bounded") return "Eb";
+	else if(propertyType == "exp-time-reward-bounded") return "Eb";
 	else if(propertyType == "exp-reward") return "E";
+	else if(propertyType == "exp-reward-step-bounded") return "Eb";
+	else if(propertyType == "exp-reward-time-bounded") return "Eb";
+	else if(propertyType == "exp-reward-reward-bounded") return "Eb";
 	else return propertyType;
 }
 function getStateCount(files, op, states)

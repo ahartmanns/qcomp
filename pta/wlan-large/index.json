@@ -41,42 +41,42 @@
 	"properties": [
 		{
 			"name": "P_1",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "Verifies that eventually both stations have sent their packet correctly with probability 1."
 		},
 		{
 			"name": "P_min",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The minimum probability that either station's backoff counter reaches `K´."
 		},
 		{
 			"name": "P_max",
-			"type": "prob-reach-unbounded",
+			"type": "prob-reach",
 			"description": "The maximum probability that either station's backoff counter reaches `K´."
 		},
 		{
 			"name": "D_and",
-			"type": "prob-reach-reward-bounded",
+			"type": "prob-reach-time-bounded",
 			"description": "The minimum probability of both stations correctly delivering their packets within a time bound."
 		},
 		{
 			"name": "D_or",
-			"type": "prob-reach-reward-bounded",
+			"type": "prob-reach-time-bounded",
 			"description": "The minimum probability of either station correctly delivering its packet within a time bound."
 		},
 		{
 			"name": "D_1",
-			"type": "prob-reach-reward-bounded",
+			"type": "prob-reach-time-bounded",
 			"description": "The minimum probability of station 1 correctly delivering its packet within a time bound."
 		},
 		{
 			"name": "E_and",
-			"type": "exp-reward",
+			"type": "exp-time",
 			"description": "The maximum expected time until both stations correctly deliver their packets."
 		},
 		{
 			"name": "E_or",
-			"type": "exp-reward",
+			"type": "exp-time",
 			"description": "The maximum expected time until either station correctly delivers its packet."
 		},
 		{

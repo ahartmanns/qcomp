@@ -1,6 +1,6 @@
 ﻿{
 	"jani-version": 1,
-	"name": "breakdown-queues.modest",
+	"name": "breakdown-queues",
 	"type": "ma",
 	"features": [ "derived-operators" ],
 	"actions": [

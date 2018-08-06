@@ -1,6 +1,6 @@
 ﻿{
 	"jani-version": 1,
-	"name": "wlan-large.modest",
+	"name": "wlan-large",
 	"type": "sta",
 	"features": [ "derived-operators" ],
 	"actions": [

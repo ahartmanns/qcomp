@@ -1,6 +1,6 @@
 ﻿{
 	"jani-version": 1,
-	"name": "brp.modest",
+	"name": "brp",
 	"type": "pta",
 	"features": [ "derived-operators" ],
 	"actions": [

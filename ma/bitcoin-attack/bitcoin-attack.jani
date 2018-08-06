@@ -1,6 +1,6 @@
 ﻿{
 	"jani-version": 1,
-	"name": "bitcoin-attack.modest",
+	"name": "bitcoin-attack",
 	"type": "ma",
 	"features": [ "derived-operators" ],
 	"actions": [
