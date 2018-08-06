@@ -1,0 +1,33 @@
+Storm 1.2.4 (dev)
+
+Date: Wed Aug  1 11:31:27 2018
+Command line arguments: --jani ../dtmc/haddad-monmege/haddad-monmege.jani -jprop --constants 'N=100,p=0.7' --exact -tm
+Current working directory: /Users/tim/git/qmcc/generate_Meta
+
+Time for model construction: 0.022s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	201
+Transitions: 	400
+Reward Models:  jump
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+   * init -> 1 item(s)
+   * done -> 2 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "exp_steps": R[exp]{"jump"}min=? [F "done"] ...
+Result (for initial states): 1901475900342344102245054808062 (approx. 1.9014759e+30)
+Time for model checking: 0.015s.
+
+Model checking property "target": Pmin=? [F "target"] ...
+Result (for initial states): 7/10 (approx. 0.7)
+Time for model checking: 0.015s.
+
+Performance statistics:
+  * peak memory usage: 31MB
+  * CPU time: 0.071s
+  * wallclock time: 0.055s

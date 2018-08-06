@@ -1,4 +1,5 @@
 [
+  { "path": "dtmc/haddad-monmege" },
   { "path": "ma/bitcoin-attack" },
   { "path": "ma/breakdown-queues" },
   { "path": "mdp/beb" },

@@ -1,0 +1,72 @@
+{
+	"file": "../haddad-monmege.jani", 
+	"version": 1, 
+	"date": "2018-08-01", 
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
+	"log": "Storm.300-0.7.txt", 
+	"open-parameter-values": [
+		{
+			"name": "N", 
+			"value": 300
+		}, 
+		{
+			"name": "p", 
+			"value": 0.7
+		}
+	], 
+	"tool": {
+		"name": "Storm", 
+		"version": "1.2.4 (dev)", 
+		"url": "http://www.stormchecker.org"
+	}, 
+	"system": {
+		"cpu": "Intel Core i5-5257U", 
+		"ram": "16", 
+		"os": "macOS 10.13.5", 
+		"runtime": "Apple LLVM version 9.1.0 (clang-902.0.39.2)"
+	}, 
+	"command": "storm --jani haddad-monmege.jani -jprop --constants N=300,p=0.7 --exact -tm", 
+	"time": 0.126, 
+	"data": [
+		{
+			"values": [
+				{
+					"unit": "s", 
+					"name": "time", 
+					"value": 0.028
+				}, 
+				{
+					"name": "states", 
+					"value": 601
+				}, 
+				{
+					"name": "branches", 
+					"value": 1200
+				}
+			], 
+			"group": "State space exploration"
+		}, 
+		{
+			"property": "exp_steps", 
+			"values": [
+				{
+					"unit": "s", 
+					"name": "time", 
+					"value": 0.046
+				}
+			], 
+			"value": "3055553964501729129402668532614067241577202590498904375954210674031571949645005059275096062 (approx. 3.055553965e+90)"
+		}, 
+		{
+			"property": "target", 
+			"values": [
+				{
+					"unit": "s", 
+					"name": "time", 
+					"value": 0.047
+				}
+			], 
+			"value": "7/10 (approx. 0.7)"
+		}
+	]
+}
