@@ -99,7 +99,7 @@
 		<!-- Creator, submitter and description -->
 		<p>
 			<span data-bind="text: author.name === submitter.name && author.email === submitter.email ? 'Created and submitted by ' : 'Created by '"></span><a data-bind="text: author.name, attr: { href: 'mailto:' + author.email }"></a><span data-bind="visible: author.name !== submitter.name || author.email !== submitter.email"> and submitted by <a data-bind="text: submitter.name, attr: { href: 'mailto:' + submitter.email }"></a></span>.<br />
-			First presented in <a data-bind="text: getLinkTitle(source), attr: { href: source }"></a>.
+			First presented in<span data-bind="visible: description.includes('[0]')">:<br />[0]</span> <a data-bind="text: getLinkTitle(source), attr: { href: source }"></a>.
 		</p>
 		<p data-bind="html: formatText(description)"></p>
 		<!-- ko if: references.length !== 0 -->
