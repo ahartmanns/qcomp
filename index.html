@@ -98,7 +98,7 @@
 
 		<!-- Creator, submitter and description -->
 		<p>
-			<span data-bind="text: author.name === submitter.name && author.email === submitter.email ? 'Created and submitted by ' : 'Created by '"></span><a data-bind="text: author.name, attr: { href: 'mailto:' + author.email }"></a><span data-bind="visible: author.name !== submitter.name || author.email !== submitter.email"><br />Submitted by <a data-bind="text: submitter.name, attr: { href: 'mailto:' + submitter.email }"></a></span>.<br />
+			<span data-bind="text: author.name === submitter.name && author.email === submitter.email ? 'Created and submitted by ' : 'Created by '"></span><a data-bind="text: author.name, attr: { href: 'mailto:' + author.email }"></a><span data-bind="visible: author.name !== submitter.name || author.email !== submitter.email"> and submitted by <a data-bind="text: submitter.name, attr: { href: 'mailto:' + submitter.email }"></a></span>.<br />
 			First presented in <a data-bind="text: getLinkTitle(source), attr: { href: source }"></a>.
 		</p>
 		<p data-bind="html: formatText(description)"></p>
@@ -159,11 +159,13 @@
 					Parameter settings:<br />
 					<ul data-bind="foreach: $data['open-parameter-values']">
 						<li>
-							<div data-bind="foreach: values">
-								<span data-bind="text: name" class="tt"></span>
-								<span>=</span>
-								<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent.values.length - 1">, </span>
-							</div>
+							<!-- ko if: $data.values !== undefined -->
+								<div data-bind="foreach: values">
+									<span data-bind="text: name" class="tt"></span>
+									<span>=</span>
+									<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent.values.length - 1">, </span>
+								</div>
+							<!-- /ko -->
 							<div data-bind="if: $data.states !== undefined">
 								<table data-bind="foreach: states" class="compact">
 									<tr>
