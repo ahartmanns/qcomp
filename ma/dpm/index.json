@@ -1,0 +1,146 @@
+{
+	"name": "Dynamic Power Management",
+	"short": "dpm",
+	"type": "ma",
+	"version": 1,
+	"date": "2018-08-12",
+	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1145/313817.313923",
+	"description": "A Modest MA model of a service provider that processes tasks of `N´ different types. Tasks to be processed are stored in one queue of maximum size `C´ for each task type. The service provider can be switched between three different power states (idle/busy, sleep and standby).",
+	"parameters": [
+		{ "name": "N", "kind": "open", "description": "Number of different types of tasks", "type": "{ 1, ..., 10 }" },
+		{ "name": "C", "kind": "open", "description": "Maximum queue size for each task type", "type": "positive integer" }
+	],
+	"files": [
+		{
+			"file": "dpm.jani",
+			"original-file": "dpm.modest",
+			"conversion": {
+				"tool": "moconv",
+				"version": "3.0.78",
+				"url": "http://www.modestchecker.net/",
+				"command": "moconv.exe dpm-3-3.modest -O dpm-3-3.jani"
+			},
+			"open-parameter-values": [
+				{
+					"values": [
+						{ "name": "N", "value": 4 },
+						{ "name": "C", "value": 4 }
+					],
+					"states": [
+						{ "number": 34570, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 4 },
+						{ "name": "C", "value": 6 }
+					],
+					"states": [
+						{ "number": 131314, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 4 },
+						{ "name": "C", "value": 8 }
+					],
+					"states": [
+						{ "number": 356426, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 6 },
+						{ "name": "C", "value": 4 }
+					],
+					"states": [
+						{ "number": 1415532, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 6 },
+						{ "name": "C", "value": 6 }
+					],
+					"states": [
+						{ "number": 10537896, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 6 },
+						{ "name": "C", "value": 8 }
+					],
+					"states": [
+						{ "number": 47298156, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 8 },
+						{ "name": "C", "value": 4 }
+					],
+					"states": [
+						{ "number": 52265486, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 8 },
+						{ "name": "C", "value": 6 }
+					],
+					"states": [
+						{ "number": 763424222, "note": "mcsta (disk-based)" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 8 },
+						{ "name": "C", "value": 8 }
+					],
+					"states": [
+						{ "number": 5667818126, "note": "mcsta (disk-based)" }
+					]
+				}
+			]
+		}
+	],
+	"properties": [
+		{
+			"name": "PminQueuesFull",
+			"type": "prob-reach",
+			"description": "The minimum probability for all queues to become full."
+		},
+		{
+			"name": "PmaxQueuesFull",
+			"type": "prob-reach",
+			"description": "The maximum probability for all queues to become full."
+		},
+		{
+			"name": "PminQueue1Full",
+			"type": "prob-reach",
+			"description": "The minimum probability for the queue of task type 1 to become full."
+		},
+		{
+			"name": "PmaxQueue1Full",
+			"type": "prob-reach",
+			"description": "The maximum probability for the queue of task type 1 to become full."
+		},
+		{
+			"name": "TminQueuesFull",
+			"type": "exp-time",
+			"description": "The minimum expected time until all queues are full."
+		}
+	],
+	"results": [
+		"results/mcsta.4-4.json",
+		"results/mcsta.4-6.json",
+		"results/mcsta.4-8.json",
+		"results/mcsta.6-4.json",
+		"results/mcsta.6-6.json",
+		"results/mcsta.6-8.json",
+		"results/mcsta.8-4.json"
+	]
+}

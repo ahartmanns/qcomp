@@ -2,6 +2,7 @@
   { "path": "dtmc/haddad-monmege" },
   { "path": "ma/bitcoin-attack" },
   { "path": "ma/breakdown-queues" },
+  { "path": "ma/dpm" },
   { "path": "mdp/beb" },
   { "path": "pta/brp" },
   { "path": "pta/wlan-large" }

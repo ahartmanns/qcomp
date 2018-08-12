@@ -1,0 +1,139 @@
+﻿{
+	"file": "dpm.jani",
+	"version": 1,
+	"date": "2018-08-12",
+	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
+	"open-parameter-values": [
+		{ "name": "N", "value": 4 },
+		{ "name": "C", "value": 8 }
+	],
+	"tool": {
+		"name": "mcsta",
+		"version": "3.0.78",
+		"url": "http://www.modestchecker.net/",
+		"part-of": "the Modest Toolset",
+		"part-of-url": "http://www.modestchecker.net/"
+	},
+	"system": {
+		"cpu": "Intel Core i5-6600T",
+		"ram": 16,
+		"os": "Windows 10 Pro 1803 (x64)",
+		"runtime": ".NET Framework 4.7.2"
+	},
+	"command": "mcsta.exe dpm.jani -S Memory --p1 -E \"N=4, C=8\" -O results\\mcsta.4-8.json Json",
+	"time": 5,
+	"memory": 146518016,
+	"data": [
+		{
+			"group": "State space exploration",
+			"values": [
+				{ "name": "State size", "value": 16, "unit": "B" },
+				{ "name": "States", "value": 356426 },
+				{ "name": "Transitions", "value": 418842 },
+				{ "name": "Branches", "value": 681242 },
+				{ "name": "Time", "value": 1, "unit": "s" },
+				{ "name": "Rate", "value": 678906.66666666663 }
+			]
+		},
+		{
+			"property": "PminQueuesFull",
+			"value": 0.0004307754376749624,
+			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Min. prob. 0 states", "value": 37856 },
+						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Min. prob. 1 states", "value": 50 },
+						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+					]
+				},
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 5.8871888321509911E-07 },
+						{ "name": "Iterations", "value": 31 },
+						{ "name": "Time", "value": 0, "unit": "s" }
+					]
+				}
+			]
+		},
+		{
+			"property": "PmaxQueuesFull",
+			"value": 1,
+			"values": [ { "name": "Time", "value": 1, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Max. prob. 1 states", "value": 356426 },
+						{ "name": "Time for max. prob. 1 states", "value": 1, "unit": "s" }
+					]
+				}
+			]
+		},
+		{
+			"property": "PminQueue1Full",
+			"value": 0.043197231501373654,
+			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Min. prob. 0 states", "value": 25272 },
+						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Min. prob. 1 states", "value": 48788 },
+						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+					]
+				},
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 7.3326900936623476E-07 },
+						{ "name": "Iterations", "value": 21 },
+						{ "name": "Time", "value": 0, "unit": "s" }
+					]
+				}
+			]
+		},
+		{
+			"property": "PmaxQueue1Full",
+			"value": 1,
+			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Max. prob. 1 states", "value": 356426 },
+						{ "name": "Time for max. prob. 1 states", "value": 0, "unit": "s" }
+					]
+				}
+			]
+		},
+		{
+			"property": "TminQueuesFull",
+			"value": 42.762721704479752,
+			"values": [ { "name": "Time", "value": 2, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Max. prob. 0 states", "value": 0 },
+						{ "name": "Time for max. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Max. prob. 1 states", "value": 356426 },
+						{ "name": "Time for max. prob. 1 states", "value": 1, "unit": "s" }
+					]
+				},
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 8.7965052485961447E-07 },
+						{ "name": "Iterations", "value": 124 },
+						{ "name": "Time", "value": 1, "unit": "s" }
+					]
+				}
+			]
+		}
+	]
+}
