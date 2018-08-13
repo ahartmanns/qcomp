@@ -4,6 +4,7 @@
   { "path": "ma/breakdown-queues" },
   { "path": "ma/dpm" },
   { "path": "mdp/beb" },
+  { "path": "mdp/blocksworld" },
   { "path": "pta/brp" },
   { "path": "pta/wlan-large" }
 ]

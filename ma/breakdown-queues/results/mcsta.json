@@ -13,7 +13,7 @@
 	"system": {
 		"cpu": "Intel Core i7-4790",
 		"ram": 8,
-		"os": "Ubuntu 18.04",
+		"os": "Ubuntu 18.04 (x64)",
 		"runtime": "Mono 5.12.0.301"
 	},
 	"command": "mcsta.exe breakdown-queues.jani -S Memory -O mcsta.json Json",

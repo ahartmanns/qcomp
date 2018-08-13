@@ -217,11 +217,19 @@ function getStateCount(files, op, states)
 	for(var i = 0; i < files.length; ++i)
 	{
 		var openParamValues = files[i]["open-parameter-values"];
-		for(var j = 0; j < openParamValues.length; ++j)
+		if(openParamValues.length === 0) result = op(result, Number.POSITIVE_INFINITY); // no states for certain parameter configuration = too large to find out
+		else
 		{
-			if(openParamValues[j].states !== undefined)
+			for(var j = 0; j < openParamValues.length; ++j)
 			{
-				result = op(result, op(...openParamValues[j].states.map(s => s.number !== undefined ? s.number : s.order !== undefined ? Math.pow(10, s.order) : states)));
+				if(openParamValues[j].states !== undefined)
+				{
+					result = op(result, op(...openParamValues[j].states.map(s => s.number !== undefined ? s.number : s.order !== undefined ? Math.pow(10, s.order) : states)));
+				}
+				else // no states for certain parameter configuration = too large to find out
+				{
+					result = op(result, Number.POSITIVE_INFINITY);
+				}
 			}
 		}
 	}

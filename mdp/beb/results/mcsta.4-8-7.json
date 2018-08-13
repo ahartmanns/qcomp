@@ -19,7 +19,7 @@
 	"system": {
 		"cpu": "Intel Core i5-6600T",
 		"ram": "16",
-		"os": "Windows 10 1803 64-bit",
+		"os": "Windows 10 Pro 1803 (x64)",
 		"runtime": ".NET Framework 4.7.2"
 	},
 	"command": "mcsta.exe beb-4-8.jani -S Memory -E \"N=7\" -O beb-4-8.7.txt",

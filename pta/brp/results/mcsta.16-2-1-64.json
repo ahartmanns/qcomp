@@ -20,7 +20,7 @@
 	"system": {
 		"cpu": "Intel Core i7-4790",
 		"ram": "8",
-		"os": "Ubuntu 18.04 64-bit",
+		"os": "Ubuntu 18.04 (x64)",
 		"runtime": "Mono 5.12.0.226"
 	},
 	"command": "mcsta.exe brp.jani -S Memory -E \"N=16, MAX=2, TD=1, TIME_BOUND=64\" -O mcsta.16-2-1-64.txt",

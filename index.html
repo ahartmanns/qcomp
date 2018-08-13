@@ -69,9 +69,14 @@
 				<td data-bind="text: type.toUpperCase(), attr: { title: CapitaliseFirst(modelTypeToLongString(type)) }"></td>
 				<td data-bind="text: parameters.length.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
 				<td data-bind="text: '&nbsp;(' + parameters.filter(p => p.kind == 'file').length.toLocaleString() + '/' + parameters.filter(p => p.kind == 'open').length.toLocaleString() + ')'" class="light"></td>
-				<td data-bind="html: minStates === maxStates ? '&nbsp;' : stateCountToHtmlString(minStates), attr: { title: minStates === maxStates ? '' : minStates.toLocaleString() }" style="text-align: right; padding-right: 0px;"></td>
-				<td class="light" data-bind="html: minStates === maxStates ? '&nbsp;' : '&nbsp;-&nbsp;'" style="text-align: center; padding-right: 0px;"></td>
-				<td data-bind="html: stateCountToHtmlString(maxStates), attr: { title: maxStates.toLocaleString() }"></td>
+				<!-- ko if: minStates !== maxStates -->
+					<td data-bind="html: minStates === maxStates ? '&nbsp;' : stateCountToHtmlString(minStates), attr: { title: minStates === maxStates ? '' : minStates.toLocaleString() }" style="text-align: right; padding-right: 0px;"></td>
+					<td class="light" data-bind="html: minStates === maxStates || maxStates === Number.POSITIVE_INFINITY ? '&nbsp;' : '&nbsp;-&nbsp;'" style="text-align: center; padding-right: 0px;"></td>
+					<td data-bind="html: maxStates === Number.POSITIVE_INFINITY ? '&nbsp;' : stateCountToHtmlString(maxStates), attr: { title: maxStates.toLocaleString() }"></td>
+				<!-- /ko -->
+				<!-- ko if: minStates === maxStates -->
+					<td colspan="3" data-bind="html: stateCountToHtmlString(maxStates), attr: { title: maxStates.toLocaleString() }" style="text-align: center; padding-right: 0px;"></td>
+				<!-- /ko -->
 				<td data-bind="text: properties.length.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
 				<td class="light"><div data-bind="text: '&nbsp;(' + propertiesToShortList(properties) + ')', attr: { title: propertiesToShortList(properties) }" class="ellipsis"></div></td>
 				<td><div data-bind="text: notes.length === 0 ? '' : '(' + notes + ')', attr: { title: notes }" class="ellipsis"></div></td>
@@ -149,8 +154,8 @@
 						<!-- ko foreach: originals -->
 							<a data-bind="text: $data, attr: { href: $parents[1].path + '/' + $data, download: toVersionFileName($data.substr($data.lastIndexOf('/') + 1), $parents[1].version) }"></a><span data-bind="text: $index() === $parent.originals.length - 1 ? '' : $index() === $parent.originals.length - 2 ? ' and ' : ', '"></span>
 						<!-- /ko -->
-						with <a data-bind="text: conversion.tool, attr: { href: conversion.url }"></a>
-						version <span data-bind="text: conversion.version"></span>
+						with <a data-bind="visible: conversion.url !== undefined, text: conversion.tool, attr: { href: conversion.url }"></a><span data-bind="visible: conversion.url === undefined, text: conversion.tool"></span>
+						<!-- ko if: conversion.version !== undefined -->version <span data-bind="text: conversion.version"></span><!-- /ko -->
 						using the following command<span data-bind="text: conversion.note === undefined ? '' : ' (and ' + conversion.note + ')'"></span>:
 					</div>
 					<div data-bind="text: conversion.command" class="tt" style="text-align: left; text-indent: -3ex; padding-left: 3ex;"></div>

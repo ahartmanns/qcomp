@@ -16,7 +16,7 @@
 	"system": {
 		"cpu": "Intel Core i7-4790",
 		"ram": 8,
-		"os": "Ubuntu 18.04",
+		"os": "Ubuntu 18.04 (x64)",
 		"runtime": "Mono 5.12.0.301"
 	},
 	"command": "mcsta.exe wlan-large.jani -S Memory --unsafe -E \"K=2\" --bounded-alg StateElimination -O mcsta.2.json Json",

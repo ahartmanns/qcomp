@@ -5,6 +5,7 @@
 *.json text
 *.md text
 *.modest text
+*.pddl text
 *.txt text
 
 *.pdf binary
