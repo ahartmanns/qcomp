@@ -1,16 +1,16 @@
 Storm 1.2.4 (dev)
 
-Date: Wed Aug  1 11:31:26 2018
+Date: Mon Aug 13 18:16:55 2018
 Command line arguments: --jani ../dtmc/haddad-monmege/haddad-monmege.jani -jprop --constants 'N=20,p=0.7' --exact -tm
 Current working directory: /Users/tim/git/qmcc/generate_Meta
 
-Time for model construction: 0.023s.
+Time for model construction: 0.055s.
 
 -------------------------------------------------------------- 
 Model type: 	DTMC (sparse)
 States: 	41
 Transitions: 	80
-Reward Models:  jump
+Reward Models:  none
 State Labels: 	4 labels
    * deadlock -> 0 item(s)
    * target -> 1 item(s)
@@ -19,15 +19,15 @@ State Labels: 	4 labels
 Choice Labels: 	none
 -------------------------------------------------------------- 
 
-Model checking property "exp_steps": R[exp]{"jump"}min=? [F "done"] ...
+Model checking property "exp_steps": T[exp]min=? [F "done"] ...
 Result (for initial states): 1572862 (approx. 1572862)
-Time for model checking: 0.011s.
+Time for model checking: 0.009s.
 
 Model checking property "target": Pmin=? [F "target"] ...
 Result (for initial states): 7/10 (approx. 0.7)
 Time for model checking: 0.003s.
 
 Performance statistics:
-  * peak memory usage: 28MB
-  * CPU time: 0.046s
-  * wallclock time: 0.041s
+  * peak memory usage: 30MB
+  * CPU time: 0.049s
+  * wallclock time: 0.074s

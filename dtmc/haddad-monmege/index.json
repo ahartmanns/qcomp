@@ -43,8 +43,7 @@
 				"tool": "Storm-conv", 
 				"version": "1.2.4 (dev)", 
 				"url": "http://www.stormchecker.org", 
-				"command": "storm-conv --prism haddad-monmege.pm --tojani haddad-monmege.jani --prop haddad-monmege.prctl --globalvars --standard-compliant",
-				"note": "manually edited so that the second property is an obvious query for the expected number of steps"
+				"command": "storm-conv --prism haddad-monmege.pm --tojani haddad-monmege.jani --prop haddad-monmege.prctl --globalvars --standard-compliant"
 			}, 
 			"file-parameter-values": [], 
 			"open-parameter-values": [

@@ -2,4 +2,4 @@
 "target": P=? [F "target"];
 
 // Expected number of steps to reach the target or the sink state
-"exp_steps": R{"jump"}=? [F "done"];
+"exp_steps": T=? [F "done"];

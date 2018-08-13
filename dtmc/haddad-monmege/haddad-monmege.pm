@@ -17,7 +17,3 @@ endmodule
 
 label "target" = x=0;
 label "done" = x=0 | x=2*N;
-
-rewards "jump"
-	true : 1;
-endrewards

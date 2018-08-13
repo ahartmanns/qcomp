@@ -1,7 +1,7 @@
 {
 	"file": "../haddad-monmege.jani", 
 	"version": 1, 
-	"date": "2018-08-01", 
+	"date": "2018-08-13", 
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
 	"log": "Storm.100-0.7.txt", 
 	"open-parameter-values": [
@@ -26,14 +26,14 @@
 		"runtime": "Apple LLVM version 9.1.0 (clang-902.0.39.2)"
 	}, 
 	"command": "storm --jani haddad-monmege.jani -jprop --constants N=100,p=0.7 --exact -tm", 
-	"time": 0.055, 
+	"time": 0.057, 
 	"data": [
 		{
 			"values": [
 				{
 					"unit": "s", 
 					"name": "time", 
-					"value": 0.022
+					"value": 0.024
 				}, 
 				{
 					"name": "states", 
