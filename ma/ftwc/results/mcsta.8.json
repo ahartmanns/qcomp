@@ -1,0 +1,102 @@
+﻿{
+	"file": "../ftwc.jani",
+	"version": 1,
+	"date": "2018-08-13",
+	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
+	"open-parameter-values": [
+		{ "name": "N", "value": 8 }
+	],
+	"tool": {
+		"name": "mcsta",
+		"version": "3.0.78",
+		"url": "http://www.modestchecker.net/",
+		"part-of": "the Modest Toolset",
+		"part-of-url": "http://www.modestchecker.net/"
+	},
+	"system": {
+		"cpu": "Intel Core i7-4790",
+		"ram": 8,
+		"os": "Ubuntu 18.04 (x64)",
+		"runtime": "Mono 5.14.0.177"
+	},
+	"command": "mcsta.exe ftwc.jani -S Memory --p1 -E N=8 -O mcsta.8.json Json",
+	"time": 104,
+	"memory": 50360320,
+	"data": [
+		{
+			"group": "State space exploration",
+			"values": [
+				{ "name": "Min. state size", "value": 40, "unit": "B" },
+				{ "name": "States", "value": 10299 },
+				{ "name": "Transitions", "value": 12635 },
+				{ "name": "Branches", "value": 26983 },
+				{ "name": "Time", "value": 0, "unit": "s" },
+				{ "name": "Rate", "value": 214562.5 }
+			]
+		},
+		{
+			"property": "ReachMin",
+			"value": 1,
+			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Min. prob. 0 states", "value": 0 },
+						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Min. prob. 1 states", "value": 10299 },
+						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+					]
+				}
+			]
+		},
+		{
+			"property": "TimeMax",
+			"value": 1873579.536306486,
+			"values": [ { "name": "Time", "value": 52, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Min. prob. 0 states", "value": 0 },
+						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Min. prob. 1 states", "value": 10299 },
+						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+					]
+				},
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 9.9999048876305277E-07 },
+						{ "name": "Iterations", "value": 182126 },
+						{ "name": "Time", "value": 52, "unit": "s" }
+					]
+				}
+			]
+		},
+		{
+			"property": "TimeMin",
+			"value": 1873283.4085252935,
+			"values": [ { "name": "Time", "value": 52, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Max. prob. 0 states", "value": 0 },
+						{ "name": "Time for max. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Max. prob. 1 states", "value": 10299 },
+						{ "name": "Time for max. prob. 1 states", "value": 0, "unit": "s" }
+					]
+				},
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 9.9998435927193E-07 },
+						{ "name": "Iterations", "value": 182106 },
+						{ "name": "Time", "value": 52, "unit": "s" }
+					]
+				}
+			]
+		}
+	]
+}
