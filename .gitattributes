@@ -9,3 +9,4 @@
 *.txt text
 
 *.pdf binary
+*.gz binary
