@@ -1,0 +1,19 @@
+Peak memory usage: 86 MB
+Analysis results for exploding-blocksworld-5.jani
+
++ State space exploration
+  State size:  24 bytes
+  States:      81693
+  Transitions: 124737
+  Branches:    148761
+  Time:        0.6 s
+  Rate:        143826 states/s
+
++ Property goal
+  Probability: 0.9
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  10
+    Time:        0.1 s

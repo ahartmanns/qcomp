@@ -1,0 +1,40 @@
+{
+	"file": "../exploding-blocksworld-5.jani",
+	"version": 1,
+	"date": "2018-08-01",
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"log": "mcsta.5.txt",
+	"open-parameter-values": [
+	],
+	"tool": {
+		"name": "mcsta",
+		"version": "3.0.71",
+		"url": "http://www.modestchecker.net/",
+		"part-of": "the Modest Toolset",
+		"part-of-url": "http://www.modestchecker.net/"
+	},
+	"system": {
+		"cpu": "Intel Core i7-7500U",
+		"ram": "16",
+		"os": "Windows 10 Home 1803 (x64)",
+		"runtime": ".NET Framework 4.7.2"
+	},
+	"command": "mcsta.exe exploding-blocksworld-5.jani",
+	"time": 1,
+	"data": [
+		{
+			"group": "State space exploration",
+			"values": [
+				{ "name": "time", "value": 0.6, "unit": "s" },
+				{ "name": "states", "value": 81693 },
+				{ "name": "transitions", "value": 124737 },
+				{ "name": "branches", "value": 148761 }
+			]
+		},
+		{
+			"property": "goal",
+			"value": 0.9,
+			"values": [ { "name": "time", "value": 0.1, "unit": "s" } ]
+		}
+	]
+}
