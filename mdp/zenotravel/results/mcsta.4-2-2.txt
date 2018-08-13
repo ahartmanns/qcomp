@@ -1,0 +1,18 @@
+Peak memory usage: 154 MB
+Analysis results for zenotravel-4-2-2.jani
+
++ State space exploration
+  State size:  16 bytes
+  States:      459900
+  Transitions: 2976444
+  Branches:    3818556
+  Time:        12.9 s
+  Rate:        35585 states/s
+
++ Property goal
+  Probability: 1
+  Time:        4.7 s
+
+  + Precomputations
+    Max. prob. 1 states:          459900
+    Time for max. prob. 1 states: 4.7 s

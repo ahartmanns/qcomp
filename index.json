@@ -13,6 +13,7 @@
   { "path": "mdp/rectangle-tireworld" },
   { "path": "mdp/tireworld" },
   { "path": "mdp/triangle-tireworld" },
+  { "path": "mdp/zenotravel" },
   { "path": "pta/brp" },
   { "path": "pta/wlan-large" }
 ]
