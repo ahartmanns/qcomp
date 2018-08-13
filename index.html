@@ -70,7 +70,7 @@
 				<td data-bind="text: parameters.length.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
 				<td data-bind="text: '&nbsp;(' + parameters.filter(p => p.kind == 'file').length.toLocaleString() + '/' + parameters.filter(p => p.kind == 'open').length.toLocaleString() + ')'" class="light"></td>
 				<!-- ko if: minStates !== maxStates -->
-					<td data-bind="html: minStates === maxStates ? '&nbsp;' : stateCountToHtmlString(minStates), attr: { title: minStates === maxStates ? '' : minStates.toLocaleString() }" style="text-align: right; padding-right: 0px;"></td>
+					<td data-bind="html: minStates === maxStates || minStates === Number.MAX_SAFE_INTEGER ? '&nbsp;' : stateCountToHtmlString(minStates), attr: { title: minStates === maxStates ? '' : minStates.toLocaleString() }" style="text-align: right; padding-right: 0px;"></td>
 					<td class="light" data-bind="html: minStates === maxStates || maxStates === Number.POSITIVE_INFINITY ? '&nbsp;' : '&nbsp;-&nbsp;'" style="text-align: center; padding-right: 0px;"></td>
 					<td data-bind="html: maxStates === Number.POSITIVE_INFINITY ? '&nbsp;' : stateCountToHtmlString(maxStates), attr: { title: maxStates.toLocaleString() }"></td>
 				<!-- /ko -->
