@@ -41,23 +41,15 @@ h4 {
 }
 
 p {
-	padding: 0px; margin: 0.75ex 0px; line-height: 1.3;
+	padding: 0px; margin: 0.75ex 0ex; line-height: 1.3; text-align: justify;
 }
 
 ul {
-	padding: 0px; padding-left: 16px; margin: 0px;
+	padding: 0px; padding-left: 16px; margin: 0px; text-align: justify;
 }
 
 li {
-	padding: 0px; margin: 0px; margin-bottom: 2px;
-}
-
-p {
-	margin: 0.75ex 0ex;
-}
-
-p, ul {
-	text-align: justify;
+	padding: 0px; margin: 0px; margin-bottom: 2px; line-height: 1.3;
 }
 
 .linkcolour {
@@ -162,5 +154,17 @@ label, input, button, select {
 }
 
 
-
+/* Lists */
+p + ul.continue {
+	margin-top: -0.75ex;
+}
+ul.text + p.continue {
+	margin-top: 0ex;
+}
+ul.text {
+	list-style: '— ' outside; padding: 0em 0em 0em 0.9em; margin: 0ex;
+}
+ul.text li {
+	padding: 0ex; margin: 0ex;
+}
 

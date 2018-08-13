@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Quantitative Formal Models Repository</title>
+	<link href="https://fonts.googleapis.com/css?family=Tajawal:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js"></script>
+	<script type="text/javascript" src="../script.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="init()">
+
+<h1>Quantitative Formal Model Repository</h1>
+<p>
+	The models and results in this repository are provided as a benchmark set under the terms of the
+	<a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
+	Please cite the publication or website linked as "first presented in" for each model.
+	To contribute a new model or new results for an existing model, create a pull request in the
+	<a href="https://github.com/ahartmanns/qcomp">GitHub repository</a>.
+	For general questions or comments concerning the model repository, contact
+	<script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script>.
+	If you have questions concerning a specific model, please contact the submitter listed for that model.
+</p>
+
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabel">Search</div></div>
+	<fieldset>
+		<input type="text" data-bind="value: filter.name, valueUpdate: 'input'" placeholder="Show all models" style="width: 32ex;" />
+		&nbsp;of type&nbsp;
+		<select data-bind="options: modelTypes, optionsCaption: '(all)', value: filter.type"></select>
+		&nbsp;with&nbsp;
+		<input type="text" data-bind="value: filter.minStates, valueUpdate: 'input'" placeholder="zero" style="width: 12ex;" />
+		-
+		<input type="text" data-bind="value: filter.maxStates, valueUpdate: 'input'" placeholder="infinity" style="width: 12ex;" />
+		&nbsp;states
+	</fieldset>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabel">Models</div></div>
+	<table id="modelsTable" data-bind="visible: filteredModels().length !== 0">
+		<colgroup>
+			<col style="width: 20%;" />
+			<col style="width: 45%;" />
+			<col style="width: 7ex;" />
+			<col style="width: 2ex;" />
+			<col style="width: 7ex;" />
+			<col style="width: 7ex;" />
+			<col style="width: 2ex;" />
+			<col style="width: 7ex;" />
+			<col style="width: 3ex;" />
+			<col style="width: 17ex;" />
+			<col style="width: 35%;" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th class="clickable" onClick="sortModels('short');">Model <span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'short' ? 'visible' : 'hidden' }"></span></th>
+				<th class="clickable" onClick="sortModels('name');">Name<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'name' ? 'visible' : 'hidden' }"></span></th>
+				<th class="clickable" onClick="sortModels('type');">Type<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'type' ? 'visible' : 'hidden' }"></span></th>
+				<th colspan="2" class="clickable" onClick="sortModels('parameters');">Params<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'parameters' ? 'visible' : 'hidden' }"></span></th>
+				<th colspan="3" class="clickable" style="text-align: center;" onClick="sortModels('states');">&nbsp;&nbsp;States<span data-bind="text: sortAsc() ? '▾' : '▴', style: { display: sortBy() === 'states' ? 'inline' : 'none' }"></span></th>
+				<th colspan="2" class="clickable" onClick="sortModels('properties');">&nbsp;&nbsp;Properties<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'properties' ? 'visible' : 'hidden' }"></span></th>
+				<th class="clickable" onClick="sortModels('notes');">Notes<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'notes' ? 'visible' : 'hidden' }"></span></th>
+			</tr>
+		</thead>
+		<tbody data-bind="foreach: filteredModels">
+			<tr class="clickable" data-bind="click: $root.select, css: { evenrow: $index() % 2 === 0, oddrow: $index() % 2 === 1 }">
+				<td><div data-bind="text: short, attr: { title: short }" class="ellipsis"></div></td>
+				<td><div data-bind="text: name, attr: { title: name }" class="ellipsis"></div></td>
+				<td data-bind="text: type.toUpperCase(), attr: { title: CapitaliseFirst(modelTypeToLongString(type)) }"></td>
+				<td data-bind="text: parameters.length.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
+				<td data-bind="text: '&nbsp;(' + parameters.filter(p => p.kind == 'file').length.toLocaleString() + '/' + parameters.filter(p => p.kind == 'open').length.toLocaleString() + ')'" class="light"></td>
+				<!-- ko if: minStates !== maxStates -->
+					<td data-bind="html: minStates === maxStates || minStates === Number.MAX_SAFE_INTEGER ? '&nbsp;' : stateCountToHtmlString(minStates), attr: { title: minStates === maxStates ? '' : minStates.toLocaleString() }" style="text-align: right; padding-right: 0px;"></td>
+					<td class="light" data-bind="html: minStates === maxStates || maxStates === Number.POSITIVE_INFINITY ? '&nbsp;' : '&nbsp;-&nbsp;'" style="text-align: center; padding-right: 0px;"></td>
+					<td data-bind="html: maxStates === Number.POSITIVE_INFINITY ? '&nbsp;' : stateCountToHtmlString(maxStates), attr: { title: maxStates.toLocaleString() }"></td>
+				<!-- /ko -->
+				<!-- ko if: minStates === maxStates -->
+					<td colspan="3" data-bind="html: stateCountToHtmlString(maxStates), attr: { title: maxStates.toLocaleString() }" style="text-align: center; padding-right: 0px;"></td>
+				<!-- /ko -->
+				<td data-bind="text: properties.length.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
+				<td class="light"><div data-bind="text: '&nbsp;(' + propertiesToShortList(properties) + ')', attr: { title: propertiesToShortList(properties) }" class="ellipsis"></div></td>
+				<td><div data-bind="text: notes.length === 0 ? '' : '(' + notes + ')', attr: { title: notes }" class="ellipsis"></div></td>
+			</tr>
+		</tbody>
+	</table>
+	<div data-bind="visible: filteredModels().length === 0" style="font-style: italic;">
+		No models found for the specified criteria.
+	</div>
+</div>
+<div style="height: 1.5ex;"></div>
+<!-- ko if: selectedModel() !== null -->
+	<div id="modelDiv" data-bind="with: selectedModel" class="box">
+		<div data-bind="click: $root.close" class="linkcolour clickable" style="position: absolute; top: 0px; right: 0.5ex; text-transform: uppercase; font-size: 90%;">
+			(<span style="font-size: 90%; font-weight: bold;">close</span>)
+		</div>
+		<h2 id="model" data-bind="text: name + ' (' + short + ')'" style="margin-top: -0.5ex;"></h2>
+		
+		<!-- Version and date -->
+		<p style="font-style: italic; font-size: 90%;">
+			Version <span data-bind="text: version.toString()"></span>.
+			Model last updated on <span data-bind="text: date"></span>.
+		</p>
+
+		<!-- Creator, submitter and description -->
+		<p>
+			<span data-bind="text: author.name === submitter.name && author.email === submitter.email ? 'Created and submitted by ' : 'Created by '"></span><a data-bind="text: author.name, attr: { href: 'mailto:' + author.email }"></a><span data-bind="visible: author.name !== submitter.name || author.email !== submitter.email"> and submitted by <a data-bind="text: submitter.name, attr: { href: 'mailto:' + submitter.email }"></a></span>.<br />
+			First presented in<span data-bind="visible: description.includes('[0]')">:<br />[0]</span> <a data-bind="text: getLinkTitle(source), attr: { href: source }"></a>.
+		</p>
+		<p data-bind="html: formatText(description)"></p>
+		<!-- ko if: references.length !== 0 -->
+			<table data-bind="foreach: references" class="compact">
+				<tr>
+					<td style="text-align: right;"><span data-bind="text: '[' + ($index() + 1).toLocaleString() + ']'"></span></td>
+					<td><a data-bind="text: getLinkTitle($data), attr: { href: $data }"></a></td>
+				</tr>
+			</table>
+		<!-- /ko -->
+		
+		<!-- Parameters -->
+		<!-- ko if: parameters.length !== 0 -->
+			<h3 id="parameters">Parameters</h3>
+			<table data-bind="foreach: parameters" class="compact">
+				<tr>
+					<td data-bind="text: name" class="tt"></td>
+					<td data-bind="text: $data.type === undefined ? '' : '(' + $data.type + ')'"></td>
+					<td data-bind="html: formatText(description) + (kind === 'file' ? ' (hard-coded in files)' : '')"></td>
+				</tr>
+			</table>
+		<!-- /ko -->
+		
+		<!-- Properties -->
+		<h3 id="properties">Properties</h3>
+		<table data-bind="foreach: properties" class="compact">
+			<tr>
+				<td data-bind="text: name" class="tt"></td>
+				<td data-bind="text: '&nbsp;(' + propertyTypeToShortString(type) + ')', attr: { title: propertyTypeToLongString(type) }"></td>
+				<td data-bind="html: formatText(description)"></td>
+			</tr>
+		</table>
+		
+		<!-- Files -->
+		<h3 id="files">Files</h3>
+		<ul data-bind="foreach: files">
+			<li class="compact">
+				<a data-bind="text: file, attr: { href: $parent.path + '/' + file, download: toVersionFileName(file.substr(file.lastIndexOf('/') + 1), $parent.version) }"></a>
+				<span data-bind="if: $data['file-parameter-values'] !== undefined && $data['file-parameter-values'].length !== 0">
+					(<span data-bind="foreach: $data['file-parameter-values']"><span data-bind="text: name" class="tt"></span>
+					<span>=</span>
+					<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['file-parameter-values'].length - 1">, </span></span>)
+				</span>
+				<!-- ko if: $data.originals !== undefined -->
+					<div>
+						Converted from
+						<!-- ko foreach: originals -->
+							<a data-bind="text: $data, attr: { href: $parents[1].path + '/' + $data, download: toVersionFileName($data.substr($data.lastIndexOf('/') + 1), $parents[1].version) }"></a><span data-bind="text: $index() === $parent.originals.length - 1 ? '' : $index() === $parent.originals.length - 2 ? ' and ' : ', '"></span>
+						<!-- /ko -->
+						with <a data-bind="visible: conversion.url !== undefined, text: conversion.tool, attr: { href: conversion.url }"></a><span data-bind="visible: conversion.url === undefined, text: conversion.tool"></span>
+						<!-- ko if: conversion.version !== undefined -->version <span data-bind="text: conversion.version"></span><!-- /ko -->
+						using the following command<span data-bind="text: conversion.note === undefined ? '' : ' (and ' + conversion.note + ')'"></span>:
+					</div>
+					<div data-bind="text: conversion.command" class="tt" style="text-align: left; text-indent: -3ex; padding-left: 3ex;"></div>
+				<!-- /ko -->
+				<div data-bind="if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0">
+					Parameter settings:<br />
+					<ul data-bind="foreach: $data['open-parameter-values']">
+						<li>
+							<!-- ko if: $data.values !== undefined -->
+								<div data-bind="foreach: values">
+									<span data-bind="text: name" class="tt"></span>
+									<span>=</span>
+									<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent.values.length - 1">, </span>
+								</div>
+							<!-- /ko -->
+							<div data-bind="if: $data.states !== undefined">
+								<table data-bind="foreach: states" class="compact">
+									<tr>
+										<td style="text-align: right; padding-right: 0px;">
+											<!-- ko if: $data.number !== undefined --><span data-bind="text: number.toLocaleString()"></span><!-- /ko --><!-- ko if: $data.order !== undefined -->~ 10<sup data-bind="text: order.toString()"></sup><!-- /ko --> states&nbsp;
+										</td>
+										<td>
+											<!-- ko if: $data.note !== undefined -->(<span data-bind="text: note"></span>)<!-- /ko -->
+										</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		
+		<!-- Results -->
+		<!-- ko if: loadedResults().length !== 0 -->
+			<h3 id="results">Results</h3>
+			<ul data-bind="foreach: loadedResults">
+				<li class="compact">
+					<a data-bind="text: file.substr(file.lastIndexOf('/') + 1), attr: { href: path + '/' + file, download: toVersionFileName(file.substr(file.lastIndexOf('/') + 1), model.version) }"></a>
+					<!-- ko if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0 -->
+						/ <span data-bind="foreach: $data['open-parameter-values']"><span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['open-parameter-values'].length - 1">, </span></span>
+					<!-- /ko -->
+					/ <span data-bind="text: tool.name"></span>
+					<span data-bind="click: toggleShowResultDetails" class="linkcolour clickable" style="text-transform: uppercase; font-size: 90%;">(<span data-bind="text: showDetails() ? 'hide' : 'show'" style="font-size: 90%; font-weight: bold;"></span>)</span>
+					
+					<!-- ko if: showDetails -->
+					
+					<!-- Parameter values -->
+					<!-- ko if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0 -->
+					<div>
+						Parameters:
+						<span data-bind="foreach: $data['open-parameter-values']">
+							<span data-bind="text: name" class="tt"></span>
+							<span>=</span>
+							<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['open-parameter-values'].length - 1">, </span>
+						</span>
+					</div>
+					<!-- /ko -->
+					
+					<!-- Submitter -->
+					<p>
+						Submitted by <a data-bind="text: submitter.name, attr: { href: 'mailto:' + submitter.email }"></a>.
+					</p>
+					
+					<!-- Date, tool and system information -->
+					<p>
+						Results obtained on <span data-bind="text: date"></span>
+						<span data-bind="if: version !== $parent.version" style="color: #A00000; font-weight: bold;">using old version <span data-bind="text: version.toString()"></span> of the model</span>
+						with <!-- ko if: tool.url !== undefined --><a data-bind="text: tool.name, attr: { href: tool.url }"></a><!-- /ko --><!-- ko if: tool.url === undefined --><span data-bind="text: tool.name"></span><!-- /ko -->
+						version <span data-bind="text: tool.version"></span>
+						<!-- ko if: tool['part-of'] !== undefined -->
+							(part of <!-- ko if: tool['part-of-url'] !== undefined --><a data-bind="text: tool['part-of'], attr: { href: tool['part-of-url'] }"></a><!-- /ko --><!-- ko if: tool['part-of-url'] === undefined --><span data-bind="text: tool['part-of']"></span><!-- /ko -->)
+						<!-- /ko -->
+						on an <span data-bind="text: system.cpu"></span> system
+						with <span data-bind="text: system.ram.toLocaleString()"></span> GB RAM
+						running <span data-bind="text: system.os"></span><!-- ko if: system.runtime !== undefined --> and <span data-bind="text: system.runtime"></span><!-- /ko -->
+						<span data-bind="if: $data.command !== undefined">using the following command:</span><span data-bind="if: $data.command === undefined">.</span>
+					</p>
+										
+					<!-- Command line -->
+					<!-- ko if: $data.command !== undefined -->
+						<div data-bind="text: command" class="tt" style="text-align: left; text-indent: -3ex; padding-left: 3ex; margin-top: -0.75ex;"></div>
+						<!--<div class="box">
+							<div class="boxlabelo"><div class="boxlabelc">Command</div></div>
+							<div style="margin-top: 0.5ex;"></div>
+							<p data-bind="text: command" class="tt" style="text-align: left; margin: 1ex -1.5ex -1ex -1.5ex; padding: 0ex 1.5ex 1ex 1.5ex; white-space: nowrap; overflow-x: scroll;"></p>
+						</div>-->
+					<!-- /ko -->
+
+					<!-- Template for data trees -->
+					<script type="text/html" id="resultdatatree">
+						<!-- ko if: $data.group !== undefined || $data.property !== undefined -->
+							<h4 data-bind="text: $data.property !== undefined ? 'Property ' + $data.property : $data.group"></h4>
+						<!-- /ko -->
+						<!-- ko if: $data.value !== undefined || $data.values !== undefined -->
+							<table data-bind="foreach: ($data.value !== undefined ? [ { name: 'Result', value: $data.value } ] : []).concat($data.values !== undefined ? $data.values : [])" style="margin-bottom: 0.75ex;">
+								<tr>
+									<td data-bind="text: name.substr(0, 1).toUpperCase() + name.substr(1) + ':'"></td>
+									<td>
+										<span data-bind="text: (typeof value === 'number' ? value.toString() : value) + ($data.unit === undefined ? '' : ' ' + unit)"></span>
+									</td>
+								</tr>
+							</table>
+						<!-- /ko -->
+						<!-- ko if: $data.data !== undefined -->
+							<ul data-bind="foreach: data" style="margin-top: 0.75ex;">
+								<li data-bind="template: 'resultdatatree'"></li>
+							</ul>
+						<!-- /ko -->
+					</script>
+					
+					<!-- Global performance data -->
+					<div class="box">
+						<div class="boxlabelo"><div class="boxlabelc">Performance data</div></div>
+						<table>
+							<tr>
+								<td>Total time:</td>
+								<td data-bind="text: time.toString() + ' s'"></td>
+							</tr>
+							<tr data-bind="if: $data.memory !== undefined">
+								<td>Peak memory:</td>
+								<td data-bind="text: Math.round(memory / 1024 / 1024).toString() + ' MB'"></td>
+							</tr>
+						</table>
+					</div>
+					
+					<!-- Detailed results -->
+					<div class="box">
+						<div class="boxlabelo"><div class="boxlabelc">Results</div></div>
+						<!-- ko if: $data.log !== undefined -->
+							<p style="margin-top: 0ex;">
+								Log: <a data-bind="text: log.substr(log.lastIndexOf('/') + 1), attr: { href: path + '/' + log, download: toVersionFileName(log.substr(log.lastIndexOf('/') + 1), version) }"></a>
+							</p>
+						<!-- /ko -->
+						<!-- ko foreach: data -->
+							<!-- ko template: 'resultdatatree' -->
+							<!-- /ko -->
+						<!-- /ko -->
+					</div>
+					
+					<!-- /ko -->
+				</li>
+			</ul>
+		<!-- /ko -->
+	</div>
+<!-- /ko -->
+
+</body>
+</html>
