@@ -9,6 +9,7 @@
   { "path": "mdp/cdrive" },
   { "path": "mdp/elevators" },
   { "path": "mdp/exploding-blocksworld" },
+  { "path": "mdp/random-predicates" },
   { "path": "pta/brp" },
   { "path": "pta/wlan-large" }
 ]
