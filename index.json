@@ -15,6 +15,7 @@
   { "path": "mdp/exploding-blocksworld" },
   { "path": "mdp/random-predicates" },
   { "path": "mdp/rectangle-tireworld" },
+  { "path": "mdp/resource-gathering" },
   { "path": "mdp/tireworld" },
   { "path": "mdp/triangle-tireworld" },
   { "path": "mdp/zenotravel" },
