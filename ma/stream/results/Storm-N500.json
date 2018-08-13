@@ -1,0 +1,98 @@
+{
+    "file": "../stream.jani", 
+    "version": 1, 
+    "date": "2018-08-01", 
+    "submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
+    "log": "Storm-N500.txt", 
+    "open-parameter-values": [
+        {
+            "name": "N", 
+            "value": 500
+        }
+    ], 
+    "tool": {
+        "name": "Storm", 
+        "version": "1.2.4 (dev)", 
+        "url": "http://www.stormchecker.org"
+    }, 
+    "system": {
+        "cpu": "2.7 GHz Intel Core i5", 
+        "ram": "16", 
+        "os": "macOS 10.13.5", 
+        "runtime": "Apple LLVM version 9.1.0 (clang-902.0.39.2)"
+    }, 
+    "command": "storm --jani stream.jani -jprop --constants N=500 -tm", 
+    "time": 37.837, 
+    "data": [
+        {
+            "values": [
+                {
+                    "unit": "s", 
+                    "name": "time", 
+                    "value": 1.433
+                }, 
+                {
+                    "name": "states", 
+                    "value": 376251
+                }, 
+                {
+                    "name": "branches", 
+                    "value": 750501
+                }, 
+                {
+                    "name": "transitions", 
+                    "value": 501001
+                }, 
+                {
+                    "name": "markovian-states", 
+                    "value": 250501
+                }
+            ], 
+            "group": "State space exploration"
+        }, 
+        {
+            "property": "exp_buffertime", 
+            "values": [
+                {
+                    "unit": "s", 
+                    "name": "time", 
+                    "value": 0.764
+                }
+            ], 
+            "value": "6.306254545"
+        }, 
+        {
+            "property": "exp_restarts", 
+            "values": [
+                {
+                    "unit": "s", 
+                    "name": "time", 
+                    "value": 0.334
+                }
+            ], 
+            "value": "24.22501818"
+        }, 
+        {
+            "property": "pr_underrun", 
+            "values": [
+                {
+                    "unit": "s", 
+                    "name": "time", 
+                    "value": 6.509
+                }
+            ], 
+            "value": "0.2033445361"
+        }, 
+        {
+            "property": "pr_underrun_tb", 
+            "values": [
+                {
+                    "unit": "s", 
+                    "name": "time", 
+                    "value": 28.779
+                }
+            ], 
+            "value": "0.01893903172"
+        }
+    ]
+}

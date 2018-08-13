@@ -1,0 +1,121 @@
+{
+	"name": "Video Streaming Client", 
+	"short": "stream", 
+	"type": "ma", 
+	"version": 1, 
+	"date": "2018-08-13", 
+	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
+	"source": "https://doi.org/10.1007/978-3-319-63387-9_7", 
+	"description": "A model for a client of a video streaming service. The client consecutively receives `N´ data packages and stores them into a buffer. The buffered packages are processed during the playback of the video. The time it takes to receive (or to process) a single package is modeled by an exponentially distributed delay. Whenever a package is received and the video is not playing, the client nondeterministically chooses whether it starts the playback or whether it keeps on buffering. The latter choice is not reliable, i.e., there is a 1% chance that the playback is started anyway. In case of a buffer underrun, the playback is paused and the client waits for new packages to arrive.", 
+	"parameters": [
+		{
+			"name": "N", 
+			"kind": "open", 
+			"description": "Number of packages to process", 
+			"type": "positive integer"
+		}
+	], 
+	"properties": [
+		{
+			"name": "exp_buffertime", 
+			"description": "The minimal expected buffering time, i.e., the time in which the video does not play.", 
+			"type": "exp-reward"
+		}, 
+		{
+			"name": "exp_restarts", 
+			"description": "The maximal expected number of buffer underruns during the playback.", 
+			"type": "exp-reward"
+		}, 
+		{
+			"name": "pr_underrun", 
+			"description": "The minimal probability for a buffer underrun.", 
+			"type": "prob-reach"
+		}, 
+		{
+			"name": "pr_underrun_tb", 
+			"description": "The maximal probability for a buffer underrun within two time units.", 
+			"type": "prob-reach-time-bounded"
+		}
+	], 
+	"files": [
+		{
+			"file": "stream.jani", 
+			"original-file": [
+				"stream.ma", 
+				"stream.csl"
+			], 
+			"conversion": {
+				"tool": "Storm-conv", 
+				"version": "1.2.4 (dev)", 
+				"url": "http://www.stormchecker.org", 
+				"command": "storm-conv --prism stream.ma --tojani stream.jani --prop stream.csl --globalvars --standard-compliant"
+			}, 
+			"file-parameter-values": [], 
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "N", 
+							"value": 10
+						}
+					], 
+					"states": [
+						{
+							"note": "Storm", 
+							"number": 176
+						}
+					]
+				}, 
+				{
+					"values": [
+						{
+							"name": "N", 
+							"value": 100
+						}
+					], 
+					"states": [
+						{
+							"note": "Storm", 
+							"number": 15251
+						}
+					]
+				}, 
+				{
+					"values": [
+						{
+							"name": "N", 
+							"value": 500
+						}
+					], 
+					"states": [
+						{
+							"note": "Storm", 
+							"number": 376251
+						}
+					]
+				}, 
+				{
+					"values": [
+						{
+							"name": "N", 
+							"value": 1000
+						}
+					], 
+					"states": [
+						{
+							"note": "Storm", 
+							"number": 1502501
+						}
+					]
+				}
+			]
+		}
+	], 
+	"results": [
+		"results/Storm.10.json", 
+		"results/Storm.100.json", 
+		"results/Storm.500.json", 
+		"results/Storm.1000.json"
+	]
+}
