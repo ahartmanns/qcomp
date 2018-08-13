@@ -1,0 +1,154 @@
+{
+	"name": "Stochastic Job Scheduling", 
+	"short": "jobs", 
+	"type": "ma", 
+	"version": 1, 
+	"date": "2018-08-13", 
+	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
+	"source": "https://doi.org/10.1007/978-3-319-63387-9_7", 
+	"description": "A model of the stochastic job scheduling problem of [1]. The task is to perform `N´ jobs with exponential service times on `K´ identical processors under a pre-emptive scheduling policy. Once a job finishes, all `K´ processors can be assigned any of the remaining jobs. There are three different types of jobs and two jobs of the same type have the same rate.", 
+	"references": [
+		"https://doi.org/10.1145/322234.322242"
+	], 
+	"parameters": [
+		{
+			"name": "N", 
+			"kind": "file", 
+			"description": "Number of jobs to schedule", 
+			"type": "positive integer"
+		}, 
+		{
+			"name": "K", 
+			"kind": "file", 
+			"description": "Number of processors", 
+			"type": "positive integer"
+		}
+	], 
+	"properties": [
+		{
+			"name": "completiontime", 
+			"description": "The minimal expected time until all jobs are finished.", 
+			"type": "exp-time"
+		}, 
+		{
+			"name": "avgtime", 
+			"description": "The minimal expected time that a job requires to complete (on average).", 
+			"type": "exp-reward"
+		}, 
+		{
+			"name": "prhalfdone", 
+			"description": "The maximal probability that half of the jobs are finished within `N´/(4`K´) time units.", 
+			"type": "prob-reach-time-bounded"
+		}
+	], 
+	"files": [
+		{
+			"file": "jobs.5-2.jani", 
+			"original-file": [
+				"jobs-5-2.ma", 
+				"jobs.csl"
+			], 
+			"conversion": {
+				"tool": "Storm-conv", 
+				"version": "1.2.4 (dev)", 
+				"url": "http://www.stormchecker.org", 
+				"command": "storm-conv --prism jobs-5-2.ma --tojani jobs.5-2.jani --prop jobs.csl --globalvars --standard-compliant"
+			}, 
+			"file-parameter-values": [
+				{
+					"name": "N", 
+					"value": 5
+				}, 
+				{
+					"name": "K", 
+					"value": 2
+				}
+			], 
+			"open-parameter-values": [
+				{
+					"values": [], 
+					"states": [
+						{
+							"note": "Storm", 
+							"number": 117
+						}
+					]
+				}
+			]
+		}, 
+		{
+			"file": "jobs.10-3.jani", 
+			"original-file": [
+				"jobs-10-3.ma", 
+				"jobs.csl"
+			], 
+			"conversion": {
+				"tool": "Storm-conv", 
+				"version": "1.2.4 (dev)", 
+				"url": "http://www.stormchecker.org", 
+				"command": "storm-conv --prism jobs-10-3.ma --tojani jobs.10-3.jani --prop jobs.csl --globalvars --standard-compliant"
+			}, 
+			"file-parameter-values": [
+				{
+					"name": "N", 
+					"value": 10
+				}, 
+				{
+					"name": "K", 
+					"value": 3
+				}
+			], 
+			"open-parameter-values": [
+				{
+					"values": [], 
+					"states": [
+						{
+							"note": "Storm", 
+							"number": 16439
+						}
+					]
+				}
+			]
+		}, 
+		{
+			"file": "jobs.15-3.jani", 
+			"original-file": [
+				"jobs-15-3.ma", 
+				"jobs.csl"
+			], 
+			"conversion": {
+				"tool": "Storm-conv", 
+				"version": "1.2.4 (dev)", 
+				"url": "http://www.stormchecker.org", 
+				"command": "storm-conv --prism jobs-15-3.ma --tojani jobs.15-3.jani --prop jobs.csl --globalvars --standard-compliant"
+			}, 
+			"file-parameter-values": [
+				{
+					"name": "N", 
+					"value": 15
+				}, 
+				{
+					"name": "K", 
+					"value": 3
+				}
+			], 
+			"open-parameter-values": [
+				{
+					"values": [], 
+					"states": [
+						{
+							"note": "Storm", 
+							"number": 1896568
+						}
+					]
+				}
+			]
+		}
+	], 
+	"results": [
+		"results/Storm.5-2.json", 
+		"results/Storm.10-3.json", 
+		"results/Storm.15-3.json"
+	]
+}

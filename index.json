@@ -5,6 +5,7 @@
   { "path": "ma/dpm" },
   { "path": "ma/erlang" },
   { "path": "ma/ftwc" },
+  { "path": "ma/jobs" },
   { "path": "mdp/beb" },
   { "path": "mdp/blocksworld" },
   { "path": "mdp/boxworld" },

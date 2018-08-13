@@ -1,11 +1,15 @@
 * text=auto
 
+*.csl text
 *.jani text
 *.js text
 *.json text
+*.ma text
 *.md text
 *.modest text
 *.pddl text
+*.pm text
+*.prctl text
 *.txt text
 
 *.pdf binary
