@@ -3,6 +3,7 @@
   { "path": "ma/bitcoin-attack" },
   { "path": "ma/breakdown-queues" },
   { "path": "ma/dpm" },
+  { "path": "ma/erlang" },
   { "path": "mdp/beb" },
   { "path": "mdp/blocksworld" },
   { "path": "mdp/boxworld" },

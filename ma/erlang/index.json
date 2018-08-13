@@ -1,0 +1,75 @@
+{
+	"name": "Erlang Stages",
+	"short": "erlang",
+	"type": "ma",
+	"version": 1,
+	"date": "2018-08-13",
+	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1007/978-3-642-12002-2_5",
+	"description": "A simple interactive Markov chain model where the goal state can be reached via a path with an Erlang(`K´, `R´)-distributed delay.",
+	"references": [
+	],
+	"parameters": [
+		{ "name": "K", "kind": "open", "description": "The shape parameter of the Erlang distribution", "type": "positive integer" },
+		{ "name": "R", "kind": "open", "description": "The rate parameter of the Erlang distribution", "type": "positive real number" }
+	],
+	"files": [
+		{
+			"file": "erlang.jani",
+			"original-file": "erlang.modest",
+			"conversion": {
+				"tool": "moconv",
+				"version": "3.0.78",
+				"url": "http://www.modestchecker.net/",
+				"command": "moconv.exe erlang.modest -O erlang.jani"
+			},
+			"open-parameter-values": [
+				{
+					"values": [
+						{ "name": "K", "value": 10 },
+						{ "name": "R", "value": 10 }
+					],
+					"states": [
+						{ "number": 29, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "K", "value": 5000 },
+						{ "name": "R", "value": 10 }
+					],
+					"states": [
+						{ "number": 10009, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "K", "value": 5000 },
+						{ "name": "R", "value": 100 }
+					],
+					"states": [
+						{ "number": 10009, "note": "mcsta" }
+					]
+				}
+			]
+		}
+	],
+	"properties": [
+		{
+			"name": "PminReach",
+			"type": "prob-reach",
+			"description": "The minimum probability to reach the goal state."
+		},
+		{
+			"name": "TminReach",
+			"type": "exp-time",
+			"description": "The minimum expected time to reach the goal state."
+		}
+	],
+	"results": [
+		"results/mcsta.10-10.json",
+		"results/mcsta.5000-10.json",
+		"results/mcsta.5000-100.json"
+	]
+}

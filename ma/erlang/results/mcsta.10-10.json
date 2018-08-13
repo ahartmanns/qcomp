@@ -1,0 +1,87 @@
+﻿{
+	"file": "../erlang.jani",
+	"version": 1,
+	"date": "2018-08-13",
+	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
+	"open-parameter-values": [
+		{ "name": "K", "value": 10 },
+		{ "name": "R", "value": 10.0 }
+	],
+	"tool": {
+		"name": "mcsta",
+		"version": "3.0.78",
+		"url": "http://www.modestchecker.net/",
+		"part-of": "the Modest Toolset",
+		"part-of-url": "http://www.modestchecker.net/"
+	},
+	"system": {
+		"cpu": "Intel Core i7-4790",
+		"ram": 8,
+		"os": "Ubuntu 18.04 (x64)",
+		"runtime": "Mono 5.14.0.177"
+	},
+	"command": "mcsta.exe erlang.jani -S Memory --p1 -E \"K=10, R=10\" -O mcsta.10-10.json Json",
+	"time": 0,
+	"memory": 46551040,
+	"data": [
+		{
+			"group": "State space exploration",
+			"values": [
+				{ "name": "State size", "value": 3, "unit": "B" },
+				{ "name": "States", "value": 29 },
+				{ "name": "Transitions", "value": 30 },
+				{ "name": "Branches", "value": 31 },
+				{ "name": "Time", "value": 0, "unit": "s" },
+				{ "name": "Rate", "value": 1812.5 }
+			]
+		},
+		{
+			"property": "PminReach",
+			"value": 0.5,
+			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Min. prob. 0 states", "value": 2 },
+						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Min. prob. 1 states", "value": 23 },
+						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+					]
+				},
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 0 },
+						{ "name": "Iterations", "value": 2 },
+						{ "name": "Time", "value": 0, "unit": "s" }
+					]
+				}
+			]
+		},
+		{
+			"property": "TminReach",
+			"value": 2,
+			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Max. prob. 0 states", "value": 2 },
+						{ "name": "Time for max. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Max. prob. 1 states", "value": 24 },
+						{ "name": "Time for max. prob. 1 states", "value": 0, "unit": "s" }
+					]
+				},
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 0 },
+						{ "name": "Iterations", "value": 2 },
+						{ "name": "Time", "value": 0, "unit": "s" }
+					]
+				}
+			]
+		}
+	]
+}
