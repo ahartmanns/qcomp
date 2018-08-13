@@ -1,0 +1,19 @@
+Peak memory usage: 189 MB
+Analysis results for elevators-b-11-9.jani
+
++ State space exploration
+  State size:  64 bytes
+  States:      538326
+  Transitions: 3208167
+  Branches:    3456513
+  Time:        9.0 s
+  Rate:        59987 states/s
+
++ Property goal
+  Probability: 1
+  Time:        25.1 s
+
+  + Value iteration
+    Final error: 9.53675225901819E-07
+    Iterations:  140
+    Time:        25.1 s
