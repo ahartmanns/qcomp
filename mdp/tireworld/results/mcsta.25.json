@@ -1,0 +1,40 @@
+{
+	"file": "../tireworld-25.jani",
+	"version": 1,
+	"date": "2018-08-01",
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"log": "mcsta.25.txt",
+	"open-parameter-values": [
+	],
+	"tool": {
+		"name": "mcsta",
+		"version": "3.0.71",
+		"url": "http://www.modestchecker.net/",
+		"part-of": "the Modest Toolset",
+		"part-of-url": "http://www.modestchecker.net/"
+	},
+	"system": {
+		"cpu": "Intel Core i7-4650U",
+		"ram": "8",
+		"os": "Windows 10 Home 1803 (x64)",
+		"runtime": ".NET Framework 4.7.2"
+	},
+	"command": "mcsta.exe --p1 tireworld-25.jani",
+	"time": 1,
+	"data": [
+		{
+			"group": "State space exploration",
+			"values": [
+				{ "name": "time", "value": 1.1, "unit": "s" },
+				{ "name": "states", "value": 196560 },
+				{ "name": "transitions", "value": 469876 },
+				{ "name": "branches", "value": 850688 }
+			]
+		},
+		{
+			"property": "goal",
+			"value": 1,
+			"values": [ { "name": "time", "value": 1.3, "unit": "s" } ]
+		}
+	]
+}

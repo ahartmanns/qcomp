@@ -11,6 +11,7 @@
   { "path": "mdp/exploding-blocksworld" },
   { "path": "mdp/random-predicates" },
   { "path": "mdp/rectangle-tireworld" },
+  { "path": "mdp/tireworld" },
   { "path": "pta/brp" },
   { "path": "pta/wlan-large" }
 ]

@@ -1,0 +1,19 @@
+Peak memory usage: 46 MB
+Analysis results for tireworld-17.jani
+
++ State space exploration
+  State size:  16 bytes
+  States:      8670
+  Transitions: 18662
+  Branches:    33436
+  Time:        0.1 s
+  Rate:        118767 states/s
+
++ Property goal
+  Probability: 0.233279999858782
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 7.32517364033996E-07
+    Iterations:  33
+    Time:        0.1 s
