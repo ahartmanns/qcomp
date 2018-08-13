@@ -1,0 +1,19 @@
+Peak memory usage: 724 MB
+Analysis results for cdrive-10.jani
+
++ State space exploration
+  State size:  104 bytes
+  States:      2193
+  Transitions: 3685
+  Branches:    8718
+  Time:        0.9 s
+  Rate:        2326 states/s
+
++ Property goal
+  Probability: 0.45110511806282
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 8.52044234652332E-07
+    Iterations:  108
+    Time:        0.1 s

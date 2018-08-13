@@ -6,6 +6,7 @@
   { "path": "mdp/beb" },
   { "path": "mdp/blocksworld" },
   { "path": "mdp/boxworld" },
+  { "path": "mdp/cdrive" },
   { "path": "pta/brp" },
   { "path": "pta/wlan-large" }
 ]
