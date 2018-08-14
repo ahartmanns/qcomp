@@ -1,0 +1,60 @@
+{
+	"name": "Polling System",
+	"short": "polling-system",
+	"type": "ma",
+	"version": 1,
+	"date": "2018-08-14",
+	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1007/978-3-642-40196-1_5",
+	"description": "A polling system with two stations and a server. The station delivers jobs out of its queue with capacity `C´ to the server which completes the tasks. Each job is of one of `JOB_TYPES´ different types.",
+	"references": [
+	],
+	"parameters": [
+		{ "name": "JOB_TYPES", "kind": "open", "description": "Number of job types", "type": "positive integer" },
+		{ "name": "C", "kind": "open", "description": "Capacity of each queue", "type": "positive integer" }
+	],
+	"files": [
+		{
+			"file": "polling-system.jani",
+			"original-file": "polling-system.modest",
+			"conversion": {
+				"tool": "moconv",
+				"version": "3.0.78",
+				"url": "http://www.modestchecker.net/",
+				"command": "moconv.exe polling-system.modest -O polling-system.jani"
+			},
+			"open-parameter-values": [
+				{
+					"values": [
+						{ "name": "NR_OF_JOB_TYPES", "value": 3 },
+						{ "name": "QUEUE_SIZE", "value": 3 }
+					],
+					"states": [
+						{ "number": 10934, "note": "mcsta" }
+					]
+				}
+			]
+		}
+	],
+	"properties": [
+		{
+			"name": "PminBothFull",
+			"type": "prob-reach",
+			"description": "The minimum probability that both queues are full."
+		},
+		{
+			"name": " TminBothFull",
+			"type": "exp-time",
+			"description": "The minimum expected time until both queues are full."
+		},
+		{
+			"name": "TmaxBothFull",
+			"type": "exp-time",
+			"description": "The maximum expected time until both queues are full."
+		}
+	],
+	"results": [
+		"results/mcsta.3-3.json"
+	]
+}
