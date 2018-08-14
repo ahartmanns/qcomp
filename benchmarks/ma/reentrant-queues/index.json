@@ -1,0 +1,62 @@
+{
+	"name": "Reentrant Queueing System",
+	"short": "reentrant-queues",
+	"type": "ma",
+	"version": 1,
+	"date": "2018-08-14",
+	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.14279/tuj.eceasst.53.783",
+	"description": "A queueing system with a left and a right queue of capacity `C_LEFT´ and `C_RIGHT´, respectively. Jobs of `JOB_TYPES´ different types arrive into the left and right queues, where they are stored until they start being processed by the left or right service desk, respectively. When a job is completed at the left service desk, it may re-enter the right queue.",
+	"references": [
+	],
+	"parameters": [
+		{ "name": "JOB_TYPES", "kind": "open", "description": "Number of job types", "type": "positive integer" },
+		{ "name": "C_LEFT", "kind": "open", "description": "Capacity of the left queue", "type": "positive integer" },
+		{ "name": "C_RIGHT", "kind": "open", "description": "Capacity of the right queue", "type": "positive integer" }
+	],
+	"files": [
+		{
+			"file": "reentrant-queues.jani",
+			"original-file": "reentrant-queues.modest",
+			"conversion": {
+				"tool": "moconv",
+				"version": "3.0.78",
+				"url": "http://www.modestchecker.net/",
+				"command": "moconv.exe reentrant-queues.modest -O reentrant-queues.jani"
+			},
+			"open-parameter-values": [
+				{
+					"values": [
+						{ "name": "JOB_TYPES", "value": 3 },
+						{ "name": "C_LEFT", "value": 3 },
+						{ "name": "C_RIGHT", "value": 3 }
+					],
+					"states": [
+						{ "number": 77937, "note": "mcsta" }
+					]
+				}
+			]
+		}
+	],
+	"properties": [
+		{
+			"name": "PminBothQueuesFull",
+			"type": "prob-reach",
+			"description": "The minimum probability that both queues are full."
+		},
+		{
+			"name": "TminBothQueuesFull",
+			"type": "exp-time",
+			"description": "The minimum expected time until both queues are full."
+		},
+		{
+			"name": "TmaxBothQueuesFull",
+			"type": "exp-time",
+			"description": "The maximum expected time until both queues are full."
+		}
+	],
+	"results": [
+		"results/mcsta.3-3-3.json"
+	]
+}

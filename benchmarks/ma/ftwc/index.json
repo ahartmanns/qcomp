@@ -12,7 +12,6 @@
 		"https://essay.utwente.nl/62743/1/Final_Thesis_Rob_Bamberg.pdf",
 		"http://www.avacs.org/Benchmarks/Open/ftwc.pdf"
 	],
-	"challenge": "value iteration converges slowly",
 	"parameters": [
 		{ "name": "N", "kind": "open", "description": "Number of workstations", "type": "positive integer" }
 	],
