@@ -11,6 +11,7 @@ body {
 	font-family: 'Tajawal', sans-serif; font-size: 15px;
 	background-color: #FFFFFF; color: #000000;
 	hyphens: auto;
+	line-height: 1.3;
 }
 
 .light { color: #808080; }
@@ -41,15 +42,15 @@ h4 {
 }
 
 p {
-	padding: 0px; margin: 0.75ex 0ex; line-height: 1.3; text-align: justify;
+	padding: 0px; margin: 0.75ex 0ex; text-align: justify;
 }
 
-ul {
+ul, ol {
 	padding: 0px; padding-left: 16px; margin: 0px; text-align: justify;
 }
 
 li {
-	padding: 0px; margin: 0px; margin-bottom: 2px; line-height: 1.3;
+	padding: 0px; margin: 0px; margin-bottom: 2px;
 }
 
 .linkcolour {
@@ -76,22 +77,17 @@ a.nodec:hover {
 	text-decoration: none;
 }
 
+tt, .tt {
+	font-family: 'Courier New', monospace; font-size: 105%; line-height: 1.2;
+}
+
 .reference {
 	font-size: 90%;
-}
-
-.tt {
-	font-family: 'Courier New', monospace; font-size: 105%;
-}
-
-.compact {
-	line-height: 1.3;
 }
 
 .ellipsis {
 	text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
 }
-
 
 /* Tables */
 
@@ -109,7 +105,7 @@ tr.oddrow {
 }
 
 #modelsTable {
-	width: 100%; table-layout: fixed;
+	width: 100%; table-layout: fixed; line-height: 1.5;
 }
 
 #modelsTable tr:hover {
@@ -159,16 +155,22 @@ label, input, button, select {
 
 
 /* Lists */
-p + ul.continue {
-	margin-top: -0.75ex;
-}
-ul.text + p.continue {
-	margin-top: 0ex;
-}
 ul.text {
 	list-style: '— ' outside; padding: 0em 0em 0em 0.9em; margin: 0ex;
 }
-ul.text li {
+ol.text {
+	list-style: decimal outside; padding: 0em 0em 0em 1.4em; margin: 0ex;
+}
+ul.text li, ol.text li {
 	padding: 0ex; margin: 0ex;
 }
+p + ul.continue, p + ol.continue {
+	margin-top: -0.75ex;
+}
+ul.text + p.continue, ol.text + p.continue {
+	margin-top: 0ex;
+}
+
+
+
 

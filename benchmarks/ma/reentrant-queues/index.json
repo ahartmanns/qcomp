@@ -4,6 +4,9 @@
 	"type": "ma",
 	"version": 1,
 	"date": "2018-08-14",
+	"version-history": [
+		{ "version": 1, "date": "2018-08-14", "notes": "Initial version." }
+	],
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.14279/tuj.eceasst.53.783",

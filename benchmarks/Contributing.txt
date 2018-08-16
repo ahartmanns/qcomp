@@ -1,8 +1,0 @@
-Guidelines for contributions:
-- Use tabs for indentation in the .json files.
-- Use title capitalisation for the "name" of a model.
-- The "source" of a model should preferably be citable (i.e. link to the DOI of a published paper).
-- All "references" given for a model must be referred to in the "description" (use "[1]" to refer to the first reference, "[2]" for the second, etc.).
-- All "parameters" of a model should be explained in the "description". In the "description", enclose parameter names in `´ (e.g. "`N´" to refer to parameter N).
-- Use the "short" name of the model for the file names of all model files (original and converted) wherever possible. If the file contains hardcoded parameters, use the short name of the model, followed by a dash, followed by the hardcoded parameter values separated by dashes in the order in which they appear on the website, followed by the file extension.
-- The names of "results" files should be the name of the tool, followed by a dot, followed by the parameter values separated by dashes in the order in which they appear on the website, followed by the file extension.

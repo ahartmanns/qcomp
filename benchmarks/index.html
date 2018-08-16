@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Quantitative Formal Models Repository</title>
+	<title>QComp - Quantitative Formal Models Repository - qcomp.org</title>
 	<link href="https://fonts.googleapis.com/css?family=Tajawal:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js"></script>
@@ -13,11 +13,11 @@
 
 <h1>Quantitative Formal Model Repository</h1>
 <p>
-	The models and results in this repository are provided as a benchmark set under the terms of the
+	The models and results in this repository on <a href="../index.html">qcomp.org</a> are provided as a benchmark set under the terms of the
 	<a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
-	Please cite the publication or website linked as "first presented in" for each model.
-	To contribute a new model or new results for an existing model, create a pull request in the
-	<a href="https://github.com/ahartmanns/qcomp">GitHub repository</a>.
+	Please cite the publication linked as "first presented in" for each model.
+	To contribute a new model, update an existing model, or add new results for an existing model, please consider our
+	<a href="contributing.html">information for contributors</a>.
 	For general questions or comments concerning the model repository, contact
 	<script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script>.
 	If you have questions concerning a specific model, please contact the submitter listed for that model.
@@ -109,7 +109,7 @@
 		</p>
 		<p data-bind="html: formatText(description)"></p>
 		<!-- ko if: references.length !== 0 -->
-			<table data-bind="foreach: references" class="compact">
+			<table data-bind="foreach: references">
 				<tr>
 					<td style="text-align: right;"><span data-bind="text: '[' + ($index() + 1).toLocaleString() + ']'"></span></td>
 					<td><a data-bind="text: getLinkTitle($data), attr: { href: $data }"></a></td>
@@ -120,7 +120,7 @@
 		<!-- Parameters -->
 		<!-- ko if: parameters.length !== 0 -->
 			<h3 id="parameters">Parameters</h3>
-			<table data-bind="foreach: parameters" class="compact">
+			<table data-bind="foreach: parameters">
 				<tr>
 					<td data-bind="text: name" class="tt"></td>
 					<td data-bind="text: $data.type === undefined ? '' : '(' + $data.type + ')'"></td>
@@ -131,7 +131,7 @@
 		
 		<!-- Properties -->
 		<h3 id="properties">Properties</h3>
-		<table data-bind="foreach: properties" class="compact">
+		<table data-bind="foreach: properties">
 			<tr>
 				<td data-bind="text: name" class="tt"></td>
 				<td data-bind="text: '&nbsp;(' + propertyTypeToShortString(type) + ')', attr: { title: propertyTypeToLongString(type) }"></td>
@@ -142,7 +142,7 @@
 		<!-- Files -->
 		<h3 id="files">Files</h3>
 		<ul data-bind="foreach: files">
-			<li class="compact">
+			<li>
 				<a data-bind="text: file, attr: { href: $parent.path + '/' + file, download: toVersionFileName(file.substr(file.lastIndexOf('/') + 1), $parent.version) }"></a>
 				<span data-bind="if: $data['file-parameter-values'] !== undefined && $data['file-parameter-values'].length !== 0">
 					(<span data-bind="foreach: $data['file-parameter-values']"><span data-bind="text: name" class="tt"></span>
@@ -165,15 +165,18 @@
 					Parameter settings:<br />
 					<ul data-bind="foreach: $data['open-parameter-values']">
 						<li>
-							<!-- ko if: $data.values !== undefined -->
-								<div data-bind="foreach: values">
+							<!-- ko if: $data.values !== undefined && $data.values.length !== 0 -->
+								<span data-bind="foreach: values">
 									<span data-bind="text: name" class="tt"></span>
 									<span>=</span>
 									<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent.values.length - 1">, </span>
-								</div>
+								</span>
 							<!-- /ko -->
-							<div data-bind="if: $data.states !== undefined">
-								<table data-bind="foreach: states" class="compact">
+							<!-- ko if: $data.states !== undefined -->
+								<!-- ko if: $data.values !== undefined && $data.values.length !== 0 -->
+									<br />
+								<!-- /ko -->
+								<table data-bind="foreach: states" style="display: inline;">
 									<tr>
 										<td style="text-align: right; padding-right: 0px;">
 											<!-- ko if: $data.number !== undefined --><span data-bind="text: number.toLocaleString()"></span><!-- /ko --><!-- ko if: $data.order !== undefined -->~ 10<sup data-bind="text: order.toString()"></sup><!-- /ko --> states&nbsp;
@@ -183,7 +186,7 @@
 										</td>
 									</tr>
 								</table>
-							</div>
+							<!-- /ko -->
 						</li>
 					</ul>
 				</div>
@@ -194,7 +197,7 @@
 		<!-- ko if: loadedResults().length !== 0 -->
 			<h3 id="results">Results</h3>
 			<ul data-bind="foreach: loadedResults">
-				<li class="compact">
+				<li>
 					<a data-bind="text: file.substr(file.lastIndexOf('/') + 1), attr: { href: path + '/' + file, download: toVersionFileName(file.substr(file.lastIndexOf('/') + 1), model.version) }"></a>
 					<!-- ko if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0 -->
 						/ <span data-bind="foreach: $data['open-parameter-values']"><span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['open-parameter-values'].length - 1">, </span></span>
@@ -300,6 +303,27 @@
 					<!-- /ko -->
 				</li>
 			</ul>
+		<!-- /ko -->
+		
+		<!-- Version history -->
+		<!-- ko if: $data["version-history"] !== undefined && $data["version-history"].length > 1 -->
+			<h3>Version history</h3>
+			<table class="compact">
+				<thead>
+					<tr style="font-style: italic;">
+						<td style="text-align: right;">v</td>
+						<td style="text-align: center;">date</td>
+						<td>notes</td>
+					</tr>
+				</thead>
+				<tbody data-bind="foreach: $data['version-history']">
+					<tr>
+						<td data-bind="text: version.toString(), style: { fontWeight: version === $parent.version ? 'bold' : 'normal' }" style="text-align: right;"></td>
+						<td data-bind="text: date" style="text-align: center;"></td>
+						<td data-bind="text: notes"></td>
+					</tr>
+				</tbody>
+			</table>
 		<!-- /ko -->
 	</div>
 <!-- /ko -->

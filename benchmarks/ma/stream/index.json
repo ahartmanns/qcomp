@@ -3,7 +3,10 @@
 	"short": "stream", 
 	"type": "ma", 
 	"version": 1, 
-	"date": "2018-08-13", 
+	"date": "2018-08-13",
+	"version-history": [
+		{ "version": 1, "date": "2018-08-13", "notes": "Initial version." }
+	], 
 	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
 	"source": "https://doi.org/10.1007/978-3-319-63387-9_7", 

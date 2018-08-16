@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>QComp - Quantitative Formal Models Repository - qcomp.org</title>
+	<link href="https://fonts.googleapis.com/css?family=Tajawal:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script type="text/javascript" src="../script.js"></script>
+</head>
+<body onload="init()">
+
+<h1>Quantitative Formal Model Repository</h1>
+
+<h2>Information for Contributors</h2>
+<p>
+	We welcome contributions that extend the <a href="index.html">Quantitative Formal Model Repository</a> by <a href="#addmodels">adding new models</a>, <a href="#updatemodels">updating existing models</a>, and <a href="#addresults">adding new experimental results</a>.
+	Before you submit, please carefully read and follow the general instructions and well as those specific for your type of contribution below.
+	If you have questions about contributing, contact <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script>.
+</p>
+
+<h3>How to submit</h3>
+<p>
+	We accept contributions via <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'iamel');</script> as <tt>.zip</tt> files that contain the files being added or changed (and only those), as well as via <a href="https://github.com/ahartmanns/qcomp">GitHub</a> pull requests.
+	Submissions via email will be committed to our <a href="https://github.com/ahartmanns/qcomp">Git repository</a> in your name; please mention your full name and the email address of your GitHub account in your email.
+	For pull requests, we require all commits to be in your full name.
+	Every submission should only contain a single contribution, e.g. one new model, or an update to one existing model.
+	<!-- The repository does not require any server-side infrastructure to run.
+	Please test your contribution before submitting by cloning our Git repository and applying your changes to it.-->
+</p>
+
+<h3>Licensing</h3>
+<p>
+	All data contributed to the repository will be redistributed under the terms of the open-access <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
+	Before submitting, make sure that you have the right to make your contribution publically available under this license, and include a statement to this effect in your email.
+	If you submit via pull request, send an email (from the email address associated with your GitHub account) with such a statement to <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script> before creating the pull request.
+</p>
+
+<h2 id="addmodels">Adding New Models</h2>
+<p>
+	We welcome contributions of new models that extend the repository.
+	Every model must be
+</p>
+<ul class="text continue">
+	<li>
+		formal, i.e. have a well-defined semantics in terms of discrete- or continuous-time Markov chains (DTMC or CTMC), Markov decision processes (MDP), Markov automata (MA) or probabilistic timed automata (PTA), and contain at least one probabilistic reachability or expected-reward property to be checked;
+	</li>
+	<li>
+		available in the <a href="http://www.jani-spec.org/">JANI</a> model format in addition to its original modelling formalism;
+	</li>
+	<li>
+		tested to work with at least one parameter configuration with one tool for the JANI translation, with the test being documented as an experimental result in the repository; and be
+	</li>
+	<li>
+		maintained, i.e. the submitter must be willing and available to answer questions about the model and review update submissions, for a reasonable amount of years after the submission.
+	</li>
+</ul>
+<p class="continue">
+	We aim for a large and diverse collection of interesting benchmark examples.
+	For this reason, before you decide to add a model, please consider why that model is interesting, and how it helps diversify the collection.
+	For example:
+</p>
+<ul class="text continue">
+	<li>
+		Is the model part of an established benchmark set?
+	</li>
+	<li>
+		Has it been developed to solve a challenging industrial problem?
+	</li>
+	<li>
+		Is the type of model – its modelling formalism or the kind of system it represents – underrepresented in the repository?
+	</li>
+	<li>
+		Is it challenging to analyse due to its size, other structural aspects, or the properties to check?
+	</li>
+</ul>
+<p class="continue">
+	Very briefly state this reasoning in the <tt>notes</tt> or <tt>challenge</tt> attribute of the model metadata.
+	Once you have established that you have the right to release the model under the terms of the <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license (see above), that it satisfies the above requirements, and that it is interesting, please do the following steps to contribute it to the repository:
+</p>
+<ol class="text continue">
+	<li>
+		Clone the <a href="https://github.com/ahartmanns/qcomp">Git repository</a>.
+	</li>
+	<li>
+		Choose a <tt>short</tt> name for your model.
+		Follow the short name patterns established by the existing models in the repository.
+	</li>
+	<li>
+		In the folder corresponding to the mathematical semantics of your model (e.g. <tt>benchmarks/ma</tt> for Markov automata, etc.), create a new subfolder with the exact <tt>short</tt> name for your model.
+	</li>
+	<li>
+		Place the original model file and its JANI translation into that subfolder.
+		Use the "short" name of the model for the file names of all model files (original and JANI) wherever possible.
+		If a file contains hardcoded parameters, use the short name of the model, followed by a dash, followed by the hardcoded parameter values separated by dashes in the order in which they appear in the metadata, followed by the file extension.
+	</li>
+	<li>
+		In the same subfolder, create a file <tt>index.json</tt> containing the metadata for your model.
+		Check the existing models for how to create the metadata file and what information to include.
+		<ul class="text">
+			<li>
+				Use tabs for indentation.
+			</li>
+			<li>
+				Use title capitalisation for the model's <tt>name</tt>.
+			</li>
+			<li>
+				Whenever possible, use a citable document for the <tt>source</tt> (i.e. link to a DOI in a format recognised by the repository's website).
+				This link will be labelled "first presented in", and users of the repository are asked to cite this document when using the model.
+			</li>
+			<li>
+				All <tt>references</tt> must be referred to in the <tt>description</tt> (use <tt>[1]</tt> to refer to the first reference, <tt>[2]</tt> for the second, etc.; use <tt>[0]</tt> to refer to the <tt>source</tt>).
+			</li>
+			<li>
+				All <tt>parameters</tt> of a model should be explained in the <tt>description</tt>.
+				In text, enclose parameter names in <tt>`´</tt> (e.g. <tt>`N´</tt> to refer to parameter N).
+			</li>
+		</ul>
+	</li>
+	<li>
+		Add a subfolder named <tt>results</tt> and include at least one <a href="#addresults">result</a> for one parameter configuration with one tool obtained from the JANI translation.
+	</li>
+	<li>
+		Add a reference to your model in file <tt>benchmarks/index.json</tt>.
+		(Keep the alphabetical ordering in that file.)
+	</li>
+	<li>
+		Test your additions by opening <tt>benchmarks/index.html</tt> in a browser.
+		In particular, check that all links work, and that all data in the models table is displayed correctly.
+	</li>
+	<li>
+		Submit via <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'iamel');</script> or <a href="https://github.com/ahartmanns/qcomp">GitHub</a> pull request.
+	</li>
+</ol>
+
+<h2 id="updatemodels">Updating Existing Models</h2>
+<p>
+	Existing models within the repository may be updated to correct modelling errors, add parameters, or add properties.
+	An update should make the least amount of changes necessary to achieve its goal.
+	These are the recommended steps to submit an update of an existing model:
+</p>
+<ol class="text continue">
+	<li>
+		Clone the <a href="https://github.com/ahartmanns/qcomp">Git repository</a>.
+	</li>
+	<li>
+		Make changes to the files inside the model's subfolder.
+	</li>
+	<li>
+		Increment the model's <tt>version</tt> number and add an entry to its <tt>version-history</tt>.
+	</li>
+	<li>
+		Test your changes by opening <tt>benchmarks/index.html</tt> in a browser.
+		In particular, check that all links still work, and that all data in the models table is still displayed correctly.
+	</li>
+	<li>
+		Submit via <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'iamel');</script> or <a href="https://github.com/ahartmanns/qcomp">GitHub</a> pull request.
+	</li>
+</ol>
+
+<h2 id="addresults">Adding New Results</h2>
+<p>
+	In addition to models, we also collect experimental results obtained by analysing the models with various tools.
+	The purpose of making these results available is to provide reference values for the properties included in the models as well as to allow showcasing and comparing the performance of different tools.
+	In general, the tools used should be publicly available so that all results can be independently replicated.
+	Follow these steps to submit new results:
+</p>
+<ol class="text continue">
+	<li>
+		Clone the <a href="https://github.com/ahartmanns/qcomp">Git repository</a>.
+	</li>
+	<li>
+		Add the <tt>.json</tt> files and tool output logs describing your results to the <tt>results</tt> subfolder of the corresponding model.
+		The names of the files should be the name of the tool, followed by a dot, followed by the parameter values separated by dashes in the order in which they appear in the model's metadata, followed by the file extension.
+		Check existing results for how to create the <tt>.json</tt> file and what information to include.
+		<ul class="text">
+			<li>
+				Use tabs for indentation.
+			</li>
+			<li>
+				Include the number of the model version that the experiments were performed with.
+			</li>
+			<li>
+				Strictly follow the established patterns of describing the system (CPU, operating system, etc.) used.
+				For example, state the exact CPU model, but not its frequency (as long as it can be deduced from the model) and no "(tm)" or (R)" symbols, in the <tt>cpu</tt> field.
+			</li>
+			<li>
+				Specify the <tt>command</tt> as if the current working directory was the <tt>results</tt> subfolder and both your tool as well as the model files were included in that subfolder.
+			</li>
+		</ul>
+	</li>
+	<li>
+		If your experiments provide new information about the number of states for some parameter configurations, update the model's main <tt>index.json</tt> file accordingly.
+	</li>
+	<li>
+		Test your changes by opening <tt>benchmarks/index.html</tt> in a browser.
+		In particular, check that all links work.
+	</li>
+	<li>
+		Submit via <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'iamel');</script> or <a href="https://github.com/ahartmanns/qcomp">GitHub</a> pull request.
+	</li>
+</ol>
+
+</body>
+</html>

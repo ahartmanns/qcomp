@@ -4,6 +4,10 @@
 	"type": "ma",
 	"version": 2,
 	"date": "2018-08-22",
+	"version-history": [
+		{ "version": 1, "date": "2018-08-08", "notes": "Initial version." },
+		{ "version": 2, "date": "2018-08-22", "notes": "Replaced query property ReachMin by probability-1 assertion property ReachMinIsOne." },
+	],
 	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1109/RELDI.2000.885410",

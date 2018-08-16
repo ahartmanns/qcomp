@@ -4,6 +4,9 @@
 	"type": "mdp",
 	"version": 1,
 	"date": "2018-08-01",
+	"version-history": [
+		{ "version": 1, "date": "2018-08-01", "notes": "Initial version." }
+	],
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1609/aimag.v21i2.1506",

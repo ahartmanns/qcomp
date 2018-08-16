@@ -2,8 +2,11 @@
 	"name": "Haddad-Monmege", 
 	"short": "haddad-monmege", 
 	"type": "dtmc", 
-	"version": 1, 
+	"version": 1,
 	"date": "2018-08-01", 
+	"version-history": [
+		{ "version": 1, "date": "2018-08-01", "notes": "Initial version." }
+	], 
 	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
 	"source": "https://doi.org/10.1016/j.tcs.2016.12.003", 

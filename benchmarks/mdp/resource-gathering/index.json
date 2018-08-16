@@ -3,7 +3,10 @@
 	"short": "resource-gathering", 
 	"type": "mdp", 
 	"version": 1, 
-	"date": "2018-08-13", 
+	"date": "2018-08-13",
+	"version-history": [
+		{ "version": 1, "date": "2018-08-13", "notes": "Initial version." }
+	], 
 	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
 	"source": "https://doi.org/10.1145/1390156.1390162", 

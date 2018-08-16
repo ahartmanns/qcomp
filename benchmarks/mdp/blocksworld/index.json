@@ -4,6 +4,9 @@
 	"type": "mdp",
 	"version": 1,
 	"date": "2018-07-31",
+	"version-history": [
+		{ "version": 1, "date": "2018-07-31", "notes": "Initial version." }
+	],
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1016/0004-3702(92)90028-V",

@@ -4,6 +4,9 @@
 	"type": "ma",
 	"version": 1,
 	"date": "2018-07-31",
+	"version-history": [
+		{ "version": 1, "date": "2018-07-31", "notes": "Initial version." }
+	],
 	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"source": "https://doi.org/10.4121/uuid:1453a13b-10ae-418f-a1ae-4acf96028118",
