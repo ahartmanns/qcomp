@@ -76,6 +76,10 @@ a.nodec:hover {
 	text-decoration: none;
 }
 
+.reference {
+	font-size: 90%;
+}
+
 .tt {
 	font-family: 'Courier New', monospace; font-size: 105%;
 }
