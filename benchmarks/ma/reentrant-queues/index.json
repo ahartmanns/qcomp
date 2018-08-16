@@ -2,6 +2,7 @@
 	"name": "Reentrant Queueing System",
 	"short": "reentrant-queues",
 	"type": "ma",
+	"original": "Modest",
 	"version": 1,
 	"date": "2018-08-14",
 	"version-history": [

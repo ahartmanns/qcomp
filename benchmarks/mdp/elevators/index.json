@@ -2,6 +2,7 @@
 	"name": "Elevators",
 	"short": "elevators",
 	"type": "mdp",
+	"original": "PDDL",
 	"version": 1,
 	"date": "2018-08-01",
 	"version-history": [

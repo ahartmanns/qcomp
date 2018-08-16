@@ -2,6 +2,7 @@
 	"name": "Wireless LAN",
 	"short": "wlan-large",
 	"type": "pta",
+	"original": "Modest",
 	"version": 1,
 	"date": "2018-07-31",
 	"version-history": [

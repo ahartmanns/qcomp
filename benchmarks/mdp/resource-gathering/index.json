@@ -1,163 +1,164 @@
 {
-	"name": "Resource Gathering", 
-	"short": "resource-gathering", 
-	"type": "mdp", 
-	"version": 1, 
+	"name": "Resource Gathering",
+	"short": "resource-gathering",
+	"type": "mdp",
+	"original": "PRISM",
+	"version": 1,
 	"date": "2018-08-13",
 	"version-history": [
 		{ "version": 1, "date": "2018-08-13", "notes": "Initial version." }
-	], 
-	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
-	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
-	"source": "https://doi.org/10.1145/1390156.1390162", 
-	"description": "A 5x5 grid world where an agent has to collect gold and gem and bring it to the home location. On certain grid coordinates there is a 10% chance that the agent gets attacked. When the agent gets attacked, it has to restart at the home location. See also Section 6.2.4 of [0].", 
+	],
+	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
+	"source": "https://doi.org/10.1145/1390156.1390162",
+	"description": "A 5x5 grid world where an agent has to collect gold and gem and bring it to the home location. On certain grid coordinates there is a 10% chance that the agent gets attacked. When the agent gets attacked, it has to restart at the home location. See also Section 6.2.4 of [0].",
 	"parameters": [
 		{
-			"name": "B", 
-			"kind": "open", 
-			"description": "Step bound", 
+			"name": "B",
+			"kind": "open",
+			"description": "Step bound",
 			"type": "positive integer"
-		}, 
+		},
 		{
-			"name": "GOLD_TO_COLLECT", 
-			"kind": "open", 
-			"description": "Required gold", 
+			"name": "GOLD_TO_COLLECT",
+			"kind": "open",
+			"description": "Required gold",
 			"type": "positive integer"
-		}, 
+		},
 		{
-			"name": "GEM_TO_COLLECT", 
-			"kind": "open", 
-			"description": "Required gem", 
+			"name": "GEM_TO_COLLECT",
+			"kind": "open",
+			"description": "Required gem",
 			"type": "positive integer"
 		}
-	], 
+	],
 	"properties": [
 		{
-			"name": "expgold", 
-			"description": "The maximal expected amount of gold that can be collected in `B´ steps.", 
+			"name": "expgold",
+			"description": "The maximal expected amount of gold that can be collected in `B´ steps.",
 			"type": "exp-reward-step-bounded"
-		}, 
+		},
 		{
-			"name": "expsteps", 
-			"description": "The minimal expected number of steps to collect at least `GOLD_TO_COLLECT´ gold and at least `GEM_TO_COLLECT´ gem.", 
+			"name": "expsteps",
+			"description": "The minimal expected number of steps to collect at least `GOLD_TO_COLLECT´ gold and at least `GEM_TO_COLLECT´ gem.",
 			"type": "exp-steps"
-		}, 
+		},
 		{
-			"name": "prgoldgem", 
-			"description": "The maximal probability that at least `GOLD_TO_COLLECT´ gold and at least `GEM_TO_COLLECT´ gem is collected within at most `B´ steps.", 
+			"name": "prgoldgem",
+			"description": "The maximal probability that at least `GOLD_TO_COLLECT´ gold and at least `GEM_TO_COLLECT´ gem is collected within at most `B´ steps.",
 			"type": "prob-reach-step-bounded"
 		}
-	], 
+	],
 	"files": [
 		{
-			"file": "resource-gathering.jani", 
+			"file": "resource-gathering.jani",
 			"original-file": [
-				"resource-gathering.pm", 
+				"resource-gathering.pm",
 				"resource-gathering.prctl"
-			], 
+			],
 			"conversion": {
-				"tool": "Storm-conv", 
-				"version": "1.2.4 (dev)", 
-				"url": "http://www.stormchecker.org", 
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
 				"command": "storm-conv --prism resource-gathering.pm --tojani resource-gathering.jani --prop resource-gathering.prctl --globalvars --standard-compliant"
-			}, 
-			"file-parameter-values": [], 
+			},
+			"file-parameter-values": [],
 			"open-parameter-values": [
 				{
 					"values": [
 						{
-							"name": "B", 
+							"name": "B",
 							"value": 200
-						}, 
+						},
 						{
-							"name": "GOLD_TO_COLLECT", 
+							"name": "GOLD_TO_COLLECT",
 							"value": 15
-						}, 
+						},
 						{
-							"name": "GEM_TO_COLLECT", 
+							"name": "GEM_TO_COLLECT",
 							"value": 15
 						}
-					], 
+					],
 					"states": [
 						{
-							"note": "Storm", 
+							"note": "Storm",
 							"number": 24064
 						}
 					]
-				}, 
+				},
 				{
 					"values": [
 						{
-							"name": "B", 
+							"name": "B",
 							"value": 400
-						}, 
+						},
 						{
-							"name": "GOLD_TO_COLLECT", 
+							"name": "GOLD_TO_COLLECT",
 							"value": 30
-						}, 
+						},
 						{
-							"name": "GEM_TO_COLLECT", 
+							"name": "GEM_TO_COLLECT",
 							"value": 30
 						}
-					], 
+					],
 					"states": [
 						{
-							"note": "Storm", 
+							"note": "Storm",
 							"number": 90334
 						}
 					]
-				}, 
+				},
 				{
 					"values": [
 						{
-							"name": "B", 
+							"name": "B",
 							"value": 1300
-						}, 
+						},
 						{
-							"name": "GOLD_TO_COLLECT", 
+							"name": "GOLD_TO_COLLECT",
 							"value": 100
-						}, 
+						},
 						{
-							"name": "GEM_TO_COLLECT", 
+							"name": "GEM_TO_COLLECT",
 							"value": 100
 						}
-					], 
+					],
 					"states": [
 						{
-							"note": "Storm", 
+							"note": "Storm",
 							"number": 958894
 						}
 					]
-				}, 
+				},
 				{
 					"values": [
 						{
-							"name": "B", 
+							"name": "B",
 							"value": 1000000
-						}, 
+						},
 						{
-							"name": "GOLD_TO_COLLECT", 
+							"name": "GOLD_TO_COLLECT",
 							"value": 0
-						}, 
+						},
 						{
-							"name": "GEM_TO_COLLECT", 
+							"name": "GEM_TO_COLLECT",
 							"value": 0
 						}
-					], 
+					],
 					"states": [
 						{
-							"note": "Storm", 
+							"note": "Storm",
 							"number": 94
 						}
 					]
 				}
 			]
 		}
-	], 
+	],
 	"results": [
-		"results/Storm.200-15-15.json", 
-		"results/Storm.400-30-30.json", 
-		"results/Storm.1300-100-100.json", 
+		"results/Storm.200-15-15.json",
+		"results/Storm.400-30-30.json",
+		"results/Storm.1300-100-100.json",
 		"results/Storm.1000000-0-0.json"
 	]
 }

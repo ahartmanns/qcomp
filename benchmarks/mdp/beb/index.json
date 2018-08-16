@@ -2,6 +2,7 @@
 	"name": "Bounded Exponential Backoff",
 	"short": "beb",
 	"type": "mdp",
+	"original": "Modest",
 	"version": 1,
 	"date": "2018-06-05",
 	"version-history": [

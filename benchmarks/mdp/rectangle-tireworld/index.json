@@ -2,6 +2,7 @@
 	"name": "Rectangle Tireworld",
 	"short": "rectangle-tireworld",
 	"type": "mdp",
+	"original": "PDDL",
 	"version": 1,
 	"date": "2018-07-31",
 	"version-history": [

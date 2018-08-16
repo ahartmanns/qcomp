@@ -2,6 +2,7 @@
 	"name": "Polling System",
 	"short": "polling-system",
 	"type": "ma",
+	"original": "Modest",
 	"version": 1,
 	"date": "2018-08-14",
 	"version-history": [

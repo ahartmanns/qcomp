@@ -2,6 +2,7 @@
 	"name": "Bounded Retransmission Protocol",
 	"short": "brp",
 	"type": "pta",
+	"original": "Modest",
 	"version": 1,
 	"date": "2018-06-04",
 	"version-history": [

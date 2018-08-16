@@ -2,6 +2,7 @@
 	"name": "Erlang Stages",
 	"short": "erlang",
 	"type": "ma",
+	"original": "Modest",
 	"version": 1,
 	"date": "2018-08-13",
 	"version-history": [

@@ -1,6 +1,8 @@
 * text=auto
 
 *.csl text
+*.css text
+*.html text
 *.jani text
 *.js text
 *.json text

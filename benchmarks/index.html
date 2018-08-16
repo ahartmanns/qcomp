@@ -29,6 +29,8 @@
 		<input type="text" data-bind="value: filter.name, valueUpdate: 'input'" placeholder="Show all models" style="width: 32ex;" />
 		&nbsp;of type&nbsp;
 		<select data-bind="options: modelTypes, optionsCaption: '(all)', value: filter.type"></select>
+		&nbsp;/&nbsp;
+		<select data-bind="options: originals(), optionsCaption: '(all)', value: filter.original"></select>
 		&nbsp;with&nbsp;
 		<input type="text" data-bind="value: filter.minStates, valueUpdate: 'input'" placeholder="zero" style="width: 12ex;" />
 		-
@@ -43,6 +45,7 @@
 			<col style="width: 20%;" />
 			<col style="width: 45%;" />
 			<col style="width: 7ex;" />
+			<col style="width: 11ex;" />
 			<col style="width: 2ex;" />
 			<col style="width: 7ex;" />
 			<col style="width: 7ex;" />
@@ -57,6 +60,7 @@
 				<th class="clickable" onClick="sortModels('short');">Model <span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'short' ? 'visible' : 'hidden' }"></span></th>
 				<th class="clickable" onClick="sortModels('name');">Name<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'name' ? 'visible' : 'hidden' }"></span></th>
 				<th class="clickable" onClick="sortModels('type');">Type<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'type' ? 'visible' : 'hidden' }"></span></th>
+				<th class="clickable" onClick="sortModels('original');">Original<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'original' ? 'visible' : 'hidden' }"></span></th>
 				<th colspan="2" class="clickable" onClick="sortModels('parameters');">Params<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'parameters' ? 'visible' : 'hidden' }"></span></th>
 				<th colspan="3" class="clickable" style="text-align: center;" onClick="sortModels('states');">&nbsp;&nbsp;States<span data-bind="text: sortAsc() ? '▾' : '▴', style: { display: sortBy() === 'states' ? 'inline' : 'none' }"></span></th>
 				<th colspan="2" class="clickable" onClick="sortModels('properties');">&nbsp;&nbsp;Properties<span data-bind="text: sortAsc() ? '▾' : '▴', style: { visibility: sortBy() === 'properties' ? 'visible' : 'hidden' }"></span></th>
@@ -68,6 +72,7 @@
 				<td><div data-bind="text: short, attr: { title: short }" class="ellipsis"></div></td>
 				<td><div data-bind="text: name, attr: { title: name }" class="ellipsis"></div></td>
 				<td data-bind="text: type.toUpperCase(), attr: { title: CapitaliseFirst(modelTypeToLongString(type)) }"></td>
+				<td data-bind="text: original, attr: { title: original }"></td>
 				<td data-bind="text: parameters.length.toLocaleString()" style="text-align: right; padding-right: 0px;"></td>
 				<td data-bind="text: '&nbsp;(' + parameters.filter(p => p.kind == 'file').length.toLocaleString() + '/' + parameters.filter(p => p.kind == 'open').length.toLocaleString() + ')'" class="light"></td>
 				<!-- ko if: minStates !== maxStates -->

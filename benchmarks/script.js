@@ -2,10 +2,12 @@
 var qmcc = {};
 qmcc.params = [];
 qmcc.modelTypes = [ "CTMC", "DTMC", "MA", "MDP", "PTA" ];
+qmcc.originals = ko.observableArray();
 qmcc.models = ko.observableArray();
 qmcc.filter = {
 	name: ko.observable(""),
 	type: ko.observable(undefined),
+	original: ko.observable(undefined),
 	minStates: ko.observable(""),
 	maxStates: ko.observable("")
 };
@@ -16,6 +18,7 @@ qmcc.filteredModels = ko.computed(function()
 	return this.models().filter(m =>
 		(m.name.toLowerCase().includes(this.filter.name().toLowerCase()) || m.short.toLowerCase().includes(this.filter.name().toLowerCase())) // name (via .name and .short)
 		&& (this.filter.type() === undefined || m.type === this.filter.type().toLowerCase()) // model type
+		&& (this.filter.original() === undefined || m.original.split("-")[0] === this.filter.original()) // original formalism
 		&& (this.filter.minStates() === "" || isNaN(Number(this.filter.minStates())) || m.maxStates >= Number(this.filter.minStates())) // min. number of states
 		&& (this.filter.maxStates() === "" || isNaN(Number(this.filter.maxStates())) || m.minStates <= Number(this.filter.maxStates())) // max. number of states
 	);
@@ -70,6 +73,7 @@ function init()
 			if(model.references === undefined) model.references = [];
 			if(model.parameters === undefined) model.parameters = [];
 			if(model.results === undefined) model.results = [];
+			if(model.original !== undefined && !qmcc.originals().includes(model.original.split("-")[0])) qmcc.originals.push(model.original.split("-")[0]);
 			model.loadedResults = ko.observableArray();
 			model.minStates = getStateCount(model.files, Math.min, Number.MAX_SAFE_INTEGER);
 			model.maxStates = getStateCount(model.files, Math.max, 0);
@@ -96,6 +100,7 @@ function init()
 function onEndInit()
 {
 	sortModels("short");
+	qmcc.originals.sort();
 	if(window.location.hash !== "")
 	{
 		// Show the model whose short name was specified in the URL's #hash

@@ -2,6 +2,7 @@
 	"name": "Dynamic Power Management",
 	"short": "dpm",
 	"type": "ma",
+	"original": "Modest",
 	"version": 1,
 	"date": "2018-08-12",
 	"version-history": [

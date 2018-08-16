@@ -2,6 +2,7 @@
 	"name": "Blocksworld",
 	"short": "blocksworld",
 	"type": "mdp",
+	"original": "PDDL",
 	"version": 1,
 	"date": "2018-07-31",
 	"version-history": [

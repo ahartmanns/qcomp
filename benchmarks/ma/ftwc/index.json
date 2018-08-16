@@ -2,6 +2,7 @@
 	"name": "Fault-Tolerant Workstation Cluster",
 	"short": "ftwc",
 	"type": "ma",
+	"original": "Modest",
 	"version": 2,
 	"date": "2018-08-22",
 	"version-history": [

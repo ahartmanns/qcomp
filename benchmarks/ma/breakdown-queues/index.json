@@ -2,6 +2,7 @@
 	"name": "Queueing System with Breakdowns",
 	"short": "breakdown-queues",
 	"type": "ma",
+	"original": "Modest",
 	"version": 1,
 	"date": "2018-07-31",
 	"version-history": [
