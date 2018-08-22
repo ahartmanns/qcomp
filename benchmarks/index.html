@@ -325,7 +325,7 @@
 					<tr>
 						<td data-bind="text: version.toString(), style: { fontWeight: version === $parent.version ? 'bold' : 'normal' }" style="text-align: right;"></td>
 						<td data-bind="text: date" style="text-align: center;"></td>
-						<td data-bind="text: notes"></td>
+						<td data-bind="html: formatText(notes)"></td>
 					</tr>
 				</tbody>
 			</table>
