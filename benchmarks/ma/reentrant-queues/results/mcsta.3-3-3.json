@@ -1,7 +1,7 @@
 ﻿{
 	"file": "../reentrant-queues.jani",
-	"version": 1,
-	"date": "2018-08-14",
+	"version": 2,
+	"date": "2018-08-22",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"open-parameter-values": [
 		{ "name": "JOB_TYPES", "value": 3 },
@@ -10,7 +10,7 @@
 	],
 	"tool": {
 		"name": "mcsta",
-		"version": "3.0.78",
+		"version": "3.0.80",
 		"url": "http://www.modestchecker.net/",
 		"part-of": "the Modest Toolset",
 		"part-of-url": "http://www.modestchecker.net/"
@@ -21,9 +21,9 @@
 		"os": "Ubuntu 18.04 (x64)",
 		"runtime": "Mono 5.14.0.177"
 	},
-	"command": "mcsta.exe reentrant-queues.jani -S Memory --p1 -E \"JOB_TYPES=3, C_LEFT=3, C_RIGHT=3\" -O mcsta.3-3-3.json Json",
+	"command": "mcsta.exe reentrant-queues.jani -S Memory -E \"JOB_TYPES=3, C_LEFT=3, C_RIGHT=3\" -O mcsta.3-3-3.json Json",
 	"time": 2,
-	"memory": 77881344,
+	"memory": 78028800,
 	"data": [
 		{
 			"group": "State space exploration",
@@ -37,9 +37,12 @@
 			]
 		},
 		{
-			"property": "PminBothQueuesFull",
-			"value": 1,
-			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"property": "PminBothQueuesFullIsOne",
+			"value": true,
+			"values": [
+				{ "name": "Time", "value": 0, "unit": "s" },
+				{ "name": "Probability", "value": 1 }
+			],
 			"data": [
 				{
 					"group": "Precomputations",

@@ -75,28 +75,32 @@
 	],
 	"properties": [
 		{
-			"name": "PminBothQueuesFull",
+			"name": "PminBothQueuesFullIsOne",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "∀",
 				"values": {
-					"op": "Pmin",
-					"exp": {
-						"op": "F",
+					"op": "=",
+					"left": {
+						"op": "Pmin",
 						"exp": {
-							"op": "∧",
-							"left": {
-								"op": "=",
-								"left": "sizeLeft",
-								"right": "C_LEFT"
-							},
-							"right": {
-								"op": "=",
-								"left": "sizeRight",
-								"right": "C_RIGHT"
+							"op": "F",
+							"exp": {
+								"op": "∧",
+								"left": {
+									"op": "=",
+									"left": "sizeLeft",
+									"right": "C_LEFT"
+								},
+								"right": {
+									"op": "=",
+									"left": "sizeRight",
+									"right": "C_RIGHT"
+								}
 							}
 						}
-					}
+					},
+					"right": 1
 				},
 				"states": {
 					"op": "initial"

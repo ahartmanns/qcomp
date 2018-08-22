@@ -3,10 +3,11 @@
 	"short": "reentrant-queues",
 	"type": "ma",
 	"original": "Modest",
-	"version": 1,
-	"date": "2018-08-14",
+	"version": 2,
+	"date": "2018-08-22",
 	"version-history": [
-		{ "version": 1, "date": "2018-08-14", "notes": "Initial version." }
+		{ "version": 1, "date": "2018-08-14", "notes": "Initial version." },
+		{ "version": 2, "date": "2018-08-22", "notes": "Replaced query property `PminBothQueuesFull´ by probability-one assertion property `PminBothQueuesFullIsOne´." }
 	],
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -45,9 +46,9 @@
 	],
 	"properties": [
 		{
-			"name": "PminBothQueuesFull",
+			"name": "PminBothQueuesFullIsOne",
 			"type": "prob-reach",
-			"description": "The minimum probability that both queues are full."
+			"description": "The minimum probability that both queues are full is one."
 		},
 		{
 			"name": "TminBothQueuesFull",

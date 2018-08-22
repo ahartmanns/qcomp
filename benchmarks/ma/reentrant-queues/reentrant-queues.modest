@@ -12,7 +12,7 @@ transient int(0..JOB_TYPES) j;
 int sizeLeft = 0;
 int sizeRight = 0;
 
-property PminBothQueuesFull = Pmin(<> (sizeLeft == C_LEFT && sizeRight == C_RIGHT));
+property PminBothQueuesFullIsOne = Pmin(<> (sizeLeft == C_LEFT && sizeRight == C_RIGHT)) == 1;
 property TminBothQueuesFull = Xmin(T, sizeLeft == C_LEFT && sizeRight == C_RIGHT);
 property TmaxBothQueuesFull = Xmax(T, sizeLeft == C_LEFT && sizeRight == C_RIGHT);
 
