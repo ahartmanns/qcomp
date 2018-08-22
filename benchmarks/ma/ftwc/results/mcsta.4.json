@@ -1,14 +1,14 @@
 ﻿{
 	"file": "../ftwc.jani",
-	"version": 1,
-	"date": "2018-08-13",
+	"version": 2,
+	"date": "2018-08-22",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"open-parameter-values": [
 		{ "name": "N", "value": 4 }
 	],
 	"tool": {
 		"name": "mcsta",
-		"version": "3.0.78",
+		"version": "3.0.80",
 		"url": "http://www.modestchecker.net/",
 		"part-of": "the Modest Toolset",
 		"part-of-url": "http://www.modestchecker.net/"
@@ -19,9 +19,9 @@
 		"os": "Ubuntu 18.04 (x64)",
 		"runtime": "Mono 5.14.0.177"
 	},
-	"command": "mcsta.exe ftwc.jani -S Memory --p1 -E N=4 -O mcsta.4.json Json",
+	"command": "mcsta.exe ftwc.jani -S Memory -E N=4 -O mcsta.4.json Json",
 	"time": 21,
-	"memory": 47550464,
+	"memory": 47624192,
 	"data": [
 		{
 			"group": "State space exploration",
@@ -35,9 +35,12 @@
 			]
 		},
 		{
-			"property": "ReachMin",
-			"value": 1,
-			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"property": "ReachMinIsOne",
+			"value": true,
+			"values": [
+				{ "name": "Time", "value": 0, "unit": "s" },
+				{ "name": "Probability", "value": 1 }
+			],
 			"data": [
 				{
 					"group": "Precomputations",

@@ -2,8 +2,8 @@
 	"name": "Fault-Tolerant Workstation Cluster",
 	"short": "ftwc",
 	"type": "ma",
-	"version": 1,
-	"date": "2018-08-08",
+	"version": 2,
+	"date": "2018-08-22",
 	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1109/RELDI.2000.885410",
@@ -47,9 +47,9 @@
 	],
 	"properties": [
 		{
-			"name": "ReachMin",
+			"name": "ReachMinIsOne",
 			"type": "prob-reach",
-			"description": "The minimum probability that all left workstations or the left switch are down and similar for the right side."
+			"description": "The minimum probability that all left workstations or the left switch are down and similar for the right side is one."
 		},
 		{
 			"name": "TimeMin",

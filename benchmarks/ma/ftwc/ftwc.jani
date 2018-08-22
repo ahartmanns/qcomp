@@ -132,52 +132,56 @@
 	],
 	"properties": [
 		{
-			"name": "ReachMin",
+			"name": "ReachMinIsOne",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "∀",
 				"values": {
-					"op": "Pmin",
-					"exp": {
-						"op": "F",
+					"op": "=",
+					"left": {
+						"op": "Pmin",
 						"exp": {
-							"op": "∧",
-							"left": {
-								"op": "∨",
+							"op": "F",
+							"exp": {
+								"op": "∧",
 								"left": {
-									"op": "=",
+									"op": "∨",
 									"left": {
+										"op": "=",
+										"left": {
+											"op": "aa",
+											"exp": "workstations_up",
+											"index": 0
+										},
+										"right": 0
+									},
+									"right": {
 										"op": "aa",
-										"exp": "workstations_up",
+										"exp": "switches_down",
 										"index": 0
-									},
-									"right": 0
+									}
 								},
 								"right": {
-									"op": "aa",
-									"exp": "switches_down",
-									"index": 0
-								}
-							},
-							"right": {
-								"op": "∨",
-								"left": {
-									"op": "=",
+									"op": "∨",
 									"left": {
-										"op": "aa",
-										"exp": "workstations_up",
-										"index": 1
+										"op": "=",
+										"left": {
+											"op": "aa",
+											"exp": "workstations_up",
+											"index": 1
+										},
+										"right": 0
 									},
-									"right": 0
-								},
-								"right": {
-									"op": "aa",
-									"exp": "switches_down",
-									"index": 1
+									"right": {
+										"op": "aa",
+										"exp": "switches_down",
+										"index": 1
+									}
 								}
 							}
 						}
-					}
+					},
+					"right": 1
 				},
 				"states": {
 					"op": "initial"

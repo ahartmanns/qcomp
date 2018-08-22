@@ -1,9 +1,7 @@
-
 const int N; // number of workstations
 
 const int LEFT = 0;
 const int RIGHT = 1;
-
 
 bool backboneDown = false;
 int(0..N)[] workstations_up = [N,N]; // workstations_up[0] ~ left, workstations_up[1] ~ right
@@ -13,7 +11,7 @@ binary action startRepairBackbone, finishRepairBackbone;
 binary action startRepairWorkstation, finishRepairWorkstation, startRepairLeftWorkstation, finishRepairLeftWorkstation, startRepairRightWorkstation, finishRepairRightWorkstation;
 binary action startRepairSwitch, finishRepairSwitch, startRepairLeftSwitch, finishRepairLeftSwitch, startRepairRightSwitch, finishRepairRightSwitch;
 
-property ReachMin = Pmin(<> ((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT])));
+property ReachMinIsOne = Pmin(<> ((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]))) == 1;
 property TimeMax = Xmax(T, (workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]));
 property TimeMin = Xmin(T, (workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]));
 
