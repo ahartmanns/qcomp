@@ -6,7 +6,7 @@ transient int(0..JOB_TYPES) item;
 
 int(0..C)[] size = [0, 0];
 
-property PminBothFull = Pmin(<> (size[0] == C && size[1] == C));
+property PminBothFullIsOne = Pmin(<> (size[0] == C && size[1] == C)) == 1;
 property TminBothFull = Xmin(T, size[0] == C && size[1] == C);
 property TmaxBothFull = Xmax(T, size[0] == C && size[1] == C);
 

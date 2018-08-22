@@ -26,7 +26,7 @@
 			"original-file": "ftwc.modest",
 			"conversion": {
 				"tool": "moconv",
-				"version": "3.0.76",
+				"version": "3.0.80",
 				"url": "http://www.modestchecker.net/",
 				"command": "moconv.exe ftwc.modest -O ftwc.jani"
 			},

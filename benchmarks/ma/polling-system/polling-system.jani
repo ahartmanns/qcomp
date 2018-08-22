@@ -62,36 +62,40 @@
 	],
 	"properties": [
 		{
-			"name": "PminBothFull",
+			"name": "PminBothFullIsOne",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "∀",
 				"values": {
-					"op": "Pmin",
-					"exp": {
-						"op": "F",
+					"op": "=",
+					"left": {
+						"op": "Pmin",
 						"exp": {
-							"op": "∧",
-							"left": {
-								"op": "=",
+							"op": "F",
+							"exp": {
+								"op": "∧",
 								"left": {
-									"op": "aa",
-									"exp": "size",
-									"index": 0
+									"op": "=",
+									"left": {
+										"op": "aa",
+										"exp": "size",
+										"index": 0
+									},
+									"right": "C"
 								},
-								"right": "C"
-							},
-							"right": {
-								"op": "=",
-								"left": {
-									"op": "aa",
-									"exp": "size",
-									"index": 1
-								},
-								"right": "C"
+								"right": {
+									"op": "=",
+									"left": {
+										"op": "aa",
+										"exp": "size",
+										"index": 1
+									},
+									"right": "C"
+								}
 							}
 						}
-					}
+					},
+					"right": 1
 				},
 				"states": {
 					"op": "initial"
