@@ -22,12 +22,12 @@
 	],
 	"files": [
 		{
-			"file": "elevators-a-3-3.jani",
+			"file": "elevators.a-3-3.jani",
 			"original-file": ["domain.pddl", "p01.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p01.pddl --jani elevators-a-3-3.jani"
+				"command": "ppddl2jani.py domain.pddl p01.pddl --jani elevators.a-3-3.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "p", "value": 3 },
@@ -42,12 +42,12 @@
 			]
 		},
 		{
-			"file": "elevators-b-3-3.jani",
+			"file": "elevators.b-3-3.jani",
 			"original-file": ["domain.pddl", "p05.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p05.pddl --jani elevators-b-3-3.jani"
+				"command": "ppddl2jani.py domain.pddl p05.pddl --jani elevators.b-3-3.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "p", "value": 3 },
@@ -62,12 +62,12 @@
 			]
 		},
 		{
-			"file": "elevators-a-11-9.jani",
+			"file": "elevators.a-11-9.jani",
 			"original-file": ["domain.pddl", "p10.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p10.pddl --jani elevators-a-11-9.jani"
+				"command": "ppddl2jani.py domain.pddl p10.pddl --jani elevators.a-11-9.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "p", "value": 11 },
@@ -82,12 +82,12 @@
 			]
 		},
 		{
-			"file": "elevators-b-11-9.jani",
+			"file": "elevators.b-11-9.jani",
 			"original-file": ["domain.pddl", "p15.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p15.pddl --jani elevators-b-11-9.jani"
+				"command": "ppddl2jani.py domain.pddl p15.pddl --jani elevators.b-11-9.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "p", "value": 11 },

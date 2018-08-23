@@ -23,13 +23,13 @@
 	],
 	"files": [
 		{
-			"file": "beb-3-4.jani",
-			"original-file": "beb-3.modest",
+			"file": "beb.3-4.jani",
+			"original-file": "beb.3.modest",
 			"conversion": {
 				"tool": "moconv",
 				"version": "3.0.50",
 				"url": "http://www.modestchecker.net/",
-				"command": "moconv.exe beb-3.modest -O beb-3-4.jani -E \"K=4\" --unroll-distrs"
+				"command": "moconv.exe beb.3.modest -O beb.3-4.jani -E \"K=4\" --unroll-distrs"
 			},
 			"file-parameter-values": [
 				{ "name": "H", "value": 3 },
@@ -47,13 +47,13 @@
 			]
 		},
 		{
-			"file": "beb-4-8.jani",
-			"original-file": "beb-4.modest",
+			"file": "beb.4-8.jani",
+			"original-file": "beb.4.modest",
 			"conversion": {
 				"tool": "moconv",
 				"version": "3.0.50",
 				"url": "http://www.modestchecker.net/",
-				"command": "moconv.exe beb-4.modest -O beb-4-8.jani -E \"K=8\" --unroll-distrs"
+				"command": "moconv.exe beb.4.modest -O beb.4-8.jani -E \"K=8\" --unroll-distrs"
 			},
 			"file-parameter-values": [
 				{ "name": "H", "value": 4 },
@@ -71,13 +71,13 @@
 			]
 		},
 		{
-			"file": "beb-5-16.jani",
-			"original-file": "beb-5.modest",
+			"file": "beb.5-16.jani",
+			"original-file": "beb.5.modest",
 			"conversion": {
 				"tool": "moconv",
 				"version": "3.0.50",
 				"url": "http://www.modestchecker.net/",
-				"command": "moconv.exe beb-5.modest -O beb-5-16.jani -E \"K=16\" --unroll-distrs"
+				"command": "moconv.exe beb.5.modest -O beb.5-16.jani -E \"K=16\" --unroll-distrs"
 			},
 			"file-parameter-values": [
 				{ "name": "H", "value": 5 },
@@ -95,13 +95,13 @@
 			]
 		},
 		{
-			"file": "beb-6-16.jani",
-			"original-file": "beb-6.modest",
+			"file": "beb.6-16.jani",
+			"original-file": "beb.6.modest",
 			"conversion": {
 				"tool": "moconv",
 				"version": "3.0.50",
 				"url": "http://www.modestchecker.net/",
-				"command": "moconv.exe beb-6.modest -O beb-9-16.jani -E \"K=16\" --unroll-distrs"
+				"command": "moconv.exe beb.6.modest -O beb.9-16.jani -E \"K=16\" --unroll-distrs"
 			},
 			"file-parameter-values": [
 				{ "name": "H", "value": 6 },

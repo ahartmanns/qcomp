@@ -1,5 +1,5 @@
 Peak memory usage: 56 MB
-Analysis results for cdrive-2.jani
+Analysis results for cdrive.2.jani
 
 + State space exploration
   State size:  8 bytes

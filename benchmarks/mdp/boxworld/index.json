@@ -22,12 +22,12 @@
 	],
 	"files": [
 		{
-			"file": "boxworld-10-5.jani",
+			"file": "boxworld.10-5.jani",
 			"original-file": ["p01-b10-c5-dc0-fc0-dr0-gr1-domain.pddl", "p01-b10-c5-dc0-fc0-dr0-gr1-problem.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py p01-b10-c5-dc0-fc0-dr0-gr1-domain.pddl p01-b10-c5-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld-10-5.jani"
+				"command": "ppddl2jani.py p01-b10-c5-dc0-fc0-dr0-gr1-domain.pddl p01-b10-c5-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld.10-5.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "b", "value": 10 },
@@ -36,12 +36,12 @@
 			"open-parameter-values": []
 		},
 		{
-			"file": "boxworld-10-10.jani",
+			"file": "boxworld.10-10.jani",
 			"original-file": ["p04-b10-c10-dc0-fc0-dr0-gr1-domain.pddl", "p04-b10-c10-dc0-fc0-dr0-gr1-problem.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py p04-b10-c10-dc0-fc0-dr0-gr1-domain.pddl p04-b10-c10-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld-10-10.jani"
+				"command": "ppddl2jani.py p04-b10-c10-dc0-fc0-dr0-gr1-domain.pddl p04-b10-c10-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld.10-10.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "b", "value": 10 },
@@ -50,12 +50,12 @@
 			"open-parameter-values": []
 		},
 		{
-			"file": "boxworld-15-10.jani",
+			"file": "boxworld.15-10.jani",
 			"original-file": ["p08-b15-c10-dc0-fc0-dr0-gr1-domain.pddl", "p08-b15-c10-dc0-fc0-dr0-gr1-problem.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py p08-b15-c10-dc0-fc0-dr0-gr1-domain.pddl p08-b15-c10-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld-15-10.jani"
+				"command": "ppddl2jani.py p08-b15-c10-dc0-fc0-dr0-gr1-domain.pddl p08-b15-c10-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld.15-10.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "b", "value": 15 },
@@ -64,12 +64,12 @@
 			"open-parameter-values": []
 		},
 		{
-			"file": "boxworld-15-15.jani",
+			"file": "boxworld.15-15.jani",
 			"original-file": ["p10-b15-c15-dc0-fc0-dr0-gr1-domain.pddl", "p10-b15-c15-dc0-fc0-dr0-gr1-problem.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py p10-b15-c15-dc0-fc0-dr0-gr1-domain.pddl p10-b15-c15-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld-15-15.jani"
+				"command": "ppddl2jani.py p10-b15-c15-dc0-fc0-dr0-gr1-domain.pddl p10-b15-c15-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld.15-15.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "b", "value": 15 },
@@ -78,12 +78,12 @@
 			"open-parameter-values": []
 		},
 		{
-			"file": "boxworld-20-20.jani",
+			"file": "boxworld.20-20.jani",
 			"original-file": ["p13-b20-c20-dc0-fc0-dr0-gr1-domain.pddl", "p13-b20-c20-dc0-fc0-dr0-gr1-problem.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py p13-b20-c20-dc0-fc0-dr0-gr1-domain.pddl p13-b20-c20-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld-20-20.jani"
+				"command": "ppddl2jani.py p13-b20-c20-dc0-fc0-dr0-gr1-domain.pddl p13-b20-c20-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld.20-20.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "b", "value": 20 },

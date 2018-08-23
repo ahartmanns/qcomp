@@ -1,5 +1,5 @@
 {
-	"file": "../elevators-a-3-3.jani",
+	"file": "../elevators.a-3-3.jani",
 	"version": 1,
 	"date": "2018-08-01",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -19,7 +19,7 @@
 		"os": "Windows 10 Home 1803 (x64)",
 		"runtime": ".NET Framework 4.7.2"
 	},
-	"command": "mcsta.exe elevators-a-3-3.jani",
+	"command": "mcsta.exe elevators.a-3-3.jani",
 	"time": 1,
 	"data": [
 		{

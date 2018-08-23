@@ -17,12 +17,12 @@
 	],
 	"files": [
 		{
-			"file": "random-predicates-a.jani",
+			"file": "random-predicates.a.jani",
 			"original-file": ["p01-domain.pddl", "p01-problem.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py p01-domain.pddl p01-problem.pddl --jani random-predicates-a.jani"
+				"command": "ppddl2jani.py p01-domain.pddl p01-problem.pddl --jani random-predicates.a.jani"
 			},
 			"file-parameter-values": [
 			],
@@ -30,12 +30,12 @@
 			]
 		},
 		{
-			"file": "random-predicates-b.jani",
+			"file": "random-predicates.b.jani",
 			"original-file": ["p05-domain.pddl", "p05-problem.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py p05-domain.pddl p05-problem.pddl --jani random-predicates-b.jani"
+				"command": "ppddl2jani.py p05-domain.pddl p05-problem.pddl --jani random-predicates.b.jani"
 			},
 			"file-parameter-values": [
 			],
@@ -43,12 +43,12 @@
 			]
 		},
 		{
-			"file": "random-predicates-c.jani",
+			"file": "random-predicates.c.jani",
 			"original-file": ["p10-domain.pddl", "p10-problem.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py p10-domain.pddl p10-problem.pddl --jani random-predicates-c.jani"
+				"command": "ppddl2jani.py p10-domain.pddl p10-problem.pddl --jani random-predicates.c.jani"
 			},
 			"file-parameter-values": [
 			],
@@ -56,12 +56,12 @@
 			]
 		},
 		{
-			"file": "random-predicates-d.jani",
+			"file": "random-predicates.d.jani",
 			"original-file": ["p15-domain.pddl", "p15-problem.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py p15-domain.pddl p15-problem.pddl --jani random-predicates-d.jani"
+				"command": "ppddl2jani.py p15-domain.pddl p15-problem.pddl --jani random-predicates.d.jani"
 			},
 			"file-parameter-values": [
 			],

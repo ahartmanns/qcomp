@@ -19,12 +19,12 @@
 	],
 	"files": [
 		{
-			"file": "cdrive-2.jani",
+			"file": "cdrive.2.jani",
 			"original-file": ["domain.pddl", "p01.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p01.pddl --jani cdrive-2.jani"
+				"command": "ppddl2jani.py domain.pddl p01.pddl --jani cdrive.2.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "c", "value": 2 }
@@ -38,12 +38,12 @@
 			]
 		},
 		{
-			"file": "cdrive-3.jani",
+			"file": "cdrive.3.jani",
 			"original-file": ["domain.pddl", "p05.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p05.pddl --jani cdrive-3.jani"
+				"command": "ppddl2jani.py domain.pddl p05.pddl --jani cdrive.3.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "c", "value": 3 }
@@ -57,12 +57,12 @@
 			]
 		},
 		{
-			"file": "cdrive-6.jani",
+			"file": "cdrive.6.jani",
 			"original-file": ["domain.pddl", "p10.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p10.pddl --jani cdrive-6.jani"
+				"command": "ppddl2jani.py domain.pddl p10.pddl --jani cdrive.6.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "c", "value": 6 }
@@ -76,12 +76,12 @@
 			]
 		},
 		{
-			"file": "cdrive-10.jani",
+			"file": "cdrive.10.jani",
 			"original-file": ["domain.pddl", "p15.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p15.pddl --jani cdrive-10.jani"
+				"command": "ppddl2jani.py domain.pddl p15.pddl --jani cdrive.10.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "c", "value": 10 }

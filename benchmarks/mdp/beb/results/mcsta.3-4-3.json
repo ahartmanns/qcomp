@@ -1,5 +1,5 @@
 {
-	"file": "../beb-3-4.jani",
+	"file": "../beb.3-4.jani",
 	"version": 1,
 	"date": "2018-06-05",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
@@ -22,7 +22,7 @@
 		"os": "Windows 10 Pro 1803 (x64)",
 		"runtime": ".NET Framework 4.7.2"
 	},
-	"command": "mcsta.exe beb-3-4.jani -S Memory -E \"N=3\" -O beb-3-4.3.txt",
+	"command": "mcsta.exe beb.3-4.jani -S Memory -E \"N=3\" -O mcsta.3-4.3.txt",
 	"time": 1,
 	"data": [
 		{

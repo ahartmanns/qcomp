@@ -1,5 +1,5 @@
 Peak memory usage: 446 MB
-Analysis results for rectangle-tireworld-11.jani
+Analysis results for rectangle-tireworld.11.jani
 
 + State space exploration
   State size:  4 bytes

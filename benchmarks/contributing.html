@@ -91,7 +91,7 @@
 	<li>
 		Place the original model file and its JANI translation into that subfolder.
 		Use the "short" name of the model for the file names of all model files (original and JANI) wherever possible.
-		If a file contains hardcoded parameters, use the short name of the model, followed by a dash, followed by the hardcoded parameter values separated by dashes in the order in which they appear in the metadata, followed by the file extension.
+		If a file contains hardcoded parameters, use the short name of the model, followed by a dot (<tt>.</tt>), followed by the hardcoded parameter values separated by dashes (<tt>-</tt>) in the order in which they appear on the repository's website, followed by the file extension.
 	</li>
 	<li>
 		In the same subfolder, create a file <tt>index.json</tt> containing the metadata for your model.
@@ -113,7 +113,8 @@
 			<li>
 				All <tt>parameters</tt> of a model should be explained in the <tt>description</tt>.
 				In text, enclose parameter names in <tt>`´</tt> (e.g. <tt>`N´</tt> to refer to parameter N).
-				We distinguish between hard-coded <tt>file</tt> parameters and <tt>open</tt> parameters that can be specified at analysis time.
+				We distinguish between hard-coded <tt>file</tt> parameters and <tt>open</tt> parameters for which values can be specified at analysis time.
+				Provide some representative sets of values for the parameters.
 			</li>
 			<li>
 				All <tt>properties</tt> that are contained in the JANI file(s) must be listed with their corresponding name.
@@ -174,7 +175,7 @@
 	</li>
 	<li>
 		Add the <tt>.json</tt> files and tool output logs describing your results to the <tt>results</tt> subfolder of the corresponding model.
-		The names of the files should be the name of the tool, followed by a dot, followed by all parameter values separated by dashes in the order in which they appear in the model's metadata, followed by the file extension.
+		The names of the files should be the name of the tool, followed by a dot (<tt>.</tt>), followed by all parameter values separated by dashes (<tt>-</tt>) in the order in which they appear on the repository's website, followed by the file extension.
 		Check existing results for how to create the <tt>.json</tt> file and what information to include.
 		<ul class="text">
 			<li>
@@ -185,7 +186,7 @@
 			</li>
 			<li>
 				Strictly follow the established patterns of describing the system (CPU, operating system, etc.) used.
-				For example, state the exact CPU model, but not its frequency (as long as it can be deduced from the model) and no "(tm)" or (R)" symbols, in the <tt>cpu</tt> field.
+				For example, state the exact CPU model but do not include its frequency (as long as it can be deduced from the model) and any "(tm)" or (R)" symbols in the <tt>cpu</tt> field.
 			</li>
 			<li>
 				Specify the <tt>command</tt> as if the current working directory was the <tt>results</tt> subfolder and both your tool as well as the model files were included in that subfolder.

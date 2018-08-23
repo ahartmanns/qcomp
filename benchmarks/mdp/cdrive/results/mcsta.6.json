@@ -1,5 +1,5 @@
 {
-	"file": "../cdrive-6.jani",
+	"file": "../cdrive.6.jani",
 	"version": 1,
 	"date": "2018-08-01",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -19,7 +19,7 @@
 		"os": "Windows 10 Home 1803 (x64)",
 		"runtime": ".NET Framework 4.7.2"
 	},
-	"command": "mcsta.exe cdrive-6.jani",
+	"command": "mcsta.exe cdrive.6.jani",
 	"time": 1,
 	"data": [
 		{

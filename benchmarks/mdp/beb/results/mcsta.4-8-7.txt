@@ -1,5 +1,5 @@
 ﻿Peak memory usage: 4638 MB
-Analysis results for beb-4-8.jani
+Analysis results for beb.4-8.jani
 Experiment N=7
 
 + State space exploration

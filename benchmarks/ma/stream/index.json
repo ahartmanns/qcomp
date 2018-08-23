@@ -53,7 +53,8 @@
 				"tool": "Storm-conv",
 				"version": "1.2.4 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism stream.ma --tojani stream.jani --prop stream.csl --globalvars --standard-compliant"
+				"command": "storm-conv --prism stream.ma --tojani stream.jani --prop stream.csl --globalvars --standard-compliant",
+				"note": "then manually edited to use only \"time\" accumulation for property `exp_buffertime´ and only \"steps\" accumulation for property `exp_restarts´"
 			},
 			"file-parameter-values": [],
 			"open-parameter-values": [

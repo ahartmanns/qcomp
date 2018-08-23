@@ -22,12 +22,12 @@
 	],
 	"files": [
 		{
-			"file": "exploding-blocksworld-5.jani",
+			"file": "exploding-blocksworld.5.jani",
 			"original-file": ["domain.pddl", "p01-n2-N5-s1.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p01-n2-N5-s1.pddl --jani exploding-blocksworld-5.jani"
+				"command": "ppddl2jani.py domain.pddl p01-n2-N5-s1.pddl --jani exploding-blocksworld.5.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "N", "value": 5 }
@@ -41,12 +41,12 @@
 			]
 		},
 		{
-			"file": "exploding-blocksworld-10.jani",
+			"file": "exploding-blocksworld.10.jani",
 			"original-file": ["domain.pddl", "p08-n8-N10-s8.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p08-n8-N10-s8.pddl --jani exploding-blocksworld-10.jani"
+				"command": "ppddl2jani.py domain.pddl p08-n8-N10-s8.pddl --jani exploding-blocksworld.10.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "N", "value": 10 }
@@ -55,12 +55,12 @@
 			]
 		},
 		{
-			"file": "exploding-blocksworld-15.jani",
+			"file": "exploding-blocksworld.15.jani",
 			"original-file": ["domain.pddl", "p13-n13-N15-s13.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p13-n13-N15-s13.pddl --jani exploding-blocksworld-15.jani"
+				"command": "ppddl2jani.py domain.pddl p13-n13-N15-s13.pddl --jani exploding-blocksworld.15.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "N", "value": 15 }
@@ -69,12 +69,12 @@
 			]
 		},
 		{
-			"file": "exploding-blocksworld-17.jani",
+			"file": "exploding-blocksworld.17.jani",
 			"original-file": ["domain.pddl", "p15-n15-N17-s15.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p15-n15-N17-s15.pddl --jani exploding-blocksworld-17.jani"
+				"command": "ppddl2jani.py domain.pddl p15-n15-N17-s15.pddl --jani exploding-blocksworld.17.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "N", "value": 17 }

@@ -1,5 +1,5 @@
 Peak memory usage: 46 MB
-Analysis results for tireworld-17.jani
+Analysis results for tireworld.17.jani
 
 + State space exploration
   State size:  16 bytes

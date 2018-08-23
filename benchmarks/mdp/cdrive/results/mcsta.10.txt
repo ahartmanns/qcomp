@@ -1,5 +1,5 @@
 Peak memory usage: 724 MB
-Analysis results for cdrive-10.jani
+Analysis results for cdrive.10.jani
 
 + State space exploration
   State size:  104 bytes

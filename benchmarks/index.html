@@ -12,6 +12,9 @@
 <body onload="init()">
 
 <h1>Quantitative Formal Model Repository</h1>
+<div class="belowh1">
+	License: <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> &nbsp;|&nbsp; <a href="contributing.html">Contributing</a> &nbsp;|&nbsp;&thinsp; <a href="conversions.html">JANI Converters</a>
+</div>
 <p>
 	The models and results in this repository on <a href="../index.html">qcomp.org</a> are provided as a benchmark set under the terms of the
 	<a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
@@ -162,7 +165,7 @@
 						<!-- /ko -->
 						with <a data-bind="visible: conversion.url !== undefined, text: conversion.tool, attr: { href: conversion.url }"></a><span data-bind="visible: conversion.url === undefined, text: conversion.tool"></span>
 						<!-- ko if: conversion.version !== undefined -->version <span data-bind="text: conversion.version"></span><!-- /ko -->
-						using the following command<span data-bind="text: conversion.note === undefined ? '' : ' (and ' + conversion.note + ')'"></span>:
+						using the following command<span data-bind="html: conversion.note === undefined ? '' : ' (and ' + formatText(conversion.note) + ')'"></span>:
 					</div>
 					<div data-bind="text: conversion.command" class="tt" style="text-align: left; text-indent: -3ex; padding-left: 3ex;"></div>
 				<!-- /ko -->

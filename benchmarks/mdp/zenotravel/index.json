@@ -24,12 +24,12 @@
 	],
 	"files": [
 		{
-			"file": "zenotravel-4-2-2.jani",
+			"file": "zenotravel.4-2-2.jani",
 			"original-file": ["domain.pddl", "p01-c4-p2-a2-s3846.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p01-c4-p2-a2-s3846.pddl --jani zenotravel-4-2-2.jani"
+				"command": "ppddl2jani.py domain.pddl p01-c4-p2-a2-s3846.pddl --jani zenotravel.4-2-2.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "c", "value": 4 },
@@ -45,12 +45,12 @@
 			]
 		},
 		{
-			"file": "zenotravel-6-5-3.jani",
+			"file": "zenotravel.6-5-3.jani",
 			"original-file": ["domain.pddl", "p05-c6-p5-a3-s24056.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p05-c6-p5-a3-s24056.pddl --jani zenotravel-6-5-3.jani"
+				"command": "ppddl2jani.py domain.pddl p05-c6-p5-a3-s24056.pddl --jani zenotravel.6-5-3.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "c", "value": 6 },
@@ -61,12 +61,12 @@
 			]
 		},
 		{
-			"file": "zenotravel-10-5-3.jani",
+			"file": "zenotravel.10-5-3.jani",
 			"original-file": ["domain.pddl", "p10-c10-p5-a3-s15832.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p10-c10-p5-a3-s15832.pddl --jani zenotravel-10-5-3.jani"
+				"command": "ppddl2jani.py domain.pddl p10-c10-p5-a3-s15832.pddl --jani zenotravel.10-5-3.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "c", "value": 10 },
@@ -77,12 +77,12 @@
 			]
 		},
 		{
-			"file": "zenotravel-20-10-6.jani",
+			"file": "zenotravel.20-10-6.jani",
 			"original-file": ["domain.pddl", "p15-c20-p10-a6-s24164.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p15-c20-p10-a6-s24164.pddl --jani zenotravel-20-10-6.jani"
+				"command": "ppddl2jani.py domain.pddl p15-c20-p10-a6-s24164.pddl --jani zenotravel.20-10-6.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "c", "value": 20 },

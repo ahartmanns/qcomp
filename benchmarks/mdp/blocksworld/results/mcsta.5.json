@@ -1,5 +1,5 @@
 ﻿{
-	"file": "../blocksworld-5.jani",
+	"file": "../blocksworld.5.jani",
 	"version": 1,
 	"date": "2018-08-13",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
@@ -16,7 +16,7 @@
 		"os": "Ubuntu 18.04 (x64)",
 		"runtime": "Mono 5.14.0.177"
 	},
-	"command": "mcsta.exe blocksworld-5.jani -S Memory --p1 -O mcsta.5.json Json",
+	"command": "mcsta.exe blocksworld.5.jani -S Memory --p1 -O mcsta.5.json Json",
 	"time": 1,
 	"memory": 101613568,
 	"data": [

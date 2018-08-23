@@ -1,5 +1,5 @@
 Peak memory usage: 189 MB
-Analysis results for elevators-b-11-9.jani
+Analysis results for elevators.b-11-9.jani
 
 + State space exploration
   State size:  64 bytes

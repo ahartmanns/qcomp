@@ -22,12 +22,12 @@
 	],
 	"files": [
 		{
-			"file": "tireworld-17.jani",
+			"file": "tireworld.17.jani",
 			"original-file": ["domain.pddl", "p01.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p01.pddl --jani tireworld-17.jani"
+				"command": "ppddl2jani.py domain.pddl p01.pddl --jani tireworld.17.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "n", "value": 17 }
@@ -41,12 +41,12 @@
 			]
 		},
 		{
-			"file": "tireworld-25.jani",
+			"file": "tireworld.25.jani",
 			"original-file": ["domain.pddl", "p05.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p05.pddl --jani tireworld-25.jani"
+				"command": "ppddl2jani.py domain.pddl p05.pddl --jani tireworld.25.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "n", "value": 25 }
@@ -60,12 +60,12 @@
 			]
 		},
 		{
-			"file": "tireworld-35.jani",
+			"file": "tireworld.35.jani",
 			"original-file": ["domain.pddl", "p10.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p10.pddl --jani tireworld-35.jani"
+				"command": "ppddl2jani.py domain.pddl p10.pddl --jani tireworld.35.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "n", "value": 35 }
@@ -79,12 +79,12 @@
 			]
 		},
 		{
-			"file": "tireworld-45.jani",
+			"file": "tireworld.45.jani",
 			"original-file": ["domain.pddl", "p15.pddl"],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
-				"command": "ppddl2jani.py domain.pddl p15.pddl --jani tireworld-45.jani"
+				"command": "ppddl2jani.py domain.pddl p15.pddl --jani tireworld.45.jani"
 			},
 			"file-parameter-values": [
 				{ "name": "n", "value": 45 }
