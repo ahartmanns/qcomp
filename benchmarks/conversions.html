@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>QComp - Quantitative Formal Models Repository - qcomp.org</title>
+	<link href="https://fonts.googleapis.com/css?family=Tajawal:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script type="text/javascript" src="../script.js"></script>
+</head>
+<body onload="init()">
+
+<h1>Quantitative Formal Model Repository</h1>
+
+<h2>Conversion of Models to JANI</h2>
+<p>
+	All models in the <a href="index.html">Quantitative Formal Model Repository</a> need to be available in the <a href="http://www.jani-spec.org/">JANI</a> model format.
+	The following conversions from other model formalisms are available in tools:
+</p>
+<ul class="text continue">
+	<li>
+		<a href=#prismtojani>PRISM to JANI</a> via <a href="http://www.stormchecker.org">Storm</a>
+	</li>
+	<li>
+		<a href=#gspntojani>Generalised stochastic Petri nets (GSPN) to JANI</a> via <a href="http://www.stormchecker.org">Storm</a>
+	</li>
+</ul>
+<p class="continue">
+	Please contact <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script> if you would like to have your own conversion tool added to this list.
+	If problems occur while using one of the mentioned tools, please contact the respective tool authors.
+</p>
+
+<h3 id="prismtojani">PRISM to JANI</h3>
+<p>
+	Conversion of input models given in the <a href="http://www.prismmodelchecker.org/manual/ThePRISMLanguage/">PRISM launguage</a> is supported by <tt>Storm-conv</tt> which is part of <a href="http://www.stormchecker.org">Storm</a>.
+</p>
+<p>
+	For example, the prism model file <a href="mdp/resource-gathering/resource-gathering.pm">resource-gathering.pm</a> and the PRISM property file <a href="mdp/resource-gathering/resource-gathering.prctl">resource-gathering.prctl</a> can be converted into a JANI file using <tt>Storm-conv</tt> version 1.2.4 with the following command:
+</p>
+<p class="tt">
+	storm-conv --prism resource-gathering.pm --prop resource-gathering.prctl --tojani resource-gathering.jani
+</p>
+<p>
+	In addition, the following options can be used:
+</p>
+<ul class="none continue">
+	<li>
+		<tt>--prismcompat</tt> enables PRISM compatibility.
+		This may be necessary to process some PRISM models.
+	</li>
+	<li>
+		<tt>--constants &lt;values&gt;</tt> specifies the constant replacements to use, where <tt>&lt;values&gt;</tt> is a comma separated list of constants and their values, e.g. <tt>a=1,b=2,c=3</tt>.
+	</li>
+	<li>
+		<tt>--standard-compliant</tt> ensures that the model is compliant with the JANI standard in order to increase compatibility with other tools.
+	</li>
+	<li>
+		<tt>--globalvars</tt> makes all module variables global, e.g. to guarantee the same variable order as in the input file.
+	</li>
+</ul>
+
+<h3 id="gspntojani">GSPN to JANI</h3>
+<p>
+	GSPN given in <a href="http://www.di.unito.it/~greatspn/index.html">GreatSPN project files</a> can be converted into JANI using <tt>Storm-gspn</tt> which is part of <a href="http://www.stormchecker.org">Storm</a>.
+</p>
+<p>
+	For example, the GreatSPN file <a href="ma/readers-writers/readers-writers.pnpro">readers-writers.pnpro</a>, the capacities file <a href="ma/readers-writers/readers-writers.capacities">readers-writers.capacities</a>, and the property file <a href="ma/readers-writers/readers-writers.csl">readers-writers.csl</a> can be converted into a JANI file using <tt>Storm-gspn</tt> version 1.2.4 with the following command:
+</p>
+<p class="tt">
+	storm-gspn --gspnfile readers-writers.pnpro --capacitiesfile readers-writers.capacities --prop readers-writers.csl --constants K=35 --to-jani readers-writers-35.jani
+</p>
+<p>
+	Here, the capacities file specifies upper bounds for the number of tokens in each place to guarantee a finite Markov model. The property file contains properties using the syntax of <a href="http://www.prismmodelchecker.org/manual/PropertySpecification/">PRISM properties</a>.
+	The option <tt>--constants</tt> specifies values for constants/templates occurring in the GreatSPN file.
+	In addition, the following options can be used:
+</p>
+<ul class="none continue">
+	<li>
+		<tt>--capacity &lt;value&gt;</tt> specifies that at most <tt>&lt;value&gt;</tt> many tokens can be in each place.
+		This is an alternative to specifying a capacities file.
+	</li>
+	<li>
+		<tt>--addprops</tt> adds a set of standard GSPN properties, e.g. the probability for a deadlock.
+	</li>
+	<li>
+		<tt>--standard-compliant</tt> ensures that the model is compliant with the JANI standard in order to increase compatibility with other tools.
+	</li>
+</ul>
+
+<h2>JANI-to-JANI Conversion</h2>
+<p>
+	<a href="http://www.jani-spec.org/">JANI</a> supports advanced modelling features that might not be supported by some tools.
+	The following conversions to more conservative fragments of JANI are available:
+</p>
+<ul class="text continue">
+	<li>
+		Conversion of arrays to sets of variables via <a href="http://www.stormchecker.org">Storm</a>
+	</li>
+</ul>
+<p class="continue">
+	Please contact <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script> if you would like to have your own conversion tool added to this list.
+	If problems occur while using one of the mentioned tools, please contact the respective tool authors.
+</p>
+
+</body>
+</html>

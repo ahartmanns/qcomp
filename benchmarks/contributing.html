@@ -14,13 +14,13 @@
 <h2>Information for Contributors</h2>
 <p>
 	We welcome contributions that extend the <a href="index.html">Quantitative Formal Model Repository</a> by <a href="#addmodels">adding new models</a>, <a href="#updatemodels">updating existing models</a>, and <a href="#addresults">adding new experimental results</a>.
-	Before you submit, please carefully read and follow the general instructions and well as those specific for your type of contribution below.
+	Before you submit, please carefully read and follow the general instructions as well as those specific for your type of contribution below.
 	If you have questions about contributing, contact <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script>.
 </p>
 
 <h3>How to submit</h3>
 <p>
-	We accept contributions via <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'iamel');</script> as <tt>.zip</tt> files that contain the files being added or changed (and only those), as well as via <a href="https://github.com/ahartmanns/qcomp">GitHub</a> pull requests.
+	We accept contributions via <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'iamel');</script> as <tt>.zip</tt> files that contain the files being added or changed (and only those) as well as via <a href="https://github.com/ahartmanns/qcomp">GitHub</a> pull requests.
 	Submissions via email will be committed to our <a href="https://github.com/ahartmanns/qcomp">Git repository</a> in your name; please mention your full name and the email address of your GitHub account in your email.
 	For pull requests, we require all commits to be in your full name.
 	Every submission should only contain a single contribution, e.g. one new model, or an update to one existing model.
@@ -31,7 +31,7 @@
 <h3>Licensing</h3>
 <p>
 	All data contributed to the repository will be redistributed under the terms of the open-access <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
-	Before submitting, make sure that you have the right to make your contribution publically available under this license, and include a statement to this effect in your email.
+	Before submitting, make sure that you have the right to make your contribution publically available under this license and include a statement to this effect in your email.
 	If you submit via pull request, send an email (from the email address associated with your GitHub account) with such a statement to <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script> before creating the pull request.
 </p>
 
@@ -45,10 +45,10 @@
 		formal, i.e. have a well-defined semantics in terms of discrete- or continuous-time Markov chains (DTMC or CTMC), Markov decision processes (MDP), Markov automata (MA) or probabilistic timed automata (PTA), and contain at least one probabilistic reachability or expected-reward property to be checked;
 	</li>
 	<li>
-		available in the <a href="http://www.jani-spec.org/">JANI</a> model format in addition to its original modelling formalism;
+		available in the <a href="http://www.jani-spec.org/">JANI</a> model format in addition to its original modelling formalism (see our <a href="conversions.html">list of existing JANI converters</a>);
 	</li>
 	<li>
-		tested to work with at least one parameter configuration with one tool for the JANI translation, with the test being documented as an experimental result in the repository; and be
+		tested to work with one tool given the JANI translation and at least one parameter configuration, where the test is documented as an experimental result in the repository; and be
 	</li>
 	<li>
 		maintained, i.e. the submitter must be willing and available to answer questions about the model and review update submissions, for a reasonable amount of years after the submission.
@@ -113,11 +113,15 @@
 			<li>
 				All <tt>parameters</tt> of a model should be explained in the <tt>description</tt>.
 				In text, enclose parameter names in <tt>`´</tt> (e.g. <tt>`N´</tt> to refer to parameter N).
+				We distinguish between hard-coded <tt>file</tt> parameters and <tt>open</tt> parameters that can be specified at analysis time.
 			</li>
+			<li>
+				All <tt>properties</tt> that are contained in the JANI file(s) must be listed with their corresponding name.
+				The type of each property must be either <tt>prob-reach</tt>, <tt>exp-steps</tt>, <tt>exp-time</tt> or <tt>exp-reward</tt> optionally followed by <tt>-step-bounded</tt>, <tt>-time-bounded</tt>, or <tt>-reward-bounded</tt>.
 		</ul>
 	</li>
 	<li>
-		Add a subfolder named <tt>results</tt> and include at least one <a href="#addresults">result</a> for one parameter configuration with one tool obtained from the JANI translation.
+		Add a subfolder named <tt>results</tt> and include at least one <a href="#addresults">result</a> for one parameter configuration obtained from one tool given the JANI translation as input.
 	</li>
 	<li>
 		Add a reference to your model in file <tt>benchmarks/index.json</tt>.
@@ -170,7 +174,7 @@
 	</li>
 	<li>
 		Add the <tt>.json</tt> files and tool output logs describing your results to the <tt>results</tt> subfolder of the corresponding model.
-		The names of the files should be the name of the tool, followed by a dot, followed by the parameter values separated by dashes in the order in which they appear in the model's metadata, followed by the file extension.
+		The names of the files should be the name of the tool, followed by a dot, followed by all parameter values separated by dashes in the order in which they appear in the model's metadata, followed by the file extension.
 		Check existing results for how to create the <tt>.json</tt> file and what information to include.
 		<ul class="text">
 			<li>

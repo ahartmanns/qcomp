@@ -81,6 +81,10 @@ tt, .tt {
 	font-family: 'Courier New', monospace; font-size: 105%; line-height: 1.2;
 }
 
+p.tt {
+	text-align: left; text-indent: -3ex; padding-left: 3ex;
+}
+
 .reference {
 	font-size: 90%;
 }
@@ -161,13 +165,16 @@ ul.text {
 ol.text {
 	list-style: decimal outside; padding: 0em 0em 0em 1.4em; margin: 0ex;
 }
-ul.text li, ol.text li {
+ul.none {
+	list-style: none outside; padding: 0em; margin: 0ex;
+}
+ul.text li, ol.text li, ul.none li {
 	padding: 0ex; margin: 0ex;
 }
 p + ul.continue, p + ol.continue {
 	margin-top: -0.75ex;
 }
-ul.text + p.continue, ol.text + p.continue {
+ul.text + p.continue, ol.text + p.continue, ul.none + p.continue {
 	margin-top: 0ex;
 }
 
