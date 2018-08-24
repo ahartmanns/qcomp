@@ -1,0 +1,174 @@
+{
+	"name": "Readers and Writers System",
+	"short": "readers-writers",
+	"type": "ma",
+	"original": "GreatSPN",
+	"version": 1,
+	"date": "2018-08-23",
+	"version-history": [
+		{ "date": "2018-08-23",	"notes": "Initial version.", "version": 1 }
+	],
+	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
+	"source": "https://dl.acm.org/citation.cfm?id=561155",
+	"description": "GSPN Model of a readers and writers system based on the GSPN of [0], Figure 5.3. `K´ processes want to access a common resource either for reading of for writing. While writing requires exclusive access to the resource, reading can be done simultaneously. Each read or write access is followed by a network transfer phase. After completing the resource access, a process requests a new access either immediately or after an exponentially distributed delay.",
+	"notes": "standard GSPN example",
+	"parameters": [
+		{
+			"name": "K",
+			"kind": "file",
+			"description": "Number of processes",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "pr_many_requests",
+			"description": "The maximal probability that at some point more than 80% of the processes request either the resource or the network.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "exp_time_many_requests",
+			"description": "The minimal expected time until more than 80% of the processes request either the resource or the network.",
+			"type": "exp-time"
+		},
+		{
+			"name": "pr_network",
+			"description": "The maximal probability that more processes request the network than the resource when first reaching a state where more than 80% of the processes are requesting.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "prtb_many_requests",
+			"description": "The maximal probability that within 5 time units more than 80% of the processes request either the resource or the network.",
+			"type": "prob-reach-time-bounded"
+		}
+	],
+	"files": [
+		{
+			"file": "readers-writers.5.jani",
+			"original-file": [
+				"readers-writers.pnpro",
+				"readers-writers.csl"
+			],
+			"conversion": {
+				"tool": "Storm-GSPN",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-gspn --gspnfile readers-writers.pnpro --to-jani readers-writers.5.jani --prop readers-writers.csl --capacitiesfile readers-writers.capacities --constants K=5 --standard-compliant"
+			},
+			"file-parameter-values": [
+				{
+					"name": "K",
+					"value": 5
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1609
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "readers-writers.20.jani",
+			"original-file": [
+				"readers-writers.pnpro",
+				"readers-writers.csl"
+			],
+			"conversion": {
+				"tool": "Storm-GSPN",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-gspn --gspnfile readers-writers.pnpro --to-jani readers-writers.20.jani --prop readers-writers.csl --capacitiesfile readers-writers.capacities --constants K=20 --standard-compliant"
+			},
+			"file-parameter-values": [
+				{
+					"name": "K",
+					"value": 20
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1903108
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "readers-writers.35.jani",
+			"original-file": [
+				"readers-writers.pnpro",
+				"readers-writers.csl"
+			],
+			"conversion": {
+				"tool": "Storm-GSPN",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-gspn --gspnfile readers-writers.pnpro --to-jani readers-writers.35.jani --prop readers-writers.csl --capacitiesfile readers-writers.capacities --constants K=35 --standard-compliant"
+			},
+			"file-parameter-values": [
+				{
+					"name": "K",
+					"value": 35
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 46490557
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "readers-writers.40.jani",
+			"original-file": [
+				"readers-writers.pnpro",
+				"readers-writers.csl"
+			],
+			"conversion": {
+				"tool": "Storm-GSPN",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-gspn --gspnfile readers-writers.pnpro --to-jani readers-writers.40.jani --prop readers-writers.csl --capacitiesfile readers-writers.capacities --constants K=40 --standard-compliant"
+			},
+			"file-parameter-values": [
+				{
+					"name": "K",
+					"value": 40
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 100949015
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": [
+		"results/Storm.5.json",
+		"results/Storm.20.json",
+		"results/Storm.35.json",
+		"results/Storm.40.json"
+	]
+}
