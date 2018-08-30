@@ -1,7 +1,7 @@
 ﻿{
 	"file": "../dpm.jani",
 	"version": 1,
-	"date": "2018-08-12",
+	"date": "2018-08-30",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"open-parameter-values": [
 		{ "name": "N", "value": 6 },
@@ -9,44 +9,54 @@
 	],
 	"tool": {
 		"name": "mcsta",
-		"version": "3.0.78",
+		"version": "3.0.86",
 		"url": "http://www.modestchecker.net/",
 		"part-of": "the Modest Toolset",
 		"part-of-url": "http://www.modestchecker.net/"
 	},
 	"system": {
-		"cpu": "Intel Core i5-6600T",
-		"ram": 16,
-		"os": "Windows 10 Pro 1803 (x64)",
-		"runtime": ".NET Framework 4.7.2"
+		"cpu": "Intel Core i7-4790",
+		"ram": 8,
+		"os": "Ubuntu 18.04 (x64)",
+		"runtime": "Mono 5.14.0.177"
 	},
-	"command": "mcsta.exe dpm.jani -S Memory --p1 -E \"N=6, C=6\" -O results\\mcsta.6-6.json Json",
-	"time": 131,
-	"memory": 2604744704,
+	"command": "mcsta.exe dpm.jani -S Memory --p1 -E \"N=6, C=6\" -O mcsta.6-6.json Json",
+	"time": 158.810,
+	"memory": 2969153536,
+	"property-times": [
+		{ "name": "PminQueuesFull", "time": 13.857 },
+		{ "name": "PmaxQueuesFull", "time": 31.383 },
+		{ "name": "PminQueue1Full", "time": 9.496 },
+		{ "name": "PmaxQueue1Full", "time": 6.412 },
+		{ "name": "TminQueuesFull", "time": 81.316 }
+	],
 	"data": [
 		{
 			"group": "State space exploration",
 			"values": [
-				{ "name": "State size", "value": 16, "unit": "B" },
+				{ "name": "State size", "value": 15, "unit": "B" },
 				{ "name": "States", "value": 10537896 },
 				{ "name": "Transitions", "value": 12331380 },
 				{ "name": "Branches", "value": 20802036 },
-				{ "name": "Time", "value": 16, "unit": "s" },
-				{ "name": "Rate", "value": 672789.12085807312 }
+				{ "name": "Rate", "value": 691599.13368773379 },
+				{ "name": "Time", "value": 15.906, "unit": "s" }
 			]
 		},
 		{
 			"property": "PminQueuesFull",
 			"value": 1.485593349230191E-05,
-			"values": [ { "name": "Time", "value": 8, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[1.48559334923019E-05, 1)" },
+				{ "name": "Time", "value": 13.857, "unit": "s" }
+			],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Min. prob. 0 states", "value": 1512540 },
-						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for min. prob. 0 states", "value": 0.861, "unit": "s" },
 						{ "name": "Min. prob. 1 states", "value": 84 },
-						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for min. prob. 1 states", "value": 0.624, "unit": "s" }
 					]
 				},
 				{
@@ -54,7 +64,7 @@
 					"values": [
 						{ "name": "Final error", "value": 5.0789186869453915E-07 },
 						{ "name": "Iterations", "value": 28 },
-						{ "name": "Time", "value": 8, "unit": "s" }
+						{ "name": "Time", "value": 12.365, "unit": "s" }
 					]
 				}
 			]
@@ -62,13 +72,13 @@
 		{
 			"property": "PmaxQueuesFull",
 			"value": 1,
-			"values": [ { "name": "Time", "value": 25, "unit": "s" } ],
+			"values": [ { "name": "Time", "value": 31.383, "unit": "s" } ],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Max. prob. 1 states", "value": 10537896 },
-						{ "name": "Time for max. prob. 1 states", "value": 25, "unit": "s" }
+						{ "name": "Time for max. prob. 1 states", "value": 31.382, "unit": "s" }
 					]
 				}
 			]
@@ -76,15 +86,18 @@
 		{
 			"property": "PminQueue1Full",
 			"value": 0.026966106256541608,
-			"values": [ { "name": "Time", "value": 6, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[0.0269661062565416, 1)" },
+				{ "name": "Time", "value": 9.496, "unit": "s" }
+			],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Min. prob. 0 states", "value": 1080450 },
-						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for min. prob. 0 states", "value": 0.78, "unit": "s" },
 						{ "name": "Min. prob. 1 states", "value": 1750236 },
-						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for min. prob. 1 states", "value": 0.611, "unit": "s" }
 					]
 				},
 				{
@@ -92,7 +105,7 @@
 					"values": [
 						{ "name": "Final error", "value": 4.6088255136353471E-07 },
 						{ "name": "Iterations", "value": 21 },
-						{ "name": "Time", "value": 5, "unit": "s" }
+						{ "name": "Time", "value": 8.105, "unit": "s" }
 					]
 				}
 			]
@@ -100,13 +113,13 @@
 		{
 			"property": "PmaxQueue1Full",
 			"value": 1,
-			"values": [ { "name": "Time", "value": 5, "unit": "s" } ],
+			"values": [ { "name": "Time", "value": 6.412, "unit": "s" } ],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Max. prob. 1 states", "value": 10537896 },
-						{ "name": "Time for max. prob. 1 states", "value": 5, "unit": "s" }
+						{ "name": "Time for max. prob. 1 states", "value": 6.412, "unit": "s" }
 					]
 				}
 			]
@@ -114,15 +127,18 @@
 		{
 			"property": "TminQueuesFull",
 			"value": 50.852623862742213,
-			"values": [ { "name": "Time", "value": 70, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[50.8526238627422, ∞)" },
+				{ "name": "Time", "value": 81.316, "unit": "s" }
+			],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Max. prob. 0 states", "value": 0 },
-						{ "name": "Time for max. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for max. prob. 0 states", "value": 0.87, "unit": "s" },
 						{ "name": "Max. prob. 1 states", "value": 10537896 },
-						{ "name": "Time for max. prob. 1 states", "value": 24, "unit": "s" }
+						{ "name": "Time for max. prob. 1 states", "value": 31.392, "unit": "s" }
 					]
 				},
 				{
@@ -130,7 +146,7 @@
 					"values": [
 						{ "name": "Final error", "value": 9.6357432675004134E-07 },
 						{ "name": "Iterations", "value": 189 },
-						{ "name": "Time", "value": 45, "unit": "s" }
+						{ "name": "Time", "value": 49.052, "unit": "s" }
 					]
 				}
 			]

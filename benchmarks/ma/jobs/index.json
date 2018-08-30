@@ -50,14 +50,14 @@
 		{
 			"file": "jobs.5-2.jani",
 			"original-file": [
-				"jobs-5-2.ma",
+				"jobs.5-2.ma",
 				"jobs.csl"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.4 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism jobs-5-2.ma --tojani jobs.5-2.jani --prop jobs.csl --globalvars --standard-compliant"
+				"command": "storm-conv --prism jobs.5-2.ma --tojani jobs.5-2.jani --prop jobs.csl --globalvars --standard-compliant"
 			},
 			"file-parameter-values": [
 				{
@@ -84,14 +84,14 @@
 		{
 			"file": "jobs.10-3.jani",
 			"original-file": [
-				"jobs-10-3.ma",
+				"jobs.10-3.ma",
 				"jobs.csl"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.4 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism jobs-10-3.ma --tojani jobs.10-3.jani --prop jobs.csl --globalvars --standard-compliant"
+				"command": "storm-conv --prism jobs.10-3.ma --tojani jobs.10-3.jani --prop jobs.csl --globalvars --standard-compliant"
 			},
 			"file-parameter-values": [
 				{
@@ -118,14 +118,14 @@
 		{
 			"file": "jobs.15-3.jani",
 			"original-file": [
-				"jobs-15-3.ma",
+				"jobs.15-3.ma",
 				"jobs.csl"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.4 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism jobs-15-3.ma --tojani jobs.15-3.jani --prop jobs.csl --globalvars --standard-compliant"
+				"command": "storm-conv --prism jobs.15-3.ma --tojani jobs.15-3.jani --prop jobs.csl --globalvars --standard-compliant"
 			},
 			"file-parameter-values": [
 				{
@@ -151,8 +151,11 @@
 		}
 	],
 	"results": [
+		"results/mcsta.5-2.json",
 		"results/Storm.5-2.json",
+		"results/mcsta.10-3.json",
 		"results/Storm.10-3.json",
+		"results/mcsta.15-3.json",
 		"results/Storm.15-3.json"
 	]
 }

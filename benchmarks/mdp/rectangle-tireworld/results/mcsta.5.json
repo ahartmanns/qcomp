@@ -1,40 +1,52 @@
-{
-	"file": "../rectangle-tireworld.5.jani",
+﻿{
+	"file": "rectangle-tireworld/rectangle-tireworld.5.jani",
 	"version": 1,
-	"date": "2018-08-01",
-	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
-	"log": "mcsta.5.txt",
-	"open-parameter-values": [
-	],
+	"date": "2018-08-30",
+	"submitter": "arnd <EMAIL>",
 	"tool": {
 		"name": "mcsta",
-		"version": "3.0.71",
+		"version": "3.0.86",
 		"url": "http://www.modestchecker.net/",
 		"part-of": "the Modest Toolset",
 		"part-of-url": "http://www.modestchecker.net/"
 	},
 	"system": {
-		"cpu": "Intel Core i7-4650U",
-		"ram": "8",
-		"os": "Windows 10 Home 1803 (x64)",
-		"runtime": ".NET Framework 4.7.2"
+		"cpu": "Intel Core i7-4790",
+		"ram": 8,
+		"os": "Ubuntu 18.04 (x64)",
+		"runtime": "Mono 5.14.0.177"
 	},
-	"command": "mcsta.exe --p1 rectangle-tireworld.5.jani",
-	"time": 1,
+	"command": "/home/arnd/Modest/Binaries/Release/mcsta.exe rectangle-tireworld/rectangle-tireworld.5.jani -S Memory --p1 -O rectangle-tireworld/results/mcsta.5.json Json -Y",
+	"time": 0.677,
+	"memory": 63623168,
+	"property-times": [
+		{ "name": "goal", "time": 0.007 }
+	],
 	"data": [
 		{
 			"group": "State space exploration",
 			"values": [
-				{ "name": "time", "value": 0.1, "unit": "s" },
-				{ "name": "states", "value": 50 },
-				{ "name": "transitions", "value": 741 },
-				{ "name": "branches", "value": 850 }
+				{ "name": "State size", "value": 4, "unit": "B" },
+				{ "name": "States", "value": 50 },
+				{ "name": "Transitions", "value": 741 },
+				{ "name": "Branches", "value": 850 },
+				{ "name": "Rate", "value": 450.45045045045043 },
+				{ "name": "Time", "value": 0.119, "unit": "s" }
 			]
 		},
 		{
 			"property": "goal",
 			"value": 1,
-			"values": [ { "name": "time", "value": 0.1, "unit": "s" } ]
+			"values": [ { "name": "Time", "value": 0.007, "unit": "s" } ],
+			"data": [
+				{
+					"group": "Precomputations",
+					"values": [
+						{ "name": "Max. prob. 1 states", "value": 25 },
+						{ "name": "Time for max. prob. 1 states", "value": 0.004, "unit": "s" }
+					]
+				}
+			]
 		}
 	]
 }

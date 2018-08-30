@@ -191,10 +191,16 @@
 			<li>
 				Specify the <tt>command</tt> as if the current working directory was the <tt>results</tt> subfolder and both your tool as well as the model files were included in that subfolder.
 			</li>
+			<li>
+				Report timing results in seconds with millisecond precision (i.e. three decimal digits).
+			</li>
 		</ul>
 	</li>
 	<li>
 		If your experiments provide new information about the number of states for some parameter configurations, update the model's main <tt>index.json</tt> file accordingly.
+	</li>
+	<li>
+		Add or update the technical and performance data for the CPU used for your experiments in <tt>benchmarks/cpu-data.json</tt>.
 	</li>
 	<li>
 		Test your changes by opening <tt>benchmarks/index.html</tt> in a browser.

@@ -159,17 +159,46 @@
 			"name": "T_1",
 			"expression": {
 				"op": "filter",
-				"fun": "max",
+				"fun": "∀",
 				"values": {
-					"op": "Pmax",
-					"exp": {
-						"op": "F",
+					"op": "=",
+					"left": {
+						"op": "Pmax",
 						"exp": {
-							"op": "∨",
-							"left": "channel_k_overflow",
-							"right": "channel_l_overflow"
+							"op": "F",
+							"exp": {
+								"op": "∨",
+								"left": "channel_k_overflow",
+								"right": "channel_l_overflow"
+							}
 						}
-					}
+					},
+					"right": 0
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "T_1_1",
+			"expression": {
+				"op": "filter",
+				"fun": "∃",
+				"values": {
+					"op": "=",
+					"left": {
+						"op": "Pmax",
+						"exp": {
+							"op": "F",
+							"exp": {
+								"op": "∨",
+								"left": "channel_k_overflow",
+								"right": "channel_l_overflow"
+							}
+						}
+					},
+					"right": 0
 				},
 				"states": {
 					"op": "initial"
@@ -180,17 +209,46 @@
 			"name": "T_2",
 			"expression": {
 				"op": "filter",
-				"fun": "max",
+				"fun": "∀",
 				"values": {
-					"op": "Pmax",
-					"exp": {
-						"op": "F",
+					"op": "=",
+					"left": {
+						"op": "Pmax",
 						"exp": {
-							"op": "∧",
-							"left": "inTransitK",
-							"right": "inTransitL"
+							"op": "F",
+							"exp": {
+								"op": "∧",
+								"left": "inTransitK",
+								"right": "inTransitL"
+							}
 						}
-					}
+					},
+					"right": 0
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "T_2_1",
+			"expression": {
+				"op": "filter",
+				"fun": "∃",
+				"values": {
+					"op": "=",
+					"left": {
+						"op": "Pmax",
+						"exp": {
+							"op": "F",
+							"exp": {
+								"op": "∧",
+								"left": "inTransitK",
+								"right": "inTransitL"
+							}
+						}
+					},
+					"right": 0
 				},
 				"states": {
 					"op": "initial"
@@ -201,13 +259,38 @@
 			"name": "T_A1",
 			"expression": {
 				"op": "filter",
-				"fun": "max",
+				"fun": "∀",
 				"values": {
-					"op": "Pmax",
-					"exp": {
-						"op": "F",
-						"exp": "premature_timeout"
-					}
+					"op": "=",
+					"left": {
+						"op": "Pmax",
+						"exp": {
+							"op": "F",
+							"exp": "premature_timeout"
+						}
+					},
+					"right": 0
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "T_A1_1",
+			"expression": {
+				"op": "filter",
+				"fun": "∃",
+				"values": {
+					"op": "=",
+					"left": {
+						"op": "Pmax",
+						"exp": {
+							"op": "F",
+							"exp": "premature_timeout"
+						}
+					},
+					"right": 0
 				},
 				"states": {
 					"op": "initial"
@@ -218,24 +301,60 @@
 			"name": "T_A2",
 			"expression": {
 				"op": "filter",
-				"fun": "max",
+				"fun": "∀",
 				"values": {
-					"op": "Pmax",
-					"exp": {
-						"op": "F",
+					"op": "=",
+					"left": {
+						"op": "Pmax",
 						"exp": {
-							"op": "∧",
-							"left": {
+							"op": "F",
+							"exp": {
 								"op": "∧",
-								"left": "s_restart_seen",
-								"right": "get_k_seen"
-							},
-							"right": {
-								"op": "¬",
-								"exp": "r_timeout_seen"
+								"left": {
+									"op": "∧",
+									"left": "s_restart_seen",
+									"right": "get_k_seen"
+								},
+								"right": {
+									"op": "¬",
+									"exp": "r_timeout_seen"
+								}
 							}
 						}
-					}
+					},
+					"right": 0
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "T_A2_1",
+			"expression": {
+				"op": "filter",
+				"fun": "∃",
+				"values": {
+					"op": "=",
+					"left": {
+						"op": "Pmax",
+						"exp": {
+							"op": "F",
+							"exp": {
+								"op": "∧",
+								"left": {
+									"op": "∧",
+									"left": "s_restart_seen",
+									"right": "get_k_seen"
+								},
+								"right": {
+									"op": "¬",
+									"exp": "r_timeout_seen"
+								}
+							}
+						}
+					},
+					"right": 0
 				},
 				"states": {
 					"op": "initial"
@@ -246,17 +365,46 @@
 			"name": "P_A",
 			"expression": {
 				"op": "filter",
-				"fun": "max",
+				"fun": "∀",
 				"values": {
-					"op": "Pmax",
-					"exp": {
-						"op": "F",
+					"op": "=",
+					"left": {
+						"op": "Pmax",
 						"exp": {
-							"op": "∧",
-							"left": "s_nok_seen",
-							"right": "r_ok_seen"
+							"op": "F",
+							"exp": {
+								"op": "∧",
+								"left": "s_nok_seen",
+								"right": "r_ok_seen"
+							}
 						}
-					}
+					},
+					"right": 0
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "P_A_1",
+			"expression": {
+				"op": "filter",
+				"fun": "∃",
+				"values": {
+					"op": "=",
+					"left": {
+						"op": "Pmax",
+						"exp": {
+							"op": "F",
+							"exp": {
+								"op": "∧",
+								"left": "s_nok_seen",
+								"right": "r_ok_seen"
+							}
+						}
+					},
+					"right": 0
 				},
 				"states": {
 					"op": "initial"
@@ -267,20 +415,52 @@
 			"name": "P_B",
 			"expression": {
 				"op": "filter",
-				"fun": "max",
+				"fun": "∀",
 				"values": {
-					"op": "Pmax",
-					"exp": {
-						"op": "F",
+					"op": "=",
+					"left": {
+						"op": "Pmax",
 						"exp": {
-							"op": "∧",
-							"left": "s_ok_seen",
-							"right": {
-								"op": "¬",
-								"exp": "r_ok_seen"
+							"op": "F",
+							"exp": {
+								"op": "∧",
+								"left": "s_ok_seen",
+								"right": {
+									"op": "¬",
+									"exp": "r_ok_seen"
+								}
 							}
 						}
-					}
+					},
+					"right": 0
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "P_B_1",
+			"expression": {
+				"op": "filter",
+				"fun": "∃",
+				"values": {
+					"op": "=",
+					"left": {
+						"op": "Pmax",
+						"exp": {
+							"op": "F",
+							"exp": {
+								"op": "∧",
+								"left": "s_ok_seen",
+								"right": {
+									"op": "¬",
+									"exp": "r_ok_seen"
+								}
+							}
+						}
+					},
+					"right": 0
 				},
 				"states": {
 					"op": "initial"
@@ -430,7 +610,9 @@
 				"values": {
 					"op": "Emax",
 					"exp": 1,
-					"accumulate": [ "time" ],
+					"accumulate": [
+						"time"
+					],
 					"reach": "first_file_done"
 				},
 				"states": {
@@ -446,7 +628,9 @@
 				"values": {
 					"op": "Emin",
 					"exp": 1,
-					"accumulate": [ "time" ],
+					"accumulate": [
+						"time"
+					],
 					"reach": "first_file_done"
 				},
 				"states": {
@@ -1489,7 +1673,7 @@
 							{
 								"ref": "c",
 								"value": 0,
-								"index": 2
+								"index": 1
 							}
 						]
 					} ]
@@ -1587,7 +1771,7 @@
 							{
 								"ref": "c",
 								"value": 0,
-								"index": 2
+								"index": 1
 							}
 						]
 					} ]

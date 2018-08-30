@@ -1,40 +1,56 @@
-{
+﻿{
 	"file": "../tireworld.35.jani",
 	"version": 1,
-	"date": "2018-08-01",
-	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
-	"log": "mcsta.35.txt",
-	"open-parameter-values": [
-	],
+	"date": "2018-08-30",
+	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"tool": {
 		"name": "mcsta",
-		"version": "3.0.71",
+		"version": "3.0.86",
 		"url": "http://www.modestchecker.net/",
 		"part-of": "the Modest Toolset",
 		"part-of-url": "http://www.modestchecker.net/"
 	},
 	"system": {
-		"cpu": "Intel Core i7-7500U",
-		"ram": "16",
-		"os": "Windows 10 Home 1803 (x64)",
-		"runtime": ".NET Framework 4.7.2"
+		"cpu": "Intel Core i7-4790",
+		"ram": 8,
+		"os": "Ubuntu 18.04 (x64)",
+		"runtime": "Mono 5.14.0.177"
 	},
-	"command": "mcsta.exe tireworld.35.jani",
-	"time": 1,
+	"command": "mcsta.exe tireworld.35.jani -S Memory -O mcsta.35.json Json",
+	"time": 56.658,
+	"memory": 4556353536,
+	"property-times": [
+		{ "name": "goal", "time": 28.694 }
+	],
 	"data": [
 		{
 			"group": "State space exploration",
 			"values": [
-				{ "name": "time", "value": 100.1, "unit": "s" },
-				{ "name": "states", "value": 9174970 },
-				{ "name": "transitions", "value": 30408435 },
-				{ "name": "branches", "value": 56753672 }
+				{ "name": "State size", "value": 21, "unit": "B" },
+				{ "name": "States", "value": 9174970 },
+				{ "name": "Transitions", "value": 30408435 },
+				{ "name": "Branches", "value": 56753672 },
+				{ "name": "Rate", "value": 350350.16037879948 },
+				{ "name": "Time", "value": 27.486, "unit": "s" }
 			]
 		},
 		{
 			"property": "goal",
-			"value": 8.92901049296064E-07,
-			"values": [ { "name": "time", "value": 113.2, "unit": "s" } ]
+			"value": 1,
+			"values": [
+				{ "name": "Bounds", "value": "[1, 1]" },
+				{ "name": "Time", "value": 28.694, "unit": "s" }
+			],
+			"data": [
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 8.9290104929606422E-07 },
+						{ "name": "Iterations", "value": 36 },
+						{ "name": "Time", "value": 28.649, "unit": "s" }
+					]
+				}
+			]
 		}
 	]
 }

@@ -118,9 +118,13 @@
 		}
 	],
 	"results": [
+		"results/mcsta.10.json",
 		"results/Storm.10.json",
+		"results/mcsta.100.json",
 		"results/Storm.100.json",
+		"results/mcsta.500.json",
 		"results/Storm.500.json",
+		"results/mcsta.1000.json",
 		"results/Storm.1000.json"
 	]
 }

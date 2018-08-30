@@ -1,7 +1,7 @@
 ﻿{
 	"file": "../polling-system.jani",
 	"version": 2,
-	"date": "2018-08-22",
+	"date": "2018-08-31",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"open-parameter-values": [
 		{ "name": "JOB_TYPES", "value": 3 },
@@ -9,7 +9,7 @@
 	],
 	"tool": {
 		"name": "mcsta",
-		"version": "3.0.80",
+		"version": "3.0.86",
 		"url": "http://www.modestchecker.net/",
 		"part-of": "the Modest Toolset",
 		"part-of-url": "http://www.modestchecker.net/"
@@ -21,8 +21,13 @@
 		"runtime": "Mono 5.14.0.177"
 	},
 	"command": "mcsta.exe polling-system.jani -S Memory -E \"JOB_TYPES=3, C=3\" -O mcsta.3-3.json Json",
-	"time": 242,
-	"memory": 52424704,
+	"time": 209.669,
+	"memory": 53624832,
+	"property-times": [
+		{ "name": "PminBothFullIsOne", "time": 0.009 },
+		{ "name": "TminBothFull", "time": 0.103 },
+		{ "name": "TmaxBothFull", "time": 209.057 }
+	],
 	"data": [
 		{
 			"group": "State space exploration",
@@ -31,15 +36,15 @@
 				{ "name": "States", "value": 10934 },
 				{ "name": "Transitions", "value": 19870 },
 				{ "name": "Branches", "value": 23312 },
-				{ "name": "Time", "value": 0, "unit": "s" },
-				{ "name": "Rate", "value": 295513.51351351355 }
+				{ "name": "Rate", "value": 295513.51351351355 },
+				{ "name": "Time", "value": 0.044, "unit": "s" }
 			]
 		},
 		{
 			"property": "PminBothFullIsOne",
 			"value": true,
 			"values": [
-				{ "name": "Time", "value": 0, "unit": "s" },
+				{ "name": "Time", "value": 0.009, "unit": "s" },
 				{ "name": "Probability", "value": 1 }
 			],
 			"data": [
@@ -47,9 +52,9 @@
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Min. prob. 0 states", "value": 0 },
-						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for min. prob. 0 states", "value": 0.004, "unit": "s" },
 						{ "name": "Min. prob. 1 states", "value": 10934 },
-						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for min. prob. 1 states", "value": 0.001, "unit": "s" }
 					]
 				}
 			]
@@ -57,15 +62,18 @@
 		{
 			"property": "TminBothFull",
 			"value": 10.958918534846163,
-			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[10.9589185348462, ∞)" },
+				{ "name": "Time", "value": 0.103, "unit": "s" }
+			],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Max. prob. 0 states", "value": 0 },
-						{ "name": "Time for max. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for max. prob. 0 states", "value": 0.001, "unit": "s" },
 						{ "name": "Max. prob. 1 states", "value": 10934 },
-						{ "name": "Time for max. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for max. prob. 1 states", "value": 0.005, "unit": "s" }
 					]
 				},
 				{
@@ -73,7 +81,7 @@
 					"values": [
 						{ "name": "Final error", "value": 9.7849415656817785E-07 },
 						{ "name": "Iterations", "value": 388 },
-						{ "name": "Time", "value": 0, "unit": "s" }
+						{ "name": "Time", "value": 0.092, "unit": "s" }
 					]
 				}
 			]
@@ -81,15 +89,18 @@
 		{
 			"property": "TmaxBothFull",
 			"value": 1039204.2942845579,
-			"values": [ { "name": "Time", "value": 242, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[1039204.29428456, ∞)" },
+				{ "name": "Time", "value": 209.057, "unit": "s" }
+			],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Min. prob. 0 states", "value": 0 },
-						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for min. prob. 0 states", "value": 0.001, "unit": "s" },
 						{ "name": "Min. prob. 1 states", "value": 10934 },
-						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for min. prob. 1 states", "value": 0.001, "unit": "s" }
 					]
 				},
 				{
@@ -97,7 +108,7 @@
 					"values": [
 						{ "name": "Final error", "value": 9.9999974227944556E-07 },
 						{ "name": "Iterations", "value": 912550 },
-						{ "name": "Time", "value": 242, "unit": "s" }
+						{ "name": "Time", "value": 209.055, "unit": "s" }
 					]
 				}
 			]

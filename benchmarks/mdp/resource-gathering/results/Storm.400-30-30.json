@@ -30,7 +30,12 @@
 		"runtime": "Apple LLVM version 9.1.0 (clang-902.0.39.2)"
 	}, 
 	"command": "storm --jani resource-gathering.jani -jprop --constants B=400,GOLD_TO_COLLECT=30,GEM_TO_COLLECT=30 -tm", 
-	"time": 3.925, 
+	"time": 3.925,
+	"property-times": [
+		{ "name": "expgold", "time": 0.863 },
+		{ "name": "expsteps", "time": 0.262 },
+		{ "name": "prgoldgem", "time": 1.178 }
+	], 
 	"data": [
 		{
 			"values": [

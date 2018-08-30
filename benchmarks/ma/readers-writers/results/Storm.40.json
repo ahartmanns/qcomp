@@ -4,12 +4,6 @@
 	"date": "2018-08-23",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"log": "Storm.40.txt",
-	"open-parameter-values": [
-		{
-			"name": "K",
-			"value": 40
-		}
-	],
 	"tool": {
 		"name": "Storm",
 		"version": "1.2.4 (dev)",
@@ -23,6 +17,10 @@
 	},
 	"command": "storm --jani readers-writers.40.jani -jprop -tm",
 	"time": 3165,
+	"property-times": [
+		{ "name": "exp_time_many_requests", "time": 2213.866 },
+		{ "name": "pr_many_requests", "time": 57.267 }
+	],
 	"data": [
 		{
 			"values": [

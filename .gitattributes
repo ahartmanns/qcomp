@@ -12,6 +12,8 @@
 *.pddl text
 *.pm text
 *.prctl text
+*.prism text
+*.props text
 *.txt text
 
 *.pdf binary

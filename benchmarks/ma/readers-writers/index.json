@@ -166,9 +166,13 @@
 		}
 	],
 	"results": [
+		"results/mcsta.5.json",
 		"results/Storm.5.json",
+		"results/mcsta.20.json",
 		"results/Storm.20.json",
+		"results/mcsta.35.json",
 		"results/Storm.35.json",
+		"results/mcsta.40.json",
 		"results/Storm.40.json"
 	]
 }

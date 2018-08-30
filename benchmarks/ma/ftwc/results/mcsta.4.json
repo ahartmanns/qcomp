@@ -1,14 +1,14 @@
 ﻿{
 	"file": "../ftwc.jani",
 	"version": 2,
-	"date": "2018-08-22",
+	"date": "2018-08-31",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"open-parameter-values": [
 		{ "name": "N", "value": 4 }
 	],
 	"tool": {
 		"name": "mcsta",
-		"version": "3.0.80",
+		"version": "3.0.86",
 		"url": "http://www.modestchecker.net/",
 		"part-of": "the Modest Toolset",
 		"part-of-url": "http://www.modestchecker.net/"
@@ -20,8 +20,13 @@
 		"runtime": "Mono 5.14.0.177"
 	},
 	"command": "mcsta.exe ftwc.jani -S Memory -E N=4 -O mcsta.4.json Json",
-	"time": 21,
-	"memory": 47624192,
+	"time": 17.553,
+	"memory": 48652288,
+	"property-times": [
+		{ "name": "ReachMinIsOne", "time": 0.008 },
+		{ "name": "TimeMax", "time": 8.514 },
+		{ "name": "TimeMin", "time": 8.551 }
+	],
 	"data": [
 		{
 			"group": "State space exploration",
@@ -30,15 +35,15 @@
 				{ "name": "States", "value": 3259 },
 				{ "name": "Transitions", "value": 3883 },
 				{ "name": "Branches", "value": 8135 },
-				{ "name": "Time", "value": 0, "unit": "s" },
-				{ "name": "Rate", "value": 112379.31034482758 }
+				{ "name": "Rate", "value": 116392.85714285714 },
+				{ "name": "Time", "value": 0.035, "unit": "s" }
 			]
 		},
 		{
 			"property": "ReachMinIsOne",
 			"value": true,
 			"values": [
-				{ "name": "Time", "value": 0, "unit": "s" },
+				{ "name": "Time", "value": 0.008, "unit": "s" },
 				{ "name": "Probability", "value": 1 }
 			],
 			"data": [
@@ -46,9 +51,9 @@
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Min. prob. 0 states", "value": 0 },
-						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for min. prob. 0 states", "value": 0.003, "unit": "s" },
 						{ "name": "Min. prob. 1 states", "value": 3259 },
-						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for min. prob. 1 states", "value": 0.001, "unit": "s" }
 					]
 				}
 			]
@@ -56,15 +61,18 @@
 		{
 			"property": "TimeMax",
 			"value": 1933064.4267881927,
-			"values": [ { "name": "Time", "value": 10, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[1933064.42678819, ∞)" },
+				{ "name": "Time", "value": 8.514, "unit": "s" }
+			],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Min. prob. 0 states", "value": 0 },
-						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for min. prob. 0 states", "value": 0.001, "unit": "s" },
 						{ "name": "Min. prob. 1 states", "value": 3259 },
-						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for min. prob. 1 states", "value": 0.001, "unit": "s" }
 					]
 				},
 				{
@@ -72,7 +80,7 @@
 					"values": [
 						{ "name": "Final error", "value": 9.9999396737230083E-07 },
 						{ "name": "Iterations", "value": 114442 },
-						{ "name": "Time", "value": 10, "unit": "s" }
+						{ "name": "Time", "value": 8.511, "unit": "s" }
 					]
 				}
 			]
@@ -80,15 +88,18 @@
 		{
 			"property": "TimeMin",
 			"value": 1932937.2802934905,
-			"values": [ { "name": "Time", "value": 10, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[1932937.28029349, ∞)" },
+				{ "name": "Time", "value": 8.551, "unit": "s" }
+			],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Max. prob. 0 states", "value": 0 },
-						{ "name": "Time for max. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for max. prob. 0 states", "value": 0.001, "unit": "s" },
 						{ "name": "Max. prob. 1 states", "value": 3259 },
-						{ "name": "Time for max. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for max. prob. 1 states", "value": 0.001, "unit": "s" }
 					]
 				},
 				{
@@ -96,7 +107,7 @@
 					"values": [
 						{ "name": "Final error", "value": 9.9997420216807545E-07 },
 						{ "name": "Iterations", "value": 114437 },
-						{ "name": "Time", "value": 10, "unit": "s" }
+						{ "name": "Time", "value": 8.548, "unit": "s" }
 					]
 				}
 			]

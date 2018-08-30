@@ -1,71 +1,75 @@
 {
-	"file": "../haddad-monmege.jani", 
-	"version": 1, 
-	"date": "2018-08-13", 
-	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>", 
-	"log": "Storm.100-0.7.txt", 
+	"file": "../haddad-monmege.jani",
+	"version": 1,
+	"date": "2018-08-13",
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
+	"log": "Storm.100-0.7.txt",
 	"open-parameter-values": [
 		{
-			"name": "N", 
+			"name": "N",
 			"value": 100
-		}, 
+		},
 		{
-			"name": "p", 
+			"name": "p",
 			"value": 0.7
 		}
-	], 
+	],
 	"tool": {
-		"name": "Storm", 
-		"version": "1.2.4 (dev)", 
+		"name": "Storm",
+		"version": "1.2.4 (dev)",
 		"url": "http://www.stormchecker.org"
-	}, 
+	},
 	"system": {
-		"cpu": "Intel Core i5-5257U", 
-		"ram": "16", 
-		"os": "macOS 10.13.5", 
+		"cpu": "Intel Core i5-5257U",
+		"ram": "16",
+		"os": "macOS 10.13.5",
 		"runtime": "Apple LLVM version 9.1.0 (clang-902.0.39.2)"
-	}, 
-	"command": "storm --jani haddad-monmege.jani -jprop --constants N=100,p=0.7 --exact -tm", 
-	"time": 0.057, 
+	},
+	"command": "storm --jani haddad-monmege.jani -jprop --constants N=100,p=0.7 --exact -tm",
+	"time": 0.057,
+	"property-times": [
+		{ "name": "exp_steps", "time": 0.015 },
+		{ "name": "target", "time": 0.015 }
+	],
 	"data": [
 		{
 			"values": [
 				{
-					"unit": "s", 
-					"name": "time", 
+					"unit": "s",
+					"name": "time",
 					"value": 0.024
-				}, 
+				},
 				{
-					"name": "states", 
+					"name": "states",
 					"value": 201
-				}, 
+				},
 				{
-					"name": "branches", 
+					"name": "branches",
 					"value": 400
 				}
-			], 
+			],
 			"group": "State space exploration"
-		}, 
+		},
 		{
-			"property": "exp_steps", 
+			"property": "exp_steps",
 			"values": [
 				{
-					"unit": "s", 
-					"name": "time", 
+					"unit": "s",
+					"name": "time",
 					"value": 0.015
 				}
-			], 
+			],
 			"value": "1901475900342344102245054808062 (approx. 1.9014759e+30)"
-		}, 
+		},
 		{
-			"property": "target", 
+			"property": "target",
 			"values": [
 				{
-					"unit": "s", 
-					"name": "time", 
+					"unit": "s",
+					"name": "time",
 					"value": 0.015
 				}
-			], 
+			],
 			"value": "7/10 (approx. 0.7)"
 		}
 	]

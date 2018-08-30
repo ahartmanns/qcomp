@@ -1,14 +1,14 @@
 ﻿{
 	"file": "../ftwc.jani",
 	"version": 2,
-	"date": "2018-08-22",
+	"date": "2018-08-31",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"open-parameter-values": [
 		{ "name": "N", "value": 8 }
 	],
 	"tool": {
 		"name": "mcsta",
-		"version": "3.0.80",
+		"version": "3.0.86",
 		"url": "http://www.modestchecker.net/",
 		"part-of": "the Modest Toolset",
 		"part-of-url": "http://www.modestchecker.net/"
@@ -20,8 +20,13 @@
 		"runtime": "Mono 5.14.0.177"
 	},
 	"command": "mcsta.exe ftwc.jani -S Memory -E N=8 -O mcsta.8.json Json",
-	"time": 104,
-	"memory": 50573312,
+	"time": 89.153,
+	"memory": 51847168,
+	"property-times": [
+		{ "name": "ReachMinIsOne", "time": 0.009 },
+		{ "name": "TimeMax", "time": 44.077 },
+		{ "name": "TimeMin", "time": 44.557 }
+	],
 	"data": [
 		{
 			"group": "State space exploration",
@@ -30,15 +35,15 @@
 				{ "name": "States", "value": 10299 },
 				{ "name": "Transitions", "value": 12635 },
 				{ "name": "Branches", "value": 26983 },
-				{ "name": "Time", "value": 0, "unit": "s" },
-				{ "name": "Rate", "value": 214562.5 }
+				{ "name": "Rate", "value": 214562.5 },
+				{ "name": "Time", "value": 0.055, "unit": "s" }
 			]
 		},
 		{
 			"property": "ReachMinIsOne",
 			"value": true,
 			"values": [
-				{ "name": "Time", "value": 0, "unit": "s" },
+				{ "name": "Time", "value": 0.009, "unit": "s" },
 				{ "name": "Probability", "value": 1 }
 			],
 			"data": [
@@ -46,9 +51,9 @@
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Min. prob. 0 states", "value": 0 },
-						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for min. prob. 0 states", "value": 0.004, "unit": "s" },
 						{ "name": "Min. prob. 1 states", "value": 10299 },
-						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for min. prob. 1 states", "value": 0.001, "unit": "s" }
 					]
 				}
 			]
@@ -56,15 +61,18 @@
 		{
 			"property": "TimeMax",
 			"value": 1873579.536306486,
-			"values": [ { "name": "Time", "value": 52, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[1873579.53630649, ∞)" },
+				{ "name": "Time", "value": 44.077, "unit": "s" }
+			],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Min. prob. 0 states", "value": 0 },
-						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for min. prob. 0 states", "value": 0.001, "unit": "s" },
 						{ "name": "Min. prob. 1 states", "value": 10299 },
-						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for min. prob. 1 states", "value": 0.001, "unit": "s" }
 					]
 				},
 				{
@@ -72,7 +80,7 @@
 					"values": [
 						{ "name": "Final error", "value": 9.9999048876305277E-07 },
 						{ "name": "Iterations", "value": 182126 },
-						{ "name": "Time", "value": 52, "unit": "s" }
+						{ "name": "Time", "value": 44.072, "unit": "s" }
 					]
 				}
 			]
@@ -80,15 +88,18 @@
 		{
 			"property": "TimeMin",
 			"value": 1873283.4085252935,
-			"values": [ { "name": "Time", "value": 52, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[1873283.40852529, ∞)" },
+				{ "name": "Time", "value": 44.557, "unit": "s" }
+			],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Max. prob. 0 states", "value": 0 },
-						{ "name": "Time for max. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for max. prob. 0 states", "value": 0.002, "unit": "s" },
 						{ "name": "Max. prob. 1 states", "value": 10299 },
-						{ "name": "Time for max. prob. 1 states", "value": 0, "unit": "s" }
+						{ "name": "Time for max. prob. 1 states", "value": 0.003, "unit": "s" }
 					]
 				},
 				{
@@ -96,7 +107,7 @@
 					"values": [
 						{ "name": "Final error", "value": 9.9998435927193E-07 },
 						{ "name": "Iterations", "value": 182106 },
-						{ "name": "Time", "value": 52, "unit": "s" }
+						{ "name": "Time", "value": 44.552, "unit": "s" }
 					]
 				}
 			]

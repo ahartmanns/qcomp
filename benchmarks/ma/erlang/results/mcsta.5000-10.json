@@ -1,7 +1,7 @@
 ﻿{
 	"file": "../erlang.jani",
 	"version": 1,
-	"date": "2018-08-13",
+	"date": "2018-08-31",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"open-parameter-values": [
 		{ "name": "K", "value": 5000 },
@@ -9,7 +9,7 @@
 	],
 	"tool": {
 		"name": "mcsta",
-		"version": "3.0.78",
+		"version": "3.0.86",
 		"url": "http://www.modestchecker.net/",
 		"part-of": "the Modest Toolset",
 		"part-of-url": "http://www.modestchecker.net/"
@@ -20,9 +20,13 @@
 		"os": "Ubuntu 18.04 (x64)",
 		"runtime": "Mono 5.14.0.177"
 	},
-	"command": "mcsta.exe erlang.jani -S Memory --p1 -E \"K=5000, R=10\" -O results/mcsta.5000-10.json Json",
-	"time": 7,
-	"memory": 48803840,
+	"command": "mcsta.exe erlang.jani -S Memory -E \"K=5000, R=10\" -O mcsta.5000-10.json Json",
+	"time": 8.842,
+	"memory": 49692672,
+	"property-times": [
+		{ "name": "PminReach", "time": 0.009 },
+		{ "name": "TminReach", "time": 8.343 }
+	],
 	"data": [
 		{
 			"group": "State space exploration",
@@ -31,30 +35,24 @@
 				{ "name": "States", "value": 10009 },
 				{ "name": "Transitions", "value": 10010 },
 				{ "name": "Branches", "value": 10011 },
-				{ "name": "Time", "value": 0, "unit": "s" },
-				{ "name": "Rate", "value": 476619.04761904757 }
+				{ "name": "Rate", "value": 417041.66666666669 },
+				{ "name": "Time", "value": 0.031, "unit": "s" }
 			]
 		},
 		{
 			"property": "PminReach",
 			"value": 0.5,
-			"values": [ { "name": "Time", "value": 0, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[0.5, 0.5]" },
+				{ "name": "Time", "value": 0.009, "unit": "s" }
+			],
 			"data": [
-				{
-					"group": "Precomputations",
-					"values": [
-						{ "name": "Min. prob. 0 states", "value": 2 },
-						{ "name": "Time for min. prob. 0 states", "value": 0, "unit": "s" },
-						{ "name": "Min. prob. 1 states", "value": 10003 },
-						{ "name": "Time for min. prob. 1 states", "value": 0, "unit": "s" }
-					]
-				},
 				{
 					"group": "Value iteration",
 					"values": [
 						{ "name": "Final error", "value": 0 },
-						{ "name": "Iterations", "value": 2 },
-						{ "name": "Time", "value": 0, "unit": "s" }
+						{ "name": "Iterations", "value": 3 },
+						{ "name": "Time", "value": 0.003, "unit": "s" }
 					]
 				}
 			]
@@ -62,15 +60,18 @@
 		{
 			"property": "TminReach",
 			"value": 501.00000000004519,
-			"values": [ { "name": "Time", "value": 7, "unit": "s" } ],
+			"values": [
+				{ "name": "Bounds", "value": "[501.000000000045, 501.000000000045]" },
+				{ "name": "Time", "value": 8.343, "unit": "s" }
+			],
 			"data": [
 				{
 					"group": "Precomputations",
 					"values": [
 						{ "name": "Max. prob. 0 states", "value": 2 },
-						{ "name": "Time for max. prob. 0 states", "value": 0, "unit": "s" },
+						{ "name": "Time for max. prob. 0 states", "value": 0.002, "unit": "s" },
 						{ "name": "Max. prob. 1 states", "value": 10004 },
-						{ "name": "Time for max. prob. 1 states", "value": 7, "unit": "s" }
+						{ "name": "Time for max. prob. 1 states", "value": 8.338, "unit": "s" }
 					]
 				},
 				{
@@ -78,7 +79,7 @@
 					"values": [
 						{ "name": "Final error", "value": 0 },
 						{ "name": "Iterations", "value": 2 },
-						{ "name": "Time", "value": 0, "unit": "s" }
+						{ "name": "Time", "value": 0.001, "unit": "s" }
 					]
 				}
 			]
