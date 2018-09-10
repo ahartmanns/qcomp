@@ -59,7 +59,7 @@ const real gamma = 3;  // Fail       rate
 const real repair = 2; // Repair rate 
 
 // Buffer capacity
-const int K = 8;
+const int K;
 
 property Min = Pmin(<> (buf == K && !reset)); // Pmin((!reset) U (buf == K));
 property Max = Pmax(<> (buf == K && !reset)); // Pmax((!reset) U (buf == K));

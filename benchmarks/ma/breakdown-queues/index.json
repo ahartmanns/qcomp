@@ -3,17 +3,22 @@
 	"short": "breakdown-queues",
 	"type": "ma",
 	"original": "Modest",
-	"version": 1,
-	"date": "2018-07-31",
+	"version": 2,
+	"date": "2018-09-10",
 	"version-history": [
-		{ "version": 1, "date": "2018-07-31", "notes": "Initial version." }
+		{ "version": 1, "date": "2018-07-31", "notes": "Initial version." },
+		{ "version": 2, "date": "2018-09-10", "notes": "Made the buffer size an open parameter." }
 	],
 	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"source": "https://doi.org/10.4121/uuid:1453a13b-10ae-418f-a1ae-4acf96028118",
 	"description": "A queueing system consisting of a buffered server processing tasks from ten sources of two different types (five each). All components (server and sources) can fail. There is a single repairman with a nondeterministic repair policy. The model corresponds to the system described in Section 4.4 of Kroese and Nicola [1] except for the centralised repairman with a single repair rate.",
+	"challenge": "nondeterministic rare event model",
 	"references": [
 		"https://doi.org/10.1016/S0166-5316(99)00036-X"
+	],
+	"parameters": [
+		{ "name": "K", "kind": "open", "description": "Size of the server's buffer", "type": "positive integer" }
 	],
 	"files": [
 		{
@@ -21,15 +26,41 @@
 			"original-file": "breakdown-queues.modest",
 			"conversion": {
 				"tool": "moconv",
-				"version": "3.0.72",
+				"version": "3.0.86",
 				"url": "http://www.modestchecker.net/",
 				"command": "moconv.exe breakdown-queues.modest -O breakdown-queues.jani"
 			},
 			"open-parameter-values": [
 				{
-					"values": [],
+					"values": [
+						{ "name": "K", "value": 8 }
+					],
 					"states": [
 						{ "number": 20583, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "K", "value": 16 }
+					],
+					"states": [
+						{ "number": 41463, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "K", "value": 32 }
+					],
+					"states": [
+						{ "number": 83223, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "K", "value": 64 }
+					],
+					"states": [
+						{ "number": 166743, "note": "mcsta" }
 					]
 				}
 			]
@@ -48,6 +79,9 @@
 		}
 	],
 	"results": [
-		"results/mcsta.json"
+		"results/mcsta.8.json",
+		"results/mcsta.16.json",
+		"results/mcsta.32.json",
+		"results/mcsta.64.json"
 	]
 }

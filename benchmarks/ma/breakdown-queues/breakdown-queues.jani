@@ -50,6 +50,10 @@
 			"name": "r2"
 		}
 	],
+	"constants": [ {
+		"name": "K",
+		"type": "int"
+	} ],
 	"variables": [
 		{
 			"name": "buf",
@@ -57,7 +61,7 @@
 				"kind": "bounded",
 				"base": "int",
 				"lower-bound": 0,
-				"upper-bound": 8
+				"upper-bound": "K"
 			},
 			"initial-value": 1
 		},
@@ -82,7 +86,7 @@
 							"left": {
 								"op": "=",
 								"left": "buf",
-								"right": 8
+								"right": "K"
 							},
 							"right": {
 								"op": "¬",
@@ -110,7 +114,7 @@
 							"left": {
 								"op": "=",
 								"left": "buf",
-								"right": 8
+								"right": "K"
 							},
 							"right": {
 								"op": "¬",
@@ -226,7 +230,7 @@
 							"ref": "buf",
 							"value": {
 								"op": "min",
-								"left": 8,
+								"left": "K",
 								"right": {
 									"op": "+",
 									"left": "buf",
@@ -317,7 +321,7 @@
 							"ref": "buf",
 							"value": {
 								"op": "min",
-								"left": 8,
+								"left": "K",
 								"right": {
 									"op": "+",
 									"left": "buf",
