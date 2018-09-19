@@ -11,7 +11,8 @@
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1145/313817.313923",
-	"description": "A Modest MA model of a service provider that processes tasks of `N´ different types. Tasks to be processed are stored in one queue of maximum size `C´ for each task type. The service provider can be switched between three different power states (idle/busy, sleep and standby).",
+	"description": "A Modest MA model of a service provider that processes tasks of `N´ different types. Tasks to be processed are stored in one queue of maximum size `C´ for each task type. The service provider can be switched between three different power states (idle/busy, sleep and standby). The original model was translated from a MAPA file.",
+	"notes": "scalable nondeterministic queueing system",
 	"parameters": [
 		{ "name": "N", "kind": "open", "description": "Number of different types of tasks", "type": "{ 1, ..., 10 }" },
 		{ "name": "C", "kind": "open", "description": "Maximum queue size for each task type", "type": "positive integer" }

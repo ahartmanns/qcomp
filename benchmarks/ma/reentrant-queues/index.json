@@ -12,7 +12,8 @@
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.14279/tuj.eceasst.53.783",
-	"description": "A queueing system with a left and a right queue of capacity `C_LEFT´ and `C_RIGHT´, respectively. Jobs of `JOB_TYPES´ different types arrive into the left and right queues, where they are stored until they start being processed by the left or right service desk, respectively. When a job is completed at the left service desk, it may re-enter the right queue.",
+	"description": "A queueing system with a left and a right queue of capacity `C_LEFT´ and `C_RIGHT´, respectively. Jobs of `JOB_TYPES´ different types arrive into the left and right queues, where they are stored until they start being processed by the left or right service desk, respectively. When a job is completed at the left service desk, it may re-enter the right queue. The original model was translated from a MAPA file.",
+	"notes": "asymmetric nondeterministic queueing system",
 	"references": [
 	],
 	"parameters": [

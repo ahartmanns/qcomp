@@ -12,7 +12,8 @@
 	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1109/RELDI.2000.885410",
-	"description": "The workstation cluster consists of two sides of `N´ workstations which are connected via a backbone. The components of the system can fail and need to be repaired in this case. The model has been developed in [0] and described and used in [1] and [2].",
+	"description": "The workstation cluster consists of two sides of `N´ workstations which are connected via a backbone. The components of the system can fail and need to be repaired in this case. The model has been developed in [0] and described and used in [1] and [2]. The original model was translated from a MAPA file.",
+	"notes": "fault-tolerant queueing system",
 	"references": [
 		"https://essay.utwente.nl/62743/1/Final_Thesis_Rob_Bamberg.pdf",
 		"http://www.avacs.org/Benchmarks/Open/ftwc.pdf"

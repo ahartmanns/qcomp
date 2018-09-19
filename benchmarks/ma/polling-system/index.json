@@ -12,7 +12,8 @@
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1007/978-3-642-40196-1_5",
-	"description": "A polling system with two stations and a server. The station delivers jobs out of its queue with capacity `C´ to the server which completes the tasks. Each job is of one of `JOB_TYPES´ different types.",
+	"description": "A polling system with two stations and a server. The station delivers jobs out of its queue with capacity `C´ to the server which completes the tasks. Each job is of one of `JOB_TYPES´ different types. The original model was translated from a MAPA file.",
+	"notes": "small nondeterministic queueing system",
 	"references": [
 	],
 	"parameters": [

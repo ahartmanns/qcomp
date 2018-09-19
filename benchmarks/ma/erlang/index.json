@@ -11,7 +11,8 @@
 	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1007/978-3-642-12002-2_5",
-	"description": "A simple interactive Markov chain model where the goal state can be reached via a path with an Erlang(`K´, `R´)-distributed delay.",
+	"description": "A simple interactive Markov chain model where the goal state can be reached via a path with an Erlang(`K´, `R´)-distributed delay. The original model was translated from a MAPA file.",
+	"notes": "scalable sanity check model",
 	"references": [
 	],
 	"parameters": [
