@@ -119,6 +119,16 @@
 				a high-performance model checker for MA specified in various modelling languages
 			</td>
 		</tr>
+		<tr>
+			<td>
+				<a href="http://fai.cs.uni-saarland.de/steinmetz/">Marcel Steinmetz</a>
+			</td>
+			<td>
+				<a href="http://fai.cs.uni-saarland.de/steinmetz/"><b>Probabilistic Fast Downward</b></a>
+				[<a href="https://doi.org/10.1613/jair.5153" class="reference">SHB16</a>]:
+				a probabilistic extension of the classical heuristic planner Fast Downward for MDP specified in PPDDL
+			</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -141,7 +151,8 @@
 	The organisers will make the benchmarking scripts that will be run on the central server available to participants for testing.
 	Participants provide a tool package, installation instructions, and command lines/scripts to run the selected benchmarks.
 	Additionally, for every benchmark, participants briefly explain the tool settings used, why they were chosen for the particular benchmark, and what the capabilities of their tool are (e.g. which properties of the benchmark are supported and what kind of guarantee is attached to the results provided by the tool).
-	We expect model checkers to try to provide results with a relative error of ± 10e-6 and simulation-based tools to guarantee 95 % confidence with a relative error (e.g. confidence interval width) of ± 10e-2.
+	We expect tools to try to provide results with a relative error of ± 10e-4.
+	Statistical tools (e.g. simulators) should provide results outside of this error bound with a probability of at most 5 %.
 	The competition report will not contain a performance ranking, but will provide tables, diagrams, and a discussion reporting on the runtimes achieved by the tools.
 	We will not directly evaluate memory usage, but note that the amount of RAM available in the central server is not high.
 	Thus memory usage will be evaluated indirectly by considering for which (large) models a tool fails due to an out-of-memory situation.
