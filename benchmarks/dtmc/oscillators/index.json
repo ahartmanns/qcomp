@@ -1,0 +1,435 @@
+{
+	"name": "Oscillator Synchronisation",
+	"short": "oscillators",
+	"type": "DTMC",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-08-24",
+	"author": "Paul Gainer <p.gainer@liverpool.ac.uk>",
+	"submitter": "Paul Gainer <p.gainer@liverpool.ac.uk>",
+	"source": "https://doi.org/10.1007/978-3-319-66335-7_14",
+	"description": "A PRISM DTMC model of a protocol for the synchronisation of a network of pulse-coupled oscillators. The formal model was originally presented in [0], and refined in [1]. The oscillator dynamics are based on those originally developed by Mirollo and Strogatz [2]. Each of `N´ nodes has a clock that progresses, cyclically, through a range of `T´ discrete values. At the end of each clock cycle a node fires, and broadcasts a synchronisation message to other nodes. With probability `mu´ the synchronisation message is lost, and is not received by any other nodes. If the message is not lost then all receiving nodes adjust their own clocks in response, to more closely match that of the firing node. The magnitude of this clock adjustment is determined by `epsilon´. A node whose clock has a value less than `R´ is in a refractory period, and ignores synchronisation messages received from other nodes.",
+	"notes": "large fan-out from initial state",
+	"references": [
+		"https://arxiv.org/abs/1709.04385",
+		"https://doi.org/10.1137/0150098"
+	],
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "Number of nodes",
+			"type": "positive integer"
+		},
+		{
+			"name": "T",
+			"kind": "file",
+			"description": "Length of oscillation cycle",
+			"type": "positive integer"
+		},
+		{
+			"name": "epsilon",
+			"kind": "file",
+			"description": "Strength of coupling between oscillators",
+			"type": "positive real number"
+		},
+		{
+			"name": "R",
+			"kind": "file",
+			"description": "Length of refractory period for each node",
+			"type": "positive integer"
+		},
+		{
+			"name": "mu",
+			"kind": "open",
+			"description": "Probability of broadcast failure (open for parametric analysis)",
+			"type": "probability"
+		},
+		{
+			"name": "lambda",
+			"kind": "open",
+			"description": "Desired level of synchrony (value 1 means that all oscillators are perfectly synchronised)",
+			"type": "[0, 1]"
+		}
+	],
+	"properties": [
+		{
+			"name": "time_to_synch",
+			"description": "The time taken to reach a state where the oscillators have achieved the desired degree of synchrony.",
+			"type": "exp-time"
+		},
+		{
+			"name": "power_consumption",
+			"description": "The expected energy consumption of the network, in watt-hours, to reach a state where the oscillators have achieved the desired degree of synchrony.",
+			"type": "exp-reward"
+		}
+	],
+	"files": [
+		{
+			"file": "oscillators.3-6-0.1-1.jani",
+			"original-file": [
+				"oscillators.3-6-0.1-1.prism",
+				"oscillators.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism oscillators.3-6-0.1-1.prism --tojani oscillators.3-6-0.1-1.jani --prop oscillators.props --compactjson"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 3
+				},
+				{
+					"name": "T",
+					"value": 6
+				},
+				{
+					"name": "epsilon",
+					"value": 0.1
+				},
+				{
+					"name": "R",
+					"value": 1
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "mu",
+							"value": 0.1
+						},
+						{
+							"name": "lambda",
+							"value": 1.0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 57
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "oscillators.6-6-0.1-1.jani",
+			"original-file": [
+				"oscillators.6-6-0.1-1.prism",
+				"oscillators.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism oscillators.6-6-0.1-1.prism --tojani oscillators.6-6-0.1-1.jani --prop oscillators.props --compactjson"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 6
+				},
+				{
+					"name": "T",
+					"value": 6
+				},
+				{
+					"name": "epsilon",
+					"value": 0.1
+				},
+				{
+					"name": "R",
+					"value": 1
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "mu",
+							"value": 0.1
+						},
+						{
+							"name": "lambda",
+							"value": 1.0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 463
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "oscillators.6-8-0.1-1.jani",
+			"original-file": [
+				"oscillators.6-8-0.1-1.prism",
+				"oscillators.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism oscillators.6-8-0.1-1.prism --tojani oscillators.6-8-0.1-1.jani --prop oscillators.props --compactjson"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 6
+				},
+				{
+					"name": "T",
+					"value": 8
+				},
+				{
+					"name": "epsilon",
+					"value": 0.1
+				},
+				{
+					"name": "R",
+					"value": 1
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "mu",
+							"value": 0.1
+						},
+						{
+							"name": "lambda",
+							"value": 1.0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1717
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "oscillators.6-10-0.1-1.jani",
+			"original-file": [
+				"oscillators.6-10-0.1-1.prism",
+				"oscillators.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism oscillators.6-10-0.1-1.prism --tojani oscillators.6-10-0.1-1.jani --prop oscillators.props --compactjson"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 6
+				},
+				{
+					"name": "T",
+					"value": 10
+				},
+				{
+					"name": "epsilon",
+					"value": 0.1
+				},
+				{
+					"name": "R",
+					"value": 1
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "mu",
+							"value": 0.1
+						},
+						{
+							"name": "lambda",
+							"value": 1.0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 5006
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "oscillators.7-10-0.1-1.jani",
+			"original-file": [
+				"oscillators.7-10-0.1-1.prism",
+				"oscillators.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism oscillators.7-10-0.1-1.prism --tojani oscillators.7-10-0.1-1.jani --prop oscillators.props --compactjson"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 7
+				},
+				{
+					"name": "T",
+					"value": 10
+				},
+				{
+					"name": "epsilon",
+					"value": 0.1
+				},
+				{
+					"name": "R",
+					"value": 1
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "mu",
+							"value": 0.1
+						},
+						{
+							"name": "lambda",
+							"value": 1.0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 11441
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "oscillators.8-8-0.1-1.jani",
+			"original-file": [
+				"oscillators.8-8-0.1-1.prism",
+				"oscillators.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism oscillators.8-8-0.1-1.prism --tojani oscillators.8-8-0.1-1.jani --prop oscillators.props --compactjson"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 8
+				},
+				{
+					"name": "T",
+					"value": 8
+				},
+				{
+					"name": "epsilon",
+					"value": 0.1
+				},
+				{
+					"name": "R",
+					"value": 1
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "mu",
+							"value": 0.1
+						},
+						{
+							"name": "lambda",
+							"value": 1.0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 6436
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "oscillators.8-10-0.1-1.jani",
+			"original-file": [
+				"oscillators.8-10-0.1-1.prism",
+				"oscillators.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism oscillators.8-10-0.1-1.prism --tojani oscillators.8-10-0.1-1.jani --prop oscillators.props --compactjson"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 8
+				},
+				{
+					"name": "T",
+					"value": 10
+				},
+				{
+					"name": "epsilon",
+					"value": 0.1
+				},
+				{
+					"name": "R",
+					"value": 1
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "mu",
+							"value": 0.1
+						},
+						{
+							"name": "lambda",
+							"value": 1.0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 24311
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": [
+		"results/Storm.3-6-0.1-1-0.1-1.0.json",
+		"results/Storm.6-6-0.1-1-0.1-1.0.json",
+		"results/Storm.6-8-0.1-1-0.1-1.0.json",
+		"results/Storm.6-10-0.1-1-0.1-1.0.json",
+		"results/Storm.7-10-0.1-1-0.1-1.0.json",
+		"results/Storm.8-8-0.1-1-0.1-1.0.json",
+		"results/Storm.8-10-0.1-1-0.1-1.0.json"
+	]
+}
