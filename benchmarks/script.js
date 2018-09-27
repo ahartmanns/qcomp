@@ -124,15 +124,20 @@ function loadResults(model)
 	if(model.results === undefined) return; // results have already been loaded
 	var modelResults = model.results;
 	model.results = undefined;
-	modelResults.forEach(mr => loadJson(model.path + "/" + mr, result =>
+	modelResults.forEach(mr =>
 	{
-		result.model = model;
-		result.path = model.path + "/" + mr;
-		result.path = result.path.substr(0, result.path.lastIndexOf("/"));
-		result.showDetails = ko.observable(false);
-		result.submitter = separatePersonRef(result.submitter);
-		model.loadedResults.push(result);
-	}));
+		if(typeof mr === "string") mr = { file: mr, reference: false };
+		loadJson(model.path + "/" + mr.file, result =>
+		{
+			result.model = model;
+			result.path = model.path + "/" + mr.file;
+			result.path = result.path.substr(0, result.path.lastIndexOf("/"));
+			result.showDetails = ko.observable(false);
+			result.submitter = separatePersonRef(result.submitter);
+			result.isReference = mr.reference;
+			model.loadedResults.push(result);
+		})
+	});
 }
 function sortModels(sortBy)
 {

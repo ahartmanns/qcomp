@@ -44,6 +44,10 @@
 	"command": "storm --jani oscillators.8-8-0.1-1.jani -jprop --constants mu=0.1,lambda=1.0 -tm",
 	"time": 25.971,
 	"memory": 272629760,
+	"property-times": [
+		{ "name": "power_consumption", "time": 0.008 },
+		{ "name": "time_to_synch", "time": 0.008 }
+	],
 	"data": [
 		{
 			"values": [

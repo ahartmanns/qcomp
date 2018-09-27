@@ -67,6 +67,18 @@
 							"note": "Storm",
 							"number": 41
 						}
+					],
+					"results": [
+						{
+							"property": "target",
+							"value": 0.7,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "exp_steps",
+							"value": 1572862,
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -84,6 +96,18 @@
 						{
 							"note": "Storm",
 							"number": 201
+						}
+					],
+					"results": [
+						{
+							"property": "target",
+							"value": 0.7,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "exp_steps",
+							"value": 1901475900342344102245054808062,
+							"note": "Storm/exact"
 						}
 					]
 				},
@@ -103,14 +127,26 @@
 							"note": "Storm",
 							"number": 601
 						}
+					],
+					"results": [
+						{
+							"property": "target",
+							"value": 0.7,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "exp_steps",
+							"value": 3055553964501729129402668532614067241577202590498904375954210674031571949645005059275096062,
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
 		}
 	],
 	"results": [
-		"results/Storm.20-0.7.json",
-		"results/Storm.100-0.7.json",
-		"results/Storm.300-0.7.json"
+		{ "file": "results/Storm.20-0.7.json", "reference": true },
+		{ "file": "results/Storm.100-0.7.json", "reference": true },
+		{ "file": "results/Storm.300-0.7.json", "reference": true }
 	]
 }

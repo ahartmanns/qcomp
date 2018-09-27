@@ -45,6 +45,12 @@ h4 {
 	padding: 0px; margin: 0px;
 }
 
+h5 {
+	font-size: 13px; font-weight: bold;
+	color: #606060;
+	padding: 0px; margin: 0px; margin-top: 2px;
+}
+
 p {
 	padding: 0px; margin: 0.75ex 0ex; text-align: justify;
 }

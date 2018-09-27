@@ -2,7 +2,7 @@
 	"file": "rectangle-tireworld/rectangle-tireworld.5.jani",
 	"version": 1,
 	"date": "2018-08-30",
-	"submitter": "arnd <EMAIL>",
+	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"tool": {
 		"name": "mcsta",
 		"version": "3.0.86",

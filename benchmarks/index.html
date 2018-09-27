@@ -174,16 +174,13 @@
 					<ul data-bind="foreach: $data['open-parameter-values']">
 						<li>
 							<!-- ko if: $data.values !== undefined && $data.values.length !== 0 -->
-								<span data-bind="foreach: values">
+								<div data-bind="foreach: values">
 									<span data-bind="text: name" class="tt"></span>
 									<span>=</span>
 									<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent.values.length - 1">, </span>
-								</span>
+								</div>
 							<!-- /ko -->
 							<!-- ko if: $data.states !== undefined -->
-								<!-- ko if: $data.values !== undefined && $data.values.length !== 0 -->
-									<br />
-								<!-- /ko -->
 								<table data-bind="foreach: states" style="display: inline;">
 									<tr>
 										<td style="text-align: right; padding-right: 0px;">
@@ -192,6 +189,16 @@
 										<td>
 											<!-- ko if: $data.note !== undefined -->(<span data-bind="text: note"></span>)<!-- /ko -->
 										</td>
+									</tr>
+								</table>
+							<!-- /ko -->
+							<!-- ko if: $data.results !== undefined -->
+								<h5>Reference results</h5>
+								<table data-bind="foreach: results" style="margin-bottom: 6px;">
+									<tr>
+										<td><span data-bind="text: property" class="tt"></span>:</td>
+										<td data-bind="text: value" style="text-align: right;"></td>
+										<td data-bind="text: '(' + note + ')'"></td>
 									</tr>
 								</table>
 							<!-- /ko -->
@@ -205,7 +212,7 @@
 		<!-- ko if: loadedResults().length !== 0 -->
 			<h3 id="results">Results</h3>
 			<ul data-bind="foreach: loadedResults">
-				<li>
+				<li data-bind="style: { listStyle: isReference ? '\'★ \'' : 'disc' }">
 					<a data-bind="text: file.substr(file.lastIndexOf('/') + 1), attr: { href: path + '/' + file, download: toVersionFileName(file.substr(file.lastIndexOf('/') + 1), model.version) }"></a>
 					<!-- ko if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0 -->
 						/ <span data-bind="foreach: $data['open-parameter-values']"><span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['open-parameter-values'].length - 1">, </span></span>
@@ -216,16 +223,18 @@
 					<!-- ko if: showDetails -->
 					
 					<!-- Parameter values -->
-					<!-- ko if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0 -->
-					<div>
+					<div data-bind="if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0">
 						Parameters:
 						<span data-bind="foreach: $data['open-parameter-values']">
 							<span data-bind="text: name" class="tt"></span>
 							<span>=</span>
 							<span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['open-parameter-values'].length - 1">, </span>
 						</span>
+						<span data-bind="visible: isReference">(reference results)</span>
 					</div>
-					<!-- /ko -->
+					<div data-bind="if: isReference && ($data['open-parameter-values'] === undefined || $data['open-parameter-values'].length === 0)">
+						Reference results.
+					</div>
 					
 					<!-- Submitter -->
 					<p>
