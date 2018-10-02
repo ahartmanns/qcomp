@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>QComp - Quantitative Formal Models Repository - qcomp.org</title>
+	<link href="https://fonts.googleapis.com/css?family=Tajawal:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js"></script>
+	<script type="text/javascript" src="../script.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="results.js"></script>
+</head>
+<body onload="init()">
+
+<h1>Quantitative Formal Model Results Browser</h1>
+<div class="belowh1">
+	<a href="index.html">⮌</a> &nbsp;|&nbsp; License: <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> &nbsp;|&nbsp; <a href="contributing.html">Contributing</a> &nbsp;|&nbsp;&thinsp; <a href="conversions.html">JANI Converters</a>
+</div>
+<p>
+	The models and results in this repository on <a href="../index.html">qcomp.org</a> are provided as a benchmark set under the terms of the
+	<a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
+	Please cite the publication linked as "first presented in" for each model.
+	To contribute a new model, update an existing model, or add new results for an existing model, please consider our
+	<a href="contributing.html">information for contributors</a>.
+	For general questions or comments concerning the model repository, contact
+	<script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script>.
+	If you have questions concerning a specific model, please contact the submitter listed for that model.
+</p>
+
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabel">Select data</div></div>
+	<div style="display: inline-block; vertical-align: top;">
+		<!-- TO-DO:
+		     Options: [x] most recent tool version only, [x] weigh runtimes by CPU score
+		     Add tags to results, e.g. "official", "QComp 2019"
+		-->
+		<h4>Tools</h4>
+		<!-- ko foreach: tools -->
+			<div>
+				<label>
+					<input type="checkbox" data-bind="checked: selected" style="vertical-align: top; margin-top: 2px;" />
+					<span data-bind="text: name"></span>
+					<span data-bind="text: '(' + versionCount() + ' version' + (versionCount() === 1 ? '' : 's') + ')'" style="color: #909090;"></span>
+				</label>
+			</div>
+		<!-- /ko -->
+	</div>
+	<!-- ko foreach: models -->
+		<div class="box">
+			<div class="boxlabelo" style="pointer-events: auto;"><div class="boxlabel">
+				<input type="checkbox" data-bind="checked: selected, attr: { id: 'select_' + short }" style="vertical-align: top; margin-top: 3px;" />
+				<label data-bind="text: name, attr: { for: 'select_' + short }"></label>
+				(<a data-bind="text: short, attr: { href: 'index.html#' + short }"></a>)
+			</div></div>
+			<div style="display: inline-block; vertical-align: top; margin-right: 12px;">
+				<h4>Parameters</h4>
+				<!-- ko foreach: paramCombs -->
+					<div>
+						<label>
+							<input type="checkbox" data-bind="checked: selected" style="vertical-align: top; margin-top: 2px;" />
+							<span data-bind="text: name"></span>
+						</label>
+					</div>
+				<!-- /ko -->
+			</div>
+			<div style="display: inline-block; vertical-align: top; margin-right: 12px;">
+				<h4>Properties</h4>
+				<!-- ko foreach: properties -->
+					<div>
+						<label>
+							<input type="checkbox" data-bind="checked: selected" style="vertical-align: top; margin-top: 2px;" />
+							<span data-bind="text: name"></span>
+						</label>
+						<span data-bind="attr: { title: propertyTypeToLongString(type) }">(<span data-bind="text: propertyTypeToShortString(type)"></span>)</span>
+					</div>
+				<!-- /ko -->
+			</div>
+		</div>
+	<!-- /ko -->
+</div>
+
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabel">Configure display</div></div>
+	<fieldset>
+		Show&nbsp;
+		<select data-bind="options: aggregateOptions, value: aggregateConfig"></select>
+		<select data-bind="options: valueOptions, value: valueConfig"></select>
+		&nbsp;per&nbsp;
+		<select data-bind="options: axisOptions, value: rowConfig"></select>
+		&nbsp;and&nbsp;
+		<select data-bind="options: axisOptions, value: columnConfig, optionsCaption: '(none)'"></select>
+		&nbsp;as a&nbsp;
+		<select data-bind="options: plotTypes, value: plotType"></select>
+	</fieldset>
+</div>
+
+<!-- ko if: data() !== null -->
+	<div class="box" data-bind="with: data()">
+		<div class="boxlabelo"><div class="boxlabel">Results</div></div>
+		<!-- ko if: display === "table" -->
+			<div data-bind="text: valuesCaption + ':'"></div>
+			<table id="results">
+				<thead>
+					<tr data-bind="if: $data.columnTopCaptions !== undefined">
+						<!-- ko if: $data.rowsPreCaption !== undefined -->
+							<th></th>
+						<!-- /ko -->
+						<!-- ko if: $data.rowsCaption !== undefined -->
+							<th></th>
+						<!-- /ko -->
+						<!-- ko foreach: columnTopCaptions -->
+							<th data-bind="text: caption, attr: { colspan: span }" style="text-align: center;"></th>
+						<!-- /ko -->
+					</tr>
+					<tr>
+						<!-- ko if: $data.rowsPreCaption !== undefined -->
+							<th data-bind="text: rowsPreCaption.caption, attr: { colspan: rowsPreCaption.span }"></th>
+						<!-- /ko -->
+						<!-- ko if: $data.rowsCaption !== undefined -->
+							<th data-bind="text: rowsCaption.caption, attr: { colspan: rowsCaption.span }"></th>
+						<!-- /ko -->
+						<!-- ko foreach: columnCaptions -->
+							<th data-bind="text: caption, attr: { colspan: span }" style="text-align: center;"></th>
+						<!-- /ko -->
+					</tr>
+				</thead>
+				<tbody data-bind="foreach: rows">
+					<tr>
+						<!-- ko if: $data.preCaption !== undefined -->
+							<td data-bind="text: preCaption"></td>
+						<!-- /ko -->
+						<!-- ko if: $data.caption !== undefined -->
+							<td data-bind="text: caption"></td>
+						<!-- /ko -->
+						<!-- ko foreach: columnValues -->
+							<td style="text-align: right;">
+								<span data-bind="text: displayValue"></span><span data-bind="visible: unit !== null, text: ' ' + unit"></span>
+							</td>
+						<!-- /ko -->
+					</tr>
+				</tbody>
+			</table>
+		<!-- /ko -->
+	</div>
+<!-- /ko -->
+
+</body>
+</html>

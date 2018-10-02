@@ -87,6 +87,10 @@ a.nodec:hover {
 	text-decoration: none;
 }
 
+a.disabled {
+	color: #606060; cursor: default;
+}
+
 tt, .tt {
 	font-family: 'Courier New', monospace; font-size: 105%; line-height: 1.2;
 }
@@ -101,6 +105,30 @@ p.tt {
 
 .ellipsis {
 	text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+}
+
+div.checkbox {
+	cursor: default;
+}
+
+div.checkbox input[type='checkbox'] {
+	opacity: 0;
+}
+
+tr:hover td div.checkbox input[type='checkbox'] {
+	opacity: 1;
+}
+
+tr:hover th div.checkbox input[type='checkbox'] {
+	opacity: 1;
+}
+
+div.checkbox input[type='checkbox']:checked {
+	opacity: 1;
+}
+
+label {
+	margin: 0px; padding: 0px !important;
 }
 
 /* Tables */
@@ -136,6 +164,18 @@ th {
 
 td {
 	margin: 0px; padding: 0px; padding-right: 1ex; vertical-align: baseline;
+}
+
+#results {
+	margin-left: -1ex;
+}
+
+#results th {
+	padding: 0ex 1ex;
+}
+
+#results td {
+	padding: 0ex 1ex;
 }
 
 
