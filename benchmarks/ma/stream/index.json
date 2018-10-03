@@ -12,6 +12,7 @@
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "https://doi.org/10.1007/978-3-319-63387-9_7",
 	"description": "A model for a client of a video streaming service. The client consecutively receives `N´ data packages and stores them into a buffer. The buffered packages are processed during the playback of the video. The time it takes to receive (or to process) a single package is modeled by an exponentially distributed delay. Whenever a package is received and the video is not playing, the client nondeterministically chooses whether it starts the playback or whether it keeps on buffering. The latter choice is not reliable, i.e., there is a 1% chance that the playback is started anyway. In case of a buffer underrun, the playback is paused and the client waits for new packages to arrive.",
+	"notes": "simple scalable planning benchmark",
 	"parameters": [
 		{
 			"name": "N",

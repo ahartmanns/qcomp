@@ -15,6 +15,7 @@
 	"references": [
 		"https://doi.org/10.1145/322234.322242"
 	],
+	"notes": "stochastic scheduling problem",
 	"parameters": [
 		{
 			"name": "N",
