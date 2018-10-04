@@ -271,14 +271,14 @@ function updateData()
 	{
 		case "tool":
 			data.columnCaptions = vm.tools()
-				.map(t => ({ caption: t.name, span: 1 })).filter(v => v !== null);
+				.map(t => t.selected() ? { caption: t.name, span: 1 } : null).filter(v => v !== null);
 			break;
 		case "tool version":
 			data.columnTopCaptions = vm.tools()
-				.map(t => ({ caption: t.name, span: vm.toolVersions().filter(tv => tv.selected() && tv.tool === t).length }))
-				.filter(v => v.span !== 0);
+				.map(t => t.selected() ? { caption: t.name, span: vm.toolVersions().filter(tv => tv.selected() && tv.tool === t).length } : null)
+				.filter(v => v !== null && v.span !== 0);
 			data.columnCaptions = vm.toolVersions()
-				.map(tv => tv.selected() ? { caption: "v" + tv.version, span: 1 } : null)
+				.map(tv => tv.selected() && tv.tool.selected() ? { caption: "v" + tv.version, span: 1 } : null)
 				.filter(v => v !== null);
 			break;
 		case "model":
@@ -288,18 +288,18 @@ function updateData()
 			break;
 		case "parameters":
 			data.columnTopCaptions = vm.models()
-				.map(m => ({ caption: m.short, span: vm.paramCombs().filter(pc => pc.selected() && pc.model === m).length }))
-				.filter(v => v.span !== 0);
+				.map(m => m.selected() ? { caption: m.short, span: vm.paramCombs().filter(pc => pc.selected() && pc.model === m).length } : null)
+				.filter(v => v !== null && v.span !== 0);
 			data.columnCaptions = vm.paramCombs()
-				.map(pc => pc.selected() ? { caption: pc.short, span: 1 } : null)
+				.map(pc => pc.selected() && pc.model.selected() ? { caption: pc.short, span: 1 } : null)
 				.filter(v => v !== null);
 			break;
 		case "property":
 			data.columnTopCaptions = vm.models()
-				.map(m => ({ caption: m.short, span: vm.properties().filter(p => p.selected() && p.model === m).length }))
-				.filter(v => v.span !== 0);
+				.map(m => m.selected() ? { caption: m.short, span: vm.properties().filter(p => p.selected() && p.model === m).length } : null)
+				.filter(v => v !== null && v.span !== 0);
 			data.columnCaptions = vm.properties()
-				.map(p => p.selected() ? { caption: p.name, span: 1 } : null)
+				.map(p => p.selected() && p.model.selected() ? { caption: p.name, span: 1 } : null)
 				.filter(v => v !== null);
 			break;
 		default:
@@ -372,7 +372,7 @@ function iterateRows(data)
 			for(var i = 0; i < vm.toolVersions().length; ++i)
 			{
 				var toolVersion = vm.toolVersions()[i];
-				if(!toolVersion.selected()) continue;
+				if(!toolVersion.selected() || !toolVersion.tool.selected()) continue;
 				data.rows.push(iterateColumns(toolVersion, "v" + toolVersion.version));
 			}
 			break;
@@ -388,7 +388,7 @@ function iterateRows(data)
 			for(var i = 0; i < vm.paramCombs().length; ++i)
 			{
 				var paramComb = vm.paramCombs()[i];
-				if(!paramComb.selected()) continue;
+				if(!paramComb.selected() || !paramComb.model.selected()) continue;
 				data.rows.push(iterateColumns(paramComb, paramComb.short));
 			}
 			break;
@@ -396,7 +396,7 @@ function iterateRows(data)
 			for(var i = 0; i < vm.properties().length; ++i)
 			{
 				var property = vm.properties()[i];
-				if(!property.selected()) continue;
+				if(!property.selected() || !property.model.selected()) continue;
 				data.rows.push(iterateColumns(property, property.name));
 			}
 			break;
@@ -428,7 +428,7 @@ function iterateColumns(rowObj, caption)
 			for(var i = 0; i < vm.toolVersions().length; ++i)
 			{
 				var toolVersion = vm.toolVersions()[i];
-				if(!toolVersion.selected()) continue;
+				if(!toolVersion.selected() || !toolVersion.tool.selected()) continue;
 				row.columnValues.push(iterateValue(rowObj, toolVersion));
 			}
 			break;
@@ -444,7 +444,7 @@ function iterateColumns(rowObj, caption)
 			for(var i = 0; i < vm.paramCombs().length; ++i)
 			{
 				var paramComb = vm.paramCombs()[i];
-				if(!paramComb.selected()) continue;
+				if(!paramComb.selected() || !paramComb.model.selected()) continue;
 				row.columnValues.push(iterateValue(rowObj, paramComb));
 			}
 			break;
@@ -452,7 +452,7 @@ function iterateColumns(rowObj, caption)
 			for(var i = 0; i < vm.properties().length; ++i)
 			{
 				var property = vm.properties()[i];
-				if(!property.selected()) continue;
+				if(!property.selected() || !property.model.selected()) continue;
 				row.columnValues.push(iterateValue(rowObj, property));
 			}
 			break;
@@ -485,6 +485,7 @@ function iterateValue(rowObj, columnObj)
 		for(var pc = 0; pc < model.paramCombs().length; ++pc)
 		{
 			var paramComb = model.paramCombs()[pc];
+			if(!paramComb.selected()) continue;
 			
 			// Average/min/max over matching tools
 			var toolsN = 0;
@@ -527,9 +528,6 @@ function iterateValue(rowObj, columnObj)
 							if(result.paramComb !== columnObj) continue;
 							break;
 					}
-					
-					// Match selection
-					if(!result.paramComb.selected()) continue; // "model" and "tool" have already been checked above, "property" is checked below
 
 					// Get value
 					var value = 0;
