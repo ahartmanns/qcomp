@@ -58,9 +58,6 @@
 	<li>
 		<tt>--addprops</tt> adds a set of standard GSPN properties, e.g. the probability for a deadlock.
 	</li>
-	<li>
-		<tt>--standard-compliant</tt> ensures that the model is compliant with the JANI standard in order to increase compatibility with other tools.
-	</li>
 </ul>
 
 <h3 id="modesttojani">Modest to JANI</h3>
@@ -105,9 +102,6 @@
 		<tt>--constants &lt;values&gt;</tt> specifies the constant replacements to use, where <tt>&lt;values&gt;</tt> is a comma separated list of constants and their values, e.g. <tt>a=1,b=2,c=3</tt>.
 	</li>
 	<li>
-		<tt>--standard-compliant</tt> ensures that the model is compliant with the JANI standard in order to increase compatibility with other tools.
-	</li>
-	<li>
 		<tt>--globalvars</tt> makes all module variables global, e.g. to guarantee the same variable order as in the input file.
 	</li>
 </ul>
@@ -134,6 +128,9 @@
 		<a href="http://www.stormchecker.org">Storm</a>
 		<ul>
 			<li>Arrays to sets of variables</li>
+			<li>Instantiation of open parameters</li>
+			<li>Parallel automata to flat models</li>
+			<li>Substitution of function calls by their defining expression</li>
 		</ul>
 	</li>
 </ul>
