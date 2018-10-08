@@ -11,7 +11,7 @@ vm.rowConfig = ko.observable(vm.axisOptions[2]);
 vm.rowConfig.subscribe(updateData);
 vm.columnConfig = ko.observable(vm.axisOptions[0]);
 vm.columnConfig.subscribe(updateData);
-vm.plotTypes = [ "table" ];
+vm.plotTypes = [ "table", "bar chart" ];
 vm.plotType = ko.observable(vm.plotTypes[0]);
 vm.plotType.subscribe(updateData);
 vm.tools = ko.observableArray();
@@ -263,70 +263,79 @@ function updateData()
 	var data = {
 		display: vm.plotType(),
 		valuesCaption: CapitaliseFirst(vm.aggregateConfig() + " " + vm.valueConfig()),
+		values: [],
 		rows: []
 	};
-	
-	// Column captions
-	switch(vm.columnConfig())
-	{
-		case "tool":
-			data.columnCaptions = vm.tools()
-				.map(t => t.selected() ? { caption: t.name, span: 1 } : null).filter(v => v !== null);
-			break;
-		case "tool version":
-			data.columnTopCaptions = vm.tools()
-				.map(t => t.selected() ? { caption: t.name, span: vm.toolVersions().filter(tv => tv.selected() && tv.tool === t).length } : null)
-				.filter(v => v !== null && v.span !== 0);
-			data.columnCaptions = vm.toolVersions()
-				.map(tv => tv.selected() && tv.tool.selected() ? { caption: "v" + tv.version, span: 1 } : null)
-				.filter(v => v !== null);
-			break;
-		case "model":
-			data.columnCaptions = vm.models()
-				.map(m => model.selected() ? { caption: m.short, span: 1 } : null)
-				.filter(v => v !== null);
-			break;
-		case "parameters":
-			data.columnTopCaptions = vm.models()
-				.map(m => m.selected() ? { caption: m.short, span: vm.paramCombs().filter(pc => pc.selected() && pc.model === m).length } : null)
-				.filter(v => v !== null && v.span !== 0);
-			data.columnCaptions = vm.paramCombs()
-				.map(pc => pc.selected() && pc.model.selected() ? { caption: pc.short, span: 1 } : null)
-				.filter(v => v !== null);
-			break;
-		case "property":
-			data.columnTopCaptions = vm.models()
-				.map(m => m.selected() ? { caption: m.short, span: vm.properties().filter(p => p.selected() && p.model === m).length } : null)
-				.filter(v => v !== null && v.span !== 0);
-			data.columnCaptions = vm.properties()
-				.map(p => p.selected() && p.model.selected() ? { caption: p.name, span: 1 } : null)
-				.filter(v => v !== null);
-			break;
-		default:
-			data.columnCaptions = [{ caption: CapitaliseFirst(vm.valueConfig()), span: 1 }];
-			break;
-	}
-	
+		
 	// Row caption
 	switch(vm.rowConfig())
 	{
 		case "tool":
-			data.rowsCaption = { caption: "Tool", span: 1 };
+			data.rowsCaption = { caption: "Tool" };
 			break;
 		case "tool version":
-			data.rowsPreCaption = { caption: "Tool", span: 1 };
-			data.rowsCaption = { caption: "Version", span: 1 };
+			data.rowsPreCaption = { caption: "Tool" };
+			data.rowsCaption = { caption: "Version" };
 			break;
 		case "model":
-			data.rowsCaption = { caption: "Model", span: 1 };
+			data.rowsCaption = { caption: "Model" };
 			break;
 		case "parameters":
-			data.rowsPreCaption = { caption: "Model", span: 1 };
-			data.rowsCaption = { caption: "Parameters", span: 1 };
+			data.rowsPreCaption = { caption: "Model" };
+			data.rowsCaption = { caption: "Parameters" };
 			break;
 		case "property":
-			data.rowsPreCaption = { caption: "Model", span: 1 };
-			data.rowsCaption = { caption: "Property", span: 1 };
+			data.rowsPreCaption = { caption: "Model" };
+			data.rowsCaption = { caption: "Property" };
+			break;
+	}
+
+	// Column captions
+	switch(vm.columnConfig())
+	{
+		case "tool":
+			data.columnsCaption = { caption: "Tool" };
+			data.columnCaptions = vm.tools()
+				.map(t => t.selected() ? { caption: t.name, span: 1 } : null).filter(v => v !== null);
+			break;
+		case "tool version":
+			data.columnsTopCaption = { caption: "Tool" };
+			data.columnsCaption = { caption: "Version" };
+			data.columnTopCaptions = vm.tools()
+				.map(t => t.selected() ? { caption: t.name, span: vm.toolVersions().filter(tv => tv.selected() && tv.tool === t).length } : null)
+				.filter(v => v !== null && v.span !== 0);
+			data.columnCaptions = vm.toolVersions()
+				.map(tv => tv.selected() && tv.tool.selected() ? { caption: "v" + tv.version } : null)
+				.filter(v => v !== null);
+			break;
+		case "model":
+			data.columnsCaption = { caption: "Model" };
+			data.columnCaptions = vm.models()
+				.map(m => m.selected() ? { caption: m.short, span: 1 } : null)
+				.filter(v => v !== null);
+			break;
+		case "parameters":
+			data.columnsTopCaption = { caption: "Model" };
+			data.columnsCaption = { caption: "Parameters" };
+			data.columnTopCaptions = vm.models()
+				.map(m => m.selected() ? { caption: m.short, span: vm.paramCombs().filter(pc => pc.selected() && pc.model === m).length } : null)
+				.filter(v => v !== null && v.span !== 0);
+			data.columnCaptions = vm.paramCombs()
+				.map(pc => pc.selected() && pc.model.selected() ? { caption: pc.short } : null)
+				.filter(v => v !== null);
+			break;
+		case "property":
+			data.columnsTopCaption = { caption: "Model" };
+			data.columnsCaption = { caption: "Property" };
+			data.columnTopCaptions = vm.models()
+				.map(m => m.selected() ? { caption: m.short, span: vm.properties().filter(p => p.selected() && p.model === m).length } : null)
+				.filter(v => v !== null && v.span !== 0);
+			data.columnCaptions = vm.properties()
+				.map(p => p.selected() && p.model.selected() ? { caption: p.name } : null)
+				.filter(v => v !== null);
+			break;
+		default:
+			data.columnCaptions = [{ caption: CapitaliseFirst(vm.valueConfig()) }];
 			break;
 	}
 	
@@ -342,19 +351,81 @@ function updateData()
 			switch(vm.rowConfig())
 			{
 				case "tool version":
-					row.preCaption = i == 0 || data.rows[i - 1].obj.tool !== row.obj.tool ? row.obj.tool.name : "";
+					row.preCaption = vm.plotType() !== "table" || i === 0 || data.rows[i - 1].obj.tool !== row.obj.tool ? row.obj.tool.name : "";
 					break;
 				case "parameters":
 				case "property":
-					row.preCaption = i == 0 || data.rows[i - 1].obj.model !== row.obj.model ? row.obj.model.short : "";
+					row.preCaption = vm.plotType() !== "table" || i === 0 || data.rows[i - 1].obj.model !== row.obj.model ? row.obj.model.short : "";
 					break;
 			}
 		}
 	}
 	
-	// Done
-	//alert(JSON.stringify(data));
+	// Show the table
 	vm.data(data);
+
+	// Chart
+	if(vm.plotType() !== "table")
+	{
+		// Collect all data items, adding column information in the process
+		for(var i = 0; i < data.rows.length; ++i)
+		{
+			var co = 0;
+			for(var j = 0; j < (data.columnTopCaptions === undefined ? data.columnCaptions.length : data.columnTopCaptions.length); ++j)
+			{
+				for(var k = 0; k < (data.columnTopCaptions === undefined ? 1 : data.columnTopCaptions[j].span); ++k, ++co)
+				{
+					var value = data.rows[i].columnValues[co];
+					value.rowPreCaption = value.row.preCaption;
+					value.rowCaption = value.row.caption;
+					value.columnTopCaption = data.columnTopCaptions === undefined ? "" : data.columnTopCaptions[j].caption;
+					value.columnCaption = value.columnTopCaption + (value.columnTopCaption.length === 0 ? "" : " ") + data.columnCaptions[co].caption;
+					data.values.push(value);
+				}
+			}
+		}
+		
+		// Configure chart
+		var chartConfig = {
+			data: data.values,
+			dimensions: { },
+			type: "bar",
+			x: [],
+			y: [],
+			guide: [],
+			settings: {
+				asyncRendering: true
+			}
+		};
+		
+		if(data.rowsPreCaption !== undefined)
+		{
+			chartConfig.x.push("rowPreCaption");
+			chartConfig.dimensions["rowPreCaption"] = { type: "category", scale: "ordinal" };
+			chartConfig.guide.push({
+				x: { label: { text: data.rowsPreCaption.caption } }
+			});
+		}
+		chartConfig.x.push("rowCaption");
+		chartConfig.dimensions["rowCaption"] = { type: "category", scale: "ordinal" };
+		chartConfig.guide.push({
+			x: { label: { text: data.rowsCaption.caption } },
+			y: { label: { text: data.valuesCaption } }
+		});
+		chartConfig.y.unshift("value");
+		chartConfig.dimensions["value"] = { type: "measure" };
+		if(vm.columnConfig() !== undefined)
+		{
+			chartConfig.y.unshift("columnCaption");
+			chartConfig.dimensions["columnCaption"] = { type: "category", scale: "ordinal" };
+			if(chartConfig.guide[0].y !== undefined) chartConfig.guide.unshift({ });
+			chartConfig.guide[0].y = { label: { text: data.columnsCaption.caption } };
+		}
+		
+		// Create the chart
+		var chart = new Taucharts.Chart(chartConfig);
+		chart.renderTo(document.getElementById("chart"));
+	}
 }
 function iterateRows(data)
 {
@@ -421,7 +492,9 @@ function iterateColumns(rowObj, caption)
 			{
 				var tool = vm.tools()[i];
 				if(!tool.selected()) continue;
-				row.columnValues.push(iterateValue(rowObj, tool));
+				var value = iterateValue(rowObj, tool);
+				value.row = row;
+				row.columnValues.push(value);
 			}
 			break;
 		case "tool version":
@@ -429,7 +502,9 @@ function iterateColumns(rowObj, caption)
 			{
 				var toolVersion = vm.toolVersions()[i];
 				if(!toolVersion.selected() || !toolVersion.tool.selected()) continue;
-				row.columnValues.push(iterateValue(rowObj, toolVersion));
+				var value = iterateValue(rowObj, toolVersion);
+				value.row = row;
+				row.columnValues.push(value);
 			}
 			break;
 		case "model":
@@ -437,7 +512,9 @@ function iterateColumns(rowObj, caption)
 			{
 				var model = vm.models()[i];
 				if(!model.selected()) continue;
-				row.columnValues.push(iterateValue(rowObj, model));
+				var value = iterateValue(rowObj, model);
+				value.row = row;
+				row.columnValues.push(value);
 			}
 			break;
 		case "parameters":
@@ -445,7 +522,9 @@ function iterateColumns(rowObj, caption)
 			{
 				var paramComb = vm.paramCombs()[i];
 				if(!paramComb.selected() || !paramComb.model.selected()) continue;
-				row.columnValues.push(iterateValue(rowObj, paramComb));
+				var value = iterateValue(rowObj, paramComb);
+				value.row = row;
+				row.columnValues.push(value);
 			}
 			break;
 		case "property":
@@ -453,11 +532,15 @@ function iterateColumns(rowObj, caption)
 			{
 				var property = vm.properties()[i];
 				if(!property.selected() || !property.model.selected()) continue;
-				row.columnValues.push(iterateValue(rowObj, property));
+				var value = iterateValue(rowObj, property);
+				value.row = row;
+				row.columnValues.push(value);
 			}
 			break;
 		default:
-			row.columnValues.push(iterateValue(rowObj, null));
+			var value = iterateValue(rowObj, null);
+			value.row = row;
+			row.columnValues.push(value);
 			break;
 	}
 	
@@ -467,6 +550,7 @@ function iterateColumns(rowObj, caption)
 function iterateValue(rowObj, columnObj)
 {
 	var cv = {
+		hasValue: true,
 		value: 0,
 		displayValue: 0,
 		unit: null
@@ -608,7 +692,7 @@ function iterateValue(rowObj, columnObj)
 	}
 	else
 	{
-		cv.value = NaN;
+		cv.hasValue = false;
 		cv.displayValue = "";
 	}
 

@@ -4,8 +4,11 @@
 	<meta charset="UTF-8">
 	<title>QComp - Quantitative Formal Models Repository - qcomp.org</title>
 	<link href="https://fonts.googleapis.com/css?family=Tajawal:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.css">
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/d3@4.13.0/build/d3.min.js" charset="utf-8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="../script.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="results.js"></script>
@@ -114,13 +117,13 @@
 					</tr>
 					<tr>
 						<!-- ko if: $data.rowsPreCaption !== undefined -->
-							<th data-bind="text: rowsPreCaption.caption, attr: { colspan: rowsPreCaption.span }"></th>
+							<th data-bind="text: rowsPreCaption.caption"></th>
 						<!-- /ko -->
 						<!-- ko if: $data.rowsCaption !== undefined -->
-							<th data-bind="text: rowsCaption.caption, attr: { colspan: rowsCaption.span }"></th>
+							<th data-bind="text: rowsCaption.caption"></th>
 						<!-- /ko -->
 						<!-- ko foreach: columnCaptions -->
-							<th data-bind="text: caption, attr: { colspan: span }" style="text-align: center;"></th>
+							<th data-bind="text: caption" style="text-align: center;"></th>
 						<!-- /ko -->
 					</tr>
 				</thead>
@@ -134,12 +137,15 @@
 						<!-- /ko -->
 						<!-- ko foreach: columnValues -->
 							<td style="text-align: right;">
-								<span data-bind="text: displayValue"></span><span data-bind="visible: unit !== null, text: ' ' + unit"></span>
+								<span data-bind="text: hasValue ? displayValue : ''"></span><span data-bind="visible: unit !== null, text: ' ' + unit"></span>
 							</td>
 						<!-- /ko -->
 					</tr>
 				</tbody>
 			</table>
+		<!-- /ko -->
+		<!-- ko if: display !== "table" -->
+			<div id="chart" style="height: 500px;"></div>
 		<!-- /ko -->
 	</div>
 <!-- /ko -->
