@@ -16,6 +16,10 @@ function propertyTypeToLongString(propertyType)
 	else if(propertyType === "exp-reward-step-bounded") return "step-bounded expected accumulated reward";
 	else if(propertyType === "exp-reward-time-bounded") return "time-bounded expected accumulated reward";
 	else if(propertyType === "exp-reward-reward-bounded") return "reward-bounded expected accumulated reward";
+	else if(propertyType === "exp-reward-step-instant") return "step-instantaneous reward";
+	else if(propertyType === "exp-reward-time-instant") return "time-instantaneous reward";
+	else if(propertyType === "steady-state-reward") return "steady-state reward";
+	else if(propertyType === "steady-state-prob") return "steady-state probability";
 	else return propertyType;
 }
 function propertyTypeToShortString(propertyType)
@@ -36,6 +40,10 @@ function propertyTypeToShortString(propertyType)
 	else if(propertyType === "exp-reward-step-bounded") return "Eb";
 	else if(propertyType === "exp-reward-time-bounded") return "Eb";
 	else if(propertyType === "exp-reward-reward-bounded") return "Eb";
+	else if(propertyType === "exp-reward-step-instant") return "Ei";
+	else if(propertyType === "exp-reward-time-instant") return "Ei";
+	else if(propertyType === "steady-state-prob") return "S";
+	else if(propertyType === "steady-state-reward") return "S";
 	else return propertyType;
 }
 function CapitaliseFirst(str)
