@@ -200,7 +200,7 @@ function createAndRegisterParamComb(model, name, short)
 			short: short,
 			selected: ko.observable(true)
 		};
-		paramComb.selected.subscribe(onSelectedChanged);
+		paramComb.selected.subscribe(newValue => onParamCombSelectedChanged(paramComb, newValue));
 		model.paramCombs.push(paramComb);
 		vm.paramCombs.push(paramComb);
 	}
@@ -212,6 +212,10 @@ function compareParamCombs(pc1, pc2)
 	if(mc !== 0) return mc;
 	return pc1.short < pc1.short ? -1 : pc1.short > pc1.short ? 1 : 0;
 }
+function onParamCombSelectedChanged(paramComb, newValue)
+{
+	updateData();
+}
 function createAndRegisterTool(t)
 {
 	var tool = vm.tools().find(vmt => vmt.name === t.name);
@@ -222,7 +226,7 @@ function createAndRegisterTool(t)
 			versionCount: ko.observable(0),
 			selected: ko.observable(true)
 		};
-		tool.selected.subscribe(onSelectedChanged);
+		tool.selected.subscribe(newValue => onToolSelectedChanged(tool, newValue));
 		vm.tools.push(tool);
 	}
 	return tool;
@@ -230,6 +234,17 @@ function createAndRegisterTool(t)
 function compareTools(t1, t2)
 {
 	return t1.name < t2.name ? -1 : t1.name > t2.name ? 1 : 0;
+}
+function onToolSelectedChanged(tool, newValue)
+{
+	if(newValue && vm.toolVersions().filter(tv => tv.tool === tool && tv.selected()).length === 0)
+	{
+		for(var i = 0; i < vm.toolVersions().length; ++i)
+		{
+			if(vm.toolVersions()[i].tool === tool) vm.toolVersions()[i].selected(true);
+		}
+	}
+	onSelectedChanged();
 }
 function createAndRegisterToolVersion(t, v)
 {
@@ -243,7 +258,7 @@ function createAndRegisterToolVersion(t, v)
 			version: v,
 			selected: ko.observable(true)
 		};
-		toolVersion.selected.subscribe(onSelectedChanged);
+		toolVersion.selected.subscribe(newValue => onToolVersionSelectedChanged(toolVersion, newValue));
 		vm.toolVersions.push(toolVersion);
 	}
 	return toolVersion;
@@ -253,6 +268,12 @@ function compareToolVersions(tv1, tv2)
 	var tc = compareTools(tv1.tool, tv2.tool);
 	if(tc !== 0) return tc;
 	return tv1.version < tv2.version ? -1 : tv1.version > tv2.version ? 1 : 0;
+}
+function onToolVersionSelectedChanged(toolVersion, newValue)
+{
+	var selectedVersionCount = vm.toolVersions().filter(tv => tv.tool === toolVersion.tool && tv.selected()).length;
+	toolVersion.tool.selected(selectedVersionCount !== 0);
+	onSelectedChanged();
 }
 function onSelectedChanged()
 {
@@ -296,7 +317,7 @@ function updateData()
 		case "tool":
 			data.columnsCaption = { caption: "Tool" };
 			data.columnCaptions = vm.tools()
-				.map(t => t.selected() ? { caption: t.name, span: 1 } : null).filter(v => v !== null);
+				.map(t => t.selected() ? { caption: t.name, isFirst: true, isLast: true } : null).filter(v => v !== null);
 			break;
 		case "tool version":
 			data.columnsTopCaption = { caption: "Tool" };
@@ -305,13 +326,13 @@ function updateData()
 				.map(t => t.selected() ? { caption: t.name, span: vm.toolVersions().filter(tv => tv.selected() && tv.tool === t).length } : null)
 				.filter(v => v !== null && v.span !== 0);
 			data.columnCaptions = vm.toolVersions()
-				.map(tv => tv.selected() && tv.tool.selected() ? { caption: "v" + tv.version } : null)
+				.map(tv => tv.selected() && tv.tool.selected() ? { caption: "v" + tv.version, isFirst: true, isLast: true } : null)
 				.filter(v => v !== null);
 			break;
 		case "model":
 			data.columnsCaption = { caption: "Model" };
 			data.columnCaptions = vm.models()
-				.map(m => m.selected() ? { caption: m.short, span: 1 } : null)
+				.map(m => m.selected() ? { caption: m.short, isFirst: true, isLast: true } : null)
 				.filter(v => v !== null);
 			break;
 		case "parameters":
@@ -321,7 +342,7 @@ function updateData()
 				.map(m => m.selected() ? { caption: m.short, span: vm.paramCombs().filter(pc => pc.selected() && pc.model === m).length } : null)
 				.filter(v => v !== null && v.span !== 0);
 			data.columnCaptions = vm.paramCombs()
-				.map(pc => pc.selected() && pc.model.selected() ? { caption: pc.short } : null)
+				.map(pc => pc.selected() && pc.model.selected() ? { caption: pc.short, isFirst: true, isLast: true } : null)
 				.filter(v => v !== null);
 			break;
 		case "property":
@@ -331,12 +352,25 @@ function updateData()
 				.map(m => m.selected() ? { caption: m.short, span: vm.properties().filter(p => p.selected() && p.model === m).length } : null)
 				.filter(v => v !== null && v.span !== 0);
 			data.columnCaptions = vm.properties()
-				.map(p => p.selected() && p.model.selected() ? { caption: p.name } : null)
+				.map(p => p.selected() && p.model.selected() ? { caption: p.name, isFirst: true, isLast: true } : null)
 				.filter(v => v !== null);
 			break;
 		default:
-			data.columnCaptions = [{ caption: CapitaliseFirst(vm.valueConfig()) }];
+			data.columnCaptions = [{ caption: CapitaliseFirst(vm.valueConfig()), isFirst: true, isLast: true }];
 			break;
+	}
+	if(data.columnTopCaptions !== undefined)
+	{
+		var c = 0;
+		for(var i = 0; i < data.columnTopCaptions.length; ++i)
+		{
+			for(var j = c; j < c + data.columnTopCaptions[i].span; ++j)
+			{
+				data.columnCaptions[j].isFirst = j == c;
+				data.columnCaptions[j].isLast = j == c + data.columnTopCaptions[i].span - 1;
+			}
+			c += data.columnTopCaptions[i].span;
+		}
 	}
 	
 	// Row iteration
@@ -612,6 +646,9 @@ function iterateValue(rowObj, columnObj)
 							if(result.paramComb !== columnObj) continue;
 							break;
 					}
+					
+					// Check if the tool version was selected
+					if(!result.toolVersion.selected()) continue;
 
 					// Get value
 					var value = 0;

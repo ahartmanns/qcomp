@@ -32,54 +32,93 @@
 
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabel">Select data</div></div>
-	<div style="display: inline-block; vertical-align: top;">
+	<div>
 		<!-- TO-DO:
-		     Options: [x] most recent tool version only, [x] weigh runtimes by CPU score
-		     Add tags to results, e.g. "official", "QComp 2019"
+				 Options: [x] weigh runtimes by CPU score
+				 Add tags to results, e.g. "official", "QComp 2019"
 		-->
-		<h4>Tools</h4>
+	</div>
+	<div class="box" style="display: inline-block;">
+		<div class="boxlabelo" style="pointer-events: auto;"><div class="boxlabel">Tools</div></div>
 		<!-- ko foreach: tools -->
-			<div>
-				<label>
-					<input type="checkbox" data-bind="checked: selected" style="vertical-align: top; margin-top: 2px;" />
-					<span data-bind="text: name"></span>
-					<span data-bind="text: '(' + versionCount() + ' version' + (versionCount() === 1 ? '' : 's') + ')'" style="color: #909090;"></span>
-				</label>
+			<div class="box" style="display: inline-block;">
+				<div class="boxlabelo" style="pointer-events: auto; white-space: nowrap;"><div class="boxlabel">
+					<input type="checkbox" data-bind="checked: selected, attr: { id: 'select_tool_' + name }" style="vertical-align: top; margin-top: 3px;" />
+					<label data-bind="text: name, attr: { for: 'select_tool_' + name, title: name }"></label>
+				</div></div>
+				<h4>Versions</h4>
+				<!-- ko foreach: $root.toolVersions -->
+					<div data-bind="if: tool === $parent">
+						<label>
+							<input type="checkbox" data-bind="checked: selected" style="vertical-align: top; margin-top: 2px;" />
+							<span data-bind="text: 'v' + version"></span>
+						</label>
+					</div>
+				<!-- /ko -->
 			</div>
 		<!-- /ko -->
 	</div>
-	<!-- ko foreach: models -->
-		<div class="box">
-			<div class="boxlabelo" style="pointer-events: auto;"><div class="boxlabel">
-				<input type="checkbox" data-bind="checked: selected, attr: { id: 'select_' + short }" style="vertical-align: top; margin-top: 3px;" />
-				<label data-bind="text: name, attr: { for: 'select_' + short }"></label>
-				(<a data-bind="text: short, attr: { href: 'index.html#' + short }"></a>)
-			</div></div>
-			<div style="display: inline-block; vertical-align: top; margin-right: 12px;">
-				<h4>Parameters</h4>
-				<!-- ko foreach: paramCombs -->
-					<div>
-						<label>
-							<input type="checkbox" data-bind="checked: selected" style="vertical-align: top; margin-top: 2px;" />
-							<span data-bind="text: name"></span>
-						</label>
-					</div>
-				<!-- /ko -->
+	<div class="box" style="column-width: 200px;">
+		<div class="boxlabelo" style="pointer-events: auto;"><div class="boxlabel">Models</div></div>
+		<!-- ko foreach: models -->
+			<div class="box" style="display: inline-block; width:100%;">
+				<div class="boxlabelo" style="pointer-events: auto; white-space: nowrap;"><div class="boxlabel" style="background: none;">
+					<table style="width: 100%; table-layout: fixed; margin-left: -0.5ex;">
+						<tr>
+							<td style="width: 3ex; padding-left: 0.5ex; background-color: #FFFFFF;">
+								<input type="checkbox" data-bind="checked: selected, attr: { id: 'select_model_' + short }" style="vertical-align: top; margin-top: 3px;" />
+							</td>
+							<td style="overflow: hidden; text-overflow: ellipsis;">
+								<span style="padding-right: 0.5ex; background-color: #FFFFFF;">
+									<label data-bind="text: name, attr: { for: 'select_model_' + short, title: name }"></label>
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div></div>
+				<div style="position: relative; left: 2.5ex; top: -0.5ex;">
+					(<a data-bind="text: short, attr: { href: 'index.html#' + short }" href=""></a>)
+				</div>
+				<div style="display: inline-block; vertical-align: top; margin-right: 12px;">
+					<h4>Parameters</h4>
+					<table style="width: 100%; table-layout: fixed;">
+						<tbody data-bind="foreach: paramCombs">
+							<tr>
+								<td style="width: 2.5ex;">
+									<input type="checkbox" data-bind="checked: selected, attr: { id: 'chkParamComb_' + model.short + '_' + short }" style="vertical-align: top; margin-top: 3px;" />
+								</td>
+								<td>
+									<label data-bind="attr: { for: 'chkParamComb_' + model.short + '_' + short }">
+										<div data-bind="text: name, attr: { title: name }" style="overflow-x: hidden; white-space: nowrap; text-overflow: ellipsis;"></div>
+									</label>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div style="display: inline-block; vertical-align: top; margin-right: 12px;">
+					<h4>Properties</h4>
+					<table style="width: 100%; table-layout: fixed;">
+						<tbody data-bind="foreach: properties">
+							<tr>
+								<td style="width: 2.5ex;">
+									<input type="checkbox" data-bind="checked: selected, attr: { id: 'chkProperty_' + model.short + '_' + name }" style="vertical-align: top; margin-top: 3px;" />
+								</td>
+								<td>
+									<label data-bind="attr: { for: 'chkProperty_' + model.short + '_' + name }">
+										<div data-bind="attr: { title: name }" style="overflow-x: hidden; white-space: nowrap; text-overflow: ellipsis;">
+											<span data-bind="text: name"></span>
+											<span data-bind="attr: { title: propertyTypeToLongString(type) }">(<span data-bind="text: propertyTypeToShortString(type)"></span>)</span>
+										</div>
+									</label>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-			<div style="display: inline-block; vertical-align: top; margin-right: 12px;">
-				<h4>Properties</h4>
-				<!-- ko foreach: properties -->
-					<div>
-						<label>
-							<input type="checkbox" data-bind="checked: selected" style="vertical-align: top; margin-top: 2px;" />
-							<span data-bind="text: name"></span>
-						</label>
-						<span data-bind="attr: { title: propertyTypeToLongString(type) }">(<span data-bind="text: propertyTypeToShortString(type)"></span>)</span>
-					</div>
-				<!-- /ko -->
-			</div>
-		</div>
-	<!-- /ko -->
+		<!-- /ko -->
+	</div>
 </div>
 
 <div class="box">
@@ -98,51 +137,59 @@
 </div>
 
 <!-- ko if: data() !== null -->
-	<div class="box" data-bind="with: data()">
+	<div class="box" data-bind="with: data()" style="margin-bottom: 64px;">
 		<div class="boxlabelo"><div class="boxlabel">Results</div></div>
 		<!-- ko if: display === "table" -->
 			<div data-bind="text: valuesCaption + ':'"></div>
-			<table id="results">
-				<thead>
-					<tr data-bind="if: $data.columnTopCaptions !== undefined">
-						<!-- ko if: $data.rowsPreCaption !== undefined -->
-							<th></th>
-						<!-- /ko -->
-						<!-- ko if: $data.rowsCaption !== undefined -->
-							<th></th>
-						<!-- /ko -->
-						<!-- ko foreach: columnTopCaptions -->
-							<th data-bind="text: caption, attr: { colspan: span }" style="text-align: center;"></th>
-						<!-- /ko -->
-					</tr>
-					<tr>
-						<!-- ko if: $data.rowsPreCaption !== undefined -->
-							<th data-bind="text: rowsPreCaption.caption"></th>
-						<!-- /ko -->
-						<!-- ko if: $data.rowsCaption !== undefined -->
-							<th data-bind="text: rowsCaption.caption"></th>
-						<!-- /ko -->
-						<!-- ko foreach: columnCaptions -->
-							<th data-bind="text: caption" style="text-align: center;"></th>
-						<!-- /ko -->
-					</tr>
-				</thead>
-				<tbody data-bind="foreach: rows">
-					<tr>
-						<!-- ko if: $data.preCaption !== undefined -->
-							<td data-bind="text: preCaption"></td>
-						<!-- /ko -->
-						<!-- ko if: $data.caption !== undefined -->
-							<td data-bind="text: caption"></td>
-						<!-- /ko -->
-						<!-- ko foreach: columnValues -->
-							<td style="text-align: right;">
-								<span data-bind="text: hasValue ? displayValue : ''"></span><span data-bind="visible: unit !== null, text: ' ' + unit"></span>
-							</td>
-						<!-- /ko -->
-					</tr>
-				</tbody>
-			</table>
+			<div style="overflow-x: auto; padding-bottom: 4px;">
+				<table id="results" style="white-space: nowrap;">
+					<thead>
+						<tr data-bind="if: $data.columnTopCaptions !== undefined">
+							<!-- ko if: $data.rowsPreCaption !== undefined -->
+								<th></th>
+							<!-- /ko -->
+							<!-- ko if: $data.rowsCaption !== undefined -->
+								<th></th>
+							<!-- /ko -->
+							<!-- ko foreach: columnTopCaptions -->
+								<th data-bind="text: caption, attr: { colspan: span }" style="text-align: center;"></th>
+							<!-- /ko -->
+						</tr>
+						<tr>
+							<!-- ko if: $data.rowsPreCaption !== undefined -->
+								<th>
+									<div data-bind="text: rowsPreCaption.caption" style="border-bottom: 1px solid #000000; padding: 0ex 1ex 0ex 0ex;"></div>
+								</th>
+							<!-- /ko -->
+							<!-- ko if: $data.rowsCaption !== undefined -->
+								<th>
+									<div data-bind="text: rowsCaption.caption" style="border-bottom: 1px solid #000000; padding: 0ex 1ex 0ex 0ex;"></div>
+								</th>
+							<!-- /ko -->
+							<!-- ko foreach: columnCaptions -->
+								<th style="text-align: center; padding: 0ex;">
+									<div data-bind="text: caption, style: { marginLeft: isFirst ? '1ex' : '0ex', marginRight: isLast ? '1ex' : '0ex' }" style="border-bottom: 1px solid #000000; padding: 0ex 1ex;"></div>
+								</th>
+							<!-- /ko -->
+						</tr>
+					</thead>
+					<tbody data-bind="foreach: rows">
+						<tr>
+							<!-- ko if: $data.preCaption !== undefined -->
+								<td data-bind="text: preCaption"></td>
+							<!-- /ko -->
+							<!-- ko if: $data.caption !== undefined -->
+								<td data-bind="text: caption"></td>
+							<!-- /ko -->
+							<!-- ko foreach: columnValues -->
+								<td style="text-align: right;">
+									<span data-bind="text: hasValue ? displayValue : ''"></span><span data-bind="visible: unit !== null, text: ' ' + unit"></span>
+								</td>
+							<!-- /ko -->
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		<!-- /ko -->
 		<!-- ko if: display !== "table" -->
 			<div id="chart" style="height: 500px;"></div>
