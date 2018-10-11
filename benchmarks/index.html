@@ -210,7 +210,7 @@
 								<table data-bind="foreach: results" style="margin-bottom: 6px;">
 									<tr>
 										<td><span data-bind="text: property" class="tt"></span>:</td>
-										<td data-bind="text: value" style="text-align: right;"></td>
+										<td data-bind="text: resultValueToString(value)" style="text-align: right;"></td>
 										<td data-bind="text: '(' + note + ')'"></td>
 									</tr>
 								</table>
@@ -289,7 +289,7 @@
 								<tr>
 									<td data-bind="text: name.substr(0, 1).toUpperCase() + name.substr(1) + ':'"></td>
 									<td>
-										<span data-bind="text: (typeof value === 'number' ? value.toString() : value) + ($data.unit === undefined ? '' : ' ' + unit)"></span>
+										<span data-bind="text: resultValueToString(value) + ($data.unit === undefined ? '' : ' ' + unit)"></span>
 									</td>
 								</tr>
 							</table>

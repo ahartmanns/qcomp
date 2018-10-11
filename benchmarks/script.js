@@ -42,3 +42,9 @@ function CapitaliseFirst(str)
 {
 	return str.length === 0 ? str : str.charAt(0).toUpperCase() + str.slice(1)
 }
+function resultValueToString(value)
+{
+	if(typeof value === "object" && value.hasOwnProperty("approx")) return value["approx"];
+	if(typeof value === 'number') return value.toString();
+	return value;
+}
