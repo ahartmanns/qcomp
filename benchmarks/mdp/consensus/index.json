@@ -1,0 +1,248 @@
+{
+	"name": "Randomized Consensus Protocol",
+	"short": "consensus",
+	"type": "MDP",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"James Aspnes <james.aspnes@yale.edu>",
+		"Maurice Herlihy <mph@cs.brown.edu>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1016/0196-6774(90)90021-6",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. The randomised consensus protocol consists of `N´ asynchronous processes that communicate via read/write shared registers. The processes proceed through possibly unboundedly many rounds. At each round, they read the status of all other processes and attempt to agree. The agreement attempt involves a distributed random walk (`K´ bounds on random walk): when the processes disagree, they use a shared coin-flipping protocol to decide their next preferred value. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/consensus.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "Parameter N",
+			"type": "positive integer"
+		},
+		{
+			"name": "K",
+			"kind": "open",
+			"description": "Parameter K",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "c1",
+			"description": "With probability 1, all processes finish the protocol.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "c2",
+			"description": "Minimum probability that the protocol finishes with all coins equal to v=1.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "disagree",
+			"description": "The max probability of finishing protocol with coins not all equal.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "steps_max",
+			"description": "The maximum expected steps to finish.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "steps_min",
+			"description": "Minimum expected steps to finish.",
+			"type": "exp-reward"
+		}
+	],
+	"files": [
+		{
+			"file": "consensus.2.jani",
+			"original-file": [
+				"consensus.2.prism",
+				"consensus.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism consensus.2.prism --tojani consensus.2.jani --prop consensus.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 2
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "K",
+							"value": 2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "K",
+							"value": 4
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "K",
+							"value": 8
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "K",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "consensus.4.jani",
+			"original-file": [
+				"consensus.4.prism",
+				"consensus.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism consensus.4.prism --tojani consensus.4.jani --prop consensus.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 4
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "K",
+							"value": 2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "K",
+							"value": 4
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "consensus.6.jani",
+			"original-file": [
+				"consensus.6.prism",
+				"consensus.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism consensus.6.prism --tojani consensus.6.jani --prop consensus.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 6
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "K",
+							"value": 2
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "consensus.8.jani",
+			"original-file": [
+				"consensus.8.prism",
+				"consensus.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism consensus.8.prism --tojani consensus.8.jani --prop consensus.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 8
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "K",
+							"value": 2
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "consensus.10.jani",
+			"original-file": [
+				"consensus.10.prism",
+				"consensus.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism consensus.10.prism --tojani consensus.10.jani --prop consensus.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 10
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "K",
+							"value": 2
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}

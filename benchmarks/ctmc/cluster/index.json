@@ -1,0 +1,253 @@
+{
+	"name": "Workstation Cluster",
+	"short": "cluster",
+	"type": "CTMC",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Boudewijn R. Haverkort <b.r.h.m.haverkort@utwente.nl>",
+		"Holger Hermanns <hermanns@cs.uni-saarland.de>",
+		"Joost-Pieter Katoen <katoen@cs.rwth-aachen.de>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1109/RELDI.2000.885410",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. It is based on a cluster of workstations, taken from [0]. The system comprises two sub-clusters with `N´ workstations in each, connected in a star topology. The switches connecting each sub-cluster are joined by a central backbone. All components can break down and there is a single repair unit to service all components. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/cluster.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "open",
+			"description": "Parameter N",
+			"type": "positive integer"
+		},
+		{
+			"name": "T",
+			"kind": "open",
+			"description": "Parameter T",
+			"type": "positive integer"
+		},
+		{
+			"name": "t",
+			"kind": "open",
+			"description": "Parameter t",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "below_min",
+			"description": "The expected time the system spends below minimum QoS until time T.",
+			"type": "exp-reward-time-bounded"
+		},
+		{
+			"name": "operational",
+			"description": "Percentage of operational workstations at time t.",
+			"type": "exp-reward-time-instant"
+		},
+		{
+			"name": "premium_steady",
+			"description": "Long-run probability that premium QoS will be delivered.",
+			"type": "steady-state-prob"
+		},
+		{
+			"name": "qos1",
+			"description": "The probability that QoS drops below minimum quality within T time units.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "qos2",
+			"description": "The probability of facing insufficient QoS after t time units.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "qos3",
+			"description": "TODO_qos3",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "qos4",
+			"description": "The probability that it takes more than T time units to recover from insufficient QoS.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "repairs",
+			"description": "The expected number of repairs by time T.",
+			"type": "exp-reward-time-bounded"
+		}
+	],
+	"files": [
+		{
+			"file": "cluster.jani",
+			"original-file": [
+				"cluster.prism",
+				"cluster.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism cluster.prism --tojani cluster.jani --prop cluster.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 2
+						},
+						{
+							"name": "T",
+							"value": 2000
+						},
+						{
+							"name": "t",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 4
+						},
+						{
+							"name": "T",
+							"value": 2000
+						},
+						{
+							"name": "t",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 8
+						},
+						{
+							"name": "T",
+							"value": 2000
+						},
+						{
+							"name": "t",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 16
+						},
+						{
+							"name": "T",
+							"value": 2000
+						},
+						{
+							"name": "t",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 32
+						},
+						{
+							"name": "T",
+							"value": 2000
+						},
+						{
+							"name": "t",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 64
+						},
+						{
+							"name": "T",
+							"value": 2000
+						},
+						{
+							"name": "t",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 128
+						},
+						{
+							"name": "T",
+							"value": 2000
+						},
+						{
+							"name": "t",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 256
+						},
+						{
+							"name": "T",
+							"value": 2000
+						},
+						{
+							"name": "t",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 512
+						},
+						{
+							"name": "T",
+							"value": 2000
+						},
+						{
+							"name": "t",
+							"value": 20
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}

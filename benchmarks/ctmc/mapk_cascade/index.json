@@ -1,0 +1,173 @@
+{
+	"name": "MAPK Cascade",
+	"short": "mapk_cascade",
+	"type": "CTMC",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Chi-Ying F. Huang <cyhuang5@ym.edu.tw>",
+		"James E. Ferrell <James.Ferrell@stanford.edu>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1073/pnas.93.19.10078",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. The MAP (Mitogen-Activated Protien) Kinases are involved in a pathway through which information is sent to the nucleus. It is one of the most important signalling pathways since it plays a pivotal role in the molecular-signalling that governs the growth, proliferation and survival of many cell types. The MAPK cascade consists of a MAPK Kinase Kinase (MAPKKK), MAPK Kinase (MAPKK) and a MAPK. The cascade is initialised through the phosphorylation of MAPKKK, which then activates MAPKK through the phosphorylation at two serine residues and this then activates MAPK through the phosphorylation at theronine and tyrosine residues. To reduce the state space we employ a population-based approach where the number of each type of molecule or species is modelled. The initial amount of `E1´, `E2´, MAPK and MAPKK phospatase (`M´) and MAPK/MAPKK and MAPKKK `N´ is specified as a parameter. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/mapk_cascade.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "open",
+			"description": "Parameter N",
+			"type": "positive integer"
+		},
+		{
+			"name": "T",
+			"kind": "open",
+			"description": "Parameter T",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "activated_T",
+			"description": "The expected amount of activated MAPK at time T.",
+			"type": "exp-reward-time-instant"
+		},
+		{
+			"name": "activated_time",
+			"description": "The expected time until all MAPK are activated at the same time instant.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "reactions",
+			"description": "The expected number of reactions between MAPK and MAKK by time T.",
+			"type": "exp-reward-time-bounded"
+		}
+	],
+	"files": [
+		{
+			"file": "mapk_cascade.jani",
+			"original-file": [
+				"mapk_cascade.prism",
+				"mapk_cascade.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism mapk_cascade.prism --tojani mapk_cascade.jani --prop mapk_cascade.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1
+						},
+						{
+							"name": "T",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 2
+						},
+						{
+							"name": "T",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 3
+						},
+						{
+							"name": "T",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 4
+						},
+						{
+							"name": "T",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 5
+						},
+						{
+							"name": "T",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 6
+						},
+						{
+							"name": "T",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 7
+						},
+						{
+							"name": "T",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 8
+						},
+						{
+							"name": "T",
+							"value": 30
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}

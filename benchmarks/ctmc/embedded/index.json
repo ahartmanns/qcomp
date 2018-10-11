@@ -1,0 +1,217 @@
+{
+	"name": "Embedded Control System",
+	"short": "embedded",
+	"type": "CTMC",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Jogesh K. Muppala <muppala@cse.ust.hk>",
+		"Gianfranco Ciardo <ciardo@iastate.edu>",
+		"Kishor S. Trivedi <kst@ee.duke.edu>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.16.1102",
+	"description": "This model is part of the PRISM Benchmark Suite [1] and closely based on the one in [0]. The system comprises an input processor which reads and processes data from three sensors. It is then polled by a main processor which, in turn, passes instructions to an output processor. The output processor takes the instructions it receives and uses them to control two actuators. A bus connects the three processors together. Each of them can fail and cycles are skipped, which after `MAX_COUNT´skipped cycles leads to a shut down. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/embedded.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "MAX_COUNT",
+			"kind": "open",
+			"description": "Parameter MAX_COUNT",
+			"type": "positive integer"
+		},
+		{
+			"name": "T",
+			"kind": "open",
+			"description": "Parameter T",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "actuators",
+			"description": "The probability of actuator failure.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "actuators_T",
+			"description": "The probability of actuator failure within T hours.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "danger_T",
+			"description": "The expected time spent in \"danger\" by time T (hours).",
+			"type": "exp-reward-time-bounded"
+		},
+		{
+			"name": "danger_time",
+			"description": "The expected time spent in \"danger\" before \"down\".",
+			"type": "exp-reward"
+		},
+		{
+			"name": "down_T",
+			"description": "The expected time spent in \"down\" by time T (hours).",
+			"type": "exp-reward-time-bounded"
+		},
+		{
+			"name": "failure_T",
+			"description": "The probability of any failure occurring within T hours.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "io",
+			"description": "The probability of IO failure.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "io_T",
+			"description": "The probability of I/O failure within T hours.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "main",
+			"description": "The probability of main failure.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "main_T",
+			"description": "The probability of main system failure within T hours.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "sensors",
+			"description": "The probability of sensor failure.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "sensors_T",
+			"description": "The probability of sensor failure within T hours.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "up_T",
+			"description": "The expected time spent in \"up\" by time T (hours).",
+			"type": "exp-reward-time-bounded"
+		},
+		{
+			"name": "up_time",
+			"description": "The expected time spent in \"up\" before \"down\".",
+			"type": "exp-reward"
+		}
+	],
+	"files": [
+		{
+			"file": "embedded.jani",
+			"original-file": [
+				"embedded.prism",
+				"embedded.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism embedded.prism --tojani embedded.jani --prop embedded.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "MAX_COUNT",
+							"value": 2
+						},
+						{
+							"name": "T",
+							"value": 12
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "MAX_COUNT",
+							"value": 3
+						},
+						{
+							"name": "T",
+							"value": 12
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "MAX_COUNT",
+							"value": 4
+						},
+						{
+							"name": "T",
+							"value": 12
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "MAX_COUNT",
+							"value": 5
+						},
+						{
+							"name": "T",
+							"value": 12
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "MAX_COUNT",
+							"value": 6
+						},
+						{
+							"name": "T",
+							"value": 12
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "MAX_COUNT",
+							"value": 7
+						},
+						{
+							"name": "T",
+							"value": 12
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "MAX_COUNT",
+							"value": 8
+						},
+						{
+							"name": "T",
+							"value": 12
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}
