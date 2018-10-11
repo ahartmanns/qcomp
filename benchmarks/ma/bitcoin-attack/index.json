@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-07-31",
 	"version-history": [
-		{ "version": 1, "date": "2018-07-31", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-07-31",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
@@ -14,8 +18,18 @@
 	"description": "A Modest MA model to optimise the Andresen attack on Bitcoin as presented in [0]. A malicious mining pool that controls `MALICIOUS´ percent of the global Bitcoin hash rate tries to fork the blockchain (e.g. to double-spend). It succeeds if the length of its own fork is at least the confirmation depth `CD´ and higher than the length of the chain computed by the honest miners.",
 	"challenge": "optimal strategy over long time bound",
 	"parameters": [
-		{ "name": "MALICIOUS", "kind": "open", "description": "Percentage of hash rate in malicious pool", "type": "positive integer" },
-		{ "name": "CD", "kind": "open", "description": "Confirmation depth", "type": "positive integer" }
+		{
+			"name": "MALICIOUS",
+			"kind": "open",
+			"description": "Percentage of hash rate in malicious pool",
+			"type": "positive integer"
+		},
+		{
+			"name": "CD",
+			"kind": "open",
+			"description": "Confirmation depth",
+			"type": "positive integer"
+		}
 	],
 	"files": [
 		{
@@ -30,11 +44,35 @@
 			"open-parameter-values": [
 				{
 					"values": [
-						{ "name": "MALICIOUS", "value": 20 },
-						{ "name": "CD", "value": 6 }
+						{
+							"name": "MALICIOUS",
+							"value": 20
+						},
+						{
+							"name": "CD",
+							"value": 6
+						}
 					],
 					"states": [
-						{ "number": 177, "note": "mcsta" }
+						{
+							"number": 177,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 252
+						}
+					],
+					"results": [
+						{
+							"property": "T_MWinMin",
+							"value": {
+								"approx": 3736.5910586927494,
+								"num": 4194984840,
+								"den": 1122677
+							},
+							"note": "Storm.exact"
+						}
 					]
 				}
 			]
@@ -53,6 +91,10 @@
 		}
 	],
 	"results": [
-		"results/mcsta.20-6.json"
+		"results/mcsta.20-6.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.20-6.2018-10-03.json"
+		}
 	]
 }

@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-07-31",
 	"version-history": [
-		{ "version": 1, "date": "2018-07-31", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-07-31",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
@@ -17,7 +21,12 @@
 		"http://www.prismmodelchecker.org/casestudies/wlan.php"
 	],
 	"parameters": [
-		{ "name": "K", "kind": "open", "description": "Maximum value of backoff counters", "type": "positive integer" }
+		{
+			"name": "K",
+			"kind": "open",
+			"description": "Maximum value of backoff counters",
+			"type": "positive integer"
+		}
 	],
 	"files": [
 		{
@@ -33,10 +42,50 @@
 			"open-parameter-values": [
 				{
 					"values": [
-						{ "name": "K", "value": 2 }
+						{
+							"name": "K",
+							"value": 2
+						}
 					],
 					"states": [
-						{ "number": 3283371, "note": "mcsta, digital clocks" }
+						{
+							"number": 3283371,
+							"note": "mcsta, digital clocks"
+						},
+						{
+							"note": "Storm",
+							"number": 3283371
+						}
+					],
+					"results": [
+						{
+							"property": "P_1",
+							"value": 1.0,
+							"note": "Storm.exact"
+						},
+						{
+							"property": "P_1_1",
+							"value": 1.0,
+							"note": "Storm.exact"
+						},
+						{
+							"property": "P_min",
+							"value": {
+								"approx": 0.0390625,
+								"num": 5,
+								"den": 128
+							},
+							"note": "Storm.exact"
+						},
+						{
+							"property": "P_max",
+							"value": {
+								"approx": 0.0625,
+								"num": 1,
+								"den": 16
+							},
+							"note": "Storm.exact"
+						}
 					]
 				}
 			]
@@ -90,6 +139,10 @@
 		}
 	],
 	"results": [
-		"results/mcsta.2.json"
+		"results/mcsta.2.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.2.2018-10-08.json"
+		}
 	]
 }

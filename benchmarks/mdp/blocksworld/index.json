@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-07-31",
 	"version-history": [
-		{ "version": 1, "date": "2018-07-31", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-07-31",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -17,64 +21,107 @@
 	],
 	"notes": "IPPC 2008 benchmark",
 	"parameters": [
-		{ "name": "n", "kind": "file", "description": "Number of blocks", "type": "positive integer" }
+		{
+			"name": "n",
+			"kind": "file",
+			"description": "Number of blocks",
+			"type": "positive integer"
+		}
 	],
 	"files": [
 		{
 			"file": "blocksworld.5.jani",
-			"original-file": ["p01-c0-C0-g1-n5-domain.pddl", "p01-c0-C0-g1-n5-problem.pddl"],
+			"original-file": [
+				"p01-c0-C0-g1-n5-domain.pddl",
+				"p01-c0-C0-g1-n5-problem.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py p01-c0-C0-g1-n5-domain.pddl p01-c0-C0-g1-n5-problem.pddl --jani blocksworld.5.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "n", "value": 5 }
+				{
+					"name": "n",
+					"value": 5
+				}
 			],
 			"open-parameter-values": [
 				{
 					"states": [
-							{ "number": 1125, "note": "mcsta" }
+						{
+							"number": 1125,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 1125
+						}
+					],
+					"results": [
+						{
+							"property": "goal",
+							"value": 1,
+							"note": "Storm.exact"
+						}
 					]
 				}
 			]
 		},
 		{
 			"file": "blocksworld.10.jani",
-			"original-file": ["p05-c0-C0-g1-n10-domain.pddl", "p05-c0-C0-g1-n10-problem.pddl"],
+			"original-file": [
+				"p05-c0-C0-g1-n10-domain.pddl",
+				"p05-c0-C0-g1-n10-problem.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py p05-c0-C0-g1-n10-domain.pddl p05-c0-C0-g1-n10-problem.pddl --jani blocksworld.10.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "n", "value": 10 }
+				{
+					"name": "n",
+					"value": 10
+				}
 			],
 			"open-parameter-values": []
 		},
 		{
 			"file": "blocksworld.14.jani",
-			"original-file": ["p09-c0-C0-g1-n14-domain.pddl", "p09-c0-C0-g1-n14-problem.pddl"],
+			"original-file": [
+				"p09-c0-C0-g1-n14-domain.pddl",
+				"p09-c0-C0-g1-n14-problem.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py p09-c0-C0-g1-n14-domain.pddl p09-c0-C0-g1-n14-problem.pddl --jani blocksworld.14.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "n", "value": 14 }
+				{
+					"name": "n",
+					"value": 14
+				}
 			],
 			"open-parameter-values": []
 		},
 		{
 			"file": "blocksworld.18.jani",
-			"original-file": ["p13-c0-C0-g1-n18-domain.pddl", "p13-c0-C0-g1-n18-problem.pddl"],
+			"original-file": [
+				"p13-c0-C0-g1-n18-domain.pddl",
+				"p13-c0-C0-g1-n18-problem.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py p13-c0-C0-g1-n18-domain.pddl p13-c0-C0-g1-n18-problem.pddl --jani blocksworld.18.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "n", "value": 18 }
+				{
+					"name": "n",
+					"value": 18
+				}
 			],
 			"open-parameter-values": []
 		}
@@ -87,6 +134,10 @@
 		}
 	],
 	"results": [
-		"results/mcsta.5.json"
+		"results/mcsta.5.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5.2018-10-03.json"
+		}
 	]
 }

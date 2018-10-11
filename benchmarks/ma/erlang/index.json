@@ -6,18 +6,31 @@
 	"version": 1,
 	"date": "2018-08-13",
 	"version-history": [
-		{ "version": 1, "date": "2018-08-13", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-08-13",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1007/978-3-642-12002-2_5",
 	"description": "A simple interactive Markov chain model where the goal state can be reached via a path with an Erlang(`K´, `R´)-distributed delay. The original model was translated from a MAPA file.",
 	"notes": "scalable sanity check model",
-	"references": [
-	],
+	"references": [],
 	"parameters": [
-		{ "name": "K", "kind": "open", "description": "The shape parameter of the Erlang distribution", "type": "positive integer" },
-		{ "name": "R", "kind": "open", "description": "The rate parameter of the Erlang distribution", "type": "positive real number" }
+		{
+			"name": "K",
+			"kind": "open",
+			"description": "The shape parameter of the Erlang distribution",
+			"type": "positive integer"
+		},
+		{
+			"name": "R",
+			"kind": "open",
+			"description": "The rate parameter of the Erlang distribution",
+			"type": "positive real number"
+		}
 	],
 	"files": [
 		{
@@ -32,29 +45,116 @@
 			"open-parameter-values": [
 				{
 					"values": [
-						{ "name": "K", "value": 10 },
-						{ "name": "R", "value": 10 }
+						{
+							"name": "K",
+							"value": 10
+						},
+						{
+							"name": "R",
+							"value": 10
+						}
 					],
 					"states": [
-						{ "number": 29, "note": "mcsta" }
+						{
+							"number": 29,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 67
+						}
+					],
+					"results": [
+						{
+							"property": "PminReach",
+							"value": {
+								"approx": 0.5,
+								"num": 1,
+								"den": 2
+							},
+							"note": "Storm.exact"
+						},
+						{
+							"property": "TminReach",
+							"value": 2,
+							"note": "Storm.exact"
+						}
 					]
 				},
 				{
 					"values": [
-						{ "name": "K", "value": 5000 },
-						{ "name": "R", "value": 10 }
+						{
+							"name": "K",
+							"value": 5000
+						},
+						{
+							"name": "R",
+							"value": 10
+						}
 					],
 					"states": [
-						{ "number": 10009, "note": "mcsta" }
+						{
+							"number": 10009,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 20027
+						}
+					],
+					"results": [
+						{
+							"property": "PminReach",
+							"value": {
+								"approx": 0.5,
+								"num": 1,
+								"den": 2
+							},
+							"note": "Storm.exact"
+						},
+						{
+							"property": "TminReach",
+							"value": 501,
+							"note": "Storm.exact"
+						}
 					]
 				},
 				{
 					"values": [
-						{ "name": "K", "value": 5000 },
-						{ "name": "R", "value": 100 }
+						{
+							"name": "K",
+							"value": 5000
+						},
+						{
+							"name": "R",
+							"value": 100
+						}
 					],
 					"states": [
-						{ "number": 10009, "note": "mcsta" }
+						{
+							"number": 10009,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 20027
+						}
+					],
+					"results": [
+						{
+							"property": "PminReach",
+							"value": {
+								"approx": 0.5,
+								"num": 1,
+								"den": 2
+							},
+							"note": "Storm.exact"
+						},
+						{
+							"property": "TminReach",
+							"value": 51,
+							"note": "Storm.exact"
+						}
 					]
 				}
 			]
@@ -75,6 +175,18 @@
 	"results": [
 		"results/mcsta.10-10.json",
 		"results/mcsta.5000-10.json",
-		"results/mcsta.5000-100.json"
+		"results/mcsta.5000-100.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.10-10.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5000-10.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5000-100.2018-10-03.json"
+		}
 	]
 }
