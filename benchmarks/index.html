@@ -254,6 +254,27 @@
 						Submitted by <a data-bind="text: submitter.name, attr: { href: 'mailto:' + submitter.email }"></a>.
 					</p>
 					
+					<!-- ko if: $data.preprocessing !== undefined -->
+						<div class="box">
+							<div class="boxlabelo"><div class="boxlabelc">Preprocessing</div></div>
+							<ul data-bind="foreach: preprocessing" style="margin-top: 0.75ex;">
+								<li>
+									<span data-bind="text: note"></span>
+									<!-- ko if: $data.tool !== undefined -->
+										with
+										<!-- ko if: $data.url !== undefined --><a data-bind="text: tool, attr: { href: url }"></a><!-- /ko -->
+										<!-- ko if: $data.url === undefined --><span data-bind="text: tool"></span><!-- /ko -->
+										<!-- ko if: $data.version !== undefined -->version <span data-bind="text: version"></span><!-- /ko -->
+									<!-- /ko -->
+									<!-- ko if: $data.command !== undefined -->
+										using the following command:
+										<div data-bind="text: command" class="tt" style="text-align: left; text-indent: -3ex; padding-left: 3ex;"></div>
+										<!-- /ko -->
+							</ul>
+						</div>
+					
+					<!-- /ko -->
+					
 					<!-- Date, tool and system information -->
 					<p>
 						Results obtained on <span data-bind="text: date"></span>
