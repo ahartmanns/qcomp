@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-06-05",
 	"version-history": [
-		{ "version": 1, "date": "2018-06-05", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-06-05",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
@@ -17,9 +21,24 @@
 		"https://doi.org/10.1007/978-3-642-04081-8_23"
 	],
 	"parameters": [
-		{ "name": "H", "kind": "file", "description": "Number of hosts", "type": "positive integer" },
-		{ "name": "K", "kind": "file", "description": "Maximum value for backoff counter", "type": "positive integer" },
-		{ "name": "N", "kind": "open", "description": "Per-host number of tries before giving up", "type": "positive integer" }
+		{
+			"name": "H",
+			"kind": "file",
+			"description": "Number of hosts",
+			"type": "positive integer"
+		},
+		{
+			"name": "K",
+			"kind": "file",
+			"description": "Maximum value for backoff counter",
+			"type": "positive integer"
+		},
+		{
+			"name": "N",
+			"kind": "open",
+			"description": "Per-host number of tries before giving up",
+			"type": "positive integer"
+		}
 	],
 	"files": [
 		{
@@ -32,16 +51,52 @@
 				"command": "moconv.exe beb.3.modest -O beb.3-4.jani -E \"K=4\" --unroll-distrs"
 			},
 			"file-parameter-values": [
-				{ "name": "H", "value": 3 },
-				{ "name": "K", "value": 4 }
+				{
+					"name": "H",
+					"value": 3
+				},
+				{
+					"name": "K",
+					"value": 4
+				}
 			],
 			"open-parameter-values": [
 				{
 					"values": [
-						{ "name": "N", "value": 3 }
+						{
+							"name": "N",
+							"value": 3
+						}
 					],
 					"states": [
-						{ "number": 4528, "note": "mcsta" }
+						{
+							"number": 4528,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 4660
+						}
+					],
+					"results": [
+						{
+							"property": "LineSeized",
+							"value": {
+								"approx": 0.9166259765625,
+								"num": 7509,
+								"den": 8192
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "GaveUp",
+							"value": {
+								"approx": 0.0833740234375,
+								"num": 683,
+								"den": 8192
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -56,16 +111,52 @@
 				"command": "moconv.exe beb.4.modest -O beb.4-8.jani -E \"K=8\" --unroll-distrs"
 			},
 			"file-parameter-values": [
-				{ "name": "H", "value": 4 },
-				{ "name": "K", "value": 8 }
+				{
+					"name": "H",
+					"value": 4
+				},
+				{
+					"name": "K",
+					"value": 8
+				}
 			],
 			"open-parameter-values": [
 				{
 					"values": [
-						{ "name": "N", "value": 7 }
+						{
+							"name": "N",
+							"value": 7
+						}
 					],
 					"states": [
-						{ "number": 19401892, "note": "mcsta" }
+						{
+							"number": 19401892,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 20186888
+						}
+					],
+					"results": [
+						{
+							"property": "LineSeized",
+							"value": {
+								"approx": 0.999885498452205,
+								"num": 1180456441149525318505,
+								"den": 1180591620717411303424
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "GaveUp",
+							"value": {
+								"approx": 0.00011450154779502857,
+								"num": 135179567885984919,
+								"den": 1180591620717411303424
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -80,16 +171,28 @@
 				"command": "moconv.exe beb.5.modest -O beb.5-16.jani -E \"K=16\" --unroll-distrs"
 			},
 			"file-parameter-values": [
-				{ "name": "H", "value": 5 },
-				{ "name": "K", "value": 16 }
+				{
+					"name": "H",
+					"value": 5
+				},
+				{
+					"name": "K",
+					"value": 16
+				}
 			],
 			"open-parameter-values": [
 				{
 					"values": [
-						{ "name": "N", "value": 15 }
+						{
+							"name": "N",
+							"value": 15
+						}
 					],
 					"states": [
-						{ "number": 1842013522945, "note": "Storm/dd" }
+						{
+							"number": 1842013522945,
+							"note": "Storm/dd"
+						}
 					]
 				}
 			]
@@ -104,16 +207,28 @@
 				"command": "moconv.exe beb.6.modest -O beb.9-16.jani -E \"K=16\" --unroll-distrs"
 			},
 			"file-parameter-values": [
-				{ "name": "H", "value": 6 },
-				{ "name": "K", "value": 16 }
+				{
+					"name": "H",
+					"value": 6
+				},
+				{
+					"name": "K",
+					"value": 16
+				}
 			],
 			"open-parameter-values": [
 				{
 					"values": [
-						{ "name": "N", "value": 15 }
+						{
+							"name": "N",
+							"value": 15
+						}
 					],
 					"states": [
-						{ "number": 361667872016064, "note": "Storm/dd" }
+						{
+							"number": 361667872016064,
+							"note": "Storm/dd"
+						}
 					]
 				}
 			]
@@ -133,6 +248,14 @@
 	],
 	"results": [
 		"results/mcsta.3-4-3.json",
-		"results/mcsta.4-8-7.json"
+		"results/mcsta.4-8-7.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3-4-3.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.4-8-7.2018-10-03.json"
+		}
 	]
 }

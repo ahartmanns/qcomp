@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-08-01",
 	"version-history": [
-		{ "version": 1, "date": "2018-08-01", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-08-01",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
@@ -42,7 +46,10 @@
 	"files": [
 		{
 			"file": "haddad-monmege.jani",
-			"original-file": [ "haddad-monmege.pm", "haddad-monmege.prctl" ],
+			"original-file": [
+				"haddad-monmege.pm",
+				"haddad-monmege.prctl"
+			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.4 (dev)",
@@ -145,8 +152,17 @@
 		}
 	],
 	"results": [
-		{ "file": "results/Storm.20-0.7.json", "reference": true },
-		{ "file": "results/Storm.100-0.7.json", "reference": true },
-		{ "file": "results/Storm.300-0.7.json", "reference": true }
+		{
+			"file": "results/Storm.exact.20-0.7.2018-10-03.json",
+			"reference": true
+		},
+		{
+			"file": "results/Storm.exact.100-0.7.2018-10-03.json",
+			"reference": true
+		},
+		{
+			"file": "results/Storm.exact.300-0.7.2018-10-03.json",
+			"reference": true
+		}
 	]
 }

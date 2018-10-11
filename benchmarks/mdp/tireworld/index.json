@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-07-31",
 	"version-history": [
-		{ "version": 1, "date": "2018-07-31", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-07-31",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -18,82 +22,160 @@
 	],
 	"notes": "IPPC 2006 benchmark",
 	"parameters": [
-		{ "name": "n", "kind": "file", "description": "Number of locations", "type": "positive integer" }
+		{
+			"name": "n",
+			"kind": "file",
+			"description": "Number of locations",
+			"type": "positive integer"
+		}
 	],
 	"files": [
 		{
 			"file": "tireworld.17.jani",
-			"original-file": ["domain.pddl", "p01.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p01.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p01.pddl --jani tireworld.17.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "n", "value": 17 }
+				{
+					"name": "n",
+					"value": 17
+				}
 			],
 			"open-parameter-values": [
 				{
 					"states": [
-							{ "number":   8670, "note": "mcsta" }
-						]
+						{
+							"number": 8670,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 8670
+						}
+					],
+					"results": [
+						{
+							"property": "goal",
+							"value": {
+								"approx": 0.23328,
+								"num": 729,
+								"den": 3125
+							},
+							"note": "Storm/exact"
+						}
+					]
 				}
 			]
 		},
 		{
 			"file": "tireworld.25.jani",
-			"original-file": ["domain.pddl", "p05.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p05.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p05.pddl --jani tireworld.25.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "n", "value": 25 }
+				{
+					"name": "n",
+					"value": 25
+				}
 			],
 			"open-parameter-values": [
 				{
 					"states": [
-							{ "number": 196560, "note": "mcsta" }
-						]
+						{
+							"number": 196560,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 196560
+						}
+					],
+					"results": [
+						{
+							"property": "goal",
+							"value": 1,
+							"note": "Storm/exact"
+						}
+					]
 				}
 			]
 		},
 		{
 			"file": "tireworld.35.jani",
-			"original-file": ["domain.pddl", "p10.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p10.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p10.pddl --jani tireworld.35.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "n", "value": 35 }
+				{
+					"name": "n",
+					"value": 35
+				}
 			],
 			"open-parameter-values": [
 				{
 					"states": [
-							{ "number": 9174970, "note": "mcsta" }
-						]
+						{
+							"number": 9174970,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 9174970
+						}
+					],
+					"results": [
+						{
+							"property": "goal",
+							"value": 1,
+							"note": "Storm/exact"
+						}
+					]
 				}
 			]
 		},
 		{
 			"file": "tireworld.45.jani",
-			"original-file": ["domain.pddl", "p15.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p15.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p15.pddl --jani tireworld.45.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "n", "value": 45 }
+				{
+					"name": "n",
+					"value": 45
+				}
 			],
 			"open-parameter-values": [
 				{
 					"states": [
-							{ "number": 46137256, "note": "mcsta" }
-						]
+						{
+							"number": 46137256,
+							"note": "mcsta"
+						}
+					]
 				}
 			]
 		}
@@ -109,6 +191,18 @@
 		"results/mcsta.17.json",
 		"results/mcsta.25.json",
 		"results/mcsta.35.json",
-		"results/mcsta.45.json"
+		"results/mcsta.45.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.17.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.25.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.35.2018-10-03.json"
+		}
 	]
 }

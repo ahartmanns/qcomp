@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-08-13",
 	"version-history": [
-		{ "version": 1, "date": "2018-08-13", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-08-13",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
@@ -78,6 +82,26 @@
 							"note": "Storm",
 							"number": 117
 						}
+					],
+					"results": [
+						{
+							"property": "completiontime",
+							"value": {
+								"approx": 1.6,
+								"num": 8,
+								"den": 5
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "avgtime",
+							"value": {
+								"approx": 0.9,
+								"num": 9,
+								"den": 10
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -111,6 +135,26 @@
 						{
 							"note": "Storm",
 							"number": 16439
+						}
+					],
+					"results": [
+						{
+							"property": "completiontime",
+							"value": {
+								"approx": 2.4562007597384192,
+								"num": 4852666717,
+								"den": 1975680000
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "avgtime",
+							"value": {
+								"approx": 1.2857656675170068,
+								"num": 60482417,
+								"den": 47040000
+							},
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -146,6 +190,26 @@
 							"note": "Storm",
 							"number": 1896568
 						}
+					],
+					"results": [
+						{
+							"property": "completiontime",
+							"value": {
+								"approx": 3.440139110688588,
+								"num": 17761818019843,
+								"den": 5163110400000
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "avgtime",
+							"value": {
+								"approx": 1.9523026690756022,
+								"num": 359998364809,
+								"den": 184396800000
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -157,6 +221,18 @@
 		"results/mcsta.10-3.json",
 		"results/Storm.10-3.json",
 		"results/mcsta.15-3.json",
-		"results/Storm.15-3.json"
+		"results/Storm.15-3.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5-2.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.10-3.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.15-3.2018-10-03.json"
+		}
 	]
 }

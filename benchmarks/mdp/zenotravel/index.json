@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-07-31",
 	"version-history": [
-		{ "version": 1, "date": "2018-07-31", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-07-31",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -18,79 +22,153 @@
 	],
 	"notes": "IPPC 2008 benchmark",
 	"parameters": [
-		{ "name": "c", "kind": "file", "description": "Number of cities", "type": "positive integer" },
-		{ "name": "p", "kind": "file", "description": "Number of persons", "type": "positive integer" },
-		{ "name": "a", "kind": "file", "description": "Number of aircrafts", "type": "positive integer" }
+		{
+			"name": "c",
+			"kind": "file",
+			"description": "Number of cities",
+			"type": "positive integer"
+		},
+		{
+			"name": "p",
+			"kind": "file",
+			"description": "Number of persons",
+			"type": "positive integer"
+		},
+		{
+			"name": "a",
+			"kind": "file",
+			"description": "Number of aircrafts",
+			"type": "positive integer"
+		}
 	],
 	"files": [
 		{
 			"file": "zenotravel.4-2-2.jani",
-			"original-file": ["domain.pddl", "p01-c4-p2-a2-s3846.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p01-c4-p2-a2-s3846.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p01-c4-p2-a2-s3846.pddl --jani zenotravel.4-2-2.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "c", "value": 4 },
-				{ "name": "p", "value": 2 },
-				{ "name": "a", "value": 2 }
+				{
+					"name": "c",
+					"value": 4
+				},
+				{
+					"name": "p",
+					"value": 2
+				},
+				{
+					"name": "a",
+					"value": 2
+				}
 			],
 			"open-parameter-values": [
 				{
 					"states": [
-							{ "number": 459900, "note": "mcsta" }
-						]
+						{
+							"number": 459900,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 459900
+						}
+					],
+					"results": [
+						{
+							"property": "goal",
+							"value": 1,
+							"note": "Storm/exact"
+						}
+					]
 				}
 			]
 		},
 		{
 			"file": "zenotravel.6-5-3.jani",
-			"original-file": ["domain.pddl", "p05-c6-p5-a3-s24056.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p05-c6-p5-a3-s24056.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p05-c6-p5-a3-s24056.pddl --jani zenotravel.6-5-3.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "c", "value": 6 },
-				{ "name": "p", "value": 5 },
-				{ "name": "a", "value": 3 }
+				{
+					"name": "c",
+					"value": 6
+				},
+				{
+					"name": "p",
+					"value": 5
+				},
+				{
+					"name": "a",
+					"value": 3
+				}
 			],
-			"open-parameter-values": [
-			]
+			"open-parameter-values": []
 		},
 		{
 			"file": "zenotravel.10-5-3.jani",
-			"original-file": ["domain.pddl", "p10-c10-p5-a3-s15832.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p10-c10-p5-a3-s15832.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p10-c10-p5-a3-s15832.pddl --jani zenotravel.10-5-3.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "c", "value": 10 },
-				{ "name": "p", "value": 5 },
-				{ "name": "a", "value": 3 }
+				{
+					"name": "c",
+					"value": 10
+				},
+				{
+					"name": "p",
+					"value": 5
+				},
+				{
+					"name": "a",
+					"value": 3
+				}
 			],
-			"open-parameter-values": [
-			]
+			"open-parameter-values": []
 		},
 		{
 			"file": "zenotravel.20-10-6.jani",
-			"original-file": ["domain.pddl", "p15-c20-p10-a6-s24164.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p15-c20-p10-a6-s24164.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p15-c20-p10-a6-s24164.pddl --jani zenotravel.20-10-6.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "c", "value": 20 },
-				{ "name": "p", "value": 10 },
-				{ "name": "a", "value": 6 }
+				{
+					"name": "c",
+					"value": 20
+				},
+				{
+					"name": "p",
+					"value": 10
+				},
+				{
+					"name": "a",
+					"value": 6
+				}
 			],
-			"open-parameter-values": [
-			]
+			"open-parameter-values": []
 		}
 	],
 	"properties": [
@@ -101,6 +179,10 @@
 		}
 	],
 	"results": [
-		"results/mcsta.4-2-2.json"
+		"results/mcsta.4-2-2.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.4-2-2.2018-10-03.json"
+		}
 	]
 }

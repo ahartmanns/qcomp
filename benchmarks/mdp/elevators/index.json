@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-08-01",
 	"version-history": [
-		{ "version": 1, "date": "2018-08-01", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-08-01",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -17,87 +21,167 @@
 	],
 	"notes": "IPPC 2006 benchmark",
 	"parameters": [
-		{ "name": "p", "kind": "file", "description": "Number of positions", "type": "positive integer" },
-		{ "name": "c", "kind": "file", "description": "Number of coins", "type": "positive integer" }
+		{
+			"name": "p",
+			"kind": "file",
+			"description": "Number of positions",
+			"type": "positive integer"
+		},
+		{
+			"name": "c",
+			"kind": "file",
+			"description": "Number of coins",
+			"type": "positive integer"
+		}
 	],
 	"files": [
 		{
 			"file": "elevators.a-3-3.jani",
-			"original-file": ["domain.pddl", "p01.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p01.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p01.pddl --jani elevators.a-3-3.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "p", "value": 3 },
-				{ "name": "c", "value": 3 }
+				{
+					"name": "p",
+					"value": 3
+				},
+				{
+					"name": "c",
+					"value": 3
+				}
 			],
 			"open-parameter-values": [
 				{
 					"states": [
-							{ "number": 909, "note": "mcsta" }
-						]
+						{
+							"number": 909,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 909
+						}
+					],
+					"results": [
+						{
+							"property": "goal",
+							"value": 1,
+							"note": "Storm/exact"
+						}
+					]
 				}
 			]
 		},
 		{
 			"file": "elevators.b-3-3.jani",
-			"original-file": ["domain.pddl", "p05.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p05.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p05.pddl --jani elevators.b-3-3.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "p", "value": 3 },
-				{ "name": "c", "value": 3 }
+				{
+					"name": "p",
+					"value": 3
+				},
+				{
+					"name": "c",
+					"value": 3
+				}
 			],
 			"open-parameter-values": [
 				{
 					"states": [
-							{ "number": 909, "note": "mcsta" }
-						]
+						{
+							"number": 909,
+							"note": "mcsta"
+						}
+					]
 				}
 			]
 		},
 		{
 			"file": "elevators.a-11-9.jani",
-			"original-file": ["domain.pddl", "p10.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p10.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p10.pddl --jani elevators.a-11-9.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "p", "value": 11 },
-				{ "name": "c", "value": 9 }
+				{
+					"name": "p",
+					"value": 11
+				},
+				{
+					"name": "c",
+					"value": 9
+				}
 			],
 			"open-parameter-values": [
 				{
 					"states": [
-							{ "number":  14796, "note": "mcsta" }
-						]
+						{
+							"number": 14796,
+							"note": "mcsta"
+						},
+						{
+							"note": "Storm",
+							"number": 14796
+						}
+					],
+					"results": [
+						{
+							"property": "goal",
+							"value": 1,
+							"note": "Storm/exact"
+						}
+					]
 				}
 			]
 		},
 		{
 			"file": "elevators.b-11-9.jani",
-			"original-file": ["domain.pddl", "p15.pddl"],
+			"original-file": [
+				"domain.pddl",
+				"p15.pddl"
+			],
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
 				"command": "ppddl2jani.py domain.pddl p15.pddl --jani elevators.b-11-9.jani"
 			},
 			"file-parameter-values": [
-				{ "name": "p", "value": 11 },
-				{ "name": "c", "value": 9 }
+				{
+					"name": "p",
+					"value": 11
+				},
+				{
+					"name": "c",
+					"value": 9
+				}
 			],
 			"open-parameter-values": [
 				{
 					"states": [
-							{ "number":  538326, "note": "mcsta" }
-						]
+						{
+							"number": 538326,
+							"note": "mcsta"
+						}
+					]
 				}
 			]
 		}
@@ -113,6 +197,14 @@
 		"results/mcsta.a-3-3.json",
 		"results/mcsta.b-3-3.json",
 		"results/mcsta.a-11-9.json",
-		"results/mcsta.b-11-9.json"
+		"results/mcsta.b-11-9.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3-3.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.11-9.2018-10-03.json"
+		}
 	]
 }
