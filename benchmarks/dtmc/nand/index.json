@@ -1,0 +1,213 @@
+{
+	"name": "NAND Multiplexing",
+	"short": "nand",
+	"type": "DTMC",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Gethin Norman <gethin.norman@glasgow.ac.uk>",
+		"David Parker <dparker@mail.wtamu.edu>",
+		"Marta Kwiatkowska <Marta.Kwiatkowska@cs.ox.ac.uk>",
+		"Sandeep Shukla <sandeep.shukla1990@gmail.com>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1109/TCAD.2005.852033",
+	"description": "This model is part of the PRISM Benchmark Suite [1] and concerns NAND multiplexing, a technique for constructing reliable computation from unreliable devices, which means it makes architectures defect-tolerant by using a redundancy technique.  In each multiplexing unit, there are `N´ devices (NAND gates, inputs of each bundle) which in parallel process the copies of the inputs to give `N´ outputs which represent the output of the original processing unit. `K´ is the number of restorative stages. John von Neumann invented this technique. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/nand.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "open",
+			"description": "Parameter N",
+			"type": "positive integer"
+		},
+		{
+			"name": "K",
+			"kind": "open",
+			"description": "Parameter K",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "reliable",
+			"description": "The probability that less than 10 percent of outputs are erroneous.",
+			"type": "prob-reach"
+		}
+	],
+	"files": [
+		{
+			"file": "nand.jani",
+			"original-file": [
+				"nand.prism",
+				"nand.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism nand.prism --tojani nand.jani --prop nand.props --globalvars"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 20
+						},
+						{
+							"name": "K",
+							"value": 1
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 20
+						},
+						{
+							"name": "K",
+							"value": 2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 20
+						},
+						{
+							"name": "K",
+							"value": 3
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 20
+						},
+						{
+							"name": "K",
+							"value": 4
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 40
+						},
+						{
+							"name": "K",
+							"value": 1
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 40
+						},
+						{
+							"name": "K",
+							"value": 2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 40
+						},
+						{
+							"name": "K",
+							"value": 3
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 40
+						},
+						{
+							"name": "K",
+							"value": 4
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 60
+						},
+						{
+							"name": "K",
+							"value": 1
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 60
+						},
+						{
+							"name": "K",
+							"value": 2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 60
+						},
+						{
+							"name": "K",
+							"value": 3
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 60
+						},
+						{
+							"name": "K",
+							"value": 4
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}

@@ -1,0 +1,285 @@
+{
+	"name": "zeroconf_dl",
+	"short": "zeroconf_dl",
+	"type": "MDP",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Stuart Cheshire <>",
+		"Bernard Aboba <bernarda@microsoft.com>",
+		"Erik Guttman <>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://www.rfc-editor.org/info/rfc3927",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. Upon being connected to the network, a device is first required to choose randomly an IP address from a pool of 65024 available addresses. Then the device sends messages to the other devices connected to the network, asking whether any of those devices are currently using the chosen IP address. If no reply is received even after the devices resend such messages three more times, then the device starts using the IP address, initially sending two more messages asserting that the device is claiming the address. `N´ is the number of abstract hosts communicating over the network, `K´ is the number of probes to send and `loss´ means the probability of message loss. The `_dl´ version includes a timer module to allow the verification of time-bounded properties. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/zeroconf_dl.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "open",
+			"description": "Parameter N",
+			"type": "positive integer"
+		},
+		{
+			"name": "K",
+			"kind": "open",
+			"description": "Parameter K",
+			"type": "positive integer"
+		},
+		{
+			"name": "reset",
+			"kind": "open",
+			"description": "Parameter reset",
+			"type": "Boolean"
+		},
+		{
+			"name": "deadline",
+			"kind": "open",
+			"description": "Parameter deadline",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "deadline_max",
+			"description": "The maximum probability of not using fresh IP address within deadline.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "deadline_min",
+			"description": "The minimum probability of not using fresh IP address within deadline.",
+			"type": "prob-reach"
+		}
+	],
+	"files": [
+		{
+			"file": "zeroconf_dl.jani",
+			"original-file": [
+				"zeroconf_dl.prism",
+				"zeroconf_dl.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism zeroconf_dl.prism --tojani zeroconf_dl.jani --prop zeroconf_dl.props --globalvars"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1000
+						},
+						{
+							"name": "K",
+							"value": 1
+						},
+						{
+							"name": "reset",
+							"value": true
+						},
+						{
+							"name": "deadline",
+							"value": 10
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1000
+						},
+						{
+							"name": "K",
+							"value": 1
+						},
+						{
+							"name": "reset",
+							"value": true
+						},
+						{
+							"name": "deadline",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1000
+						},
+						{
+							"name": "K",
+							"value": 1
+						},
+						{
+							"name": "reset",
+							"value": true
+						},
+						{
+							"name": "deadline",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1000
+						},
+						{
+							"name": "K",
+							"value": 1
+						},
+						{
+							"name": "reset",
+							"value": true
+						},
+						{
+							"name": "deadline",
+							"value": 40
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1000
+						},
+						{
+							"name": "K",
+							"value": 1
+						},
+						{
+							"name": "reset",
+							"value": true
+						},
+						{
+							"name": "deadline",
+							"value": 50
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1000
+						},
+						{
+							"name": "K",
+							"value": 1
+						},
+						{
+							"name": "reset",
+							"value": true
+						},
+						{
+							"name": "deadline",
+							"value": 10
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1000
+						},
+						{
+							"name": "K",
+							"value": 1
+						},
+						{
+							"name": "reset",
+							"value": true
+						},
+						{
+							"name": "deadline",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1000
+						},
+						{
+							"name": "K",
+							"value": 1
+						},
+						{
+							"name": "reset",
+							"value": true
+						},
+						{
+							"name": "deadline",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1000
+						},
+						{
+							"name": "K",
+							"value": 1
+						},
+						{
+							"name": "reset",
+							"value": true
+						},
+						{
+							"name": "deadline",
+							"value": 40
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 1000
+						},
+						{
+							"name": "K",
+							"value": 1
+						},
+						{
+							"name": "reset",
+							"value": true
+						},
+						{
+							"name": "deadline",
+							"value": 50
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}

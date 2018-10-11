@@ -1,0 +1,270 @@
+{
+	"name": "Tandem Queueing Network",
+	"short": "tandem",
+	"type": "CTMC",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Holger Hermanns <hermanns@cs.uni-saarland.de>",
+		"Joachim Meyer-Kayser <jmmeyerk@informatik.uni-erlangen.de>",
+		"Markus Siegle <siegle@informatik.uni-erlangen.de>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.4603&rep=rep1&type=pdf",
+	"description": "This model is part of the PRISM Benchmark Suite [1] and represents a CTMC which consists of a M/Cox_2/1-queue (Coxian distribution with two phases) sequentially composed with a `M/M/1´-queue. `c´ to denotes the capacity of the queues. The servers process the tasks of the queues. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/tandem.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "c",
+			"kind": "open",
+			"description": "Parameter c",
+			"type": "positive integer"
+		},
+		{
+			"name": "T",
+			"kind": "open",
+			"description": "Parameter T",
+			"type": "positive integer"
+		},
+		{
+			"name": "t",
+			"kind": "open",
+			"description": "Parameter t",
+			"type": "real"
+		}
+	],
+	"properties": [
+		{
+			"name": "customers",
+			"description": "Long-run expected number of customers in the network.",
+			"type": "steady-state-reward"
+		},
+		{
+			"name": "customers_T",
+			"description": "The expected number of customers in the network at time t.",
+			"type": "exp-reward-time-instant"
+		},
+		{
+			"name": "first_queue",
+			"description": "The probability first queue becomes full in t time units.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "network",
+			"description": "The probability network becomes full in T time units.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "second_queue",
+			"description": "The probability of leaving a situation where the second queue is entirely populated within t time units.",
+			"type": "prob-reach-time-bounded"
+		}
+	],
+	"files": [
+		{
+			"file": "tandem.jani",
+			"original-file": [
+				"tandem.prism",
+				"tandem.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism tandem.prism --tojani tandem.jani --prop tandem.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 5
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 7
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 15
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 31
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 63
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 127
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 255
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 511
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 1023
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 2047
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 4095
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}

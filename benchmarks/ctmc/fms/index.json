@@ -1,0 +1,141 @@
+{
+	"name": "Flexible Manufacturing System",
+	"short": "fms",
+	"type": "CTMC",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Gianfranco Ciardo <ciardo@iastate.edu>",
+		"Kishor S.Trivedi <kst@ee.duke.edu>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1016/0166-5316(93)90026-Q",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. It describes a system of three machnies which process `N´ parts and assemble them together as described in [0]. In the end the throughput is measured. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/fms.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "n",
+			"kind": "open",
+			"description": "Parameter n",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "productivity",
+			"description": "The expected productivity of the system.",
+			"type": "steady-state-reward"
+		}
+	],
+	"files": [
+		{
+			"file": "fms.jani",
+			"original-file": [
+				"fms.prism",
+				"fms.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism fms.prism --tojani fms.jani --prop fms.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "n",
+							"value": 1
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "n",
+							"value": 2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "n",
+							"value": 3
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "n",
+							"value": 4
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "n",
+							"value": 5
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "n",
+							"value": 6
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "n",
+							"value": 7
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "n",
+							"value": 8
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "n",
+							"value": 9
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "n",
+							"value": 10
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}

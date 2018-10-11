@@ -1,0 +1,593 @@
+{
+	"name": "Cyclic Server Polling System",
+	"short": "polling",
+	"type": "CTMC",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Oliver C. Ibe <oliver_ibe@uml.edu>",
+		"Kishor Trivedi <kst@ee.duke.edu>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1109/49.62852",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. `N´ stations are handled by a polling server, which processes the jobs of the stations with a given rate. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/polling.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "Parameter N",
+			"type": "positive integer"
+		},
+		{
+			"name": "T",
+			"kind": "open",
+			"description": "Parameter T",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "s1",
+			"description": "The probability that in the long run station 1 is awaiting service.",
+			"type": "steady-state-prob"
+		},
+		{
+			"name": "s1_before_s2",
+			"description": "The probability that station 1 is served before station 2.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "served",
+			"description": "The expected number of times station1 is served.",
+			"type": "exp-reward-time-bounded"
+		},
+		{
+			"name": "station1_polled",
+			"description": "The probability that station 1 will be polled within T time units.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "waiting",
+			"description": "The expected time station 1 is waiting to be served.",
+			"type": "exp-reward-time-bounded"
+		}
+	],
+	"files": [
+		{
+			"file": "polling.3.jani",
+			"original-file": [
+				"polling.3.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.3.prism --tojani polling.3.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 3
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.4.jani",
+			"original-file": [
+				"polling.4.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.4.prism --tojani polling.4.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 4
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.5.jani",
+			"original-file": [
+				"polling.5.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.5.prism --tojani polling.5.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 5
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.6.jani",
+			"original-file": [
+				"polling.6.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.6.prism --tojani polling.6.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 6
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.7.jani",
+			"original-file": [
+				"polling.7.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.7.prism --tojani polling.7.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 7
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.8.jani",
+			"original-file": [
+				"polling.8.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.8.prism --tojani polling.8.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 8
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.9.jani",
+			"original-file": [
+				"polling.9.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.9.prism --tojani polling.9.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 9
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.10.jani",
+			"original-file": [
+				"polling.10.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.10.prism --tojani polling.10.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 10
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.11.jani",
+			"original-file": [
+				"polling.11.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.11.prism --tojani polling.11.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 11
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.12.jani",
+			"original-file": [
+				"polling.12.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.12.prism --tojani polling.12.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 12
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.13.jani",
+			"original-file": [
+				"polling.13.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.13.prism --tojani polling.13.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 13
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.14.jani",
+			"original-file": [
+				"polling.14.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.14.prism --tojani polling.14.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 14
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.15.jani",
+			"original-file": [
+				"polling.15.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.15.prism --tojani polling.15.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 15
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.16.jani",
+			"original-file": [
+				"polling.16.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.16.prism --tojani polling.16.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 16
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.17.jani",
+			"original-file": [
+				"polling.17.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.17.prism --tojani polling.17.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 17
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.18.jani",
+			"original-file": [
+				"polling.18.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.18.prism --tojani polling.18.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 18
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.19.jani",
+			"original-file": [
+				"polling.19.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.19.prism --tojani polling.19.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 19
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "polling.20.jani",
+			"original-file": [
+				"polling.20.prism",
+				"polling.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism polling.20.prism --tojani polling.20.jani --prop polling.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 20
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "T",
+							"value": 16
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}
