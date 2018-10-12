@@ -93,7 +93,14 @@ function init()
 			model.loadedResults = ko.observableArray();
 			model.minStates = getStateCount(model.files, Math.min, Number.MAX_SAFE_INTEGER);
 			model.maxStates = getStateCount(model.files, Math.max, 0);
-			model.author = separatePersonRef(model.author);
+			if(typeof model.author === "string") model.author = [separatePersonRef(model.author)];
+			else
+			{
+				for(var i = 0; i < model.author.length; ++i)
+				{
+					model.author[i] = separatePersonRef(model.author[i]);
+				}
+			}
 			model.submitter = separatePersonRef(model.submitter);
 			model.checked = ko.observable(false);
 			if(model.notes === undefined) model.notes = "";
