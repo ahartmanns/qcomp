@@ -53,5 +53,16 @@
 			{ "rating": 5179, "type": "multi-threaded", "source": "https://www.cpubenchmark.net/cpu.php?id=2863" },
 			{ "rating": 1923, "type": "single-threaded", "source": "https://www.cpubenchmark.net/cpu.php?id=2863" }
 		]
+	},
+	{
+		"name": "Intel Xeon E5-2683 v4",
+		"frequency": 2.1,
+		"max-frequency": 3.0,
+		"physical-cores": 16,
+		"logical-cores": 32,
+		"benchmarks": [
+			{ "rating": 19047, "type": "multi-threaded", "source": "https://www.cpubenchmark.net/cpu.php?id=2908" },
+			{ "rating": 1522, "type": "single-threaded", "source": "https://www.cpubenchmark.net/cpu.php?id=2908" }
+		]
 	}
 ]

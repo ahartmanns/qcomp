@@ -5,6 +5,7 @@
   { "path": "ma/breakdown-queues" },
   { "path": "ma/dpm" },
   { "path": "ma/erlang" },
+  { "path": "ma/ftpp" },
   { "path": "ma/ftwc" },
   { "path": "ma/jobs" },
   { "path": "ma/polling-system" },
