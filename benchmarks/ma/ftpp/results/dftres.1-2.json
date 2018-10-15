@@ -1,0 +1,44 @@
+﻿{
+	"file": "../ftpp-1-2.jani",
+	"version": 1,
+	"date": "2018-10-12",
+	"submitter": "Enno Ruijters <e.j.j.ruijters@utwente.nl>",
+	"file-parameter-values": [
+		{ "name": "N", "value": 1 },
+		{ "name": "k", "value": 2 }
+	],
+	"tool": {
+		"name": "DFTRES",
+		"version": "b0d3eb12",
+		"url": "https://github.com/utwente-fmt/DFTRES"
+	},
+	"system": {
+		"cpu": "Intel Xeon E5-2683 v4",
+		"ram": 256,
+		"os": "Ubuntu 16.04.4 (x64)",
+		"runtime": "Java 10.0.2"
+	},
+	"command": "java -jar DFTRES.jar --zvav -r 1 -s 1 -n 20000000 ftpp-1-2.jani",
+	"time": 69.71,
+	"memory": 3035443200,
+	"property-times": [
+		{ "name": "boundedreach", "time": 41.364 }
+	],
+	"data": [
+		{
+			"group": "Importance sampling precomputation",
+			"values": [
+				{ "name": "Stored states", "value": 2331 }
+			]
+		},
+		{
+			"property": "boundedreach",
+			"value": 1.713792875260651E-20,
+			"values": [
+				{ "name": "Time", "value": 41.364, "unit": "s" },
+				{ "name": "Number of simulations", "value": "20 M" },
+				{ "name": "95% Confidence interval", "value": "[1.6633142499761364E-20, 1.7642715005451658E-20]" }
+			]
+		}
+	]
+}
