@@ -2949,7 +2949,7 @@
                 },
                 "values": {
                     "exp": "productivity",
-                    "op": "Emin"
+                    "op": "Smin"
                 }
             },
             "name": "productivity"

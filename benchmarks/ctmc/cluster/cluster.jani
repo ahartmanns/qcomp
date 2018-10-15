@@ -1543,7 +1543,7 @@
                 },
                 "values": {
                     "exp": "premium",
-                    "op": "Pmin"
+                    "op": "Smin"
                 }
             },
             "name": "premium_steady"

@@ -377,7 +377,7 @@
                 },
                 "values": {
                     "exp": "customers",
-                    "op": "Emin"
+                    "op": "Smin"
                 }
             },
             "name": "customers"
