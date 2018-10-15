@@ -1,7 +1,7 @@
 {
-	"name": "firewire_impl_dl",
+	"name": "IEEE 1394 FireWire Root Contention Protocol (with timer)",
 	"short": "firewire_impl_dl",
-	"type": "MDP",
+	"type": "mdp",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -18,31 +18,31 @@
 	],
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1007/3-540-48778-6_4",
-	"description": "This model is part of the PRISM Benchmark Suite [1] and concerns the Tree Identify Protocol of the IEEE 1394 High Performance Serial Bus, called ``FireWire''. The 1394 High Performance serial bus is used to transport video and audio signals within a network of multimedia devices. It is modeled as a leader election protocol which takes place after a bus reset in the network, that is, when a node is added or removed from the network. After such a reset all nodes in the network have equal status, and know only to which nodes they are directly connected. A leader needs to be chosen to act as the manager of the bus for subsequent phases of IEEE 1394. This is done by the nodes communicating ``be my parent'' messages, starting from the leaf nodes. The protocol is designed for use on connected networks and will correctly elect a leader if the network is acyclic. We consider an MDP version of the probabilistic timed automata models of the root contention part of the tree identify protocol, which are based on probabilistic I/O automata models presented in [3]. `delay´ is the maximum wire transmission delay in nano seconds. This models the distance between the two nodes, i.e. the length of the connecting wires. A delay of 360ns represents the assumption that the nodes are separated by a distance close to the maximum required for the correctness of the protocol. A delay of 30ns corresponds more closely to the maximum separation of nodes specified in the actual IEEE standard. The `_dl´ version includes a timer module to allow the verification of time-bounded properties. See [2] for more details",
+	"description": "This model is part of the PRISM Benchmark Suite [1] and concerns the Tree Identify Protocol of the IEEE 1394 High Performance Serial Bus, called \"FireWire\". The 1394 High Performance serial bus is used to transport video and audio signals within a network of multimedia devices. It is modeled as a leader election protocol which takes place after a bus reset in the network, that is, when a node is added or removed from the network. After such a reset all nodes in the network have equal status, and know only to which nodes they are directly connected. A leader needs to be chosen to act as the manager of the bus for subsequent phases of IEEE 1394. This is done by the nodes communicating \"be my parent\" messages, starting from the leaf nodes. The protocol is designed for use on connected networks and will correctly elect a leader if the network is acyclic. We consider an MDP version of the probabilistic timed automata models of the root contention part of the tree identify protocol, which are based on probabilistic I/O automata models presented in [3]. `delay´ is the maximum wire transmission delay in nano seconds. This models the distance between the two nodes, i.e. the length of the connecting wires. A delay of 360ns represents the assumption that the nodes are separated by a distance close to the maximum required for the correctness of the protocol. A delay of 30ns corresponds more closely to the maximum separation of nodes specified in the actual IEEE standard. The `_dl´ version includes a timer module to allow the verification of time-bounded properties. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/firewire.php",
 		"https://doi.org/10.1007/3-540-48778-6_4"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "delay",
 			"kind": "open",
-			"description": "Parameter delay",
+			"description": "Maximum wire transmission delay in units of 10ns",
 			"type": "positive integer"
 		},
 		{
 			"name": "deadline",
 			"kind": "open",
-			"description": "Parameter deadline",
+			"description": "Timer deadline in units of 10 ns",
 			"type": "positive integer"
 		}
 	],
 	"properties": [
 		{
 			"name": "deadline",
-			"description": "Minimum probability of completing within deadline.",
+			"description": "Minimum probability of completing within `deadline´.",
 			"type": "prob-reach"
 		}
 	],
@@ -71,6 +71,12 @@
 							"name": "deadline",
 							"value": 200
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 80980
+						}
 					]
 				},
 				{
@@ -82,6 +88,12 @@
 						{
 							"name": "deadline",
 							"value": 400
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 434364
 						}
 					]
 				},
@@ -95,6 +107,12 @@
 							"name": "deadline",
 							"value": 600
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1093658
+						}
 					]
 				},
 				{
@@ -106,6 +124,12 @@
 						{
 							"name": "deadline",
 							"value": 800
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1915291
 						}
 					]
 				},
@@ -119,6 +143,12 @@
 							"name": "deadline",
 							"value": 200
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 6719773
+						}
 					]
 				},
 				{
@@ -130,6 +160,12 @@
 						{
 							"name": "deadline",
 							"value": 400
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 44366235
 						}
 					]
 				},
@@ -143,6 +179,12 @@
 							"name": "deadline",
 							"value": 600
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 86813479
+						}
 					]
 				},
 				{
@@ -155,10 +197,25 @@
 							"name": "deadline",
 							"value": 800
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 129267079
+						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.3-200.2018-10-12.json",
+		"results/Storm.3-400.2018-10-12.json",
+		"results/Storm.3-600.2018-10-12.json",
+		"results/Storm.3-800.2018-10-12.json",
+		"results/Storm.36-200.2018-10-12.json",
+		"results/Storm.36-400.2018-10-12.json",
+		"results/Storm.36-600.2018-10-12.json",
+		"results/Storm.36-800.2018-10-12.json"
+	]
 }

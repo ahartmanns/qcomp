@@ -1,7 +1,7 @@
 {
 	"name": "Tandem Queueing Network",
 	"short": "tandem",
-	"type": "CTMC",
+	"type": "ctmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -17,31 +17,31 @@
 		"Joachim Meyer-Kayser <jmmeyerk@informatik.uni-erlangen.de>",
 		"Markus Siegle <siegle@informatik.uni-erlangen.de>"
 	],
-	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.4603&rep=rep1&type=pdf",
-	"description": "This model is part of the PRISM Benchmark Suite [1] and represents a CTMC which consists of a M/Cox_2/1-queue (Coxian distribution with two phases) sequentially composed with a `M/M/1´-queue. `c´ to denotes the capacity of the queues. The servers process the tasks of the queues. See [2] for more details",
+	"description": "This model is part of the PRISM Benchmark Suite [1] and represents a CTMC which consists of a M/Cox₂/1-queue (Coxian distribution with two phases) sequentially composed with a M/M/1-queue. The servers process the tasks of the queues. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/tandem.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "c",
 			"kind": "open",
-			"description": "Parameter c",
+			"description": "Queue capacity",
 			"type": "positive integer"
 		},
 		{
 			"name": "T",
 			"kind": "open",
-			"description": "Parameter T",
+			"description": "Time parameter for properties",
 			"type": "positive integer"
 		},
 		{
 			"name": "t",
 			"kind": "open",
-			"description": "Parameter t",
+			"description": "Time parameter for properties",
 			"type": "real"
 		}
 	],
@@ -101,6 +101,12 @@
 							"name": "t",
 							"value": 0.2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 66
+						}
 					]
 				},
 				{
@@ -116,6 +122,12 @@
 						{
 							"name": "t",
 							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 120
 						}
 					]
 				},
@@ -133,6 +145,12 @@
 							"name": "t",
 							"value": 0.2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 496
+						}
 					]
 				},
 				{
@@ -148,6 +166,12 @@
 						{
 							"name": "t",
 							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2016
 						}
 					]
 				},
@@ -165,6 +189,12 @@
 							"name": "t",
 							"value": 0.2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 8128
+						}
 					]
 				},
 				{
@@ -180,6 +210,12 @@
 						{
 							"name": "t",
 							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 32640
 						}
 					]
 				},
@@ -197,6 +233,12 @@
 							"name": "t",
 							"value": 0.2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 130816
+						}
 					]
 				},
 				{
@@ -212,6 +254,12 @@
 						{
 							"name": "t",
 							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 523776
 						}
 					]
 				},
@@ -229,6 +277,12 @@
 							"name": "t",
 							"value": 0.2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2096128
+						}
 					]
 				},
 				{
@@ -244,6 +298,12 @@
 						{
 							"name": "t",
 							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 8386560
 						}
 					]
 				},
@@ -261,10 +321,28 @@
 							"name": "t",
 							"value": 0.2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 33550336
+						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.5-1000-0.2.2018-10-16.json",
+		"results/Storm.7-1000-0.2.2018-10-16.json",
+		"results/Storm.15-1000-0.2.2018-10-16.json",
+		"results/Storm.31-1000-0.2.2018-10-16.json",
+		"results/Storm.63-1000-0.2.2018-10-16.json",
+		"results/Storm.127-1000-0.2.2018-10-16.json",
+		"results/Storm.255-1000-0.2.2018-10-16.json",
+		"results/Storm.511-1000-0.2.2018-10-16.json",
+		"results/Storm.1023-1000-0.2.2018-10-16.json",
+		"results/Storm.2047-1000-0.2.2018-10-16.json",
+		"results/Storm.4095-1000-0.2.2018-10-16.json"
+	]
 }

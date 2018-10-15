@@ -1,0 +1,97 @@
+{
+	"file": "../consensus.8.jani",
+	"version": 1,
+	"date": "2018-10-12",
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
+	"log": "Storm.8-2.2018-10-12.txt",
+	"open-parameter-values": [
+		{
+			"name": "K",
+			"value": 2
+		}
+	],
+	"tool": {
+		"name": "Storm",
+		"version": "1.2.4 (dev)",
+		"url": "http://www.stormchecker.org"
+	},
+	"system": {
+		"cpu": "4x AMD Opteron 6172",
+		"ram": 192,
+		"os": "Debian GNU/Linux 9 (stretch)",
+		"runtime": "gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516"
+	},
+	"command": "storm --jani consensus.8.jani --janiproperty --constants K=2  --timemem",
+	"time": 6887.35,
+	"property-times": [
+		{
+			"name:": "c1",
+			"time": 175.373
+		},
+		{
+			"name:": "c2",
+			"time": 1878.186
+		},
+		{
+			"name:": "disagree",
+			"time": 3189.055
+		}
+	],
+	"data": [
+		{
+			"values": [
+				{
+					"unit": "s",
+					"name": "time",
+					"value": 1644.736
+				},
+				{
+					"name": "states",
+					"value": 61018112
+				},
+				{
+					"name": "branches",
+					"value": 403856384
+				},
+				{
+					"name": "transitions",
+					"value": 323981312
+				}
+			],
+			"group": "State space exploration"
+		},
+		{
+			"property": "c1",
+			"values": [
+				{
+					"unit": "s",
+					"name": "time",
+					"value": 175.373
+				}
+			],
+			"value": "true"
+		},
+		{
+			"property": "c2",
+			"values": [
+				{
+					"unit": "s",
+					"name": "time",
+					"value": 1878.186
+				}
+			],
+			"value": 0.2827417964
+		},
+		{
+			"property": "disagree",
+			"values": [
+				{
+					"unit": "s",
+					"name": "time",
+					"value": 3189.055
+				}
+			],
+			"value": 0.3993020222
+		}
+	]
+}

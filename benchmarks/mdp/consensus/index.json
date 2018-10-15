@@ -1,7 +1,7 @@
 {
 	"name": "Randomized Consensus Protocol",
 	"short": "consensus",
-	"type": "MDP",
+	"type": "mdp",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -23,18 +23,18 @@
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/consensus.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "N",
 			"kind": "file",
-			"description": "Parameter N",
+			"description": "Number of processes",
 			"type": "positive integer"
 		},
 		{
 			"name": "K",
 			"kind": "open",
-			"description": "Parameter K",
+			"description": "Bounds on random walk",
 			"type": "positive integer"
 		}
 	],
@@ -91,6 +91,12 @@
 							"name": "K",
 							"value": 2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 272
+						}
 					]
 				},
 				{
@@ -98,6 +104,12 @@
 						{
 							"name": "K",
 							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 528
 						}
 					]
 				},
@@ -107,6 +119,12 @@
 							"name": "K",
 							"value": 8
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1040
+						}
 					]
 				},
 				{
@@ -114,6 +132,12 @@
 						{
 							"name": "K",
 							"value": 16
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2064
 						}
 					]
 				}
@@ -144,6 +168,12 @@
 							"name": "K",
 							"value": 2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 22656
+						}
 					]
 				},
 				{
@@ -151,6 +181,12 @@
 						{
 							"name": "K",
 							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 43136
 						}
 					]
 				}
@@ -181,6 +217,12 @@
 							"name": "K",
 							"value": 2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1258240
+						}
 					]
 				}
 			]
@@ -209,6 +251,12 @@
 						{
 							"name": "K",
 							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 61018112
 						}
 					]
 				}
@@ -244,5 +292,14 @@
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.2-2.2018-10-12.json",
+		"results/Storm.2-4.2018-10-12.json",
+		"results/Storm.2-8.2018-10-12.json",
+		"results/Storm.2-16.2018-10-12.json",
+		"results/Storm.4-2.2018-10-12.json",
+		"results/Storm.4-4.2018-10-12.json",
+		"results/Storm.6-2.2018-10-12.json",
+		"results/Storm.8-2.2018-10-12.json"
+	]
 }

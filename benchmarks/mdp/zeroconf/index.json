@@ -1,7 +1,7 @@
 {
 	"name": "IPv4 Zeroconf Protocol",
 	"short": "zeroconf",
-	"type": "MDP",
+	"type": "mdp",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -24,24 +24,24 @@
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/zeroconf.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "N",
 			"kind": "open",
-			"description": "Parameter N",
+			"description": "Number of existing nodes",
 			"type": "positive integer"
 		},
 		{
 			"name": "K",
 			"kind": "open",
-			"description": "Parameter K",
+			"description": "Number of probes sent",
 			"type": "positive integer"
 		},
 		{
 			"name": "reset",
 			"kind": "open",
-			"description": "Parameter reset",
+			"description": "Whether or not to clear messages on restart",
 			"type": "Boolean"
 		}
 	],
@@ -86,6 +86,12 @@
 							"name": "reset",
 							"value": true
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 670
+						}
 					]
 				},
 				{
@@ -101,6 +107,12 @@
 						{
 							"name": "reset",
 							"value": true
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1088
 						}
 					]
 				},
@@ -118,6 +130,12 @@
 							"name": "reset",
 							"value": true
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1506
+						}
 					]
 				},
 				{
@@ -133,6 +151,12 @@
 						{
 							"name": "reset",
 							"value": true
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1924
 						}
 					]
 				},
@@ -150,6 +174,12 @@
 							"name": "reset",
 							"value": true
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 670
+						}
 					]
 				},
 				{
@@ -165,6 +195,12 @@
 						{
 							"name": "reset",
 							"value": true
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1088
 						}
 					]
 				},
@@ -182,6 +218,12 @@
 							"name": "reset",
 							"value": true
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1506
+						}
 					]
 				},
 				{
@@ -197,6 +239,12 @@
 						{
 							"name": "reset",
 							"value": true
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1924
 						}
 					]
 				},
@@ -212,7 +260,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						}
 					]
 				},
@@ -228,7 +276,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						}
 					]
 				},
@@ -244,7 +292,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						}
 					]
 				},
@@ -260,7 +308,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						}
 					]
 				},
@@ -276,7 +324,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						}
 					]
 				},
@@ -292,7 +340,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						}
 					]
 				},
@@ -308,7 +356,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						}
 					]
 				},
@@ -324,12 +372,21 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.20-2-True.2018-10-12.json",
+		"results/Storm.20-4-True.2018-10-12.json",
+		"results/Storm.20-6-True.2018-10-12.json",
+		"results/Storm.20-8-True.2018-10-12.json",
+		"results/Storm.1000-2-True.2018-10-12.json",
+		"results/Storm.1000-4-True.2018-10-12.json",
+		"results/Storm.1000-6-True.2018-10-12.json",
+		"results/Storm.1000-8-True.2018-10-12.json"
+	]
 }

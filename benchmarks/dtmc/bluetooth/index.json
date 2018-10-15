@@ -1,7 +1,7 @@
 {
 	"name": "Bluetooth Device Discovery",
 	"short": "bluetooth",
-	"type": "DTMC",
+	"type": "dtmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -25,13 +25,13 @@
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/bluetooth.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "mrec",
 			"kind": "open",
-			"description": "Parameter mrec",
-			"type": "positive integer"
+			"description": "Number of replies received",
+			"type": "in {1,2}"
 		}
 	],
 	"properties": [
@@ -62,6 +62,12 @@
 							"name": "mrec",
 							"value": 1
 						}
+					],
+					"states": [
+						{
+							"note" : "Storm/dd",
+							"number": 3411945339
+						}
 					]
 				},
 				{
@@ -75,5 +81,7 @@
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.dd-bisim.1.2018-10-16.json"
+	]
 }

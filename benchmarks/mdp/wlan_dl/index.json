@@ -1,7 +1,7 @@
 {
-	"name": "wlan_dl",
+	"name": "IEEE 802.11 Wireless LAN (with timer)",
 	"short": "wlan_dl",
-	"type": "MDP",
+	"type": "mdp",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -24,25 +24,25 @@
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/wlan_dl.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "MAX_BACKOFF",
 			"kind": "file",
-			"description": "Parameter MAX_BACKOFF",
+			"description": "Maximum backoff counter",
 			"type": "positive integer"
 		},
 		{
 			"name": "deadline",
 			"kind": "open",
-			"description": "Parameter deadline",
+			"description": "Timer deadline",
 			"type": "positive integer"
 		}
 	],
 	"properties": [
 		{
 			"name": "deadline",
-			"description": "Minimum probability of both stations sending correctly within deadline.",
+			"description": "Minimum probability of both stations sending correctly within `deadline´.",
 			"type": "prob-reach"
 		}
 	],
@@ -71,6 +71,12 @@
 						{
 							"name": "deadline",
 							"value": 80
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 189703
 						}
 					]
 				}
@@ -101,6 +107,12 @@
 							"name": "deadline",
 							"value": 80
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 450627
+						}
 					]
 				}
 			]
@@ -129,6 +141,12 @@
 						{
 							"name": "deadline",
 							"value": 80
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1148419
 						}
 					]
 				}
@@ -159,6 +177,12 @@
 							"name": "deadline",
 							"value": 80
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 3041883
+						}
 					]
 				}
 			]
@@ -187,6 +211,12 @@
 						{
 							"name": "deadline",
 							"value": 80
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 6959410
 						}
 					]
 				}
@@ -217,6 +247,12 @@
 							"name": "deadline",
 							"value": 80
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 9633089
+						}
 					]
 				}
 			]
@@ -246,10 +282,24 @@
 							"name": "deadline",
 							"value": 80
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 10131465
+						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.0-80.2018-10-12.json",
+		"results/Storm.1-80.2018-10-12.json",
+		"results/Storm.2-80.2018-10-12.json",
+		"results/Storm.3-80.2018-10-12.json",
+		"results/Storm.4-80.2018-10-12.json",
+		"results/Storm.5-80.2018-10-12.json",
+		"results/Storm.6-80.2018-10-12.json"
+	]
 }

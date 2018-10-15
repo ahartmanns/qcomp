@@ -1,7 +1,7 @@
 {
 	"name": "IEEE 1394 FireWire Root Contention Protocol PTA",
 	"short": "firewire_abst-pta",
-	"type": "PTA",
+	"type": "pta",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -23,7 +23,7 @@
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/firewire_abst-pta.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "delay",

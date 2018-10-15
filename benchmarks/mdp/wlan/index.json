@@ -1,7 +1,7 @@
 {
 	"name": "IEEE 802.11 Wireless LAN",
 	"short": "wlan",
-	"type": "MDP",
+	"type": "mdp",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -24,25 +24,25 @@
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/wlan.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "MAX_BACKOFF",
 			"kind": "file",
-			"description": "Parameter MAX_BACKOFF",
+			"description": "Maximum backoff counter",
 			"type": "positive integer"
 		},
 		{
 			"name": "COL",
 			"kind": "open",
-			"description": "Parameter COL",
+			"description": "Maximum collision counter",
 			"type": "integer"
 		}
 	],
 	"properties": [
 		{
 			"name": "collisions",
-			"description": "The maximum probability of COL collisions.",
+			"description": "The maximum probability of `COL´ collisions.",
 			"type": "prob-reach"
 		},
 		{
@@ -102,6 +102,12 @@
 							"name": "COL",
 							"value": 0
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2954
+						}
 					]
 				}
 			]
@@ -130,6 +136,12 @@
 						{
 							"name": "COL",
 							"value": 0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 8625
 						}
 					]
 				}
@@ -160,6 +172,12 @@
 							"name": "COL",
 							"value": 0
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 28480
+						}
 					]
 				}
 			]
@@ -188,6 +206,12 @@
 						{
 							"name": "COL",
 							"value": 0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 96302
 						}
 					]
 				}
@@ -218,6 +242,12 @@
 							"name": "COL",
 							"value": 0
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 345000
+						}
 					]
 				}
 			]
@@ -246,6 +276,12 @@
 						{
 							"name": "COL",
 							"value": 0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1295218
 						}
 					]
 				}
@@ -276,10 +312,24 @@
 							"name": "COL",
 							"value": 0
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 5007548
+						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.0-0.2018-10-12.json",
+		"results/Storm.1-0.2018-10-12.json",
+		"results/Storm.2-0.2018-10-12.json",
+		"results/Storm.3-0.2018-10-12.json",
+		"results/Storm.4-0.2018-10-12.json",
+		"results/Storm.5-0.2018-10-12.json",
+		"results/Storm.6-0.2018-10-12.json"
+	]
 }

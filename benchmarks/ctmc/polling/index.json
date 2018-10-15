@@ -1,7 +1,7 @@
 {
 	"name": "Cyclic Server Polling System",
 	"short": "polling",
-	"type": "CTMC",
+	"type": "ctmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -16,25 +16,25 @@
 		"Oliver C. Ibe <oliver_ibe@uml.edu>",
 		"Kishor Trivedi <kst@ee.duke.edu>"
 	],
-	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "https://doi.org/10.1109/49.62852",
 	"description": "This model is part of the PRISM Benchmark Suite [1]. `N´ stations are handled by a polling server, which processes the jobs of the stations with a given rate. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/polling.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "N",
 			"kind": "file",
-			"description": "Parameter N",
+			"description": "Number of stations handled by the server",
 			"type": "positive integer"
 		},
 		{
 			"name": "T",
 			"kind": "open",
-			"description": "Parameter T",
+			"description": "Time parameter for properties",
 			"type": "positive integer"
 		}
 	],
@@ -91,6 +91,12 @@
 							"name": "T",
 							"value": 16
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 36
+						}
 					]
 				}
 			]
@@ -119,6 +125,12 @@
 						{
 							"name": "T",
 							"value": 16
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 96
 						}
 					]
 				}
@@ -149,6 +161,12 @@
 							"name": "T",
 							"value": 16
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 240
+						}
 					]
 				}
 			]
@@ -177,6 +195,12 @@
 						{
 							"name": "T",
 							"value": 16
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 576
 						}
 					]
 				}
@@ -207,6 +231,12 @@
 							"name": "T",
 							"value": 16
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1344
+						}
 					]
 				}
 			]
@@ -235,6 +265,12 @@
 						{
 							"name": "T",
 							"value": 16
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 3072
 						}
 					]
 				}
@@ -265,6 +301,12 @@
 							"name": "T",
 							"value": 16
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 6912
+						}
 					]
 				}
 			]
@@ -293,6 +335,12 @@
 						{
 							"name": "T",
 							"value": 16
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 15360
 						}
 					]
 				}
@@ -323,6 +371,12 @@
 							"name": "T",
 							"value": 16
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 33792
+						}
 					]
 				}
 			]
@@ -351,6 +405,12 @@
 						{
 							"name": "T",
 							"value": 16
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 73728
 						}
 					]
 				}
@@ -381,6 +441,12 @@
 							"name": "T",
 							"value": 16
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 159744
+						}
 					]
 				}
 			]
@@ -409,6 +475,12 @@
 						{
 							"name": "T",
 							"value": 16
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 344064
 						}
 					]
 				}
@@ -439,6 +511,12 @@
 							"name": "T",
 							"value": 16
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 737280
+						}
 					]
 				}
 			]
@@ -467,6 +545,12 @@
 						{
 							"name": "T",
 							"value": 16
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1572864
 						}
 					]
 				}
@@ -497,6 +581,12 @@
 							"name": "T",
 							"value": 16
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 3342336
+						}
 					]
 				}
 			]
@@ -525,6 +615,12 @@
 						{
 							"name": "T",
 							"value": 16
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 7077888
 						}
 					]
 				}
@@ -555,6 +651,12 @@
 							"name": "T",
 							"value": 16
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 14942208
+						}
 					]
 				}
 			]
@@ -584,10 +686,35 @@
 							"name": "T",
 							"value": 16
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 31457280
+						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.3-16.2018-10-16.json",
+		"results/Storm.4-16.2018-10-16.json",
+		"results/Storm.5-16.2018-10-16.json",
+		"results/Storm.6-16.2018-10-16.json",
+		"results/Storm.7-16.2018-10-16.json",
+		"results/Storm.8-16.2018-10-16.json",
+		"results/Storm.9-16.2018-10-16.json",
+		"results/Storm.10-16.2018-10-16.json",
+		"results/Storm.11-16.2018-10-16.json",
+		"results/Storm.12-16.2018-10-16.json",
+		"results/Storm.13-16.2018-10-16.json",
+		"results/Storm.14-16.2018-10-16.json",
+		"results/Storm.15-16.2018-10-16.json",
+		"results/Storm.16-16.2018-10-16.json",
+		"results/Storm.17-16.2018-10-16.json",
+		"results/Storm.18-16.2018-10-16.json",
+		"results/Storm.19-16.2018-10-16.json",
+		"results/Storm.20-16.2018-10-16.json"
+	]
 }

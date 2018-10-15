@@ -1,7 +1,7 @@
 {
 	"name": "Embedded Control System",
 	"short": "embedded",
-	"type": "CTMC",
+	"type": "ctmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -17,26 +17,26 @@
 		"Gianfranco Ciardo <ciardo@iastate.edu>",
 		"Kishor S. Trivedi <kst@ee.duke.edu>"
 	],
-	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.16.1102",
-	"description": "This model is part of the PRISM Benchmark Suite [1] and closely based on the one in [0]. The system comprises an input processor which reads and processes data from three sensors. It is then polled by a main processor which, in turn, passes instructions to an output processor. The output processor takes the instructions it receives and uses them to control two actuators. A bus connects the three processors together. Each of them can fail and cycles are skipped, which after `MAX_COUNT´skipped cycles leads to a shut down. See [2] for more details",
+	"description": "This model is part of the PRISM Benchmark Suite [1] and closely based on the one in [0]. The system comprises an input processor which reads and processes data from three sensors. It is then polled by a main processor which, in turn, passes instructions to an output processor. The output processor takes the instructions it receives and uses them to control two actuators. A bus connects the three processors together. Each of them can fail and cycles are skipped, which after `MAX_COUNT´ skipped cycles leads to a shut down. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/embedded.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "MAX_COUNT",
 			"kind": "open",
-			"description": "Parameter MAX_COUNT",
-			"type": "positive integer"
+			"description": "Limit on allowed number of consecutive cycles skipped",
+			"type": "positive even integer"
 		},
 		{
 			"name": "T",
 			"kind": "open",
-			"description": "Parameter T",
-			"type": "positive integer"
+			"description": "Time parameter for properties",
+			"type": "positive real number"
 		}
 	],
 	"properties": [
@@ -47,12 +47,12 @@
 		},
 		{
 			"name": "actuators_T",
-			"description": "The probability of actuator failure within T hours.",
+			"description": "The probability of actuator failure within `T´ hours.",
 			"type": "prob-reach-time-bounded"
 		},
 		{
 			"name": "danger_T",
-			"description": "The expected time spent in \"danger\" by time T (hours).",
+			"description": "The expected time spent in \"danger\" by time `T´ (hours).",
 			"type": "exp-reward-time-bounded"
 		},
 		{
@@ -62,12 +62,12 @@
 		},
 		{
 			"name": "down_T",
-			"description": "The expected time spent in \"down\" by time T (hours).",
+			"description": "The expected time spent in \"down\" by time `T´ (hours).",
 			"type": "exp-reward-time-bounded"
 		},
 		{
 			"name": "failure_T",
-			"description": "The probability of any failure occurring within T hours.",
+			"description": "The probability of any failure occurring within `T´ hours.",
 			"type": "prob-reach-time-bounded"
 		},
 		{
@@ -77,7 +77,7 @@
 		},
 		{
 			"name": "io_T",
-			"description": "The probability of I/O failure within T hours.",
+			"description": "The probability of I/O failure within `T´ hours.",
 			"type": "prob-reach-time-bounded"
 		},
 		{
@@ -87,7 +87,7 @@
 		},
 		{
 			"name": "main_T",
-			"description": "The probability of main system failure within T hours.",
+			"description": "The probability of main system failure within `T´ hours.",
 			"type": "prob-reach-time-bounded"
 		},
 		{
@@ -97,12 +97,12 @@
 		},
 		{
 			"name": "sensors_T",
-			"description": "The probability of sensor failure within T hours.",
+			"description": "The probability of sensor failure within `T´ hours.",
 			"type": "prob-reach-time-bounded"
 		},
 		{
 			"name": "up_T",
-			"description": "The expected time spent in \"up\" by time T (hours).",
+			"description": "The expected time spent in \"up\" by time `T´ (hours).",
 			"type": "exp-reward-time-bounded"
 		},
 		{
@@ -136,6 +136,12 @@
 							"name": "T",
 							"value": 12
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 3478
+						}
 					]
 				},
 				{
@@ -147,6 +153,12 @@
 						{
 							"name": "T",
 							"value": 12
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 4323
 						}
 					]
 				},
@@ -160,6 +172,12 @@
 							"name": "T",
 							"value": 12
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 5168
+						}
 					]
 				},
 				{
@@ -171,6 +189,12 @@
 						{
 							"name": "T",
 							"value": 12
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 6013
 						}
 					]
 				},
@@ -184,6 +208,12 @@
 							"name": "T",
 							"value": 12
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 6858
+						}
 					]
 				},
 				{
@@ -195,6 +225,12 @@
 						{
 							"name": "T",
 							"value": 12
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 7703
 						}
 					]
 				},
@@ -208,10 +244,24 @@
 							"name": "T",
 							"value": 12
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 8548
+						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.2-12.2018-10-16.json",
+		"results/Storm.3-12.2018-10-16.json",
+		"results/Storm.4-12.2018-10-16.json",
+		"results/Storm.5-12.2018-10-16.json",
+		"results/Storm.6-12.2018-10-16.json",
+		"results/Storm.7-12.2018-10-16.json",
+		"results/Storm.8-12.2018-10-16.json"
+	]
 }

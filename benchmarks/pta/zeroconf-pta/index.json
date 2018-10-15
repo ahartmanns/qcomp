@@ -1,7 +1,7 @@
 {
 	"name": "IPv4 Zeroconf Protocol PTA",
 	"short": "zeroconf-pta",
-	"type": "PTA",
+	"type": "pta",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -24,7 +24,7 @@
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/zeroconf-pta.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "T",

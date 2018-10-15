@@ -1,7 +1,7 @@
 {
-	"name": "zeroconf_dl",
+	"name": "IPv4 Zeroconf Protocol (with timer)",
 	"short": "zeroconf_dl",
-	"type": "MDP",
+	"type": "mdp",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -24,30 +24,30 @@
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/zeroconf_dl.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "N",
 			"kind": "open",
-			"description": "Parameter N",
+			"description": "Number of existing nodes",
 			"type": "positive integer"
 		},
 		{
 			"name": "K",
 			"kind": "open",
-			"description": "Parameter K",
+			"description": "Number of probes sent",
 			"type": "positive integer"
 		},
 		{
 			"name": "reset",
 			"kind": "open",
-			"description": "Parameter reset",
+			"description": "Whether or not to clear messages on restart",
 			"type": "Boolean"
 		},
 		{
 			"name": "deadline",
 			"kind": "open",
-			"description": "Parameter deadline",
+			"description": "Timer deadline",
 			"type": "positive integer"
 		}
 	],
@@ -96,6 +96,12 @@
 							"name": "deadline",
 							"value": 10
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 3835
+						}
 					]
 				},
 				{
@@ -115,6 +121,12 @@
 						{
 							"name": "deadline",
 							"value": 20
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 7670
 						}
 					]
 				},
@@ -136,6 +148,12 @@
 							"name": "deadline",
 							"value": 30
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 11605
+						}
 					]
 				},
 				{
@@ -155,6 +173,12 @@
 						{
 							"name": "deadline",
 							"value": 40
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 15640
 						}
 					]
 				},
@@ -176,6 +200,12 @@
 							"name": "deadline",
 							"value": 50
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 19775
+						}
 					]
 				},
 				{
@@ -190,7 +220,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						},
 						{
 							"name": "deadline",
@@ -210,7 +240,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						},
 						{
 							"name": "deadline",
@@ -230,7 +260,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						},
 						{
 							"name": "deadline",
@@ -250,7 +280,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						},
 						{
 							"name": "deadline",
@@ -270,7 +300,7 @@
 						},
 						{
 							"name": "reset",
-							"value": true
+							"value": false
 						},
 						{
 							"name": "deadline",
@@ -281,5 +311,11 @@
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.1000-1-True-10.2018-10-12.json",
+		"results/Storm.1000-1-True-20.2018-10-12.json",
+		"results/Storm.1000-1-True-30.2018-10-12.json",
+		"results/Storm.1000-1-True-40.2018-10-12.json",
+		"results/Storm.1000-1-True-50.2018-10-12.json"
+	]
 }

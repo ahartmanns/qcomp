@@ -1,7 +1,7 @@
 {
 	"name": "Randomised Self-Stabilising Algorithm of Herman",
 	"short": "herman",
-	"type": "DTMC",
+	"type": "dtmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -20,13 +20,13 @@
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/self-stabilisation.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "N",
 			"kind": "file",
-			"description": "Parameter N",
-			"type": "positive integer"
+			"description": "Number of processes",
+			"type": "positive odd integer"
 		}
 	],
 	"properties": [
@@ -57,7 +57,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 8
+						}
+					]
 				}
 			]
 		},
@@ -81,7 +87,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 32
+						}
+					]
 				}
 			]
 		},
@@ -105,7 +117,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 128
+						}
+					]
 				}
 			]
 		},
@@ -129,7 +147,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 512
+						}
+					]
 				}
 			]
 		},
@@ -153,7 +177,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2048
+						}
+					]
 				}
 			]
 		},
@@ -177,7 +207,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 8192
+						}
+					]
 				}
 			]
 		},
@@ -201,7 +237,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 32768
+						}
+					]
 				}
 			]
 		},
@@ -225,7 +267,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 131072
+						}
+					]
 				}
 			]
 		},
@@ -278,5 +326,14 @@
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.3.2018-10-12.json",
+		"results/Storm.5.2018-10-12.json",
+		"results/Storm.7.2018-10-12.json",
+		"results/Storm.9.2018-10-12.json",
+		"results/Storm.11.2018-10-12.json",
+		"results/Storm.13.2018-10-12.json",
+		"results/Storm.15.2018-10-12.json",
+		"results/Storm.17.2018-10-12.json"
+	]
 }

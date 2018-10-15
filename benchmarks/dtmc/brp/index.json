@@ -1,7 +1,7 @@
 {
 	"name": "Bounded Retransmission Protocol",
 	"short": "brp",
-	"type": "DTMC",
+	"type": "dtmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
@@ -25,35 +25,35 @@
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/brp.php"
 	],
-	"notes": "PRISM Benchmark",
+	"notes": "PRISM benchmark",
 	"parameters": [
 		{
 			"name": "N",
 			"kind": "open",
-			"description": "Parameter N",
+			"description": "Number of chunks in a file",
 			"type": "positive integer"
 		},
 		{
 			"name": "MAX",
 			"kind": "open",
-			"description": "Parameter MAX",
+			"description": "Maximum number of retransmissions",
 			"type": "positive integer"
 		}
 	],
 	"properties": [
 		{
 			"name": "p1",
-			"description": "The probability that the sender does not report a successful transmission (property 1 from [DJJL01]).",
+			"description": "The probability that the sender does not report a successful transmission.",
 			"type": "prob-reach"
 		},
 		{
 			"name": "p2",
-			"description": "The probability that the sender reports an uncertainty on the success of the transmission (property 2 from [DJJL01]).",
+			"description": "The probability that the sender reports an uncertainty on the success of the transmission.",
 			"type": "prob-reach"
 		},
 		{
 			"name": "p4",
-			"description": "The probability that the receiver does not receive any chunk when the sender did try to send a chunk (property 4 from [DJJL01]).",
+			"description": "The probability that the receiver does not receive any chunk when the sender did try to send a chunk.",
 			"type": "prob-reach"
 		}
 	],
@@ -82,6 +82,12 @@
 							"name": "MAX",
 							"value": 2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 677
+						}
 					]
 				},
 				{
@@ -93,6 +99,12 @@
 						{
 							"name": "MAX",
 							"value": 3
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 886
 						}
 					]
 				},
@@ -106,6 +118,12 @@
 							"name": "MAX",
 							"value": 4
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1095
+						}
 					]
 				},
 				{
@@ -117,6 +135,12 @@
 						{
 							"name": "MAX",
 							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1304
 						}
 					]
 				},
@@ -130,6 +154,12 @@
 							"name": "MAX",
 							"value": 2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1349
+						}
 					]
 				},
 				{
@@ -141,6 +171,12 @@
 						{
 							"name": "MAX",
 							"value": 3
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1766
 						}
 					]
 				},
@@ -154,6 +190,12 @@
 							"name": "MAX",
 							"value": 4
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2183
+						}
 					]
 				},
 				{
@@ -165,6 +207,12 @@
 						{
 							"name": "MAX",
 							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2600
 						}
 					]
 				},
@@ -178,6 +226,12 @@
 							"name": "MAX",
 							"value": 2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2693
+						}
 					]
 				},
 				{
@@ -189,6 +243,12 @@
 						{
 							"name": "MAX",
 							"value": 3
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 3526
 						}
 					]
 				},
@@ -202,6 +262,12 @@
 							"name": "MAX",
 							"value": 4
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 4359
+						}
 					]
 				},
 				{
@@ -213,11 +279,30 @@
 						{
 							"name": "MAX",
 							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 5192
 						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.16-2.2018-10-12.json",
+		"results/Storm.16-3.2018-10-12.json",
+		"results/Storm.16-4.2018-10-12.json",
+		"results/Storm.16-5.2018-10-12.json",
+		"results/Storm.32-2.2018-10-12.json",
+		"results/Storm.32-3.2018-10-12.json",
+		"results/Storm.32-4.2018-10-12.json",
+		"results/Storm.32-5.2018-10-12.json",
+		"results/Storm.64-2.2018-10-12.json",
+		"results/Storm.64-3.2018-10-12.json",
+		"results/Storm.64-4.2018-10-12.json",
+		"results/Storm.64-5.2018-10-12.json"
+	]
 }
