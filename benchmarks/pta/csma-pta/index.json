@@ -25,20 +25,20 @@
 		{
 			"name": "K",
 			"kind": "open",
-			"description": "Parameter K",
+			"description": "Maximum backoff count",
 			"type": "positive integer"
 		},
 		{
 			"name": "COL",
 			"kind": "open",
-			"description": "Parameter COL",
+			"description": "Maximum number of collisions",
 			"type": "positive integer"
 		}
 	],
 	"properties": [
 		{
 			"name": "collisions",
-			"description": "The maximum probability that transmissions from stations collide COL times.",
+			"description": "The maximum probability that transmissions from stations collide `COL´ times.",
 			"type": "prob-reach"
 		}
 	],

@@ -27,14 +27,14 @@
 		{
 			"name": "T",
 			"kind": "open",
-			"description": "Parameter T",
+			"description": "Time bound for properties",
 			"type": "positive integer"
 		}
 	],
 	"properties": [
 		{
 			"name": "deadline",
-			"description": "The minimum probability that the protocol terminates successfully before time T.",
+			"description": "The minimum probability that the protocol terminates successfully before time `T´.",
 			"type": "prob-reach-time-bounded"
 		},
 		{

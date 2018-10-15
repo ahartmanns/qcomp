@@ -1511,7 +1511,9 @@
                     "op": "initial"
                 },
                 "values": {
-                    "accumulate": [],
+                    "accumulate": [
+                        "time"
+                    ],
                     "exp": "time_not_min",
                     "op": "Emin",
                     "time-instant": "T"

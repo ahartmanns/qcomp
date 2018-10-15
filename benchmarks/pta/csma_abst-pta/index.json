@@ -1,5 +1,5 @@
 {
-	"name": "IEEE 802.3 CSMA/CD Protocol PTA",
+	"name": "IEEE 802.3 CSMA/CD Protocol PTA (abstract model)",
 	"short": "csma_abst-pta",
 	"type": "PTA",
 	"original": "PRISM",
@@ -25,25 +25,25 @@
 		{
 			"name": "K",
 			"kind": "open",
-			"description": "Parameter K",
+			"description": "Maximum backoff count",
 			"type": "positive integer"
 		},
 		{
 			"name": "T",
 			"kind": "open",
-			"description": "Parameter T",
+			"description": "Time bound for properties",
 			"type": "positive integer"
 		}
 	],
 	"properties": [
 		{
 			"name": "deadline_max",
-			"description": "The maximum probability that both stations have sent their packets within time T.",
+			"description": "The maximum probability that both stations have sent their packets within time `T´.",
 			"type": "prob-reach-time-bounded"
 		},
 		{
 			"name": "deadline_min",
-			"description": "The minimum probability that both stations have sent their packets within time T.",
+			"description": "The minimum probability that both stations have sent their packets within time `T´.",
 			"type": "prob-reach-time-bounded"
 		},
 		{

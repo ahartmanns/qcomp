@@ -1196,7 +1196,9 @@
                     "op": "initial"
                 },
                 "values": {
-                    "accumulate": [],
+                    "accumulate": [
+                        "time"
+                    ],
                     "exp": "waiting",
                     "op": "Emin",
                     "time-instant": "T"

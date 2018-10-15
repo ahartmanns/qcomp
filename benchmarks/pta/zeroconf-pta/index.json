@@ -29,14 +29,14 @@
 		{
 			"name": "T",
 			"kind": "open",
-			"description": "Parameter T",
+			"description": "Time bound for properties",
 			"type": "positive integer"
 		}
 	],
 	"properties": [
 		{
 			"name": "deadline",
-			"description": "The maximum probability of configuring IP address incorrectly by time T.",
+			"description": "The maximum probability of configuring IP address incorrectly by time `T´.",
 			"type": "prob-reach-time-bounded"
 		},
 		{

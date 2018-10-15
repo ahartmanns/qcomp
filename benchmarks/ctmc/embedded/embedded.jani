@@ -1572,7 +1572,9 @@
                     "op": "initial"
                 },
                 "values": {
-                    "accumulate": [],
+                    "accumulate": [
+                        "time"
+                    ],
                     "exp": "rewardmodel_danger",
                     "op": "Emin",
                     "time-instant": {
@@ -1592,7 +1594,9 @@
                     "op": "initial"
                 },
                 "values": {
-                    "accumulate": [],
+                    "accumulate": [
+                        "time"
+                    ],
                     "exp": "rewardmodel_danger",
                     "op": "Emin",
                     "reach": "label_down"
@@ -1608,7 +1612,9 @@
                     "op": "initial"
                 },
                 "values": {
-                    "accumulate": [],
+                    "accumulate": [
+                        "time"
+                    ],
                     "exp": "rewardmodel_down",
                     "op": "Emin",
                     "time-instant": {
@@ -1804,7 +1810,9 @@
                     "op": "initial"
                 },
                 "values": {
-                    "accumulate": [],
+                    "accumulate": [
+                        "time"
+                    ],
                     "exp": "rewardmodel_up",
                     "op": "Emin",
                     "time-instant": {
@@ -1824,7 +1832,9 @@
                     "op": "initial"
                 },
                 "values": {
-                    "accumulate": [],
+                    "accumulate": [
+                        "time"
+                    ],
                     "exp": "rewardmodel_up",
                     "op": "Emin",
                     "reach": "label_down"

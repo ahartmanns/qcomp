@@ -27,14 +27,14 @@
 		{
 			"name": "T",
 			"kind": "open",
-			"description": "Parameter T",
+			"description": "Time bound for properties",
 			"type": "positive integer"
 		}
 	],
 	"properties": [
 		{
 			"name": "deadline",
-			"description": "The maximum probability that the malicious recipient gains information before time T.",
+			"description": "The maximum probability that the malicious recipient gains information before time `T´.",
 			"type": "prob-reach-time-bounded"
 		},
 		{

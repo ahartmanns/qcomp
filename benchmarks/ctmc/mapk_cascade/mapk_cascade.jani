@@ -3373,7 +3373,9 @@
                     "op": "initial"
                 },
                 "values": {
-                    "accumulate": [],
+                    "accumulate": [
+                        "time"
+                    ],
                     "exp": "time",
                     "op": "Emin",
                     "reach": {
