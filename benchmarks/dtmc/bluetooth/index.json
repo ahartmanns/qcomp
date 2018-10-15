@@ -30,8 +30,8 @@
 		{
 			"name": "mrec",
 			"kind": "open",
-			"description": "Parameter mrec",
-			"type": "positive integer"
+			"description": "Number of replies received",
+			"type": "in {1,2}"
 		}
 	],
 	"properties": [

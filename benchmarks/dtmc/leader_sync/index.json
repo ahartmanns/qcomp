@@ -28,13 +28,13 @@
 		{
 			"name": "N",
 			"kind": "file",
-			"description": "Parameter N",
+			"description": "Number of processes",
 			"type": "positive integer"
 		},
 		{
 			"name": "K",
 			"kind": "file",
-			"description": "Parameter K",
+			"description": "Range of probabilistic choice",
 			"type": "positive integer"
 		}
 	],
@@ -75,7 +75,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 26
+						}
+					]
 				}
 			]
 		},
@@ -103,7 +109,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 69
+						}
+					]
 				}
 			]
 		},
@@ -131,7 +143,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 147
+						}
+					]
 				}
 			]
 		},
@@ -159,7 +177,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 61
+						}
+					]
 				}
 			]
 		},
@@ -187,7 +211,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 274
+						}
+					]
 				}
 			]
 		},
@@ -215,7 +245,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 812
+						}
+					]
 				}
 			]
 		},
@@ -243,7 +279,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 141
+						}
+					]
 				}
 			]
 		},
@@ -271,7 +313,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1050
+						}
+					]
 				}
 			]
 		},
@@ -299,10 +347,26 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 4244
+						}
+					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.3-2.2018-10-12.json",
+		"results/Storm.3-3.2018-10-12.json",
+		"results/Storm.3-4.2018-10-12.json",
+		"results/Storm.4-2.2018-10-12.json",
+		"results/Storm.4-3.2018-10-12.json",
+		"results/Storm.4-4.2018-10-12.json",
+		"results/Storm.5-2.2018-10-12.json",
+		"results/Storm.5-3.2018-10-12.json",
+		"results/Storm.5-4.2018-10-12.json"
+	]
 }

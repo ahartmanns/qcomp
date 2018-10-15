@@ -28,14 +28,14 @@
 		{
 			"name": "TotalRuns",
 			"kind": "open",
-			"description": "Parameter TotalRuns",
+			"description": "Number of protocol runs",
 			"type": "positive integer"
 		},
 		{
 			"name": "CrowdSize",
 			"kind": "open",
-			"description": "Parameter CrowdSize",
-			"type": "positive integer"
+			"description": "Number of good crowd members",
+			"type": "in {5,10,15,20}"
 		}
 	],
 	"properties": [
@@ -70,6 +70,12 @@
 							"name": "CrowdSize",
 							"value": 5
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1145
+						}
 					]
 				},
 				{
@@ -82,6 +88,12 @@
 							"name": "CrowdSize",
 							"value": 5
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 3190
+						}
 					]
 				},
 				{
@@ -94,6 +106,12 @@
 							"name": "CrowdSize",
 							"value": 5
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 7421
+						}
 					]
 				},
 				{
@@ -105,6 +123,12 @@
 						{
 							"name": "CrowdSize",
 							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 15233
 						}
 					]
 				},
@@ -118,6 +142,12 @@
 							"name": "CrowdSize",
 							"value": 10
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 6460
+						}
 					]
 				},
 				{
@@ -129,6 +159,12 @@
 						{
 							"name": "CrowdSize",
 							"value": 10
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 28975
 						}
 					]
 				},
@@ -142,6 +178,12 @@
 							"name": "CrowdSize",
 							"value": 10
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 104512
+						}
 					]
 				},
 				{
@@ -153,6 +195,12 @@
 						{
 							"name": "CrowdSize",
 							"value": 10
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 321751
 						}
 					]
 				},
@@ -166,6 +214,12 @@
 							"name": "CrowdSize",
 							"value": 15
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 19075
+						}
 					]
 				},
 				{
@@ -177,6 +231,12 @@
 						{
 							"name": "CrowdSize",
 							"value": 15
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 117485
 						}
 					]
 				},
@@ -190,6 +250,12 @@
 							"name": "CrowdSize",
 							"value": 15
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 572153
+						}
 					]
 				},
 				{
@@ -201,6 +267,12 @@
 						{
 							"name": "CrowdSize",
 							"value": 15
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2341309
 						}
 					]
 				},
@@ -214,6 +286,12 @@
 							"name": "CrowdSize",
 							"value": 20
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 42115
+						}
 					]
 				},
 				{
@@ -225,6 +303,12 @@
 						{
 							"name": "CrowdSize",
 							"value": 20
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 329470
 						}
 					]
 				},
@@ -238,6 +322,12 @@
 							"name": "CrowdSize",
 							"value": 20
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2018094
+						}
 					]
 				},
 				{
@@ -249,11 +339,34 @@
 						{
 							"name": "CrowdSize",
 							"value": 20
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 10291282
 						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.3-5.2018-10-12.json",
+		"results/Storm.4-5.2018-10-12.json",
+		"results/Storm.5-5.2018-10-12.json",
+		"results/Storm.6-5.2018-10-12.json",
+		"results/Storm.3-10.2018-10-12.json",
+		"results/Storm.4-10.2018-10-12.json",
+		"results/Storm.5-10.2018-10-12.json",
+		"results/Storm.6-10.2018-10-12.json",
+		"results/Storm.3-15.2018-10-12.json",
+		"results/Storm.4-15.2018-10-12.json",
+		"results/Storm.5-15.2018-10-12.json",
+		"results/Storm.6-15.2018-10-12.json",
+		"results/Storm.3-20.2018-10-12.json",
+		"results/Storm.4-20.2018-10-12.json",
+		"results/Storm.5-20.2018-10-12.json",
+		"results/Storm.6-20.2018-10-12.json"
+	]
 }

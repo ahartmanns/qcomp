@@ -30,13 +30,13 @@
 		{
 			"name": "N",
 			"kind": "open",
-			"description": "Parameter N",
+			"description": "Number of inputs in each bundle",
 			"type": "positive integer"
 		},
 		{
 			"name": "K",
 			"kind": "open",
-			"description": "Parameter K",
+			"description": "Number of restorative stages",
 			"type": "positive integer"
 		}
 	],
@@ -72,6 +72,12 @@
 							"name": "K",
 							"value": 1
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 78332
+						}
 					]
 				},
 				{
@@ -83,6 +89,12 @@
 						{
 							"name": "K",
 							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 154942
 						}
 					]
 				},
@@ -96,6 +108,12 @@
 							"name": "K",
 							"value": 3
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 231552
+						}
 					]
 				},
 				{
@@ -107,6 +125,12 @@
 						{
 							"name": "K",
 							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 308162
 						}
 					]
 				},
@@ -120,6 +144,12 @@
 							"name": "K",
 							"value": 1
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1004862
+						}
 					]
 				},
 				{
@@ -131,6 +161,12 @@
 						{
 							"name": "K",
 							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2003082
 						}
 					]
 				},
@@ -144,6 +180,12 @@
 							"name": "K",
 							"value": 3
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 3001302
+						}
 					]
 				},
 				{
@@ -155,6 +197,12 @@
 						{
 							"name": "K",
 							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 3999522
 						}
 					]
 				},
@@ -168,6 +216,12 @@
 							"name": "K",
 							"value": 1
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 4717592
+						}
 					]
 				},
 				{
@@ -179,6 +233,12 @@
 						{
 							"name": "K",
 							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 9420422
 						}
 					]
 				},
@@ -192,6 +252,12 @@
 							"name": "K",
 							"value": 3
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 14123252
+						}
 					]
 				},
 				{
@@ -203,11 +269,30 @@
 						{
 							"name": "K",
 							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 18826082
 						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.20-1.2018-10-12.json",
+		"results/Storm.20-2.2018-10-12.json",
+		"results/Storm.20-3.2018-10-12.json",
+		"results/Storm.20-4.2018-10-12.json",
+		"results/Storm.40-1.2018-10-12.json",
+		"results/Storm.40-2.2018-10-12.json",
+		"results/Storm.40-3.2018-10-12.json",
+		"results/Storm.40-4.2018-10-12.json",
+		"results/Storm.60-1.2018-10-12.json",
+		"results/Storm.60-2.2018-10-12.json",
+		"results/Storm.60-3.2018-10-12.json",
+		"results/Storm.60-4.2018-10-12.json"
+	]
 }

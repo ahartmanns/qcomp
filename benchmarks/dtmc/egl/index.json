@@ -29,13 +29,13 @@
 		{
 			"name": "N",
 			"kind": "open",
-			"description": "Parameter N",
+			"description": "Number of pairs of secrets",
 			"type": "positive integer"
 		},
 		{
 			"name": "L",
 			"kind": "open",
-			"description": "Parameter L",
+			"description": "Number of bits per secret",
 			"type": "positive integer"
 		}
 	],
@@ -86,6 +86,12 @@
 							"name": "L",
 							"value": 2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 33790
+						}
 					]
 				},
 				{
@@ -98,6 +104,12 @@
 							"name": "L",
 							"value": 4
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 74750
+						}
 					]
 				},
 				{
@@ -109,6 +121,12 @@
 						{
 							"name": "L",
 							"value": 6
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 115710
 						}
 					]
 				},
@@ -122,6 +140,12 @@
 							"name": "L",
 							"value": 8
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 156670
+						}
 					]
 				},
 				{
@@ -133,6 +157,12 @@
 						{
 							"name": "L",
 							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 66060286
 						}
 					]
 				},
@@ -146,6 +176,12 @@
 							"name": "L",
 							"value": 4
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 149946366
+						}
 					]
 				},
 				{
@@ -157,6 +193,12 @@
 						{
 							"name": "L",
 							"value": 6
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 233832446
 						}
 					]
 				},
@@ -271,5 +313,13 @@
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.5-2.2018-10-12.json",
+		"results/Storm.5-4.2018-10-12.json",
+		"results/Storm.5-6.2018-10-12.json",
+		"results/Storm.5-8.2018-10-12.json",
+		"results/Storm.10-2.2018-10-12.json",
+		"results/Storm.10-4.2018-10-12.json",
+		"results/Storm.10-6.2018-10-12.json"
+	]
 }
