@@ -62,6 +62,12 @@
 							"name": "mrec",
 							"value": 1
 						}
+					],
+					"states": [
+						{
+							"note" : "Storm/dd",
+							"number": 3411945339
+						}
 					]
 				},
 				{
@@ -75,5 +81,7 @@
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.dd-bisim.1.2018-10-16.json"
+	]
 }
