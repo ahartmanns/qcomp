@@ -91,7 +91,7 @@
 								"num": 8,
 								"den": 5
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "avgtime",
@@ -100,7 +100,7 @@
 								"num": 9,
 								"den": 10
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -145,7 +145,7 @@
 								"num": 4852666717,
 								"den": 1975680000
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "avgtime",
@@ -154,7 +154,7 @@
 								"num": 60482417,
 								"den": 47040000
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -199,7 +199,7 @@
 								"num": 17761818019843,
 								"den": 5163110400000
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "avgtime",
@@ -208,7 +208,7 @@
 								"num": 359998364809,
 								"den": 184396800000
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}

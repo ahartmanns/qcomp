@@ -67,7 +67,7 @@
 								"num": 729,
 								"den": 3125
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -106,7 +106,7 @@
 						{
 							"property": "goal",
 							"value": 1,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -145,7 +145,7 @@
 						{
 							"property": "goal",
 							"value": 1,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}

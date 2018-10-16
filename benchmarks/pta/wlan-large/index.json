@@ -61,12 +61,12 @@
 						{
 							"property": "P_1",
 							"value": 1.0,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "P_1_1",
 							"value": 1.0,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "P_min",
@@ -75,7 +75,7 @@
 								"num": 5,
 								"den": 128
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "P_max",
@@ -84,7 +84,7 @@
 								"num": 1,
 								"den": 16
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}

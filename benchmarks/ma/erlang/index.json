@@ -72,12 +72,12 @@
 								"num": 1,
 								"den": 2
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "TminReach",
 							"value": 2,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				},
@@ -110,12 +110,12 @@
 								"num": 1,
 								"den": 2
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "TminReach",
 							"value": 501,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				},
@@ -148,12 +148,12 @@
 								"num": 1,
 								"den": 2
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "TminReach",
 							"value": 51,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}

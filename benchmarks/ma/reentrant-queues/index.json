@@ -83,7 +83,7 @@
 						{
 							"property": "PminBothQueuesFullIsOne",
 							"value": 1.0,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}

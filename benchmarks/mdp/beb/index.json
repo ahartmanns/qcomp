@@ -86,7 +86,7 @@
 								"num": 7509,
 								"den": 8192
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "GaveUp",
@@ -95,7 +95,7 @@
 								"num": 683,
 								"den": 8192
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -146,7 +146,7 @@
 								"num": 1180456441149525318505,
 								"den": 1180591620717411303424
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "GaveUp",
@@ -155,7 +155,7 @@
 								"num": 135179567885984919,
 								"den": 1180591620717411303424
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}

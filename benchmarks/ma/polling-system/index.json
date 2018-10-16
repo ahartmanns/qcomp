@@ -73,7 +73,7 @@
 						{
 							"property": "PminBothFullIsOne",
 							"value": 1.0,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "TminBothFull",
@@ -82,7 +82,7 @@
 								"num": 89777,
 								"den": 8192
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						},
 						{
 							"property": "TmaxBothFull",
@@ -91,7 +91,7 @@
 								"num": 656520718285914541189633,
 								"den": 104245454153608704
 							},
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}

@@ -62,7 +62,7 @@
 						{
 							"property": "goal",
 							"value": 1,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -101,7 +101,7 @@
 						{
 							"property": "goal",
 							"value": 1,
-							"note": "Storm.exact"
+							"note": "Storm/exact"
 						}
 					]
 				}
