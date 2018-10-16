@@ -1,7 +1,7 @@
 {
 	"name": "Oscillator Synchronisation",
 	"short": "oscillators",
-	"type": "DTMC",
+	"type": "dtmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-08-24",

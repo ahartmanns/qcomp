@@ -1,7 +1,7 @@
 {
 	"name": "Synchronous Leader Election Protocol",
 	"short": "leader_sync",
-	"type": "DTMC",
+	"type": "dtmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",

@@ -1,7 +1,7 @@
 {
 	"name": "Kanban Manufacturing System",
 	"short": "kanban",
-	"type": "CTMC",
+	"type": "ctmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",

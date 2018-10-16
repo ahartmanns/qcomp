@@ -1,7 +1,7 @@
 {
 	"name": "Non-Repudiation Protocol (with honest recipient)",
 	"short": "repudiation_honest",
-	"type": "PTA",
+	"type": "pta",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",

@@ -1,9 +1,9 @@
 {
-	"file": "../zeroconf_dl.jani",
+	"file": "../zeroconf.jani",
 	"version": 1,
 	"date": "2018-10-12",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
-	"log": "Storm.1000-1-True-40.2018-10-12.txt",
+	"log": "Storm.1000-8-true.2018-10-12.txt",
 	"open-parameter-values": [
 		{
 			"name": "N",
@@ -11,15 +11,11 @@
 		},
 		{
 			"name": "K",
-			"value": 1
+			"value": 8
 		},
 		{
 			"name": "reset",
 			"value": true
-		},
-		{
-			"name": "deadline",
-			"value": 40
 		}
 	],
 	"tool": {
@@ -28,22 +24,22 @@
 		"url": "http://www.stormchecker.org"
 	},
 	"system": {
-		"cpu": "AMD Opteron(tm) Processor 6172",
+		"cpu": "AMD Opteron 6172",
 		"ram": 192,
 		"os": "Debian GNU/Linux 9 (stretch)",
 		"runtime": "gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516"
 	},
-	"command": "storm --jani zeroconf_dl.jani --janiproperty --constants N=1000,K=1,reset=true,deadline=40  --timemem",
-	"time": 0.296,
-	"memory": 49283072,
+	"command": "storm --jani zeroconf.jani --janiproperty --constants N=1000,K=8,reset=true  --timemem",
+	"time": 0.067,
+	"memory": 48234496,
 	"property-times": [
 		{
-			"name:": "deadline_max",
-			"time": 0.019
+			"name:": "correct_max",
+			"time": 0.003
 		},
 		{
-			"name:": "deadline_min",
-			"time": 0.011
+			"name:": "correct_min",
+			"time": 0.002
 		}
 	],
 	"data": [
@@ -52,44 +48,44 @@
 				{
 					"unit": "s",
 					"name": "time",
-					"value": 0.255
+					"value": 0.052
 				},
 				{
 					"name": "states",
-					"value": 15640
+					"value": 1924
 				},
 				{
 					"name": "branches",
-					"value": 24982
+					"value": 2845
 				},
 				{
 					"name": "transitions",
-					"value": 20215
+					"value": 2411
 				}
 			],
 			"group": "State space exploration"
 		},
 		{
-			"property": "deadline_max",
+			"property": "correct_max",
 			"values": [
 				{
 					"unit": "s",
 					"name": "time",
-					"value": 0.019
+					"value": 0.003
 				}
 			],
-			"value": 0.005342725178
+			"value": 4.80136318e-08
 		},
 		{
-			"property": "deadline_min",
+			"property": "correct_min",
 			"values": [
 				{
 					"unit": "s",
 					"name": "time",
-					"value": 0.011
+					"value": 0.002
 				}
 			],
-			"value": 9.23566716e-37
+			"value": 5.040105207e-09
 		}
 	]
 }

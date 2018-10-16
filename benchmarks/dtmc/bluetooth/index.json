@@ -1,7 +1,7 @@
 {
 	"name": "Bluetooth Device Discovery",
 	"short": "bluetooth",
-	"type": "DTMC",
+	"type": "dtmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",

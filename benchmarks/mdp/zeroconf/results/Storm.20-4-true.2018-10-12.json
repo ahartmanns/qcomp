@@ -3,11 +3,11 @@
 	"version": 1,
 	"date": "2018-10-12",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
-	"log": "Storm.1000-4-True.2018-10-12.txt",
+	"log": "Storm.20-4-true.2018-10-12.txt",
 	"open-parameter-values": [
 		{
 			"name": "N",
-			"value": 1000
+			"value": 20
 		},
 		{
 			"name": "K",
@@ -24,12 +24,12 @@
 		"url": "http://www.stormchecker.org"
 	},
 	"system": {
-		"cpu": "AMD Opteron(tm) Processor 6172",
+		"cpu": "AMD Opteron 6172",
 		"ram": 192,
 		"os": "Debian GNU/Linux 9 (stretch)",
 		"runtime": "gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516"
 	},
-	"command": "storm --jani zeroconf.jani --janiproperty --constants N=1000,K=4,reset=true  --timemem",
+	"command": "storm --jani zeroconf.jani --janiproperty --constants N=20,K=4,reset=true  --timemem",
 	"time": 0.054,
 	"memory": 48234496,
 	"property-times": [
@@ -74,7 +74,7 @@
 					"value": 0.002
 				}
 			],
-			"value": 3.684123451e-05
+			"value": 7.257425353e-07
 		},
 		{
 			"property": "correct_min",
@@ -85,7 +85,7 @@
 					"value": 0.001
 				}
 			],
-			"value": 3.867439431e-06
+			"value": 7.618296755e-08
 		}
 	]
 }

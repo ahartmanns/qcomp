@@ -1,7 +1,7 @@
 {
 	"name": "IPv4 Zeroconf Protocol PTA",
 	"short": "zeroconf-pta",
-	"type": "PTA",
+	"type": "pta",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",

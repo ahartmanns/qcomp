@@ -1,7 +1,7 @@
 {
 	"name": "IEEE 802.11 Wireless LAN",
 	"short": "wlan",
-	"type": "MDP",
+	"type": "mdp",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",

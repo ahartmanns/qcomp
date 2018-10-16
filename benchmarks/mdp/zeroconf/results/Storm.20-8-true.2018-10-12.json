@@ -3,15 +3,15 @@
 	"version": 1,
 	"date": "2018-10-12",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
-	"log": "Storm.1000-6-True.2018-10-12.txt",
+	"log": "Storm.20-8-true.2018-10-12.txt",
 	"open-parameter-values": [
 		{
 			"name": "N",
-			"value": 1000
+			"value": 20
 		},
 		{
 			"name": "K",
-			"value": 6
+			"value": 8
 		},
 		{
 			"name": "reset",
@@ -24,22 +24,22 @@
 		"url": "http://www.stormchecker.org"
 	},
 	"system": {
-		"cpu": "AMD Opteron(tm) Processor 6172",
+		"cpu": "AMD Opteron 6172",
 		"ram": 192,
 		"os": "Debian GNU/Linux 9 (stretch)",
 		"runtime": "gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516"
 	},
-	"command": "storm --jani zeroconf.jani --janiproperty --constants N=1000,K=6,reset=true  --timemem",
-	"time": 0.061,
+	"command": "storm --jani zeroconf.jani --janiproperty --constants N=20,K=8,reset=true  --timemem",
+	"time": 0.067,
 	"memory": 48234496,
 	"property-times": [
 		{
 			"name:": "correct_max",
-			"time": 0.002
+			"time": 0.003
 		},
 		{
 			"name:": "correct_min",
-			"time": 0.001
+			"time": 0.002
 		}
 	],
 	"data": [
@@ -48,19 +48,19 @@
 				{
 					"unit": "s",
 					"name": "time",
-					"value": 0.047
+					"value": 0.052
 				},
 				{
 					"name": "states",
-					"value": 1506
+					"value": 1924
 				},
 				{
 					"name": "branches",
-					"value": 2229
+					"value": 2845
 				},
 				{
 					"name": "transitions",
-					"value": 1883
+					"value": 2411
 				}
 			],
 			"group": "State space exploration"
@@ -71,10 +71,10 @@
 				{
 					"unit": "s",
 					"name": "time",
-					"value": 0.002
+					"value": 0.003
 				}
 			],
-			"value": 1.330015796e-06
+			"value": 9.457956148e-10
 		},
 		{
 			"property": "correct_min",
@@ -82,10 +82,10 @@
 				{
 					"unit": "s",
 					"name": "time",
-					"value": 0.001
+					"value": 0.002
 				}
 			],
-			"value": 1.39615084e-07
+			"value": 9.928241268e-11
 		}
 	]
 }

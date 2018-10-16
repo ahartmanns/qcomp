@@ -1,7 +1,7 @@
 {
 	"name": "Probabilistic Contract Signing Protocol",
 	"short": "egl",
-	"type": "DTMC",
+	"type": "dtmc",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-11",
