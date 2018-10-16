@@ -16,9 +16,9 @@
 		"Chi-Ying F. Huang <cyhuang5@ym.edu.tw>",
 		"James E. Ferrell <James.Ferrell@stanford.edu>"
 	],
-	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "https://doi.org/10.1073/pnas.93.19.10078",
-	"description": "This model is part of the PRISM Benchmark Suite [1]. The MAP (Mitogen-Activated Protien) Kinases are involved in a pathway through which information is sent to the nucleus. It is one of the most important signalling pathways since it plays a pivotal role in the molecular-signalling that governs the growth, proliferation and survival of many cell types. The MAPK cascade consists of a MAPK Kinase Kinase (MAPKKK), MAPK Kinase (MAPKK) and a MAPK. The cascade is initialised through the phosphorylation of MAPKKK, which then activates MAPKK through the phosphorylation at two serine residues and this then activates MAPK through the phosphorylation at theronine and tyrosine residues. To reduce the state space we employ a population-based approach where the number of each type of molecule or species is modelled. The initial amount of `E1´, `E2´, MAPK and MAPKK phospatase (`M´) and MAPK/MAPKK and MAPKKK `N´ is specified as a parameter. See [2] for more details",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. The MAP (Mitogen-Activated Protien) Kinases are involved in a pathway through which information is sent to the nucleus. It is one of the most important signalling pathways since it plays a pivotal role in the molecular-signalling that governs the growth, proliferation and survival of many cell types. The MAPK cascade consists of a MAPK Kinase Kinase (MAPKKK), MAPK Kinase (MAPKK) and a MAPK. The cascade is initialised through the phosphorylation of MAPKKK, which then activates MAPKK through the phosphorylation at two serine residues and this then activates MAPK through the phosphorylation at theronine and tyrosine residues. To reduce the state space we employ a population-based approach where the number of each type of molecule or species is modelled. The initial amount of MAPK, MAPKK and MAPKKK is specified as a parameter `N´. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/mapk_cascade.php"
@@ -28,13 +28,13 @@
 		{
 			"name": "N",
 			"kind": "open",
-			"description": "Parameter N",
+			"description": "Initial amount of MAPK, MAPKK, and MAPKKK",
 			"type": "positive integer"
 		},
 		{
 			"name": "T",
 			"kind": "open",
-			"description": "Parameter T",
+			"description": "Time parameter for properties",
 			"type": "positive integer"
 		}
 	],
@@ -80,6 +80,12 @@
 							"name": "T",
 							"value": 30
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 118
+						}
 					]
 				},
 				{
@@ -91,6 +97,12 @@
 						{
 							"name": "T",
 							"value": 30
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2172
 						}
 					]
 				},
@@ -104,6 +116,12 @@
 							"name": "T",
 							"value": 30
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 18292
+						}
 					]
 				},
 				{
@@ -115,6 +133,12 @@
 						{
 							"name": "T",
 							"value": 30
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 99535
 						}
 					]
 				},
@@ -128,6 +152,12 @@
 							"name": "T",
 							"value": 30
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 408366
+						}
 					]
 				},
 				{
@@ -139,6 +169,12 @@
 						{
 							"name": "T",
 							"value": 30
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1373026
 						}
 					]
 				},
@@ -169,5 +205,12 @@
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.1-30.2018-10-16.json",
+		"results/Storm.2-30.2018-10-16.json",
+		"results/Storm.3-30.2018-10-16.json",
+		"results/Storm.4-30.2018-10-16.json",
+		"results/Storm.5-30.2018-10-16.json",
+		"results/Storm.6-30.2018-10-16.json"
+	]
 }

@@ -17,7 +17,7 @@
 		"Holger Hermanns <hermanns@cs.uni-saarland.de>",
 		"Joost-Pieter Katoen <katoen@cs.rwth-aachen.de>"
 	],
-	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "https://doi.org/10.1109/RELDI.2000.885410",
 	"description": "This model is part of the PRISM Benchmark Suite [1]. It is based on a cluster of workstations, taken from [0]. The system comprises two sub-clusters with `N´ workstations in each, connected in a star topology. The switches connecting each sub-cluster are joined by a central backbone. All components can break down and there is a single repair unit to service all components. See [2] for more details",
 	"references": [
@@ -29,31 +29,31 @@
 		{
 			"name": "N",
 			"kind": "open",
-			"description": "Parameter N",
-			"type": "positive integer"
+			"description": "Number of workstations in each sub-cluster",
+			"type": "positive even integer"
 		},
 		{
 			"name": "T",
 			"kind": "open",
-			"description": "Parameter T",
-			"type": "positive integer"
+			"description": "Time parameter for properties",
+			"type": "positive real number"
 		},
 		{
 			"name": "t",
 			"kind": "open",
-			"description": "Parameter t",
-			"type": "positive integer"
+			"description": "Time parameter for properties",
+			"type": "positive real number"
 		}
 	],
 	"properties": [
 		{
 			"name": "below_min",
-			"description": "The expected time the system spends below minimum QoS until time T.",
+			"description": "The expected time the system spends below minimum QoS until time `T´.",
 			"type": "exp-reward-time-bounded"
 		},
 		{
 			"name": "operational",
-			"description": "Percentage of operational workstations at time t.",
+			"description": "Percentage of operational workstations at time `t´.",
 			"type": "exp-reward-time-instant"
 		},
 		{
@@ -63,27 +63,27 @@
 		},
 		{
 			"name": "qos1",
-			"description": "The probability that QoS drops below minimum quality within T time units.",
+			"description": "The probability that QoS drops below minimum quality within `T´ time units.",
 			"type": "prob-reach-time-bounded"
 		},
 		{
 			"name": "qos2",
-			"description": "The probability of facing insufficient QoS after t time units.",
+			"description": "The probability of facing insufficient QoS after `t´ time units.",
 			"type": "prob-reach-time-bounded"
 		},
 		{
 			"name": "qos3",
-			"description": "TODO_qos3",
+			"description": "The Probability of going from minimum QoS to premium QoS within `t´ time units without violating the minimum QoS constraint along the way.",
 			"type": "prob-reach-time-bounded"
 		},
 		{
 			"name": "qos4",
-			"description": "The probability that it takes more than T time units to recover from insufficient QoS.",
+			"description": "The probability that it takes more than `T´ time units to recover from insufficient QoS.",
 			"type": "prob-reach-time-bounded"
 		},
 		{
 			"name": "repairs",
-			"description": "The expected number of repairs by time T.",
+			"description": "The expected number of repairs by time `T´.",
 			"type": "exp-reward-time-bounded"
 		}
 	],
@@ -116,6 +116,12 @@
 							"name": "t",
 							"value": 20
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 276
+						}
 					]
 				},
 				{
@@ -131,6 +137,12 @@
 						{
 							"name": "t",
 							"value": 20
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 820
 						}
 					]
 				},
@@ -148,6 +160,12 @@
 							"name": "t",
 							"value": 20
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2772
+						}
 					]
 				},
 				{
@@ -163,6 +181,12 @@
 						{
 							"name": "t",
 							"value": 20
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 10132
 						}
 					]
 				},
@@ -180,6 +204,12 @@
 							"name": "t",
 							"value": 20
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 38676
+						}
 					]
 				},
 				{
@@ -195,6 +225,12 @@
 						{
 							"name": "t",
 							"value": 20
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 151060
 						}
 					]
 				},
@@ -212,6 +248,12 @@
 							"name": "t",
 							"value": 20
 						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 597012
+						}
 					]
 				},
 				{
@@ -227,6 +269,12 @@
 						{
 							"name": "t",
 							"value": 20
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2373652
 						}
 					]
 				},
@@ -249,5 +297,13 @@
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/Storm.2-2000-20.2018-10-16.json",
+		"results/Storm.4-2000-20.2018-10-16.json",
+		"results/Storm.8-2000-20.2018-10-16.json",
+		"results/Storm.16-2000-20.2018-10-16.json",
+		"results/Storm.32-2000-20.2018-10-16.json",
+		"results/Storm.64-2000-20.2018-10-16.json",
+		"results/Storm.128-2000-20.2018-10-16.json"
+	]
 }
