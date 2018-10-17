@@ -1,0 +1,325 @@
+{
+	"name": "Probabilistic Contract Signing Protocol",
+	"short": "egl",
+	"type": "dtmc",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Shimon Even <evenQcs.technion.ac.il >",
+		"Oded Goldreich <oded.goldreich@weizman.ac.il>",
+		"Abraham Lempel <lempelcs.technion.ac.il>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1145/3812.3818",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. Fair exchange is the problem of exchanging data in a way that guarantees that either all participants obtain what they want, or none do. Contract signing is a particular form of fair exchange, in which the parties exchange commitments to a contract. Commitment is often identified with the party's digital signature on the contract. In the EGL protocol, each party starts by generating a sequence of `N´ pairs of secrets and revealing the encryptions of the contract under each secret. A party is considered committed if the opponent knows both secrets in at least one pair. In the first phase, the parties use oblivious transfer to probabilistically reveal one secret from each pair. In the second phase, they release all secrets bit by bit, where each secret has `L´ bits. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/contract_egl.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "open",
+			"description": "Number of pairs of secrets",
+			"type": "positive integer"
+		},
+		{
+			"name": "L",
+			"kind": "open",
+			"description": "Number of bits per secret",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "messagesA",
+			"description": "The expected number of messages from B that A needs to knows a pair once B knows a pair.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "messagesB",
+			"description": "The expected number of messages from A that B needs to knows a pair once A knows a pair.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "unfairA",
+			"description": "The probability that party A is unfairly disadvantaged.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "unfairB",
+			"description": "The probability that party B is unfairly disadvantaged.",
+			"type": "prob-reach"
+		}
+	],
+	"files": [
+		{
+			"file": "egl.jani",
+			"original-file": [
+				"egl.prism",
+				"egl.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism egl.prism --tojani egl.jani --prop egl.props --globalvars"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 5
+						},
+						{
+							"name": "L",
+							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 33790
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 5
+						},
+						{
+							"name": "L",
+							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 74750
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 5
+						},
+						{
+							"name": "L",
+							"value": 6
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 115710
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 5
+						},
+						{
+							"name": "L",
+							"value": 8
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 156670
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 10
+						},
+						{
+							"name": "L",
+							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 66060286
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 10
+						},
+						{
+							"name": "L",
+							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 149946366
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 10
+						},
+						{
+							"name": "L",
+							"value": 6
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 233832446
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 10
+						},
+						{
+							"name": "L",
+							"value": 8
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 15
+						},
+						{
+							"name": "L",
+							"value": 2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 15
+						},
+						{
+							"name": "L",
+							"value": 4
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 15
+						},
+						{
+							"name": "L",
+							"value": 6
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 15
+						},
+						{
+							"name": "L",
+							"value": 8
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 20
+						},
+						{
+							"name": "L",
+							"value": 2
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 20
+						},
+						{
+							"name": "L",
+							"value": 4
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 20
+						},
+						{
+							"name": "L",
+							"value": 6
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 20
+						},
+						{
+							"name": "L",
+							"value": 8
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": [
+		"results/Storm.5-2.2018-10-12.json",
+		"results/Storm.5-4.2018-10-12.json",
+		"results/Storm.5-6.2018-10-12.json",
+		"results/Storm.5-8.2018-10-12.json",
+		"results/Storm.10-2.2018-10-12.json",
+		"results/Storm.10-4.2018-10-12.json",
+		"results/Storm.10-6.2018-10-12.json"
+	]
+}

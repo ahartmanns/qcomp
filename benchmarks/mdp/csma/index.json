@@ -1,0 +1,378 @@
+{
+	"name": "IEEE 802.3 CSMA/CD Protocol",
+	"short": "csma",
+	"type": "mdp",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": "IEEE",
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "http://www.cs.bilkent.edu.tr/~tugrul/CS518/Papers/802.3-2000.pdf",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. The CSMA/CD (Carrier Sense, Multiple Access with Collision Detection) IEEE protocol is designed for networks with a single channel and specifies the behaviour of `N´ stations with the aim of minimising simultaneous use of the channel (data collision). When a station has data to send, it listens to the medium, after which, if the medium was free (no one transmitting), the station starts to send its data. On the other hand, if the medium was sensed busy, the station waits a random amount of time and then repeats this process. `K´ is the maximum backoff count. The model we consider here is a probabilistic extension of the timed automata model given in [3]. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/csma.php",
+		"https://doi.org/10.1109/32.159837"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "Number of stations",
+			"type": "positive integer"
+		},
+		{
+			"name": "K",
+			"kind": "file",
+			"description": "Maximum backoff count",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "all_before_max",
+			"description": "The maximum probability all stations send successfully before a collision with max backoff.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "all_before_min",
+			"description": "Minimum probability all stations send successfully before a collision with max backoff.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "some_before",
+			"description": "Minimum probability that some station eventually delivers with less than K backoffs.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "time_max",
+			"description": "The maximum expected time for all messages to be sent.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "time_min",
+			"description": "Minimum expected time for all messages to be sent.",
+			"type": "exp-reward"
+		}
+	],
+	"files": [
+		{
+			"file": "csma.2-2.jani",
+			"original-file": [
+				"csma.2-2.prism",
+				"csma.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism csma.2-2.prism --tojani csma.2-2.jani --prop csma.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 2
+				},
+				{
+					"name": "K",
+					"value": 2
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1038
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "csma.2-4.jani",
+			"original-file": [
+				"csma.2-4.prism",
+				"csma.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism csma.2-4.prism --tojani csma.2-4.jani --prop csma.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 2
+				},
+				{
+					"name": "K",
+					"value": 4
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 7958
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "csma.2-6.jani",
+			"original-file": [
+				"csma.2-6.prism",
+				"csma.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism csma.2-6.prism --tojani csma.2-6.jani --prop csma.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 2
+				},
+				{
+					"name": "K",
+					"value": 6
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 66718
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "csma.3-2.jani",
+			"original-file": [
+				"csma.3-2.prism",
+				"csma.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism csma.3-2.prism --tojani csma.3-2.jani --prop csma.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 3
+				},
+				{
+					"name": "K",
+					"value": 2
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 36850
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "csma.3-4.jani",
+			"original-file": [
+				"csma.3-4.prism",
+				"csma.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism csma.3-4.prism --tojani csma.3-4.jani --prop csma.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 3
+				},
+				{
+					"name": "K",
+					"value": 4
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1460287
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "csma.3-6.jani",
+			"original-file": [
+				"csma.3-6.prism",
+				"csma.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism csma.3-6.prism --tojani csma.3-6.jani --prop csma.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 3
+				},
+				{
+					"name": "K",
+					"value": 6
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 84856004
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "csma.4-2.jani",
+			"original-file": [
+				"csma.4-2.prism",
+				"csma.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism csma.4-2.prism --tojani csma.4-2.jani --prop csma.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "K",
+					"value": 2
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 761962
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "csma.4-4.jani",
+			"original-file": [
+				"csma.4-4.prism",
+				"csma.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism csma.4-4.prism --tojani csma.4-4.jani --prop csma.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "K",
+					"value": 4
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 133301572
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "csma.4-6.jani",
+			"original-file": [
+				"csma.4-6.prism",
+				"csma.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism csma.4-6.prism --tojani csma.4-6.jani --prop csma.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "K",
+					"value": 6
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": []
+				}
+			]
+		}
+	],
+	"results": [
+		"results/Storm.2-2.2018-10-12.json",
+		"results/Storm.2-4.2018-10-12.json",
+		"results/Storm.2-6.2018-10-12.json",
+		"results/Storm.3-2.2018-10-12.json",
+		"results/Storm.3-4.2018-10-12.json",
+		"results/Storm.3-6.2018-10-12.json",
+		"results/Storm.4-2.2018-10-12.json",
+		"results/Storm.4-4.2018-10-12.json"
+	]
+}

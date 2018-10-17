@@ -1,0 +1,348 @@
+{
+	"name": "Tandem Queueing Network",
+	"short": "tandem",
+	"type": "ctmc",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Holger Hermanns <hermanns@cs.uni-saarland.de>",
+		"Joachim Meyer-Kayser <jmmeyerk@informatik.uni-erlangen.de>",
+		"Markus Siegle <siegle@informatik.uni-erlangen.de>"
+	],
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
+	"source": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.4603&rep=rep1&type=pdf",
+	"description": "This model is part of the PRISM Benchmark Suite [1] and represents a CTMC which consists of a M/Cox₂/1-queue (Coxian distribution with two phases) sequentially composed with a M/M/1-queue. The servers process the tasks of the queues. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/tandem.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "c",
+			"kind": "open",
+			"description": "Queue capacity",
+			"type": "positive integer"
+		},
+		{
+			"name": "T",
+			"kind": "open",
+			"description": "Time parameter for properties",
+			"type": "positive integer"
+		},
+		{
+			"name": "t",
+			"kind": "open",
+			"description": "Time parameter for properties",
+			"type": "real"
+		}
+	],
+	"properties": [
+		{
+			"name": "customers",
+			"description": "Long-run expected number of customers in the network.",
+			"type": "steady-state-reward"
+		},
+		{
+			"name": "customers_T",
+			"description": "The expected number of customers in the network at time t.",
+			"type": "exp-reward-time-instant"
+		},
+		{
+			"name": "first_queue",
+			"description": "The probability first queue becomes full in t time units.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "network",
+			"description": "The probability network becomes full in T time units.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "second_queue",
+			"description": "The probability of leaving a situation where the second queue is entirely populated within t time units.",
+			"type": "prob-reach-time-bounded"
+		}
+	],
+	"files": [
+		{
+			"file": "tandem.jani",
+			"original-file": [
+				"tandem.prism",
+				"tandem.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism tandem.prism --tojani tandem.jani --prop tandem.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 5
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 66
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 7
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 120
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 15
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 496
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 31
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2016
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 63
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 8128
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 127
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 32640
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 255
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 130816
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 511
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 523776
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 1023
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2096128
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 2047
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 8386560
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "c",
+							"value": 4095
+						},
+						{
+							"name": "T",
+							"value": 1000
+						},
+						{
+							"name": "t",
+							"value": 0.2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 33550336
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": [
+		"results/Storm.5-1000-0.2.2018-10-16.json",
+		"results/Storm.7-1000-0.2.2018-10-16.json",
+		"results/Storm.15-1000-0.2.2018-10-16.json",
+		"results/Storm.31-1000-0.2.2018-10-16.json",
+		"results/Storm.63-1000-0.2.2018-10-16.json",
+		"results/Storm.127-1000-0.2.2018-10-16.json",
+		"results/Storm.255-1000-0.2.2018-10-16.json",
+		"results/Storm.511-1000-0.2.2018-10-16.json",
+		"results/Storm.1023-1000-0.2.2018-10-16.json",
+		"results/Storm.2047-1000-0.2.2018-10-16.json",
+		"results/Storm.4095-1000-0.2.2018-10-16.json"
+	]
+}

@@ -1,0 +1,308 @@
+{
+	"name": "Bounded Retransmission Protocol",
+	"short": "brp",
+	"type": "dtmc",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Pedro R. D’Argenio <dargenio@cs.utwente.nl>",
+		"Bertrand Jeannet <bjeannet@cs.auc.dk>",
+		"Henrik E. Jensen <ejersbo@cs.auc.dk>",
+		"Kim G. Larsen <kgl@cs.auc.dk>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1007/3-540-44804-7_3",
+	"description": "This model is part of the PRISM Benchmark Suite [1] and describes the DTMC model presented in [0]. The BRP protocol sends a file in `N´ chunks. The number of retransmissions per file is bounded by `MAX´. We have added a checker process which ensures that when checking properties we are only considering the transmission of one file, that is, we are not interested in checking properties after a transmission was successful or unsuccessful. See [2] for more details.",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/brp.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "open",
+			"description": "Number of chunks in a file",
+			"type": "positive integer"
+		},
+		{
+			"name": "MAX",
+			"kind": "open",
+			"description": "Maximum number of retransmissions",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "p1",
+			"description": "The probability that the sender does not report a successful transmission.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "p2",
+			"description": "The probability that the sender reports an uncertainty on the success of the transmission.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "p4",
+			"description": "The probability that the receiver does not receive any chunk when the sender did try to send a chunk.",
+			"type": "prob-reach"
+		}
+	],
+	"files": [
+		{
+			"file": "brp.jani",
+			"original-file": [
+				"brp.prism",
+				"brp.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism brp.prism --tojani brp.jani --prop brp.props --globalvars"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 16
+						},
+						{
+							"name": "MAX",
+							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 677
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 16
+						},
+						{
+							"name": "MAX",
+							"value": 3
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 886
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 16
+						},
+						{
+							"name": "MAX",
+							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1095
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 16
+						},
+						{
+							"name": "MAX",
+							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1304
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 32
+						},
+						{
+							"name": "MAX",
+							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1349
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 32
+						},
+						{
+							"name": "MAX",
+							"value": 3
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1766
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 32
+						},
+						{
+							"name": "MAX",
+							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2183
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 32
+						},
+						{
+							"name": "MAX",
+							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2600
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 64
+						},
+						{
+							"name": "MAX",
+							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2693
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 64
+						},
+						{
+							"name": "MAX",
+							"value": 3
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 3526
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 64
+						},
+						{
+							"name": "MAX",
+							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 4359
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "N",
+							"value": 64
+						},
+						{
+							"name": "MAX",
+							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 5192
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": [
+		"results/Storm.16-2.2018-10-12.json",
+		"results/Storm.16-3.2018-10-12.json",
+		"results/Storm.16-4.2018-10-12.json",
+		"results/Storm.16-5.2018-10-12.json",
+		"results/Storm.32-2.2018-10-12.json",
+		"results/Storm.32-3.2018-10-12.json",
+		"results/Storm.32-4.2018-10-12.json",
+		"results/Storm.32-5.2018-10-12.json",
+		"results/Storm.64-2.2018-10-12.json",
+		"results/Storm.64-3.2018-10-12.json",
+		"results/Storm.64-4.2018-10-12.json",
+		"results/Storm.64-5.2018-10-12.json"
+	]
+}

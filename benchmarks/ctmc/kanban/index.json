@@ -1,0 +1,167 @@
+{
+	"name": "Kanban Manufacturing System",
+	"short": "kanban",
+	"type": "ctmc",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Gianfranco Ciardo <ciardo@iastate.edu>",
+		"Marco Tilgner <marco@is.titech.ac.jp>"
+	],
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
+	"source": "http://www.dtic.mil/dtic/tr/fulltext/u2/a311983.pdf",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. Kanban is a scheduling system for lean manufacturing and just-in-time manufacturing which coordinates the transport of pallets and the job scheduling between machines with a ticket system. Each machine can process `t´ parts, i.e. there are `t´ tickets available. See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/kanban.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "t",
+			"kind": "open",
+			"description": "Maximal number of jobs per machine",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "throughput",
+			"description": "The expected throughput of the system.",
+			"type": "steady-state-reward"
+		}
+	],
+	"files": [
+		{
+			"file": "kanban.jani",
+			"original-file": [
+				"kanban.prism",
+				"kanban.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism kanban.prism --tojani kanban.jani --prop kanban.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "t",
+							"value": 1
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 160
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "t",
+							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 4600
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "t",
+							"value": 3
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 58400
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "t",
+							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 454475
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "t",
+							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2546432
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "t",
+							"value": 6
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 11261376
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "t",
+							"value": 7
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 41644800
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": [
+		"results/Storm.1.2018-10-16.json",
+		"results/Storm.2.2018-10-16.json",
+		"results/Storm.3.2018-10-16.json",
+		"results/Storm.4.2018-10-16.json",
+		"results/Storm.5.2018-10-16.json",
+		"results/Storm.6.2018-10-16.json",
+		"results/Storm.7.2018-10-16.json"
+	]
+}

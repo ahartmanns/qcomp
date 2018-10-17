@@ -1,0 +1,335 @@
+{
+	"name": "IEEE 802.11 Wireless LAN",
+	"short": "wlan",
+	"type": "mdp",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-11",
+	"version-history": [
+		{
+			"date": "2018-10-11",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Marta Kwiatkowska <Marta.Kwiatkowska@cs.ox.ac.uk>",
+		"Gethin Norman <gethin.norman@glasgow.ac.uk>",
+		"Jeremy Sproston <sproston@di.unito.it>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1007/3-540-45605-8_11",
+	"description": "This model is part of the PRISM Benchmark Suite [1]. We consider an MDP representing the IEEE 802.11 Wireless LAN which models two stations colliding - trying to send messages at the same time over one channel - and then entering the randomised exponential backoff procedure. The timing constraints (values of parameters not listed here) of the model correspond to the Frequency Hopping Spread Spectrum (FHSS) physical layer, rounded by a factor of 50 (i.e. 1 time unit equals 50 μs) to reduce complexity. We used the integer semantics given in [0]. `COL´ is the maximum number of collisions, `MAX_BACKOFF´ the maximum backoff counter and `TRANS_TIME_MAX/MIN´ the transition times.  See [2] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14",
+		"http://www.prismmodelchecker.org/casestudies/wlan.php"
+	],
+	"notes": "PRISM Benchmark",
+	"parameters": [
+		{
+			"name": "MAX_BACKOFF",
+			"kind": "file",
+			"description": "Maximum backoff counter",
+			"type": "positive integer"
+		},
+		{
+			"name": "COL",
+			"kind": "open",
+			"description": "Maximum collision counter",
+			"type": "integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "collisions",
+			"description": "The maximum probability of `COL´ collisions.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "cost_max",
+			"description": "The maximum expected cost for both stations to send correctly.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "cost_min",
+			"description": "Minimum expected cost for both stations to send correctly.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "num_collisions",
+			"description": "The maximum expected collisions before both stations to send correctly.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "sent",
+			"description": "With probability 1, eventually both stations have sent their packet correctly.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "time_max",
+			"description": "The maximum expected time for both stations to send correctly.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "time_min",
+			"description": "Minimum expected time for both stations to send correctly.",
+			"type": "exp-reward"
+		}
+	],
+	"files": [
+		{
+			"file": "wlan.0.jani",
+			"original-file": [
+				"wlan.0.prism",
+				"wlan.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.0.prism --tojani wlan.0.jani --prop wlan.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "MAX_BACKOFF",
+					"value": 0
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "COL",
+							"value": 0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 2954
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "wlan.1.jani",
+			"original-file": [
+				"wlan.1.prism",
+				"wlan.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.1.prism --tojani wlan.1.jani --prop wlan.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "MAX_BACKOFF",
+					"value": 1
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "COL",
+							"value": 0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 8625
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "wlan.2.jani",
+			"original-file": [
+				"wlan.2.prism",
+				"wlan.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.2.prism --tojani wlan.2.jani --prop wlan.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "MAX_BACKOFF",
+					"value": 2
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "COL",
+							"value": 0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 28480
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "wlan.3.jani",
+			"original-file": [
+				"wlan.3.prism",
+				"wlan.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.3.prism --tojani wlan.3.jani --prop wlan.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "MAX_BACKOFF",
+					"value": 3
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "COL",
+							"value": 0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 96302
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "wlan.4.jani",
+			"original-file": [
+				"wlan.4.prism",
+				"wlan.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.4.prism --tojani wlan.4.jani --prop wlan.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "MAX_BACKOFF",
+					"value": 4
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "COL",
+							"value": 0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 345000
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "wlan.5.jani",
+			"original-file": [
+				"wlan.5.prism",
+				"wlan.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.5.prism --tojani wlan.5.jani --prop wlan.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "MAX_BACKOFF",
+					"value": 5
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "COL",
+							"value": 0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 1295218
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "wlan.6.jani",
+			"original-file": [
+				"wlan.6.prism",
+				"wlan.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.6.prism --tojani wlan.6.jani --prop wlan.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "MAX_BACKOFF",
+					"value": 6
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "COL",
+							"value": 0
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 5007548
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": [
+		"results/Storm.0-0.2018-10-12.json",
+		"results/Storm.1-0.2018-10-12.json",
+		"results/Storm.2-0.2018-10-12.json",
+		"results/Storm.3-0.2018-10-12.json",
+		"results/Storm.4-0.2018-10-12.json",
+		"results/Storm.5-0.2018-10-12.json",
+		"results/Storm.6-0.2018-10-12.json"
+	]
+}
