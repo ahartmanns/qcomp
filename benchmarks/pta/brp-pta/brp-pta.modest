@@ -1,6 +1,6 @@
 ﻿// Modest PTA model of the bounded retransmission protocol (BRP) [HH09]
-// mcsta brp.modest -E "N=16, MAX=2, TD=1, TIME_BOUND=64"
-// modes brp.modest -E "N=16, MAX=2, TD=1, TIME_BOUND=64" -S ASAP
+// mcsta brp-pta.modest -E "N=16, MAX=2, TD=1, TIME_BOUND=64"
+// modes brp-pta.modest -E "N=16, MAX=2, TD=1, TIME_BOUND=64" -S ASAP
 action put, get, put_k, get_k, put_l, get_l;
 action new_file;
 action s_ok, s_dk, s_nok, s_restart;

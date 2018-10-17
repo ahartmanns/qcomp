@@ -16,12 +16,16 @@ qmcc.sortAsc = ko.observable(true);
 qmcc.filteredModels = ko.computed(function()
 {
 	return this.models().filter(m =>
-		(m.name.toLowerCase().includes(this.filter.name().toLowerCase()) || m.short.toLowerCase().includes(this.filter.name().toLowerCase())) // name (via .name and .short)
+	{
+		var modelText = m.name.toUpperCase() + " "
+			+ m.short.toUpperCase() + " "
+			+ m.notes.toUpperCase();
+		return (modelText.includes(this.filter.name().toUpperCase())) // name (via .name and .short)
 		&& (this.filter.type() === undefined || m.type === this.filter.type().toLowerCase()) // model type
 		&& (this.filter.original() === undefined || m.original.split("-")[0] === this.filter.original()) // original formalism
 		&& (this.filter.minStates() === "" || isNaN(Number(this.filter.minStates())) || m.maxStates >= Number(this.filter.minStates())) // min. number of states
 		&& (this.filter.maxStates() === "" || isNaN(Number(this.filter.maxStates())) || m.minStates <= Number(this.filter.maxStates())) // max. number of states
-	);
+	});
 }, qmcc);
 qmcc.selectedModel = ko.observable(null);
 qmcc.select = function(model)
@@ -167,14 +171,14 @@ function sortModels(sortBy)
 {
 	var sortAsc = true;
 	var sortFun = null;
-	if(sortBy === "short") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.short == right.short ? 0 : (left.short < right.short ? -1 : 1));
-	else if(sortBy === "name") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.name == right.name ? 0 : (left.name < right.name ? -1 : 1));
+	if(sortBy === "short") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.short.toUpperCase() == right.short.toUpperCase() ? 0 : (left.short.toUpperCase() < right.short.toUpperCase() ? -1 : 1));
+	else if(sortBy === "name") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.name.toUpperCase() == right.name.toUpperCase() ? 0 : (left.name.toUpperCase() < right.name.toUpperCase() ? -1 : 1));
 	else if(sortBy === "type") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.type == right.type ? 0 : (left.type < right.type ? -1 : 1));
 	else if(sortBy === "original") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.original == right.original ? 0 : (left.original < right.original ? -1 : 1));
 	else if(sortBy === "parameters") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.parameters.length - right.parameters.length);
 	else if(sortBy === "states") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.minStates - right.minStates === 0 ? left.maxStates - right.maxStates : left.minStates - right.minStates);
 	else if(sortBy === "properties") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.properties.length - right.properties.length);
-	else if(sortBy === "notes") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.notes == right.notes ? 0 : (left.notes < right.notes ? -1 : 1));
+	else if(sortBy === "notes") sortFun = (left, right) => (sortAsc ? 1 : -1) * (left.notes.toUpperCase() == right.notes.toUpperCase() ? 0 : (left.notes.toUpperCase() < right.notes.toUpperCase() ? -1 : 1));
 	else return; // should not happen
 	if(qmcc.sortBy() === sortBy) qmcc.sortAsc(!qmcc.sortAsc());
 	else qmcc.sortAsc(true);

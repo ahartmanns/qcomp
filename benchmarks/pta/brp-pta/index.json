@@ -1,6 +1,6 @@
 {
 	"name": "Bounded Retransmission Protocol",
-	"short": "brp",
+	"short": "brp-pta",
 	"type": "pta",
 	"original": "Modest",
 	"version": 1,
@@ -44,13 +44,13 @@
 	],
 	"files": [
 		{
-			"file": "brp.jani",
-			"original-file": "brp.modest",
+			"file": "brp-pta.jani",
+			"original-file": "brp-pta.modest",
 			"conversion": {
 				"tool": "moconv",
 				"version": "3.0.50",
 				"url": "http://www.modestchecker.net/",
-				"command": "moconv.exe brp.modest -O brp.jani"
+				"command": "moconv.exe brp-pta.modest -O brp-pta.jani"
 			},
 			"file-parameter-values": [],
 			"open-parameter-values": [

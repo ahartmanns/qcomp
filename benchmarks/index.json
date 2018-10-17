@@ -48,7 +48,7 @@
   { "path": "mdp/zenotravel" },
   { "path": "mdp/zeroconf" },
   { "path": "mdp/zeroconf_dl" },
-  { "path": "pta/brp" },
+  { "path": "pta/brp-pta" },
   { "path": "pta/csma-pta" },
   { "path": "pta/csma_abst-pta" },
   { "path": "pta/firewire-pta" },

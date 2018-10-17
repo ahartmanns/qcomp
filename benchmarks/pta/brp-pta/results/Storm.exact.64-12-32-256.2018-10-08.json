@@ -7,7 +7,7 @@
 		"runtime": "gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516"
 	},
 	"date": "2018-10-08",
-	"file": "../brp.jani",
+	"file": "../brp-pta.jani",
 	"version": 1,
 	"log": "Storm.exact.64-12-32-256.2018-10-08.txt",
 	"open-parameter-values": [
@@ -42,11 +42,11 @@
 			"version": "3.0.86",
 			"url": "http://www.modestchecker.net/",
 			"note": "Converted PTA to its digital clock semantics",
-			"command": "moconv.exe brp.jani -O brp.64-12-32-256_mdp.jani --overwrite --digital-clocks -E N=64,MAX=12,TD=32,TIME_BOUND=256",
+			"command": "moconv.exe brp-pta.jani -O brp-pta.64-12-32-256_mdp.jani --overwrite --digital-clocks -E N=64,MAX=12,TD=32,TIME_BOUND=256",
 			"time": 0.8014869689941406
 		}
 	],
-	"command": "storm --jani brp.64-12-32-256_mdp.jani --janiproperty --exact --timemem",
+	"command": "storm --jani brp-pta.64-12-32-256_mdp.jani --janiproperty --exact --timemem",
 	"time": 7221.160486968995,
 	"memory": 56623104,
 	"property-times": [

@@ -1,5 +1,5 @@
 ﻿{
-	"file": "../brp.jani",
+	"file": "../brp-pta.jani",
 	"version": 1,
 	"date": "2018-08-30",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
@@ -22,7 +22,7 @@
 		"os": "Ubuntu 18.04 (x64)",
 		"runtime": "Mono 5.14.0.177"
 	},
-	"command": "mcsta.exe brp.jani -S Memory -E \"N=16, MAX=2, TD=1, TIME_BOUND=64\" -O mcsta.16-2-1-64.json Json",
+	"command": "mcsta.exe brp-pta.jani -S Memory -E \"N=16, MAX=2, TD=1, TIME_BOUND=64\" -O mcsta.16-2-1-64.json Json",
 	"time": 0.570,
 	"memory": 49348608,
 	"property-times": [

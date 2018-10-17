@@ -1,8 +1,8 @@
 Storm 1.2.4 (dev)
 
 Date: Mon Oct  8 14:01:08 2018
-Command line arguments: --jani brp.16-2-1-64_mdp.jani --janiproperty --exact --timemem
-Current working directory: /home/tim.quatmann/qcomp/benchmarks/pta/brp
+Command line arguments: --jani brp-pta.16-2-1-64_mdp.jani --janiproperty --exact --timemem
+Current working directory: /home/tim.quatmann/qcomp/benchmarks/pta/brp-pta
 
 Time for model construction: 0.208s.
 
