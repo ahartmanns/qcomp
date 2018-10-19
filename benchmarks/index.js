@@ -199,6 +199,10 @@ function propertiesToShortList(properties)
 		|| p.type === "exp-time-step-bounded" || p.type === "exp-time-time-bounded" || p.type === "exp-time-reward-bounded"
 		|| p.type === "exp-reward-step-bounded" || p.type === "exp-reward-time-bounded" || p.type === "exp-reward-reward-bounded");
 	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × Eb";
+	props = properties.filter(p => p.type === "exp-reward-step-instant" || p.type === "exp-reward-time-instant" || p.type === "exp-reward-reward-instant");
+	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × Ei";
+	props = properties.filter(p => p.type === "steady-state-reward" || p.type === "steady-state-prob");
+	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × S";
 	return list.length === 0 ? list : list.substr(2);
 }
 function modelTypeToLongString(modelType)
