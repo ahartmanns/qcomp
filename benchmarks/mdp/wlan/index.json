@@ -112,7 +112,7 @@
 					"results": [
 						{
 							"property": "collisions",
-							"value": "1 (approx. 1)",
+							"value": 1,
 							"note": "Storm/exact"
 						},
 						{
@@ -126,7 +126,7 @@
 						},
 						{
 							"property": "cost_min",
-							"value": "7625 (approx. 7625)",
+							"value": 7625,
 							"note": "Storm/exact"
 						},
 						{
@@ -154,7 +154,7 @@
 						},
 						{
 							"property": "time_min",
-							"value": "1325 (approx. 1325)",
+							"value": 1325,
 							"note": "Storm/exact"
 						}
 					]
@@ -196,7 +196,7 @@
 					"results": [
 						{
 							"property": "collisions",
-							"value": "1 (approx. 1)",
+							"value": 1,
 							"note": "Storm/exact"
 						},
 						{
@@ -210,7 +210,7 @@
 						},
 						{
 							"property": "cost_min",
-							"value": "7625 (approx. 7625)",
+							"value": 7625,
 							"note": "Storm/exact"
 						},
 						{
@@ -238,7 +238,7 @@
 						},
 						{
 							"property": "time_min",
-							"value": "1325 (approx. 1325)",
+							"value": 1325,
 							"note": "Storm/exact"
 						}
 					]
@@ -280,7 +280,7 @@
 					"results": [
 						{
 							"property": "collisions",
-							"value": "1 (approx. 1)",
+							"value": 1,
 							"note": "Storm/exact"
 						},
 						{
@@ -294,7 +294,7 @@
 						},
 						{
 							"property": "cost_min",
-							"value": "7625 (approx. 7625)",
+							"value": 7625,
 							"note": "Storm/exact"
 						},
 						{
@@ -322,7 +322,7 @@
 						},
 						{
 							"property": "time_min",
-							"value": "1325 (approx. 1325)",
+							"value": 1325,
 							"note": "Storm/exact"
 						}
 					]
@@ -364,7 +364,7 @@
 					"results": [
 						{
 							"property": "collisions",
-							"value": "1 (approx. 1)",
+							"value": 1,
 							"note": "Storm/exact"
 						},
 						{
@@ -378,7 +378,7 @@
 						},
 						{
 							"property": "cost_min",
-							"value": "7625 (approx. 7625)",
+							"value": 7625,
 							"note": "Storm/exact"
 						},
 						{
@@ -406,7 +406,7 @@
 						},
 						{
 							"property": "time_min",
-							"value": "1325 (approx. 1325)",
+							"value": 1325,
 							"note": "Storm/exact"
 						}
 					]
@@ -448,7 +448,7 @@
 					"results": [
 						{
 							"property": "collisions",
-							"value": "1 (approx. 1)",
+							"value": 1,
 							"note": "Storm/exact"
 						},
 						{
@@ -462,7 +462,7 @@
 						},
 						{
 							"property": "cost_min",
-							"value": "7625 (approx. 7625)",
+							"value": 7625,
 							"note": "Storm/exact"
 						},
 						{
@@ -490,7 +490,7 @@
 						},
 						{
 							"property": "time_min",
-							"value": "1325 (approx. 1325)",
+							"value": 1325,
 							"note": "Storm/exact"
 						}
 					]
@@ -532,7 +532,7 @@
 					"results": [
 						{
 							"property": "collisions",
-							"value": "1 (approx. 1)",
+							"value": 1,
 							"note": "Storm/exact"
 						},
 						{
@@ -546,7 +546,7 @@
 						},
 						{
 							"property": "cost_min",
-							"value": "7625 (approx. 7625)",
+							"value": 7625,
 							"note": "Storm/exact"
 						},
 						{
@@ -574,7 +574,7 @@
 						},
 						{
 							"property": "time_min",
-							"value": "1325 (approx. 1325)",
+							"value": 1325,
 							"note": "Storm/exact"
 						}
 					]
@@ -616,7 +616,7 @@
 					"results": [
 						{
 							"property": "collisions",
-							"value": "1 (approx. 1)",
+							"value": 1,
 							"note": "Storm/exact"
 						},
 						{
@@ -630,7 +630,7 @@
 						},
 						{
 							"property": "cost_min",
-							"value": "7625 (approx. 7625)",
+							"value": 7625,
 							"note": "Storm/exact"
 						},
 						{
@@ -658,7 +658,7 @@
 						},
 						{
 							"property": "time_min",
-							"value": "1325 (approx. 1325)",
+							"value": 1325,
 							"note": "Storm/exact"
 						}
 					]

@@ -90,7 +90,7 @@
 						},
 						{
 							"property": "time_max",
-							"value": "299 (approx. 299)",
+							"value": 299,
 							"note": "Storm/exact"
 						},
 						{
@@ -104,7 +104,7 @@
 						},
 						{
 							"property": "time_sending",
-							"value": "18 (approx. 18)",
+							"value": 18,
 							"note": "Storm/exact"
 						}
 					]

@@ -197,7 +197,7 @@
 					"results": [
 						{
 							"property": "deadline",
-							"value": "0 (approx. 0)",
+							"value": 0,
 							"note": "Storm/exact"
 						}
 					]
