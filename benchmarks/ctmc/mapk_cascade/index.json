@@ -18,7 +18,11 @@
 	],
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "https://doi.org/10.1073/pnas.93.19.10078",
-	"description": "This model is part of the PRISM Benchmark Suite [1]. The MAP (Mitogen-Activated Protien) Kinases are involved in a pathway through which information is sent to the nucleus. It is one of the most important signalling pathways since it plays a pivotal role in the molecular-signalling that governs the growth, proliferation and survival of many cell types. The MAPK cascade consists of a MAPK Kinase Kinase (MAPKKK), MAPK Kinase (MAPKK) and a MAPK. The cascade is initialised through the phosphorylation of MAPKKK, which then activates MAPKK through the phosphorylation at two serine residues and this then activates MAPK through the phosphorylation at theronine and tyrosine residues. To reduce the state space we employ a population-based approach where the number of each type of molecule or species is modelled. The initial amount of MAPK, MAPKK and MAPKKK is specified as a parameter `N´. See [2] for more details",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This is a PRISM case study [1]. The MAP (Mitogen-Activated Protien) Kinases are involved in a pathway through which information is sent to the nucleus. It is one of the most important signalling pathways since it plays a pivotal role in the molecular-signalling that governs the growth, proliferation and survival of many cell types. The MAPK cascade consists of a MAPK Kinase Kinase (MAPKKK), MAPK Kinase (MAPKK) and a MAPK. The cascade is initialised through the phosphorylation of MAPKKK, which then activates MAPKK through the phosphorylation at two serine residues and this then activates MAPK through the phosphorylation at theronine and tyrosine residues. To reduce the state space we employ a population-based approach where the number of each type of molecule or species is modelled. The initial amount of MAPK, MAPKK and MAPKKK is specified as a parameter `N´. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/mapk_cascade.php"

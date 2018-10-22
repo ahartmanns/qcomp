@@ -18,7 +18,11 @@
 	],
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1016/0196-6774(90)90021-6",
-	"description": "This model is part of the PRISM Benchmark Suite [1]. The randomised consensus protocol consists of `N´ asynchronous processes that communicate via read/write shared registers. The processes proceed through possibly unboundedly many rounds. At each round, they read the status of all other processes and attempt to agree. The agreement attempt involves a distributed random walk (`K´ bounds on random walk): when the processes disagree, they use a shared coin-flipping protocol to decide their next preferred value. See [2] for more details",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This is a PRISM case study [1]. The randomised consensus protocol consists of `N´ asynchronous processes that communicate via read/write shared registers. The processes proceed through possibly unboundedly many rounds. At each round, they read the status of all other processes and attempt to agree. The agreement attempt involves a distributed random walk (`K´ bounds on random walk): when the processes disagree, they use a shared coin-flipping protocol to decide their next preferred value. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/consensus.php"

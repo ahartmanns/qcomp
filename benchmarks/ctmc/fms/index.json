@@ -18,7 +18,11 @@
 	],
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "https://doi.org/10.1016/0166-5316(93)90026-Q",
-	"description": "This model is part of the PRISM Benchmark Suite [1]. It describes a system of three machnies which process `n´ parts and assemble them together as described in [0]. In the end the throughput is measured. See [2] for more details",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This PRISM case study [1] describes a system of three machines which process `n´ parts and assemble them together as described in [0]. In the end the throughput is measured. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/fms.php"

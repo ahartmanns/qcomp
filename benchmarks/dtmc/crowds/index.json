@@ -18,7 +18,11 @@
 	],
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1145/290163.290168",
-	"description": "This model is part of the PRISM Benchmark Suite [1] and provides a mechanism for anonymous Web browsing. The goal is to hide each user's communications by routing them randomly within a group of `N = CrowdSize/(1-badC)´ users, where `CrowdSize´ is the number of honest users and `badC´ the proprotion of corrupt members. With probability `pf´ (forwarding probability), the protocol selects a crowd member at random as the next router in the path, and forwards the message to it, re-encrypted with the appropriate pairwise key. The next router then repeats this step. `TotalRuns´ is the number of different paths to be analyzed. See [2] for more details",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This PRISM case study [1] provides a mechanism for anonymous Web browsing. The goal is to hide each user's communications by routing them randomly within a group of `N = CrowdSize/(1-badC)´ users, where `CrowdSize´ is the number of honest users and `badC´ the proprotion of corrupt members. With probability `pf´ (forwarding probability), the protocol selects a crowd member at random as the next router in the path, and forwards the message to it, re-encrypted with the appropriate pairwise key. The next router then repeats this step. `TotalRuns´ is the number of different paths to be analyzed. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/crowds.php"

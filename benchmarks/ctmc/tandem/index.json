@@ -19,7 +19,11 @@
 	],
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.4603&rep=rep1&type=pdf",
-	"description": "This model is part of the PRISM Benchmark Suite [1] and represents a CTMC which consists of a M/Cox₂/1-queue (Coxian distribution with two phases) sequentially composed with a M/M/1-queue. The servers process the tasks of the queues. See [2] for more details",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This PRISM case study [1] represents a CTMC which consists of a M/Cox₂/1-queue (Coxian distribution with two phases) sequentially composed with a M/M/1-queue. The servers process the tasks of the queues. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/tandem.php"

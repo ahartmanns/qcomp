@@ -19,7 +19,11 @@
 	],
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1007/3-540-45605-8_11",
-	"description": "This model is part of the PRISM Benchmark Suite [1]. We consider an MDP representing the IEEE 802.11 Wireless LAN which models two stations colliding - trying to send messages at the same time over one channel - and then entering the randomised exponential backoff procedure. The timing constraints (values of parameters not listed here) of the model correspond to the Frequency Hopping Spread Spectrum (FHSS) physical layer, rounded by a factor of 50 (i.e. 1 time unit equals 50 μs) to reduce complexity. We used the integer semantics given in [0]. `COL´ is the maximum number of collisions, `MAX_BACKOFF´ the maximum backoff counter and `TRANS_TIME_MAX/MIN´ the transition times.  The `_dl´ version includes a timer module to allow the verification of time-bounded properties. See [2] for more details",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This is a PRISM case study [1]. We consider an MDP representing the IEEE 802.11 Wireless LAN which models two stations colliding - trying to send messages at the same time over one channel - and then entering the randomised exponential backoff procedure. The timing constraints (values of parameters not listed here) of the model correspond to the Frequency Hopping Spread Spectrum (FHSS) physical layer, rounded by a factor of 50 (i.e. 1 time unit equals 50 μs) to reduce complexity. We used the integer semantics given in [0]. `COL´ is the maximum number of collisions, `MAX_BACKOFF´ the maximum backoff counter and `TRANS_TIME_MAX/MIN´ the transition times.  The `_dl´ version includes a timer module to allow the verification of time-bounded properties. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/wlan_dl.php"

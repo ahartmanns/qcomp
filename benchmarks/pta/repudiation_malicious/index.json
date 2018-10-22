@@ -18,7 +18,11 @@
 	],
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.9279&rep=rep1&type=pdf",
-	"description": "This model is part of the PRISM Benchmark Suite [1] and describes the non-repudiation protocol with a malicious recipient as in [0].",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This PRISM case study [1] describes the non-repudiation protocol with a malicious recipient as in [0].",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14"
 	],

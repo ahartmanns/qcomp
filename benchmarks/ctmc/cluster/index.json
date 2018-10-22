@@ -19,7 +19,11 @@
 	],
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "https://doi.org/10.1109/RELDI.2000.885410",
-	"description": "This model is part of the PRISM Benchmark Suite [1]. It is based on a cluster of workstations, taken from [0]. The system comprises two sub-clusters with `N´ workstations in each, connected in a star topology. The switches connecting each sub-cluster are joined by a central backbone. All components can break down and there is a single repair unit to service all components. See [2] for more details",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This PRISM case study [1] is based on a cluster of workstations, taken from [0]. The system comprises two sub-clusters with `N´ workstations in each, connected in a star topology. The switches connecting each sub-cluster are joined by a central backbone. All components can break down and there is a single repair unit to service all components. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/cluster.php"

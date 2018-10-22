@@ -20,7 +20,11 @@
 	],
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1007/3-540-44804-7_3",
-	"description": "This model is part of the PRISM Benchmark Suite [1] and describes the DTMC model presented in [0]. The BRP protocol sends a file in `N´ chunks. The number of retransmissions per file is bounded by `MAX´. We have added a checker process which ensures that when checking properties we are only considering the transmission of one file, that is, we are not interested in checking properties after a transmission was successful or unsuccessful. See [2] for more details.",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This PRISM case study [1] describes the DTMC model presented in [0]. The BRP protocol sends a file in `N´ chunks. The number of retransmissions per file is bounded by `MAX´. We have added a checker process which ensures that when checking properties we are only considering the transmission of one file, that is, we are not interested in checking properties after a transmission was successful or unsuccessful. See [2] for more details.",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/brp.php"

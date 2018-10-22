@@ -19,7 +19,11 @@
 	],
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1145/3812.3818",
-	"description": "This model is part of the PRISM Benchmark Suite [1]. Fair exchange is the problem of exchanging data in a way that guarantees that either all participants obtain what they want, or none do. Contract signing is a particular form of fair exchange, in which the parties exchange commitments to a contract. Commitment is often identified with the party's digital signature on the contract. In the EGL protocol, each party starts by generating a sequence of `N´ pairs of secrets and revealing the encryptions of the contract under each secret. A party is considered committed if the opponent knows both secrets in at least one pair. In the first phase, the parties use oblivious transfer to probabilistically reveal one secret from each pair. In the second phase, they release all secrets bit by bit, where each secret has `L´ bits. See [2] for more details",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This is a PRISM case study [1]. Fair exchange is the problem of exchanging data in a way that guarantees that either all participants obtain what they want, or none do. Contract signing is a particular form of fair exchange, in which the parties exchange commitments to a contract. Commitment is often identified with the party's digital signature on the contract. In the EGL protocol, each party starts by generating a sequence of `N´ pairs of secrets and revealing the encryptions of the contract under each secret. A party is considered committed if the opponent knows both secrets in at least one pair. In the first phase, the parties use oblivious transfer to probabilistically reveal one secret from each pair. In the second phase, they release all secrets bit by bit, where each secret has `L´ bits. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/contract_egl.php"

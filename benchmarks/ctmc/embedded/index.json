@@ -19,7 +19,11 @@
 	],
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.16.1102",
-	"description": "This model is part of the PRISM Benchmark Suite [1] and closely based on the one in [0]. The system comprises an input processor which reads and processes data from three sensors. It is then polled by a main processor which, in turn, passes instructions to an output processor. The output processor takes the instructions it receives and uses them to control two actuators. A bus connects the three processors together. Each of them can fail and cycles are skipped, which after `MAX_COUNT´ skipped cycles leads to a shut down. See [2] for more details",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This is a PRISM case study [1], closely based on the model in [0]. The system comprises an input processor which reads and processes data from three sensors. It is then polled by a main processor which, in turn, passes instructions to an output processor. The output processor takes the instructions it receives and uses them to control two actuators. A bus connects the three processors together. Each of them can fail and cycles are skipped, which after `MAX_COUNT´ skipped cycles leads to a shut down. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/embedded.php"

@@ -18,7 +18,11 @@
 	],
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "http://www.dtic.mil/dtic/tr/fulltext/u2/a311983.pdf",
-	"description": "This model is part of the PRISM Benchmark Suite [1]. Kanban is a scheduling system for lean manufacturing and just-in-time manufacturing which coordinates the transport of pallets and the job scheduling between machines with a ticket system. Each machine can process `t´ parts, i.e. there are `t´ tickets available. See [2] for more details",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This is a PRISM case study [1]. Kanban is a scheduling system for lean manufacturing and just-in-time manufacturing which coordinates the transport of pallets and the job scheduling between machines with a ticket system. Each machine can process `t´ parts, i.e. there are `t´ tickets available. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/kanban.php"

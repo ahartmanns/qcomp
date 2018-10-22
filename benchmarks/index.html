@@ -113,8 +113,9 @@
 		
 		<!-- Version and date -->
 		<p style="font-style: italic; font-size: 90%;">
+			A <span data-bind="text: original"></span> <span data-bind="text: type.toUpperCase()"></span> model.
 			Version <span data-bind="text: version.toString()"></span>.
-			Model last updated on <span data-bind="text: date"></span>.
+			Last updated on <span data-bind="text: date"></span>.
 		</p>
 
 		<!-- Creator, submitter and description -->
@@ -126,7 +127,10 @@
 				Created by <span data-bind="foreach: author"><a data-bind="text: name, attr: { href: 'mailto:' + email }"></a><span data-bind="visible: $parent.author.length > 2 && $index() !== $parent.author.length - 1">, </span><span data-bind="visible: $parent.author.length >= 2 && $index() === $parent.author.length - 2"> and </span></span>
 				and submitted by <a data-bind="text: submitter.name, attr: { href: 'mailto:' + submitter.email }"></a>.<br />
 			<!-- /ko -->
-			First presented in<span data-bind="visible: description.includes('[0]')">:<br />[0]</span> <a data-bind="text: getLinkTitle(source), attr: { href: source }"></a>.
+			First presented in<span data-bind="visible: description.includes('[0]')">: [0]</span> <a data-bind="text: getLinkTitle(source), attr: { href: source }"></a>.
+			<!-- ko if: $data['part-of'] !== undefined -->
+				<br />Part of <a data-bind="text: $data['part-of'].name, attr: { href: $data['part-of'].url }"></a>.
+			<!-- /ko -->
 		</p>
 		<p data-bind="html: formatText(description)"></p>
 		<!-- ko if: references.length !== 0 -->

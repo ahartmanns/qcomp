@@ -20,7 +20,11 @@
 	],
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1007/s10009-006-0014-x",
-	"description": "This model is part of the PRISM Benchmark Suite [1] and was first described in [0]. It describes the processes of inquiring and scanning devices according to the Bluetooth protocol. The inquiring device broadcasts inquiry packets on two frequencies and scans for a reply. The scanning devices whish to be discovered and listen to frequencies. After receiving `mrec´ messages the inquiry is stopped. `k´ specifies the frequency and `T´ the number of the train the sender starts on. See [2] for more details.",
+	"part-of": {
+		"name": "the PRISM Benchmark Suite",
+		"url": "http://www.prismmodelchecker.org/benchmarks/"
+	},
+	"description": "This PRISM case study [1] was first described in [0]. It describes the processes of inquiring and scanning devices according to the Bluetooth protocol. The inquiring device broadcasts inquiry packets on two frequencies and scans for a reply. The scanning devices whish to be discovered and listen to frequencies. After receiving `mrec´ messages the inquiry is stopped. `k´ specifies the frequency and `T´ the number of the train the sender starts on. See [2] for more details.",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/bluetooth.php"
