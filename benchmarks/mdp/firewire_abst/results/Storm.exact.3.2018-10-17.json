@@ -88,7 +88,7 @@
 					"value": 0.004
 				}
 			],
-			"value": "1 (approx. 1)"
+			"value": 1
 		},
 		{
 			"property": "time_max",
@@ -99,7 +99,7 @@
 					"value": 0.023
 				}
 			],
-			"value": "299 (approx. 299)"
+			"value": 299
 		},
 		{
 			"property": "time_min",

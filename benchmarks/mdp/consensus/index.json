@@ -124,12 +124,12 @@
 						},
 						{
 							"property": "steps_max",
-							"value": "75 (approx. 75)",
+							"value": 75,
 							"note": "Storm/exact"
 						},
 						{
 							"property": "steps_min",
-							"value": "48 (approx. 48)",
+							"value": 48,
 							"note": "Storm/exact"
 						}
 					]
@@ -173,12 +173,12 @@
 						},
 						{
 							"property": "steps_max",
-							"value": "243 (approx. 243)",
+							"value": 243,
 							"note": "Storm/exact"
 						},
 						{
 							"property": "steps_min",
-							"value": "192 (approx. 192)",
+							"value": 192,
 							"note": "Storm/exact"
 						}
 					]
@@ -222,12 +222,12 @@
 						},
 						{
 							"property": "steps_max",
-							"value": "867 (approx. 867)",
+							"value": 867,
 							"note": "Storm/exact"
 						},
 						{
 							"property": "steps_min",
-							"value": "768 (approx. 768)",
+							"value": 768,
 							"note": "Storm/exact"
 						}
 					]
@@ -271,12 +271,12 @@
 						},
 						{
 							"property": "steps_max",
-							"value": "3267 (approx. 3267)",
+							"value": 3267,
 							"note": "Storm/exact"
 						},
 						{
 							"property": "steps_min",
-							"value": "3072 (approx. 3072)",
+							"value": 3072,
 							"note": "Storm/exact"
 						}
 					]
@@ -341,12 +341,12 @@
 						},
 						{
 							"property": "steps_max",
-							"value": "363 (approx. 363)",
+							"value": 363,
 							"note": "Storm/exact"
 						},
 						{
 							"property": "steps_min",
-							"value": "192 (approx. 192)",
+							"value": 192,
 							"note": "Storm/exact"
 						}
 					]
@@ -390,12 +390,12 @@
 						},
 						{
 							"property": "steps_max",
-							"value": "1083 (approx. 1083)",
+							"value": 1083,
 							"note": "Storm/exact"
 						},
 						{
 							"property": "steps_min",
-							"value": "768 (approx. 768)",
+							"value": 768,
 							"note": "Storm/exact"
 						}
 					]

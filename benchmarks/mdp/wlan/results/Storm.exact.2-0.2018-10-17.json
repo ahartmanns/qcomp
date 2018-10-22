@@ -89,7 +89,7 @@
 					"value": 0.071
 				}
 			],
-			"value": "1 (approx. 1)"
+			"value": 1
 		},
 		{
 			"property": "cost_max",
@@ -115,7 +115,7 @@
 					"value": 0.359
 				}
 			],
-			"value": "7625 (approx. 7625)"
+			"value": 7625
 		},
 		{
 			"property": "num_collisions",
@@ -167,7 +167,7 @@
 					"value": 0.35
 				}
 			],
-			"value": "1325 (approx. 1325)"
+			"value": 1325
 		}
 	]
 }

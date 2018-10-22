@@ -91,12 +91,12 @@
 						},
 						{
 							"property": "rounds",
-							"value": "1 (approx. 1)",
+							"value": 1,
 							"note": "Storm/exact"
 						},
 						{
 							"property": "time_max",
-							"value": "299 (approx. 299)",
+							"value": 299,
 							"note": "Storm/exact"
 						},
 						{
@@ -131,12 +131,12 @@
 						},
 						{
 							"property": "rounds",
-							"value": "1 (approx. 1)",
+							"value": 1,
 							"note": "Storm/exact"
 						},
 						{
 							"property": "time_max",
-							"value": "365 (approx. 365)",
+							"value": 365,
 							"note": "Storm/exact"
 						},
 						{

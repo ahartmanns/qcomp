@@ -122,7 +122,7 @@
 					"value": 4.104
 				}
 			],
-			"value": "1083 (approx. 1083)"
+			"value": 1083
 		},
 		{
 			"property": "steps_min",
@@ -133,7 +133,7 @@
 					"value": 5.515
 				}
 			],
-			"value": "768 (approx. 768)"
+			"value": 768
 		}
 	]
 }

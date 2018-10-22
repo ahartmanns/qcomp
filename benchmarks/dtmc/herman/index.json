@@ -190,7 +190,7 @@
 					"results": [
 						{
 							"property": "steps",
-							"value": "12 (approx. 12)",
+							"value": 12,
 							"note": "Storm/exact"
 						}
 					]
