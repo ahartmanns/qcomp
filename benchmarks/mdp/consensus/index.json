@@ -97,6 +97,41 @@
 							"note": "Storm",
 							"number": 272
 						}
+					],
+					"results": [
+						{
+							"property": "c1",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "c2",
+							"value": {
+								"approx": 0.3828125,
+								"num": 49,
+								"den": 128
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "disagree",
+							"value": {
+								"approx": 0.10833333333333334,
+								"num": 13,
+								"den": 120
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_max",
+							"value": "75 (approx. 75)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_min",
+							"value": "48 (approx. 48)",
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -110,6 +145,41 @@
 						{
 							"note": "Storm",
 							"number": 528
+						}
+					],
+					"results": [
+						{
+							"property": "c1",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "c2",
+							"value": {
+								"approx": 0.437744140625,
+								"num": 1793,
+								"den": 4096
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "disagree",
+							"value": {
+								"approx": 0.06151960784313725,
+								"num": 251,
+								"den": 4080
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_max",
+							"value": "243 (approx. 243)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_min",
+							"value": "192 (approx. 192)",
+							"note": "Storm/exact"
 						}
 					]
 				},
@@ -125,6 +195,41 @@
 							"note": "Storm",
 							"number": 1040
 						}
+					],
+					"results": [
+						{
+							"property": "c1",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "c2",
+							"value": {
+								"approx": 0.4687504768371582,
+								"num": 983041,
+								"den": 2097152
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "disagree",
+							"value": {
+								"approx": 0.031246185244525826,
+								"num": 65527,
+								"den": 2097120
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_max",
+							"value": "867 (approx. 867)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_min",
+							"value": "768 (approx. 768)",
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -138,6 +243,41 @@
 						{
 							"note": "Storm",
 							"number": 2064
+						}
+					],
+					"results": [
+						{
+							"property": "c1",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "c2",
+							"value": {
+								"approx": 0.484375000003638,
+								"num": 133143986177,
+								"den": 274877906944
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "disagree",
+							"value": {
+								"approx": 0.015624999941792339,
+								"num": 4294967279,
+								"den": 274877906880
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_max",
+							"value": "3267 (approx. 3267)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_min",
+							"value": "3072 (approx. 3072)",
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -174,6 +314,41 @@
 							"note": "Storm",
 							"number": 22656
 						}
+					],
+					"results": [
+						{
+							"property": "c1",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "c2",
+							"value": {
+								"approx": 0.3173828125,
+								"num": 325,
+								"den": 1024
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "disagree",
+							"value": {
+								"approx": 0.29443185428958624,
+								"num": 170112531,
+								"den": 577765376
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_max",
+							"value": "363 (approx. 363)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_min",
+							"value": "192 (approx. 192)",
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -187,6 +362,41 @@
 						{
 							"note": "Storm",
 							"number": 43136
+						}
+					],
+					"results": [
+						{
+							"property": "c1",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "c2",
+							"value": {
+								"approx": 0.40627527236938477,
+								"num": 852021,
+								"den": 2097152
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "disagree",
+							"value": {
+								"approx": 0.15607306398806395,
+								"num": 45666330762076479,
+								"den": 292595849630842880
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_max",
+							"value": "1083 (approx. 1083)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_min",
+							"value": "768 (approx. 768)",
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -300,6 +510,30 @@
 		"results/Storm.4-2.2018-10-12.json",
 		"results/Storm.4-4.2018-10-12.json",
 		"results/Storm.6-2.2018-10-12.json",
-		"results/Storm.8-2.2018-10-12.json"
+		"results/Storm.8-2.2018-10-12.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.2-2.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.2-4.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.2-8.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.2-16.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.4-2.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.4-4.2018-10-17.json"
+		}
 	]
 }

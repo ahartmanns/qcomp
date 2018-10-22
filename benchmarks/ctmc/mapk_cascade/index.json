@@ -86,6 +86,17 @@
 							"note": "Storm",
 							"number": 118
 						}
+					],
+					"results": [
+						{
+							"property": "activated_T",
+							"value": {
+								"approx": 66.18981054789236,
+								"num": 3914582430427568423218267765012785245017765784290219366306020212248124142524832173701,
+								"den": 59141768166795548314461317389304859636300010464634225134555497637721643167764049800
+							},
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -211,6 +222,10 @@
 		"results/Storm.3-30.2018-10-16.json",
 		"results/Storm.4-30.2018-10-16.json",
 		"results/Storm.5-30.2018-10-16.json",
-		"results/Storm.6-30.2018-10-16.json"
+		"results/Storm.6-30.2018-10-16.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.1-30.2018-10-17.json"
+		}
 	]
 }

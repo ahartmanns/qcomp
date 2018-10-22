@@ -81,6 +81,22 @@
 							"note": "Storm",
 							"number": 26
 						}
+					],
+					"results": [
+						{
+							"property": "eventually_elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time",
+							"value": {
+								"approx": 1.3333333333333333,
+								"num": 4,
+								"den": 3
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -114,6 +130,22 @@
 						{
 							"note": "Storm",
 							"number": 69
+						}
+					],
+					"results": [
+						{
+							"property": "eventually_elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time",
+							"value": {
+								"approx": 1.125,
+								"num": 9,
+								"den": 8
+							},
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -149,6 +181,22 @@
 							"note": "Storm",
 							"number": 147
 						}
+					],
+					"results": [
+						{
+							"property": "eventually_elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time",
+							"value": {
+								"approx": 1.0666666666666667,
+								"num": 16,
+								"den": 15
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -182,6 +230,18 @@
 						{
 							"note": "Storm",
 							"number": 61
+						}
+					],
+					"results": [
+						{
+							"property": "eventually_elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time",
+							"value": "2 (approx. 2)",
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -217,6 +277,22 @@
 							"note": "Storm",
 							"number": 274
 						}
+					],
+					"results": [
+						{
+							"property": "eventually_elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time",
+							"value": {
+								"approx": 1.35,
+								"num": 27,
+								"den": 20
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -250,6 +326,22 @@
 						{
 							"note": "Storm",
 							"number": 812
+						}
+					],
+					"results": [
+						{
+							"property": "eventually_elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time",
+							"value": {
+								"approx": 1.1851851851851851,
+								"num": 32,
+								"den": 27
+							},
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -285,6 +377,22 @@
 							"note": "Storm",
 							"number": 141
 						}
+					],
+					"results": [
+						{
+							"property": "eventually_elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time",
+							"value": {
+								"approx": 3.2,
+								"num": 16,
+								"den": 5
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -318,6 +426,22 @@
 						{
 							"note": "Storm",
 							"number": 1050
+						}
+					],
+					"results": [
+						{
+							"property": "eventually_elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time",
+							"value": {
+								"approx": 1.35,
+								"num": 27,
+								"den": 20
+							},
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -353,6 +477,22 @@
 							"note": "Storm",
 							"number": 4244
 						}
+					],
+					"results": [
+						{
+							"property": "eventually_elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time",
+							"value": {
+								"approx": 1.1377777777777778,
+								"num": 256,
+								"den": 225
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -367,6 +507,42 @@
 		"results/Storm.4-4.2018-10-12.json",
 		"results/Storm.5-2.2018-10-12.json",
 		"results/Storm.5-3.2018-10-12.json",
-		"results/Storm.5-4.2018-10-12.json"
+		"results/Storm.5-4.2018-10-12.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3-2.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3-3.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3-4.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.4-2.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.4-3.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.4-4.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5-2.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5-3.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5-4.2018-10-17.json"
+		}
 	]
 }

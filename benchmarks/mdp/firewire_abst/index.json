@@ -82,6 +82,32 @@
 							"note": "Storm",
 							"number": 611
 						}
+					],
+					"results": [
+						{
+							"property": "elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "rounds",
+							"value": "1 (approx. 1)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time_max",
+							"value": "299 (approx. 299)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time_min",
+							"value": {
+								"approx": 135.25,
+								"num": 541,
+								"den": 4
+							},
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -96,6 +122,32 @@
 							"note": "Storm",
 							"number": 776
 						}
+					],
+					"results": [
+						{
+							"property": "elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "rounds",
+							"value": "1 (approx. 1)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time_max",
+							"value": "365 (approx. 365)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time_min",
+							"value": {
+								"approx": 102.25,
+								"num": 409,
+								"den": 4
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -103,6 +155,14 @@
 	],
 	"results": [
 		"results/Storm.3.2018-10-12.json",
-		"results/Storm.36.2018-10-12.json"
+		"results/Storm.36.2018-10-12.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.36.2018-10-17.json"
+		}
 	]
 }

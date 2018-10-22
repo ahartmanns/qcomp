@@ -92,6 +92,44 @@
 							"note": "Storm",
 							"number": 33790
 						}
+					],
+					"results": [
+						{
+							"property": "messagesA",
+							"value": {
+								"approx": 1.1513671875,
+								"num": 1179,
+								"den": 1024
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "messagesB",
+							"value": {
+								"approx": 1.6826171875,
+								"num": 1723,
+								"den": 1024
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "unfairA",
+							"value": {
+								"approx": 0.515625,
+								"num": 33,
+								"den": 64
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "unfairB",
+							"value": {
+								"approx": 0.484375,
+								"num": 31,
+								"den": 64
+							},
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -109,6 +147,44 @@
 						{
 							"note": "Storm",
 							"number": 74750
+						}
+					],
+					"results": [
+						{
+							"property": "messagesA",
+							"value": {
+								"approx": 1.4541015625,
+								"num": 1489,
+								"den": 1024
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "messagesB",
+							"value": {
+								"approx": 1.9853515625,
+								"num": 2033,
+								"den": 1024
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "unfairA",
+							"value": {
+								"approx": 0.515625,
+								"num": 33,
+								"den": 64
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "unfairB",
+							"value": {
+								"approx": 0.484375,
+								"num": 31,
+								"den": 64
+							},
+							"note": "Storm/exact"
 						}
 					]
 				},
@@ -128,6 +204,44 @@
 							"note": "Storm",
 							"number": 115710
 						}
+					],
+					"results": [
+						{
+							"property": "messagesA",
+							"value": {
+								"approx": 1.7568359375,
+								"num": 1799,
+								"den": 1024
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "messagesB",
+							"value": {
+								"approx": 2.2880859375,
+								"num": 2343,
+								"den": 1024
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "unfairA",
+							"value": {
+								"approx": 0.515625,
+								"num": 33,
+								"den": 64
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "unfairB",
+							"value": {
+								"approx": 0.484375,
+								"num": 31,
+								"den": 64
+							},
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -145,6 +259,44 @@
 						{
 							"note": "Storm",
 							"number": 156670
+						}
+					],
+					"results": [
+						{
+							"property": "messagesA",
+							"value": {
+								"approx": 2.0595703125,
+								"num": 2109,
+								"den": 1024
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "messagesB",
+							"value": {
+								"approx": 2.5908203125,
+								"num": 2653,
+								"den": 1024
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "unfairA",
+							"value": {
+								"approx": 0.515625,
+								"num": 33,
+								"den": 64
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "unfairB",
+							"value": {
+								"approx": 0.484375,
+								"num": 31,
+								"den": 64
+							},
+							"note": "Storm/exact"
 						}
 					]
 				},
@@ -320,6 +472,22 @@
 		"results/Storm.5-8.2018-10-12.json",
 		"results/Storm.10-2.2018-10-12.json",
 		"results/Storm.10-4.2018-10-12.json",
-		"results/Storm.10-6.2018-10-12.json"
+		"results/Storm.10-6.2018-10-12.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5-2.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5-4.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5-6.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5-8.2018-10-17.json"
+		}
 	]
 }
