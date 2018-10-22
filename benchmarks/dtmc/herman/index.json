@@ -63,6 +63,17 @@
 							"note": "Storm",
 							"number": 8
 						}
+					],
+					"results": [
+						{
+							"property": "steps",
+							"value": {
+								"approx": 1.3333333333333333,
+								"num": 4,
+								"den": 3
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -92,6 +103,17 @@
 						{
 							"note": "Storm",
 							"number": 32
+						}
+					],
+					"results": [
+						{
+							"property": "steps",
+							"value": {
+								"approx": 3.2,
+								"num": 16,
+								"den": 5
+							},
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -123,6 +145,17 @@
 							"note": "Storm",
 							"number": 128
 						}
+					],
+					"results": [
+						{
+							"property": "steps",
+							"value": {
+								"approx": 6.857142857142857,
+								"num": 48,
+								"den": 7
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -153,6 +186,13 @@
 							"note": "Storm",
 							"number": 512
 						}
+					],
+					"results": [
+						{
+							"property": "steps",
+							"value": "12 (approx. 12)",
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -182,6 +222,17 @@
 						{
 							"note": "Storm",
 							"number": 2048
+						}
+					],
+					"results": [
+						{
+							"property": "steps",
+							"value": {
+								"approx": 17.454545454545453,
+								"num": 192,
+								"den": 11
+							},
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -334,6 +385,26 @@
 		"results/Storm.11.2018-10-12.json",
 		"results/Storm.13.2018-10-12.json",
 		"results/Storm.15.2018-10-12.json",
-		"results/Storm.17.2018-10-12.json"
+		"results/Storm.17.2018-10-12.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.7.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.9.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.11.2018-10-17.json"
+		}
 	]
 }

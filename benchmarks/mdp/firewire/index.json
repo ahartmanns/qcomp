@@ -81,6 +81,32 @@
 							"note": "Storm",
 							"number": 4093
 						}
+					],
+					"results": [
+						{
+							"property": "elected",
+							"value": "true",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time_max",
+							"value": "299 (approx. 299)",
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time_min",
+							"value": {
+								"approx": 138.25,
+								"num": 553,
+								"den": 4
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time_sending",
+							"value": "18 (approx. 18)",
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -102,6 +128,10 @@
 	],
 	"results": [
 		"results/Storm.3.2018-10-12.json",
-		"results/Storm.36.2018-10-12.json"
+		"results/Storm.36.2018-10-12.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3.2018-10-17.json"
+		}
 	]
 }

@@ -77,6 +77,17 @@
 							"note": "Storm",
 							"number": 14824
 						}
+					],
+					"results": [
+						{
+							"property": "deadline",
+							"value": {
+								"approx": 0.5,
+								"num": 1,
+								"den": 2
+							},
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -94,6 +105,17 @@
 						{
 							"note": "Storm",
 							"number": 69683
+						}
+					],
+					"results": [
+						{
+							"property": "deadline",
+							"value": {
+								"approx": 0.78125,
+								"num": 25,
+								"den": 32
+							},
+							"note": "Storm/exact"
 						}
 					]
 				},
@@ -113,6 +135,17 @@
 							"note": "Storm",
 							"number": 168411
 						}
+					],
+					"results": [
+						{
+							"property": "deadline",
+							"value": {
+								"approx": 0.931640625,
+								"num": 477,
+								"den": 512
+							},
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -130,6 +163,17 @@
 						{
 							"note": "Storm",
 							"number": 290017
+						}
+					],
+					"results": [
+						{
+							"property": "deadline",
+							"value": {
+								"approx": 0.975494384765625,
+								"num": 31965,
+								"den": 32768
+							},
+							"note": "Storm/exact"
 						}
 					]
 				},
@@ -149,6 +193,13 @@
 							"note": "Storm",
 							"number": 68056
 						}
+					],
+					"results": [
+						{
+							"property": "deadline",
+							"value": "0 (approx. 0)",
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -166,6 +217,17 @@
 						{
 							"note": "Storm",
 							"number": 220565
+						}
+					],
+					"results": [
+						{
+							"property": "deadline",
+							"value": {
+								"approx": 0.625,
+								"num": 5,
+								"den": 8
+							},
+							"note": "Storm/exact"
 						}
 					]
 				},
@@ -185,6 +247,17 @@
 							"note": "Storm",
 							"number": 375765
 						}
+					],
+					"results": [
+						{
+							"property": "deadline",
+							"value": {
+								"approx": 0.8515625,
+								"num": 109,
+								"den": 128
+							},
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -203,6 +276,17 @@
 							"note": "Storm",
 							"number": 530965
 						}
+					],
+					"results": [
+						{
+							"property": "deadline",
+							"value": {
+								"approx": 0.939453125,
+								"num": 481,
+								"den": 512
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -216,6 +300,38 @@
 		"results/Storm.36-200.2018-10-12.json",
 		"results/Storm.36-400.2018-10-12.json",
 		"results/Storm.36-600.2018-10-12.json",
-		"results/Storm.36-800.2018-10-12.json"
+		"results/Storm.36-800.2018-10-12.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3-200.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3-400.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3-600.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3-800.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.36-200.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.36-400.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.36-600.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.36-800.2018-10-17.json"
+		}
 	]
 }
