@@ -45,6 +45,7 @@ function onEndInit()
 {
 	vm.tools.sort(compareTools);
 	vm.toolVersions.sort(compareToolVersions);
+	vm.paramCombs.sort(compareParamCombs);
 	updateData();
 }
 function loadModel(m, path)
@@ -155,6 +156,7 @@ function loadResults(model, rs)
 				{
 					var paramComb = "";
 					var paramCombShort = "";
+					var values = [];
 					for(var i = 0; i < model.parameters.length; ++i)
 					{
 						if(paramComb !== "") paramComb += ", ";
@@ -163,17 +165,35 @@ function loadResults(model, rs)
 						
 						// File parameter?
 						var fpv = modelFile.parameterValues.find(pv => pv.name == model.parameters[i]);
-						if(fpv !== undefined) { paramComb += fpv.value; paramCombShort += fpv.value; }
+						if(fpv !== undefined)
+						{
+							paramComb += fpv.value;
+							paramCombShort += fpv.value;
+							values.push(fpv);
+						}
 						else if(r["open-parameter-values"] !== undefined)
 						{
 							// Open parameter?
 							var opv = r["open-parameter-values"].find(pv => pv.name == model.parameters[i]);
-							if(opv !== undefined) { paramComb += opv.value; paramCombShort += opv.value; }
-							else { paramComb += "?"; paramCombShort += "X"; } // should not happen with proper result files
+							if(opv !== undefined)
+							{
+								paramComb += opv.value;
+								paramCombShort += opv.value;
+								values.push(opv);
+							}
+							else // should not happen with proper result files
+							{
+								paramComb += "?";
+								paramCombShort += "X";
+							}
 						}
-						else { paramComb += "?"; paramCombShort += "X"; } // should not happen with proper result files
+						else // should not happen with proper result files
+						{
+							paramComb += "?";
+							paramCombShort += "X";
+						}
 					}
-					result.paramComb = createAndRegisterParamComb(model, paramComb, paramCombShort);
+					result.paramComb = createAndRegisterParamComb(model, paramComb, paramCombShort, values);
 				}
 			}
 			if(result.paramComb === undefined) result.paramComb = createAndRegisterParamComb(model, "INVALID", "INVALID");
@@ -189,7 +209,7 @@ function loadResults(model, rs)
 		})
 	});
 }
-function createAndRegisterParamComb(model, name, short)
+function createAndRegisterParamComb(model, name, short, values)
 {
 	var paramComb = model.paramCombs().find(pc => pc.short === short);
 	if(paramComb === undefined)
@@ -198,6 +218,7 @@ function createAndRegisterParamComb(model, name, short)
 			model: model,
 			name: name,
 			short: short,
+			values: values,
 			selected: ko.observable(true)
 		};
 		paramComb.selected.subscribe(newValue => onParamCombSelectedChanged(paramComb, newValue));
@@ -210,7 +231,12 @@ function compareParamCombs(pc1, pc2)
 {
 	var mc = compareModels(pc1.model, pc2.model);
 	if(mc !== 0) return mc;
-	return pc1.short < pc1.short ? -1 : pc1.short > pc1.short ? 1 : 0;
+	for(var i = 0; i < pc1.values.length && i < pc2.values.length; ++i)
+	{
+		if(pc1.values[i].value < pc2.values[i].value) return -1;
+		else if(pc1.values[i].value > pc2.values[i].value) return 1;
+	}
+	return 0;
 }
 function onParamCombSelectedChanged(paramComb, newValue)
 {
@@ -233,7 +259,7 @@ function createAndRegisterTool(t)
 }
 function compareTools(t1, t2)
 {
-	return t1.name < t2.name ? -1 : t1.name > t2.name ? 1 : 0;
+	return t1.name.toUpperCase() < t2.name.toUpperCase() ? -1 : t1.name.toUpperCase() > t2.name.toUpperCase() ? 1 : 0;
 }
 function onToolSelectedChanged(tool, newValue)
 {

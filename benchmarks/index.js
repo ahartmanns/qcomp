@@ -151,6 +151,7 @@ function loadResults(model)
 {
 	if(model.results === undefined) return; // results have already been loaded
 	var modelResults = model.results;
+	var modelResultsCount = model.results.length;
 	model.results = undefined;
 	modelResults.forEach(mr =>
 	{
@@ -164,8 +165,62 @@ function loadResults(model)
 			result.submitter = separatePersonRef(result.submitter);
 			result.isReference = mr.reference;
 			model.loadedResults.push(result);
+			--modelResultsCount;
+			if(modelResultsCount === 0) onResultsLoaded(model);
 		})
 	});
+}
+function onResultsLoaded(model)
+{
+	model.loadedResults.sort(compareResultParameterValues);
+}
+function compareResultParameterValues(r1, r2)
+{
+	// Compare the models
+	if(r1.model !== r2.model) return r1.model.short < r2.model.short ? -1 : 1;
+	
+	// Find the files in the models to get the values of the per-file parameters
+	var file1 = r1.file.substr(r1.file.lastIndexOf('/') + 1);
+	for(var i = 0; i < r1.model.files.length; ++i)
+	{
+		if(file1 === r1.model.files[i].file.substr(r1.model.files[i].file.lastIndexOf('/') + 1))
+		{
+			file1 = r1.model.files[i];
+			break;
+		}
+	}
+	var file2 = r2.file.substr(r2.file.lastIndexOf('/') + 1);
+	for(var i = 0; i < r2.model.files.length; ++i)
+	{
+		if(file1 === r2.model.files[i].file.substr(r2.model.files[i].file.lastIndexOf('/') + 1))
+		{
+			file2 = r2.model.files[i];
+			break;
+		}
+	}
+	
+	// Compare the per-file parameter values
+	var pv1 = file1["file-parameter-values"] === undefined ? [] : file1["file-parameter-values"];
+	var pv2 = file2["file-parameter-values"] === undefined ? [] : file2["file-parameter-values"];
+	for(var i = 0; i < pv1.length && i < pv2.length; ++i)
+	{
+		if(pv1[i].value < pv2[i].value) return -1;
+		else if(pv1[i].value > pv2[i].value) return 1;
+	}
+	
+	// Compare the open parameter values
+	pv1 = r1["open-parameter-values"] === undefined ? [] : r1["open-parameter-values"];
+	pv2 = r2["open-parameter-values"] === undefined ? [] : r2["open-parameter-values"];
+	for(var i = 0; i < pv1.length && i < pv2.length; ++i)
+	{
+		if(pv1[i].value < pv2[i].value) return -1;
+		else if(pv1[i].value > pv2[i].value) return 1;
+	}
+	
+	// The results are for the same parameter values: compare the tool
+	var t1 = (r1.tool.name + "-" + r1.tool.version).toUpperCase();
+	var t2 = (r2.tool.name + "-" + r2.tool.version).toUpperCase();
+	return t1 < t2 ? -1 : t1 > t2 ? 1 : 0;
 }
 function sortModels(sortBy)
 {
@@ -185,34 +240,6 @@ function sortModels(sortBy)
 	sortAsc = qmcc.sortAsc();
 	qmcc.sortBy(sortBy);
 	qmcc.models.sort(sortFun);
-}
-function propertiesToShortList(properties)
-{
-	var list = "";
-	var props = properties.filter(p => p.type === "prob-reach");
-	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × P";
-	props = properties.filter(p => p.type === "prob-reach-step-bounded" || p.type === "prob-reach-time-bounded" || p.type === "prob-reach-reward-bounded");
-	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × Pb";
-	props = properties.filter(p => p.type === "exp-steps" || p.type === "exp-time" || p.type === "exp-reward");
-	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × E";
-	props = properties.filter(p => p.type === "exp-steps-step-bounded" || p.type === "exp-steps-time-bounded" || p.type === "exp-steps-reward-bounded"
-		|| p.type === "exp-time-step-bounded" || p.type === "exp-time-time-bounded" || p.type === "exp-time-reward-bounded"
-		|| p.type === "exp-reward-step-bounded" || p.type === "exp-reward-time-bounded" || p.type === "exp-reward-reward-bounded");
-	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × Eb";
-	props = properties.filter(p => p.type === "exp-reward-step-instant" || p.type === "exp-reward-time-instant" || p.type === "exp-reward-reward-instant");
-	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × Ei";
-	props = properties.filter(p => p.type === "steady-state-reward" || p.type === "steady-state-prob");
-	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × S";
-	return list.length === 0 ? list : list.substr(2);
-}
-function modelTypeToLongString(modelType)
-{
-	if(modelType === "ctmc") return "continuous-time Markov chain";
-	else if(modelType === "dtmc") return "discrete-time Markov chain";
-	else if(modelType === "ma") return "Markov automaton";
-	else if(modelType === "mdp") return "Markov decision process";
-	else if(modelType === "pta") return "probabilistic timed automaton";
-	else return modelType;
 }
 function getStateCount(files, op, states)
 {
@@ -251,15 +278,6 @@ function getLinkTitle(url)
 	else if(url.length > 7 && url.substr(0, 7) === "http://") return url.substr(7);
 	else return url;
 }
-function formatText(text)
-{
-	return text
-		.replace(/&/g, "&amp;")
-		.replace(/</g, "&lt;")
-		.replace(/>/g, "&gt;")
-		.replace(/`/g, "<span class=\"tt\">")
-		.replace(/´/g, "</span>");
-}
 function toVersionFileName(file, version)
 {
 	return file.substr(0, file.lastIndexOf(".")) + ".v" + version.toString() + file.substr(file.lastIndexOf("."));
@@ -267,20 +285,4 @@ function toVersionFileName(file, version)
 function stateCountToHtmlString(count)
 {
 	return count >= 1000000 && Number.isInteger(Math.log10(count)) ? "~ 10<sup>" + Math.log10(count).toString() + "</sup>" : numberToOrderString(count);
-}
-function numberToOrderString(number)
-{
-	if(number < 1000) return number.toLocaleString();
-	else if(number < 10000) return (number / 1000).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " k";
-	else if(number < 100000) return (number / 1000).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " k";
-	else if(number < 1000000) return (number / 1000).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " k";
-	else if(number < 10000000) return (number / 1000000).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " M";
-	else if(number < 100000000) return (number / 1000000).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " M";
-	else if(number < 1000000000) return (number / 1000000).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " M";
-	else if(number < 10000000000) return (number / 1000000000).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " G";
-	else if(number < 100000000000) return (number / 1000000000).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " G";
-	else if(number < 1000000000000) return (number / 1000000000).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " G";
-	else if(number < 10000000000000) return (number / 1000000000000).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " T";
-	else if(number < 100000000000000) return (number / 1000000000000).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " T";
-	else return (number / 1000000000000).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " T";
 }
