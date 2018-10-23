@@ -4,6 +4,7 @@ const real MU_LEFT = 1.5; // service rate of left desk
 const int MU_RIGHT = 1; // service rate of right desk
 const int C_LEFT; // capacity of left queue
 const int C_RIGHT; // capacity of right queue
+const real TIME_BOUND;
 
 binary action service_left, service_right, reenter;
 
@@ -15,6 +16,8 @@ int sizeRight = 0;
 property PminBothQueuesFullIsOne = Pmin(<> (sizeLeft == C_LEFT && sizeRight == C_RIGHT)) == 1;
 property TminBothQueuesFull = Xmin(T, sizeLeft == C_LEFT && sizeRight == C_RIGHT);
 property TmaxBothQueuesFull = Xmax(T, sizeLeft == C_LEFT && sizeRight == C_RIGHT);
+property PmaxBothQueuesFullBound = Pmax(<>[T<=TIME_BOUND] (sizeLeft == C_LEFT && sizeRight == C_RIGHT));
+property SmaxBothQueuesFull = Smax(sizeLeft == C_LEFT && sizeRight == C_RIGHT);
 
 process Arrival()
 {

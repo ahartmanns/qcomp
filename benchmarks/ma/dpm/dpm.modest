@@ -1,5 +1,6 @@
 const int N; // number of different types of tasks, maximum 10
 const int C; // queue size
+const real TIME_BOUND;
 
 int(0..C) items1 = 0;
 int(0..C) items2 = 0;
@@ -21,6 +22,10 @@ property PminQueue1Full = Pmin(<> (items1 == C));
 property PmaxQueue1Full = Pmax(<> (items1 == C));
 
 property TminQueuesFull = Xmin(T, (N < 1 || items1 == C) && (N < 2 || items2 == C) && (N < 3 || items3 == C) && (N < 4 || items4 == C) && (N < 5 || items5 == C) && (N < 6 || items6 == C) && (N < 7 || items7 == C) && (N < 8 || items8 == C) && (N < 9 || items9 == C) && (N < 10 || items10 == C));
+
+property PmaxQueuesFullBound = Pmax(<>[T<=TIME_BOUND] ((N < 1 || items1 == C) && (N < 2 || items2 == C) && (N < 3 || items3 == C) && (N < 4 || items4 == C) && (N < 5 || items5 == C) && (N < 6 || items6 == C) && (N < 7 || items7 == C) && (N < 8 || items8 == C) && (N < 9 || items9 == C) && (N < 10 || items10 == C)));
+
+property SmaxQueuesFull = Smax((N < 1 || items1 == C) && (N < 2 || items2 == C) && (N < 3 || items3 == C) && (N < 4 || items4 == C) && (N < 5 || items5 == C) && (N < 6 || items6 == C) && (N < 7 || items7 == C) && (N < 8 || items8 == C) && (N < 9 || items9 == C) && (N < 10 || items10 == C));
 
 const int SP_IDLE = 1;
 const int SP_SLEEP = 2;

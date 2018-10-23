@@ -3,13 +3,18 @@
 	"short": "dpm",
 	"type": "ma",
 	"original": "Modest",
-	"version": 1,
-	"date": "2018-08-12",
+	"version": 2,
+	"date": "2018-10-24",
 	"version-history": [
 		{
 			"version": 1,
 			"date": "2018-08-12",
 			"notes": "Initial version."
+		},
+		{
+			"version": 2,
+			"date": "2018-10-24",
+			"notes": "Added property `PmaxQueuesFullBound´ and `SmaxQueuesFull´."
 		}
 	],
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -29,6 +34,11 @@
 			"kind": "open",
 			"description": "Maximum queue size for each task type",
 			"type": "positive integer"
+		},
+		{	"name": "TIME_BOUND", 
+			"kind": "open", 
+			"description": "The time bound for property PminQueuesFullBound", 
+			"type": "positive real number" 
 		}
 	],
 	"files": [
@@ -37,7 +47,7 @@
 			"original-file": "dpm.modest",
 			"conversion": {
 				"tool": "moconv",
-				"version": "3.0.78",
+				"version": "3.0.90",
 				"url": "http://www.modestchecker.net/",
 				"command": "moconv.exe dpm-3-3.modest -O dpm-3-3.jani"
 			},
@@ -51,6 +61,10 @@
 						{
 							"name": "C",
 							"value": 4
+						},
+						{ 
+							"name": "TIME_BOUND", 
+							"value": 5 
 						}
 					],
 					"states": [
@@ -96,14 +110,39 @@
 				},
 				{
 					"values": [
-						{
-							"name": "N",
-							"value": 4
-						},
-						{
-							"name": "C",
-							"value": 6
-						}
+						{ "name": "N", "value": 4 },
+						{ "name": "C", "value": 4 },
+						{ "name": "TIME_BOUND", "value": 25 }
+					],
+					"states": [
+						{ "number": 34570, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 4 },
+						{ "name": "C", "value": 6 },
+						{ "name": "TIME_BOUND", "value": 25 }
+					],
+					"states": [
+						{ "number": 131314, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 4 },
+						{ "name": "C", "value": 6 },
+						{ "name": "TIME_BOUND", "value": 50 }
+					],
+					"states": [
+						{ "number": 131314, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 4 },
+						{ "name": "C", "value": 6 },
+						{ "name": "TIME_BOUND", "value": 100 }
 					],
 					"states": [
 						{
@@ -148,14 +187,29 @@
 				},
 				{
 					"values": [
-						{
-							"name": "N",
-							"value": 4
-						},
-						{
-							"name": "C",
-							"value": 8
-						}
+						{ "name": "N", "value": 4 },
+						{ "name": "C", "value": 8 },
+						{ "name": "TIME_BOUND", "value": 5 }
+					],
+					"states": [
+						{ "number": 356426, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 4 },
+						{ "name": "C", "value": 8 },
+						{ "name": "TIME_BOUND", "value": 25 }
+					],
+					"states": [
+						{ "number": 356426, "note": "mcsta" }
+					]
+				},
+				{
+					"values": [
+						{ "name": "N", "value": 4 },
+						{ "name": "C", "value": 8 },
+						{ "name": "TIME_BOUND", "value": 100 }
 					],
 					"states": [
 						{
@@ -200,14 +254,9 @@
 				},
 				{
 					"values": [
-						{
-							"name": "N",
-							"value": 6
-						},
-						{
-							"name": "C",
-							"value": 4
-						}
+						{ "name": "N", "value": 6 },
+						{ "name": "C", "value": 4 },
+						{ "name": "TIME_BOUND", "value": 5 }
 					],
 					"states": [
 						{
@@ -218,14 +267,9 @@
 				},
 				{
 					"values": [
-						{
-							"name": "N",
-							"value": 6
-						},
-						{
-							"name": "C",
-							"value": 6
-						}
+						{ "name": "N", "value": 6 },
+						{ "name": "C", "value": 6 },
+						{ "name": "TIME_BOUND", "value": 5 }
 					],
 					"states": [
 						{
@@ -236,14 +280,9 @@
 				},
 				{
 					"values": [
-						{
-							"name": "N",
-							"value": 6
-						},
-						{
-							"name": "C",
-							"value": 8
-						}
+						{ "name": "N", "value": 6 },
+						{ "name": "C", "value": 8 },
+						{ "name": "TIME_BOUND", "value": 5 }
 					],
 					"states": [
 						{
@@ -254,14 +293,9 @@
 				},
 				{
 					"values": [
-						{
-							"name": "N",
-							"value": 8
-						},
-						{
-							"name": "C",
-							"value": 4
-						}
+						{ "name": "N", "value": 8 },
+						{ "name": "C", "value": 4 },
+						{ "name": "TIME_BOUND", "value": 5 }
 					],
 					"states": [
 						{
@@ -272,14 +306,9 @@
 				},
 				{
 					"values": [
-						{
-							"name": "N",
-							"value": 8
-						},
-						{
-							"name": "C",
-							"value": 6
-						}
+						{ "name": "N", "value": 8 },
+						{ "name": "C", "value": 6 },
+						{ "name": "TIME_BOUND", "value": 5 }
 					],
 					"states": [
 						{
@@ -290,14 +319,9 @@
 				},
 				{
 					"values": [
-						{
-							"name": "N",
-							"value": 8
-						},
-						{
-							"name": "C",
-							"value": 8
-						}
+						{ "name": "N", "value": 8 },
+						{ "name": "C", "value": 8 },
+						{ "name": "TIME_BOUND", "value": 5 }
 					],
 					"states": [
 						{
@@ -334,16 +358,63 @@
 			"name": "TminQueuesFull",
 			"type": "exp-time",
 			"description": "The minimum expected time until all queues are full."
+		},
+		{
+			"name": "PmaxQueuesFullBound",
+			"type": "prob-reach-time-bounded",
+			"description": "The maximum probability for all queues to become full within the TIME-BOUND."
+		},
+		{
+			"name": "SmaxQueuesFull",
+			"description": "Long-run probability that all queues are full.",
+			"type": "steady-state-prob"
 		}
 	],
 	"results": [
-		"results/mcsta.4-4.json",
-		"results/mcsta.4-6.json",
-		"results/mcsta.4-8.json",
-		"results/mcsta.6-4.json",
-		"results/mcsta.6-6.json",
-		"results/mcsta.6-8.json",
-		"results/mcsta.8-4.json",
+		{
+			"reference": true,
+			"file": "results/mcsta.4-4-5.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.4-4-25.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.4-6-25.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.4-6-50.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.4-6-100.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.4-8-5.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.4-4-25.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.4-8-100.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.6-4-5.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.6-4-50.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.6-6-5.json"
+		},
 		{
 			"reference": true,
 			"file": "results/Storm.exact.4-4.2018-10-03.json"

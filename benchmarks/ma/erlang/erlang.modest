@@ -3,7 +3,9 @@ const real R; // the rate parameter of the Erlang distribution
 
 bool goal;
 
-action a, b, tau;
+const real TIME_BOUND;
+
+action a, b;
 
 process ErlangChain(int(0..K) stage)
 {
@@ -31,3 +33,5 @@ ErlangStages(0)
 
 property PminReach = Pmin(<> goal);
 property TminReach = Xmin(T, goal);
+property PmaxReachBound = Pmax(<>[T<=TIME_BOUND] goal);
+property SmaxNotReach = Smax(!goal);

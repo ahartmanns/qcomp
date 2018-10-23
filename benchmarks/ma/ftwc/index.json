@@ -3,8 +3,8 @@
 	"short": "ftwc",
 	"type": "ma",
 	"original": "Modest",
-	"version": 2,
-	"date": "2018-08-22",
+	"version": 3,
+	"date": "2018-10-24",
 	"version-history": [
 		{
 			"version": 1,
@@ -15,6 +15,11 @@
 			"version": 2,
 			"date": "2018-08-22",
 			"notes": "Replaced query property `ReachMin´ by probability-one assertion property `ReachMinIsOne´."
+		},
+		{
+			"version": 3,
+			"date": "2018-10-24",
+			"notes": "Added property `PmaxReachBound´ and `SmaxReach´."
 		}
 	],
 	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
@@ -32,6 +37,12 @@
 			"kind": "open",
 			"description": "Number of workstations",
 			"type": "positive integer"
+		},
+		{ 
+			"name": "TIME_BOUND", 
+			"kind": "open", 
+			"description": "The time bound for property PminReachBound", 
+			"type": "positive real number" 
 		}
 	],
 	"files": [
@@ -40,7 +51,7 @@
 			"original-file": "ftwc.modest",
 			"conversion": {
 				"tool": "moconv",
-				"version": "3.0.80",
+				"version": "3.0.90",
 				"url": "http://www.modestchecker.net/",
 				"command": "moconv.exe ftwc.modest -O ftwc.jani"
 			},
@@ -50,6 +61,10 @@
 						{
 							"name": "N",
 							"value": 4
+						},
+						{ 
+							"name": "TIME_BOUND", 
+							"value": 5 
 						}
 					],
 					"states": [
@@ -93,6 +108,10 @@
 						{
 							"name": "N",
 							"value": 8
+						},
+						{ 
+							"name": "TIME_BOUND", 
+							"value": 5 
 						}
 					],
 					"states": [
@@ -140,11 +159,27 @@
 			"name": "TimeMax",
 			"type": "exp-time",
 			"description": "The maximum time until all left workstations or the left switch are down and similar for the right side."
+		},
+		{
+			"name": "PmaxReachBound",
+			"type": "prob-reach-time-bounded",
+			"description": "The maximum probability that all left workstations or the left switch are down and similar for the right side within the TIME-BOUND."
+		},
+		{
+			"name": "SmaxReach",
+			"description": "Long-run probability that all left workstations or the left switch are down and similar for the right side.",
+			"type": "steady-state-prob"
 		}
 	],
 	"results": [
-		"results/mcsta.4.json",
-		"results/mcsta.8.json",
+		{
+			"reference": true,
+			"file": "results/mcsta.4-5.2018-10-24.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.8-5.2018-10-24.json"
+		},
 		{
 			"reference": true,
 			"file": "results/Storm.exact.4.2018-10-03.json"

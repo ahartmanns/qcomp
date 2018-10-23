@@ -19,6 +19,10 @@
 		{
 			"name": "R",
 			"type": "real"
+		},
+		{
+			"name": "TIME_BOUND",
+			"type": "real"
 		}
 	],
 	"variables": [ {
@@ -52,8 +56,47 @@
 				"values": {
 					"op": "Emin",
 					"exp": 1,
-					"accumulate": [ "time" ],
+					"accumulate": [
+						"time"
+					],
 					"reach": "goal"
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "PmaxReachBound",
+			"expression": {
+				"op": "filter",
+				"fun": "max",
+				"values": {
+					"op": "Pmax",
+					"exp": {
+						"op": "F",
+						"exp": "goal",
+						"time-bounds": {
+							"upper": "TIME_BOUND"
+						}
+					}
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "SmaxNotReach",
+			"expression": {
+				"op": "filter",
+				"fun": "max",
+				"values": {
+					"op": "Smax",
+					"exp": {
+						"op": "¬",
+						"exp": "goal"
+					}
 				},
 				"states": {
 					"op": "initial"

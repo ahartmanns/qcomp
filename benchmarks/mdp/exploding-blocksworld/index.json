@@ -39,6 +39,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p01-n2-N5-s1.pddl --jani exploding-blocksworld.5.jani"
 			},
 			"file-parameter-values": [
@@ -82,6 +83,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p08-n8-N10-s8.pddl --jani exploding-blocksworld.10.jani"
 			},
 			"file-parameter-values": [
@@ -101,6 +103,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p13-n13-N15-s13.pddl --jani exploding-blocksworld.15.jani"
 			},
 			"file-parameter-values": [
@@ -120,6 +123,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p15-n15-N17-s15.pddl --jani exploding-blocksworld.17.jani"
 			},
 			"file-parameter-values": [

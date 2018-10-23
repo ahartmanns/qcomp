@@ -1,5 +1,6 @@
 const int JOB_TYPES;
 const int C;
+const real TIME_BOUND;
 
 binary action deliver;
 transient int(0..JOB_TYPES) item;
@@ -9,6 +10,8 @@ int(0..C)[] size = [0, 0];
 property PminBothFullIsOne = Pmin(<> (size[0] == C && size[1] == C)) == 1;
 property TminBothFull = Xmin(T, size[0] == C && size[1] == C);
 property TmaxBothFull = Xmax(T, size[0] == C && size[1] == C);
+property PmaxBothFullBound = Pmax(<>[T<=TIME_BOUND] (size[0] == C && size[1] == C));
+property SmaxBothFull = Smax((size[0] == C && size[1] == C));
 
 process Station(int id, int(0..JOB_TYPES)[] q)
 {  

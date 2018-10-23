@@ -38,6 +38,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p01-c0-C0-g1-n5-domain.pddl p01-c0-C0-g1-n5-problem.pddl --jani blocksworld.5.jani"
 			},
 			"file-parameter-values": [
@@ -77,6 +78,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p05-c0-C0-g1-n10-domain.pddl p05-c0-C0-g1-n10-problem.pddl --jani blocksworld.10.jani"
 			},
 			"file-parameter-values": [
@@ -96,6 +98,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p09-c0-C0-g1-n14-domain.pddl p09-c0-C0-g1-n14-problem.pddl --jani blocksworld.14.jani"
 			},
 			"file-parameter-values": [
@@ -115,6 +118,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p13-c0-C0-g1-n18-domain.pddl p13-c0-C0-g1-n18-problem.pddl --jani blocksworld.18.jani"
 			},
 			"file-parameter-values": [

@@ -36,6 +36,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p01.pddl --jani cdrive.2.jani"
 			},
 			"file-parameter-values": [
@@ -79,6 +80,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p05.pddl --jani cdrive.3.jani"
 			},
 			"file-parameter-values": [
@@ -122,6 +124,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p10.pddl --jani cdrive.6.jani"
 			},
 			"file-parameter-values": [
@@ -165,6 +168,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p15.pddl --jani cdrive.10.jani"
 			},
 			"file-parameter-values": [
