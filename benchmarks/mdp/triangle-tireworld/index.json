@@ -15,6 +15,10 @@
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "http://users.cecs.anu.edu.au/~iain/icaps07.pdf",
+	"part-of": {
+		"name": "the IPPC 2008 Benchmark Set",
+		"url": "http://ippc-2008.loria.fr/wiki/index.html"
+	},
 	"description": "An IPPC 2008 model [1] described in [2] of the triangle tireworld [0]. A car has to move between two of the `l´ locations. When the car drives a segment of the route, there is the chance of getting a flat tire. Spare tires are only available in some locations. Like the original tireworld but with slight differences in the definition to permit short but dangerous paths.",
 	"references": [
 		"http://icaps-conference.org/ipc2008/probabilistic/wiki/index.php/Results.html",

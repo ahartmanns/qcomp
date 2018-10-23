@@ -11,6 +11,10 @@
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "http://idm-lab.org/wiki/icaps/ipc2006/probabilistic/",
+	"part-of": {
+		"name": "the IPPC 2006 Benchmark Set",
+		"url": "http://idm-lab.org/wiki/icaps/ipc2006/probabilistic/"
+	},
 	"description": "An IPPC 2006 model of a random domain where random predicates are set and unset until the goal state is reached.",
 	"notes": "IPPC 2006 benchmark",
 	"parameters": [
