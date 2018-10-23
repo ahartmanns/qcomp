@@ -22,6 +22,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p01-domain.pddl p01-problem.pddl --jani random-predicates.a.jani"
 			},
 			"file-parameter-values": [
@@ -35,6 +36,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p05-domain.pddl p05-problem.pddl --jani random-predicates.b.jani"
 			},
 			"file-parameter-values": [
@@ -48,6 +50,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p10-domain.pddl p10-problem.pddl --jani random-predicates.c.jani"
 			},
 			"file-parameter-values": [
@@ -61,6 +64,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p15-domain.pddl p15-problem.pddl --jani random-predicates.d.jani"
 			},
 			"file-parameter-values": [

@@ -26,6 +26,10 @@
 		{
 			"name": "C",
 			"type": "int"
+		},
+		{
+			"name": "TIME_BOUND",
+			"type": "real"
 		}
 	],
 	"variables": [
@@ -103,6 +107,47 @@
 			}
 		},
 		{
+			"name": "PminBothFullIsOne_1",
+			"expression": {
+				"op": "filter",
+				"fun": "∃",
+				"values": {
+					"op": "=",
+					"left": {
+						"op": "Pmin",
+						"exp": {
+							"op": "F",
+							"exp": {
+								"op": "∧",
+								"left": {
+									"op": "=",
+									"left": {
+										"op": "aa",
+										"exp": "size",
+										"index": 0
+									},
+									"right": "C"
+								},
+								"right": {
+									"op": "=",
+									"left": {
+										"op": "aa",
+										"exp": "size",
+										"index": 1
+									},
+									"right": "C"
+								}
+							}
+						}
+					},
+					"right": 1
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
 			"name": "TminBothFull",
 			"expression": {
 				"op": "filter",
@@ -110,7 +155,9 @@
 				"values": {
 					"op": "Emin",
 					"exp": 1,
-					"accumulate": [ "time" ],
+					"accumulate": [
+						"time"
+					],
 					"reach": {
 						"op": "∧",
 						"left": {
@@ -146,8 +193,84 @@
 				"values": {
 					"op": "Emax",
 					"exp": 1,
-					"accumulate": [ "time" ],
+					"accumulate": [
+						"time"
+					],
 					"reach": {
+						"op": "∧",
+						"left": {
+							"op": "=",
+							"left": {
+								"op": "aa",
+								"exp": "size",
+								"index": 0
+							},
+							"right": "C"
+						},
+						"right": {
+							"op": "=",
+							"left": {
+								"op": "aa",
+								"exp": "size",
+								"index": 1
+							},
+							"right": "C"
+						}
+					}
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "PminBothFullBound",
+			"expression": {
+				"op": "filter",
+				"fun": "min",
+				"values": {
+					"op": "Pmin",
+					"exp": {
+						"op": "F",
+						"exp": {
+							"op": "∧",
+							"left": {
+								"op": "=",
+								"left": {
+									"op": "aa",
+									"exp": "size",
+									"index": 0
+								},
+								"right": "C"
+							},
+							"right": {
+								"op": "=",
+								"left": {
+									"op": "aa",
+									"exp": "size",
+									"index": 1
+								},
+								"right": "C"
+							}
+						},
+						"time-bounds": {
+							"upper": "TIME_BOUND"
+						}
+					}
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "SminBothFull",
+			"expression": {
+				"op": "filter",
+				"fun": "min",
+				"values": {
+					"op": "Smin",
+					"exp": {
 						"op": "∧",
 						"left": {
 							"op": "=",

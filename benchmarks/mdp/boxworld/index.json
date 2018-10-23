@@ -27,6 +27,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p01-b10-c5-dc0-fc0-dr0-gr1-domain.pddl p01-b10-c5-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld.10-5.jani"
 			},
 			"file-parameter-values": [
@@ -41,6 +42,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p04-b10-c10-dc0-fc0-dr0-gr1-domain.pddl p04-b10-c10-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld.10-10.jani"
 			},
 			"file-parameter-values": [
@@ -55,6 +57,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p08-b15-c10-dc0-fc0-dr0-gr1-domain.pddl p08-b15-c10-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld.15-10.jani"
 			},
 			"file-parameter-values": [
@@ -69,6 +72,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p10-b15-c15-dc0-fc0-dr0-gr1-domain.pddl p10-b15-c15-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld.15-15.jani"
 			},
 			"file-parameter-values": [
@@ -83,6 +87,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py p13-b20-c20-dc0-fc0-dr0-gr1-domain.pddl p13-b20-c20-dc0-fc0-dr0-gr1-problem.pddl --jani boxworld.20-20.jani"
 			},
 			"file-parameter-values": [

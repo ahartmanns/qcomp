@@ -39,6 +39,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p01.pddl --jani tireworld.17.jani"
 			},
 			"file-parameter-values": [
@@ -82,6 +83,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p05.pddl --jani tireworld.25.jani"
 			},
 			"file-parameter-values": [
@@ -121,6 +123,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p10.pddl --jani tireworld.35.jani"
 			},
 			"file-parameter-values": [
@@ -160,6 +163,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p15.pddl --jani tireworld.45.jani"
 			},
 			"file-parameter-values": [

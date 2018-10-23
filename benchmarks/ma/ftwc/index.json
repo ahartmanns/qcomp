@@ -32,6 +32,12 @@
 			"kind": "open",
 			"description": "Number of workstations",
 			"type": "positive integer"
+		},
+		{ 
+			"name": "TIME_BOUND", 
+			"kind": "open", 
+			"description": "The time bound for property PminReachBound", 
+			"type": "positive real number" 
 		}
 	],
 	"files": [
@@ -50,6 +56,10 @@
 						{
 							"name": "N",
 							"value": 4
+						},
+						{ 
+							"name": "TIME_BOUND", 
+							"value": 5 
 						}
 					],
 					"states": [
@@ -93,6 +103,10 @@
 						{
 							"name": "N",
 							"value": 8
+						},
+						{ 
+							"name": "TIME_BOUND", 
+							"value": 5 
 						}
 					],
 					"states": [
@@ -140,11 +154,27 @@
 			"name": "TimeMax",
 			"type": "exp-time",
 			"description": "The maximum time until all left workstations or the left switch are down and similar for the right side."
+		},
+		{
+			"name": "PminReachBound",
+			"type": "prob-reach-time-bounded",
+			"description": "The minimum probability that all left workstations or the left switch are down and similar for the right side within the TIME-BOUND."
+		},
+		{
+			"name": "SminReach",
+			"description": "Long-run probability that all left workstations or the left switch are down and similar for the right side.",
+			"type": "steady-state-prob"
 		}
 	],
 	"results": [
-		"results/mcsta.4.json",
-		"results/mcsta.8.json",
+		{
+			"reference": true,
+			"file": "results/mcsta.4-5.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.8-5.json"
+		},
 		{
 			"reference": true,
 			"file": "results/Storm.exact.4.2018-10-03.json"

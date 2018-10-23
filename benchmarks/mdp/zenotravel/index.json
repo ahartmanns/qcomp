@@ -51,6 +51,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p01-c4-p2-a2-s3846.pddl --jani zenotravel.4-2-2.jani"
 			},
 			"file-parameter-values": [
@@ -98,6 +99,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p05-c6-p5-a3-s24056.pddl --jani zenotravel.6-5-3.jani"
 			},
 			"file-parameter-values": [
@@ -125,6 +127,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p10-c10-p5-a3-s15832.pddl --jani zenotravel.10-5-3.jani"
 			},
 			"file-parameter-values": [
@@ -152,6 +155,7 @@
 			"conversion": {
 				"tool": "ppddl2jani",
 				"version": "31.07.2018",
+				"url": "https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip",
 				"command": "ppddl2jani.py domain.pddl p15-c20-p10-a6-s24164.pddl --jani zenotravel.20-10-6.jani"
 			},
 			"file-parameter-values": [

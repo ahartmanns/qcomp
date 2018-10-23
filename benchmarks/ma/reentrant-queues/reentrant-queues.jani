@@ -48,6 +48,10 @@
 		{
 			"name": "C_RIGHT",
 			"type": "int"
+		},
+		{
+			"name": "TIME_BOUND",
+			"type": "real"
 		}
 	],
 	"variables": [
@@ -108,6 +112,39 @@
 			}
 		},
 		{
+			"name": "PminBothQueuesFullIsOne_1",
+			"expression": {
+				"op": "filter",
+				"fun": "∃",
+				"values": {
+					"op": "=",
+					"left": {
+						"op": "Pmin",
+						"exp": {
+							"op": "F",
+							"exp": {
+								"op": "∧",
+								"left": {
+									"op": "=",
+									"left": "sizeLeft",
+									"right": "C_LEFT"
+								},
+								"right": {
+									"op": "=",
+									"left": "sizeRight",
+									"right": "C_RIGHT"
+								}
+							}
+						}
+					},
+					"right": 1
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
 			"name": "TminBothQueuesFull",
 			"expression": {
 				"op": "filter",
@@ -115,7 +152,9 @@
 				"values": {
 					"op": "Emin",
 					"exp": 1,
-					"accumulate": [ "time" ],
+					"accumulate": [
+						"time"
+					],
 					"reach": {
 						"op": "∧",
 						"left": {
@@ -143,8 +182,68 @@
 				"values": {
 					"op": "Emax",
 					"exp": 1,
-					"accumulate": [ "time" ],
+					"accumulate": [
+						"time"
+					],
 					"reach": {
+						"op": "∧",
+						"left": {
+							"op": "=",
+							"left": "sizeLeft",
+							"right": "C_LEFT"
+						},
+						"right": {
+							"op": "=",
+							"left": "sizeRight",
+							"right": "C_RIGHT"
+						}
+					}
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "PminBothQueuesFullBound",
+			"expression": {
+				"op": "filter",
+				"fun": "min",
+				"values": {
+					"op": "Pmin",
+					"exp": {
+						"op": "F",
+						"exp": {
+							"op": "∧",
+							"left": {
+								"op": "=",
+								"left": "sizeLeft",
+								"right": "C_LEFT"
+							},
+							"right": {
+								"op": "=",
+								"left": "sizeRight",
+								"right": "C_RIGHT"
+							}
+						},
+						"time-bounds": {
+							"upper": "TIME_BOUND"
+						}
+					}
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "SminBothQueuesFull",
+			"expression": {
+				"op": "filter",
+				"fun": "min",
+				"values": {
+					"op": "Smin",
+					"exp": {
 						"op": "∧",
 						"left": {
 							"op": "=",

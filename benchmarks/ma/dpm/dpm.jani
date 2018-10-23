@@ -40,6 +40,10 @@
 		{
 			"name": "C",
 			"type": "int"
+		},
+		{
+			"name": "TIME_BOUND",
+			"type": "real"
 		}
 	],
 	"variables": [
@@ -541,8 +545,356 @@
 				"values": {
 					"op": "Emin",
 					"exp": 1,
-					"accumulate": [ "time" ],
+					"accumulate": [
+						"time"
+					],
 					"reach": {
+						"op": "∧",
+						"left": {
+							"op": "∧",
+							"left": {
+								"op": "∧",
+								"left": {
+									"op": "∧",
+									"left": {
+										"op": "∧",
+										"left": {
+											"op": "∧",
+											"left": {
+												"op": "∧",
+												"left": {
+													"op": "∧",
+													"left": {
+														"op": "∧",
+														"left": {
+															"op": "∨",
+															"left": {
+																"op": "<",
+																"left": "N",
+																"right": 1
+															},
+															"right": {
+																"op": "=",
+																"left": "items1",
+																"right": "C"
+															}
+														},
+														"right": {
+															"op": "∨",
+															"left": {
+																"op": "<",
+																"left": "N",
+																"right": 2
+															},
+															"right": {
+																"op": "=",
+																"left": "items2",
+																"right": "C"
+															}
+														}
+													},
+													"right": {
+														"op": "∨",
+														"left": {
+															"op": "<",
+															"left": "N",
+															"right": 3
+														},
+														"right": {
+															"op": "=",
+															"left": "items3",
+															"right": "C"
+														}
+													}
+												},
+												"right": {
+													"op": "∨",
+													"left": {
+														"op": "<",
+														"left": "N",
+														"right": 4
+													},
+													"right": {
+														"op": "=",
+														"left": "items4",
+														"right": "C"
+													}
+												}
+											},
+											"right": {
+												"op": "∨",
+												"left": {
+													"op": "<",
+													"left": "N",
+													"right": 5
+												},
+												"right": {
+													"op": "=",
+													"left": "items5",
+													"right": "C"
+												}
+											}
+										},
+										"right": {
+											"op": "∨",
+											"left": {
+												"op": "<",
+												"left": "N",
+												"right": 6
+											},
+											"right": {
+												"op": "=",
+												"left": "items6",
+												"right": "C"
+											}
+										}
+									},
+									"right": {
+										"op": "∨",
+										"left": {
+											"op": "<",
+											"left": "N",
+											"right": 7
+										},
+										"right": {
+											"op": "=",
+											"left": "items7",
+											"right": "C"
+										}
+									}
+								},
+								"right": {
+									"op": "∨",
+									"left": {
+										"op": "<",
+										"left": "N",
+										"right": 8
+									},
+									"right": {
+										"op": "=",
+										"left": "items8",
+										"right": "C"
+									}
+								}
+							},
+							"right": {
+								"op": "∨",
+								"left": {
+									"op": "<",
+									"left": "N",
+									"right": 9
+								},
+								"right": {
+									"op": "=",
+									"left": "items9",
+									"right": "C"
+								}
+							}
+						},
+						"right": {
+							"op": "∨",
+							"left": {
+								"op": "<",
+								"left": "N",
+								"right": 10
+							},
+							"right": {
+								"op": "=",
+								"left": "items10",
+								"right": "C"
+							}
+						}
+					}
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "PminQueuesFullBound",
+			"expression": {
+				"op": "filter",
+				"fun": "min",
+				"values": {
+					"op": "Pmin",
+					"exp": {
+						"op": "F",
+						"exp": {
+							"op": "∧",
+							"left": {
+								"op": "∧",
+								"left": {
+									"op": "∧",
+									"left": {
+										"op": "∧",
+										"left": {
+											"op": "∧",
+											"left": {
+												"op": "∧",
+												"left": {
+													"op": "∧",
+													"left": {
+														"op": "∧",
+														"left": {
+															"op": "∧",
+															"left": {
+																"op": "∨",
+																"left": {
+																	"op": "<",
+																	"left": "N",
+																	"right": 1
+																},
+																"right": {
+																	"op": "=",
+																	"left": "items1",
+																	"right": "C"
+																}
+															},
+															"right": {
+																"op": "∨",
+																"left": {
+																	"op": "<",
+																	"left": "N",
+																	"right": 2
+																},
+																"right": {
+																	"op": "=",
+																	"left": "items2",
+																	"right": "C"
+																}
+															}
+														},
+														"right": {
+															"op": "∨",
+															"left": {
+																"op": "<",
+																"left": "N",
+																"right": 3
+															},
+															"right": {
+																"op": "=",
+																"left": "items3",
+																"right": "C"
+															}
+														}
+													},
+													"right": {
+														"op": "∨",
+														"left": {
+															"op": "<",
+															"left": "N",
+															"right": 4
+														},
+														"right": {
+															"op": "=",
+															"left": "items4",
+															"right": "C"
+														}
+													}
+												},
+												"right": {
+													"op": "∨",
+													"left": {
+														"op": "<",
+														"left": "N",
+														"right": 5
+													},
+													"right": {
+														"op": "=",
+														"left": "items5",
+														"right": "C"
+													}
+												}
+											},
+											"right": {
+												"op": "∨",
+												"left": {
+													"op": "<",
+													"left": "N",
+													"right": 6
+												},
+												"right": {
+													"op": "=",
+													"left": "items6",
+													"right": "C"
+												}
+											}
+										},
+										"right": {
+											"op": "∨",
+											"left": {
+												"op": "<",
+												"left": "N",
+												"right": 7
+											},
+											"right": {
+												"op": "=",
+												"left": "items7",
+												"right": "C"
+											}
+										}
+									},
+									"right": {
+										"op": "∨",
+										"left": {
+											"op": "<",
+											"left": "N",
+											"right": 8
+										},
+										"right": {
+											"op": "=",
+											"left": "items8",
+											"right": "C"
+										}
+									}
+								},
+								"right": {
+									"op": "∨",
+									"left": {
+										"op": "<",
+										"left": "N",
+										"right": 9
+									},
+									"right": {
+										"op": "=",
+										"left": "items9",
+										"right": "C"
+									}
+								}
+							},
+							"right": {
+								"op": "∨",
+								"left": {
+									"op": "<",
+									"left": "N",
+									"right": 10
+								},
+								"right": {
+									"op": "=",
+									"left": "items10",
+									"right": "C"
+								}
+							}
+						},
+						"time-bounds": {
+							"upper": "TIME_BOUND"
+						}
+					}
+				},
+				"states": {
+					"op": "initial"
+				}
+			}
+		},
+		{
+			"name": "SminQueuesFull",
+			"expression": {
+				"op": "filter",
+				"fun": "min",
+				"values": {
+					"op": "Smin",
+					"exp": {
 						"op": "∧",
 						"left": {
 							"op": "∧",

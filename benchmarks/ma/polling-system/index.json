@@ -35,6 +35,12 @@
 			"kind": "open",
 			"description": "Capacity of each queue",
 			"type": "positive integer"
+		},
+		{ 
+			"name": "TIME_BOUND", 
+			"kind": "open", 
+			"description": "The time bound for property PminBothFullBound", 
+			"type": "positive real number" 
 		}
 	],
 	"files": [
@@ -50,14 +56,9 @@
 			"open-parameter-values": [
 				{
 					"values": [
-						{
-							"name": "JOB_TYPES",
-							"value": 3
-						},
-						{
-							"name": "C",
-							"value": 3
-						}
+						{ "name": "JOB_TYPES", "value": 3 },
+						{ "name": "C", "value": 3 },
+						{ "name": "TIME_BOUND", "value": 5 }
 					],
 					"states": [
 						{
@@ -113,10 +114,23 @@
 			"name": "TmaxBothFull",
 			"type": "exp-time",
 			"description": "The maximum expected time until both queues are full."
+		},
+		{
+			"name": "PminBothFullBound",
+			"type": "prob-reach-time-bounded",
+			"description": "The minimum probability that both queues are full within the TIME-BOUND."
+		},
+		{
+			"name": "SminBothFull",
+			"description": "Long-run probability that both queues are full.",
+			"type": "steady-state-prob"
 		}
 	],
 	"results": [
-		"results/mcsta.3-3.json",
+		{
+			"reference": true,
+			"file": "results/mcsta.3-3-5.json"
+		},
 		{
 			"reference": true,
 			"file": "results/Storm.exact.3-3.2018-10-03.json"
