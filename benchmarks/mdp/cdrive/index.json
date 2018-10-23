@@ -15,6 +15,10 @@
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "http://idm-lab.org/wiki/icaps/ipc2006/probabilistic/",
+	"part-of": {
+		"name": "the IPPC 2006 Benchmark Set",
+		"url": "http://idm-lab.org/wiki/icaps/ipc2006/probabilistic/"
+	},
 	"description": "An IPPC 2006 model of a car driving around in a city with `c´ coordinates, i.e. locations. There are roads connecting coordinates with traffic lights. The car should reach a certain destination without an accident.",
 	"references": [],
 	"notes": "IPPC 2006 benchmark",

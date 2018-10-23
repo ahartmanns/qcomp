@@ -15,6 +15,10 @@
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "http://users.cecs.anu.edu.au/~iain/icaps07.pdf",
+	"part-of": {
+		"name": "the IPPC 2006 Benchmark Set",
+		"url": "http://idm-lab.org/wiki/icaps/ipc2006/probabilistic/"
+	},
 	"description": "An IPPC 2006 [1] model of the tireworld domain described in detail in [2]. A car has to move between two of the `n´ locations. When the car drives a segment of the route, there is the chance of getting a flat tire. But only in some locations there are spare tires available.",
 	"references": [
 		"http://idm-lab.org/wiki/icaps/ipc2006/probabilistic/",

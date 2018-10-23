@@ -15,6 +15,10 @@
 	"author": "Marcel Steinmetz <steinmetz@cs.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "http://www.aaai.org/Library/AIPS/2000/aips00-036.php",
+	"part-of": {
+		"name": "the IPPC 2006 Benchmark Set",
+		"url": "http://idm-lab.org/wiki/icaps/ipc2006/probabilistic/"
+	},
 	"description": "An IPPC 2006 [1] model of the elevators problem. A certain number of elevators is available which should be used to transport `c´ coins to one of the `p´ positions. The movement of the elevator can fail and it can fall down on a lower level.",
 	"references": [
 		"http://idm-lab.org/wiki/icaps/ipc2006/probabilistic/"
