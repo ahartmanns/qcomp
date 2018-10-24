@@ -67,12 +67,12 @@
 			}
 		},
 		{
-			"name": "PminReachBound",
+			"name": "PmaxReachBound",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
-					"op": "Pmin",
+					"op": "Pmax",
 					"exp": {
 						"op": "F",
 						"exp": "goal",
@@ -87,12 +87,12 @@
 			}
 		},
 		{
-			"name": "SminNotReach",
+			"name": "SmaxNotReach",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
-					"op": "Smin",
+					"op": "Smax",
 					"exp": {
 						"op": "¬",
 						"exp": "goal"

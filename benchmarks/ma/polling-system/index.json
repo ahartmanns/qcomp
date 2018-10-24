@@ -3,8 +3,8 @@
 	"short": "polling-system",
 	"type": "ma",
 	"original": "Modest",
-	"version": 2,
-	"date": "2018-08-22",
+	"version": 3,
+	"date": "2018-10-24",
 	"version-history": [
 		{
 			"version": 1,
@@ -15,6 +15,11 @@
 			"version": 2,
 			"date": "2018-08-22",
 			"notes": "Replaced query property `PminBothFull´ by probability-one assertion property `PminBothFullIsOne´."
+		},
+		{
+			"version": 3,
+			"date": "2018-10-24",
+			"notes": "Added property `PmaxBothFullBound´ and `SmaxBothFull´."
 		}
 	],
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -49,7 +54,7 @@
 			"original-file": "polling-system.modest",
 			"conversion": {
 				"tool": "moconv",
-				"version": "3.0.80",
+				"version": "3.0.90",
 				"url": "http://www.modestchecker.net/",
 				"command": "moconv.exe polling-system.modest -O polling-system.jani"
 			},
@@ -116,12 +121,12 @@
 			"description": "The maximum expected time until both queues are full."
 		},
 		{
-			"name": "PminBothFullBound",
+			"name": "PmaxBothFullBound",
 			"type": "prob-reach-time-bounded",
-			"description": "The minimum probability that both queues are full within the TIME-BOUND."
+			"description": "The maximum probability that both queues are full within the TIME-BOUND."
 		},
 		{
-			"name": "SminBothFull",
+			"name": "SmaxBothFull",
 			"description": "Long-run probability that both queues are full.",
 			"type": "steady-state-prob"
 		}
@@ -129,7 +134,7 @@
 	"results": [
 		{
 			"reference": true,
-			"file": "results/mcsta.3-3-5.json"
+			"file": "results/mcsta.3-3-5.2018-10-24.json"
 		},
 		{
 			"reference": true,

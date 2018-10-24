@@ -33,5 +33,5 @@ ErlangStages(0)
 
 property PminReach = Pmin(<> goal);
 property TminReach = Xmin(T, goal);
-property PminReachBound = Pmin(<>[T<=TIME_BOUND] goal);
-property SminNotReach = Smin(!goal);
+property PmaxReachBound = Pmax(<>[T<=TIME_BOUND] goal);
+property SmaxNotReach = Smax(!goal);

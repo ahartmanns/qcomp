@@ -3,13 +3,18 @@
 	"short": "erlang",
 	"type": "ma",
 	"original": "Modest",
-	"version": 1,
-	"date": "2018-08-13",
+	"version": 2,
+	"date": "2018-10-24",
 	"version-history": [
 		{
 			"version": 1,
 			"date": "2018-08-13",
 			"notes": "Initial version."
+		},
+		{
+			"version": 2,
+			"date": "2018-10-24",
+			"notes": "Added property `PmaxReachBound´ and `SmaxNotReach´."
 		}
 	],
 	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
@@ -43,7 +48,7 @@
 			"original-file": "erlang.modest",
 			"conversion": {
 				"tool": "moconv",
-				"version": "3.0.78",
+				"version": "3.0.90",
 				"url": "http://www.modestchecker.net/",
 				"command": "moconv.exe erlang.modest -O erlang.jani"
 			},
@@ -172,12 +177,12 @@
 			"description": "The minimum expected time to reach the goal state."
 		},
 		{
-			"name": "PminReachBound",
+			"name": "PmaxReachBound",
 			"type": "prob-reach-time-bounded",
 			"description": "The minimum probability to reach the goal state within the TIME-BOUND."
 		},
 		{
-			"name": "SminNotReach",
+			"name": "SmaxNotReach",
 			"description": "Long-run probability that goal is not reached.",
 			"type": "steady-state-prob"
 		}
@@ -185,19 +190,19 @@
 	"results": [
 		{
 			"reference": true,
-			"file": "results/mcsta.10-10-5.json"
+			"file": "results/mcsta.10-10-5.2018-10-14.json"
 		},
 		{
 			"reference": true,
-			"file": "results/mcsta.5000-10-5.json"
+			"file": "results/mcsta.5000-10-5.2018-10-14.json"
 		},
 		{
 			"reference": true,
-			"file": "results/mcsta.5000-100-5.json"
+			"file": "results/mcsta.5000-100-5.2018-10-14.json"
 		},
 		{
 			"reference": true,
-			"file": "results/mcsta.5000-100-50.json"
+			"file": "results/mcsta.5000-100-50.2018-10-14.json"
 		},
 		{
 			"reference": true,

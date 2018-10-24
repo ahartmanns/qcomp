@@ -3,8 +3,8 @@
 	"short": "reentrant-queues",
 	"type": "ma",
 	"original": "Modest",
-	"version": 2,
-	"date": "2018-08-22",
+	"version": 3,
+	"date": "2018-10-24",
 	"version-history": [
 		{
 			"version": 1,
@@ -15,6 +15,11 @@
 			"version": 2,
 			"date": "2018-08-22",
 			"notes": "Replaced query property `PminBothQueuesFull´ by probability-one assertion property `PminBothQueuesFullIsOne´."
+		},
+		{
+			"version": 3,
+			"date": "2018-10-24",
+			"notes": "Added property `PmaxBothQueuesFullBound ´ and `SmaxBothQueuesFull´."
 		}
 	],
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -55,7 +60,7 @@
 			"original-file": "reentrant-queues.modest",
 			"conversion": {
 				"tool": "moconv",
-				"version": "3.0.78",
+				"version": "3.0.90",
 				"url": "http://www.modestchecker.net/",
 				"command": "moconv.exe reentrant-queues.modest -O reentrant-queues.jani"
 			},
@@ -117,12 +122,12 @@
 			"description": "The maximum expected time until both queues are full."
 		},
 		{
-			"name": "PminBothQueuesFullBound",
+			"name": "PmaxBothQueuesFullBound",
 			"type": "prob-reach-time-bounded",
-			"description": "The minimum probability that both queues are full within the TIME-BOUND."
+			"description": "The maximum probability that both queues are full within the TIME-BOUND."
 		},
 		{
-			"name": "SminBothQueuesFull",
+			"name": "SmaxBothQueuesFull",
 			"description": "Long-run probability that both queues are full.",
 			"type": "steady-state-prob"
 		}

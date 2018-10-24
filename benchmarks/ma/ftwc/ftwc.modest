@@ -15,8 +15,8 @@ binary action startRepairSwitch, finishRepairSwitch, startRepairLeftSwitch, fini
 property ReachMinIsOne = Pmin(<> ((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]))) == 1;
 property TimeMax = Xmax(T, (workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]));
 property TimeMin = Xmin(T, (workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]));
-property PminReachBound = Pmin(<>[T<=TIME_BOUND] ((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT])));
-property SminReach = Smin((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]));
+property PmaxReachBound = Pmax(<>[T<=TIME_BOUND] ((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT])));
+property SmaxReach = Smax((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]));
 
 process Backbone()
 {

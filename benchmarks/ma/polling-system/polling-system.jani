@@ -224,12 +224,12 @@
 			}
 		},
 		{
-			"name": "PminBothFullBound",
+			"name": "PmaxBothFullBound",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
-					"op": "Pmin",
+					"op": "Pmax",
 					"exp": {
 						"op": "F",
 						"exp": {
@@ -264,12 +264,12 @@
 			}
 		},
 		{
-			"name": "SminBothFull",
+			"name": "SmaxBothFull",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
-					"op": "Smin",
+					"op": "Smax",
 					"exp": {
 						"op": "∧",
 						"left": {
