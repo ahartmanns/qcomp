@@ -80,6 +80,17 @@
 	for an overview and explanation of all available options.
 </p>
 
+<h3 id="PPDDLtojani">PPDDL to JANI</h3>
+<p>
+	Conversion of input models given in the <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.539.6990&rep=rep1&type=pdf">Probabilistic Planning Domain Definition Language (PPDDL)</a> is supported by <tt>ppddl2jani</tt>, a script written by <a href="https://fai.cs.uni-saarland.de/steinmetz/">Marcel Steinmetz</a>, which uses parts of the <a href="http://www.fast-downward.org/HomePage">Fast Downward</a> PPDDL parser.
+</p>
+<p>
+	For example, the PPDDL files of the elevator problem <a href="mdp/elevators/p01.pddl">p01.pddl</a> and <a href="mdp/elevators/domain.pddl">domain.pddl</a> can be converted into a JANI file using <tt>ppddl2jani</tt> with the following command: 
+</p>
+<p class="tt">
+	ppddl2jani.py domain.pddl p01.pddl --jani elevators.jani
+</p>
+
 <h3 id="prismtojani">PRISM to JANI</h3>
 <p>
 	Conversion of input models given in the <a href="http://www.prismmodelchecker.org/manual/ThePRISMLanguage/">PRISM launguage</a> is supported by <tt>Storm-conv</tt>, which is part of <a href="http://www.stormchecker.org">Storm</a>.
@@ -105,15 +116,6 @@
 		<tt>--globalvars</tt> makes all module variables global, e.g. to guarantee the same variable order as in the input file.
 	</li>
 </ul>
-
-<h3 id="PPDDLtojani">PPDDL to JANI</h3>
-<p>
-Conversion of input models given in the <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.539.6990&rep=rep1&type=pdf">Probabilistic Planning Domain Definition Language (PPDDL)</a> is supported by <tt>ppddl2jani</tt>, a script written by <a href="https://fai.cs.uni-saarland.de/steinmetz/">Marcel Steinmetz</a>, which uses parts of the <a href="http://www.fast-downward.org/HomePage">Fast Downward</a> PPDDL parser.
-For example, the PPDDL files of the elevator problem <a href="mdp/elevators/p01.pddl">p01.pddl</a> and <a href="mdp/elevators/domain.pddl">domain.pddl</a> can be converted into a JANI file using <tt>ppddl2jani</tt> with the following command: 
-</p>
-<p class="tt">
-ppddl2jani.py domain.pddl p01.pddl --jani elevators.jani
-</p>
 
 <h2 id="janitojani">JANI-to-JANI Conversions</h2>
 <p>
