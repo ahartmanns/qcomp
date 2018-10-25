@@ -54,6 +54,24 @@
 			"group": "State space exploration"
 		},
 		{
+			"values": [
+				{
+					"unit": "s",
+					"name": "time",
+					"value": 0.452
+				},
+				{
+					"name": "states",
+					"value": 372
+				},
+				{
+					"name": "branches",
+					"value": 372
+				}
+			],
+			"group": "Strong bisimulation"
+		},
+		{
 			"property": "time",
 			"values": [
 				{
