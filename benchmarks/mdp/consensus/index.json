@@ -469,7 +469,7 @@
 					],
 					"states": [
 						{
-							"note": "Storm",
+							"note": "Storm/dd",
 							"number": 61018112
 						}
 					]
@@ -501,6 +501,12 @@
 							"name": "K",
 							"value": 2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 2761248768
+						}
 					]
 				}
 			]
@@ -514,7 +520,9 @@
 		"results/Storm.4-2.2018-10-12.json",
 		"results/Storm.4-4.2018-10-12.json",
 		"results/Storm.6-2.2018-10-12.json",
-		"results/Storm.8-2.2018-10-12.json",
+		"results/Storm.dd-bisim.6-2.2018-10-22.json",
+		"results/Storm.dd-bisim.8-2.2018-10-22.json",
+		"results/Storm.dd-bisim.10-2.2018-10-22.json",
 		{
 			"reference": true,
 			"file": "results/Storm.exact.2-2.2018-10-17.json"
