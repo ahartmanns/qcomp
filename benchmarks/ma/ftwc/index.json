@@ -173,11 +173,11 @@
 	],
 	"results": [
 		{
-			"reference": true,
+			"reference": false,
 			"file": "results/mcsta.4-5.2018-10-24.json"
 		},
 		{
-			"reference": true,
+			"reference": false,
 			"file": "results/mcsta.8-5.2018-10-24.json"
 		},
 		{
