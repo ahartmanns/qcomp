@@ -19,7 +19,7 @@
 		{
 			"version": 3,
 			"date": "2018-10-24",
-			"notes": "Added property `PmaxBothFullBound´ and `SmaxBothFull´."
+			"notes": "Added properties `PmaxBothFullBound´ and `SmaxBothFull´."
 		}
 	],
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -133,7 +133,7 @@
 	],
 	"results": [
 		{
-			"reference": true,
+			"reference": false,
 			"file": "results/mcsta.3-3-5.2018-10-24.json"
 		},
 		{

@@ -19,7 +19,7 @@
 		{
 			"version": 3,
 			"date": "2018-10-24",
-			"notes": "Added property `PmaxBothQueuesFullBound ´ and `SmaxBothQueuesFull´."
+			"notes": "Added properties `PmaxBothQueuesFullBound ´ and `SmaxBothQueuesFull´."
 		}
 	],
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",

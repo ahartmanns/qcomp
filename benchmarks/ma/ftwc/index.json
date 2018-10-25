@@ -19,7 +19,7 @@
 		{
 			"version": 3,
 			"date": "2018-10-24",
-			"notes": "Added property `PmaxReachBound´ and `SmaxReach´."
+			"notes": "Added properties `PmaxReachBound´ and `SmaxReach´."
 		}
 	],
 	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
@@ -173,11 +173,11 @@
 	],
 	"results": [
 		{
-			"reference": true,
+			"reference": false,
 			"file": "results/mcsta.4-5.2018-10-24.json"
 		},
 		{
-			"reference": true,
+			"reference": false,
 			"file": "results/mcsta.8-5.2018-10-24.json"
 		},
 		{
