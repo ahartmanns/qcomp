@@ -125,6 +125,36 @@
 							"note": "Storm",
 							"number": 212268
 						}
+					],
+					"results": [
+						{
+							"property": "elected",
+							"value": true,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time_max",
+							"value": 365,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time_min",
+							"value": {
+								"approx": 138.25,
+								"num": 553,
+								"den": 4
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "time_sending",
+							"value": {
+								"approx": 202.25,
+								"num": 809,
+								"den": 4
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -136,6 +166,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.3.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.36.2018-10-22.json"
 		}
 	]
 }
