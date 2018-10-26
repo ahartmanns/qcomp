@@ -4,6 +4,7 @@
   { "path": "ctmc/fms" },
   { "path": "ctmc/kanban" },
   { "path": "ctmc/mapk_cascade" },
+  { "path": "ctmc/philosophers" },
   { "path": "ctmc/polling" },
   { "path": "ctmc/tandem" },
   { "path": "dtmc/bluetooth" },
