@@ -124,7 +124,7 @@
 				Created and submitted by <a data-bind="text: author[0].name, attr: { href: 'mailto:' + author[0].email }"></a>.<br />
 			<!-- /ko -->
 			<!-- ko if: author.length !== 1 || author[0].name !== submitter.name || author[0].email !== submitter.email -->
-				Created by <span data-bind="foreach: author"><a data-bind="text: name, attr: { href: 'mailto:' + email }"></a><span data-bind="visible: $parent.author.length > 2 && $index() !== $parent.author.length - 1">, </span><span data-bind="visible: $parent.author.length >= 2 && $index() === $parent.author.length - 2"> and </span></span>
+				Created by <span data-bind="foreach: author"><!-- ko if: email === '' --><span data-bind="text: name"></span><!-- /ko --><!-- ko if: email !== '' --><a data-bind="text: name, attr: { href: 'mailto:' + email }"></a><!-- /ko --><span data-bind="visible: $parent.author.length > 2 && $index() !== $parent.author.length - 1">, </span><span data-bind="visible: $parent.author.length >= 2 && $index() === $parent.author.length - 2"> and </span></span>
 				and submitted by <a data-bind="text: submitter.name, attr: { href: 'mailto:' + submitter.email }"></a>.<br />
 			<!-- /ko -->
 			First presented in<span data-bind="visible: description.includes('[0]')">: [0]</span> <a data-bind="text: getLinkTitle(source), attr: { href: source }"></a>.

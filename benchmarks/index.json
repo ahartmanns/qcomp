@@ -32,6 +32,7 @@
   { "path": "mdp/cdrive" },
   { "path": "mdp/consensus" },
   { "path": "mdp/csma" },
+  { "path": "mdp/eajs" },
   { "path": "mdp/elevators" },
   { "path": "mdp/exploding-blocksworld" },
   { "path": "mdp/firewire" },
