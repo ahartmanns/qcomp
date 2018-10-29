@@ -21,6 +21,7 @@
   { "path": "ma/cabinets" },
   { "path": "ma/dpm" },
   { "path": "ma/erlang" },
+  { "path": "ma/flexible-manufacturing" },
   { "path": "ma/ftpp" },
   { "path": "ma/ftwc" },
   { "path": "ma/hecs" },
