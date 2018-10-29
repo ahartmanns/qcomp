@@ -22,6 +22,7 @@
   { "path": "ma/erlang" },
   { "path": "ma/ftpp" },
   { "path": "ma/ftwc" },
+  { "path": "ma/hecs" },
   { "path": "ma/jobs" },
   { "path": "ma/mcs" },
   { "path": "ma/polling-system" },
