@@ -3,15 +3,20 @@
 	"short": "ftpp",
 	"type": "ma",
 	"original": "Galileo",
-	"version": 1,
-	"date": "2018-10-12",
+	"version": 2,
+	"date": "2018-10-28",
 	"version-history": [
-		{ "version": 1, "date": "2018-10-12", "notes": "Initial version." }
+		{ "version": 1, "date": "2018-10-12", "notes": "Initial version." },
+		{ "version": 2, "date": "2018-10-28", "notes": "Add steady-state property and unrepairable versions." }
 	],
 	"author": "Enno Ruijters <e.j.j.ruijters@utwente.nl>",
 	"submitter": "Enno Ruijters <e.j.j.ruijters@utwente.nl>",
 	"source": "https://doi.org/10.1007/978-3-319-66266-4_2",
-	"description": "The fault-tolerant parallel processor (FTPP) consists of four groups of processors, interconnected by one network per group. The model also has `N´ workstations, each with one processor of each group. If more than one processor in a group has failed (or is connected to a failed network element), the workstation fails, which is considered a system failure. Failure times of the processors and network element follow a k-phase Erlang distribution. The model was one of the original examples for the development of dynamic fault trees [1], and later extended to include repairs in [0]. The original model was translated by the DFTRES tool [2] using the DFTCalc tool [3]. Note that the construction by DFTCalc introduces spurious nondeterminism, while the quotient of this model under weak bisimulation is a CTMC (i.e., has no nondeterminism).",
+	"part-of": {
+                "name": "the Twente Arberretum",
+                "url": "https://dftbenchmarks.utwente.nl/"
+        },
+	"description": "The fault-tolerant parallel processor (FTPP) consists of four groups of processors, interconnected by one network per group. The model also has `N´ workstations, each with one processor of each group. If more than one processor in a group has failed (or is connected to a failed network element), the workstation fails, which is considered a system failure. Failure times of the processors and network element follow a `k´-phase Erlang distribution. The model was one of the original examples for the development of dynamic fault trees [1], and later extended to include repairs in [0]. The original model was translated by the DFTRES tool [2] using the DFTCalc tool [3]. Note that the construction by DFTCalc introduces spurious nondeterminism, while the quotient of this model under weak bisimulation is a CTMC (i.e., has no nondeterminism).",
 	"challenge": "rare event, small weak bisimulation quotient",
 	"references": [
 		"https://doi.org/10.1109/ARMS.1990.67971",
@@ -20,145 +25,277 @@
 	],
 	"parameters": [
 		{ "name": "N", "kind": "file", "description": "Number of workstations", "type": "positive integer" },
-		{ "name": "k", "kind": "file", "description": "Number phases in the Erlang distribution of failure times", "type": "positive integer" }
-	],
-	"files": [
-		{
-			"file": "ftpp-1-1.jani",
-			"original-file": "ftpp-1-1.dft",
-			"conversion": {
-				"tool": "DFTRES",
-				"version": "b0d3eb12",
-				"url": "https://github.com/utwente-fmt/DFTRES",
-				"command": "convert.sh ftpp-1-1.dft && java -jar CONVERT.jar --jani ftpp-1-1.exp > ftpp-1-1.jani"
-			},
-			"open-parameter-values": [],
-			"file-parameter-values": [
-				{ "name": "N", "value": 1 },
-				{ "name": "k", "value": 1 }
-			]
-		},
-		{
-			"file": "ftpp-2-1.jani",
-			"original-file": "ftpp-2-1.dft",
-			"conversion": {
-				"tool": "DFTRES",
-				"version": "b0d3eb12",
-				"url": "https://github.com/utwente-fmt/DFTRES",
-				"command": "convert.sh ftpp-2-1.dft && java -jar CONVERT.jar --jani ftpp-2-1.exp > ftpp-2-1.jani"
-			},
-			"open-parameter-values": [],
-			"file-parameter-values": [
-				{ "name": "N", "value": 2 },
-				{ "name": "k", "value": 1 }
-			]
-		},
-		{
-			"file": "ftpp-3-1.jani",
-			"original-file": "ftpp-3-1.dft",
-			"conversion": {
-				"tool": "DFTRES",
-				"version": "b0d3eb12",
-				"url": "https://github.com/utwente-fmt/DFTRES",
-				"command": "convert.sh ftpp-3-1.dft && java -jar CONVERT.jar --jani ftpp-3-1.exp > ftpp-3-1.jani"
-			},
-			"open-parameter-values": [],
-			"file-parameter-values": [
-				{ "name": "N", "value": 3 },
-				{ "name": "k", "value": 1 }
-			]
-		},
-		{
-			"file": "ftpp-4-1.jani",
-			"original-file": "ftpp-4-1.dft",
-			"conversion": {
-				"tool": "DFTRES",
-				"version": "b0d3eb12",
-				"url": "https://github.com/utwente-fmt/DFTRES",
-				"command": "convert.sh ftpp-4-1.dft && java -jar CONVERT.jar --jani ftpp-4-1.exp > ftpp-4-1.jani"
-			},
-			"open-parameter-values": [],
-			"file-parameter-values": [
-				{ "name": "N", "value": 4 },
-				{ "name": "k", "value": 1 }
-			]
-		},
-		{
-			"file": "ftpp-1-2.jani",
-			"original-file": "ftpp-1-2.dft",
-			"conversion": {
-				"tool": "DFTRES",
-				"version": "b0d3eb12",
-				"url": "https://github.com/utwente-fmt/DFTRES",
-				"command": "convert.sh ftpp-1-2.dft && java -jar CONVERT.jar --jani ftpp-1-2.exp > ftpp-1-2.jani"
-			},
-			"open-parameter-values": [],
-			"file-parameter-values": [
-				{ "name": "N", "value": 1 },
-				{ "name": "k", "value": 2 }
-			]
-		},
-		{
-			"file": "ftpp-2-2.jani",
-			"original-file": "ftpp-2-2.dft",
-			"conversion": {
-				"tool": "DFTRES",
-				"version": "b0d3eb12",
-				"url": "https://github.com/utwente-fmt/DFTRES",
-				"command": "convert.sh ftpp-2-2.dft && java -jar CONVERT.jar --jani ftpp-2-2.exp > ftpp-2-2.jani"
-			},
-			"open-parameter-values": [],
-			"file-parameter-values": [
-				{ "name": "N", "value": 2 },
-				{ "name": "k", "value": 2 }
-			]
-		},
-		{
-			"file": "ftpp-3-2.jani",
-			"original-file": "ftpp-3-2.dft",
-			"conversion": {
-				"tool": "DFTRES",
-				"version": "b0d3eb12",
-				"url": "https://github.com/utwente-fmt/DFTRES",
-				"command": "convert.sh ftpp-3-2.dft && java -jar CONVERT.jar --jani ftpp-3-2.exp > ftpp-3-2.jani"
-			},
-			"open-parameter-values": [],
-			"file-parameter-values": [
-				{ "name": "N", "value": 3 },
-				{ "name": "k", "value": 2 }
-			]
-		},
-		{
-			"file": "ftpp-4-2.jani",
-			"original-file": "ftpp-4-2.dft",
-			"conversion": {
-				"tool": "DFTRES",
-				"version": "b0d3eb12",
-				"url": "https://github.com/utwente-fmt/DFTRES",
-				"command": "convert.sh ftpp-4-2.dft && java -jar CONVERT.jar --jani ftpp-4-2.exp > ftpp-4-2.jani"
-			},
-			"open-parameter-values": [],
-			"file-parameter-values": [
-				{ "name": "N", "value": 4 },
-				{ "name": "k", "value": 2 }
-			]
-		}
+		{ "name": "k", "kind": "file", "description": "Number phases in the Erlang distribution of failure times", "type": "positive integer" },
+		{ "name": "R", "kind": "file", "description": "Whether the model has repairs or not", "type": "boolean" }
 	],
 	"properties": [
 		{
-			"name": "boundedreach",
-			"type": "prob-reach",
+			"name": "Unreliability",
+			"type": "prob-reach-time-bounded",
 			"description": "Probability that a system failure occurs before time 1."
+		},
+		{
+			"name": "Unavailability",
+			"type": "steady-state-prob",
+			"description": "Steady state probability of being in a failed state (only useful for repairable instances)."
 		}
 	],
-	"results": [
-		"results/dftres.1-1.json",
-		"results/dftres.2-1.json",
-		"results/dftres.3-1.json",
-		"results/dftres.4-1.json",
-		"results/dftres.1-2.json",
-		"results/dftres.2-2.json",
-		"results/dftres.3-2.json",
-		"results/dftres.4-2.json"
+	"files": [
+		{
+			"file": "ftpp.1-1-false.jani",
+			"original-file": "ftpp.1-1-false.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.1-1-false.jani -a -r 1 ftpp.1-1-false.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 1 },
+				{ "name": "k", "value": 1 },
+				{ "name": "R", "value": false }
+			]
+		},
+		{
+			"file": "ftpp.1-1-true.jani",
+			"original-file": "ftpp.1-1-true.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.1-1-true.jani -a -r 1 ftpp.1-1-true.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 1 },
+				{ "name": "k", "value": 1 },
+				{ "name": "R", "value": true }
+			]
+		},
+		{
+			"file": "ftpp.1-2-false.jani",
+			"original-file": "ftpp.1-2-false.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.1-2-false.jani -a -r 1 ftpp.1-2-false.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 1 },
+				{ "name": "k", "value": 2 },
+				{ "name": "R", "value": false }
+			]
+		},
+		{
+			"file": "ftpp.1-2-true.jani",
+			"original-file": "ftpp.1-2-true.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.1-2-true.jani -a -r 1 ftpp.1-2-true.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 1 },
+				{ "name": "k", "value": 2 },
+				{ "name": "R", "value": true }
+			]
+		},
+		{
+			"file": "ftpp.2-1-false.jani",
+			"original-file": "ftpp.2-1-false.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.2-1-false.jani -a -r 1 ftpp.2-1-false.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 2 },
+				{ "name": "k", "value": 1 },
+				{ "name": "R", "value": false }
+			]
+		},
+		{
+			"file": "ftpp.2-1-true.jani",
+			"original-file": "ftpp.2-1-true.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.2-1-true.jani -a -r 1 ftpp.2-1-true.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 2 },
+				{ "name": "k", "value": 1 },
+				{ "name": "R", "value": true }
+			]
+		},
+		{
+			"file": "ftpp.2-2-false.jani",
+			"original-file": "ftpp.2-2-false.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.2-2-false.jani -a -r 1 ftpp.2-2-false.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 2 },
+				{ "name": "k", "value": 2 },
+				{ "name": "R", "value": false }
+			]
+		},
+		{
+			"file": "ftpp.2-2-true.jani",
+			"original-file": "ftpp.2-2-true.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.2-2-true.jani -a -r 1 ftpp.2-2-true.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 2 },
+				{ "name": "k", "value": 2 },
+				{ "name": "R", "value": true }
+			]
+		},
+		{
+			"file": "ftpp.3-1-false.jani",
+			"original-file": "ftpp.3-1-false.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.3-1-false.jani -a -r 1 ftpp.3-1-false.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 3 },
+				{ "name": "k", "value": 1 },
+				{ "name": "R", "value": false }
+			]
+		},
+		{
+			"file": "ftpp.3-1-true.jani",
+			"original-file": "ftpp.3-1-true.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.3-1-true.jani -a -r 1 ftpp.3-1-true.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 3 },
+				{ "name": "k", "value": 1 },
+				{ "name": "R", "value": true }
+			]
+		},
+		{
+			"file": "ftpp.3-2-false.jani",
+			"original-file": "ftpp.3-2-false.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.3-2-false.jani -a -r 1 ftpp.3-2-false.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 3 },
+				{ "name": "k", "value": 2 },
+				{ "name": "R", "value": false }
+			]
+		},
+		{
+			"file": "ftpp.3-2-true.jani",
+			"original-file": "ftpp.3-2-true.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.3-2-true.jani -a -r 1 ftpp.3-2-true.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 3 },
+				{ "name": "k", "value": 2 },
+				{ "name": "R", "value": true }
+			]
+		},
+		{
+			"file": "ftpp.4-1-false.jani",
+			"original-file": "ftpp.4-1-false.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.4-1-false.jani -a -r 1 ftpp.4-1-false.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 4 },
+				{ "name": "k", "value": 1 },
+				{ "name": "R", "value": false }
+			]
+		},
+		{
+			"file": "ftpp.4-1-true.jani",
+			"original-file": "ftpp.4-1-true.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.4-1-true.jani -a -r 1 ftpp.4-1-true.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 4 },
+				{ "name": "k", "value": 1 },
+				{ "name": "R", "value": true }
+			]
+		},
+		{
+			"file": "ftpp.4-2-false.jani",
+			"original-file": "ftpp.4-2-false.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.4-2-false.jani -a -r 1 ftpp.4-2-false.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 4 },
+				{ "name": "k", "value": 2 },
+				{ "name": "R", "value": false }
+			]
+		},
+		{
+			"file": "ftpp.4-2-true.jani",
+			"original-file": "ftpp.4-2-true.dft",
+			"conversion": {
+				"tool": "DFTRES",
+				"version": "7ba4d5bd",
+				"url": "https://github.com/utwente-fmt/DFTRES",
+				"command": "java -jar DFTRES.jar --json --export-jani ftpp.4-2-true.jani -a -r 1 ftpp.4-2-true.dft"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{ "name": "N", "value": 4 },
+				{ "name": "k", "value": 2 },
+				{ "name": "R", "value": true }
+			]
+		}
 	]
 }
