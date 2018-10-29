@@ -2,7 +2,7 @@
 	"name": "Hill Toggle",
 	"short": "hill_toggle",
 	"type": "ctmc",
-	"original": "PRISM",
+	"original": "PRISM-∞",
 	"version": 1,
 	"date": "2018-10-28",
 	"version-history": [
@@ -84,11 +84,6 @@
 			"name": "RareEvent",
 			"description": "probability of protein 1 and 2 concentration being greater 5 after <= 10 steps",
 			"type": "prob-reach-step-bounded"
-		},
-		{
-			"name": "MultiSwitch",
-			"description": "probability of switching three times between protein 1 and 2 in <= 100 steps",
-			"type": "prob-reach-step-bounded"
 		}
 	],
 	"files": [
@@ -102,7 +97,8 @@
 				"tool": "Storm-conv",
 				"version": "1.2.4 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism hill_toggle.prism --tojani hill_toggle.jani --prop hill_toggle.props --globalvars --prismcompat"
+				"command": "storm-conv --prism hill_toggle.prism --tojani hill_toggle.jani --prop hill_toggle.props --globalvars --prismcompat",
+				"note": "since PRISM files with unbounded integers can currently not be parsed, bounds have been introduced manually and removed afterwards"
 			},
 			"file-parameter-values": [
 				{
