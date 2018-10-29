@@ -1,0 +1,89 @@
+{
+	"name": "Energy-aware job scheduling",
+	"short": "eajs",
+	"type": "MDP",
+	"original": "PRISM",
+	"version": 1,
+	"author": [
+				"TODO <TODO@TO.DO>"
+			  ],
+	"submitter": "TODO <TODO@TO.DO>",
+	"source": "https://doi.org/10.1007/978-3-319-06200-6_24",
+	"description": "A system of `N´ processes which need to enter a critical section in order to perform tasks, each within a given deadline. Access to the critical section is exclusively granted by a scheduler, which selects processes only if they have requested to enter. When a process states such a request, a deadline counter is set and decreased over time even if the process did not enter the critical section yet. Since computing a task also requires a certain amount of time in the critical section, deadlines can be exceeded. Utility is hence provided in terms of tasks finished without exceeding their deadline. Each process consumes energy, especially if it is in the critical section, and the global energy consumption equals the sum of energy consumed by all processes. Additional dependencies between utility and energy arise as the scheduler can activate a turbo mode for the critical section, doubling the computation speed but tripling energy consumption.",
+	"notes": "PRISM Benchmark",
+	"references": [
+		"https://doi.org/10.1007/s10009-017-0456-3"
+	],
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "The number of processes",
+			"type": "positive integer"
+		},
+		{
+			"name": "energy_capacity",
+			"kind": "open",
+			"description": "The amount of available energy.",
+			"type": "positive integer"
+		},
+		{
+			"name": "U",
+			"kind": "open",
+			"description": "The utility value that is to be achieved.",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "ExpUtil",
+			"description": "The maximal expected utility obtained until the battery becomes empty.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "ExpUtil",
+			"description": "The maximal probability that a utility value of at least `U´ is achieved until the battery becomes empty.",
+			"type": "prob-reach-reward-bounded"
+		}
+	],
+	"propertyfilename": "eajs.props",
+	"originalfilenames": [
+		"eajs.2.prism",
+		"eajs.3.prism",
+		"eajs.4.prism",
+		"eajs.5.prism",
+		"eajs.6.prism"
+	],
+	"instantiations": [
+		{
+			"N": 2,
+			"energy_capacity": 100,
+			"U": 5
+		},
+		{
+			"N": 3,
+			"energy_capacity": 150,
+			"U": 7
+		},
+		{
+			"N": 4,
+			"energy_capacity": 200,
+			"U": 9
+		},
+		{
+			"N": 5,
+			"energy_capacity": 250,
+			"U": 11
+		},
+		{
+			"N": 6,
+			"energy_capacity": 300,
+			"U": 13
+		}
+	],
+	"converterarguments": [
+		"--globalvars"
+	],
+	"checkerarguments": [],
+	"conversion-parameters": []
+}

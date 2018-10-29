@@ -1,0 +1,4 @@
+const int U;
+
+"ExpUtil": R{"utilityLocal"}max=? [ F emptyBattery ];
+"ProbUtil": Pmax=? [ F{rew{"utilityLocal"}>=U} emptyBattery ];
