@@ -267,9 +267,16 @@ function getStateCount(files, op, states)
 }
 function separatePersonRef(pref)
 {
-	var name = pref.substr(0, pref.indexOf(" <"));
-	var email = pref.substr(pref.indexOf("<") + 1, pref.length - pref.indexOf("<") - 2);
-	return { "name": name, "email": email };
+	if (pref.indexOf(" <") > -1)
+	{
+		var name = pref.substr(0, pref.indexOf(" <"));
+		var email = pref.substr(pref.indexOf("<") + 1, pref.length - pref.indexOf("<") - 2);
+		return { "name": name, "email": email };		
+	}
+	else
+	{
+		return { "name": pref, "email": ""};
+	}
 }
 function getLinkTitle(url)
 {
