@@ -1,0 +1,177 @@
+{
+	"name": "p53 System",
+	"short": "p53",
+	"type": "ctmc",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-28",
+	"version-history": [
+		{
+			"date": "2018-10-28",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Naama Geva-Zatorsky <naama_gz@technion.ac.il>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1038/msb4100068",
+	"description": "The negative feedback loop between the tumor suppressor `p53´ and the oncogene `Mdm2´ results in an oscillatory behavior following exposure to gamma irradiation. The parameters `k´ are reaction rate constants and `pMdm2´ is the `Mdm2´ precursor.",
+	"references": [
+	],
+	"notes": "biological model",
+	"parameters": [
+		{
+			"name": "k1",
+			"kind": "file",
+			"description": "reaction rate constant",
+			"type": "double"
+		},
+		{
+			"name": "k2",
+			"kind": "file",
+			"description": "reaction rate constant",
+			"type": "double"
+		},
+		{
+			"name": "k3",
+			"kind": "file",
+			"description": "reaction rate constant",
+			"type": "double"
+		},
+		{
+			"name": "k4",
+			"kind": "file",
+			"description": "reaction rate constant",
+			"type": "double"
+		},
+		{
+			"name": "k5",
+			"kind": "file",
+			"description": "reaction rate constant",
+			"type": "double"
+		},
+		{
+			"name": "k6",
+			"kind": "file",
+			"description": "reaction rate constant",
+			"type": "double"
+		},
+		{
+			"name": "k7",
+			"kind": "file",
+			"description": "reaction rate constant",
+			"type": "double"
+		},
+		{
+			"name": "p53",
+			"kind": "file",
+			"description": "number of p53 enzyms in a cell",
+			"type": "integer"
+		},
+		{
+			"name": "pMdm2",
+			"kind": "file",
+			"description": "Mdm2 precursor",
+			"type": "integer"
+		},
+		{
+			"name": "Mdm2",
+			"kind": "file",
+			"description": "number of Mdm2 enzyms in a cell",
+			"type": "integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "RareEvent1",
+			"description": "The probability to reach a concentration of p53 greater than 120 within <= 5 steps",
+			"type": "prob-reach-step-bounded"
+		},
+		{
+			"name": "RareEvent2",
+			"description": "The probability to reach a concentration of 0 for Mdm2 within <= 100 steps",
+			"type": "prob-reach-step-bounded"
+		},
+		{
+			"name": "RareEvent3",
+			"description": "The probability to reach a concentration of p53, pMdm2 and Mdm2 >150 within <= 100 steps",
+			"type": "prob-reach-step-bounded"
+		},
+		{
+			"name": "Steady1",
+			"description": "Long-run probability to reach a concentration of 0 for p53",
+			"type": "steady-state-prob"
+		}
+	],
+	"files": [
+		{
+			"file": "p53.jani",
+			"original-file": [
+				"p53.prism",
+				"p53.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism p53.prism --tojani p53.jani --prop p53.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "k1",
+							"value": 90
+						},
+						{
+							"name": "k2",
+							"value": 0.002
+						},
+						{
+							"name": "k3",
+							"value": 1.7
+						},
+						{
+							"name": "k4",
+							"value": 1.1
+						},
+						{
+							"name": "k5",
+							"value": 0.93
+						},
+						{
+							"name": "k6",
+							"value": 0.96
+						},
+						{
+							"name": "k7",
+							"value": 0.01
+						},
+						{
+							"name": "p53",
+							"value": 70
+						},
+						{
+							"name": "pMdm2",
+							"value": 30
+						},
+						{
+							"name": "Mdm2",
+							"value": 60
+						}
+					],
+					"states": [
+					],
+					"results": [
+					]
+				}
+			],
+			"open-parameter-values": [
+			]
+		}
+	],
+	"results": [
+	]
+}

@@ -1,0 +1,6 @@
+"Switching": P>5e-8 [ F<=10 p2 > 10 ];
+
+"RareEvent": P>1e-33 [ F<=10 p2 > 5 & p1 > 5 ];
+
+"MultiSwitch": P=? [ F<=100 ((p2 > p1 U p2 <= p1) U p2 > p1) ];
+

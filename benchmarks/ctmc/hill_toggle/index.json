@@ -1,0 +1,151 @@
+{
+	"name": "Hill Toggle",
+	"short": "hill_toggle",
+	"type": "ctmc",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-10-28",
+	"version-history": [
+		{
+			"date": "2018-10-28",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Timothy S. Gardner <timothyg@bu.edu>",
+		"Charles R. Cantor <crcantor@bu.edu>",
+		"James J. Collins <jimjc@mit.edu>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1038/35002131",
+	"description": "The toggle switch is a gene regulatory network, that models the interaction of two proteins. Protein 1 (`p1´) represses the expression of protein 2 (`p2´) and vice versa, leading to a bimodal steady-state distribution and a transient switching behavior.",
+	"references": [
+		"https://www.csb.pitt.edu/BBSI/2005/jc_talk/erramilli.pdf"
+	],
+	"notes": "biological model",
+	"parameters": [
+		{
+			"name": "a1",
+			"kind": "file",
+			"description": "rate of synthesis of repressor 1",
+			"type": "double"
+		},
+		{
+			"name": "a2",
+			"kind": "file",
+			"description": "rate of synthesis of repressor 2",
+			"type": "double"
+		},
+		{
+			"name": "b",
+			"kind": "file",
+			"description": "cooperativity of repressor 1",
+			"type": "double"
+		},
+		{
+			"name": "g",
+			"kind": "file",
+			"description": "cooperativity of repressor 2",
+			"type": "double"
+		},
+		{
+			"name": "d1",
+			"kind": "file",
+			"description": "outflow of proteins, degradation",
+			"type": "double"
+		},
+		{
+			"name": "d2",
+			"kind": "file",
+			"description": "outflow of proteins, degradation",
+			"type": "double"
+		},
+		{
+			"name": "p1",
+			"kind": "file",
+			"description": "protein 1",
+			"type": "int"
+		},
+		{
+			"name": "p2",
+			"kind": "file",
+			"description": "protein 2",
+			"type": "int"
+		}
+	],
+	"properties": [
+		{
+			"name": "Switching",
+			"description": "probability of protein 2 concentration being greater 10 after <= 10 steps",
+			"type": "prob-reach-step-bounded"
+		},
+		{
+			"name": "RareEvent",
+			"description": "probability of protein 1 and 2 concentration being greater 5 after <= 10 steps",
+			"type": "prob-reach-step-bounded"
+		},
+		{
+			"name": "MultiSwitch",
+			"description": "probability of switching three times between protein 1 and 2 in <= 100 steps",
+			"type": "prob-reach-step-bounded"
+		}
+	],
+	"files": [
+		{
+			"file": "hill_toggle.jani",
+			"original-file": [
+				"hill_toggle.prism",
+				"hill_toggle.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism hill_toggle.prism --tojani hill_toggle.jani --prop hill_toggle.props --globalvars --prismcompat"
+			},
+			"file-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "a1",
+							"value": 30
+						},
+						{
+							"name": "a2",
+							"value": 30
+						},
+						{
+							"name": "b",
+							"value": 10
+						},
+						{
+							"name": "g",
+							"value": 10
+						},
+						{
+							"name": "d1",
+							"value": 1
+						},
+						{
+							"name": "d2",
+							"value": 1
+						},
+						{
+							"name": "scaling",
+							"value": 10
+						}
+					],
+					"states": [
+					],
+					"results": [
+					]
+				}
+			],
+			"open-parameter-values": [
+			]
+		}
+	],
+	"results": [
+	]
+}
