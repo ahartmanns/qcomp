@@ -17,6 +17,7 @@
   { "path": "dtmc/oscillators" },
   { "path": "ma/bitcoin-attack" },
   { "path": "ma/breakdown-queues" },
+  { "path": "ma/cabinets" },
   { "path": "ma/dpm" },
   { "path": "ma/erlang" },
   { "path": "ma/ftpp" },
