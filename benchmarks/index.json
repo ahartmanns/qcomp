@@ -29,6 +29,7 @@
   { "path": "ma/readers-writers" },
   { "path": "ma/reentrant-queues" },
   { "path": "ma/sf" },
+  { "path": "ma/sms" },
   { "path": "ma/stream" },
   { "path": "mdp/beb" },
   { "path": "mdp/blocksworld" },
