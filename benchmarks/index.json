@@ -23,6 +23,7 @@
   { "path": "ma/ftpp" },
   { "path": "ma/ftwc" },
   { "path": "ma/jobs" },
+  { "path": "ma/mcs" },
   { "path": "ma/polling-system" },
   { "path": "ma/readers-writers" },
   { "path": "ma/reentrant-queues" },
