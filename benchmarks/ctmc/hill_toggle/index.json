@@ -24,56 +24,7 @@
 		"https://www.csb.pitt.edu/BBSI/2005/jc_talk/erramilli.pdf"
 	],
 	"notes": "biological model",
-	"parameters": [
-		{
-			"name": "a1",
-			"kind": "file",
-			"description": "rate of synthesis of repressor 1",
-			"type": "double"
-		},
-		{
-			"name": "a2",
-			"kind": "file",
-			"description": "rate of synthesis of repressor 2",
-			"type": "double"
-		},
-		{
-			"name": "b",
-			"kind": "file",
-			"description": "cooperativity of repressor 1",
-			"type": "double"
-		},
-		{
-			"name": "g",
-			"kind": "file",
-			"description": "cooperativity of repressor 2",
-			"type": "double"
-		},
-		{
-			"name": "d1",
-			"kind": "file",
-			"description": "outflow of proteins, degradation",
-			"type": "double"
-		},
-		{
-			"name": "d2",
-			"kind": "file",
-			"description": "outflow of proteins, degradation",
-			"type": "double"
-		},
-		{
-			"name": "p1",
-			"kind": "file",
-			"description": "protein 1",
-			"type": "int"
-		},
-		{
-			"name": "p2",
-			"kind": "file",
-			"description": "protein 2",
-			"type": "int"
-		}
-	],
+	"parameters": [],
 	"properties": [
 		{
 			"name": "Switching",
@@ -100,45 +51,16 @@
 				"command": "storm-conv --prism hill_toggle.prism --tojani hill_toggle.jani --prop hill_toggle.props --globalvars --prismcompat",
 				"note": "since PRISM files with unbounded integers can currently not be parsed, bounds have been introduced manually and removed afterwards"
 			},
-			"file-parameter-values": [
+			"file-parameter-values": [],
+			"open-parameter-values": [
 				{
-					"values": [
-						{
-							"name": "a1",
-							"value": 30
-						},
-						{
-							"name": "a2",
-							"value": 30
-						},
-						{
-							"name": "b",
-							"value": 10
-						},
-						{
-							"name": "g",
-							"value": 10
-						},
-						{
-							"name": "d1",
-							"value": 1
-						},
-						{
-							"name": "d2",
-							"value": 1
-						},
-						{
-							"name": "scaling",
-							"value": 10
-						}
-					],
+					"values": [],
 					"states": [
-					],
-					"results": [
+						{
+							"number": "∞"
+						}
 					]
 				}
-			],
-			"open-parameter-values": [
 			]
 		}
 	],

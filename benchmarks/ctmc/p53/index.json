@@ -21,68 +21,7 @@
 	"references": [
 	],
 	"notes": "biological model",
-	"parameters": [
-		{
-			"name": "k1",
-			"kind": "file",
-			"description": "reaction rate constant",
-			"type": "double"
-		},
-		{
-			"name": "k2",
-			"kind": "file",
-			"description": "reaction rate constant",
-			"type": "double"
-		},
-		{
-			"name": "k3",
-			"kind": "file",
-			"description": "reaction rate constant",
-			"type": "double"
-		},
-		{
-			"name": "k4",
-			"kind": "file",
-			"description": "reaction rate constant",
-			"type": "double"
-		},
-		{
-			"name": "k5",
-			"kind": "file",
-			"description": "reaction rate constant",
-			"type": "double"
-		},
-		{
-			"name": "k6",
-			"kind": "file",
-			"description": "reaction rate constant",
-			"type": "double"
-		},
-		{
-			"name": "k7",
-			"kind": "file",
-			"description": "reaction rate constant",
-			"type": "double"
-		},
-		{
-			"name": "p53",
-			"kind": "file",
-			"description": "number of p53 enzyms in a cell",
-			"type": "integer"
-		},
-		{
-			"name": "pMdm2",
-			"kind": "file",
-			"description": "Mdm2 precursor",
-			"type": "integer"
-		},
-		{
-			"name": "Mdm2",
-			"kind": "file",
-			"description": "number of Mdm2 enzyms in a cell",
-			"type": "integer"
-		}
-	],
+	"parameters": [],
 	"properties": [
 		{
 			"name": "RareEvent1",
@@ -116,59 +55,19 @@
 				"tool": "Storm-conv",
 				"version": "1.2.4 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism p53.prism --tojani p53.jani --prop p53.props --globalvars --prismcompat"
+				"command": "storm-conv --prism p53.prism --tojani p53.jani --prop p53.props --globalvars --prismcompat",
+				"note": "since PRISM files with unbounded integers can currently not be parsed, bounds have been introduced manually and removed afterwards"
 			},
-			"file-parameter-values": [
+			"file-parameter-values": [],
+			"open-parameter-values": [
 				{
-					"values": [
-						{
-							"name": "k1",
-							"value": 90
-						},
-						{
-							"name": "k2",
-							"value": 0.002
-						},
-						{
-							"name": "k3",
-							"value": 1.7
-						},
-						{
-							"name": "k4",
-							"value": 1.1
-						},
-						{
-							"name": "k5",
-							"value": 0.93
-						},
-						{
-							"name": "k6",
-							"value": 0.96
-						},
-						{
-							"name": "k7",
-							"value": 0.01
-						},
-						{
-							"name": "p53",
-							"value": 70
-						},
-						{
-							"name": "pMdm2",
-							"value": 30
-						},
-						{
-							"name": "Mdm2",
-							"value": 60
-						}
-					],
+					"values": [],
 					"states": [
-					],
-					"results": [
+						{
+							"number": "∞"
+						}
 					]
 				}
-			],
-			"open-parameter-values": [
 			]
 		}
 	],
