@@ -1,7 +1,7 @@
 Storm 1.2.4 (dev)
 
 Date: Sun Oct 28 05:13:06 2018
-Command line arguments: --jani eajs.4.jani --janiproperty --constants 'energy_capacity=200,U=9' --timemem
+Command line arguments: --jani eajs.4.jani --janiproperty --constants 'energy_capacity=200,B=9' --timemem
 Current working directory: /home/tim.quatmann/qcomp/benchmarks/mdp/eajs
 
 Time for model input parsing: 0.010s.

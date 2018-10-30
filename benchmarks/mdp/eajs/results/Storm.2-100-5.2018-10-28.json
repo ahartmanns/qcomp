@@ -10,7 +10,7 @@
 			"value": 100
 		},
 		{
-			"name": "U",
+			"name": "B",
 			"value": 5
 		}
 	],
@@ -25,7 +25,7 @@
 		"os": "Debian GNU/Linux 9 (stretch)",
 		"runtime": "gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516"
 	},
-	"command": "storm --jani eajs.2.jani --janiproperty --constants energy_capacity=100,U=5  --timemem",
+	"command": "storm --jani eajs.2.jani --janiproperty --constants energy_capacity=100,B=5  --timemem",
 	"time": 0.384,
 	"memory": 52428800,
 	"property-times": [

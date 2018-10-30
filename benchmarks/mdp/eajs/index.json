@@ -36,7 +36,7 @@
 			"type": "positive integer"
 		},
 		{
-			"name": "U",
+			"name": "B",
 			"kind": "open",
 			"description": "The utility value that is to be achieved.",
 			"type": "positive integer"
@@ -50,7 +50,7 @@
 		},
 		{
 			"name": "ProbUtil",
-			"description": "The maximal probability that a utility value of at least `U´ is achieved until the battery becomes empty.",
+			"description": "The maximal probability that a utility value of at least `B´ is achieved until the battery becomes empty.",
 			"type": "prob-reach-reward-bounded"
 		}
 	],
@@ -81,7 +81,7 @@
 							"value": 100
 						},
 						{
-							"name": "U",
+							"name": "B",
 							"value": 5
 						}
 					],
@@ -140,7 +140,7 @@
 							"value": 150
 						},
 						{
-							"name": "U",
+							"name": "B",
 							"value": 7
 						}
 					],
@@ -199,7 +199,7 @@
 							"value": 200
 						},
 						{
-							"name": "U",
+							"name": "B",
 							"value": 9
 						}
 					],
@@ -258,7 +258,7 @@
 							"value": 250
 						},
 						{
-							"name": "U",
+							"name": "B",
 							"value": 11
 						}
 					],
@@ -317,7 +317,7 @@
 							"value": 300
 						},
 						{
-							"name": "U",
+							"name": "B",
 							"value": 13
 						}
 					],

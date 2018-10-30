@@ -5653,7 +5653,7 @@
             "value": 3
         },
         {
-            "name": "U",
+            "name": "B",
             "type": "int"
         }
     ],
@@ -5852,7 +5852,7 @@
                                     "steps"
                                 ],
                                 "bounds": {
-                                    "lower": "U",
+                                    "lower": "B",
                                     "lower-exclusive": false
                                 },
                                 "exp": "utilityLocal"
