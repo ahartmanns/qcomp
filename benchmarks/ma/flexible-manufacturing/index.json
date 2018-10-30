@@ -69,7 +69,8 @@
 			"file": "flexible-manufacturing.3.jani",
 			"original-file": [
 				"flexible-manufacturing.PNPRO",
-				"flexible-manufacturing.props"
+				"flexible-manufacturing.props",
+				"flexible-manufacturing.capacities"
 			],
 			"conversion": {
 				"tool": "Storm-GSPN",
@@ -104,7 +105,8 @@
 			"file": "flexible-manufacturing.9.jani",
 			"original-file": [
 				"flexible-manufacturing.PNPRO",
-				"flexible-manufacturing.props"
+				"flexible-manufacturing.props",
+				"flexible-manufacturing.capacities"
 			],
 			"conversion": {
 				"tool": "Storm-GSPN",
@@ -139,7 +141,8 @@
 			"file": "flexible-manufacturing.21.jani",
 			"original-file": [
 				"flexible-manufacturing.PNPRO",
-				"flexible-manufacturing.props"
+				"flexible-manufacturing.props",
+				"flexible-manufacturing.capacities"
 			],
 			"conversion": {
 				"tool": "Storm-GSPN",
