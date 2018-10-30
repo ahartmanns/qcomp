@@ -52,7 +52,8 @@
 			"file": "readers-writers.5.jani",
 			"original-file": [
 				"readers-writers.pnpro",
-				"readers-writers.csl"
+				"readers-writers.csl",
+				"readers-writers.capacities"
 			],
 			"conversion": {
 				"tool": "Storm-GSPN",
@@ -107,7 +108,8 @@
 			"file": "readers-writers.20.jani",
 			"original-file": [
 				"readers-writers.pnpro",
-				"readers-writers.csl"
+				"readers-writers.csl",
+				"readers-writers.capacities"
 			],
 			"conversion": {
 				"tool": "Storm-GSPN",
@@ -144,7 +146,8 @@
 			"file": "readers-writers.35.jani",
 			"original-file": [
 				"readers-writers.pnpro",
-				"readers-writers.csl"
+				"readers-writers.csl",
+				"readers-writers.capacities"
 			],
 			"conversion": {
 				"tool": "Storm-GSPN",
@@ -181,7 +184,8 @@
 			"file": "readers-writers.40.jani",
 			"original-file": [
 				"readers-writers.pnpro",
-				"readers-writers.csl"
+				"readers-writers.csl",
+				"readers-writers.capacities"
 			],
 			"conversion": {
 				"tool": "Storm-GSPN",
