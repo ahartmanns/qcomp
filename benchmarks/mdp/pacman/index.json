@@ -18,7 +18,7 @@
 	],
 	"submitter": "Sebastian Junges <sebastian.junges@cs.rwth-aachen.de>",
 	"source": "https://arxiv.org/abs/1807.06096",
-	"description": "The benchmark encodes a small variant of a PACMAN encoding in which the ghosts behave randomly based on observed behavior. The benchmark has been extended with some manual abstraction in order to improve scalability. In some sense, it is a grid-world with many obstacles: still largely connected, but far fewer actions than states",
+	"description": "The benchmark encodes a small variant of the arcade game PACMAN in which the ghosts behave randomly based on observed behavior. The benchmark has been extended with some manual abstraction in order to improve scalability. In some sense, it is a grid-world with many obstacles: still largely connected, but far fewer actions than states",
 	"references": [
 	],
 	"notes": "learned probabilities.",
