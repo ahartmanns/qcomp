@@ -1,6 +1,6 @@
 {
 	"name": "Hill Toggle",
-	"short": "hill_toggle",
+	"short": "hill-toggle",
 	"type": "ctmc",
 	"original": "PRISM-∞",
 	"version": 1,
@@ -39,16 +39,16 @@
 	],
 	"files": [
 		{
-			"file": "hill_toggle.jani",
+			"file": "hill-toggle.jani",
 			"original-file": [
-				"hill_toggle.prism",
-				"hill_toggle.props"
+				"hill-toggle.prism",
+				"hill-toggle.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.4 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism hill_toggle.prism --tojani hill_toggle.jani --prop hill_toggle.props --globalvars --prismcompat",
+				"command": "storm-conv --prism hill-toggle.prism --tojani hill-toggle.jani --prop hill-toggle.props --globalvars --prismcompat",
 				"note": "since PRISM files with unbounded integers can currently not be parsed, bounds have been introduced manually and removed afterwards"
 			},
 			"file-parameter-values": [],

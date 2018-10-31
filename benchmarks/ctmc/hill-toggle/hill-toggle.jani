@@ -248,7 +248,7 @@
                     "name": "l"
                 }
             ],
-            "name": "hill_toggle",
+            "name": "hill-toggle",
             "variables": []
         }
     ],
@@ -288,7 +288,7 @@
         "derived-operators"
     ],
     "jani-version": 1,
-    "name": "hill_toggle",
+    "name": "hill-toggle",
     "properties": [
         {
             "expression": {
@@ -365,7 +365,7 @@
     "system": {
         "elements": [
             {
-                "automaton": "hill_toggle"
+                "automaton": "hill-toggle"
             }
         ]
     },

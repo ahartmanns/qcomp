@@ -2,7 +2,7 @@
   { "path": "ctmc/cluster" },
   { "path": "ctmc/embedded" },
   { "path": "ctmc/fms" },
-  { "path": "ctmc/hill_toggle" },
+  { "path": "ctmc/hill-toggle" },
   { "path": "ctmc/kanban" },
   { "path": "ctmc/mapk_cascade" },
   { "path": "ctmc/p53" },
