@@ -3755,7 +3755,7 @@
         "derived-operators"
     ],
     "jani-version": 1,
-    "name": "toggle_switch",
+    "name": "toggle-switch",
     "properties": [
         {
             "expression": {

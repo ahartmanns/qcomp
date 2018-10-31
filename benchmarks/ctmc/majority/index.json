@@ -23,7 +23,7 @@
 	"source": "http://doi.acm.org/10.1145/2644817",
 	"description": "This is a genetic circuit model for the Muller C-element (majority gate design). C-elements are critical state-holding gates commonly used by asynchronous designers to coordinate parallel processes. In a two-input C-element, its output goes high when both inputs are high, goes low when both inputs are low, and retains its previous state when the inputs are mixed. The inputs are IPTG and aTc and the output is GFP.",
 	"references": [],
-	"notes": "",
+	"notes": "biological model",
 	"parameters": [
 		{
 			"name": "T",

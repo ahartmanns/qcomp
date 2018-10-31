@@ -1,8 +1,8 @@
 Storm 1.2.4 (dev)
 
 Date: Tue Oct 30 10:40:19 2018
-Command line arguments: --jani speed_ind.jani --janiproperty --constants T=2100 --timemem
-Current working directory: /Users/tim/git/qcomp/benchmarks/ctmc/speed_ind
+Command line arguments: --jani speed-ind.jani --janiproperty --constants T=2100 --timemem
+Current working directory: /Users/tim/git/qcomp/benchmarks/ctmc/speed-ind
 
 Time for model input parsing: 0.033s.
 

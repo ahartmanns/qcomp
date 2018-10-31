@@ -1,8 +1,8 @@
 Storm 1.2.4 (dev)
 
 Date: Tue Oct 30 10:40:18 2018
-Command line arguments: --jani toggle_switch.jani --janiproperty --constants T=2100 --timemem
-Current working directory: /Users/tim/git/qcomp/benchmarks/ctmc/toggle_switch
+Command line arguments: --jani toggle-switch.jani --janiproperty --constants T=2100 --timemem
+Current working directory: /Users/tim/git/qcomp/benchmarks/ctmc/toggle-switch
 
 Time for model input parsing: 0.012s.
 

@@ -10706,7 +10706,7 @@
         "derived-operators"
     ],
     "jani-version": 1,
-    "name": "speed_ind",
+    "name": "speed-ind",
     "properties": [
         {
             "expression": {

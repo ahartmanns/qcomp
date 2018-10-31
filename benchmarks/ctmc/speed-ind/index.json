@@ -1,6 +1,6 @@
 {
-	"name": "Genetic Toggle Switch",
-	"short": "toggle_switch",
+	"name": "Genetic Muller C-Element Speed Independent Design",
+	"short": "speed-ind",
 	"type": "ctmc",
 	"original": "PRISM",
 	"version": 1,
@@ -21,9 +21,9 @@
 	],
 	"submitter": "Zhen Zhang <zhen.zhang@usu.edu>",
 	"source": "http://doi.acm.org/10.1145/2644817",
-	"description": "This is a genetic circuit model for the toggle switch. Two input toggle switch can be set to the OFF state by supplying it with aTc and set to ON state by supplying IPTG. The inputs are IPTG and aTc and the outputs are LacI,TetR and GFP.",
+	"description": "This is a genetic circuit model for the Muller C-element (speed independent design). C-elements are critical state-holding gates commonly used by asynchronous designers to coordinate parallel processes. In a two-input C-element, its output goes high when both inputs are high, goes low when both inputs are low, and retains its previous state when the inputs are mixed. The inputs are IPTG and aTc and the output is GFP.",
 	"references": [],
-	"notes": "",
+	"notes": "biological model",
 	"parameters": [
 		{
 			"name": "T",
@@ -41,16 +41,16 @@
 	],
 	"files": [
 		{
-			"file": "toggle_switch.jani",
+			"file": "speed-ind.jani",
 			"original-file": [
-				"toggle_switch.prism",
-				"toggle_switch.props"
+				"speed-ind.prism",
+				"speed-ind.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "Storm 1.2.4 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism toggle_switch.prism --tojani toggle_switch.jani -jprop --prismcompat --prop toggle_switch.props --globalvars"
+				"command": "storm-conv --prism speed-ind.prism --tojani speed-ind.jani -jprop --prismcompat --prop speed-ind.props --globalvars"
 			},
 			"file-parameter-values": [],
 			"open-parameter-values": [
@@ -64,7 +64,7 @@
 					"states": [
 						{
 							"note": "Storm",
-							"number": 99
+							"number": 743424
 						}
 					]
 				}
@@ -72,6 +72,7 @@
 		}
 	],
 	"results": [
+		"results/Storm.2100.2018-10-26.json",
 		"results/Storm.2100.2018-10-30.json"
 	]
 }

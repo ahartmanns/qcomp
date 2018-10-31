@@ -1,5 +1,5 @@
 {
-	"file": "../speed_ind.jani",
+	"file": "../toggle-switch.jani",
 	"version": 1,
 	"date": "2018-10-30",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
@@ -21,13 +21,13 @@
 		"os": "macOS 10.13.5",
 		"runtime": "Apple LLVM version 9.1.0 (clang-902.0.39.2)"
 	},
-	"command": "storm --jani speed_ind.jani --janiproperty --constants T=2100  --timemem",
-	"time": 114.401,
-	"memory": 767557632,
+	"command": "storm --jani toggle-switch.jani --janiproperty --constants T=2100  --timemem",
+	"time": 0.042,
+	"memory": 32505856,
 	"property-times": [
 		{
 			"name:": "change_state",
-			"time": 105.18
+			"time": 0.002
 		}
 	],
 	"data": [
@@ -36,15 +36,15 @@
 				{
 					"unit": "s",
 					"name": "time",
-					"value": 9.171
+					"value": 0.024
 				},
 				{
 					"name": "states",
-					"value": 743424
+					"value": 99
 				},
 				{
 					"name": "branches",
-					"value": 9518080
+					"value": 356
 				}
 			],
 			"group": "State space exploration"
@@ -55,10 +55,10 @@
 				{
 					"unit": "s",
 					"name": "time",
-					"value": 105.18
+					"value": 0.002
 				}
 			],
-			"value": 0.04229449798
+			"value": 0.01349121251
 		}
 	]
 }
