@@ -95,8 +95,8 @@ function init()
 			if(model.results === undefined) model.results = [];
 			if(model.original !== undefined && !qmcc.originals().includes(model.original.split("-")[0])) qmcc.originals.push(model.original.split("-")[0]);
 			model.loadedResults = ko.observableArray();
-			model.minStates = getStateCount(model.files, Math.min, Number.MAX_SAFE_INTEGER);
-			model.maxStates = getStateCount(model.files, Math.max, 0);
+			model.minStates = getStateCount(model.files, true);
+			model.maxStates = getStateCount(model.files, false);
 			if(typeof model.author === "string") model.author = [separatePersonRef(model.author)];
 			else
 			{
@@ -241,29 +241,38 @@ function sortModels(sortBy)
 	qmcc.sortBy(sortBy);
 	qmcc.models.sort(sortFun);
 }
-function getStateCount(files, op, states)
+function getStateCount(files, isMin)
 {
-	var result = states;
-	for(var i = 0; i < files.length; ++i)
+	var result = null;
+	for(var i = 0; i < files.length && (result === null || !Number.isNaN(result)); ++i)
 	{
 		var openParamValues = files[i]["open-parameter-values"];
-		if(openParamValues.length === 0) result = op(result, Number.POSITIVE_INFINITY); // no states for certain parameter configuration = too large to find out
+		if(openParamValues.length === 0) // no states for any parameter configuration for this file...
+		{
+			if(!isMin) result = Number.NaN; // ... = unknown maximum, unaffected minimum
+		}
 		else
 		{
 			for(var j = 0; j < openParamValues.length; ++j)
 			{
 				if(openParamValues[j].states !== undefined)
 				{
-					result = op(result, op(...openParamValues[j].states.map(s => s.number !== undefined ? s.number : s.order !== undefined ? Math.pow(10, s.order) : states)));
+					if(result === null) result = isMin ? Number.POSITIVE_INFINITY : 0;
+					var params = openParamValues[j].states.map(s => s.number !== undefined ? (s.number === "∞" ? Number.POSITIVE_INFINITY : s.number) : s.order !== undefined ? Math.pow(10, s.order) : states);
+					params.push(result);
+					if(isMin) result = Math.min(...params)
+					else result = Math.max(...params)
 				}
-				else // no states for certain parameter configuration = too large to find out
+				else // no states for certain parameter configuration for this file...
 				{
-					result = op(result, Number.POSITIVE_INFINITY);
+					if(!isMin) result = Number.NaN; // ... = unknown maximum, unaffected minimum
+					break;
 				}
 			}
 		}
 	}
-	return result;
+	//alert("Init: " + states + ", result: \"" + result + "\" for " + JSON.stringify(files, null, 2));
+	return result === null ? Number.NaN : result;
 }
 function separatePersonRef(pref)
 {
@@ -291,5 +300,7 @@ function toVersionFileName(file, version)
 }
 function stateCountToHtmlString(count)
 {
-	return count >= 1000000 && Number.isInteger(Math.log10(count)) ? "~ 10<sup>" + Math.log10(count).toString() + "</sup>" : numberToOrderString(count);
+	if(Number.isNaN(count)) return "&nbsp;";
+	else if(count === Number.POSITIVE_INFINITY) return "∞";
+	else return count >= 1000000 && Number.isInteger(Math.log10(count)) ? "~ 10<sup>" + Math.log10(count).toString() + "</sup>" : numberToOrderString(count);
 }
