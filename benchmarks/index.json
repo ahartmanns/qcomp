@@ -38,6 +38,7 @@
   { "path": "ma/sf" },
   { "path": "ma/sms" },
   { "path": "ma/stream" },
+  { "path": "ma/vgs" },
   { "path": "mdp/beb" },
   { "path": "mdp/blocksworld" },
   { "path": "mdp/boxworld" },

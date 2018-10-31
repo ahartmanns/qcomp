@@ -1,0 +1,116 @@
+{
+	"name": "Vehicle Guidance System",
+	"short": "vgs",
+	"type": "ma",
+	"original": "Galileo",
+	"version": 1,
+	"date": "2018-10-26",
+	"version-history": [
+		{
+			"date": "2018-10-26",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Matthias Volk <matthias.volk@cs.rwth-aachen.de>",
+		"Sebastian Junges <sebastian.junges@cs.rwth-aachen.de>"
+	],
+	"submitter": "Matthias Volk <matthias.volk@cs.rwth-aachen.de>",
+	"source": "https://doi.org/10.1007/978-3-319-66266-4_1",
+	"description": "Industrial DFT case study of different safety concept variants for vehicle guidance systems. Uses the semantics for DFTs presented in [1]. Contrary to the original models the notion of transient faults is omitted in these benchmarks.",
+    "notes": "industrial case study",
+	"references": [
+	    "https://doi.org/10.1007/s00165-016-0412-0"
+	],
+	"parameters": [
+		{
+			"name": "NR_VARIANT",
+			"kind": "file",
+			"description": "Number of variant",
+			"type": "in {4,5}"
+		},
+		{
+			"name": "TIME_BOUND",
+			"kind": "open",
+			"description": "The time bound used for reliability",
+			"type": "positive real"
+		}
+	],
+	"properties": [
+		{
+			"name": "MaxPrReachFailed",
+			"description": "Maximal probability that the systems fails eventually.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "MaxPrReachFailedTB",
+			"description": "Maximal probability that the systems fails within the given timebound.",
+			"type": "prob-reach-time-bounded"
+		},
+		{
+			"name": "MinExpTimeFailed",
+			"description": "Mean-time-to-failure (MTTF)",
+			"type": "exp-time"
+		}
+	],
+	"files": [
+		{
+			"file": "vgs.4.jani",
+			"original-file": [
+				"vgs.4.dft"
+			],
+			"conversion": {
+				"tool": "storm-dft",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-dft -dft vgs.4.dft --to-gspn --dftGspn:to-jani vgs.4.jani --disabledc --compactjson"
+			},
+			"file-parameter-values": [
+						{
+							"name": "NR_VARIANT",
+							"value": 4
+						}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "TIME_BOUND",
+							"value": 10000
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "vgs.5.jani",
+			"original-file": [
+				"vgs.5.dft"
+			],
+			"conversion": {
+				"tool": "storm-dft",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-dft -dft vgs.5.dft --to-gspn --dftGspn:to-jani vgs.5.jani --disabledc --compactjson"
+			},
+			"file-parameter-values": [
+						{
+							"name": "NR_VARIANT",
+							"value": 5
+						}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "TIME_BOUND",
+							"value": 10000
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}
