@@ -3,13 +3,18 @@
 	"short": "firewire",
 	"type": "mdp",
 	"original": "PRISM",
-	"version": 1,
-	"date": "2018-10-11",
+	"version": 2,
+	"date": "2018-11-03",
 	"version-history": [
 		{
 			"date": "2018-10-11",
 			"notes": "Initial version.",
 			"version": 1
+		},
+		{
+			"date": "2018-11-03",
+			"notes": "Added property `deadline´ and merged with the firewire_impl_dl model.",
+			"version": 2
 		}
 	],
 	"author": [
@@ -22,7 +27,7 @@
 		"name": "the PRISM Benchmark Suite",
 		"url": "http://www.prismmodelchecker.org/benchmarks/"
 	},
-	"description": "This PRISM case study [1] concerns the Tree Identify Protocol of the IEEE 1394 High Performance Serial Bus, called \"FireWire\". The 1394 High Performance serial bus is used to transport video and audio signals within a network of multimedia devices. It is modeled as a leader election protocol which takes place after a bus reset in the network, that is, when a node is added or removed from the network. After such a reset all nodes in the network have equal status, and know only to which nodes they are directly connected. A leader needs to be chosen to act as the manager of the bus for subsequent phases of IEEE 1394. This is done by the nodes communicating \"be my parent\" messages, starting from the leaf nodes. The protocol is designed for use on connected networks and will correctly elect a leader if the network is acyclic. We consider probabilistic timed automata models of the root contention part of the tree identify protocol, which are based on probabilistic I/O automata models presented in [0]. `delay´ is the maximum wire transmission delay in nano seconds. This models the distance between the two nodes, i.e. the length of the connecting wires. A delay of 360ns represents the assumption that the nodes are separated by a distance close to the maximum required for the correctness of the protocol. A delay of 30ns corresponds more closely to the maximum separation of nodes specified in the actual IEEE standard. See [2] for more details",
+	"description": "This PRISM case study [1] concerns the Tree Identify Protocol of the IEEE 1394 High Performance Serial Bus, called \"FireWire\". The 1394 High Performance serial bus is used to transport video and audio signals within a network of multimedia devices. It is modeled as a leader election protocol which takes place after a bus reset in the network, that is, when a node is added or removed from the network. After such a reset all nodes in the network have equal status, and know only to which nodes they are directly connected. A leader needs to be chosen to act as the manager of the bus for subsequent phases of IEEE 1394. This is done by the nodes communicating \"be my parent\" messages, starting from the leaf nodes. The protocol is designed for use on connected networks and will correctly elect a leader if the network is acyclic. We consider probabilistic timed automata models of the root contention part of the tree identify protocol, which are based on probabilistic I/O automata models presented in [0]. `delay´ is the maximum wire transmission delay in nano seconds. This models the distance between the two nodes, i.e. the length of the connecting wires. A delay of 360ns represents the assumption that the nodes are separated by a distance close to the maximum required for the correctness of the protocol. A delay of 30ns corresponds more closely to the maximum separation of nodes specified in the actual IEEE standard. The version where parameter `explicit_timer´ is true corresponds to the firewire_impl_dl model from the PRISM Benchmark suite and includes an explicit timer module to allow the verification of time-bounded properties as unbounded properties. See [2] for more details.",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
 		"http://www.prismmodelchecker.org/casestudies/firewire.php"
@@ -30,9 +35,21 @@
 	"notes": "PRISM benchmark",
 	"parameters": [
 		{
+			"name": "explicit_timer",
+			"kind": "file",
+			"description": "When set to true, an explicit timer module is included",
+			"type": "Boolean"
+		},
+		{
 			"name": "delay",
 			"kind": "open",
 			"description": "Maximum wire transmission delay in units of 10ns",
+			"type": "positive integer"
+		},
+		{
+			"name": "deadline",
+			"kind": "open",
+			"description": "Timer deadline in units of 10 ns",
 			"type": "positive integer"
 		}
 	],
@@ -56,60 +73,78 @@
 			"name": "time_sending",
 			"description": "The maximum expected time spent sending before electing a leader.",
 			"type": "exp-reward"
+		},
+		{
+			"name": "deadline",
+			"description": "Minimum probability of completing within `deadline´.",
+			"type": "prob-reach"
 		}
 	],
 	"files": [
 		{
-			"file": "firewire.jani",
+			"file": "firewire.false.jani",
 			"original-file": [
-				"firewire.prism",
-				"firewire.props"
+				"firewire.false.prism",
+				"firewire.false.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.4 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism firewire.prism --tojani firewire.jani --prop firewire.props --globalvars"
+				"command": "storm-conv --prism firewire.false.prism --tojani firewire.false.jani --prop firewire.false.props --globalvars"
 			},
-			"file-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "explicit_timer",
+					"value": false
+				}
+			],
 			"open-parameter-values": [
 				{
 					"values": [
 						{
 							"name": "delay",
 							"value": 3
+						},
+						{
+							"name": "deadline",
+							"value": 200
 						}
-					],
-					"states": [
+					]
+				},
+				{
+					"values": [
 						{
-							"note": "Storm",
-							"number": 4093
+							"name": "delay",
+							"value": 3
+						},
+						{
+							"name": "deadline",
+							"value": 400
 						}
-					],
-					"results": [
+					]
+				},
+				{
+					"values": [
 						{
-							"property": "elected",
-							"value": "true",
-							"note": "Storm/exact"
+							"name": "delay",
+							"value": 3
 						},
 						{
-							"property": "time_max",
-							"value": 299,
-							"note": "Storm/exact"
+							"name": "deadline",
+							"value": 600
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "delay",
+							"value": 3
 						},
 						{
-							"property": "time_min",
-							"value": {
-								"approx": 138.25,
-								"num": 553,
-								"den": 4
-							},
-							"note": "Storm/exact"
-						},
-						{
-							"property": "time_sending",
-							"value": 18,
-							"note": "Storm/exact"
+							"name": "deadline",
+							"value": 800
 						}
 					]
 				},
@@ -118,42 +153,163 @@
 						{
 							"name": "delay",
 							"value": 36
+						},
+						{
+							"name": "deadline",
+							"value": 200
 						}
-					],
-					"states": [
+					]
+				},
+				{
+					"values": [
 						{
-							"note": "Storm",
-							"number": 212268
+							"name": "delay",
+							"value": 36
+						},
+						{
+							"name": "deadline",
+							"value": 400
 						}
-					],
-					"results": [
+					]
+				},
+				{
+					"values": [
 						{
-							"property": "elected",
-							"value": true,
-							"note": "Storm/exact"
+							"name": "delay",
+							"value": 36
 						},
 						{
-							"property": "time_max",
-							"value": 365,
-							"note": "Storm/exact"
+							"name": "deadline",
+							"value": 600
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "delay",
+							"value": 36
 						},
 						{
-							"property": "time_min",
-							"value": {
-								"approx": 138.25,
-								"num": 553,
-								"den": 4
-							},
-							"note": "Storm/exact"
+							"name": "deadline",
+							"value": 800
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "firewire.true.jani",
+			"original-file": [
+				"firewire.true.prism",
+				"firewire.true.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-conv --prism firewire.true.prism --tojani firewire.true.jani --prop firewire.true.props --globalvars"
+			},
+			"file-parameter-values": [
+				{
+					"name": "explicit_timer",
+					"value": true
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "delay",
+							"value": 3
 						},
 						{
-							"property": "time_sending",
-							"value": {
-								"approx": 202.25,
-								"num": 809,
-								"den": 4
-							},
-							"note": "Storm/exact"
+							"name": "deadline",
+							"value": 200
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "delay",
+							"value": 3
+						},
+						{
+							"name": "deadline",
+							"value": 400
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "delay",
+							"value": 3
+						},
+						{
+							"name": "deadline",
+							"value": 600
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "delay",
+							"value": 3
+						},
+						{
+							"name": "deadline",
+							"value": 800
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "delay",
+							"value": 36
+						},
+						{
+							"name": "deadline",
+							"value": 200
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "delay",
+							"value": 36
+						},
+						{
+							"name": "deadline",
+							"value": 400
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "delay",
+							"value": 36
+						},
+						{
+							"name": "deadline",
+							"value": 600
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "delay",
+							"value": 36
+						},
+						{
+							"name": "deadline",
+							"value": 800
 						}
 					]
 				}
@@ -161,15 +317,23 @@
 		}
 	],
 	"results": [
-		"results/Storm.3.2018-10-12.json",
-		"results/Storm.36.2018-10-12.json",
+		"results/Storm.false-3-0.2018-10-12.json",
+		"results/Storm.false-36-0.2018-10-12.json",
 		{
 			"reference": true,
-			"file": "results/Storm.exact.3.2018-10-17.json"
+			"file": "results/Storm.exact.false-3-0.2018-10-17.json"
 		},
 		{
 			"reference": true,
-			"file": "results/Storm.exact.36.2018-10-22.json"
-		}
+			"file": "results/Storm.exact.false-36-0.2018-10-22.json"
+		},
+		"results/Storm.true-3-200.2018-10-12.json",
+		"results/Storm.true-3-400.2018-10-12.json",
+		"results/Storm.true-3-600.2018-10-12.json",
+		"results/Storm.true-3-800.2018-10-12.json",
+		"results/Storm.true-36-200.2018-10-12.json",
+		"results/Storm.true-36-400.2018-10-12.json",
+		"results/Storm.true-36-600.2018-10-12.json",
+		"results/Storm.true-36-800.2018-10-12.json"
 	]
 }

@@ -52,7 +52,6 @@
   { "path": "mdp/firewire" },
   { "path": "mdp/firewire_abst" },
   { "path": "mdp/firewire_dl" },
-  { "path": "mdp/firewire_impl_dl" },
   { "path": "mdp/pacman" },
   { "path": "mdp/random-predicates" },
   { "path": "mdp/rectangle-tireworld" },
