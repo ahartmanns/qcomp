@@ -1,7 +1,7 @@
 {
 	"name": "Energy-aware job scheduling",
 	"short": "eajs",
-	"type": "MDP",
+	"type": "mdp",
 	"original": "PRISM",
 	"version": 1,
 	"date": "2018-10-26",
