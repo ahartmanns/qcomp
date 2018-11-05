@@ -27,7 +27,7 @@ function propertyTypeToLongString(propertyType)
 	else if(propertyType === "exp-reward-reward-bounded") return "reward-bounded expected accumulated reward";
 	else if(propertyType === "exp-reward-step-instant") return "step-instantaneous reward";
 	else if(propertyType === "exp-reward-time-instant") return "time-instantaneous reward";
-	else if(propertyType === "exp-reward-reward-instant") return "time-instantaneous reward";
+	else if(propertyType === "exp-reward-reward-instant") return "reward-instantaneous reward";
 	else if(propertyType === "steady-state-reward") return "steady-state reward";
 	else if(propertyType === "steady-state-prob") return "steady-state probability";
 	else return propertyType;
