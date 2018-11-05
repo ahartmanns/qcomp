@@ -4503,30 +4503,6 @@
         {
             "edges": [
                 {
-								    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "t <- t",
-                                    "ref": "t",
-                                    "value": "t"
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(t > deadline)",
-                        "exp": {
-                            "left": "t",
-                            "op": ">",
-                            "right": "deadline"
-                        }
-                    },
-                    "location": "l"
-                },
-                {
                     "action": "time",
                     "destinations": [
                         {
@@ -4557,6 +4533,30 @@
                         "exp": {
                             "left": "t",
                             "op": "≤",
+                            "right": "deadline"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "t <- t",
+                                    "ref": "t",
+                                    "value": "t"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(t > deadline)",
+                        "exp": {
+                            "left": "t",
+                            "op": ">",
                             "right": "deadline"
                         }
                     },
@@ -4619,7 +4619,7 @@
         "derived-operators"
     ],
     "jani-version": 1,
-    "name": "firewire_impl_dl",
+    "name": "firewire.true",
     "properties": [
         {
             "expression": {
@@ -4709,36 +4709,37 @@
                         "left": true,
                         "op": "U",
                         "right": {
-                            "op": "∧",
-                            "right": {
                             "left": {
                                 "left": {
-                                    "left": "s1",
-                                    "op": "=",
-                                    "right": 8
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 8
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 7
+                                    }
                                 },
-                                "op": "∧",
+                                "op": "∨",
                                 "right": {
-                                    "left": "s2",
-                                    "op": "=",
-                                    "right": 7
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 7
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 8
+                                    }
                                 }
                             },
-                            "op": "∨",
+                            "op": "∧",
                             "right": {
-                                "left": {
-                                    "left": "s1",
-                                    "op": "=",
-                                    "right": 7
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "s2",
-                                    "op": "=",
-                                    "right": 8
-                                }
-                            }},
-                            "left": {
                                 "left": "t",
                                 "op": "≤",
                                 "right": "deadline"

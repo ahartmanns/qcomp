@@ -4545,7 +4545,7 @@
         "derived-operators"
     ],
     "jani-version": 1,
-    "name": "firewire",
+    "name": "firewire.false",
     "properties": [
         {
             "expression": {
@@ -4634,6 +4634,18 @@
                     "exp": {
                         "left": true,
                         "op": "U",
+                        "reward-bounds": [
+                            {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "bounds": {
+                                    "upper": "deadline",
+                                    "upper-exclusive": false
+                                },
+                                "exp": "time"
+                            }
+                        ],
                         "right": {
                             "left": {
                                 "left": {
@@ -4662,14 +4674,7 @@
                                     "right": 8
                                 }
                             }
-                        },
-                        "reward-bounds": [
-                          {
-                            "exp": "time",
-                            "accumulate": [ "steps" ],
-                            "bounds": { "upper": "deadline" }
-                          }
-                        ]
+                        }
                     },
                     "op": "Pmin"
                 }
