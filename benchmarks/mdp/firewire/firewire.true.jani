@@ -4739,9 +4739,9 @@
                                 }
                             }},
                             "left": {
-                                "right": "t",
+                                "left": "t",
                                 "op": "≤",
-                                "left": "deadline"
+                                "right": "deadline"
                             }
                         }
                     },

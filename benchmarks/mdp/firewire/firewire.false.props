@@ -7,4 +7,4 @@
 // Maximum expected time spent sending before electing a leader
 "time_sending": R{"time_sending"}max=? [ F "done" ];
 // Minimum probability of completing within deadline
-"deadline": Pmax=? [ F^{rew{"time"}>deadline} ((s1=8) & (s2=7)) | ((s1=7) & (s2=8))]
+"deadline": Pmin=? [ F^{rew{"time"}<=deadline} ((s1=8) & (s2=7)) | ((s1=7) & (s2=8))];
