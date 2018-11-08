@@ -86,7 +86,7 @@
 							"note": "Storm/hybrid/exact"
 						},
 						{
-							"property": "MaxPrReachDeadlockTB",
+							"property": "MinExpTimeDeadlock",
 							"value": {
 								"approx": 5.445544554455446,
 								"num": 550,

@@ -34,7 +34,7 @@
 			"time": 0.005
 		},
 		{
-			"name:": "MaxPrReachDeadlockTB",
+			"name:": "MinExpTimeDeadlock",
 			"time": 0.008
 		}
 	],
@@ -69,7 +69,7 @@
 			"value": 1
 		},
 		{
-			"property": "MaxPrReachDeadlockTB",
+			"property": "MinExpTimeDeadlock",
 			"values": [
 				{
 					"unit": "s",

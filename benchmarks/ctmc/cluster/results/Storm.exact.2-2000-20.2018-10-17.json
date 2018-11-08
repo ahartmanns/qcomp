@@ -37,7 +37,7 @@
 	"memory": 65011712,
 	"property-times": [
 		{
-			"name:": "below_min",
+			"name:": "premium_steady",
 			"time": 87.535
 		}
 	],
@@ -61,7 +61,7 @@
 			"group": "State space exploration"
 		},
 		{
-			"property": "below_min",
+			"property": "premium_steady",
 			"values": [
 				{
 					"unit": "s",
