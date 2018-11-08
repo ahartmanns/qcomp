@@ -40,7 +40,7 @@
 			"type": "prob-reach"
 		},
 		{
-			"name": "MinOffline1",
+			"name": "MaxOffline1",
 			"description": "The maximal probability that station 1 drops out of the ring first.",
 			"type": "prob-reach"
 		},
