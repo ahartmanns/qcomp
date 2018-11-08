@@ -33,7 +33,7 @@
 	"memory": 47185920,
 	"property-times": [
 		{
-			"name:": "activated_T",
+			"name:": "activated_time",
 			"time": 0.035
 		}
 	],
@@ -57,7 +57,7 @@
 			"group": "State space exploration"
 		},
 		{
-			"property": "activated_T",
+			"property": "activated_time",
 			"values": [
 				{
 					"unit": "s",
