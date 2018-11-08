@@ -26,6 +26,12 @@
 	"notes": "IPPC 2006 benchmark",
 	"parameters": [
 		{
+			"name": "variant",
+			"kind": "file",
+			"description": "The variant of the model",
+			"type": "in {a,b}"
+		},
+		{
 			"name": "p",
 			"kind": "file",
 			"description": "Number of positions",
@@ -52,6 +58,10 @@
 				"command": "ppddl2jani.py domain.pddl p01.pddl --jani elevators.a-3-3.jani"
 			},
 			"file-parameter-values": [
+				{
+					"name": "variant",
+					"value": "a"
+				},
 				{
 					"name": "p",
 					"value": 3
@@ -97,6 +107,10 @@
 			},
 			"file-parameter-values": [
 				{
+					"name": "variant",
+					"value": "b"
+				},
+				{
 					"name": "p",
 					"value": 3
 				},
@@ -129,6 +143,10 @@
 				"command": "ppddl2jani.py domain.pddl p10.pddl --jani elevators.a-11-9.jani"
 			},
 			"file-parameter-values": [
+				{
+					"name": "variant",
+					"value": "a"
+				},
 				{
 					"name": "p",
 					"value": 11
@@ -173,6 +191,10 @@
 				"command": "ppddl2jani.py domain.pddl p15.pddl --jani elevators.b-11-9.jani"
 			},
 			"file-parameter-values": [
+				{
+					"name": "variant",
+					"value": "b"
+				},
 				{
 					"name": "p",
 					"value": 11
