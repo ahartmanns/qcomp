@@ -186,8 +186,8 @@
 					</div>
 					<div data-bind="text: conversion.command" class="tt" style="text-align: left; text-indent: -3ex; padding-left: 3ex;"></div>
 				<!-- /ko -->
-				<div data-bind="if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0">
-					Parameter settings:<br />
+				<div data-bind="if: $data['open-parameter-values'] !== undefined && $data['open-parameter-values'].length !== 0 && $data['open-parameter-values'].find(opv => opv.values !== undefined && opv.values.length !== 0 || opv.states !== undefined && opv.states.length !== 0 || opv.results !== undefined && opv.results.length !== 0) !== undefined">
+					<div data-bind="if: $data['open-parameter-values'].find(opv => opv.values !== undefined && opv.values.length !== 0) !== undefined">Parameter settings:</div>
 					<ul data-bind="foreach: $data['open-parameter-values']">
 						<li>
 							<!-- ko if: $data.values !== undefined && $data.values.length !== 0 -->
@@ -209,7 +209,7 @@
 									</tr>
 								</table>
 							<!-- /ko -->
-							<!-- ko if: $data.results !== undefined -->
+							<!-- ko if: $data.results !== undefined && $data.results.length !== 0 -->
 								<h5>Reference results</h5>
 								<table data-bind="foreach: results" style="margin-bottom: 6px;">
 									<tr>

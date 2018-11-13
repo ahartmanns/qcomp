@@ -1,0 +1,2 @@
+// probability to finally collect all coupons 
+"collect_all": Pmax=? [F (coup0 & coup1 & coup2 & coup3 & coup4)];
