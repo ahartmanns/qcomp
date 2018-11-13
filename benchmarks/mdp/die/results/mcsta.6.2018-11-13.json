@@ -1,0 +1,56 @@
+﻿{
+	"file": "../die.6.jani",
+	"version": 1,
+	"date": "2018-11-13",
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"tool": {
+		"name": "mcsta",
+		"version": "3.0.95",
+		"url": "http://www.modestchecker.net/",
+		"part-of": "the Modest Toolset",
+		"part-of-url": "http://www.modestchecker.net/"
+	},
+	"system": {
+		"cpu": "Intel Core i7-7500U",
+		"ram": 16,
+		"os": "Windows 10 Home 1803 (x64)",
+		"runtime": ".NET Framework 4.7.2"
+	},
+	"command": "mcsta die.6.jani -O mcsta.6.2018-11-13.json Json",
+	"time": 1.692,
+	"memory": 41951232,
+	"property-times": [
+		{ "name": "1", "time": 0.066 }
+	],
+	"data": [
+		{
+			"group": "State space exploration",
+			"values": [
+				{ "name": "State size", "value": 4, "unit": "B" },
+				{ "name": "States", "value": 13 },
+				{ "name": "Transitions", "value": 13 },
+				{ "name": "Branches", "value": 20 },
+				{ "name": "Rate", "value": 117.11711711711712 },
+				{ "name": "Time", "value": 0.165, "unit": "s" }
+			]
+		},
+		{
+			"property": "throw_max",
+			"value": 0.16666662693023682,
+			"values": [
+				{ "name": "Bounds", "value": "[0.166666626930237, 1]" },
+				{ "name": "Time", "value": 0.066, "unit": "s" }
+			],
+			"data": [
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 7.1525590783498474E-07 },
+						{ "name": "Iterations", "value": 11 },
+						{ "name": "Time", "value": 0.023, "unit": "s" }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,56 @@
+﻿{
+	"file": "../coupon.7-4.jani",
+	"version": 1,
+	"date": "2018-11-13",
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"tool": {
+		"name": "mcsta",
+		"version": "3.0.95",
+		"url": "http://www.modestchecker.net/",
+		"part-of": "the Modest Toolset",
+		"part-of-url": "http://www.modestchecker.net/"
+	},
+	"system": {
+		"cpu": "Intel Core i7-7500U",
+		"ram": 16,
+		"os": "Windows 10 Home 1803 (x64)",
+		"runtime": ".NET Framework 4.7.2"
+	},
+	"command": "mcsta coupon.7-4.jani -O mcsta.7-4.2018-11-13.json Json",
+	"time": 19.860,
+	"memory": 305803264,
+	"property-times": [
+		{ "name": "1", "time": 6.548 }
+	],
+	"data": [
+		{
+			"group": "State space exploration",
+			"values": [
+				{ "name": "State size", "value": 16, "unit": "B" },
+				{ "name": "States", "value": 2269892 },
+				{ "name": "Transitions", "value": 2269892 },
+				{ "name": "Branches", "value": 4213196 },
+				{ "name": "Rate", "value": 244468.71297792139 },
+				{ "name": "Time", "value": 10.942, "unit": "s" }
+			]
+		},
+		{
+			"property": "collect_all",
+			"value": 0.99999875726144072,
+			"values": [
+				{ "name": "Bounds", "value": "[0.999998757261441, 1]" },
+				{ "name": "Time", "value": 6.548, "unit": "s" }
+			],
+			"data": [
+				{
+					"group": "Value iteration",
+					"values": [
+						{ "name": "Final error", "value": 9.5074048427446044E-07 },
+						{ "name": "Iterations", "value": 60 },
+						{ "name": "Time", "value": 6.465, "unit": "s" }
+					]
+				}
+			]
+		}
+	]
+}

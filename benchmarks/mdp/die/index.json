@@ -1,0 +1,236 @@
+{
+	"name": "Knuth's Dice",
+	"short": "die",
+	"type": "mdp",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2018-11-12",
+	"version-history": [
+		{
+			"date": "2018-11-12",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Donald Knuth <>",
+		"Andrew Chi-Chih Yao <andrewcyao@tsinghua.edu.cn>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "http://www.prismmodelchecker.org/casestudies/dice.php",
+	"part-of": {
+		"name": "the PRISM Case Studies",
+		"url": "http://www.prismmodelchecker.org/casestudies/"
+	},
+	"description": "This is a PRISM case study [1] which models fair `N´-sided dice using only fair coins. See [0] for more details",
+	"references": [
+		"https://doi.org/10.1109/QEST.2012.14"
+	],
+	"notes": "PRISM case study",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "Number of sides of the die",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "throw_max",
+			"description": "The maximal probability to throw a 6.",
+			"type": "prob-reach"
+		}
+	],
+	"files": [
+		{
+			"file": "die.6.jani",
+			"original-file": [
+				"die.6.prism",
+				"die.6.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.1 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm --prism die.6.prism --prop die.6.props --prism2jani --prism-output die.6.jani"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 6
+				}
+			],
+			"open-parameter-values": [
+				{
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 13
+						}
+					],
+					"results": [
+						{
+							"property": "throw_max",
+							"value": 0.16666662693023682,
+							"note": "mcsta"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "die.128.jani",
+			"original-file": [
+				"die.128.prism",
+				"die.128.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.1 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm --prism die.128.prism --prop die.128.props --prism2jani --prism-output die.128.jani"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 128
+				}
+			],
+			"open-parameter-values": [
+				{
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 255
+						}
+					],
+					"results": [
+						{
+							"property": "throw_max",
+							"value": 0.0078125,
+							"note": "mcsta"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "die.512.jani",
+			"original-file": [
+				"die.512.prism",
+				"die.512.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.1 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm --prism die.512.prism --prop die.512.props --prism2jani --prism-output die.512.jani"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 512
+				}
+			],
+			"open-parameter-values": [
+				{
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 1023
+						}
+					],
+					"results": [
+						{
+							"property": "throw_max",
+							"value": 0.001953125,
+							"note": "mcsta"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "die.1024.jani",
+			"original-file": [
+				"die.1024.prism",
+				"die.1024.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.1 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm --prism die.1024.prism --prop die.1024.props --prism2jani --prism-output die.1024.jani"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 1024
+				}
+			],
+			"open-parameter-values": [
+				{
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 2047
+						}
+					],
+					"results": [
+						{
+							"property": "throw_max",
+							"value": 0.0009765625,
+							"note": "mcsta"
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "die.2048.jani",
+			"original-file": [
+				"die.2048.prism",
+				"die.2048.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.1 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm --prism die.2048.prism --prop die.2048.props --prism2jani --prism-output die.2048.jani"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 2048
+				}
+			],
+			"open-parameter-values": [
+				{
+					"states": [
+					],
+					"results": [
+					]
+				}
+			]
+		}
+	],
+	"results": [
+		{
+			"reference": false,
+			"file": "results/mcsta.6.2018-11-13.json"
+		},
+		{
+			"reference": false,
+			"file": "results/mcsta.128.2018-11-13.json"
+		},
+		{
+			"reference": false,
+			"file": "results/mcsta.512.2018-11-13.json"
+		},
+		{
+			"reference": false,
+			"file": "results/mcsta.1024.2018-11-13.json"
+		}
+	]
+}
