@@ -84,6 +84,12 @@
 							"name": "T",
 							"value": 50
 						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 6020
+						}
 					]
 				},
 				{
@@ -96,6 +102,12 @@
 							"name": "T",
 							"value": 500
 						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 6020
+						}
 					]
 				},
 				{
@@ -107,6 +119,12 @@
 						{
 							"name": "T",
 							"value": 5000
+						}
+					],
+					"states": [
+						{
+							"number": 6020,
+							"note": "mcsta"
 						}
 					]
 				},
@@ -132,6 +150,12 @@
 							"name": "T",
 							"value": 10000
 						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 6020
+						}
 					]
 				},
 				{
@@ -143,6 +167,12 @@
 						{
 							"name": "T",
 							"value": 15000
+						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 6020
 						}
 					]
 				},
@@ -156,6 +186,12 @@
 							"name": "T",
 							"value": 50
 						}
+					],
+					"states": [
+						{
+							"number": 7670,
+							"note": "mcsta"
+						}
 					]
 				},
 				{
@@ -168,6 +204,12 @@
 							"name": "T",
 							"value": 500
 						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 7670
+						}
 					]
 				},
 				{
@@ -179,6 +221,12 @@
 						{
 							"name": "T",
 							"value": 5000
+						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 7670
 						}
 					]
 				},
@@ -204,6 +252,12 @@
 							"name": "T",
 							"value": 10000
 						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 7670
+						}
 					]
 				},
 				{
@@ -215,6 +269,12 @@
 						{
 							"name": "T",
 							"value": 15000
+						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 7670
 						}
 					]
 				}

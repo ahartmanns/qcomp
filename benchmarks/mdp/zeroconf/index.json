@@ -510,6 +510,20 @@
 							"name": "reset",
 							"value": false
 						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 798471
+						},
+						{
+							"note": "mcsta",
+							"number": 796941
+						},
+						{
+							"note": "Storm",
+							"number": 798471
+						}
 					]
 				},
 				{
@@ -525,6 +539,20 @@
 						{
 							"name": "reset",
 							"value": false
+						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 1870338
+						},
+						{
+							"note": "mcsta",
+							"number": 1868787
+						},
+						{
+							"note": "Storm",
+							"number": 1870338
 						}
 					]
 				},
@@ -626,6 +654,20 @@
 							"name": "reset",
 							"value": false
 						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 798471
+						},
+						{
+							"note": "mcsta",
+							"number": 796941
+						},
+						{
+							"note": "Storm",
+							"number": 798471
+						}
 					]
 				},
 				{
@@ -641,6 +683,20 @@
 						{
 							"name": "reset",
 							"value": false
+						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 1870338
+						},
+						{
+							"note": "mcsta",
+							"number": 1868787
+						},
+						{
+							"note": "Storm",
+							"number": 1870338
 						}
 					]
 				}
