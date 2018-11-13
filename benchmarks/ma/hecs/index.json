@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-10-28",
 	"version-history": [
-		{ "version": 1, "date": "2018-10-28", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-10-28",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Enno Ruijters <e.j.j.ruijters@utwente.nl>",
 	"submitter": "Enno Ruijters <e.j.j.ruijters@utwente.nl>",
@@ -24,9 +28,24 @@
 		"https://research.utwente.nl/en/publications/dftcalc-a-tool-for-efficient-fault-tree-analysis-extended-version"
 	],
 	"parameters": [
-		{ "name": "R", "kind": "file", "description": "Whether the model has repairs or not", "type": "Boolean" },
-		{ "name": "N", "kind": "file", "description": "Number of replications of the computer system", "type": "positive integer" },
-		{ "name": "k", "kind": "file", "description": "Number of functioning replications needed to avoid system failure", "type": "positive integer" }
+		{
+			"name": "R",
+			"kind": "file",
+			"description": "Whether the model has repairs or not",
+			"type": "Boolean"
+		},
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "Number of replications of the computer system",
+			"type": "positive integer"
+		},
+		{
+			"name": "k",
+			"kind": "file",
+			"description": "Number of functioning replications needed to avoid system failure",
+			"type": "positive integer"
+		}
 	],
 	"properties": [
 		{
@@ -50,11 +69,29 @@
 				"url": "https://github.com/utwente-fmt/DFTRES",
 				"command": "java -jar DFTRES.jar --json --export-jani hecs.false-1-1.jani -a -r 1 hecs.false-1-1.dft"
 			},
-			"open-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"states": [
+						{
+							"note": "Storm",
+							"number": 5155917
+						}
+					]
+				}
+			],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 1 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 1
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -68,9 +105,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 2 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 2
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -84,9 +130,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 2 },
-				{ "name": "k", "value": 2 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 2
+				},
+				{
+					"name": "k",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -100,9 +155,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 3 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 3
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -116,9 +180,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 3 },
-				{ "name": "k", "value": 2 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 3
+				},
+				{
+					"name": "k",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -132,9 +205,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 3 },
-				{ "name": "k", "value": 3 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 3
+				},
+				{
+					"name": "k",
+					"value": 3
+				}
 			]
 		},
 		{
@@ -148,9 +230,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 4 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -164,9 +255,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 4 },
-				{ "name": "k", "value": 2 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "k",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -180,9 +280,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 4 },
-				{ "name": "k", "value": 3 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "k",
+					"value": 3
+				}
 			]
 		},
 		{
@@ -196,9 +305,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 4 },
-				{ "name": "k", "value": 4 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "k",
+					"value": 4
+				}
 			]
 		},
 		{
@@ -212,9 +330,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 5 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 5
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -228,9 +355,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 5 },
-				{ "name": "k", "value": 5 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 5
+				},
+				{
+					"name": "k",
+					"value": 5
+				}
 			]
 		},
 		{
@@ -244,9 +380,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 6 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 6
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -260,9 +405,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 6 },
-				{ "name": "k", "value": 6 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 6
+				},
+				{
+					"name": "k",
+					"value": 6
+				}
 			]
 		},
 		{
@@ -276,9 +430,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 7 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 7
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -292,9 +455,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 7 },
-				{ "name": "k", "value": 7 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 7
+				},
+				{
+					"name": "k",
+					"value": 7
+				}
 			]
 		},
 		{
@@ -308,9 +480,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 8 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 8
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -324,9 +505,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": false },
-				{ "name": "N", "value": 8 },
-				{ "name": "k", "value": 8 }
+				{
+					"name": "R",
+					"value": false
+				},
+				{
+					"name": "N",
+					"value": 8
+				},
+				{
+					"name": "k",
+					"value": 8
+				}
 			]
 		},
 		{
@@ -340,9 +530,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": true },
-				{ "name": "N", "value": 1 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": true
+				},
+				{
+					"name": "N",
+					"value": 1
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -356,9 +555,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": true },
-				{ "name": "N", "value": 2 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": true
+				},
+				{
+					"name": "N",
+					"value": 2
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -372,9 +580,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": true },
-				{ "name": "N", "value": 2 },
-				{ "name": "k", "value": 2 }
+				{
+					"name": "R",
+					"value": true
+				},
+				{
+					"name": "N",
+					"value": 2
+				},
+				{
+					"name": "k",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -388,9 +605,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": true },
-				{ "name": "N", "value": 3 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": true
+				},
+				{
+					"name": "N",
+					"value": 3
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -404,9 +630,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": true },
-				{ "name": "N", "value": 3 },
-				{ "name": "k", "value": 2 }
+				{
+					"name": "R",
+					"value": true
+				},
+				{
+					"name": "N",
+					"value": 3
+				},
+				{
+					"name": "k",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -420,9 +655,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": true },
-				{ "name": "N", "value": 3 },
-				{ "name": "k", "value": 3 }
+				{
+					"name": "R",
+					"value": true
+				},
+				{
+					"name": "N",
+					"value": 3
+				},
+				{
+					"name": "k",
+					"value": 3
+				}
 			]
 		},
 		{
@@ -436,9 +680,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": true },
-				{ "name": "N", "value": 4 },
-				{ "name": "k", "value": 1 }
+				{
+					"name": "R",
+					"value": true
+				},
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "k",
+					"value": 1
+				}
 			]
 		},
 		{
@@ -452,9 +705,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": true },
-				{ "name": "N", "value": 4 },
-				{ "name": "k", "value": 2 }
+				{
+					"name": "R",
+					"value": true
+				},
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "k",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -468,9 +730,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": true },
-				{ "name": "N", "value": 4 },
-				{ "name": "k", "value": 3 }
+				{
+					"name": "R",
+					"value": true
+				},
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "k",
+					"value": 3
+				}
 			]
 		},
 		{
@@ -484,9 +755,18 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "R", "value": true },
-				{ "name": "N", "value": 4 },
-				{ "name": "k", "value": 4 }
+				{
+					"name": "R",
+					"value": true
+				},
+				{
+					"name": "N",
+					"value": 4
+				},
+				{
+					"name": "k",
+					"value": 4
+				}
 			]
 		}
 	]

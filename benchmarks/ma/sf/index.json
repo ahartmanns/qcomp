@@ -6,7 +6,11 @@
 	"version": 1,
 	"date": "2018-10-29",
 	"version-history": [
-		{ "version": 1, "date": "2018-10-29", "notes": "Initial version." }
+		{
+			"version": 1,
+			"date": "2018-10-29",
+			"notes": "Initial version."
+		}
 	],
 	"author": "Enno Ruijters <e.j.j.ruijters@utwente.nl>",
 	"submitter": "Enno Ruijters <e.j.j.ruijters@utwente.nl>",
@@ -23,8 +27,18 @@
 		"https://research.utwente.nl/en/publications/dftcalc-a-tool-for-efficient-fault-tree-analysis-extended-version"
 	],
 	"parameters": [
-		{ "name": "S", "kind": "file", "description": "Number of sensors", "type": "positive integer" },
-		{ "name": "F", "kind": "file", "description": "Number of filters", "type": "positive integer" }
+		{
+			"name": "S",
+			"kind": "file",
+			"description": "Number of sensors",
+			"type": "positive integer"
+		},
+		{
+			"name": "F",
+			"kind": "file",
+			"description": "Number of filters",
+			"type": "positive integer"
+		}
 	],
 	"properties": [
 		{
@@ -43,10 +57,25 @@
 				"url": "https://github.com/utwente-fmt/DFTRES",
 				"command": "java -jar DFTRES.jar --json --export-jani sf.1-10.jani -r 1 sf.1-10.dft"
 			},
-			"open-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"states": [
+						{
+							"note": "Storm",
+							"number": 94619952
+						}
+					]
+				}
+			],
 			"file-parameter-values": [
-				{ "name": "S", "value": 1 },
-				{ "name": "F", "value": 10 }
+				{
+					"name": "S",
+					"value": 1
+				},
+				{
+					"name": "F",
+					"value": 10
+				}
 			]
 		},
 		{
@@ -60,8 +89,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 1 },
-				{ "name": "F", "value": 12 }
+				{
+					"name": "S",
+					"value": 1
+				},
+				{
+					"name": "F",
+					"value": 12
+				}
 			]
 		},
 		{
@@ -75,8 +110,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 1 },
-				{ "name": "F", "value": 2 }
+				{
+					"name": "S",
+					"value": 1
+				},
+				{
+					"name": "F",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -90,8 +131,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 1 },
-				{ "name": "F", "value": 4 }
+				{
+					"name": "S",
+					"value": 1
+				},
+				{
+					"name": "F",
+					"value": 4
+				}
 			]
 		},
 		{
@@ -105,8 +152,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 1 },
-				{ "name": "F", "value": 6 }
+				{
+					"name": "S",
+					"value": 1
+				},
+				{
+					"name": "F",
+					"value": 6
+				}
 			]
 		},
 		{
@@ -120,8 +173,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 1 },
-				{ "name": "F", "value": 8 }
+				{
+					"name": "S",
+					"value": 1
+				},
+				{
+					"name": "F",
+					"value": 8
+				}
 			]
 		},
 		{
@@ -135,8 +194,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 2 },
-				{ "name": "F", "value": 10 }
+				{
+					"name": "S",
+					"value": 2
+				},
+				{
+					"name": "F",
+					"value": 10
+				}
 			]
 		},
 		{
@@ -150,8 +215,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 2 },
-				{ "name": "F", "value": 12 }
+				{
+					"name": "S",
+					"value": 2
+				},
+				{
+					"name": "F",
+					"value": 12
+				}
 			]
 		},
 		{
@@ -165,8 +236,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 2 },
-				{ "name": "F", "value": 2 }
+				{
+					"name": "S",
+					"value": 2
+				},
+				{
+					"name": "F",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -180,8 +257,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 2 },
-				{ "name": "F", "value": 4 }
+				{
+					"name": "S",
+					"value": 2
+				},
+				{
+					"name": "F",
+					"value": 4
+				}
 			]
 		},
 		{
@@ -195,8 +278,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 2 },
-				{ "name": "F", "value": 6 }
+				{
+					"name": "S",
+					"value": 2
+				},
+				{
+					"name": "F",
+					"value": 6
+				}
 			]
 		},
 		{
@@ -210,8 +299,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 2 },
-				{ "name": "F", "value": 8 }
+				{
+					"name": "S",
+					"value": 2
+				},
+				{
+					"name": "F",
+					"value": 8
+				}
 			]
 		},
 		{
@@ -225,8 +320,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 3 },
-				{ "name": "F", "value": 2 }
+				{
+					"name": "S",
+					"value": 3
+				},
+				{
+					"name": "F",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -240,8 +341,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 3 },
-				{ "name": "F", "value": 4 }
+				{
+					"name": "S",
+					"value": 3
+				},
+				{
+					"name": "F",
+					"value": 4
+				}
 			]
 		},
 		{
@@ -255,8 +362,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 3 },
-				{ "name": "F", "value": 6 }
+				{
+					"name": "S",
+					"value": 3
+				},
+				{
+					"name": "F",
+					"value": 6
+				}
 			]
 		},
 		{
@@ -270,8 +383,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 4 },
-				{ "name": "F", "value": 2 }
+				{
+					"name": "S",
+					"value": 4
+				},
+				{
+					"name": "F",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -285,8 +404,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 4 },
-				{ "name": "F", "value": 4 }
+				{
+					"name": "S",
+					"value": 4
+				},
+				{
+					"name": "F",
+					"value": 4
+				}
 			]
 		},
 		{
@@ -300,8 +425,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 4 },
-				{ "name": "F", "value": 6 }
+				{
+					"name": "S",
+					"value": 4
+				},
+				{
+					"name": "F",
+					"value": 6
+				}
 			]
 		},
 		{
@@ -315,8 +446,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 5 },
-				{ "name": "F", "value": 2 }
+				{
+					"name": "S",
+					"value": 5
+				},
+				{
+					"name": "F",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -330,8 +467,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 5 },
-				{ "name": "F", "value": 4 }
+				{
+					"name": "S",
+					"value": 5
+				},
+				{
+					"name": "F",
+					"value": 4
+				}
 			]
 		},
 		{
@@ -345,8 +488,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 5 },
-				{ "name": "F", "value": 6 }
+				{
+					"name": "S",
+					"value": 5
+				},
+				{
+					"name": "F",
+					"value": 6
+				}
 			]
 		},
 		{
@@ -360,8 +509,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 6 },
-				{ "name": "F", "value": 2 }
+				{
+					"name": "S",
+					"value": 6
+				},
+				{
+					"name": "F",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -375,8 +530,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 6 },
-				{ "name": "F", "value": 4 }
+				{
+					"name": "S",
+					"value": 6
+				},
+				{
+					"name": "F",
+					"value": 4
+				}
 			]
 		},
 		{
@@ -390,8 +551,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 6 },
-				{ "name": "F", "value": 6 }
+				{
+					"name": "S",
+					"value": 6
+				},
+				{
+					"name": "F",
+					"value": 6
+				}
 			]
 		},
 		{
@@ -405,8 +572,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 7 },
-				{ "name": "F", "value": 2 }
+				{
+					"name": "S",
+					"value": 7
+				},
+				{
+					"name": "F",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -420,8 +593,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 7 },
-				{ "name": "F", "value": 4 }
+				{
+					"name": "S",
+					"value": 7
+				},
+				{
+					"name": "F",
+					"value": 4
+				}
 			]
 		},
 		{
@@ -435,8 +614,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 7 },
-				{ "name": "F", "value": 6 }
+				{
+					"name": "S",
+					"value": 7
+				},
+				{
+					"name": "F",
+					"value": 6
+				}
 			]
 		},
 		{
@@ -450,8 +635,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 8 },
-				{ "name": "F", "value": 2 }
+				{
+					"name": "S",
+					"value": 8
+				},
+				{
+					"name": "F",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -465,8 +656,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 8 },
-				{ "name": "F", "value": 4 }
+				{
+					"name": "S",
+					"value": 8
+				},
+				{
+					"name": "F",
+					"value": 4
+				}
 			]
 		},
 		{
@@ -480,8 +677,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 8 },
-				{ "name": "F", "value": 6 }
+				{
+					"name": "S",
+					"value": 8
+				},
+				{
+					"name": "F",
+					"value": 6
+				}
 			]
 		},
 		{
@@ -495,8 +698,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 9 },
-				{ "name": "F", "value": 2 }
+				{
+					"name": "S",
+					"value": 9
+				},
+				{
+					"name": "F",
+					"value": 2
+				}
 			]
 		},
 		{
@@ -510,8 +719,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 9 },
-				{ "name": "F", "value": 4 }
+				{
+					"name": "S",
+					"value": 9
+				},
+				{
+					"name": "F",
+					"value": 4
+				}
 			]
 		},
 		{
@@ -525,8 +740,14 @@
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "S", "value": 9 },
-				{ "name": "F", "value": 6 }
+				{
+					"name": "S",
+					"value": 9
+				},
+				{
+					"name": "F",
+					"value": 6
+				}
 			]
 		}
 	]

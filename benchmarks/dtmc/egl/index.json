@@ -368,6 +368,16 @@
 							"name": "L",
 							"value": 8
 						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 317718526
+						},
+						{
+							"note": "mcsta",
+							"number": 317718526
+						}
 					]
 				},
 				{
@@ -379,6 +389,12 @@
 						{
 							"name": "L",
 							"value": 2
+						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 99857989630
 						}
 					]
 				},
@@ -392,6 +408,12 @@
 							"name": "L",
 							"value": 4
 						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 228707008510
+						}
 					]
 				},
 				{
@@ -404,6 +426,12 @@
 							"name": "L",
 							"value": 6
 						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 357556027390
+						}
 					]
 				},
 				{
@@ -415,6 +443,12 @@
 						{
 							"name": "L",
 							"value": 8
+						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 486405046270
 						}
 					]
 				},
@@ -428,6 +462,12 @@
 							"name": "L",
 							"value": 2
 						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 135239930216446
+						}
 					]
 				},
 				{
@@ -439,6 +479,12 @@
 						{
 							"name": "L",
 							"value": 4
+						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 311161790660606
 						}
 					]
 				},
@@ -452,6 +498,12 @@
 							"name": "L",
 							"value": 6
 						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 487083651104766
+						}
 					]
 				},
 				{
@@ -463,6 +515,12 @@
 						{
 							"name": "L",
 							"value": 8
+						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 663005511548926
 						}
 					]
 				}

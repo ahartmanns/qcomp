@@ -79,6 +79,12 @@
 							"name": "T",
 							"value": 2500
 						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 4432272
+						}
 					]
 				},
 				{
@@ -91,6 +97,12 @@
 							"name": "T",
 							"value": 5000
 						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 4432272
+						}
 					]
 				},
 				{
@@ -102,6 +114,12 @@
 						{
 							"name": "T",
 							"value": 7500
+						}
+					],
+					"states": [
+						{
+							"note": "mcsta",
+							"number": 4432272
 						}
 					]
 				},

@@ -352,7 +352,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 524288
+						}
+					]
 				}
 			]
 		},
@@ -376,7 +382,13 @@
 			],
 			"open-parameter-values": [
 				{
-					"values": []
+					"values": [],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 2097152
+						}
+					]
 				}
 			]
 		}
