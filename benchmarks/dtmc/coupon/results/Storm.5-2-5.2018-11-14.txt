@@ -1,0 +1,39 @@
+Storm 1.2.4 (dev)
+
+Date: Wed Nov 14 21:32:52 2018
+Command line arguments: --jani coupon.5-2.jani --janiproperty --constants B=5 --timemem
+Current working directory: /Users/tim/git/qcomp/benchmarks/dtmc/coupon
+
+Time for model input parsing: 0.006s.
+
+Time for model construction: 0.087s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5397
+Transitions: 	7781
+Choices: 	5397
+Reward Models:  numberDraws
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * _ret0_ -> 25 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "collect_all": Pmin=? [F "_ret0_"] ...
+Result (for initial states): 1
+Time for model checking: 0.005s.
+
+Model checking property "exp_draws": R[exp]{"numberDraws"}min=? [F "_ret0_"] ...
+Result (for initial states): 5.960322641
+Time for model checking: 0.885s.
+
+Model checking property "collect_all_bounded": Pmin=? [true Urew{"numberDraws"}<=5 "_ret0_"] ...
+Result (for initial states): 0.5225472
+Time for model checking: 0.150s.
+
+Performance statistics:
+  * peak memory usage: 73MB
+  * CPU time: 1.188s
+  * wallclock time: 1.137s

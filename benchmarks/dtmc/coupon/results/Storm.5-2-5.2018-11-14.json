@@ -1,0 +1,98 @@
+{
+	"file": "../coupon.5-2.jani",
+	"version": 1,
+	"date": "2018-11-14",
+	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
+	"log": "Storm.5-2-5.2018-11-14.txt",
+	"open-parameter-values": [
+		{
+			"name": "B",
+			"value": 5
+		}
+	],
+	"tool": {
+		"name": "Storm",
+		"version": "1.2.4 (dev)",
+		"url": "http://www.stormchecker.org"
+	},
+	"system": {
+		"cpu": "Intel Core i5-5257U",
+		"ram": "16",
+		"os": "macOS 10.13.5",
+		"runtime": "Apple LLVM version 9.1.0 (clang-902.0.39.2)"
+	},
+	"command": "storm --jani coupon.5-2.jani --janiproperty --constants B=5  --timemem",
+	"time": 1.137,
+	"memory": 76546048,
+	"property-times": [
+		{
+			"name:": "collect_all",
+			"time": 0.005
+		},
+		{
+			"name:": "exp_draws",
+			"time": 0.885
+		},
+		{
+			"name:": "collect_all_bounded",
+			"time": 0.15
+		}
+	],
+	"data": [
+		{
+			"values": [
+				{
+					"unit": "s",
+					"name": "time",
+					"value": 0.087
+				},
+				{
+					"name": "states",
+					"value": 5397
+				},
+				{
+					"name": "branches",
+					"value": 7781
+				},
+				{
+					"name": "transitions",
+					"value": 5397
+				}
+			],
+			"group": "State space exploration"
+		},
+		{
+			"property": "collect_all",
+			"values": [
+				{
+					"unit": "s",
+					"name": "time",
+					"value": 0.005
+				}
+			],
+			"value": 1
+		},
+		{
+			"property": "exp_draws",
+			"values": [
+				{
+					"unit": "s",
+					"name": "time",
+					"value": 0.885
+				}
+			],
+			"value": 5.960322641
+		},
+		{
+			"property": "collect_all_bounded",
+			"values": [
+				{
+					"unit": "s",
+					"name": "time",
+					"value": 0.15
+				}
+			],
+			"value": 0.5225472
+		}
+	]
+}
