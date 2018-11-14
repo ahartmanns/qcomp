@@ -16,5 +16,6 @@
 *.props text
 *.txt text
 
-*.pdf binary
 *.gz binary
+*.pdf binary
+*.woff2 binary
