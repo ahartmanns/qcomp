@@ -1,0 +1,223 @@
+{
+	"name": "Coupon Collectors",
+	"short": "coupon",
+	"type": "dtmc",
+	"original": "PGCL",
+	"version": 1,
+	"date": "2018-11-12",
+	"version-history": [
+		{
+			"date": "2018-11-12",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Christian Hensel <dehnert@cs.rwth-aachen.de>",
+		"Sebastian Junges <sebastian.junges@cs.rwth-aachen.de>"
+	],
+	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
+	"source": "https://doi.org/10.1007/978-3-319-46520-3_5",
+	"description": "This model describes a contest where the goal is to collect all coupons from a given set. It can be abstracted as drawing from an urn of `N´ different coupons with replacement where drawing each coupon is equally likely as described in [1] and [2]. In our case, a certain number of coupons can be drawn at once.",
+	"references": [
+		"https://doi.org/10.1016%2F0166-218X%2892%2990177-C",
+		"https://en.wikipedia.org/wiki/Coupon_collector%27s_problem"
+	],
+	"notes": "classic probabilistic programming example",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "Number of coupons to collect",
+			"type": "positive integer"
+		},
+		{
+			"name": "DRAWS",
+			"kind": "file",
+			"description": "Number of draws from the urn",
+			"type": "positive integer"
+		},
+		{
+			"name": "B",
+			"kind": "open",
+			"description": "Bound for the number of draws",
+			"type": "positive integer"
+		}
+	],
+	"properties": [		
+		{
+			"name": "collect_all",
+			"description": "The probability to eventually collect all coupons.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "exp_draws",
+			"description": "The expected number of draws until all coupons are collected.",
+			"type": "exp-reward"
+		},
+		{
+			"name": "collect_all_bounded",
+			"description": "The probability to collect all coupons with at most `B´ draws.",
+			"type": "prob-reach-reward-bounded"
+		}
+	],
+	"files": [
+		{
+			"file": "coupon.5-2.jani",
+			"original-file": [
+				"coupon.5-2.pgcl",
+				"coupon.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-pgcl --pgclfile coupon.5-2.pgcl --to-jani coupon.5-2.jani --prop coupon.props"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 5
+				},
+				{
+					"name": "DRAWS",
+					"value": 2
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "B",
+							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 5397
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "coupon.7-3.jani",
+			"original-file": [
+				"coupon.7-3.pgcl",
+				"coupon.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-pgcl --pgclfile coupon.7-3.pgcl --to-jani coupon.7-3.jani --prop coupon.props"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 7
+				},
+				{
+					"name": "DRAWS",
+					"value": 3
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "B",
+							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm",
+							"number": 337710
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "coupon.9-4.jani",
+			"original-file": [
+				"coupon.9-4.pgcl",
+				"coupon.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-pgcl --pgclfile coupon.9-4.pgcl --to-jani coupon.9-4.jani --prop coupon.props"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 9
+				},
+				{
+					"name": "DRAWS",
+					"value": 4
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "B",
+							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 27642923
+						}
+					]
+				}
+			]
+		},
+		{
+			"file": "coupon.15-4.jani",
+			"original-file": [
+				"coupon.15-4.pgcl",
+				"coupon.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.2.4 (dev)",
+				"url": "http://www.stormchecker.org",
+				"command": "storm-pgcl --pgclfile coupon.15-4.pgcl --to-jani coupon.5-2.jani --prop coupon.props"
+			},
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 15
+				},
+				{
+					"name": "DRAWS",
+					"value": 4
+				}
+			],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "B",
+							"value": 5
+						}
+					],
+					"states": [
+						{
+							"note": "Storm/dd",
+							"number": 17486977236
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}
