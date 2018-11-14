@@ -71,11 +71,6 @@
 						}
 					],
 					"results": [
-						{
-							"property": "stable",
-							"value": 0.9999999925494194,
-							"note": "mcsta"
-						}
 					]
 				}
 			]
@@ -107,11 +102,6 @@
 						}
 					],
 					"results": [
-						{
-							"property": "stable",
-							"value": 0.999994507969588,
-							"note": "mcsta"
-						}
 					]
 				}
 			]
@@ -143,11 +133,6 @@
 						}
 					],
 					"results": [
-						{
-							"property": "stable",
-							"value": 0.99996825335523387,
-							"note": "mcsta"
-						}
 					]
 				}
 			]

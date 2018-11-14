@@ -20,7 +20,7 @@
 	"time": 1.632,
 	"memory": 66662400,
 	"property-times": [
-		{ "name": "1", "time": 0.045 }
+		{ "name": "live", "time": 0.045 }
 	],
 	"data": [
 		{

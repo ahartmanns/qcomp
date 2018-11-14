@@ -1,2 +1,0 @@
-// What is the probability to throw a six with the die specified in the model?
-"throw_max": Pmax=? [ F s1=2047 & d1=6 ]; 

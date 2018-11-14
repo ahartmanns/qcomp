@@ -1,6 +1,6 @@
 {
 	"name": "Dining Philosophers",
-	"short": "phil",
+	"short": "philosophers-mdp",
 	"type": "mdp",
 	"original": "PRISM",
 	"version": 1,
@@ -45,16 +45,16 @@
 	],
 	"files": [
 		{
-			"file": "phil.3.jani",
+			"file": "philosophers-mdp.3.jani",
 			"original-file": [
-				"phil.3.prism",
-				"phil.3.props"
+				"philosophers-mdp.3.prism",
+				"philosophers-mdp.3.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.1 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm --prism phil.3.prism --prop phil.3.props  --prism2jani --jani-output phil.3.jani"
+				"command": "storm --prism philosophers-mdp.3.prism --prop philosophers-mdp.3.props  --prism2jani --jani-output philosophers-mdp.3.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -71,26 +71,21 @@
 						}
 					],
 					"results": [
-						{
-							"property": "eat",
-							"value": 1,
-							"note": "mcsta"
-						}
 					]
 				}
 			]
 		},
 		{
-			"file": "phil.10.jani",
+			"file": "philosophers-mdp.10.jani",
 			"original-file": [
-				"phil.10.prism",
-				"phil.10.props"
+				"philosophers-mdp.10.prism",
+				"philosophers-mdp.10.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.1 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm --prism phil.10.prism --prop phil.10.props  --prism2jani --jani-output phil.10.jani"
+				"command": "storm --prism philosophers-mdp.10.prism --prop philosophers-mdp.10.props  --prism2jani --jani-output philosophers-mdp.10.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -108,16 +103,16 @@
 			]
 		},
 		{
-			"file": "phil.20.jani",
+			"file": "philosophers-mdp.20.jani",
 			"original-file": [
-				"phil.20.prism",
-				"phil.20.props"
+				"philosophers-mdp.20.prism",
+				"philosophers-mdp.20.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.1 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm --prism phil.20.prism --prop phil.20.props  --prism2jani --jani-output phil.20.jani"
+				"command": "storm --prism philosophers-mdp.20.prism --prop philosophers-mdp.20.props  --prism2jani --jani-output philosophers-mdp.20.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -135,16 +130,16 @@
 			]
 		},
 		{
-			"file": "phil.30.jani",
+			"file": "philosophers-mdp.30.jani",
 			"original-file": [
-				"phil.30.prism",
-				"phil.30.props"
+				"philosophers-mdp.30.prism",
+				"philosophers-mdp.30.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.1 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm --prism phil.30.prism --prop phil.30.props  --prism2jani --jani-output phil.30.jani"
+				"command": "storm --prism philosophers-mdp.30.prism --prop philosophers-mdp.30.props  --prism2jani --jani-output philosophers-mdp.30.jani"
 			},
 			"file-parameter-values": [
 				{

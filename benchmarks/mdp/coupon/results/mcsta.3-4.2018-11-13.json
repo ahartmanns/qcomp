@@ -20,7 +20,7 @@
 	"time": 2.296,
 	"memory": 43016192,
 	"property-times": [
-		{ "name": "1", "time": 0.072 }
+		{ "name": "collect_all", "time": 0.072 }
 	],
 	"data": [
 		{

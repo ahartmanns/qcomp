@@ -1,5 +1,5 @@
 ﻿{
-	"file": "../phil.3.jani",
+	"file": "../philosophers-mdp.3.jani",
 	"version": 1,
 	"date": "2018-11-13",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -16,11 +16,11 @@
 		"os": "Windows 10 Home 1803 (x64)",
 		"runtime": ".NET Framework 4.7.2"
 	},
-	"command": "mcsta phil.3.jani -O mcsta.3.2018-11-13.json Json",
+	"command": "mcsta philosophers-mdp.3.jani -O mcsta.3.2018-11-13.json Json",
 	"time": 2.665,
 	"memory": 43630592,
 	"property-times": [
-		{ "name": "1", "time": 0.098 }
+		{ "name": "eat", "time": 0.098 }
 	],
 	"data": [
 		{

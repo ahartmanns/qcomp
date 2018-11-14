@@ -3125,7 +3125,7 @@
                     "op": "Pmax"
                 }
             },
-            "name": "1"
+            "name": "stable"
         }
     ],
     "restrict-initial": {

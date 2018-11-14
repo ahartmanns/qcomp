@@ -1101,7 +1101,7 @@
                     "op": "Pmax"
                 }
             },
-            "name": "1"
+            "name": "collect_all"
         }
     ],
     "restrict-initial": {

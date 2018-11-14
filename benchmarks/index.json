@@ -46,7 +46,6 @@
   { "path": "mdp/consensus" },
   { "path": "mdp/coupon" },
   { "path": "mdp/csma" },
-  { "path": "mdp/die" },
   { "path": "mdp/phil" },
   { "path": "mdp/eajs" },
   { "path": "mdp/echoring" },
