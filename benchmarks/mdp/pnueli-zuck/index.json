@@ -48,13 +48,13 @@
 			"file": "pnueli-zuck.3.jani",
 			"original-file": [
 				"pnueli-zuck.3.prism",
-				"pnueli-zuck.3.props"
+				"pnueli-zuck.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.1 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm --prism pnueli-zuck.3.prism --prop pnueli-zuck.3.props --prism2jani --prism-output pnueli-zuck.3.jani"
+				"command": "storm --prism pnueli-zuck.3.prism --prop pnueli-zuck.props --prism2jani --prism-output pnueli-zuck.3.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -79,13 +79,13 @@
 			"file": "pnueli-zuck.5.jani",
 			"original-file": [
 				"pnueli-zuck.5.prism",
-				"pnueli-zuck.5.props"
+				"pnueli-zuck.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.1 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm --prism pnueli-zuck.5.prism --prop pnueli-zuck.5.props --prism2jani --prism-output pnueli-zuck.5.jani"
+				"command": "storm --prism pnueli-zuck.5.prism --prop pnueli-zuck.props --prism2jani --prism-output pnueli-zuck.5.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -110,13 +110,13 @@
 			"file": "pnueli-zuck.10.jani",
 			"original-file": [
 				"pnueli-zuck.10.prism",
-				"pnueli-zuck.10.props"
+				"pnueli-zuck.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.1 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm --prism pnueli-zuck.10.prism --prop pnueli-zuck.10.props --prism2jani --prism-output pnueli-zuck.10.jani"
+				"command": "storm --prism pnueli-zuck.10.prism --prop pnueli-zuck.props --prism2jani --prism-output pnueli-zuck.10.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -137,13 +137,13 @@
 			"file": "pnueli-zuck.15.jani",
 			"original-file": [
 				"pnueli-zuck.15.prism",
-				"pnueli-zuck.15.props"
+				"pnueli-zuck.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
 				"version": "1.2.1 (dev)",
 				"url": "http://www.stormchecker.org",
-				"command": "storm --prism pnueli-zuck.15.prism --prop pnueli-zuck.15.props --prism2jani --prism-output pnueli-zuck.15.jani"
+				"command": "storm --prism pnueli-zuck.15.prism --prop pnueli-zuck.props --prism2jani --prism-output pnueli-zuck.15.jani"
 			},
 			"file-parameter-values": [
 				{
