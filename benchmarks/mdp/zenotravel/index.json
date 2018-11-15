@@ -2,7 +2,7 @@
 	"name": "Zeno-Travel",
 	"short": "zenotravel",
 	"type": "mdp",
-	"original": "PDDL",
+	"original": "PPDDL",
 	"version": 1,
 	"date": "2018-07-31",
 	"version-history": [
