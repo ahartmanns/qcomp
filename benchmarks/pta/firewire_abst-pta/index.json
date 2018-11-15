@@ -136,18 +136,6 @@
 						},
 						{
 							"name": "T",
-							"value": 5000
-						}
-					]
-				},
-				{
-					"values": [
-						{
-							"name": "delay",
-							"value": 30
-						},
-						{
-							"name": "T",
 							"value": 10000
 						}
 					],
@@ -227,18 +215,6 @@
 						{
 							"note": "mcsta",
 							"number": 7670
-						}
-					]
-				},
-				{
-					"values": [
-						{
-							"name": "delay",
-							"value": 360
-						},
-						{
-							"name": "T",
-							"value": 5000
 						}
 					]
 				},
