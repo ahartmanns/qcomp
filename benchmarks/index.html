@@ -145,7 +145,7 @@
 		
 		<!-- Parameters -->
 		<!-- ko if: parameters.length !== 0 -->
-			<h3 id="parameters">Parameters</h3>
+			<h3 id="details.parameters">Parameters</h3>
 			<table data-bind="foreach: parameters">
 				<tr>
 					<td data-bind="text: name" class="tt"></td>
@@ -156,7 +156,7 @@
 		<!-- /ko -->
 		
 		<!-- Properties -->
-		<h3 id="properties">Properties</h3>
+		<h3 id="details.properties">Properties</h3>
 		<table data-bind="foreach: properties">
 			<tr>
 				<td data-bind="text: name" class="tt"></td>
@@ -166,7 +166,7 @@
 		</table>
 		
 		<!-- Files -->
-		<h3 id="files">Files</h3>
+		<h3 id="details.files">Files</h3>
 		<ul data-bind="foreach: files">
 			<li>
 				<a data-bind="text: file, attr: { href: $parent.path + '/' + file, download: toVersionFileName(file.substr(file.lastIndexOf('/') + 1), $parent.version) }"></a>
@@ -228,7 +228,7 @@
 		
 		<!-- Results -->
 		<!-- ko if: loadedResults().length !== 0 -->
-			<h3 id="results">Results</h3>
+			<h3 id="details.results">Results</h3>
 			<ul data-bind="foreach: loadedResults">
 				<li data-bind="style: { listStyle: isReference ? '\'★ \'' : 'disc' }">
 					<a data-bind="text: file.substr(file.lastIndexOf('/') + 1), attr: { href: path + '/' + file, download: toVersionFileName(file.substr(file.lastIndexOf('/') + 1), model.version) }"></a>
@@ -236,6 +236,12 @@
 						/ <span data-bind="foreach: $data['open-parameter-values']"><span data-bind="text: value"></span><span data-bind="visible: $index() !== $parent['open-parameter-values'].length - 1">, </span></span>
 					<!-- /ko -->
 					/ <span data-bind="text: tool.name"></span>
+					<!-- ko if: tool.variant !== undefined && tool.variant.length !== 0 -->
+					(<span data-bind="text: tool.variant.join(', ')"></span>)
+					<!-- /ko -->
+					<!-- ko if: tool.variant === undefined || tool.variant.length === 0 -->
+					<!--/ default-->
+					<!-- /ko -->
 					<span data-bind="click: toggleShowResultDetails" class="linkcolour clickable" style="text-transform: uppercase; font-size: 90%;">(<span data-bind="text: showDetails() ? 'hide' : 'show'" style="font-size: 90%; font-weight: bold;"></span>)</span>
 					
 					<!-- ko if: showDetails -->
@@ -285,6 +291,7 @@
 						Results obtained on <span data-bind="text: date"></span>
 						<span data-bind="if: version !== $parent.version" style="color: #A00000; font-weight: bold;">using old version <span data-bind="text: version.toString()"></span> of the model</span>
 						with <!-- ko if: tool.url !== undefined --><a data-bind="text: tool.name, attr: { href: tool.url }"></a><!-- /ko --><!-- ko if: tool.url === undefined --><span data-bind="text: tool.name"></span><!-- /ko -->
+						<!-- ko if: tool.variant !== undefined && tool.variant.length !== 0 --><!-- (<span data-bind="text: tool.variant.join(', ')"></span>)--><!-- /ko -->
 						version <span data-bind="text: tool.version"></span>
 						<!-- ko if: tool['part-of'] !== undefined -->
 							(part of <!-- ko if: tool['part-of-url'] !== undefined --><a data-bind="text: tool['part-of'], attr: { href: tool['part-of-url'] }"></a><!-- /ko --><!-- ko if: tool['part-of-url'] === undefined --><span data-bind="text: tool['part-of']"></span><!-- /ko -->)

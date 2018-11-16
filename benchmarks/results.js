@@ -109,7 +109,7 @@ function loadResults(model, rs)
 			var result = {
 				model: model,
 				tool: createAndRegisterTool(r.tool),
-				toolVersion: createAndRegisterToolVersion(r.tool, r.tool.version),
+				toolVersion: createAndRegisterToolVersion(r.tool, r.tool.version, r.tool.variant),
 				time: r.time,
 				memory: r.memory,
 				propertyTimes: []
@@ -272,17 +272,19 @@ function onToolSelectedChanged(tool, newValue)
 	}
 	onSelectedChanged();
 }
-function createAndRegisterToolVersion(t, v)
+function createAndRegisterToolVersion(t, version, variant)
 {
 	var tool = vm.tools().find(vmt => vmt.name === t.name);
-	var toolVersion = vm.toolVersions().find(vmtv => vmtv.tool === tool && vmtv.version === v);
+	var toolVersion = vm.toolVersions().find(vmtv => vmtv.tool === tool && vmtv.version === version && compareToolVariants(vmtv.variant, variant) === 0);
 	if(toolVersion === undefined)
 	{
 		tool.versionCount(tool.versionCount() + 1);
 		toolVersion = {
 			tool: tool,
-			version: v,
-			selected: ko.observable(true)
+			version: version,
+			variant: variant,
+			selected: ko.observable(true),
+			toString: function() { return "v" + version + (variant === undefined || variant.length === 0 ? "" : (" (" + variant.join(", ") + ")")); }
 		};
 		toolVersion.selected.subscribe(newValue => onToolVersionSelectedChanged(toolVersion, newValue));
 		vm.toolVersions.push(toolVersion);
@@ -293,7 +295,25 @@ function compareToolVersions(tv1, tv2)
 {
 	var tc = compareTools(tv1.tool, tv2.tool);
 	if(tc !== 0) return tc;
-	return tv1.version < tv2.version ? -1 : tv1.version > tv2.version ? 1 : 0;
+	if(tv1.version < tv2.version) return -1;
+	if(tv1.version > tv2.version) return 1;
+	return compareToolVariants(tv1.variant, tv2.variant);
+}
+function compareToolVariants(tvar1, tvar2)
+{
+	if((tvar1 === undefined || tvar1.length === 0) && (tvar2 === undefined || tvar2.length === 0)) return 0;
+	if(tvar1 === undefined || tvar1.length === 0) return -1;
+	if(tvar2 === undefined || tvar2.length === 0) return 1;
+	tvar1 = tvar1.concat().sort(); // sort a copy
+	tvar2 = tvar2.concat().sort(); // sort a copy
+	for(var i = 0; i < Math.max(tvar1.length, tvar2.length); ++i)
+	{
+		if(i >= tvar1.length) return -1;
+		if(i >= tvar2.length) return 1;
+		if(tvar1[i] < tvar2[i]) return -1;
+		if(tvar1[i] > tvar2[i]) return 1;
+	}
+	return 0;
 }
 function onToolVersionSelectedChanged(toolVersion, newValue)
 {
@@ -352,7 +372,7 @@ function updateData()
 				.map(t => t.selected() ? { caption: t.name, span: vm.toolVersions().filter(tv => tv.selected() && tv.tool === t).length } : null)
 				.filter(v => v !== null && v.span !== 0);
 			data.columnCaptions = vm.toolVersions()
-				.map(tv => tv.selected() && tv.tool.selected() ? { caption: "v" + tv.version, isFirst: true, isLast: true } : null)
+				.map(tv => tv.selected() && tv.tool.selected() ? { caption: tv.toString(), isFirst: true, isLast: true } : null)
 				.filter(v => v !== null);
 			break;
 		case "model":
@@ -504,7 +524,7 @@ function iterateRows(data)
 			{
 				var toolVersion = vm.toolVersions()[i];
 				if(!toolVersion.selected() || !toolVersion.tool.selected()) continue;
-				data.rows.push(iterateColumns(toolVersion, "v" + toolVersion.version));
+				data.rows.push(iterateColumns(toolVersion, toolVersion.toString()));
 			}
 			break;
 		case "model":

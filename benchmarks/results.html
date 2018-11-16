@@ -31,12 +31,6 @@
 
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabel">Select data</div></div>
-	<div>
-		<!-- TO-DO:
-				 Options: [x] weigh runtimes by CPU score
-				 Add tags to results, e.g. "official", "QComp 2019"
-		-->
-	</div>
 	<div class="box" style="display: inline-block;">
 		<div class="boxlabelo" style="pointer-events: auto;"><div class="boxlabel">Tools</div></div>
 		<!-- ko foreach: tools -->
@@ -50,7 +44,7 @@
 					<div data-bind="if: tool === $parent">
 						<label>
 							<input type="checkbox" data-bind="checked: selected" style="vertical-align: top; margin-top: 2px;" />
-							<span data-bind="text: 'v' + version"></span>
+							<span data-bind="text: $data.toString()"></span>
 						</label>
 					</div>
 				<!-- /ko -->

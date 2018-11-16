@@ -196,7 +196,7 @@ function compareResultParameterValues(r1, r2)
 	var file2 = r2.file.substr(r2.file.lastIndexOf('/') + 1);
 	for(var i = 0; i < r2.model.files.length; ++i)
 	{
-		if(file1 === r2.model.files[i].file.substr(r2.model.files[i].file.lastIndexOf('/') + 1))
+		if(file2 === r2.model.files[i].file.substr(r2.model.files[i].file.lastIndexOf('/') + 1))
 		{
 			file2 = r2.model.files[i];
 			break;
@@ -222,8 +222,8 @@ function compareResultParameterValues(r1, r2)
 	}
 	
 	// The results are for the same parameter values: compare the tool
-	var t1 = (r1.tool.name + "-" + r1.tool.version).toUpperCase();
-	var t2 = (r2.tool.name + "-" + r2.tool.version).toUpperCase();
+	var t1 = (r1.tool.name + "-" + r1.tool.version + (r1.tool.variant === undefined || r1.tool.variant.length === 0 ? "" : (r1.tool.variant.join("-") + "-"))).toUpperCase();
+	var t2 = (r2.tool.name + "-" + r2.tool.version + (r2.tool.variant === undefined || r2.tool.variant.length === 0 ? "" : (r2.tool.variant.join("-") + "-"))).toUpperCase();
 	return t1 < t2 ? -1 : t1 > t2 ? 1 : 0;
 }
 function sortModels(sortBy)
