@@ -28,6 +28,9 @@
 	<li>
 		<a href=#prismtojani>PRISM to JANI</a> via <a href="http://www.stormchecker.org">Storm</a>
 	</li>
+	<li>
+		<a href=#galileotojani>Galileo to JANI</a> via <a href="https://github.com/utwente-fmt/DFTRES">DFTRES</a>
+	</li>
 </ul>
 <p class="continue">
 	Please contact <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script> if you would like to have your own conversion tool added to this list.
@@ -115,6 +118,23 @@
 		<tt>--globalvars</tt> makes all module variables global, e.g. to guarantee the same variable order as in the input file.
 	</li>
 </ul>
+
+<h3 id="galileotojani">Galileo to JANI</h3>
+<p>
+	Conversion of input models given in the <a href="https://www.cse.msu.edu/~cse870/Materials/FaultTolerant/manual-galileo.htm">Galileo Language</a> is supported by the <tt><a href="https://github.com/utwente-fmt/DFTRES">DFTRES</a></tt> tool.
+</p>
+<p>
+	For example, the Galileo model file <a href="ma/mcs/mcs.1-1-10-false.dft">mcs.1-1-10-false.dft</a> can be converted into a JANI file using <tt>DFTRES</tt> with the following command:
+</p>
+<p class="tt">
+	java -jar DFTRES.jar --export-jani mcs.1-1-10-false.jani -a -r 1 mcs.1-1-10-false.dft
+</p>
+<p>
+	The properties specified in the JANI file are determined by the options specified to <tt>DFTRES</tt>, namely <tt>-a</tt> for availability and <tt>-r T</tt> for reliability up to time <tt>T</tt>.
+</p>
+<p>
+	The Galileo conversion of <tt>DFTRES</tt> requires a working installation of <tt><a href="https://fmt.ewi.utwente.nl/tools/dftcalc/">DFTCalc</a></tt> and its dependencies.
+</p>
 
 <h2 id="janitojani">JANI-to-JANI Conversions</h2>
 <p>
