@@ -15,7 +15,7 @@
 <p>
 	The <b>2019 Comparison of Tools for the Analysis of Quantitative Formal Models</b> (<a href="../../index.html">QComp</a> 2019) is part of the <a href="https://tacas.info/toolympics.php">TACAS 2019 Toolympics</a>.
 	It is the first <b>friendly competition</b> among verification and analysis tools for quantitative formal models.
-	Based on a curated subset of benchmarks from the <a href="../../benchmarks/index.html">Quantitative Formal Model Repository</a>, QComp will compare the performance, versatility and usability of the participating tools.
+	Based on a curated subset of benchmarks from the <a href="../../benchmarks/index.html">Quantitative Verification Benchmark Set</a>, QComp will compare the performance, versatility and usability of the participating tools.
 </p>
 
 
@@ -65,7 +65,7 @@
 <p>
 	We ask benchmark contributions as well as tool participation to be announced to the organisers by October 20.
 	This is to ensure that all benchmarks are properly tested and annotated with metadata in time by the submission deadline on October 27.
-	Between October 27 and November 24, the organisers and participants will select a subset of the models and properties in the <a href="../../benchmarks/index.html">repository</a> for use in the performance comparison and discuss the reference results.
+	Between October 27 and November 24, the organisers and participants will select a subset of the models and properties in the <a href="../../benchmarks/index.html">benchmark set</a> for use in the performance comparison and discuss the reference results.
 	Participants submit their tool description by December 15, which will then be edited by the organisers for inclusion in the competition report.
 	We currently expect the <a href="https://tacas.info/toolympics.php">Toolympics</a> deadline for a first complete version of the competition report to be around January 10, 2019.
 	The purpose of the re-evaluation phase in January 2019 is to allow participants to fix bugs in their tools that were not discovered in their own testing prior to the original tool submission.
@@ -187,7 +187,7 @@
 <p>
 	QComp 2019 is a flexible and friendly event.
 	As a <i>comparison</i>, not a competition, there is no global scoring or ranking of tools.
-	Instead, we collect data and publish comparison tables and diagrams about the <b>performance</b> of the participating tools on a curated selection of models from the <a href="../../benchmarks/index.html">Quantitative Formal Model Repository</a>.
+	Instead, we collect data and publish comparison tables and diagrams about the <b>performance</b> of the participating tools on a curated selection of models from the <a href="../../benchmarks/index.html">Quantitative Verification Benchmark Set</a>.
 	We analyse and highlight every tool's strengths and tradeoffs.
 	Equally prominently, based on input and feedback from the participants, we describe and compare the tools in terms of <b>versatility</b> and <b>usability</b>.
 	The entire performance evaluation and report-writing process will be performed in close collaboration with the participants to quickly include feedback and resolve any setup errors or misunderstandings early.
@@ -203,7 +203,7 @@
 	Participants provide a tool package, installation instructions, and command lines/scripts to run the selected benchmarks and deliver the tool's results in a simple common format.
 	We plan to evaluate all tools once with the command lines provided by the participants, and once with default parameters for comparison.
 	For every benchmark, participants briefly explain the tool settings used, why they were chosen for the particular benchmark, and what the capabilities of their tool are (e.g. which properties of the benchmark are supported and what kind of guarantee is attached to the results provided by the tool).
-	We expect tools to provide results with a relative error of ± 10e-4.
+	We expect tools to provide results with a relative error of ± 1e-3.
 	Statistical tools (e.g. simulators) should provide results outside of this error bound with a probability of at most 5 %.
 	The competition report will not contain a performance ranking, but will provide tables, diagrams, and a discussion reporting on the runtimes achieved by the tools.
 	We will not directly evaluate memory usage, but note that the amount of RAM available in the central server is not high.
@@ -233,7 +233,7 @@
 
 <h3>Features of the Future</h3>
 <p>
-	As the first iteration of a quantitative analysis competition, QComp 2019 is intentionally limited to a small set of mathematical formalisms (from Markov chains to probabilistic timed automata) and properties (probabilistic reachability and expected rewards only).
+	As the first iteration of a quantitative analysis competition, QComp 2019 is intentionally limited to a small set of mathematical formalisms (from Markov chains to probabilistic timed automata) and properties (probabilistic reachability, expected rewards and steady-state queries only).
 	However, as part of the QComp 2019 evaluation, we also hope to identify advanced and upcoming areas of interest in quantitative modelling and analysis that may be of interest for the next edition of QComp.
 </p>
 

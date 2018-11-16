@@ -2,20 +2,20 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>QComp - Quantitative Formal Models Repository - qcomp.org</title>
+	<title>QComp - Quantitative Verification Benchmark Set - qcomp.org</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<script type="text/javascript" src="../script.js"></script>
 </head>
 <body onload="init()">
 
-<h1>Quantitative Formal Model Repository</h1>
+<h1>Quantitative Verification Benchmark Set</h1>
 <div class="belowh1">
 	<a href="index.html">⮌</a> &nbsp;|&nbsp; <a href="#info">Contributor Information</a> &nbsp;|&nbsp; <a href="#addmodels">Adding Models</a> &nbsp;|&nbsp; <a href="#updatemodels">Updating Models</a> &nbsp;|&nbsp; <a href="#addresults">Adding Results</a>
 </div>
 
 <h2 id="info">Information for Contributors</h2>
 <p>
-	We welcome contributions that extend the <a href="index.html">Quantitative Formal Model Repository</a> by <a href="#addmodels">adding new models</a>, <a href="#updatemodels">updating existing models</a>, and <a href="#addresults">adding new experimental results</a>.
+	We welcome contributions that extend the <a href="index.html">Quantitative Verification Benchmark Set</a> by <a href="#addmodels">adding new models</a>, <a href="#updatemodels">updating existing models</a>, and <a href="#addresults">adding new experimental results</a>.
 	Before you submit, please carefully read and follow the general instructions as well as those specific for your type of contribution below.
 	If you have questions about contributing, contact <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script>.
 </p>
@@ -26,20 +26,20 @@
 	Submissions via email will be committed to our <a href="https://github.com/ahartmanns/qcomp">Git repository</a> in your name; please mention your full name and the email address of your GitHub account in your email.
 	For pull requests, we require all commits to be in your full name.
 	Every submission should only contain a single contribution, e.g. one new model, or an update to one existing model.
-	<!-- The repository does not require any server-side infrastructure to run.
+	<!-- The benchmark set does not require any server-side infrastructure to run.
 	Please test your contribution before submitting by cloning our Git repository and applying your changes to it.-->
 </p>
 
 <h3>Licensing</h3>
 <p>
-	All data contributed to the repository will be redistributed under the terms of the open-access <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
+	All data contributed to the benchmark set will be redistributed under the terms of the open-access <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
 	Before submitting, make sure that you have the right to make your contribution publically available under this license and include a statement to this effect in your email.
 	If you submit via pull request, send an email (from the email address associated with your GitHub account) with such a statement to <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script> before creating the pull request.
 </p>
 
 <h2 id="addmodels">Adding New Models</h2>
 <p>
-	We welcome contributions of new models that extend the repository.
+	We welcome contributions of new models that extend the benchmark set.
 	Every model must be
 </p>
 <ul class="text continue">
@@ -50,7 +50,7 @@
 		available in the <a href="http://www.jani-spec.org/">JANI</a> model format in addition to its original modelling formalism (see our <a href="conversions.html">list of existing JANI converters</a>);
 	</li>
 	<li>
-		tested to work with one tool given the JANI translation and at least one parameter configuration, where the test is documented as an experimental result in the repository; and be
+		tested to work with one tool given the JANI translation and at least one parameter configuration, where the test is documented as an experimental result in the benchmark set; and be
 	</li>
 	<li>
 		maintained, i.e. the submitter must be willing and available to answer questions about the model and review update submissions, for a reasonable amount of years after the submission.
@@ -69,7 +69,7 @@
 		Has it been developed to solve a challenging industrial problem?
 	</li>
 	<li>
-		Is the type of model – its modelling formalism or the kind of system it represents – underrepresented in the repository?
+		Is the type of model – its modelling formalism or the kind of system it represents – underrepresented in the benchmark set?
 	</li>
 	<li>
 		Is it challenging to analyse due to its size, other structural aspects, or the properties to check?
@@ -77,7 +77,7 @@
 </ul>
 <p class="continue">
 	Very briefly state this reasoning in the <tt>notes</tt> or <tt>challenge</tt> attribute of the model metadata.
-	Once you have established that you have the right to release the model under the terms of the <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license (see above), that it satisfies the above requirements, and that it is interesting, please do the following steps to contribute it to the repository:
+	Once you have established that you have the right to release the model under the terms of the <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license (see above), that it satisfies the above requirements, and that it is interesting, please do the following steps to contribute it to the benchmark set:
 </p>
 <ol class="text continue">
 	<li>
@@ -85,7 +85,7 @@
 	</li>
 	<li>
 		Choose a <tt>short</tt> name for your model.
-		Follow the short name patterns established by the existing models in the repository.
+		Follow the short name patterns established by the existing models in the benchmark set.
 	</li>
 	<li>
 		In the folder corresponding to the mathematical semantics of your model (e.g. <tt>benchmarks/ma</tt> for Markov automata, etc.), create a new subfolder with the exact <tt>short</tt> name for your model.
@@ -93,7 +93,7 @@
 	<li>
 		Place the original model file and its JANI translation into that subfolder.
 		Use the "short" name of the model for the file names of all model files (original and JANI) wherever possible.
-		If a file contains hardcoded parameters, use the short name of the model, followed by a dot (<tt>.</tt>), followed by the hardcoded parameter values separated by dashes (<tt>-</tt>) in the order in which they appear on the repository's website, followed by the file extension.
+		If a file contains hardcoded parameters, use the short name of the model, followed by a dot (<tt>.</tt>), followed by the hardcoded parameter values separated by dashes (<tt>-</tt>) in the order in which they appear on the benchmark set's website, followed by the file extension.
 	</li>
 	<li>
 		In the same subfolder, create a file <tt>index.json</tt> containing the metadata for your model.
@@ -106,8 +106,8 @@
 				Use title capitalisation for the model's <tt>name</tt>.
 			</li>
 			<li>
-				Whenever possible, use a citable document for the <tt>source</tt> (i.e. link to a DOI in a format recognised by the repository's website).
-				This link will be labelled "first presented in", and users of the repository are asked to cite this document when using the model.
+				Whenever possible, use a citable document for the <tt>source</tt> (i.e. link to a DOI in a format recognised by the benchmark set's website).
+				This link will be labelled "first presented in", and users of the benchmark set are asked to cite this document when using the model.
 			</li>
 			<li>
 				All <tt>references</tt> must be referred to in the <tt>description</tt> (use <tt>[1]</tt> to refer to the first reference, <tt>[2]</tt> for the second, etc.; use <tt>[0]</tt> to refer to the <tt>source</tt>).
@@ -142,7 +142,7 @@
 
 <h2 id="updatemodels">Updating Existing Models</h2>
 <p>
-	Existing models within the repository may be updated to correct modelling errors, add parameters, or add properties.
+	Existing models within the benchmark set may be updated to correct modelling errors, add parameters, or add properties.
 	An update should make the least amount of changes necessary to achieve its goal.
 	These are the recommended steps to submit an update of an existing model:
 </p>
@@ -180,7 +180,7 @@
 		Add the <tt>.json</tt> files and tool output logs describing your results to the <tt>results</tt> subfolder of the corresponding model.
 		The names of the files should be the name of the tool followed by a dot (<tt>.</tt>),
 		followed by the tool variant used and a dot (if any),
-		followed by all parameter values separated by dashes (<tt>-</tt>) in the order in which they appear on the repository's website and a dot,
+		followed by all parameter values separated by dashes (<tt>-</tt>) in the order in which they appear on the benchmark set's website and a dot,
 		followed by the date (in <tt>YYYY-MM-DD</tt> format) of the results and a dot,
 		followed by the file extension.
 		For example: <tt>Storm.exact.3-4-3.2018-10-03.json</tt>.
