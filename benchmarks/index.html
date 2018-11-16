@@ -34,7 +34,9 @@
 		<select data-bind="options: modelTypes, optionsCaption: '(all)', value: filter.type"></select>
 		&nbsp;/&nbsp;
 		<select data-bind="options: originals(), optionsCaption: '(all)', value: filter.original"></select>
-		&nbsp;with&nbsp;
+		&nbsp;with a&nbsp;
+		<select data-bind="options: propertyTypes, optionsCaption: '(all)', value: filter.propertyType"></select>
+		&nbsp;property and&nbsp;
 		<input type="text" data-bind="value: filter.minStates, valueUpdate: 'input'" placeholder="zero" style="width: 12ex;" />
 		-
 		<input type="text" data-bind="value: filter.maxStates, valueUpdate: 'input'" placeholder="infinity" style="width: 12ex;" />
