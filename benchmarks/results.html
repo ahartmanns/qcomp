@@ -54,7 +54,7 @@
 	<div class="box" style="column-width: 200px;">
 		<div class="boxlabelo" style="pointer-events: auto;"><div class="boxlabel">Models</div></div>
 		<!-- ko foreach: models -->
-			<div class="box" style="display: inline-block; width:100%;">
+			<div class="box" style="display: inline-block;">
 				<div class="boxlabelo" style="pointer-events: auto; white-space: nowrap;"><div class="boxlabel" style="background: none;">
 					<table style="width: 100%; table-layout: fixed; margin-left: -0.5ex;">
 						<tr>
@@ -129,7 +129,13 @@
 	</fieldset>
 </div>
 
-<!-- ko if: data() !== null -->
+<!-- ko if: errorMessage() !== null -->
+	<div class="box" style="margin-bottom: 64px;">
+		<div class="boxlabelo"><div class="boxlabel">Results</div></div>
+		<div data-bind="text: errorMessage()" style="font-style: italic; text-align: center; padding: 24px;"></div>
+	</div>
+<!-- /ko -->
+<!-- ko if: errorMessage() === null && data() !== null -->
 	<div class="box" data-bind="with: data()" style="margin-bottom: 64px;">
 		<div class="boxlabelo"><div class="boxlabel">Results</div></div>
 		<!-- ko if: display === "table" -->

@@ -11,7 +11,7 @@ vm.rowConfig = ko.observable(vm.axisOptions[2]);
 vm.rowConfig.subscribe(updateData);
 vm.columnConfig = ko.observable(vm.axisOptions[0]);
 vm.columnConfig.subscribe(updateData);
-vm.plotTypes = [ "table", "bar chart" ];
+vm.plotTypes = [ "table", "scatter plot", "bar chart", "line chart" ];
 vm.plotType = ko.observable(vm.plotTypes[0]);
 vm.plotType.subscribe(updateData);
 vm.tools = ko.observableArray();
@@ -19,6 +19,7 @@ vm.toolVersions = ko.observableArray();
 vm.models = ko.observableArray();
 vm.paramCombs = ko.observableArray();
 vm.properties = ko.observableArray();
+vm.errorMessage = ko.observable(null);
 vm.data = ko.observable(null);
 function init()
 {
@@ -327,6 +328,7 @@ function onSelectedChanged()
 }
 function updateData()
 {
+	vm.errorMessage(null);
 	var data = {
 		display: vm.plotType(),
 		valuesCaption: CapitaliseFirst(vm.aggregateConfig() + " " + vm.valueConfig()),
@@ -372,7 +374,7 @@ function updateData()
 				.map(t => t.selected() ? { caption: t.name, span: vm.toolVersions().filter(tv => tv.selected() && tv.tool === t).length } : null)
 				.filter(v => v !== null && v.span !== 0);
 			data.columnCaptions = vm.toolVersions()
-				.map(tv => tv.selected() && tv.tool.selected() ? { caption: tv.toString(), isFirst: true, isLast: true } : null)
+				.map(tv => tv.selected() && tv.tool.selected() ? { caption: tv.toString(), top: tv.tool.name, isFirst: true, isLast: true } : null)
 				.filter(v => v !== null);
 			break;
 		case "model":
@@ -388,7 +390,7 @@ function updateData()
 				.map(m => m.selected() ? { caption: m.short, span: vm.paramCombs().filter(pc => pc.selected() && pc.model === m).length } : null)
 				.filter(v => v !== null && v.span !== 0);
 			data.columnCaptions = vm.paramCombs()
-				.map(pc => pc.selected() && pc.model.selected() ? { caption: pc.short, isFirst: true, isLast: true } : null)
+				.map(pc => pc.selected() && pc.model.selected() ? { caption: pc.short, top: pc.model.short, isFirst: true, isLast: true } : null)
 				.filter(v => v !== null);
 			break;
 		case "property":
@@ -398,7 +400,7 @@ function updateData()
 				.map(m => m.selected() ? { caption: m.short, span: vm.properties().filter(p => p.selected() && p.model === m).length } : null)
 				.filter(v => v !== null && v.span !== 0);
 			data.columnCaptions = vm.properties()
-				.map(p => p.selected() && p.model.selected() ? { caption: p.name, isFirst: true, isLast: true } : null)
+				.map(p => p.selected() && p.model.selected() ? { caption: p.name, top: p.model.short, isFirst: true, isLast: true } : null)
 				.filter(v => v !== null);
 			break;
 		default:
@@ -445,7 +447,89 @@ function updateData()
 	vm.data(data);
 
 	// Chart
-	if(vm.plotType() !== "table")
+	if(vm.plotType() === "scatter plot")
+	{
+		// Make sure that there are at least two columns
+		if(data.columnCaptions.length === 1)
+		{
+			vm.errorMessage("Cannot draw a scatter plot since there is only a single " + vm.columnConfig() + ".");
+		}
+		else
+		{
+			// Transform data items into coordinate pairs
+			var scatter = [];
+			var max = 0;
+			for(var i = 0; i < data.rows.length; ++i)
+			{
+				for(var x = 0; x < data.columnCaptions.length - 1; ++x)
+				{
+					for(var y = x + 1; y < data.columnCaptions.length; ++y)
+					{
+						if(x === y) continue;
+						var row = data.rows[i];
+						if(!row.columnValues[x].hasValue || !row.columnValues[y].hasValue) continue;
+						var coord = {
+							row: row.caption,
+							xSource: (data.columnCaptions[x].top === undefined ? "" : data.columnCaptions[x].top + " ") + data.columnCaptions[x].caption,
+							xValue: row.columnValues[x].value,
+							ySource: (data.columnCaptions[y].top === undefined ? "" : data.columnCaptions[y].top + " ") + data.columnCaptions[y].caption,
+							yValue: row.columnValues[y].value
+						};
+						scatter.push(coord);
+						max = Math.max(max, coord.xValue, coord.yValue);
+					}
+				}
+			}
+			if(scatter.length === 0)
+			{
+				vm.errorMessage("There is not enough data to draw a scatter plot.");
+			}
+			else
+			{
+				// Configure chart
+				var chartConfig = {
+					data: scatter,
+					type: "scatterplot",
+					x: [ "xSource", "xValue" ],
+					y: [ "ySource", "yValue" ],
+					dimensions: {
+						"xSource": { type: "category" },
+						"ySource": { type: "category" },
+						"xValue": { type: "measure" },
+						"yValue": { type: "measure" },
+					},
+					guide: [
+						{
+							x: { label: { text: vm.columnConfig() } },
+							y: { label: { text: vm.columnConfig() } }
+						},
+						{
+							x: { label: { text: data.valuesCaption } },
+							y: { label: { text: data.valuesCaption } }
+						}
+					],
+					settings: {
+						asyncRendering: true
+					},
+					plugins: [
+						Taucharts.api.plugins.get('tooltip')({
+							fields: [ "row", "xValue", "yValue" ],
+							formatters: {
+								"row": { label: CapitaliseFirst(vm.rowConfig()) + ":" },
+								"xValue": { label: "x:" },
+								"yValue": { label: "y:" }
+							}
+						})
+					]
+				};
+
+				// Create chart
+				var chart = new Taucharts.Chart(chartConfig);
+				chart.renderTo(document.getElementById("chart"));
+			}
+		}
+	}
+	else if(vm.plotType() === "bar chart" || vm.plotType() === "line chart")
 	{
 		// Collect all data items, adding column information in the process
 		for(var i = 0; i < data.rows.length; ++i)
@@ -469,13 +553,19 @@ function updateData()
 		var chartConfig = {
 			data: data.values,
 			dimensions: { },
-			type: "bar",
+			type: vm.plotType() === "line chart" ? "line" : vm.plotType() === "scatter plot" ? "scatterplot" : "bar",
 			x: [],
 			y: [],
 			guide: [],
 			settings: {
 				asyncRendering: true
-			}
+			},
+			plugins: [Taucharts.api.plugins.get('tooltip')({
+				fields: [ "displayString" ],
+				formatters: {
+					"displayString": { label: data.valuesCaption + ":" }
+				}
+			})]
 		};
 		
 		if(data.rowsPreCaption !== undefined)
@@ -502,7 +592,7 @@ function updateData()
 			chartConfig.guide[0].y = { label: { text: data.columnsCaption.caption } };
 		}
 		
-		// Create the chart
+		// Create chart
 		var chart = new Taucharts.Chart(chartConfig);
 		chart.renderTo(document.getElementById("chart"));
 	}
@@ -769,6 +859,7 @@ function iterateValue(rowObj, columnObj)
 		{
 			case "runtime":
 				cv.displayValue = cv.value.toFixed(1);
+				cv.displayString = cv.value.toFixed(1) + " s";
 				cv.unit = "s";
 				break;
 		}
@@ -777,6 +868,7 @@ function iterateValue(rowObj, columnObj)
 	{
 		cv.hasValue = false;
 		cv.displayValue = "";
+		cv.displayString = "(no value)";
 	}
 
 	// Done
