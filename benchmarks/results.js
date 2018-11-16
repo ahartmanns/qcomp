@@ -1,5 +1,8 @@
 'use strict';
 var vm = {};
+vm.scaleOptions = [ "unscaled", "CPU-scaled" ];
+vm.scaleConfig = ko.observable(vm.scaleOptions[0]);
+vm.scaleConfig.subscribe(updateData);
 vm.aggregateOptions = [ "average", "maximum", "minimum" ];
 vm.aggregateConfig = ko.observable(vm.aggregateOptions[0]);
 vm.aggregateConfig.subscribe(updateData);
@@ -11,7 +14,7 @@ vm.rowConfig = ko.observable(vm.axisOptions[2]);
 vm.rowConfig.subscribe(updateData);
 vm.columnConfig = ko.observable(vm.axisOptions[0]);
 vm.columnConfig.subscribe(updateData);
-vm.plotTypes = [ "table", "scatter plot", "bar chart", "line chart" ];
+vm.plotTypes = [ "table", "bar chart", "line chart", "scatter plot" ];
 vm.plotType = ko.observable(vm.plotTypes[0]);
 vm.plotType.subscribe(updateData);
 vm.tools = ko.observableArray();
@@ -19,11 +22,22 @@ vm.toolVersions = ko.observableArray();
 vm.models = ko.observableArray();
 vm.paramCombs = ko.observableArray();
 vm.properties = ko.observableArray();
+vm.cpus = {};
 vm.errorMessage = ko.observable(null);
 vm.data = ko.observable(null);
 function init()
 {
 	ko.applyBindings(vm);
+	vm.modelsToLoadCount = 1;
+	loadJson("cpu-data.json", cpuData =>
+	{
+		for(var i = 0; i < cpuData.length; ++i)
+		{
+			var cpu = cpuData[i];
+			vm.cpus[cpu.name] = cpu;
+		}
+		--vm.modelsToLoadCount;
+	});
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1) for(var param of queryString[1].split("&"))
 	{
@@ -36,7 +50,7 @@ function init()
 				modelsToLoad = modelsToLoad
 					.map(mtl => index.find(i => i.path.endsWith("/" + mtl)))
 					.filter(i => i !== undefined);
-				vm.modelsToLoadCount = modelsToLoad.length;
+				vm.modelsToLoadCount += modelsToLoad.length;
 				modelsToLoad.forEach(mr => loadJson(mr.path + "/index.json", model => loadModel(model, mr.path)));
 			});
 		}
@@ -111,10 +125,12 @@ function loadResults(model, rs)
 				model: model,
 				tool: createAndRegisterTool(r.tool),
 				toolVersion: createAndRegisterToolVersion(r.tool, r.tool.version, r.tool.variant),
+				cpu: vm.cpus[r.system.cpu],
 				time: r.time,
 				memory: r.memory,
 				propertyTimes: []
 			};
+			if(result.cpu === undefined) alert("Error: No data for CPU \"" + r.system.cpu + "\".");
 			
 			// Collect property times
 			if(r["property-times"] === undefined)
@@ -805,6 +821,14 @@ function iterateValue(rowObj, columnObj)
 							break;
 					}
 					
+					// Scale by CPU
+					if(vm.scaleConfig() === "CPU-scaled")
+					{
+						// Only use the single-threaded rating for now
+						var rating = result.cpu.benchmarks.find(b => b.type === "single-threaded").rating / 1000.0;
+						value *= rating;
+					}
+					
 					// Average/max/min for this tool
 					if(hasValue)
 					{
@@ -858,9 +882,17 @@ function iterateValue(rowObj, columnObj)
 		switch(vm.valueConfig())
 		{
 			case "runtime":
-				cv.displayValue = cv.value.toFixed(1);
-				cv.displayString = cv.value.toFixed(1) + " s";
-				cv.unit = "s";
+				if(vm.scaleConfig() === "CPU-scaled")
+				{
+					cv.displayValue = cv.value.toFixed(0);
+					cv.displayString = cv.value.toFixed(0);
+				}
+				else
+				{
+					cv.displayValue = cv.value.toFixed(1);
+					cv.displayString = cv.value.toFixed(1) + " s";
+					cv.unit = "s";
+				}
 				break;
 		}
 	}
