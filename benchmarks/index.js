@@ -1,3 +1,4 @@
+'use strict';
 // View model
 var qmcc = {};
 qmcc.params = [];

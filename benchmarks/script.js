@@ -1,3 +1,4 @@
+'use strict';
 function modelTypeToLongString(modelType)
 {
 	if(modelType === "ctmc") return "continuous-time Markov chain";

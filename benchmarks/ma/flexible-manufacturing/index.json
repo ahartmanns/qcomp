@@ -15,7 +15,7 @@
 	"author": "GreatSPN <greatspn@di.unito.it>",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "https://doi.org/10.1007/978-3-642-02924-0_1",
-	"description": "This model represents a manufacturing system with three machines processing `N´ pallets. Machine 2 and 3 can fail during operation. In this case, a repairman repairs the failed machine. There are 3 spares for Machine 2, i.e., it only fails if the machine and all its spares have failed. This model is accompanied by GreatSPN [1]",
+	"description": "This model represents a manufacturing system with three machines processing `N´ pallets. Machine 2 and 3 can fail during operation. In this case, a repairman repairs the failed machine. There are 3 spares for Machine 2, i.e., it only fails if the machine and all its spares have failed. This model is distributed with GreatSPN [1].",
 	"references": ["https://doi.org/10.1007/978-3-319-30599-8_9"],
 	"notes": "small symbolic representation",
 	"parameters": [

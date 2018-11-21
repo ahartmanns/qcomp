@@ -477,6 +477,18 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.60-4.2018-10-17.json"
-		}
+		},
+		"results/mcsta.20-1.2018-11-21.json",
+		"results/mcsta.20-2.2018-11-21.json",
+		"results/mcsta.20-3.2018-11-21.json",
+		"results/mcsta.20-4.2018-11-21.json",
+		"results/mcsta.40-1.2018-11-21.json",
+		"results/mcsta.40-2.2018-11-21.json",
+		"results/mcsta.40-3.2018-11-21.json",
+		"results/mcsta.40-4.2018-11-21.json",
+		"results/mcsta.60-1.2018-11-21.json",
+		"results/mcsta.60-2.2018-11-21.json",
+		"results/mcsta.60-3.2018-11-21.json",
+		"results/mcsta.60-4.2018-11-21.json"
 	]
 }
