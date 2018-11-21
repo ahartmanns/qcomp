@@ -248,7 +248,7 @@
                     "name": "l"
                 }
             ],
-            "name": "hill-toggle",
+            "name": "hill_toggle",
             "variables": []
         }
     ],
@@ -365,7 +365,7 @@
     "system": {
         "elements": [
             {
-                "automaton": "hill-toggle"
+                "automaton": "hill_toggle"
             }
         ]
     },

@@ -13,7 +13,7 @@ const double g  = 10;
 const double d1 = 1;
 const double d2 = 1;
 
-module hill-toggle
+module hill_toggle
   p1 : int init 10;
   p2 : int init 0;
 
