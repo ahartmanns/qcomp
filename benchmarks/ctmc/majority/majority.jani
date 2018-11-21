@@ -10570,8 +10570,6 @@
                             }
                         },
                         "time-bounds": {
-                            "lower": 0,
-                            "lower-exclusive": false,
                             "upper": "T",
                             "upper-exclusive": false
                         }
