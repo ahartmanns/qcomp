@@ -230,11 +230,11 @@
 		"results/mcsta.b-11-9.json",
 		{
 			"reference": true,
-			"file": "results/Storm.exact.3-3.2018-10-03.json"
+			"file": "results/Storm.exact.a-3-3.2018-10-03.json"
 		},
 		{
 			"reference": true,
-			"file": "results/Storm.exact.11-9.2018-10-03.json"
+			"file": "results/Storm.exact.a-11-9.2018-10-03.json"
 		}
 	]
 }

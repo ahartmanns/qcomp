@@ -131,6 +131,9 @@
 		}
 	],
 	"results": [
+		"results/mcsta.5.2018-11-22.json",
+		"results/mcsta.60.2018-11-22.json",
+		"results/mcsta.100.2018-11-22.json",
 		"results/Storm.5.2018-10-29.json",
 		"results/Storm.60.2018-10-29.json",
 		"results/Storm.100.2018-10-29.json",

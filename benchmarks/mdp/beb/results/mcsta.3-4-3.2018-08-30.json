@@ -19,7 +19,7 @@
 		"os": "Ubuntu 18.04 (x64)",
 		"runtime": "Mono 5.14.0.177"
 	},
-	"command": "mcsta.exe beb.3-4.jani -S Memory -E N=3 -O mcsta.3-4-3.json Json",
+	"command": "mcsta.exe beb.3-4.jani -S Memory -E \"N=3\" -O mcsta.3-4-3.json Json",
 	"time": 0.509,
 	"memory": 48578560,
 	"property-times": [

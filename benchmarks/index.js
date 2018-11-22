@@ -260,7 +260,7 @@ function getStateCount(files, isMin)
 		{
 			for(var j = 0; j < openParamValues.length; ++j)
 			{
-				if(openParamValues[j].states !== undefined)
+				if(openParamValues[j].states !== undefined && openParamValues[j].states.length !== 0)
 				{
 					if(result === null) result = isMin ? Number.POSITIVE_INFINITY : 0;
 					var params = openParamValues[j].states.map(s => s.number !== undefined ? (s.number === "∞" ? Number.POSITIVE_INFINITY : s.number) : s.order !== undefined ? Math.pow(10, s.order) : states);
