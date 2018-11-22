@@ -321,6 +321,9 @@
 		{
 			"reference": true,
 			"file": "results/Storm.hybrid-exact.16-1.2018-10-25.json"
-		}
+		},
+		"results/mcsta.4-1.2018-11-21.json",
+		"results/mcsta.12-1.2018-11-21.json",
+		"results/mcsta.16-1.2018-11-21.json"
 	]
 }
