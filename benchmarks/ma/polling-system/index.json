@@ -111,7 +111,7 @@
 			"description": "The minimum probability that both queues are full is one."
 		},
 		{
-			"name": " TminBothFull",
+			"name": "TminBothFull",
 			"type": "exp-time",
 			"description": "The minimum expected time until both queues are full."
 		},
