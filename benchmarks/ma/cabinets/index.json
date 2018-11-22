@@ -3,13 +3,18 @@
 	"short": "cabinets",
 	"type": "ma",
 	"original": "Galileo",
-	"version": 1,
-	"date": "2018-10-29",
+	"version": 2,
+	"date": "2018-11-22",
 	"version-history": [
 		{
 			"version": 1,
 			"date": "2018-10-29",
 			"notes": "Initial version."
+		},
+		{
+			"version": 2,
+			"date": "2018-11-22",
+			"notes": "Correct syntax errors in Galileo files."
 		}
 	],
 	"author": "Enno Ruijters <e.j.j.ruijters@utwente.nl>",
