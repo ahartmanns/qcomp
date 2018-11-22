@@ -1761,7 +1761,7 @@
         "derived-operators"
     ],
     "jani-version": 1,
-    "name": "FMS",
+    "name": "flexible-manufacturing.9",
     "properties": [
         {
             "expression": {

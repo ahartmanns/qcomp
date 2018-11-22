@@ -109,5 +109,9 @@
 			]
 		}
 	],
-	"results": []
+	"results": [
+		"results/mcsta.100.2018-11-22.json",
+		"results/mcsta.150.2018-11-22.json",
+		"results/mcsta.200.2018-11-22.json"
+	]
 }
