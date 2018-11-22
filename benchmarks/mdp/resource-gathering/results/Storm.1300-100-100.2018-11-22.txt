@@ -1,10 +1,12 @@
 Storm 1.2.4 (dev)
 
-Date: Sat Aug 11 11:45:36 2018
-Command line arguments: --jani ../mdp/resource-gathering/resource-gathering..jani -jprop --constants 'B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100' -tm
-Current working directory: /Users/tim/git/qmcc/generate_Meta
+Date: Thu Nov 22 16:34:33 2018
+Command line arguments: --jani resource-gathering.jani --janiproperty --constants 'B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100' --timemem
+Current working directory: /Users/tim/storm/build/bin
 
-Time for model construction: 16.633s.
+Time for model input parsing: 0.006s.
+
+Time for model construction: 15.635s.
 
 -------------------------------------------------------------- 
 Model type: 	MDP (sparse)
@@ -20,18 +22,19 @@ Choice Labels: 	none
 -------------------------------------------------------------- 
 
 Model checking property "expgold": R[exp]{"rew_gold"}max=? [Csteps<=1300] ...
-Result (for initial states): 179.3763495
-Time for model checking: 28.484s.
+Result (for initial states): 145.2875015
+Time for model checking: 29.846s.
 
 Model checking property "expsteps": T[exp]min=? [F "success"] ...
 Result (for initial states): 1292.592989
-Time for model checking: 22.988s.
+Time for model checking: 19.047s.
 
-Model checking property "prgoldgem": Pmax=? [true Usteps<=1300 "success"] ...
+Model checking property "prgoldgem": Pmax=? [true U<=1300 "success"] ...
 Result (for initial states): 0.6630608525
-Time for model checking: 41.266s.
+Time for model checking: 47.606s.
 
 Performance statistics:
-  * peak memory usage: 573MB
-  * CPU time: 102.318s
-  * wallclock time: 109.404s
+  * peak memory usage: 575MB
+  * CPU time: 108.530s
+  * wallclock time: 112.168s
+
