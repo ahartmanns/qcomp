@@ -647,6 +647,17 @@
 							"note": "Storm",
 							"number": 133301572
 						}
+					],
+					"results": [
+						{
+							"property": "some_before",
+							"value": {
+								"num": 10129562966608802995402849809805227,
+								"approx": 0.9754414320473948,
+								"den": 10384593717069655257060992658440192
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -728,6 +739,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.4-2.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.4-4.2018-11-22.json"
 		}
 	]
 }
