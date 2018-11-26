@@ -437,6 +437,41 @@
 							"note": "Storm",
 							"number": 1258240
 						}
+					],
+					"results": [
+						{
+							"property": "c1",
+							"value": true,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "c2",
+							"value": {
+								"num": 462973,
+								"approx": 0.2943503061930339,
+								"den": 1572864
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "disagree",
+							"value": {
+								"num": 37101798760906709,
+								"approx": 0.36364474956290604,
+								"den": 102027593703751680
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_max",
+							"value": 867,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "steps_min",
+							"value": 432,
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -471,6 +506,22 @@
 						{
 							"note": "Storm/dd",
 							"number": 61018112
+						}
+					],
+					"results": [
+						{
+							"property": "c1",
+							"value": true,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "c2",
+							"value": {
+								"num": 4744005,
+								"approx": 0.282764732837677,
+								"den": 16777216
+							},
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -546,6 +597,14 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.4-4.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.6-2.2018-11-22.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.8-2.2018-11-22.json"
 		}
 	]
 }
