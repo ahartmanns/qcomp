@@ -524,6 +524,17 @@
 							"note": "Storm",
 							"number": 798471
 						}
+					],
+					"results": [
+						{
+							"property": "correct_min",
+							"value": {
+								"num": 893871739,
+								"approx": 2.7502053305694086e-09,
+								"den": 325020000893871739
+							},
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -553,6 +564,17 @@
 						{
 							"note": "Storm",
 							"number": 1870338
+						}
+					],
+					"results": [
+						{
+							"property": "correct_min",
+							"value": {
+								"num": 322687697779,
+								"approx": 9.928241269674567e-11,
+								"den": 3250200000322687697779
+							},
+							"note": "Storm/exact"
 						}
 					]
 				},
@@ -668,6 +690,17 @@
 							"note": "Storm",
 							"number": 798471
 						}
+					],
+					"results": [
+						{
+							"property": "correct_min",
+							"value": {
+								"num": 893871739,
+								"approx": 1.396150840625425e-07,
+								"den": 6402400893871739
+							},
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -697,6 +730,17 @@
 						{
 							"note": "Storm",
 							"number": 1870338
+						}
+					],
+					"results": [
+						{
+							"property": "correct_min",
+							"value": {
+								"num": 322687697779,
+								"approx": 5.040105212929839e-09,
+								"den": 64024000322687697779
+							},
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -759,6 +803,22 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.1000-4-false.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.20-6-false.2018-11-22.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.1000-6-false.2018-11-22.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.20-8-false.2018-11-22.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.1000-8-false.2018-11-22.json"
 		}
 	]
 }
