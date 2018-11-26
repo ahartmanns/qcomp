@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>QComp 2019 - qcomp.org</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<script type="text/javascript" src="../../script.js"></script>
+</head>
+<body>
+
+<h1>QComp 2019 Benchmarks</h1>
+<div class="belowh1">
+	<a href="index.html">⮌</a> &nbsp;|&nbsp; <a href="#dtmc">DTMC</a> &nbsp;|&nbsp; <a href="#ctmc">CTMC</a> &nbsp;|&nbsp; <a href="#mdp">MDP</a> &nbsp;|&nbsp; <a href="#ma">MA</a> &nbsp;|&nbsp; <a href="#pta">PTA</a>
+</div>
+<p>
+	These are the benchmarks used for the performance evaluation of <a href="index.html">QComp 2019</a>:
+</p>
+
+<h2 id="dtmc">DTMC Benchmarks</h2>
+<p>
+	18 discrete-time Markov chain benchmark instances:
+</p>
+<table style="table-layout: fixed;">
+	<colgroup>
+		<col style="width: 4.5ex;" />
+		<col style="width: 23ex;" />
+		<col style="width: 11ex;" />
+		<col style="width: 17ex;" />
+		<col style="width: 25.5ex;" />
+		<col style="width: 10ex;" />
+	</colgroup>
+	<tr>
+		<th></th>
+		<th>Model</th>
+		<th>Original</th>
+		<th>Parameters</th>
+		<th>Property</th>
+		<th>Type</th>
+	</tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>1</tt></td><td><a href="..\..\benchmarks\index.html#bluetooth">bluetooth</a></td><td>PRISM</td><td>1</td><td>time</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>2</tt></td><td rowspan="4"><a href="..\..\benchmarks\index.html#coupon">coupon</a></td><td rowspan="4">PGCL</td><td rowspan="2">9-4-5</td><td>collect_all_bounded</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>3</tt></td><td>exp_draws</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>4</tt></td><td rowspan="2">15-4-5</td><td>collect_all_bounded</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>5</tt></td><td>exp_draws</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>6</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#crowds">crowds</a></td><td rowspan="2">PRISM</td><td>5-20</td><td>positive</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>7</tt></td><td>6-20</td><td>positive</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>8</tt></td><td rowspan="4"><a href="..\..\benchmarks\index.html#egl">egl</a></td><td rowspan="4">PRISM</td><td rowspan="2">10-2</td><td>messagesB</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>9</tt></td><td>unfairA</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>10</tt></td><td rowspan="2">10-8</td><td>messagesB</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>11</tt></td><td>unfairA</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>12</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#haddad-monmege">haddad-monmege</a></td><td rowspan="2">PRISM</td><td rowspan="2">100-0.7</td><td>exp_steps</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>13</tt></td><td>target</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>14</tt></td><td><a href="..\..\benchmarks\index.html#herman">herman</a></td><td>PRISM</td><td>15</td><td>steps</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>15</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#nand">nand</a></td><td rowspan="2">PRISM</td><td>40-4</td><td>reliable</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>16</tt></td><td>60-4</td><td>reliable</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>17</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#oscillators">oscillators</a></td><td rowspan="2">PRISM</td><td rowspan="2">8-10-0.1-1-0.1-1.0</td><td>power_consumption</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>18</tt></td><td>time_to_synch</td><td>E</td></tr>
+</table>
+
+<h2 id="ctmc">CTMC Benchmarks</h2>
+<p>
+	18 continuous-time Markov chain benchmark instances:
+</p>
+<table style="table-layout: fixed;">
+	<colgroup>
+		<col style="width: 4.5ex;" />
+		<col style="width: 23ex;" />
+		<col style="width: 11ex;" />
+		<col style="width: 17ex;" />
+		<col style="width: 25.5ex;" />
+		<col style="width: 10ex;" />
+	</colgroup>
+	<tr>
+		<th></th>
+		<th>Model</th>
+		<th>Original</th>
+		<th>Parameters</th>
+		<th>Property</th>
+		<th>Type</th>
+	</tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>19</tt></td><td rowspan="3"><a href="..\..\benchmarks\index.html#cluster">cluster</a></td><td rowspan="3">PRISM</td><td>64-2000-20</td><td>below_min</td><td>Eb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>20</tt></td><td rowspan="2">128-2000-20</td><td>qos1</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>21</tt></td><td>premium_steady</td><td>S</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>22</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#embedded">embedded</a></td><td rowspan="2">PRISM</td><td rowspan="2">8-12</td><td>actuators</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>23</tt></td><td>up_time</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>24</tt></td><td><a href="..\..\benchmarks\index.html#fms">fms</a></td><td>PRISM</td><td>8</td><td>productivity</td><td>S</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>25</tt></td><td><a href="..\..\benchmarks\index.html#kanban">kanban</a></td><td>PRISM</td><td>5</td><td>throughput</td><td>S</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>26</tt></td><td><a href="..\..\benchmarks\index.html#majority">majority</a></td><td>PRISM</td><td>2100</td><td>change_state</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>27</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#mapk_cascade">mapk_cascade</a></td><td rowspan="2">PRISM</td><td rowspan="2">4-30</td><td>activated_time</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>28</tt></td><td>reactions</td><td>Eb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>29</tt></td><td rowspan="6"><a href="..\..\benchmarks\index.html#philosophers">philosophers</a></td><td rowspan="6">GreatSPN</td><td rowspan="3">16-1</td><td>MaxPrReachDeadlockTB</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>30</tt></td><td>MaxPrReachDeadlock</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>31</tt></td><td>MinExpTimeDeadlock</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>32</tt></td><td rowspan="3">20-1</td><td>MaxPrReachDeadlockTB</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>33</tt></td><td>MaxPrReachDeadlock</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>34</tt></td><td>MinExpTimeDeadlock</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>35</tt></td><td><a href="..\..\benchmarks\index.html#polling">polling</a></td><td>PRISM</td><td>18-16</td><td>s1_before_s2</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>36</tt></td><td><a href="..\..\benchmarks\index.html#speed-ind">speed-ind</a></td><td>PRISM</td><td>2100</td><td>change_state</td><td>Pb</td></tr>
+</table>
+
+<h2 id="mdp">MDP Benchmarks</h2>
+<p>
+	36 Markov decision process benchmark instances (where the <a href="..\..\benchmarks\index.html#csma">csma</a> instance with property <tt>some_before</tt> may still be replaced by a different model or instance):
+</p>
+<table style="table-layout: fixed;">
+	<colgroup>
+		<col style="width: 4.5ex;" />
+		<col style="width: 23ex;" />
+		<col style="width: 11ex;" />
+		<col style="width: 17ex;" />
+		<col style="width: 25.5ex;" />
+		<col style="width: 10ex;" />
+	</colgroup>
+	<tr>
+		<th></th>
+		<th>Model</th>
+		<th>Original</th>
+		<th>Parameters</th>
+		<th>Property</th>
+		<th>Type</th>
+	</tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>37</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#beb">beb</a></td><td rowspan="2">Modest</td><td>4-8-7</td><td>LineSeized</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>38</tt></td><td>5-16-15</td><td>LineSeized</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>39</tt></td><td rowspan="4"><a href="..\..\benchmarks\index.html#consensus">consensus</a></td><td rowspan="4">PRISM</td><td rowspan="2">4-4</td><td>disagree</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>40</tt></td><td>steps_min</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>41</tt></td><td rowspan="2">6-2</td><td>disagree</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>42</tt></td><td>steps_min</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>43</tt></td><td rowspan="5"><a href="..\..\benchmarks\index.html#csma">csma</a></td><td rowspan="5">PRISM</td><td rowspan="3">3-4</td><td>all_before_max</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>44</tt></td><td>time_max</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>45</tt></td><td>some_before</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>46</tt></td><td rowspan="2">4-2</td><td>all_before_max</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>47</tt></td><td>time_max</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>48</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#eajs">eajs</a></td><td rowspan="2">PRISM</td><td>5-250-11</td><td>ExpUtil</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>49</tt></td><td>6-300-13</td><td>ExpUtil</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>50</tt></td><td><a href="..\..\benchmarks\index.html#echoring">echoring</a></td><td>Modest</td><td>100</td><td>MaxOffline1</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>51</tt></td><td><a href="..\..\benchmarks\index.html#elevators">elevators</a></td><td>PPDDL</td><td>b-11-9</td><td>goal</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>52</tt></td><td><a href="..\..\benchmarks\index.html#firewire">firewire</a></td><td>PRISM</td><td>false-36-800</td><td>deadline</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>53</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#pacman">pacman</a></td><td rowspan="2">PRISM</td><td>60</td><td>crash</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>54</tt></td><td>100</td><td>crash</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>55</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#pnueli-zuck">pnueli-zuck</a></td><td rowspan="2">PRISM</td><td>5</td><td>live</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>56</tt></td><td>10</td><td>live</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>57</tt></td><td><a href="..\..\benchmarks\index.html#rabin">rabin</a></td><td>PRISM</td><td>10</td><td>live</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>58</tt></td><td><a href="..\..\benchmarks\index.html#rectangle-tireworld">rectangle-tireworld</a></td><td>PPDDL</td><td>11</td><td>goal</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>59</tt></td><td rowspan="3"><a href="..\..\benchmarks\index.html#resource-gathering">resource-gathering</a></td><td rowspan="3">PRISM</td><td rowspan="3">1300-100-100</td><td>expgold</td><td>Eb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>60</tt></td><td>expsteps</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>61</tt></td><td>prgoldgem</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>62</tt></td><td><a href="..\..\benchmarks\index.html#tireworld">tireworld</a></td><td>PPDDL</td><td>45</td><td>goal</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>63</tt></td><td><a href="..\..\benchmarks\index.html#triangle-tireworld">triangle-tireworld</a></td><td>PPDDL</td><td>441</td><td>goal</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>64</tt></td><td rowspan="6"><a href="..\..\benchmarks\index.html#wlan">wlan</a></td><td rowspan="6">PRISM</td><td rowspan="2">4-0</td><td>sent</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>65</tt></td><td>cost_min</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>66</tt></td><td rowspan="2">5-0</td><td>sent</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>67</tt></td><td>cost_min</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>68</tt></td><td rowspan="2">6-0</td><td>sent</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>69</tt></td><td>cost_min</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>70</tt></td><td><a href="..\..\benchmarks\index.html#zenotravel">zenotravel</a></td><td>PPDDL</td><td>4-2-2</td><td>goal</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>71</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#zeroconf">zeroconf</a></td><td rowspan="2">PRISM</td><td rowspan="2">1000-8-false</td><td>correct_max</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>72</tt></td><td>correct_min</td><td>P</td></tr>
+</table>
+
+<h2 id="ma">MA Benchmarks</h2>
+<p>
+	20 Markov automaton benchmark instances:
+</p>
+<table style="table-layout: fixed;">
+	<colgroup>
+		<col style="width: 4.5ex;" />
+		<col style="width: 23ex;" />
+		<col style="width: 11ex;" />
+		<col style="width: 17ex;" />
+		<col style="width: 25.5ex;" />
+		<col style="width: 10ex;" />
+	</colgroup>
+	<tr>
+		<th></th>
+		<th>Model</th>
+		<th>Original</th>
+		<th>Parameters</th>
+		<th>Property</th>
+		<th>Type</th>
+	</tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>73</tt></td><td><a href="..\..\benchmarks\index.html#bitcoin-attack">bitcoin-attack</a></td><td>Modest</td><td>20-6</td><td>P_MWinMax</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>74</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#cabinets">cabinets</a></td><td rowspan="2">Galileo</td><td rowspan="2">2-2-true</td><td>Unavailability</td><td>S</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>75</tt></td><td>Unreliability</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>76</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#dpm">dpm</a></td><td rowspan="2">Modest</td><td>4-8-5</td><td>PmaxQueuesFullBound</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>77</tt></td><td>6-6-5</td><td>PminQueue1Full</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>78</tt></td><td><a href="..\..\benchmarks\index.html#ftpp">ftpp</a></td><td>Galileo</td><td>2-2-true</td><td>Unavailability</td><td>S</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>79</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#ftwc">ftwc</a></td><td rowspan="2">Modest</td><td rowspan="2">8-5</td><td>TimeMax</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>80</tt></td><td>TimeMin</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>81</tt></td><td rowspan="3"><a href="..\..\benchmarks\index.html#hecs">hecs</a></td><td rowspan="3">Galileo</td><td>false-1-1</td><td>Unreliability</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>82</tt></td><td>false-2-2</td><td>Unreliability</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>83</tt></td><td>false-3-2</td><td>Unreliability</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>84</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#readers-writers">readers-writers</a></td><td rowspan="2">GreatSPN</td><td rowspan="2">40</td><td>exp_time_many_requests</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>85</tt></td><td>prtb_many_requests</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>86</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#sms">sms</a></td><td rowspan="2">Galileo</td><td rowspan="2">1-true</td><td>Unreliability</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>87</tt></td><td>Unavailability</td><td>S</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>88</tt></td><td rowspan="3"><a href="..\..\benchmarks\index.html#stream">stream</a></td><td rowspan="3">PRISM-MA</td><td rowspan="3">1000</td><td>exp_buffertime</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>89</tt></td><td>pr_underrun</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>90</tt></td><td>pr_underrun_tb</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>91</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#vgs">vgs</a></td><td rowspan="2">Galileo</td><td rowspan="2">5-10000</td><td>PrReachFailedTB</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>92</tt></td><td>MinExpTimeFailed</td><td>E</td></tr>
+</table>
+
+<h2 id="pta">PTA Benchmarks</h2>
+<p>
+	8 probabilistic timed automaton benchmark instances:
+</p>
+<table style="table-layout: fixed;">
+	<colgroup>
+		<col style="width: 4.5ex;" />
+		<col style="width: 23ex;" />
+		<col style="width: 11ex;" />
+		<col style="width: 17ex;" />
+		<col style="width: 25.5ex;" />
+		<col style="width: 10ex;" />
+	</colgroup>
+	<tr>
+		<th></th>
+		<th>Model</th>
+		<th>Original</th>
+		<th>Parameters</th>
+		<th>Property</th>
+		<th>Type</th>
+	</tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>93</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#firewire-pta">firewire-pta</a></td><td rowspan="2">PRISM</td><td rowspan="2">30-5000</td><td>deadline</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>94</tt></td><td>eventually</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>95</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#repudiation_malicious">repudiation_malicious</a></td><td rowspan="2">PRISM</td><td rowspan="2">20</td><td>deadline</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>96</tt></td><td>eventually</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>97</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#wlan-large">wlan-large</a></td><td rowspan="2">Modest</td><td rowspan="2">2</td><td>E_or</td><td>E</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>98</tt></td><td>P_max</td><td>P</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>99</tt></td><td rowspan="2"><a href="..\..\benchmarks\index.html#zeroconf-pta">zeroconf-pta</a></td><td rowspan="2">PRISM</td><td rowspan="2">200</td><td>deadline</td><td>Pb</td></tr>
+	<tr><td style="color: #A0A0A0; text-align: right; font-size: 80%;"><tt>100</tt></td><td>incorrect</td><td>P</td></tr>
+</table>
+
+</body>
+</html>
