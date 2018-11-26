@@ -28,7 +28,7 @@
 		"os": "Debian Gnu/Linux 9 (stretch)",
 		"runtime": "gcc (Debian 6.4.018+deb9u1) 6.3.0 20170516"
 	},
-	"command": "torm --jani embedded.jani --janiproperty actuators,danger_time,io,main,sensors,up_time --constants MAX_COUNT=7,T=12 --exact --timemem",
+	"command": "storm --jani embedded.jani --janiproperty actuators,danger_time,io,main,sensors,up_time --constants MAX_COUNT=7,T=12 --exact --timemem",
 	"time": 8.103134155273438,
 	"memory": 63963136,
 	"property-times": [

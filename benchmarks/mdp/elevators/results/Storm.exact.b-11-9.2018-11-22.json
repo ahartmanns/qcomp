@@ -19,7 +19,7 @@
 		"os": "Debian Gnu/Linux 9 (stretch)",
 		"runtime": "gcc (Debian 6.4.018+deb9u1) 6.3.0 20170516"
 	},
-	"command": "torm --jani elevators.b-11-9.jani --janiproperty  --exact --timemem",
+	"command": "storm --jani elevators.b-11-9.jani --janiproperty  --exact --timemem",
 	"time": 44.6938853263855,
 	"memory": 865075200,
 	"property-times": [

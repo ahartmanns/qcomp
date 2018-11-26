@@ -32,7 +32,7 @@
 		"os": "Debian Gnu/Linux 9 (stretch)",
 		"runtime": "gcc (Debian 6.4.018+deb9u1) 6.3.0 20170516"
 	},
-	"command": "torm --jani tandem.jani --janiproperty customers --constants c=7,T=1000,t=0.2 --exact --timemem",
+	"command": "storm --jani tandem.jani --janiproperty customers --constants c=7,T=1000,t=0.2 --exact --timemem",
 	"time": 0.41638898849487305,
 	"memory": 47185920,
 	"property-times": [

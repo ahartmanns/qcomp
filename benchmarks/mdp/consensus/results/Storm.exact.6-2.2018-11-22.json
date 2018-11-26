@@ -24,7 +24,7 @@
 		"os": "Debian Gnu/Linux 9 (stretch)",
 		"runtime": "gcc (Debian 6.4.018+deb9u1) 6.3.0 20170516"
 	},
-	"command": "torm --jani consensus.6.jani --janiproperty  --constants K=2 --exact --timemem",
+	"command": "storm --jani consensus.6.jani --janiproperty  --constants K=2 --exact --timemem",
 	"time": 33842.78398799896,
 	"memory": 4336910336,
 	"property-times": [
