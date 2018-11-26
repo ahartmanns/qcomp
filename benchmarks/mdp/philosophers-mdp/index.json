@@ -71,6 +71,11 @@
 						}
 					],
 					"results": [
+						{
+							"property": "eat",
+							"value": 1,
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -95,10 +100,8 @@
 			],
 			"open-parameter-values": [
 				{
-					"states": [
-					],
-					"results": [
-					]
+					"states": [],
+					"results": []
 				}
 			]
 		},
@@ -122,10 +125,8 @@
 			],
 			"open-parameter-values": [
 				{
-					"states": [
-					],
-					"results": [
-					]
+					"states": [],
+					"results": []
 				}
 			]
 		},
@@ -149,10 +150,8 @@
 			],
 			"open-parameter-values": [
 				{
-					"states": [
-					],
-					"results": [
-					]
+					"states": [],
+					"results": []
 				}
 			]
 		}
@@ -161,6 +160,10 @@
 		{
 			"reference": false,
 			"file": "results/mcsta.3.2018-11-13.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.3.2018-11-22.json"
 		}
 	]
 }
