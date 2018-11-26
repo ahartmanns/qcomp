@@ -137,7 +137,13 @@
 			"open-parameter-values": [
 				{
 					"states": [],
-					"results": []
+					"results": [
+						{
+							"property": "live",
+							"value": 1,
+							"note": "Storm/exact"
+						}
+					]
 				}
 			]
 		},
@@ -162,7 +168,13 @@
 			"open-parameter-values": [
 				{
 					"states": [],
-					"results": []
+					"results": [
+						{
+							"property": "live",
+							"value": 1,
+							"note": "Storm/exact"
+						}
+					]
 				}
 			]
 		}
@@ -183,6 +195,14 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.5.2018-11-22.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.dd.exact.10.2018-11-26.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.dd.exact.15.2018-11-26.json"
 		}
 	]
 }
