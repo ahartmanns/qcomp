@@ -326,19 +326,19 @@
 	"results": [
 		{
 			"reference": true,
-			"file": "results/Storm.exact.5-2-5.2018-11-26.json"
+			"file": "results/Storm.dd.bisim.exact.5-2-5.2018-11-26.json"
 		},
 		{
 			"reference": true,
-			"file": "results/Storm.exact.7-3-5.2018-11-26.json"
+			"file": "results/Storm.dd.bisim.exact.7-3-5.2018-11-26.json"
 		},
 		{
 			"reference": true,
-			"file": "results/Storm.exact.9-4-5.2018-11-26.json"
+			"file": "results/Storm.dd.bisim.exact.9-4-5.2018-11-26.json"
 		},
 		{
 			"reference": true,
-			"file": "results/Storm.exact.15-4-5.2018-11-26.json"
+			"file": "results/Storm.dd.bisim.exact.15-4-5.2018-11-26.json"
 		}
 	]
 }

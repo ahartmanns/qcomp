@@ -1,9 +1,9 @@
 {
-	"file": "../coupon.7-3.jani",
+	"file": "../coupon.9-4.jani",
 	"version": 1,
 	"date": "2018-11-26",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
-	"log": "Storm.exact.7-3-5.2018-11-26.txt",
+	"log": "Storm.dd.bisim.exact.9-4-5.2018-11-26.txt",
 	"open-parameter-values": [
 		{
 			"name": "B",
@@ -26,9 +26,9 @@
 		"os": "Debian Gnu/Linux 9 (stretch)",
 		"runtime": "gcc (Debian 6.4.018+deb9u1) 6.3.0 20170516"
 	},
-	"command": "storm --jani coupon.7-3.jani --janiproperty  --constants B=5 --engine dd --ddlib sylvan --bisimulation --bisimulation:quot sparse --exact --timemem",
-	"time": 1.476935863494873,
-	"memory": 3167748096,
+	"command": "storm --jani coupon.9-4.jani --janiproperty  --constants B=5 --engine dd --ddlib sylvan --bisimulation --bisimulation:quot sparse --exact --timemem",
+	"time": 2.943398952484131,
+	"memory": 3275751424,
 	"property-times": [
 		{
 			"name": "collect_all",
@@ -36,11 +36,11 @@
 		},
 		{
 			"name": "exp_draws",
-			"time": 0.009
+			"time": 0.015
 		},
 		{
 			"name": "collect_all_bounded",
-			"time": 0.003
+			"time": 0.006
 		}
 	],
 	"data": [
@@ -49,16 +49,16 @@
 			"values": [
 				{
 					"name": "time",
-					"value": 0.779,
+					"value": 0.905,
 					"unit": "s"
 				},
 				{
 					"name": "states",
-					"value": 337710
+					"value": 27642923
 				},
 				{
 					"name": "branches",
-					"value": 585894
+					"value": 55677355
 				}
 			]
 		},
@@ -67,15 +67,15 @@
 				{
 					"unit": "s",
 					"name": "time",
-					"value": 0.591
+					"value": 1.910
 				},
 				{
 					"name": "states",
-					"value": 121
+					"value": 211
 				},
 				{
 					"name": "branches",
-					"value": 161
+					"value": 307
 				}
 			],
 			"group": "Strong bisimulation"
@@ -94,14 +94,14 @@
 		{
 			"property": "exp_draws",
 			"value": {
-				"den": 2589397104660,
-				"approx": 6.383419614421544,
-				"num": 16529208267413
+				"den": 16643031685280,
+				"approx": 6.74007249230144,
+				"num": 112175240050457
 			},
 			"values": [
 				{
 					"name": "time",
-					"value": 0.009,
+					"value": 0.015,
 					"unit": "s"
 				}
 			]
@@ -109,14 +109,14 @@
 		{
 			"property": "collect_all_bounded",
 			"value": {
-				"den": 96889010407,
-				"approx": 0.4339188263291682,
-				"num": 42041965680
+				"den": 5559060566555523,
+				"approx": 0.35851078982197204,
+				"num": 1992983194384000
 			},
 			"values": [
 				{
 					"name": "time",
-					"value": 0.003,
+					"value": 0.006,
 					"unit": "s"
 				}
 			]
