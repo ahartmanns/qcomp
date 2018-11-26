@@ -44,7 +44,7 @@
 			"type": "positive integer"
 		}
 	],
-	"properties": [		
+	"properties": [
 		{
 			"name": "collect_all",
 			"description": "The probability to eventually collect all coupons.",
@@ -98,6 +98,31 @@
 							"note": "Storm",
 							"number": 5397
 						}
+					],
+					"results": [
+						{
+							"property": "collect_all",
+							"value": 1,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "exp_draws",
+							"value": {
+								"den": 126,
+								"approx": 5.9603174603174605,
+								"num": 751
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "collect_all_bounded",
+							"value": {
+								"den": 78125,
+								"approx": 0.5225472,
+								"num": 40824
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -137,6 +162,31 @@
 						{
 							"note": "Storm",
 							"number": 337710
+						}
+					],
+					"results": [
+						{
+							"property": "collect_all",
+							"value": 1,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "exp_draws",
+							"value": {
+								"den": 2589397104660,
+								"approx": 6.383419614421544,
+								"num": 16529208267413
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "collect_all_bounded",
+							"value": {
+								"den": 96889010407,
+								"approx": 0.4339188263291682,
+								"num": 42041965680
+							},
+							"note": "Storm/exact"
 						}
 					]
 				}
@@ -178,6 +228,31 @@
 							"note": "Storm/dd",
 							"number": 27642923
 						}
+					],
+					"results": [
+						{
+							"property": "collect_all",
+							"value": 1,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "exp_draws",
+							"value": {
+								"den": 16643031685280,
+								"approx": 6.74007249230144,
+								"num": 112175240050457
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "collect_all_bounded",
+							"value": {
+								"den": 5559060566555523,
+								"approx": 0.35851078982197204,
+								"num": 1992983194384000
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -218,11 +293,52 @@
 							"note": "Storm/dd",
 							"number": 17486977236
 						}
+					],
+					"results": [
+						{
+							"property": "collect_all",
+							"value": 1,
+							"note": "Storm/exact"
+						},
+						{
+							"property": "exp_draws",
+							"value": {
+								"den": 5306811483744700661842810539840,
+								"approx": 12.818358616251643,
+								"num": 68024612707482047949451796497199
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "collect_all_bounded",
+							"value": {
+								"den": 16218292236328125,
+								"approx": 0.0017788079199640542,
+								"num": 28849226678272
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
 		}
 	],
 	"results": [
+		{
+			"reference": true,
+			"file": "results/Storm.exact.5-2-5.2018-11-26.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.7-3-5.2018-11-26.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.9-4-5.2018-11-26.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.15-4-5.2018-11-26.json"
+		}
 	]
 }
