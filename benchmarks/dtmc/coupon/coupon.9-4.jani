@@ -1940,7 +1940,7 @@
             }
         ]
     },
-    "type": "mdp",
+    "type": "dtmc",
     "variables": [
         {
             "initial-value": 0,
