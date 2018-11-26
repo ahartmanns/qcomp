@@ -126,6 +126,13 @@
 							"number": 909,
 							"note": "mcsta"
 						}
+					],
+					"results": [
+						{
+							"property": "goal",
+							"value": 1,
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -211,6 +218,13 @@
 							"number": 538326,
 							"note": "mcsta"
 						}
+					],
+					"results": [
+						{
+							"property": "goal",
+							"value": 1,
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -235,6 +249,14 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.a-11-9.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.b-3-3.2018-11-22.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact.b-11-9.2018-11-22.json"
 		}
 	]
 }
