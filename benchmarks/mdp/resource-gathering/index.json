@@ -20,7 +20,7 @@
 	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "https://doi.org/10.1145/1390156.1390162",
-	"description": "A 5x5 grid world where an agent has to collect gold and gem and bring it to the home location. On certain grid coordinates there is a 10% chance that the agent gets attacked. When the agent gets attacked, it has to restart at the home location. See also Section 6.2.4 of [0].",
+	"description": "A 5x5 grid world where an agent has to collect gold and gem and bring it to the home location. On certain grid coordinates there is a 10% chance that the agent gets attacked. When the agent gets attacked, it has to restart at the home location. This model is part of the benchmark suite from [1] for multiobjective reinforcement learning algorithms.",
 	"references": [
 		"https://doi.org/10.1007/s10994-010-5232-5"
 	],
