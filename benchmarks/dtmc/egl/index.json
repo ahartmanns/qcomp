@@ -13,9 +13,9 @@
 		}
 	],
 	"author": [
-		"Shimon Even <evenQcs.technion.ac.il >",
+		"Shimon Even <even@cs.technion.ac.il >",
 		"Oded Goldreich <oded.goldreich@weizman.ac.il>",
-		"Abraham Lempel <lempelcs.technion.ac.il>"
+		"Abraham Lempel <lempel@cs.technion.ac.il>"
 	],
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "https://doi.org/10.1145/3812.3818",
@@ -320,6 +320,26 @@
 							"note": "Storm",
 							"number": 66060286
 						}
+					],
+					"results": [
+						{
+							"property": "messagesB",
+							"value": {
+								"num": 2102779,
+								"approx": 4.010732650756836,
+								"den": 524288
+							},
+							"note": "Storm/dd/exact"
+						},
+						{
+							"property": "unfairA",
+							"value": {
+								"num": 1025,
+								"approx": 0.50048828125,
+								"den": 2048
+							},
+							"note": "Storm/dd/exact"
+						}
 					]
 				},
 				{
@@ -377,6 +397,26 @@
 						{
 							"note": "mcsta",
 							"number": 317718526
+						}
+					],
+					"results": [
+						{
+							"property": "messagesB",
+							"value": {
+								"num": 2133469,
+								"approx": 4.069269180297852,
+								"den": 524288
+							},
+							"note": "Storm/dd/exact"
+						},
+						{
+							"property": "unfairA",
+							"value": {
+								"num": 1025,
+								"approx": 0.50048828125,
+								"den": 2048
+							},
+							"note": "Storm/dd/exact"
 						}
 					]
 				},
@@ -550,6 +590,14 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.5-8.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.dd-exact.10-2.2018-11-26.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.dd-exact.10-8.2018-11-26.json"
 		},
 		"results/mcsta.5-2.2018-11-21.json",
 		"results/mcsta.5-4.2018-11-21.json",
