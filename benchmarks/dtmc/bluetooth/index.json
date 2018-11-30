@@ -69,8 +69,15 @@
 					],
 					"states": [
 						{
-							"note" : "Storm/dd",
+							"note": "Storm/dd",
 							"number": 3411945339
+						}
+					],
+					"results": [
+						{
+							"property": "time",
+							"value": 8229,
+							"note": "Storm/dd/bisim/exact"
 						}
 					]
 				},
@@ -83,7 +90,7 @@
 					],
 					"states": [
 						{
-							"note" : "Storm/dd",
+							"note": "Storm/dd",
 							"number": 55300038488
 						}
 					]
@@ -92,6 +99,10 @@
 		}
 	],
 	"results": [
-		"results/Storm.dd-bisim.1.2018-10-16.json"
+		"results/Storm.dd-bisim.1.2018-10-16.json",
+		{
+			"reference": true,
+			"file": "results/Storm.dd-bisim-exact.1.2018-11-26.json"
+		}
 	]
 }
