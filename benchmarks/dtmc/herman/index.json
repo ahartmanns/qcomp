@@ -298,6 +298,17 @@
 							"note": "Storm",
 							"number": 32768
 						}
+					],
+					"results": [
+						{
+							"property": "steps",
+							"value": {
+								"num": 100,
+								"approx": 33.333333333333336,
+								"den": 3
+							},
+							"note": "Storm/hybrid/bisim/exact"
+						}
 					]
 				}
 			]
@@ -421,6 +432,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.11.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.hybrid-bisim-exact.15.2018-11-26.json"
 		}
 	]
 }
