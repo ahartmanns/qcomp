@@ -155,6 +155,17 @@
 							"note": "Storm",
 							"number": 99535
 						}
+					],
+					"results": [
+						{
+							"property": "reactions",
+							"value":
+							{
+								"lower": 48.49102760,
+								"upper": 48.49102762
+							},
+							"note": "Storm"
+						}
 					]
 				},
 				{
@@ -236,6 +247,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.1-30.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.4-30.2018-11-29.json"
 		}
 	]
 }
