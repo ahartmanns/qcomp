@@ -16,7 +16,9 @@
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"source": "https://doi.org/10.1007/BF00289519",
 	"description": "This model is a variant of the classical dining Philosophers problem. There are `N´ philosophers that share `N´ forks. Each philosopher is either thinking or eating. Eating requires two forks. If only the first fork is available, a philosopher graps the first fork and waits for the second one to become free. This eventually results in a deadlock in which all philosophers wait for the second fork to become free. This model is accompanied by GreatSPN [1]",
-	"references": ["https://doi.org/10.1007/978-3-319-30599-8_9"],
+	"references": [
+		"https://doi.org/10.1007/978-3-319-30599-8_9"
+	],
 	"notes": "small symbolic representation",
 	"parameters": [
 		{
@@ -171,6 +173,15 @@
 							"property": "MaxPrReachDeadlock",
 							"value": 1,
 							"note": "Storm/hybrid/exact"
+						},
+						{
+							"property": "MaxPrReachDeadlockTB",
+							"value":
+								{
+									"lower": 6.928228934e-05,
+									"upper": 6.928248934e-05
+								},
+							"note": "Storm"
 						}
 					]
 				}
@@ -203,6 +214,17 @@
 						{
 							"note": "Storm/dd",
 							"number": 45239074
+						}
+					],
+					"results": [
+						{
+							"property": "MaxPrReachDeadlockTB",
+							"value":
+								{
+									"lower": 6.320794925e-06,
+									"upper": 6.320994925e-06
+								},
+							"note": "Storm"
 						}
 					]
 				}
@@ -321,6 +343,14 @@
 		{
 			"reference": true,
 			"file": "results/Storm.hybrid-exact.16-1.2018-10-25.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.16-1.2018-11-29.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.20-1.2018-11-29.json"
 		},
 		"results/mcsta.4-1.2018-11-21.json",
 		"results/mcsta.12-1.2018-11-21.json",
