@@ -66,12 +66,27 @@
 							"note": "Storm",
 							"number": 192000
 						}
+					],
+					"results": [
+						{
+							"property": "change_state",
+							"value":
+								{
+									"lower": 0.05429919306,
+									"upper": 0.05429919326
+								},
+							"note": "Storm"
+						}
 					]
 				}
 			]
 		}
 	],
 	"results": [
-		"results/Storm.2100.2018-10-30.json"
+		"results/Storm.2100.2018-10-30.json",
+		{
+			"reference": true,
+			"file": "results/Storm.2100.2018-11-29.json"
+		}
 	]
 }
