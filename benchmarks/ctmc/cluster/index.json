@@ -258,6 +258,17 @@
 							"note": "Storm",
 							"number": 151060
 						}
+					],
+					"results": [
+						{
+							"property": "below_min",
+							"value": 
+								{
+									"lower": 0.00421944387,
+									"upper": 0.00421944367
+								},
+							"note": "Storm"
+						}
 					]
 				},
 				{
@@ -279,6 +290,17 @@
 						{
 							"note": "Storm",
 							"number": 597012
+						}
+					],
+					"results": [
+						{
+							"property": "qos1",
+							"value":
+								{
+									"lower": 0.001072402434,
+									"upper": 0.001072402634
+								},
+							"note": "Storm"
 						}
 					]
 				},
@@ -348,6 +370,14 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.4-2000-20.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.64-2000-20.2018-11-29.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.128-2000-20.2018-11-29.json"
 		}
 	]
 }
