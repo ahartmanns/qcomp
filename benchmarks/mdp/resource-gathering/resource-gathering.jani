@@ -2138,7 +2138,7 @@
                         "left": true,
                         "op": "U",
                         "right": "success",
-                        "time-bounds": {
+                        "step-bounds": {
                             "upper": "B",
                             "upper-exclusive": false
                         }
