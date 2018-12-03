@@ -76,6 +76,16 @@
 							"note": "Storm",
 							"number": 5155917
 						}
+					],
+					"results": [
+						{
+							"property": "Unreliability",
+							"value": {
+								"lower": 0.000109993854,
+								"upper": 0.000109994054
+							},
+							"note": "Storm-dft"
+						}
 					]
 				}
 			],
@@ -128,7 +138,20 @@
 				"url": "https://github.com/utwente-fmt/DFTRES",
 				"command": "java -jar DFTRES.jar --json --export-jani hecs.false-2-2.jani -a -r 1 hecs.false-2-2.dft"
 			},
-			"open-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"results": [
+						{
+							"property": "Unreliability",
+							"value": {
+								"lower": 0.0002199757094,
+								"upper": 0.0002199759094
+							},
+							"note": "Storm-dft"
+						}
+					]
+				}
+			],
 			"file-parameter-values": [
 				{
 					"name": "R",
@@ -178,7 +201,20 @@
 				"url": "https://github.com/utwente-fmt/DFTRES",
 				"command": "java -jar DFTRES.jar --json --export-jani hecs.false-3-2.jani -a -r 1 hecs.false-3-2.dft"
 			},
-			"open-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"results": [
+						{
+							"property": "Unreliability",
+							"value": {
+								"lower": 3.619334822e-08,
+								"upper": 3.639334822e-08
+							},
+							"note": "Storm-dft"
+						}
+					]
+				}
+			],
 			"file-parameter-values": [
 				{
 					"name": "R",
