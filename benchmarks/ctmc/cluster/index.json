@@ -262,11 +262,10 @@
 					"results": [
 						{
 							"property": "below_min",
-							"value": 
-								{
-									"lower": 0.00421944387,
-									"upper": 0.00421944367
-								},
+							"value": {
+								"lower": 0.00421944387,
+								"upper": 0.00421944367
+							},
 							"note": "Storm"
 						}
 					]
@@ -294,12 +293,19 @@
 					],
 					"results": [
 						{
+							"property": "premium_steady",
+							"value": {
+								"lower": 0.9979378910002062,
+								"upper": 0.9979378911997938
+							},
+							"note": "Storm/sound"
+						},
+						{
 							"property": "qos1",
-							"value":
-								{
-									"lower": 0.001072402434,
-									"upper": 0.001072402634
-								},
+							"value": {
+								"lower": 0.001072402434,
+								"upper": 0.001072402634
+							},
 							"note": "Storm"
 						}
 					]
@@ -378,6 +384,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.128-2000-20.2018-11-29.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.sound.128-2000-20.2018-12-03.json"
 		}
 	]
 }
