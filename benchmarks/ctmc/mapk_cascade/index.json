@@ -158,10 +158,17 @@
 					],
 					"results": [
 						{
+							"property": "activated_time",
+							"value": {
+								"lower": 40.67650299593235,
+								"upper": 40.67650300406765
+							},
+							"note": "Storm/sound"
+						},
+						{
 							"property": "reactions",
-							"value":
-							{
-								"lower": 48.49102760,
+							"value": {
+								"lower": 48.4910276,
 								"upper": 48.49102762
 							},
 							"note": "Storm"
@@ -251,6 +258,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.4-30.2018-11-29.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.sound.4-30.2018-12-02.json"
 		}
 	]
 }
