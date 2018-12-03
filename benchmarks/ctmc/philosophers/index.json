@@ -176,12 +176,19 @@
 						},
 						{
 							"property": "MaxPrReachDeadlockTB",
-							"value":
-								{
-									"lower": 6.928228934e-05,
-									"upper": 6.928248934e-05
-								},
+							"value": {
+								"lower": 6.928228934e-05,
+								"upper": 6.928248934e-05
+							},
 							"note": "Storm"
+						},
+						{
+							"property": "MinExpTimeDeadlock",
+							"value": {
+								"lower": 10.782973448921704,
+								"upper": 10.782973451078297
+							},
+							"note": "Storm/hybrid/sound"
 						}
 					]
 				}
@@ -218,13 +225,25 @@
 					],
 					"results": [
 						{
+							"property": "MaxPrReachDeadlock",
+							"value": 1,
+							"note": "Storm/hybrid/sound"
+						},
+						{
 							"property": "MaxPrReachDeadlockTB",
-							"value":
-								{
-									"lower": 6.320794925e-06,
-									"upper": 6.320994925e-06
-								},
+							"value": {
+								"lower": 6.320794925e-06,
+								"upper": 6.320994925e-06
+							},
 							"note": "Storm"
+						},
+						{
+							"property": "MinExpTimeDeadlock",
+							"value": {
+								"lower": 11.763581268823643,
+								"upper": 11.763581271176358
+							},
+							"note": "Storm/hybrid/sound"
 						}
 					]
 				}
@@ -354,6 +373,14 @@
 		},
 		"results/mcsta.4-1.2018-11-21.json",
 		"results/mcsta.12-1.2018-11-21.json",
-		"results/mcsta.16-1.2018-11-21.json"
+		"results/mcsta.16-1.2018-11-21.json",
+		{
+			"reference": true,
+			"file": "results/Storm.hybrid-sound.16-1.2018-12-02.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.hybrid-sound.20-1.2018-12-02.json"
+		}
 	]
 }
