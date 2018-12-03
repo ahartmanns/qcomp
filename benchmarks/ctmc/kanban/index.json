@@ -137,6 +137,16 @@
 							"note": "Storm",
 							"number": 2546432
 						}
+					],
+					"results": [
+						{
+							"property": "throughput",
+							"value": {
+								"lower": 0.3071247592692875,
+								"upper": 0.3071247593307125
+							},
+							"note": "Storm/sound"
+						}
 					]
 				},
 				{
@@ -181,6 +191,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.1.2018-10-17.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.sound.5.2018-12-03.json"
 		}
 	]
 }
