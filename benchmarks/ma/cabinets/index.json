@@ -319,7 +319,20 @@
 				"url": "https://github.com/utwente-fmt/DFTRES",
 				"command": "java -jar DFTRES.jar --json --export-jani cabinets.3-2-true.jani -a -r 1 cabinets.3-2-true.dft"
 			},
-			"open-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"results": [
+						{
+							"property": "Unreliability",
+							"value": {
+								"lower": 5.67352732e-08,
+								"upper": 7.67352732e-08
+							},
+							"note": "Storm"
+						}
+					]
+				}
+			],
 			"file-parameter-values": [
 				{
 					"name": "N",
@@ -534,6 +547,12 @@
 					"value": true
 				}
 			]
+		}
+	],
+	"results": [
+		{
+			"reference": true,
+			"file": "results/Storm.3-2-true.2018-12-03.json"
 		}
 	]
 }
