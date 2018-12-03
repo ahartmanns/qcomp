@@ -382,7 +382,28 @@
 				"url": "https://github.com/utwente-fmt/DFTRES",
 				"command": "java -jar DFTRES.jar --json --export-jani sms.3-true.jani -a -r 1 sms.3-true.dft"
 			},
-			"open-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"results": [
+						{
+							"property": "Unreliability",
+							"value": {
+								"lower": 0.02383490265,
+								"upper": 0.02383492265
+							},
+							"note": "Storm"
+						},
+						{
+							"property": "Unavailability",
+							"value": {
+								"lower": 0.9999999999,
+								"upper": 1.0000000001
+							},
+							"note": "Storm/exact/vi"
+						}
+					]
+				}
+			],
 			"file-parameter-values": [
 				{
 					"name": "A",
@@ -699,6 +720,16 @@
 					"value": true
 				}
 			]
+		}
+	],
+	"results": [
+		{
+			"reference": true,
+			"file": "results/Storm.3-true.2018-12-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact-vi.3-true.2018-12-03.json"
 		}
 	]
 }
