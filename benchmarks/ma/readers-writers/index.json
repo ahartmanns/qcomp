@@ -213,6 +213,14 @@
 							"property": "pr_many_requests",
 							"value": 1,
 							"note": "Storm/exact"
+						},
+						{
+							"property": "prtb_many_requests",
+							"value": {
+								"lower": 0.828884315310102,
+								"upper": 0.828884415310101
+							},
+							"note": "mcsta"
 						}
 					]
 				}
@@ -226,7 +234,11 @@
 		"results/Storm.20.json",
 		"results/mcsta.35.json",
 		"results/Storm.35.json",
-		"results/mcsta.40.json",
+		{
+			"reference": true,
+			"file": "results/mcsta.40.json"
+
+		},
 		"results/Storm.40.json",
 		{
 			"reference": true,
