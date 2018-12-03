@@ -103,6 +103,13 @@
 							"note": "mcsta",
 							"number": 4432272
 						}
+					],
+					"results": [
+						{
+							"property": "eventually",
+							"value": 1,
+							"note": "Storm/exact"
+						}
 					]
 				},
 				{
@@ -162,5 +169,10 @@
 			]
 		}
 	],
-	"results": []
+	"results": [
+		{
+			"reference": true,
+			"file": "results/Storm.exact.30-5000.2018-12-03.json"
+		}
+	]
 }
