@@ -104,6 +104,17 @@
 							"note": "mcsta",
 							"number": 498
 						}
+					],
+					"results": [
+						{
+							"property": "incorrect",
+							"value": {
+								"approx": 0.001301513854130159,
+								"num": 130321,
+								"den": 100130321
+							},
+							"note": "Storm/exact"
+						}
 					]
 				}
 			]
@@ -112,6 +123,10 @@
 	"results": [
 		"results/mcsta.100.2018-11-22.json",
 		"results/mcsta.150.2018-11-22.json",
-		"results/mcsta.200.2018-11-22.json"
+		"results/mcsta.200.2018-11-22.json",
+		{
+			"reference": true,
+			"file": "results/Storm.exact.200.2018-12-03.json"
+		}
 	]
 }
