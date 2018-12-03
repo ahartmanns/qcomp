@@ -72,6 +72,14 @@
 								"den": 1122677
 							},
 							"note": "Storm/exact"
+						},
+						{
+							"property": "P_MWinMax",
+							"value": {
+								"lower": 0.535059499611955,
+								"upper": 0.535060091243047
+							},
+							"note": "mcsta"
 						}
 					]
 				}
@@ -91,7 +99,10 @@
 		}
 	],
 	"results": [
-		"results/mcsta.20-6.json",
+		{
+			"reference": true,
+			"file": "results/mcsta.20-6.json"
+		},
 		{
 			"reference": true,
 			"file": "results/Storm.exact.20-6.2018-10-03.json"
