@@ -64,11 +64,6 @@
 							"note": "Storm/exact"
 						},
 						{
-							"property": "P_1_1",
-							"value": 1.0,
-							"note": "Storm/exact"
-						},
-						{
 							"property": "P_min",
 							"value": {
 								"approx": 0.0390625,
@@ -83,6 +78,15 @@
 								"approx": 0.0625,
 								"num": 1,
 								"den": 16
+							},
+							"note": "Storm/exact"
+						},
+						{
+							"property": "E_or",
+							"value": {
+								"approx": 33692.457341269845,
+								"num": 33961997,
+								"den": 1008
 							},
 							"note": "Storm/exact"
 						}
@@ -143,6 +147,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.2.2018-10-08.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.exact-ViToPi.2.2018-12-03.json"
 		}
 	]
 }
