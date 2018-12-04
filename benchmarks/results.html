@@ -137,7 +137,7 @@
 	</div>
 <!-- /ko -->
 <!-- ko if: errorMessage() === null && data() !== null -->
-	<div class="box" data-bind="with: data()" style="margin-bottom: 64px;">
+	<div class="box" data-bind="with: data()">
 		<div class="boxlabelo"><div class="boxlabel">Results</div></div>
 		<!-- ko if: display === "table" -->
 			<div data-bind="text: valuesCaption + ':'"></div>
@@ -196,6 +196,17 @@
 		<!-- /ko -->
 	</div>
 <!-- /ko -->
+
+<div class="box" style="margin-bottom: 64px;">
+	<div class="boxlabelo"><div class="boxlabel">Notes</div></div>
+	<div style="font-style: italic; font-size: 90%;">
+		Per-property runtimes include overhead: the difference between the total runtime and the sum of the individual per-property runtimes of a result.
+		A result's overhead is evenly distributed over all properties included in the result.
+		Overhead may include e.g. the time for tool startup and state space exploration.
+		The CPU-scaled runtime is obtained by multiplying the actual runtime in seconds by one-thousandth of the <a href="https://www.cpubenchmark.net/cpu_list.php">Passmark</a> "single-thread rating" for the CPU of the system that the result was obtained on.
+		It is a unitless number meant to improve the fairness of comparing runtimes obtained on different systems and has no absolute meaning.
+	</div>
+</div>
 
 </body>
 </html>
