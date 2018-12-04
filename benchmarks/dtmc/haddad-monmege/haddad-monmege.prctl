@@ -1,5 +1,5 @@
 // Probability to reach the target state
-"target": P=? [F "target"];
+"target": P=? [F "Target"];
 
 // Expected number of steps to reach the target or the sink state
-"exp_steps": T=? [F "done"];
+"exp_steps": T=? [F "Done"];

@@ -8,6 +8,7 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "x <- (N - 1)",
                                     "ref": "x",
                                     "value": {
                                         "left": "N",
@@ -25,6 +26,7 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "x <- (N + 1)",
                                     "ref": "x",
                                     "value": {
                                         "left": "N",
@@ -59,6 +61,7 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "x <- (x - 1)",
                                     "ref": "x",
                                     "value": {
                                         "left": "x",
@@ -76,6 +79,7 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "x <- N",
                                     "ref": "x",
                                     "value": "N"
                                 }
@@ -83,11 +87,7 @@
                             "location": "l",
                             "probability": {
                                 "comment": "(1 - 1/2)",
-                                "exp": {
-                                    "left": 1,
-                                    "op": "-",
-                                    "right": 0.5
-                                }
+                                "exp": 0.5
                             }
                         }
                     ],
@@ -114,6 +114,7 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "x <- (x + 1)",
                                     "ref": "x",
                                     "value": {
                                         "left": "x",
@@ -131,6 +132,7 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "x <- N",
                                     "ref": "x",
                                     "value": "N"
                                 }
@@ -138,11 +140,7 @@
                             "location": "l",
                             "probability": {
                                 "comment": "(1 - 1/2)",
-                                "exp": {
-                                    "left": 1,
-                                    "op": "-",
-                                    "right": 0.5
-                                }
+                                "exp": 0.5
                             }
                         }
                     ],
@@ -171,7 +169,6 @@
                 {
                     "destinations": [
                         {
-                            "assignments": [],
                             "location": "l"
                         }
                     ],
@@ -206,7 +203,8 @@
                     "name": "l",
                     "transient-values": [
                         {
-                            "ref": "target",
+                            "comment": "Target <- (x = 0)",
+                            "ref": "Target",
                             "value": {
                                 "left": "x",
                                 "op": "=",
@@ -214,7 +212,8 @@
                             }
                         },
                         {
-                            "ref": "done",
+                            "comment": "Done <- ((x = 0) | (x = (2 * N)))",
+                            "ref": "Done",
                             "value": {
                                 "left": {
                                     "left": "x",
@@ -272,7 +271,7 @@
                     "exp": {
                         "left": true,
                         "op": "U",
-                        "right": "target"
+                        "right": "Target"
                     },
                     "op": "Pmin"
                 }
@@ -292,7 +291,7 @@
                     ],
                     "exp": 1,
                     "op": "Emin",
-                    "reach": "done"
+                    "reach": "Done"
                 }
             },
             "name": "exp_steps"
@@ -312,13 +311,13 @@
     "variables": [
         {
             "initial-value": false,
-            "name": "target",
+            "name": "Target",
             "transient": true,
             "type": "bool"
         },
         {
             "initial-value": false,
-            "name": "done",
+            "name": "Done",
             "transient": true,
             "type": "bool"
         },
