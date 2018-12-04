@@ -35,10 +35,11 @@
 			"description": "Maximum queue size for each task type",
 			"type": "positive integer"
 		},
-		{	"name": "TIME_BOUND", 
-			"kind": "open", 
-			"description": "The time bound for property PminQueuesFullBound", 
-			"type": "positive real number" 
+		{
+			"name": "TIME_BOUND",
+			"kind": "open",
+			"description": "The time bound for property PminQueuesFullBound",
+			"type": "positive real number"
 		}
 	],
 	"files": [
@@ -62,9 +63,9 @@
 							"name": "C",
 							"value": 4
 						},
-						{ 
-							"name": "TIME_BOUND", 
-							"value": 5 
+						{
+							"name": "TIME_BOUND",
+							"value": 5
 						}
 					],
 					"states": [
@@ -110,39 +111,84 @@
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 4 },
-						{ "name": "C", "value": 4 },
-						{ "name": "TIME_BOUND", "value": 25 }
+						{
+							"name": "N",
+							"value": 4
+						},
+						{
+							"name": "C",
+							"value": 4
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 25
+						}
 					],
 					"states": [
-						{ "number": 34570, "note": "mcsta" }
+						{
+							"number": 34570,
+							"note": "mcsta"
+						}
 					]
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 4 },
-						{ "name": "C", "value": 6 },
-						{ "name": "TIME_BOUND", "value": 25 }
+						{
+							"name": "N",
+							"value": 4
+						},
+						{
+							"name": "C",
+							"value": 6
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 25
+						}
 					],
 					"states": [
-						{ "number": 131314, "note": "mcsta" }
+						{
+							"number": 131314,
+							"note": "mcsta"
+						}
 					]
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 4 },
-						{ "name": "C", "value": 6 },
-						{ "name": "TIME_BOUND", "value": 50 }
+						{
+							"name": "N",
+							"value": 4
+						},
+						{
+							"name": "C",
+							"value": 6
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 50
+						}
 					],
 					"states": [
-						{ "number": 131314, "note": "mcsta" }
+						{
+							"number": 131314,
+							"note": "mcsta"
+						}
 					]
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 4 },
-						{ "name": "C", "value": 6 },
-						{ "name": "TIME_BOUND", "value": 100 }
+						{
+							"name": "N",
+							"value": 4
+						},
+						{
+							"name": "C",
+							"value": 6
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 100
+						}
 					],
 					"states": [
 						{
@@ -187,39 +233,62 @@
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 4 },
-						{ "name": "C", "value": 8 },
-						{ "name": "TIME_BOUND", "value": 5 }
+						{
+							"name": "N",
+							"value": 4
+						},
+						{
+							"name": "C",
+							"value": 8
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 5
+						}
 					],
 					"states": [
-						{ "number": 356426, "note": "mcsta" }
-					],
-					"results": [
 						{
-							"property": "PmaxQueuesFullBound",
-							"value": {
-								"lower": 2.22734431353107e-08,
-								"upper": 1.22618583540274e-07
-							},
+							"number": 356426,
 							"note": "mcsta"
 						}
 					]
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 4 },
-						{ "name": "C", "value": 8 },
-						{ "name": "TIME_BOUND", "value": 25 }
+						{
+							"name": "N",
+							"value": 4
+						},
+						{
+							"name": "C",
+							"value": 8
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 25
+						}
 					],
 					"states": [
-						{ "number": 356426, "note": "mcsta" }
+						{
+							"number": 356426,
+							"note": "mcsta"
+						}
 					]
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 4 },
-						{ "name": "C", "value": 8 },
-						{ "name": "TIME_BOUND", "value": 100 }
+						{
+							"name": "N",
+							"value": 4
+						},
+						{
+							"name": "C",
+							"value": 8
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 100
+						}
 					],
 					"states": [
 						{
@@ -264,9 +333,18 @@
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 6 },
-						{ "name": "C", "value": 4 },
-						{ "name": "TIME_BOUND", "value": 5 }
+						{
+							"name": "N",
+							"value": 6
+						},
+						{
+							"name": "C",
+							"value": 4
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 5
+						}
 					],
 					"states": [
 						{
@@ -277,22 +355,50 @@
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 6 },
-						{ "name": "C", "value": 6 },
-						{ "name": "TIME_BOUND", "value": 5 }
+						{
+							"name": "N",
+							"value": 6
+						},
+						{
+							"name": "C",
+							"value": 6
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 5
+						}
 					],
 					"states": [
 						{
 							"number": 10537896,
 							"note": "mcsta"
 						}
+					],
+					"results": [
+						{
+							"property": "PminQueue1Full",
+							"value": {
+								"lower": 0.02696610784730339,
+								"upper": 0.02696610785269661
+							},
+							"note": "Storm/sound"
+						}
 					]
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 6 },
-						{ "name": "C", "value": 8 },
-						{ "name": "TIME_BOUND", "value": 5 }
+						{
+							"name": "N",
+							"value": 6
+						},
+						{
+							"name": "C",
+							"value": 8
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 5
+						}
 					],
 					"states": [
 						{
@@ -303,9 +409,18 @@
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 8 },
-						{ "name": "C", "value": 4 },
-						{ "name": "TIME_BOUND", "value": 5 }
+						{
+							"name": "N",
+							"value": 8
+						},
+						{
+							"name": "C",
+							"value": 4
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 5
+						}
 					],
 					"states": [
 						{
@@ -316,9 +431,18 @@
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 8 },
-						{ "name": "C", "value": 6 },
-						{ "name": "TIME_BOUND", "value": 5 }
+						{
+							"name": "N",
+							"value": 8
+						},
+						{
+							"name": "C",
+							"value": 6
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 5
+						}
 					],
 					"states": [
 						{
@@ -329,9 +453,18 @@
 				},
 				{
 					"values": [
-						{ "name": "N", "value": 8 },
-						{ "name": "C", "value": 8 },
-						{ "name": "TIME_BOUND", "value": 5 }
+						{
+							"name": "N",
+							"value": 8
+						},
+						{
+							"name": "C",
+							"value": 8
+						},
+						{
+							"name": "TIME_BOUND",
+							"value": 5
+						}
 					],
 					"states": [
 						{
@@ -390,7 +523,7 @@
 			"file": "results/mcsta.4-6-5.2018-10-24.json"
 		},
 		{
-			"reference": true,
+			"reference": false,
 			"file": "results/mcsta.4-8-5.2018-10-24.json"
 		},
 		{
@@ -408,6 +541,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.4-8.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.sound.6-6-5.2018-12-03.json"
 		}
 	]
 }
