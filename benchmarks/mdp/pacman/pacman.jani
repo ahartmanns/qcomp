@@ -642,8 +642,8 @@
                     "name": "l",
                     "transient-values": [
                         {
-                            "comment": "crash <- (((xP = xG0) & (yP = yG0)) | ((xP = xG1) & (yP = yG1)))",
-                            "ref": "crash",
+                            "comment": "Crash <- (((xP = xG0) & (yP = yG0)) | ((xP = xG1) & (yP = yG1)))",
+                            "ref": "Crash",
                             "value": {
                                 "left": {
                                     "left": {
@@ -39959,7 +39959,7 @@
                     "exp": {
                         "left": true,
                         "op": "U",
-                        "right": "crash"
+                        "right": "Crash"
                     },
                     "op": "Pmin"
                 }
@@ -40073,7 +40073,7 @@
     "variables": [
         {
             "initial-value": false,
-            "name": "crash",
+            "name": "Crash",
             "transient": true,
             "type": "bool"
         },

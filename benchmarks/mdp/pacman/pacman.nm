@@ -1101,6 +1101,6 @@ module pacman
 endmodule
 
 //CRASH
-label "crash" = (xP = xG0 & yP = yG0) | (xP = xG1 & yP = yG1);
-//label "safe" = deactive0 & deactive1;
+label "Crash" = (xP = xG0 & yP = yG0) | (xP = xG1 & yP = yG1);
+//label "Safe" = deactive0 & deactive1;
 
