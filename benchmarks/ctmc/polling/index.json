@@ -757,6 +757,16 @@
 							"note": "Storm",
 							"number": 7077888
 						}
+					],
+					"results": [
+						{
+							"property": "s1_before_s2",
+							"value": {
+								"lower": 0.5390072621460993,
+								"upper": 0.5390072622539007
+							},
+							"note": "Storm/sound"
+						}
 					]
 				}
 			]
@@ -878,6 +888,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.9-16.2018-11-21.json"
+		},
+		{
+			"reference": true,
+			"file": "results/Storm.sound.18-16.2018-12-03.json"
 		}
 	]
 }
