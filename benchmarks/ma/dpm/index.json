@@ -251,6 +251,16 @@
 							"number": 356426,
 							"note": "mcsta"
 						}
+					],
+					"results": [
+						{
+							"property": "PmaxQueuesFullBound",
+							"value": {
+								"lower": 2.22734431353107e-08,
+								"upper": 1.22618583540274e-07
+							},
+							"note": "mcsta"
+						}
 					]
 				},
 				{
@@ -523,7 +533,7 @@
 			"file": "results/mcsta.4-6-5.2018-10-24.json"
 		},
 		{
-			"reference": false,
+			"reference": true,
 			"file": "results/mcsta.4-8-5.2018-10-24.json"
 		},
 		{
