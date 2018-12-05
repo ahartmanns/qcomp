@@ -115,7 +115,12 @@ function compareProperties(p1, p2)
 }
 function loadResults(model, rs)
 {
-	rs.forEach(mr =>
+	if(rs.length === 0)
+	{
+		--vm.modelsToLoadCount;
+		if(vm.modelsToLoadCount === 0) onEndInit();
+	}
+	else rs.forEach(mr =>
 	{
 		if(typeof mr !== "string") mr = mr.file;
 		loadJson(model.path + "/" + mr, r =>
