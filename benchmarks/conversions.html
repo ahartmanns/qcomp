@@ -10,8 +10,14 @@
 
 <h1>Quantitative Verification Benchmark Set</h1>
 <div class="belowh1">
-	<a href="index.html">⮌</a> &nbsp;|&nbsp; <a href="#otherstojani">Other Models to JANI</a> &nbsp;|&nbsp; <a href="#janitojani">JANI to JANI</a>
+	<a href="index.html">⮌</a> &nbsp;|&nbsp; <a href="#otherstojani">Other Models to JANI</a> &nbsp;|&nbsp; <a href="#janitoothers">JANI to Other Models</a> &nbsp;|&nbsp; <a href="#janitojani">JANI to JANI</a>
 </div>
+
+<p>
+	This page lists tools that can convert models to, between, and from JANI.
+	Please contact <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script> if you would like to have your own conversion tool added to this page.
+	If problems occur while using one of the mentioned tools, please contact the respective tool authors.
+</p>
 
 <h2 id="otherstojani">Conversion of Models to JANI</h2>
 <p>
@@ -32,10 +38,6 @@
 		<a href=#prismtojani>PRISM to JANI</a> via <a href="http://www.stormchecker.org">Storm</a>
 	</li>
 </ul>
-<p class="continue">
-	Please contact <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script> if you would like to have your own conversion tool added to this list.
-	If problems occur while using one of the mentioned tools, please contact the respective tool authors.
-</p>
 
 <h3 id="galileotojani">Galileo to JANI</h3>
 <p>
@@ -101,7 +103,7 @@
 
 <h3 id="PPDDLtojani">PPDDL to JANI</h3>
 <p>
-	Conversion of input models given in the <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.539.6990&rep=rep1&type=pdf">Probabilistic Planning Domain Definition Language (PPDDL)</a> is supported by <tt>ppddl2jani</tt>, a script written by <a href="https://fai.cs.uni-saarland.de/steinmetz/">Marcel Steinmetz</a>, which uses parts of the <a href="http://www.fast-downward.org/HomePage">Fast Downward</a> PPDDL parser.
+	Conversion of input models given in the <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.539.6990&rep=rep1&type=pdf">Probabilistic Planning Domain Definition Language (PPDDL)</a> is supported by <a href="https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip"><tt>ppddl2jani</tt></a>, a script written by <a href="https://fai.cs.uni-saarland.de/steinmetz/">Marcel Steinmetz</a>, which uses parts of the <a href="http://www.fast-downward.org/HomePage">Fast Downward</a> PPDDL parser.
 </p>
 <p>
 	For example, the PPDDL files of the elevator problem <a href="mdp/elevators/p01.pddl">p01.pddl</a> and <a href="mdp/elevators/domain.pddl">domain.pddl</a> can be converted into a JANI file using <tt>ppddl2jani</tt> with the following command: 
@@ -136,6 +138,28 @@
 	</li>
 </ul>
 
+<h2 id="janitoothers">Conversion of Models from JANI</h2>
+<p>
+	There are tools which support the analysis of model types which are often represented in JANI but do not directly accept JANI as an input format.
+	The following tools implement conversions from JANI to other input formats:
+</p>
+<ul class="text continue">
+	<li>
+		<a href=#jani2ppddl>JANI to PPDDL</a> via <a href="https://dgit.cs.uni-saarland.de/Michaela/jani-ppddl-translation-release">jani2ppddl</a>
+	</li>
+</ul>
+
+<h3 id="jani2ppddl">JANI to PPDDL</h3>
+<p>
+	Conversion of JANI MDP models using a restricted JANI syntax into the <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.539.6990&rep=rep1&type=pdf">Probabilistic Planning Domain Definition Language (PPDDL)</a> is supported by <a href="https://dgit.cs.uni-saarland.de/Michaela/jani-ppddl-translation-release"><tt>jani2ppddl</tt></a>, a script written by <a href="https://depend.cs.uni-saarland.de/~klauck">Michaela Klauck</a>.
+</p>
+<p>
+	For example, the JANI file of Rabin's mutual exclusion protocol <a href="mdp/rabin/rabin.3.jani">rabin.3.jani</a> can be converted into a PPDDL domain and a problem file using <tt>jani2ppddl</tt> with the following command, where the configuration file lists the arithmetic expressions used in the model (see the script's webpage for more information).
+</p>
+<p class="tt">
+	jani2ppddl.py rabin.3.jani -c config_rabin.py
+</p>
+
 <h2 id="janitojani">JANI-to-JANI Conversions</h2>
 <p>
 	<a href="http://www.jani-spec.org/">JANI</a> includes model types and advanced modelling features that might not be supported by some tools.
@@ -164,10 +188,6 @@
 		</ul>
 	</li>
 </ul>
-<p class="continue">
-	Please contact <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script> if you would like to have your own conversion tool added to this list.
-	If problems occur while using one of the mentioned tools, please contact the respective tool authors.
-</p>
 
 </body>
 </html>
