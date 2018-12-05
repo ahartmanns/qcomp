@@ -29,11 +29,11 @@
 	"memory": 72351744,
 	"property-times": [
 		{
-			"name:": "ReachMinIsOne",
+			"name": "ReachMinIsOne",
 			"time": 0.034
 		},
 		{
-			"name:": "TimeMax",
+			"name": "TimeMax",
 			"time": 5253.466
 		}
 	],

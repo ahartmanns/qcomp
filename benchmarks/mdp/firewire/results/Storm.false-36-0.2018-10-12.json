@@ -26,19 +26,19 @@
 	"memory": 138412032,
 	"property-times": [
 		{
-			"name:": "elected",
+			"name": "elected",
 			"time": 0.227
 		},
 		{
-			"name:": "time_max",
+			"name": "time_max",
 			"time": 0.717
 		},
 		{
-			"name:": "time_min",
+			"name": "time_min",
 			"time": 0.822
 		},
 		{
-			"name:": "time_sending",
+			"name": "time_sending",
 			"time": 0.748
 		}
 	],

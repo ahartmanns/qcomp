@@ -38,11 +38,11 @@
 	"memory": 49283072,
 	"property-times": [
 		{
-			"name:": "deadline_max",
+			"name": "deadline_max",
 			"time": 0.024
 		},
 		{
-			"name:": "deadline_min",
+			"name": "deadline_min",
 			"time": 0.014
 		}
 	],

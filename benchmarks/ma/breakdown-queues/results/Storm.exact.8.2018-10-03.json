@@ -29,11 +29,11 @@
 	"memory": 67108864,
 	"property-times": [
 		{
-			"name:": "Min",
+			"name": "Min",
 			"time": 0.179
 		},
 		{
-			"name:": "Max",
+			"name": "Max",
 			"time": 0.183
 		}
 	],

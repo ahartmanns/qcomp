@@ -25,11 +25,11 @@
 	"time": 1285.649,
 	"property-times": [
 		{
-			"name:": "M2Fail_S",
+			"name": "M2Fail_S",
 			"time": 550.959
 		},
 		{
-			"name:": "M3Fail_S",
+			"name": "M3Fail_S",
 			"time": 678.884
 		}
 	],

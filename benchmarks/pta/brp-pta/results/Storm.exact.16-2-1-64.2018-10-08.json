@@ -51,83 +51,83 @@
 	"memory": 56623104,
 	"property-times": [
 		{
-			"name:": "T_1",
+			"name": "T_1",
 			"time": 0.004
 		},
 		{
-			"name:": "T_1_1",
+			"name": "T_1_1",
 			"time": 0.004
 		},
 		{
-			"name:": "T_2",
+			"name": "T_2",
 			"time": 0.004
 		},
 		{
-			"name:": "T_2_1",
+			"name": "T_2_1",
 			"time": 0.004
 		},
 		{
-			"name:": "T_A1",
+			"name": "T_A1",
 			"time": 0.004
 		},
 		{
-			"name:": "T_A1_1",
+			"name": "T_A1_1",
 			"time": 0.004
 		},
 		{
-			"name:": "T_A2",
+			"name": "T_A2",
 			"time": 0.004
 		},
 		{
-			"name:": "T_A2_1",
+			"name": "T_A2_1",
 			"time": 0.004
 		},
 		{
-			"name:": "P_A",
+			"name": "P_A",
 			"time": 0.004
 		},
 		{
-			"name:": "P_A_1",
+			"name": "P_A_1",
 			"time": 0.004
 		},
 		{
-			"name:": "P_B",
+			"name": "P_B",
 			"time": 0.004
 		},
 		{
-			"name:": "P_B_1",
+			"name": "P_B_1",
 			"time": 0.004
 		},
 		{
-			"name:": "P_1",
+			"name": "P_1",
 			"time": 0.021
 		},
 		{
-			"name:": "P_2",
+			"name": "P_2",
 			"time": 0.013
 		},
 		{
-			"name:": "P_3",
+			"name": "P_3",
 			"time": 0.014
 		},
 		{
-			"name:": "P_4",
+			"name": "P_4",
 			"time": 0.004
 		},
 		{
-			"name:": "Dmax",
+			"name": "Dmax",
 			"time": 0.663
 		},
 		{
-			"name:": "Dmin",
+			"name": "Dmin",
 			"time": 0.578
 		},
 		{
-			"name:": "Emax",
+			"name": "Emax",
 			"time": 0.018
 		},
 		{
-			"name:": "Emin",
+			"name": "Emin",
 			"time": 0.021
 		}
 	],

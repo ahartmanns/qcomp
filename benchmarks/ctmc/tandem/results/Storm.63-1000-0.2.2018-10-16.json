@@ -34,23 +34,23 @@
 	"memory": 52428800,
 	"property-times": [
 		{
-			"name:": "customers",
+			"name": "customers",
 			"time": 0.042
 		},
 		{
-			"name:": "customers_T",
+			"name": "customers_T",
 			"time": 0.084
 		},
 		{
-			"name:": "first_queue",
+			"name": "first_queue",
 			"time": 0.09
 		},
 		{
-			"name:": "network",
+			"name": "network",
 			"time": 30.459
 		},
 		{
-			"name:": "second_queue",
+			"name": "second_queue",
 			"time": 0.003
 		}
 	],

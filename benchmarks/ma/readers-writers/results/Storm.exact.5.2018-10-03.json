@@ -24,15 +24,15 @@
 	"memory": 58720256,
 	"property-times": [
 		{
-			"name:": "pr_many_requests",
+			"name": "pr_many_requests",
 			"time": 0.001
 		},
 		{
-			"name:": "exp_time_many_requests",
+			"name": "exp_time_many_requests",
 			"time": 3.501
 		},
 		{
-			"name:": "pr_network",
+			"name": "pr_network",
 			"time": 3.479
 		}
 	],

@@ -25,11 +25,11 @@
 	"time": 2722.232,
 	"property-times": [
 		{
-			"name:": "s1",
+			"name": "s1",
 			"time": 1032.108
 		},
 		{
-			"name:": "s1_before_s2",
+			"name": "s1_before_s2",
 			"time": 331.874
 		}
 	],

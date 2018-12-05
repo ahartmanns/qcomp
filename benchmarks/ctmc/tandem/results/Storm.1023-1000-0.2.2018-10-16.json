@@ -33,15 +33,15 @@
 	"time": 140.834,
 	"property-times": [
 		{
-			"name:": "customers",
+			"name": "customers",
 			"time": 11.551
 		},
 		{
-			"name:": "customers_T",
+			"name": "customers_T",
 			"time": 47.495
 		},
 		{
-			"name:": "first_queue",
+			"name": "first_queue",
 			"time": 55.823
 		}
 	],

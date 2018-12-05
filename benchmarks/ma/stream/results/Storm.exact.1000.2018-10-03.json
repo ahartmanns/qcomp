@@ -29,15 +29,15 @@
 	"memory": 3138387968,
 	"property-times": [
 		{
-			"name:": "exp_buffertime",
+			"name": "exp_buffertime",
 			"time": 21.656
 		},
 		{
-			"name:": "exp_restarts",
+			"name": "exp_restarts",
 			"time": 19.386
 		},
 		{
-			"name:": "pr_underrun",
+			"name": "pr_underrun",
 			"time": 145.437
 		}
 	],

@@ -26,27 +26,27 @@
 	"memory": 49283072,
 	"property-times": [
 		{
-			"name:": "M2Fail_S",
+			"name": "M2Fail_S",
 			"time": 0.196
 		},
 		{
-			"name:": "M3Fail_S",
+			"name": "M3Fail_S",
 			"time": 0.288
 		},
 		{
-			"name:": "M2Fail_E",
+			"name": "M2Fail_E",
 			"time": 0.004
 		},
 		{
-			"name:": "M3Fail_E",
+			"name": "M3Fail_E",
 			"time": 0.024
 		},
 		{
-			"name:": "M2Fail_Pb",
+			"name": "M2Fail_Pb",
 			"time": 0.059
 		},
 		{
-			"name:": "M3Fail_Pb",
+			"name": "M3Fail_Pb",
 			"time": 0.056
 		}
 	],

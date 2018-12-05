@@ -29,11 +29,11 @@
 	"memory": 63963136,
 	"property-times": [
 		{
-			"name:": "s1",
+			"name": "s1",
 			"time": 11.806
 		},
 		{
-			"name:": "s1_before_s2",
+			"name": "s1_before_s2",
 			"time": 0.026
 		}
 	],

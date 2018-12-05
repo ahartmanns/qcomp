@@ -21,23 +21,23 @@
 	"memory": 286261248,
 	"property-times": [
 		{
-			"name:": "all_before_max",
+			"name": "all_before_max",
 			"time": 1.542
 		},
 		{
-			"name:": "all_before_min",
+			"name": "all_before_min",
 			"time": 1.268
 		},
 		{
-			"name:": "some_before",
+			"name": "some_before",
 			"time": 0.375
 		},
 		{
-			"name:": "time_max",
+			"name": "time_max",
 			"time": 1.352
 		},
 		{
-			"name:": "time_min",
+			"name": "time_min",
 			"time": 2.74
 		}
 	],

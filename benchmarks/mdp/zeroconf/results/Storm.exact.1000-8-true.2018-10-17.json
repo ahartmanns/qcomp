@@ -37,11 +37,11 @@
 	"memory": 57671680,
 	"property-times": [
 		{
-			"name:": "correct_max",
+			"name": "correct_max",
 			"time": 0.066
 		},
 		{
-			"name:": "correct_min",
+			"name": "correct_min",
 			"time": 0.037
 		}
 	],

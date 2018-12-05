@@ -30,11 +30,11 @@
 	"memory": 52428800,
 	"property-times": [
 		{
-			"name:": "ExpUtil",
+			"name": "ExpUtil",
 			"time": 0.017
 		},
 		{
-			"name:": "ProbUtil",
+			"name": "ProbUtil",
 			"time": 0.106
 		}
 	],

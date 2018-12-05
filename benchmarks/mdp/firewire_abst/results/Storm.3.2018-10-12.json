@@ -26,19 +26,19 @@
 	"memory": 48234496,
 	"property-times": [
 		{
-			"name:": "elected",
+			"name": "elected",
 			"time": 0.0
 		},
 		{
-			"name:": "rounds",
+			"name": "rounds",
 			"time": 0.001
 		},
 		{
-			"name:": "time_max",
+			"name": "time_max",
 			"time": 0.0
 		},
 		{
-			"name:": "time_min",
+			"name": "time_min",
 			"time": 0.001
 		}
 	],

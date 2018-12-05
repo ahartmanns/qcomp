@@ -51,67 +51,67 @@
 	"memory": 56623104,
 	"property-times": [
 		{
-			"name:": "T_1",
+			"name": "T_1",
 			"time": 85.993
 		},
 		{
-			"name:": "T_1_1",
+			"name": "T_1_1",
 			"time": 84.38
 		},
 		{
-			"name:": "T_2",
+			"name": "T_2",
 			"time": 84.587
 		},
 		{
-			"name:": "T_2_1",
+			"name": "T_2_1",
 			"time": 84.894
 		},
 		{
-			"name:": "T_A1",
+			"name": "T_A1",
 			"time": 84.625
 		},
 		{
-			"name:": "T_A1_1",
+			"name": "T_A1_1",
 			"time": 84.036
 		},
 		{
-			"name:": "T_A2",
+			"name": "T_A2",
 			"time": 83.779
 		},
 		{
-			"name:": "T_A2_1",
+			"name": "T_A2_1",
 			"time": 84.672
 		},
 		{
-			"name:": "P_A",
+			"name": "P_A",
 			"time": 85.07
 		},
 		{
-			"name:": "P_A_1",
+			"name": "P_A_1",
 			"time": 85.127
 		},
 		{
-			"name:": "P_B",
+			"name": "P_B",
 			"time": 83.971
 		},
 		{
-			"name:": "P_B_1",
+			"name": "P_B_1",
 			"time": 84.205
 		},
 		{
-			"name:": "P_1",
+			"name": "P_1",
 			"time": 1217.215
 		},
 		{
-			"name:": "P_2",
+			"name": "P_2",
 			"time": 550.993
 		},
 		{
-			"name:": "P_3",
+			"name": "P_3",
 			"time": 1074.375
 		},
 		{
-			"name:": "P_4",
+			"name": "P_4",
 			"time": 95.577
 		}
 	],

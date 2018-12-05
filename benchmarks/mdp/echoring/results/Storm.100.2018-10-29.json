@@ -26,31 +26,31 @@
 	"memory": 1196425216,
 	"property-times": [
 		{
-			"name:": "MinFailed",
+			"name": "MinFailed",
 			"time": 9.551
 		},
 		{
-			"name:": "MinOffline1",
+			"name": "MinOffline1",
 			"time": 8.576
 		},
 		{
-			"name:": "MaxOffline1",
+			"name": "MaxOffline1",
 			"time": 7.471
 		},
 		{
-			"name:": "MinOffline2",
+			"name": "MinOffline2",
 			"time": 8.249
 		},
 		{
-			"name:": "MaxOffline2",
+			"name": "MaxOffline2",
 			"time": 7.407
 		},
 		{
-			"name:": "MinOffline3",
+			"name": "MinOffline3",
 			"time": 8.068
 		},
 		{
-			"name:": "MaxOffline3",
+			"name": "MaxOffline3",
 			"time": 7.246
 		}
 	],

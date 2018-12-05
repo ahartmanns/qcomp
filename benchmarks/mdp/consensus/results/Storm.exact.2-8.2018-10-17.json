@@ -29,23 +29,23 @@
 	"memory": 51380224,
 	"property-times": [
 		{
-			"name:": "c1",
+			"name": "c1",
 			"time": 0.002
 		},
 		{
-			"name:": "c2",
+			"name": "c2",
 			"time": 0.061
 		},
 		{
-			"name:": "disagree",
+			"name": "disagree",
 			"time": 0.559
 		},
 		{
-			"name:": "steps_max",
+			"name": "steps_max",
 			"time": 0.065
 		},
 		{
-			"name:": "steps_min",
+			"name": "steps_min",
 			"time": 0.064
 		}
 	],

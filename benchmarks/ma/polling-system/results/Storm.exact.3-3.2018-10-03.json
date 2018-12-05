@@ -43,15 +43,15 @@
 	"memory": 125829120,
 	"property-times": [
 		{
-			"name:": "PminBothFullIsOne",
+			"name": "PminBothFullIsOne",
 			"time": 0.031
 		},
 		{
-			"name:": "TminBothFull",
+			"name": "TminBothFull",
 			"time": 48.662
 		},
 		{
-			"name:": "TmaxBothFull",
+			"name": "TmaxBothFull",
 			"time": 1.093
 		}
 	],

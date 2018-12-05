@@ -26,31 +26,31 @@
 	"memory": 56623104,
 	"property-times": [
 		{
-			"name:": "collisions",
+			"name": "collisions",
 			"time": 0.011
 		},
 		{
-			"name:": "cost_max",
+			"name": "cost_max",
 			"time": 0.058
 		},
 		{
-			"name:": "cost_min",
+			"name": "cost_min",
 			"time": 0.076
 		},
 		{
-			"name:": "num_collisions",
+			"name": "num_collisions",
 			"time": 0.056
 		},
 		{
-			"name:": "sent",
+			"name": "sent",
 			"time": 0.015
 		},
 		{
-			"name:": "time_max",
+			"name": "time_max",
 			"time": 0.057
 		},
 		{
-			"name:": "time_min",
+			"name": "time_min",
 			"time": 0.075
 		}
 	],

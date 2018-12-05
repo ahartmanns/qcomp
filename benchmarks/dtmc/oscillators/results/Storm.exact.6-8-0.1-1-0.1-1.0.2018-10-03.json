@@ -33,11 +33,11 @@
 	"memory": 88080384,
 	"property-times": [
 		{
-			"name:": "time_to_synch",
+			"name": "time_to_synch",
 			"time": 0.244
 		},
 		{
-			"name:": "power_consumption",
+			"name": "power_consumption",
 			"time": 0.244
 		}
 	],
