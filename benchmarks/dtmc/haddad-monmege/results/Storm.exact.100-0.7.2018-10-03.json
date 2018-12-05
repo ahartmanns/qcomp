@@ -33,11 +33,11 @@
 	"memory": 47185920,
 	"property-times": [
 		{
-			"name:": "target",
+			"name": "target",
 			"time": 0.01
 		},
 		{
-			"name:": "exp_steps",
+			"name": "exp_steps",
 			"time": 0.009
 		}
 	],

@@ -29,15 +29,15 @@
 	"memory": 1366294528,
 	"property-times": [
 		{
-			"name:": "MaxPrReachDeadlock",
+			"name": "MaxPrReachDeadlock",
 			"time": 0.027
 		},
 		{
-			"name:": "MaxPrReachDeadlockTB",
+			"name": "MaxPrReachDeadlockTB",
 			"time": 57.197
 		},
 		{
-			"name:": "MinExpTimeDeadlock",
+			"name": "MinExpTimeDeadlock",
 			"time": 26.814
 		}
 	],

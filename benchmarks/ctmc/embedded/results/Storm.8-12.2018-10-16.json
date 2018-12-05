@@ -30,59 +30,59 @@
 	"memory": 50331648,
 	"property-times": [
 		{
-			"name:": "actuators",
+			"name": "actuators",
 			"time": 0.01
 		},
 		{
-			"name:": "actuators_T",
+			"name": "actuators_T",
 			"time": 0.108
 		},
 		{
-			"name:": "danger_T",
+			"name": "danger_T",
 			"time": 1.086
 		},
 		{
-			"name:": "danger_time",
+			"name": "danger_time",
 			"time": 0.012
 		},
 		{
-			"name:": "down_T",
+			"name": "down_T",
 			"time": 1.089
 		},
 		{
-			"name:": "failure_T",
+			"name": "failure_T",
 			"time": 0.25
 		},
 		{
-			"name:": "io",
+			"name": "io",
 			"time": 0.013
 		},
 		{
-			"name:": "io_T",
+			"name": "io_T",
 			"time": 0.251
 		},
 		{
-			"name:": "main",
+			"name": "main",
 			"time": 0.013
 		},
 		{
-			"name:": "main_T",
+			"name": "main_T",
 			"time": 0.25
 		},
 		{
-			"name:": "sensors",
+			"name": "sensors",
 			"time": 0.008
 		},
 		{
-			"name:": "sensors_T",
+			"name": "sensors_T",
 			"time": 0.108
 		},
 		{
-			"name:": "up_T",
+			"name": "up_T",
 			"time": 1.089
 		},
 		{
-			"name:": "up_time",
+			"name": "up_time",
 			"time": 0.012
 		}
 	],

@@ -33,15 +33,15 @@
 	"memory": 50331648,
 	"property-times": [
 		{
-			"name:": "p1",
+			"name": "p1",
 			"time": 0.055
 		},
 		{
-			"name:": "p2",
+			"name": "p2",
 			"time": 0.052
 		},
 		{
-			"name:": "p4",
+			"name": "p4",
 			"time": 0.005
 		}
 	],

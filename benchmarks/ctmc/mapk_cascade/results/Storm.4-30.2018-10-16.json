@@ -30,15 +30,15 @@
 	"memory": 196083712,
 	"property-times": [
 		{
-			"name:": "activated_T",
+			"name": "activated_T",
 			"time": 288.084
 		},
 		{
-			"name:": "activated_time",
+			"name": "activated_time",
 			"time": 1.368
 		},
 		{
-			"name:": "reactions",
+			"name": "reactions",
 			"time": 365.783
 		}
 	],

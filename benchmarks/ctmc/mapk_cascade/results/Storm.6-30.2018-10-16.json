@@ -29,11 +29,11 @@
 	"time": 6374.393000000001,
 	"property-times": [
 		{
-			"name:": "activated_T",
+			"name": "activated_T",
 			"time": 6260.144
 		},
 		{
-			"name:": "activated_time",
+			"name": "activated_time",
 			"time": 27.27
 		}
 	],

@@ -38,19 +38,19 @@
 	"time": 224.9842230682373,
 	"property-times": [
 		{
-			"name:": "P_1",
+			"name": "P_1",
 			"time": 10.507
 		},
 		{
-			"name:": "P_1_1",
+			"name": "P_1_1",
 			"time": 10.486
 		},
 		{
-			"name:": "P_min",
+			"name": "P_min",
 			"time": 8.047
 		},
 		{
-			"name:": "P_max",
+			"name": "P_max",
 			"time": 8.29
 		}
 	],

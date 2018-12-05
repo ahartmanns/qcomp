@@ -33,19 +33,19 @@
 	"memory": 156237824,
 	"property-times": [
 		{
-			"name:": "messagesA",
+			"name": "messagesA",
 			"time": 0.546
 		},
 		{
-			"name:": "messagesB",
+			"name": "messagesB",
 			"time": 0.499
 		},
 		{
-			"name:": "unfairA",
+			"name": "unfairA",
 			"time": 0.132
 		},
 		{
-			"name:": "unfairB",
+			"name": "unfairB",
 			"time": 0.136
 		}
 	],

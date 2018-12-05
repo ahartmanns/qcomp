@@ -24,11 +24,11 @@
 	"memory": 84934656,
 	"property-times": [
 		{
-			"name:": "completiontime",
+			"name": "completiontime",
 			"time": 0.238
 		},
 		{
-			"name:": "avgtime",
+			"name": "avgtime",
 			"time": 0.228
 		}
 	],

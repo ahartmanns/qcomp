@@ -34,35 +34,35 @@
 	"memory": 49283072,
 	"property-times": [
 		{
-			"name:": "below_min",
+			"name": "below_min",
 			"time": 7.47
 		},
 		{
-			"name:": "operational",
+			"name": "operational",
 			"time": 0.07
 		},
 		{
-			"name:": "premium_steady",
+			"name": "premium_steady",
 			"time": 0.016
 		},
 		{
-			"name:": "qos1",
+			"name": "qos1",
 			"time": 1.122
 		},
 		{
-			"name:": "qos2",
+			"name": "qos2",
 			"time": 0.071
 		},
 		{
-			"name:": "qos3",
+			"name": "qos3",
 			"time": 0.011
 		},
 		{
-			"name:": "qos4",
+			"name": "qos4",
 			"time": 0.057
 		},
 		{
-			"name:": "repairs",
+			"name": "repairs",
 			"time": 7.449
 		}
 	],

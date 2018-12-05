@@ -26,23 +26,23 @@
 	"memory": 85983232,
 	"property-times": [
 		{
-			"name:": "s1",
+			"name": "s1",
 			"time": 0.285
 		},
 		{
-			"name:": "s1_before_s2",
+			"name": "s1_before_s2",
 			"time": 0.081
 		},
 		{
-			"name:": "served",
+			"name": "served",
 			"time": 4.27
 		},
 		{
-			"name:": "station1_polled",
+			"name": "station1_polled",
 			"time": 3.194
 		},
 		{
-			"name:": "waiting",
+			"name": "waiting",
 			"time": 4.283
 		}
 	],

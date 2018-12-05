@@ -32,19 +32,19 @@
 	"time": 361.62600000000003,
 	"property-times": [
 		{
-			"name:": "PminQueuesFull",
+			"name": "PminQueuesFull",
 			"time": 292.595
 		},
 		{
-			"name:": "PmaxQueuesFull",
+			"name": "PmaxQueuesFull",
 			"time": 0.323
 		},
 		{
-			"name:": "PminQueue1Full",
+			"name": "PminQueue1Full",
 			"time": 62.166
 		},
 		{
-			"name:": "PmaxQueue1Full",
+			"name": "PmaxQueue1Full",
 			"time": 0.31
 		}
 	],
