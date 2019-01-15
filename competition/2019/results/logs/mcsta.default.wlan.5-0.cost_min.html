@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - wlan cost_min 5-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 5, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">cost_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe wlan.5.jani --props cost_min -E COL=0 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">183.082848072052s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">wlan.5.jani:model: info: wlan.5 is an MDP model.
+wlan.5.jani: info: Need 15 bytes per state.
+wlan.5.jani: info: Explored 1295218 states for COL=0.
+wlan.5.jani:properties[2]: warning: Computing minimum expected reward in property "cost_min" without checking for zero-reward end components.
+
+Peak memory usage: 221 MB
+Analysis results for wlan.5.jani
+Experiment COL=0
+
++ State space exploration
+  State size:  15 bytes
+  States:      1295218
+  Transitions: 1646074
+  Branches:    2929960
+  Rate:        269108 states/s
+  Time:        5.6 s
+
++ Property cost_min
+  Value:  7625
+  Bounds: [7625, infinity)
+  Time:   176.4 s
+
+  + Precomputations
+    Max. prob. 1 states:          1295218
+    Time for max. prob. 1 states: 144.4 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  524
+    Time:        31.9 s	</pre>
+</div>
+</body>
+</html>

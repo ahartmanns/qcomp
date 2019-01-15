@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - philosophers MinExpTimeDeadlock 16-1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#philosophers">philosophers</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 16, <span class="tt">TIME_BOUND</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MinExpTimeDeadlock</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">26.063109874725342s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.770934685016828e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">philosophers.16.jani:model: info: Philosophers16 is a CTMC model.
+philosophers.16.jani: info: Need 65 bytes per state.
+philosophers.16.jani: info: Explored 1331714 states for TIME_BOUND=1.0.
+
+Peak memory usage: 1184 MB
+Analysis results for philosophers.16.jani
+Experiment TIME_BOUND=1.0
+
++ State space exploration
+  State size:  65 bytes
+  States:      1331714
+  Transitions: 1331714
+  Branches:    13774113
+  Rate:        87867 states/s
+  Time:        15.8 s
+
++ Property MinExpTimeDeadlock
+  Value:  10.7829683044355
+  Bounds: [10.7829683044355, infinity)
+  Time:   9.4 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 1.1 s
+    Min. prob. 1 states:          1331714
+    Time for min. prob. 1 states: 0.3 s
+
+  + Value iteration
+    Final error: 9.33627881080789E-07
+    Iterations:  67
+    Time:        7.9 s	</pre>
+</div>
+</body>
+</html>

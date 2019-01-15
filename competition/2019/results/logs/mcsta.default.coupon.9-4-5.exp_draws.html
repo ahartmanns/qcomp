@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - coupon exp_draws 9-4-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#coupon">coupon</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 9, <span class="tt">DRAWS</span> = 4, <span class="tt">B</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_draws</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe coupon.9-4.jani --props exp_draws -E B=5 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">107.24072861671448s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.8224477902489147e-06</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">coupon.9-4.jani:model: info: coupon.9-4 is a DTMC model.
+coupon.9-4.jani: info: Need 14 bytes per state.
+coupon.9-4.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+coupon.9-4.jani: info: Explored 21077063 states for B=5.
+
+Peak memory usage: 2115 MB
+Analysis results for coupon.9-4.jani
+Experiment B=5
+
++ State space exploration
+  State size:  14 bytes
+  States:      21077063
+  Transitions: 21077063
+  Branches:    24429223
+  Rate:        702288 states/s
+  Time:        38.1 s
+
++ Property exp_draws
+  Value:  6.74006020887122
+  Bounds: [6.74006020887122, infinity)
+  Time:   68.1 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 4.4 s
+    Min. prob. 1 states:          21077063
+    Time for min. prob. 1 states: 1.2 s
+
+  + Value iteration
+    Final error: 9.50156125645416E-07
+    Iterations:  88
+    Time:        60.7 s	</pre>
+</div>
+</body>
+</html>

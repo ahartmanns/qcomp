@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - hecs Unreliability false-1-1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#hecs">hecs</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">R</span> = False, <span class="tt">N</span> = 1, <span class="tt">k</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unreliability</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe hecs.false-1-1.jani --props Unreliability --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">2.366331100463867s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.4091269978962865e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">hecs.false-1-1.jani:model: info: hecs-false-1-1.jani is an MA model.
+hecs.false-1-1.jani: info: Need 22 bytes per state.
+hecs.false-1-1.jani: info: Explored 7084 states.
+hecs.false-1-1.jani: info: Identified 6043 maximal end components.
+
+Peak memory usage: 109 MB
+Analysis results for hecs.false-1-1.jani
+
++ State space exploration
+  State size:  22 bytes
+  States:      7084
+  Transitions: 7085
+  Branches:    9504
+  Rate:        6081 states/s
+  Time:        1.2 s
+
++ Property Unreliability
+  Probability: 0.000109996703896451
+  Bounds:      [0.0001099939540476, 0.000109999453745302]
+  Time:        0.1 s
+
+  + Precomputations
+    Max. prob. 0 states:          0
+    Time for max. prob. 0 states: 0.0 s
+
+  + End components
+    Iterations:  2
+    Time:        0.0 s
+    MECs:        6043
+    Transitions: 7085
+    Branches:    9504
+
+  + Unif+
+    Time:             0.0 s
+    Max. exit rate:   0.000612
+    Iterations:       2
+    Final unif. rate: 0.000612	</pre>
+</div>
+</body>
+</html>

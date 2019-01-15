@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - dpm PmaxQueuesFullBound 4-8-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#dpm">dpm</a> <span class="tt">v.2</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">C</span> = 8, <span class="tt">TIME_BOUND</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">PmaxQueuesFullBound</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe dpm.jani --props PmaxQueuesFullBound -E N=4,C=8,TIME_BOUND=5 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">293.11918687820435s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">dpm.jani:model: info: dpm is an MA model.
+dpm.jani: info: Need 15 bytes per state.
+dpm.jani: info: Explored 356426 states for N=4, C=8, TIME_BOUND=5.0.
+dpm.jani: info: Identified 356417 maximal end components.
+dpm.jani: warning: Encountered a value greater than 1 during interval iteration. The final result for property "PmaxQueuesFullBound" is likely affected by floating-point errors.
+
+Peak memory usage: 159 MB
+Analysis results for dpm.jani
+Experiment N=4, C=8, TIME_BOUND=5.0
+
++ State space exploration
+  State size:  15 bytes
+  States:      356426
+  Transitions: 418842
+  Branches:    681242
+  Rate:        402287 states/s
+  Time:        0.9 s
+
++ Property PmaxQueuesFullBound
+  Probability: 2.23352633608459E-08
+  Bounds:      [2.23163925393663E-08, 2.23541341823256E-08]
+  Time:        291.3 s
+
+  + Precomputations
+    Max. prob. 0 states:          0
+    Time for max. prob. 0 states: 0.1 s
+
+  + End components
+    Iterations:  2
+    Time:        0.2 s
+    MECs:        356417
+    Transitions: 418842
+    Branches:    681242
+
+  + Unif+
+    Time:                           291.0 s
+    Max. exit rate:                 4.1
+    Iterations (lower bound):       6
+    Final unif. rate (lower bound): 65.6
+    Iterations (upper bound):       5
+    Final unif. rate (upper bound): 32.8	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - wlan sent 6-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 6, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">sent</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe wlan.6.jani --props sent -E COL=0 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">264.1360692977905s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">wlan.6.jani:model: info: wlan.6 is an MDP model.
+wlan.6.jani: info: Need 15 bytes per state.
+wlan.6.jani: info: Explored 5007548 states for COL=0.
+
+Peak memory usage: 582 MB
+Analysis results for wlan.6.jani
+Experiment COL=0
+
++ State space exploration
+  State size:  15 bytes
+  States:      5007548
+  Transitions: 6350470
+  Branches:    11475748
+  Rate:        261082 states/s
+  Time:        22.2 s
+
++ Property sent
+  Result:      True
+  Time:        240.7 s
+  Probability: 1
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 240.3 s
+    Min. prob. 1 states:          5007548
+    Time for min. prob. 1 states: 0.4 s	</pre>
+</div>
+</body>
+</html>

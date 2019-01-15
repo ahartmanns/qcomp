@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - elevators goal b-11-9</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#elevators">elevators</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">variant</span> = b, <span class="tt">p</span> = 11, <span class="tt">c</span> = 9</td></tr>
+		<tr><td>Property:</td><td><span class="tt">goal</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files elevators.b-11-9.jani --model-input-type jani --property-input-names goal --translate-messages false --value-floating-point-output-native true</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">56.44690465927124s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.31957e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+model-checking
+analysing-property goal
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 8457 8457
+build-model-states-explored 21309 12852
+build-model-states-explored 34032 12723
+build-model-states-explored 45366 11334
+build-model-states-explored 59373 14007
+build-model-states-explored 73288 13915
+build-model-states-explored 86626 13338
+build-model-states-explored 95594 8968
+build-model-states-explored 109421 13827
+build-model-states-explored 123375 13954
+build-model-states-explored 137031 13656
+build-model-states-explored 150969 13938
+build-model-states-explored 164382 13413
+build-model-states-explored 174288 9906
+build-model-states-explored 181556 7268
+build-model-states-explored 195293 13737
+build-model-states-explored 209224 13931
+build-model-states-explored 223073 13849
+build-model-states-explored 236825 13752
+build-model-states-explored 250584 13759
+build-model-states-explored 264295 13711
+build-model-states-explored 277944 13649
+build-model-states-explored 291591 13647
+build-model-states-explored 305270 13679
+build-model-states-explored 318978 13708
+build-model-states-explored 331950 12972
+build-model-states-explored 345737 13787
+build-model-states-explored 350245 4508
+build-model-states-explored 353895 3649
+build-model-states-explored 367562 13668
+build-model-states-explored 381232 13670
+build-model-states-explored 392793 11561
+build-model-states-explored 406482 13689
+build-model-states-explored 420198 13716
+build-model-states-explored 433819 13621
+build-model-states-explored 447495 13676
+build-model-states-explored 460962 13467
+build-model-states-explored 474819 13857
+build-model-states-explored 488533 13714
+build-model-states-explored 502360 13827
+build-model-states-explored 516109 13749
+build-model-states-explored 529667 13558
+build-model-done 539136 42
+iterating
+iterating-progress-unbounded 36 0.4375 1
+iterating-progress-unbounded 79 0.0087890625 2
+iterating-progress-unbounded 121 2.0599365234375E-4 3
+iterating-progress-unbounded 163 5.7220458984375E-6 4
+iterating-progress-unbounded 205 1.043081283569336E-7 5
+iterating-progress-unbounded 247 3.259629011154175E-9 6
+iterating-progress-unbounded 290 9.822542779147625E-11 7
+iterating-done 298 7
+num-states-in-filter 1 "initial"
+model-checking-done 55
+goal: 0.9999999999668043	</pre>
+</div>
+</body>
+</html>

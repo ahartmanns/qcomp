@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - majority change_state 2100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#majority">majority</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">T</span> = 2100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">change_state</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g majority.prism majority.props --property change_state -const T=2100</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">184.30980277061462s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 21:51:13 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g majority.prism majority.props --property change_state -const T=2100
+
+Parsing model file "majority.prism"...
+
+Parsing properties file "majority.props"...
+
+1 property:
+(1) "change_state": P=? [ F<=T ((EE>40)&(CC<20)) ]
+
+Type:        CTMC
+Modules:     D_def Y_def Z_def CC_def XX_def EE_def 
+Variables:   D Y Z CC XX EE 
+
+---------------------------------------------------------------------
+
+Model checking: "change_state": P=? [ F<=T ((EE>40)&(CC<20)) ]
+Property constants: T=2100
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 0.04 seconds (average 0.000795, setup 0.00)
+
+Time for model construction: 48.367 seconds.
+
+Type:        CTMC
+States:      192000 (1 initial)
+Transitions: 1961600
+
+Rate matrix: 9569 nodes (85 terminal), 1961600 minterms, vars: 43r/43c
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 189000 of 192000 (98.4%)
+
+Building hybrid MTBDD matrix... [levels=43, nodes=12162] [570.1 KB]
+Adding explicit sparse matrices... [levels=23, num=71, compact] [696.5 KB]
+Creating vector for diagonals... [1.5 MB]
+Allocating iteration vectors... [3 x 1.5 MB]
+TOTAL: [7.1 MB]
+
+Uniformisation: q.t = 3.287227 x 2100.000000 = 6903.175850
+Fox-Glynn: left = 6319, right = 7610
+
+Starting iterations...
+Iteration 294 (of 7610): max relative diff=0.050016, 5.02 sec so far
+Iteration 587 (of 7610): max relative diff=0.019813, 10.02 sec so far
+Iteration 880 (of 7610): max relative diff=0.009940, 15.03 sec so far
+Iteration 1171 (of 7610): max relative diff=0.005391, 20.05 sec so far
+Iteration 1464 (of 7610): max relative diff=0.003013, 25.05 sec so far
+Iteration 1757 (of 7610): max relative diff=0.002055, 30.05 sec so far
+Iteration 2050 (of 7610): max relative diff=0.001472, 35.06 sec so far
+Iteration 2343 (of 7610): max relative diff=0.001103, 40.07 sec so far
+Iteration 2636 (of 7610): max relative diff=0.000860, 45.07 sec so far
+Iteration 2929 (of 7610): max relative diff=0.000696, 50.08 sec so far
+Iteration 3222 (of 7610): max relative diff=0.000580, 55.09 sec so far
+Iteration 3515 (of 7610): max relative diff=0.000496, 60.09 sec so far
+Iteration 3808 (of 7610): max relative diff=0.000432, 65.09 sec so far
+Iteration 4101 (of 7610): max relative diff=0.000383, 70.10 sec so far
+Iteration 4394 (of 7610): max relative diff=0.000343, 75.10 sec so far
+Iteration 4687 (of 7610): max relative diff=0.000311, 80.11 sec so far
+Iteration 4980 (of 7610): max relative diff=0.000284, 85.11 sec so far
+Iteration 5273 (of 7610): max relative diff=0.000262, 90.12 sec so far
+Iteration 5563 (of 7610): max relative diff=0.000242, 95.12 sec so far
+Iteration 5852 (of 7610): max relative diff=0.000226, 100.14 sec so far
+Iteration 6138 (of 7610): max relative diff=0.000212, 105.15 sec so far
+Iteration 6427 (of 7610): max relative diff=0.000199, 110.16 sec so far
+Iteration 6715 (of 7610): max relative diff=0.000188, 115.18 sec so far
+Iteration 7003 (of 7610): max relative diff=0.000177, 120.18 sec so far
+Iteration 7288 (of 7610): max relative diff=0.000168, 125.19 sec so far
+Iteration 7574 (of 7610): max relative diff=0.000160, 130.19 sec so far
+
+Iterative method: 7610 iterations in 134.88 seconds (average 0.017191, setup 4.06)
+
+Value in the initial state: 0.05429919316250449
+
+Time for model checking: 134.894 seconds.
+
+Result: 0.05429919316250449 (value in the initial state)
+
+
+Overall running time: 183.744 seconds.	</pre>
+</div>
+</body>
+</html>

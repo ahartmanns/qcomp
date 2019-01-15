@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ModestFRETpiLRTDP - beb LineSeized 5-16-15</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>ModestFRETpiLRTDP</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#beb">beb</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">H</span> = 5, <span class="tt">K</span> = 16, <span class="tt">N</span> = 15</td></tr>
+		<tr><td>Property:</td><td><span class="tt">LineSeized</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./modest-fret-pi-lrtdp-master/FretLrtdp.exe beb.5-16.jani -E N=15 --props LineSeized</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">451.1401062011719s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">beb.5-16.jani:model: info: beb-5-16 is an MDP model.
+beb.5-16.jani: info: Need 24 bytes per state.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Stacktrace:
+
+  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) System.Array.FastCopy (System.Array,int,System.Array,int,int) [0x00000] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0
+  at System.Array.Copy (System.Array,int,System.Array,int,int) [0x00081] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0
+  at System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, bool>.Resize (int,bool) [0x00015] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0
+  at System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, bool>.Resize () [0x0000c] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0
+  at System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, bool>.TryInsert (CompiledAutomata.State1,bool,System.Collections.Generic.InsertionBehavior) [0x00232] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0
+  at System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, bool>.set_Item (CompiledAutomata.State1,bool) [0x00000] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0
+  at Modest.ModelChecking.MDP.DeadEndCheck`1<CompiledAutomata.State1>.MarkNonDeadEnds (System.Collections.Generic.Stack`1<CompiledAutomata.State1>&,CompiledAutomata.State1&) [0x00012] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MDP.DeadEndCheck`1<CompiledAutomata.State1>.CheckDE (Modest.Exploration.Network`1<CompiledAutomata.State1>&,int,CompiledAutomata.State1) [0x00058] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MDP.DeadEndCheck`1<CompiledAutomata.State1>.IsDeadEnd (Modest.Exploration.Network`1<CompiledAutomata.State1>&,int,CompiledAutomata.State1) [0x0000f] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MDP.VIComponents`1<CompiledAutomata.State1>.InitializeValue (Modest.Exploration.Network`1<CompiledAutomata.State1>&,int,CompiledAutomata.State1&,System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, double>&) [0x00000] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MDP.VIComponents`1<CompiledAutomata.State1>.Qvalue (Modest.Exploration.Network`1<CompiledAutomata.State1>&,int,CompiledAutomata.State1,Modest.Exploration.Synchronisation,System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, double>&) [0x00039] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MDP.VIComponents`1<CompiledAutomata.State1>.GreedyAction (Modest.Exploration.Network`1<CompiledAutomata.State1>&,int,CompiledAutomata.State1,System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, double>&,System.Collections.Generic.List`1<System.Collections.Generic.HashSet`1<CompiledAutomata.State1>>&) [0x000f0] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MDP.VIComponents`1<CompiledAutomata.State1>.UpdateValue (Modest.Exploration.Network`1<CompiledAutomata.State1>&,int,CompiledAutomata.State1,System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, double>&,System.Collections.Generic.List`1<System.Collections.Generic.HashSet`1<CompiledAutomata.State1>>&,System.Tuple`2<CompiledAutomata.State1, Modest.Exploration.Synchronisation>) [0x00004] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MDP.LRTDP`1<CompiledAutomata.State1>.CheckSolved (Modest.Exploration.Network`1<CompiledAutomata.State1>&,int,CompiledAutomata.State1,double,System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, double>&,System.Collections.Generic.HashSet`1<CompiledAutomata.State1>&,System.Collections.Generic.List`1<System.Collections.Generic.HashSet`1<CompiledAutomata.State1>>&) [0x000a6] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MDP.LRTDP`1<CompiledAutomata.State1>.LrtdpTrial (Modest.Exploration.Network`1<CompiledAutomata.State1>&,int,CompiledAutomata.State1,double,System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, double>&,System.Collections.Generic.HashSet`1<CompiledAutomata.State1>&,System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, Modest.Exploration.Synchronisation>&,System.Collections.Generic.List`1<System.Collections.Generic.HashSet`1<CompiledAutomata.State1>>&) [0x000c9] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MDP.LRTDP`1<CompiledAutomata.State1>.LrtdpMain (Modest.Exploration.Network`1<CompiledAutomata.State1>&,int,double,CompiledAutomata.State1,System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, double>&,System.Collections.Generic.HashSet`1<CompiledAutomata.State1>&,System.Collections.Generic.Dictionary`2<CompiledAutomata.State1, Modest.Exploration.Synchronisation>&,System.Collections.Generic.List`1<System.Collections.Generic.HashSet`1<CompiledAutomata.State1>>&) [0x00002] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MDP.FRET`1<CompiledAutomata.State1>.FretMain (Modest.Exploration.Network`1<CompiledAutomata.State1>,int,double) [0x0003f] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MAModelChecker`1<CompiledAutomata.State1>.CheckPropertyFRET (Modest.ModelChecking.ReachabilityPropertyInfo,int,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler) [0x000fc] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.MAModelChecker`1<CompiledAutomata.State1>.ModelCheckFRET (string,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler) [0x00117] in <6312fa2749214fd8b95054c9d9b46caf>:0
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheckGeneric<CompiledAutomata.State1> (Modest.Exploration.Network`1<CompiledAutomata.State1>,object,string,Modest.StateSpace.StateProjections,object,Modest.StateSpace.ComponentisedExpression[],object,Modest.Modularity.ILocation,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler) [0x000ac] in <6312fa2749214fd8b95054c9d9b46caf>:0
+[ERROR] FATAL UNHANDLED EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object
+  at (wrapper managed-to-native) System.Array.FastCopy(System.Array,int,System.Array,int,int)
+  at System.Array.Copy (System.Array sourceArray, System.Int32 sourceIndex, System.Array destinationArray, System.Int32 destinationIndex, System.Int32 length) [0x00081] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Resize (System.Int32 newSize, System.Boolean forceNewHashCodes) [0x00015] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Resize () [0x0000c] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x00232] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].set_Item (TKey key, TValue value) [0x00000] in <0f8aeac9d63d4b8aa575761bb4e65b79>:0 
+  at Modest.ModelChecking.MDP.DeadEndCheck`1[T].MarkNonDeadEnds (System.Collections.Generic.Stack`1[T]& path, T& additionalState) [0x00012] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MDP.DeadEndCheck`1[T].CheckDE (Modest.Exploration.Network`1[T]& network, System.Int32 statePropertyIndex, T state) [0x00058] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MDP.DeadEndCheck`1[T].IsDeadEnd (Modest.Exploration.Network`1[T]& network, System.Int32 statePropertyIndex, T state) [0x0000f] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MDP.VIComponents`1[T].InitializeValue (Modest.Exploration.Network`1[T]& network, System.Int32 statePropertyIndex, T& state, System.Collections.Generic.Dictionary`2[T,System.Double]& Values) [0x00000] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MDP.VIComponents`1[T].Qvalue (Modest.Exploration.Network`1[T]& network, System.Int32 statePropertyIndex, T loc, Modest.Exploration.Synchronisation e, System.Collections.Generic.Dictionary`2[T,System.Double]& Values) [0x00039] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MDP.VIComponents`1[T].GreedyAction (Modest.Exploration.Network`1[T]& network, System.Int32 statePropertyIndex, T loc, System.Collections.Generic.Dictionary`2[T,System.Double]& Values, System.Collections.Generic.List`1[System.Collections.Generic.HashSet`1[T]]& TransientTraps) [0x000f0] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MDP.VIComponents`1[T].UpdateValue (Modest.Exploration.Network`1[T]& network, System.Int32 statePropertyIndex, T loc, System.Collections.Generic.Dictionary`2[T,System.Double]& Values, System.Collections.Generic.List`1[System.Collections.Generic.HashSet`1[T]]& TransientTraps, System.Tuple`2[T1,T2] greedy) [0x00004] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MDP.LRTDP`1[T].CheckSolved (Modest.Exploration.Network`1[T]& network, System.Int32 statePropertyIndex, T loc, System.Double epsilon, System.Collections.Generic.Dictionary`2[T,System.Double]& Values, System.Collections.Generic.HashSet`1[T]& Solved, System.Collections.Generic.List`1[System.Collections.Generic.HashSet`1[T]]& TransientTraps) [0x000a6] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MDP.LRTDP`1[T].LrtdpTrial (Modest.Exploration.Network`1[T]& network, System.Int32 statePropertyIndex, T loc, System.Double epsilon, System.Collections.Generic.Dictionary`2[T,System.Double]& Values, System.Collections.Generic.HashSet`1[T]& Solved, System.Collections.Generic.Dictionary`2[T,Modest.Exploration.Synchronisation]& Edges, System.Collections.Generic.List`1[System.Collections.Generic.HashSet`1[T]]& TransientTraps) [0x000c9] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MDP.LRTDP`1[T].LrtdpMain (Modest.Exploration.Network`1[T]& network, System.Int32 statePropertyIndex, System.Double epsilon, T loc, System.Collections.Generic.Dictionary`2[T,System.Double]& Values, System.Collections.Generic.HashSet`1[T]& Solved, System.Collections.Generic.Dictionary`2[T,Modest.Exploration.Synchronisation]& Edges, System.Collections.Generic.List`1[System.Collections.Generic.HashSet`1[T]]& TransientTraps) [0x00002] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MDP.FRET`1[T].FretMain (Modest.Exploration.Network`1[T] network, System.Int32 statePropertyIndex, System.Double epsilon) [0x0003f] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MAModelChecker`1[T].CheckPropertyFRET (Modest.ModelChecking.ReachabilityPropertyInfo prop, System.Int32 reachExpIndex, Modest.Modularity.OperationState operationState, Modest.Modularity.ComponentErrorHandler ceh) [0x000fc] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.MAModelChecker`1[T].ModelCheckFRET (System.String experimentString, Modest.Modularity.OperationState operationState, Modest.Modularity.ComponentErrorHandler ceh) [0x00117] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheckGeneric[T] (Modest.Exploration.Network`1[T] network, System.Object expInfoObj, System.String experimentString, Modest.StateSpace.StateProjections projections, System.Object propertiesObj, Modest.StateSpace.ComponentisedExpression[] distanceExps, System.Object parametersObj, Modest.Modularity.ILocation documentLocation, Modest.Modularity.OperationState operationState, Modest.Modularity.ComponentErrorHandler ceh) [0x000ac] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at (wrapper delegate-invoke) type_16777215.invoke_AnalysisDataSet_Network`1<State1>_object_string_StateProjections_object_ComponentisedExpression[]_object_ILocation_OperationState_ComponentErrorHandler(Modest.Exploration.Network`1<CompiledAutomata.State1>,object,string,Modest.StateSpace.StateProjections,object,Modest.StateSpace.ComponentisedExpression[],object,Modest.Modularity.ILocation,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler)
+  at invoke Modest.Exploration.Network`1__CompiledAutomata.State1\, CompiledAutomata13000013153093580922\, Version=0.0.0.0\, Culture=neutral\, PublicKeyToken=null__ : System.Object : System.String : Modest.StateSpace.StateProjections : System.Object : Modest.StateSpace.ComponentisedExpression__ : System.Object : Modest.Modularity.ILocation : Modest.Modularity.OperationState : Modest.Modularity.ComponentErrorHandler : Modest.Modularity.AnalysisDataSet.GeneratedClass.DoInvoke (System.Object , System.Object[] , System.Reflection.MethodInfo ) [0x00011] in <7ea126c8583e478ca44142b4859a5009>:0 
+  at Modest.DirectInvoker.InvokeDirect (System.Reflection.MethodInfo method, System.Object instance, System.Object[] parameters) [0x00189] in <bd443e41e8264c1f8112a40d036c20df>:0 
+  at Modest.Exploration.NetworkGenericMethod.Invoke (System.Object network) [0x00021] in <e4d3feb0c7f441ebbb80e25ec6e21299>:0 
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheck (Modest.Automaton.NSHAModel model, Modest.ModelChecking.ModelCheckingAnalysisEngine+CompilationParameters compilationParams, System.Object parametersObj, Modest.Modularity.OperationState operationState, Modest.Modularity.IErrorHandler errors) [0x00999] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.Analyze (Modest.ModelChecking.ModelCheckingAnalysisEngine+AnalysisParams analysisParameters, Modest.Automaton.NSHAModel model, System.Collections.Generic.IEnumerable`1[T] modelParameters, Modest.Modularity.OperationState operationState, Modest.Modularity.IErrorHandler errors) [0x009bc] in <6312fa2749214fd8b95054c9d9b46caf>:0 
+  at Modest.Modularity.AnalysisEngine`3[M,EP,AP].Analyze (Modest.Modularity.IParameterObject analysisParameters, Modest.Modularity.IModel model, System.Collections.Generic.IEnumerable`1[T] experiments, Modest.Modularity.OperationState operationState, Modest.Modularity.IErrorHandler errors) [0x00114] in <db375c05166e490d8b917ee624ae838d>:0 
+  at Modest.Executables.FretLrtdp.ProgramFretLrtdp.Run (Modest.Executables.FretLrtdp.ProgramFretLrtdp+FretParams parameters, System.Diagnostics.Stopwatch time) [0x003ab] in <873d690f2e0141b3aac10c913623b391>:0 
+  at Modest.Executables.FretLrtdp.ProgramFretLrtdp.Main (System.String[] args) [0x0007a] in <873d690f2e0141b3aac10c913623b391>:0	</pre>
+</div>
+</body>
+</html>

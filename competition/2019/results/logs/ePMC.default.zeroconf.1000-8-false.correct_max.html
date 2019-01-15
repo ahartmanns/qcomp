@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - zeroconf correct_max 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files zeroconf.prism --property-input-files zeroconf.props --property-input-names correct_max --translate-messages false --value-floating-point-output-native true --const N=1000,K=8,reset=false</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">57.495362758636475s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.0270044938462831e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property correct_max
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 24098 24098
+build-model-states-explored 72874 48776
+build-model-states-explored 122674 49800
+build-model-states-explored 170988 48314
+build-model-states-explored 220931 49943
+build-model-states-explored 271447 50516
+build-model-states-explored 315862 44415
+build-model-states-explored 366432 50570
+build-model-states-explored 413998 47566
+build-model-states-explored 464516 50518
+build-model-states-explored 514362 49846
+build-model-states-explored 564810 50448
+build-model-states-explored 602778 37967
+build-model-states-explored 652860 50083
+build-model-states-explored 702940 50079
+build-model-states-explored 752991 50052
+build-model-states-explored 802781 49790
+build-model-states-explored 844711 41930
+build-model-states-explored 894830 50119
+build-model-states-explored 943438 48607
+build-model-states-explored 993234 49796
+build-model-states-explored 1042550 49316
+build-model-states-explored 1091444 48894
+build-model-states-explored 1139770 48326
+build-model-states-explored 1165191 25421
+build-model-states-explored 1214400 49209
+build-model-states-explored 1263394 48994
+build-model-states-explored 1312017 48623
+build-model-states-explored 1360955 48938
+build-model-states-explored 1409908 48953
+build-model-states-explored 1458541 48632
+build-model-states-explored 1507310 48770
+build-model-states-explored 1555653 48343
+build-model-states-explored 1603676 48023
+build-model-states-explored 1643004 39328
+build-model-states-explored 1679220 36216
+build-model-states-explored 1727529 48309
+build-model-states-explored 1776101 48572
+build-model-states-explored 1824313 48211
+build-model-states-explored 1869748 45436
+build-model-done 1870338 40
+iterating
+iterating-progress-unbounded 19 0.9999999099999916 1
+iterating-progress-unbounded 41 0.9999992044781028 2
+iterating-progress-unbounded 63 0.9646952361079023 3
+iterating-progress-unbounded 85 0.0012267239531135433 4
+iterating-progress-unbounded 107 3.582000277940052E-4 5
+iterating-progress-unbounded 130 1.9036304547546983E-4 6
+iterating-progress-unbounded 152 9.148355025860328E-7 7
+iterating-progress-unbounded 174 6.53966547026208E-8 8
+iterating-progress-unbounded 196 2.958343619347773E-8 9
+iterating-progress-unbounded 218 3.7004279192709086E-10 10
+iterating-done 231 10
+model-checking-done 56
+correct_max: 4.8014136350231196E-8	</pre>
+</div>
+</body>
+</html>

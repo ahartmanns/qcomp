@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - wlan cost_min 5-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 5, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">cost_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files wlan.5.prism --property-input-files wlan.props --property-input-names cost_min --translate-messages false --value-floating-point-output-native true --const COL=0</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">689.3457942008972s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property cost_min
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 7279 7279
+build-model-states-explored 17539 10260
+build-model-states-explored 29055 11516
+build-model-states-explored 39466 10410
+build-model-states-explored 50134 10669
+build-model-states-explored 60353 10219
+build-model-states-explored 72063 11710
+build-model-states-explored 83373 11310
+build-model-states-explored 97756 14383
+build-model-states-explored 112000 14244
+build-model-states-explored 125356 13356
+build-model-states-explored 136910 11554
+build-model-states-explored 150781 13871
+build-model-states-explored 164672 13890
+build-model-states-explored 178554 13883
+build-model-states-explored 192242 13688
+build-model-states-explored 205438 13196
+build-model-states-explored 218417 12979
+build-model-states-explored 233647 15230
+build-model-states-explored 248888 15241
+build-model-states-explored 264109 15221
+build-model-states-explored 279286 15177
+build-model-states-explored 294431 15145
+build-model-states-explored 309686 15255
+build-model-states-explored 324887 15201
+build-model-states-explored 340134 15247
+build-model-states-explored 355603 15469
+build-model-states-explored 371085 15482
+build-model-states-explored 386127 15042
+build-model-states-explored 401544 15417
+build-model-states-explored 413317 11773
+build-model-states-explored 428208 14891
+build-model-states-explored 439262 11054
+build-model-states-explored 450411 11149
+build-model-states-explored 460852 10441
+build-model-states-explored 473825 12973
+build-model-states-explored 487981 14156
+build-model-states-explored 502140 14159
+build-model-states-explored 516308 14168
+build-model-states-explored 530466 14158
+build-model-states-explored 543899 13433
+build-model-states-explored 558037 14138
+build-model-states-explored 572169 14132
+build-model-states-explored 586352 14183
+build-model-states-explored 600493 14141
+build-model-states-explored 614624 14131
+build-model-states-explored 628788 14164
+build-model-states-explored 642977 14189
+build-model-states-explored 657167 14190
+build-model-states-explored 671323 14156
+build-model-states-explored 681107 9784
+build-model-states-explored 693578 12471
+build-model-states-explored 707292 13713
+build-model-states-explored 722657 15366
+build-model-states-explored 737988 15331
+build-model-states-explored 753289 15301
+build-model-states-explored 768661 15372
+build-model-states-explored 784022 15360
+build-model-states-explored 799443 15422
+build-model-states-explored 814814 15370
+build-model-states-explored 830029 15216
+build-model-states-explored 840566 10537
+build-model-states-explored 855872 15306
+build-model-states-explored 871198 15326
+build-model-states-explored 886494 15296
+build-model-states-explored 901739 15245
+build-model-states-explored 917079 15340
+build-model-states-explored 932409 15330
+build-model-states-explored 947765 15356
+build-model-states-explored 963116 15351
+build-model-states-explored 978184 15067
+build-model-states-explored 992677 14494
+build-model-states-explored 1007523 14846
+build-model-states-explored 1022236 14713
+build-model-states-explored 1037065 14829
+build-model-states-explored 1051818 14753
+build-model-states-explored 1066669 14851
+build-model-states-explored 1081593 14924
+build-model-states-explored 1096674 15081
+build-model-states-explored 1111754 15080
+build-model-states-explored 1126828 15074
+build-model-states-explored 1141841 15013
+build-model-states-explored 1156781 14940
+build-model-states-explored 1171767 14986
+build-model-states-explored 1186768 15001
+build-model-states-explored 1201753 14985
+build-model-states-explored 1216744 14991
+build-model-states-explored 1231788 15044
+build-model-states-explored 1246806 15017
+build-model-states-explored 1261817 15011
+build-model-states-explored 1276777 14960
+build-model-states-explored 1289961 13184
+build-model-done 1295218 92
+iterating
+iterating-progress-unbounded 38 1000.0 1
+iterating-progress-unbounded 82 1000.0 2
+iterating-progress-unbounded 127 1000.0 3
+iterating-progress-unbounded 171 1000.0 4
+iterating-progress-unbounded 216 1000.0 5
+iterating-progress-unbounded 260 1000.0 6
+iterating-progress-unbounded 305 1000.0 7
+iterating-progress-unbounded 349 1000.0 8
+iterating-progress-unbounded 394 1000.0 9
+iterating-progress-unbounded 438 1000.0 10
+iterating-progress-unbounded 483 1000.0 11
+iterating-progress-unbounded 527 1000.0 12
+iterating-progress-unbounded 572 1000.0 13
+iterating-progress-unbounded 616 1000.0 14
+iterating-progress-unbounded 661 1000.0 15
+iterating-progress-unbounded 706 1000.0 16
+iterating-progress-unbounded 750 1000.0 17
+iterating-progress-unbounded 795 1000.0 18
+iterating-progress-unbounded 840 1000.0 19
+iterating-progress-unbounded 884 1000.0 20
+iterating-progress-unbounded 928 1000.0 21
+iterating-progress-unbounded 972 1000.0 22
+iterating-progress-unbounded 1016 1000.0 23
+iterating-progress-unbounded 1059 2.734375 24
+iterating-done 1077 24
+model-checking-done 688
+cost_min: 7625.0	</pre>
+</div>
+</body>
+</html>

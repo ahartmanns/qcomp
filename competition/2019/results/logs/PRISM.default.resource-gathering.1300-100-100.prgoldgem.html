@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - resource-gathering prgoldgem 1300-100-100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#resource-gathering">resource-gathering</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">B</span> = 1300, <span class="tt">GOLD_TO_COLLECT</span> = 100, <span class="tt">GEM_TO_COLLECT</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">prgoldgem</span> (prob-reach-step-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g resource-gathering.pm resource-gathering.prctl --property prgoldgem -const B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">45.16624331474304s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.727704752942418e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Tue Dec 11 01:18:13 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g resource-gathering.pm_fixed resource-gathering.prctl_fixed --property prgoldgem -const 'B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100'
+
+Parsing model file "resource-gathering.pm_fixed"...
+
+Parsing properties file "resource-gathering.prctl_fixed"...
+
+3 properties:
+(1) "expgold": R{"rew_gold"}max=? [ C<=B ]
+(2) "expsteps": R{"time_reward"}min=? [ F "success" ]
+(3) "prgoldgem": Pmax=? [ F<=B "success" ]
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter 
+Variables:   gold gem attacked x y required_gold required_gem 
+
+---------------------------------------------------------------------
+
+Model checking: "prgoldgem": Pmax=? [ F<=B "success" ]
+Model constants: GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100,B=1300
+
+Building model...
+Model constants: GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100,B=1300
+
+Computing reachable states...
+
+Reachability (BFS): 1215 iterations in 0.92 seconds (average 0.000760, setup 0.00)
+
+Time for model construction: 0.807 seconds.
+
+Type:        MDP
+States:      958894 (1 initial)
+Transitions: 3325526
+Choices:     3080702
+
+Transition matrix: 898 nodes (4 terminal), 3325526 minterms, vars: 23r/23c/4nd
+
+Prob0A: 1203 iterations in 1.13 seconds (average 0.000938, setup 0.00)
+
+yes = 94, no = 0, maybe = 958800
+
+Computing probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=4, levels=23, nodes=2605] [122.1 KB]
+Adding sparse bits... [levels=15-16, num=44, compact=4/4] [2.8 MB]
+Creating vector for yes... [dist=2, compact] [1.8 MB]
+Allocating iteration vectors... [3 x 7.3 MB]
+TOTAL: [26.7 MB]
+
+Starting iterations...
+Iteration 153 (of 1300): 5.01 sec so far
+Iteration 307 (of 1300): 10.03 sec so far
+Iteration 461 (of 1300): 15.06 sec so far
+Iteration 615 (of 1300): 20.09 sec so far
+Iteration 768 (of 1300): 25.10 sec so far
+Iteration 921 (of 1300): 30.11 sec so far
+Iteration 1074 (of 1300): 35.12 sec so far
+Iteration 1227 (of 1300): 40.13 sec so far
+
+Iterative method: 1300 iterations in 42.53 seconds (average 0.032680, setup 0.04)
+
+Value in the initial state: 0.6630608525241822
+
+Time for model checking: 43.698 seconds.
+
+Result: 0.6630608525241822 (value in the initial state)
+
+
+Overall running time: 44.95 seconds.	</pre>
+</div>
+</body>
+</html>

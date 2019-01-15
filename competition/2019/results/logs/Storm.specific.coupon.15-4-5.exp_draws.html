@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm - coupon exp_draws 15-4-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>Storm</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#coupon">coupon</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 15, <span class="tt">DRAWS</span> = 4, <span class="tt">B</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_draws</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --jani coupon.15-4.jani --janiproperty exp_draws --constants B=5 --engine dd --ddlib sylvan --sylvan:maxmem 9000 --bisimulation --bisimulation:quot sparse</pre>
+	Dd engine with sylvan. Memory limit for sylvan set to 0.75*available memory. Apply strong bisimulation on the symbolic model and extract the quotient in a sparse representation.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">503.39118218421936s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.924210056753883e-10</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.3.1 (dev)
+
+Date: Wed Dec 12 19:10:00 2018
+Command line arguments: --jani coupon.15-4.jani --janiproperty exp_draws --constants B=5 --engine dd --ddlib sylvan '--sylvan:maxmem' 9000 --bisimulation '--bisimulation:quot' sparse
+Current working directory: /home/qcomp
+
+Time for model input parsing: 0.026s.
+
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+ WARN (DdJaniModelBuilder.cpp:1521): Guard of an edge in a DTMC overlaps with previous guards.
+Time for model construction: 7.147s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	17486977236 (339931 nodes)
+Transitions: 	40823774300 (1268396 nodes)
+Reward Models:  numberDraws
+Variables: 	rows: 20 meta variables (37 DD variables), columns: 20 meta variables (37 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (38 nodes)
+   * _ret0_
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 494.633s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10689
+Transitions: 	25756
+Reward Models:  numberDraws
+State Labels: 	4 labels
+   * (_loc_main = 35) -> 1 item(s)
+   * _ret0_ -> 1 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "exp_draws": R[exp]{"numberDraws"}min=? [F "_ret0_"] ...
+Result (for initial states): 12.81835862
+Time for model checking: 0.043s.	</pre>
+</div>
+</body>
+</html>

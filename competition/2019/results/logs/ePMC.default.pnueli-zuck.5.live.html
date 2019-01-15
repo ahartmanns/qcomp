@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - pnueli-zuck live 5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#pnueli-zuck">pnueli-zuck</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">live</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files pnueli-zuck.5.prism --property-input-files pnueli-zuck.props --property-input-names live --translate-messages false --value-floating-point-output-native true</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">25.600706815719604s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property live
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 12099 12099
+build-model-states-explored 33172 21073
+build-model-states-explored 54133 20961
+build-model-states-explored 76225 22092
+build-model-states-explored 95840 19615
+build-model-states-explored 117890 22050
+build-model-states-explored 139974 22084
+build-model-states-explored 161960 21986
+build-model-states-explored 183340 21380
+build-model-states-explored 200978 17638
+build-model-states-explored 223084 22106
+build-model-states-explored 245118 22034
+build-model-states-explored 267132 22014
+build-model-states-explored 289027 21895
+build-model-states-explored 310902 21875
+build-model-states-explored 332797 21895
+build-model-states-explored 353408 20611
+build-model-states-explored 366280 12872
+build-model-states-explored 387867 21587
+build-model-done 397435 19
+iterating
+iterating-progress-unbounded 53 0.013427734375 1
+iterating-progress-unbounded 113 2.0161650127192843E-10 2
+iterating-done 120 2
+model-checking-done 24
+live: 1.0	</pre>
+</div>
+</body>
+</html>

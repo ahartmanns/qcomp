@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - haddad-monmege exp_steps 100-0.7</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#haddad-monmege">haddad-monmege</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 100, <span class="tt">p</span> = 0.7</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_steps</span> (exp-steps)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g haddad-monmege.pm haddad-monmege.prctl --property exp_steps -const N=100,p=0.7</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.7093300819396973s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 20:31:28 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g haddad-monmege.pm_fixed haddad-monmege.prctl_fixed --property exp_steps -const 'N=100,p=0.7'
+
+Parsing model file "haddad-monmege.pm_fixed"...
+
+Parsing properties file "haddad-monmege.prctl_fixed"...
+
+2 properties:
+(1) "target": P=? [ F "Target" ]
+(2) "exp_steps": R{"time_reward"}=? [ F "Done" ]
+
+Type:        DTMC
+Modules:     main 
+Variables:   x 
+
+---------------------------------------------------------------------
+
+Model checking: "exp_steps": R{"time_reward"}=? [ F "Done" ]
+Model constants: N=100,p=0.7
+
+Building model...
+Model constants: N=100,p=0.7
+
+Computing reachable states...
+
+Reachability (BFS): 101 iterations in 0.00 seconds (average 0.000030, setup 0.00)
+
+Time for model construction: 0.037 seconds.
+
+Type:        DTMC
+States:      201 (1 initial)
+Transitions: 400
+
+Transition matrix: 131 nodes (5 terminal), 400 minterms, vars: 8r/8c
+
+Prob0: 101 iterations in 0.02 seconds (average 0.000178, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 2, inf = 0, maybe = 199
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=8, nodes=133] [6.2 KB]
+Adding explicit sparse matrices... [levels=8, num=1, compact] [1.8 KB]
+Creating vector for diagonals... [dist=1, compact] [0.4 KB]
+Creating vector for RHS... [dist=2, compact] [0.4 KB]
+Allocating iteration vectors... [2 x 1.6 KB]
+TOTAL: [12.0 KB]
+
+Starting iterations...
+
+Jacobi: 10000 iterations in 0.13 seconds (average 0.000013, setup 0.00)
+
+Error: Iterative method did not converge within 10000 iterations.
+Consider using a different numerical method or increasing the maximum number of iterations.
+
+
+Overall running time: 0.486 seconds.	</pre>
+</div>
+</body>
+</html>

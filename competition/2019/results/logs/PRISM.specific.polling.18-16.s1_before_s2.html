@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - polling s1_before_s2 18-16</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#polling">polling</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 18, <span class="tt">T</span> = 16</td></tr>
+		<tr><td>Property:</td><td><span class="tt">s1_before_s2</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g polling.18.prism polling.props --property s1_before_s2 -const T=16 -sparse -bgs</pre>
+	Select best engine and numerical method
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">66.26456189155579s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.433471068182018e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 22:35:53 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g polling.18.prism polling.props --property s1_before_s2 -const T=16 -sparse -bgs
+
+Parsing model file "polling.18.prism"...
+
+Parsing properties file "polling.props"...
+
+5 properties:
+(1) "s1": S=? [ s1=1&!(s=1&a=1) ]
+(2) "s1_before_s2": P=? [ !(s=2&a=1) U (s=1&a=1) ]
+(3) "served": R{"served"}=? [ C<=T ]
+(4) "station1_polled": P=? [ F<=T (s=1&a=0) ]
+(5) "waiting": R{"waiting"}=? [ C<=T ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 station10 station11 station12 station13 station14 station15 station16 station17 station18 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 
+
+---------------------------------------------------------------------
+
+Model checking: "s1_before_s2": P=? [ !(s=2&a=1) U (s=1&a=1) ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 37 iterations in 0.05 seconds (average 0.001324, setup 0.00)
+
+Time for model construction: 0.117 seconds.
+
+Type:        CTMC
+States:      7077888 (1 initial)
+Transitions: 69599232
+
+Rate matrix: 2745 nodes (4 terminal), 69599232 minterms, vars: 24r/24c
+
+Diagonals vector: 1540 nodes (38 terminal), 7077888 minterms
+Embedded Markov chain: 17929 nodes (72 terminal), 69599232 minterms
+
+Prob0: 36 iterations in 0.01 seconds (average 0.000389, setup 0.00)
+
+Prob1: 35 iterations in 0.01 seconds (average 0.000229, setup 0.00)
+
+yes = 3407872, no = 262144, maybe = 3407872
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=7077888, nnz=35258368, compact] [141.3 MB]
+Creating vector for diagonals... [dist=1, compact] [13.5 MB]
+Creating vector for RHS... [dist=2, compact] [13.5 MB]
+Allocating iteration vector... [54.0 MB]
+TOTAL: [222.3 MB]
+
+Starting iterations...
+Iteration 32: max relative diff=0.021282, 5.09 sec so far
+Iteration 64: max relative diff=0.006084, 10.20 sec so far
+Iteration 96: max relative diff=0.002231, 15.29 sec so far
+Iteration 128: max relative diff=0.000881, 20.37 sec so far
+Iteration 160: max relative diff=0.000358, 25.46 sec so far
+Iteration 192: max relative diff=0.000147, 30.55 sec so far
+Iteration 224: max relative diff=0.000060, 35.64 sec so far
+Iteration 256: max relative diff=0.000025, 40.73 sec so far
+Iteration 288: max relative diff=0.000010, 45.82 sec so far
+Iteration 320: max relative diff=0.000004, 50.91 sec so far
+Iteration 352: max relative diff=0.000002, 56.00 sec so far
+
+Backwards Gauss-Seidel: 373 iterations in 65.11 seconds (average 0.159091, setup 5.77)
+
+Value in the initial state: 0.5389887554876981
+
+Time for model checking: 65.322 seconds.
+
+Result: 0.5389887554876981 (value in the initial state)
+
+
+Overall running time: 66.04 seconds.	</pre>
+</div>
+</body>
+</html>

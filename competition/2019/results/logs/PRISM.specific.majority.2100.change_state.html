@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - majority change_state 2100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#majority">majority</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">T</span> = 2100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">change_state</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g majority.prism majority.props --property change_state -const T=2100 -sparse</pre>
+	Select best engine
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">101.29325008392334s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 21:54:17 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g majority.prism majority.props --property change_state -const T=2100 -sparse
+
+Parsing model file "majority.prism"...
+
+Parsing properties file "majority.props"...
+
+1 property:
+(1) "change_state": P=? [ F<=T ((EE>40)&(CC<20)) ]
+
+Type:        CTMC
+Modules:     D_def Y_def Z_def CC_def XX_def EE_def 
+Variables:   D Y Z CC XX EE 
+
+---------------------------------------------------------------------
+
+Model checking: "change_state": P=? [ F<=T ((EE>40)&(CC<20)) ]
+Property constants: T=2100
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 0.04 seconds (average 0.000818, setup 0.00)
+
+Time for model construction: 48.948 seconds.
+
+Type:        CTMC
+States:      192000 (1 initial)
+Transitions: 1961600
+
+Rate matrix: 9569 nodes (85 terminal), 1961600 minterms, vars: 43r/43c
+
+Computing probabilities...
+Engine: Sparse
+
+Number of non-absorbing states: 189000 of 192000 (98.4%)
+
+Building sparse matrix... [n=192000, nnz=1933200, compact] [7.6 MB]
+Creating vector for diagonals... [1.5 MB]
+Allocating iteration vectors... [3 x 1.5 MB]
+TOTAL: [13.4 MB]
+
+Uniformisation: q.t = 3.287227 x 2100.000000 = 6903.175850
+Fox-Glynn: left = 6319, right = 7610
+
+Starting iterations...
+Iteration 820 (of 7610): max relative diff=0.011346, 5.00 sec so far
+Iteration 1645 (of 7610): max relative diff=0.002364, 10.00 sec so far
+Iteration 2472 (of 7610): max relative diff=0.000984, 15.00 sec so far
+Iteration 3303 (of 7610): max relative diff=0.000554, 20.01 sec so far
+Iteration 4131 (of 7610): max relative diff=0.000378, 25.02 sec so far
+Iteration 4959 (of 7610): max relative diff=0.000286, 30.02 sec so far
+Iteration 5787 (of 7610): max relative diff=0.000229, 35.02 sec so far
+Iteration 6604 (of 7610): max relative diff=0.000192, 40.02 sec so far
+Iteration 7401 (of 7610): max relative diff=0.000165, 45.03 sec so far
+
+Iterative method: 7610 iterations in 51.11 seconds (average 0.006090, setup 4.77)
+
+Value in the initial state: 0.05429919316250449
+
+Time for model checking: 51.195 seconds.
+
+Result: 0.05429919316250449 (value in the initial state)
+
+
+Overall running time: 100.727 seconds.	</pre>
+</div>
+</body>
+</html>

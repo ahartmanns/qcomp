@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm - haddad-monmege exp_steps 100-0.7</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>Storm</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#haddad-monmege">haddad-monmege</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 100, <span class="tt">p</span> = 0.7</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_steps</span> (exp-steps)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism haddad-monmege.pm --prop haddad-monmege.prctl exp_steps --constants N=100,p=0.7 --exact</pre>
+	Exact engine.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.05888724327087402s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.3.1 (dev)
+
+Date: Wed Dec 12 20:58:29 2018
+Command line arguments: --prism haddad-monmege.pm --prop haddad-monmege.prctl exp_steps --constants 'N=100,p=0.7' --exact
+Current working directory: /home/qcomp
+
+Time for model input parsing: 0.001s.
+
+Time for model construction: 0.018s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	201
+Transitions: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * Done -> 2 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "exp_steps": T[exp]=? [F "Done"] ...
+Result (for initial states): 1901475900342344102245054808062 (approx. 1.9014759e+30)
+Time for model checking: 0.010s.	</pre>
+</div>
+</body>
+</html>

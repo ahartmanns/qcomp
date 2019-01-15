@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - majority change_state 2100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#majority">majority</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">T</span> = 2100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">change_state</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files majority.prism --property-input-files majority.props --property-input-names change_state --translate-messages false --value-floating-point-output-native true --const T=2100</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">43.53301215171814s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property change_state
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 12713 12713
+build-model-states-explored 31441 18728
+build-model-states-explored 50174 18733
+build-model-states-explored 68658 18484
+build-model-states-explored 87852 19194
+build-model-states-explored 106432 18580
+build-model-states-explored 125719 19287
+build-model-states-explored 144101 18382
+build-model-states-explored 163708 19607
+build-model-states-explored 183271 19563
+build-model-done 192000 10
+iterating-progress-bounded 222 7582 0.02927987338433131 1
+iterating-progress-bounded 473 7582 0.06238459509364284 2
+iterating-progress-bounded 725 7582 0.0956212081245054 3
+iterating-progress-bounded 977 7582 0.12885782115536798 4
+iterating-progress-bounded 1230 7582 0.1622263255077816 5
+iterating-progress-bounded 1484 7582 0.19572672118174625 6
+iterating-progress-bounded 1738 7582 0.2292271168557109 7
+iterating-progress-bounded 1993 7582 0.2628594038512266 8
+iterating-progress-bounded 2247 7582 0.29635979952519126 9
+iterating-progress-bounded 2502 7582 0.32999208652070694 10
+iterating-progress-bounded 2756 7582 0.3634924821946716 11
+iterating-progress-bounded 3010 7582 0.39699287786863624 12
+iterating-progress-bounded 3264 7582 0.4304932735426009 13
+iterating-progress-bounded 3518 7582 0.46399366921656554 14
+iterating-progress-bounded 3772 7582 0.4974940648905302 15
+iterating-progress-bounded 4027 7582 0.5311263518860458 16
+iterating-progress-bounded 4282 7582 0.5647586388815616 17
+iterating-progress-bounded 4535 7582 0.5981271432339752 18
+iterating-progress-bounded 4790 7582 0.6317594302294909 19
+iterating-progress-bounded 5044 7582 0.6652598259034556 20
+iterating-progress-bounded 5297 7582 0.6986283302558691 21
+iterating-progress-bounded 5551 7582 0.7321287259298338 22
+iterating-progress-bounded 5805 7582 0.7656291216037985 23
+iterating-progress-bounded 6059 7582 0.7991295172777632 24
+iterating-progress-bounded 6312 7582 0.8324980216301767 25
+iterating-progress-bounded 6567 7582 0.8661303086256924 26
+iterating-progress-bounded 6819 7582 0.899366921656555 27
+iterating-progress-bounded 7074 7582 0.9329992086520706 28
+iterating-progress-bounded 7329 7582 0.9666314956475864 29
+iterating-progress-bounded 7583 7582 1.0001318913215511 30
+model-checking-done 42
+change_state: 0.05429919316250737	</pre>
+</div>
+</body>
+</html>

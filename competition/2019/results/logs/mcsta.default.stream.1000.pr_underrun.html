@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - stream pr_underrun 1000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#stream">stream</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">pr_underrun</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe stream.jani --props pr_underrun -E N=1000 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">2.5223398208618164s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.7798680315555767e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">stream.jani:model: info: stream is an MA model.
+stream.jani: info: Need 6 bytes per state.
+stream.jani: info: Explored 503501 states for N=1000.
+
+Peak memory usage: 96 MB
+Analysis results for stream.jani
+Experiment N=1000
+
++ State space exploration
+  State size:  6 bytes
+  States:      503501
+  Transitions: 504500
+  Branches:    1004999
+  Rate:        454423 states/s
+  Time:        1.5 s
+
++ Property pr_underrun
+  Probability: 0.271231572880197
+  Bounds:      [0.271231572880197, 0.271231572880197]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  3
+    Time:        0.1 s	</pre>
+</div>
+</body>
+</html>

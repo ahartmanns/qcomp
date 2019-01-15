@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - stream pr_underrun_tb 1000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#stream">stream</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">pr_underrun_tb</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe stream.jani --props pr_underrun_tb -E N=1000 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">32.029205322265625s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.9719794893269085e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">stream.jani:model: info: stream is an MA model.
+stream.jani: info: Need 6 bytes per state.
+stream.jani: info: Explored 503501 states for N=1000.
+
+Peak memory usage: 150 MB
+Analysis results for stream.jani
+Experiment N=1000
+
++ State space exploration
+  State size:  6 bytes
+  States:      503501
+  Transitions: 504500
+  Branches:    1004999
+  Rate:        683176 states/s
+  Time:        0.8 s
+
++ Property pr_underrun_tb
+  Probability: 0.0189395051970506
+  Bounds:      [0.0189390317212576, 0.0189399786728437]
+  Time:        30.4 s
+
+  + Precomputations
+    Min. prob. 0 states:          1003
+    Time for min. prob. 0 states: 0.1 s
+
+  + Unif+
+    Time:             30.4 s
+    Max. exit rate:   8
+    Iterations:       2
+    Final unif. rate: 8	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm - pacman crash 60</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>Storm</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#pacman">pacman</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAXSTEPS</span> = 60</td></tr>
+		<tr><td>Property:</td><td><span class="tt">crash</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism pacman.nm --prop pacman.props crash --constants MAXSTEPS=60 --engine hybrid --ddlib sylvan --sylvan:maxmem 6000</pre>
+	Hybrid engine with sylvan. Memory limit for sylvan set to 0.5*available memory.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">31.986701726913452s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.824693935613194e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.3.1 (dev)
+
+Date: Thu Dec 13 01:52:54 2018
+Command line arguments: --prism pacman.nm --prop pacman.props crash --constants MAXSTEPS=60 --engine hybrid --ddlib sylvan '--sylvan:maxmem' 6000
+Current working directory: /home/qcomp
+
+Time for model input parsing: 0.068s.
+
+Time for model construction: 8.781s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	7253118 (327534 nodes)
+Transitions: 	9952883 (1720719 nodes)
+Choices: 	9097907
+Reward Models:  none
+Variables: 	rows: 11 meta variables (35 DD variables), columns: 11 meta variables (35 DD variables), nondeterminism: 9 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (36 nodes)
+   * Crash
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511074971
+Time for model checking: 22.480s.	</pre>
+</div>
+</body>
+</html>

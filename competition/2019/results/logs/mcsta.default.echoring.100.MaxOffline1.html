@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - echoring MaxOffline1 100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#echoring">echoring</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">ITERATIONS</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MaxOffline1</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe echoring.jani --props MaxOffline1 -E ITERATIONS=100 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">18.486752033233643s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.5234587291197243e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">echoring.jani:model: info: echoring is an MDP model.
+echoring.jani: info: Need 43 bytes per state.
+echoring.jani: info: Explored 836418 states for ITERATIONS=100.
+
+Peak memory usage: 179 MB
+Analysis results for echoring.jani
+Experiment ITERATIONS=100
+
++ State space exploration
+  State size:  43 bytes
+  States:      836418
+  Transitions: 1339820
+  Branches:    1489542
+  Rate:        142127 states/s
+  Time:        6.3 s
+
++ Property MaxOffline1
+  Probability: 1.05008264978522E-06
+  Bounds:      [1.05008264978522E-06, 1]
+  Time:        10.4 s
+
+  + Value iteration
+    Final error: 6.0980725174398E-07
+    Iterations:  292
+    Time:        10.3 s	</pre>
+</div>
+</body>
+</html>

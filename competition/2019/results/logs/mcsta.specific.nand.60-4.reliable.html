@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - nand reliable 60-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#nand">nand</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 60, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">reliable</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe nand.jani --props reliable -E N=60,K=4 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">28.69999051094055s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.641272360556311e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">nand.jani:model: info: nand is a DTMC model.
+nand.jani: info: Need 9 bytes per state.
+nand.jani: info: Explored 18826082 states for N=60, K=4.
+
+Peak memory usage: 3249 MB
+Analysis results for nand.jani
+Experiment N=60, K=4
+
++ State space exploration
+  State size:  9 bytes
+  States:      18826082
+  Transitions: 18826082
+  Branches:    29772212
+  Rate:        764573 states/s
+  Time:        26.3 s
+
++ Property reliable
+  Probability: 0.686721458919228
+  Bounds:      [0.686721458919228, 0.686721458919228]
+  Time:        1.4 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        1.4 s	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - wlan-large P_max 2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#wlan-large">wlan-large</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">P_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe wlan-large.jani --props P_max -E K=2 --relative-width -O out.txt Minimal --unsafe -S Memory --chainopt</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small, '--chainopt' = use state chain compression during state space exploration, which tends to work well for PTA and unbounded properties.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">4.245166301727295s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">wlan-large.jani:model: info: wlan-large is an STA model.
+wlan-large.jani: info: Need 16 bytes per state.
+wlan-large.jani: info: Explored 714197 states for K=2.
+
+Peak memory usage: 236 MB
+Analysis results for wlan-large.jani
+Experiment K=2
+
++ State space exploration
+  State size:  16 bytes
+  States:      714197
+  Transitions: 1458192
+  Branches:    1459246
+  Rate:        291152 states/s
+  Time:        2.6 s
+
++ Property P_max
+  Probability: 0.0625
+  Bounds:      [0.0625, 0.0625]
+  Time:        0.5 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  18
+    Time:        0.5 s	</pre>
+</div>
+</body>
+</html>

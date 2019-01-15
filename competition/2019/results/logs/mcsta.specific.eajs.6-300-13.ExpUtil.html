@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - eajs ExpUtil 6-300-13</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#eajs">eajs</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">energy_capacity</span> = 300, <span class="tt">B</span> = 13</td></tr>
+		<tr><td>Property:</td><td><span class="tt">ExpUtil</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe eajs.6.jani --props ExpUtil -E energy_capacity=300,B=13 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">65.21182346343994s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.61164463046688e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">eajs.6.jani:model: info: eajs.6 is an MDP model.
+eajs.6.jani: info: Need 26 bytes per state.
+eajs.6.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+eajs.6.jani: info: Explored 7901694 states for energy_capacity=300, B=13.
+
+Peak memory usage: 2090 MB
+Analysis results for eajs.6.jani
+Experiment energy_capacity=300, B=13
+
++ State space exploration
+  State size:  26 bytes
+  States:      7901694
+  Transitions: 11882922
+  Branches:    19679927
+  Rate:        176468 states/s
+  Time:        45.8 s
+
++ Property ExpUtil
+  Value:  12.0511108224847
+  Bounds: [12.0511108224847, infinity)
+  Time:   18.4 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 8.8 s
+    Min. prob. 1 states:          7901694
+    Time for min. prob. 1 states: 0.7 s
+
+  + Value iteration
+    Final error: 8.54690416100535E-07
+    Iterations:  24
+    Time:        8.9 s	</pre>
+</div>
+</body>
+</html>

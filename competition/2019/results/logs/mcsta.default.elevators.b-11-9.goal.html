@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - elevators goal b-11-9</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#elevators">elevators</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">variant</span> = b, <span class="tt">p</span> = 11, <span class="tt">c</span> = 9</td></tr>
+		<tr><td>Property:</td><td><span class="tt">goal</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe elevators.b-11-9.jani --props goal --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">15.139715433120728s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">elevators.b-11-9.jani:model: info: jani_from_ppddl is an MDP model.
+elevators.b-11-9.jani: info: Need 61 bytes per state.
+elevators.b-11-9.jani: info: Explored 538326 states.
+
+Peak memory usage: 189 MB
+Analysis results for elevators.b-11-9.jani
+
++ State space exploration
+  State size:  61 bytes
+  States:      538326
+  Transitions: 3208167
+  Branches:    3456513
+  Rate:        107194 states/s
+  Time:        5.8 s
+
++ Property goal
+  Probability: 1
+  Bounds:      [1, 1]
+  Time:        8.2 s
+
+  + Value iteration
+    Final error: 9.53675225901819E-07
+    Iterations:  140
+    Time:        8.2 s	</pre>
+</div>
+</body>
+</html>

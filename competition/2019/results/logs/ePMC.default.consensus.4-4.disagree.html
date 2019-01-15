@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - consensus disagree 4-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">disagree</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files consensus.4.prism --property-input-files consensus.props --property-input-names disagree --translate-messages false --value-floating-point-output-native true --const K=4</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">16.270522832870483s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.428664520958809e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property disagree
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 14167 14167
+build-model-done 43136 1
+iterating
+iterating-progress-unbounded 772 0.002730592329398207 1
+iterating-progress-unbounded 1663 4.89757838456506E-4 2
+iterating-progress-unbounded 2553 9.657062563428465E-5 3
+iterating-progress-unbounded 3440 2.353183524400615E-5 4
+iterating-progress-unbounded 4323 5.38811243822046E-6 5
+iterating-progress-unbounded 5209 1.1706195472693803E-6 6
+iterating-progress-unbounded 6097 2.448951459954607E-7 7
+iterating-progress-unbounded 6984 5.062379840325981E-8 8
+iterating-progress-unbounded 7875 1.0118991533580868E-8 9
+iterating-progress-unbounded 8766 2.0156245561508968E-9 10
+iterating-progress-unbounded 9658 3.975055840044206E-10 11
+iterating-progress-unbounded 10549 7.775152743860758E-11 12
+iterating-done 10791 12
+model-checking-done 14
+disagree: 0.15607305863684218	</pre>
+</div>
+</body>
+</html>

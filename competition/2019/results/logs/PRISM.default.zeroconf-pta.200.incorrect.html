@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - zeroconf-pta incorrect 200</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#zeroconf-pta">zeroconf-pta</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">T</span> = 200</td></tr>
+		<tr><td>Property:</td><td><span class="tt">incorrect</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g zeroconf-pta.prism zeroconf-pta.props --property incorrect -const T=200</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.7886722087860107s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.418853095795927e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Tue Dec 11 01:56:59 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g zeroconf-pta.prism zeroconf-pta.props --property incorrect -const T=200
+
+Parsing model file "zeroconf-pta.prism"...
+
+Parsing properties file "zeroconf-pta.props"...
+
+2 properties:
+(1) "deadline": Pmax=? [ F<=T s=2&ip=2 ]
+(2) "incorrect": Pmax=? [ F s=2&ip=2 ]
+
+Type:        PTA
+Modules:     sender environment 
+Variables:   s probes ip x e y 
+
+---------------------------------------------------------------------
+
+Model checking: "incorrect": Pmax=? [ F s=2&ip=2 ]
+
+Building PTA...
+
+PTA: 2 clocks, 23 locations, 26 transitions
+Target (s=2&ip=2) satisfied by 3 locations.
+
+Building initial STPG...
+
+Building forwards reachability graph... 27 states
+Graph constructed in 0.012 secs.
+Graph: 27 symbolic states (1 initial, 2 target)
+
+Model checking STPG...
+STPG model checked in 0.017 secs.
+27/27 states converged.
+Diff across 1 initial state: 9.068567511510972E-12
+Lower/upper bounds for 1 initial state: 0.00130151379208389 - 0.0013015138011524575
+
+Initial STPG: 27 states (1 initial), 38 transitions, 26 choices, 25 choice sets, p1max/avg = 1/0.93, p2max/avg = 2/1.04
+Final STPG: 27 states (1 initial), 38 transitions, 26 choices, 25 choice sets, p1max/avg = 1/0.93, p2max/avg = 2/1.04
+
+Terminated after 0 refinements in 0.10 secs.
+
+Abstraction-refinement time breakdown:
+* 0.07 secs (65.7%) = Building initial STPG
+* 0.00 secs (0.0%) = Rebuilding STPG (0 x avg 0.00 secs)
+* 0.02 secs (17.2%) = model checking STPG (1 x avg 0.02 secs) (lb=82.4%) (prob0=35.3%) (pre=64.7%) (iters=112)
+* 0.00 secs (0.0%) = refinement (0 x avg 0.00 secs)
+
+Final diff across 1 initial state: 9.068567511510972E-12
+Final lower/upper bounds for 1 initial state: 0.00130151379208389 - 0.0013015138011524575
+
+Model checking completed in 0.184 secs.
+
+Result (maximum probability): 0.0013015137966181738
+
+
+Overall running time: 0.547 seconds.	</pre>
+</div>
+</body>
+</html>

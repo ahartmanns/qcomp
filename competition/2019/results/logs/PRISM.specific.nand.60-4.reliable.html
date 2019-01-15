@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - nand reliable 60-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#nand">nand</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 60, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">reliable</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g nand.prism nand.props --property reliable -const N=60,K=4 -sparse -bgs</pre>
+	Select best engine and backwards Gauss-Seidel as solution method, as the model is acyclic
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">43.06910824775696s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">9.757289190159982e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 20:43:02 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g nand.prism nand.props --property reliable -const 'N=60,K=4' -sparse -bgs
+
+Parsing model file "nand.prism"...
+
+Parsing properties file "nand.props"...
+
+1 property:
+(1) "reliable": P=? [ F s=4&z/N<0.1 ]
+
+Type:        DTMC
+Modules:     multiplex 
+Variables:   u c s z zx zy x y 
+
+---------------------------------------------------------------------
+
+Model checking: "reliable": P=? [ F s=4&z/N<0.1 ]
+Model constants: N=60,K=4
+
+Building model...
+Model constants: N=60,K=4
+
+Computing reachable states...
+
+Reachability (BFS): 2162 iterations in 11.81 seconds (average 0.005463, setup 0.00)
+
+Time for model construction: 12.308 seconds.
+
+Type:        DTMC
+States:      18826082 (1 initial)
+Transitions: 29772212
+
+Transition matrix: 97452 nodes (1103 terminal), 29772212 minterms, vars: 33r/33c
+
+Prob0: 2162 iterations in 10.68 seconds (average 0.004940, setup 0.00)
+
+Prob1: 1945 iterations in 9.92 seconds (average 0.005101, setup 0.00)
+
+yes = 547, no = 1757695, maybe = 17067840
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=18826082, nnz=26994875] [326.9 MB]
+Creating vector for diagonals... [dist=1, compact] [35.9 MB]
+Creating vector for RHS... [dist=2, compact] [35.9 MB]
+Allocating iteration vector... [143.6 MB]
+TOTAL: [542.3 MB]
+
+Starting iterations...
+
+Backwards Gauss-Seidel: 2 iterations in 8.52 seconds (average 0.241000, setup 8.03)
+
+Value in the initial state: 0.6867214589192238
+
+Time for model checking: 29.983 seconds.
+
+Result: 0.6867214589192238 (value in the initial state)
+
+
+Overall running time: 42.846 seconds.	</pre>
+</div>
+</body>
+</html>

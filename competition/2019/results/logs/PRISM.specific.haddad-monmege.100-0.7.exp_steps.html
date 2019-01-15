@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - haddad-monmege exp_steps 100-0.7</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#haddad-monmege">haddad-monmege</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 100, <span class="tt">p</span> = 0.7</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_steps</span> (exp-steps)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g haddad-monmege.pm haddad-monmege.prctl --property exp_steps -const N=100,p=0.7 -exact</pre>
+	Select best engine
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.5639638900756836s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 20:31:29 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g haddad-monmege.pm_fixed haddad-monmege.prctl_fixed --property exp_steps -const 'N=100,p=0.7' -exact
+
+Parsing model file "haddad-monmege.pm_fixed"...
+
+Parsing properties file "haddad-monmege.prctl_fixed"...
+
+2 properties:
+(1) "target": P=? [ F "Target" ]
+(2) "exp_steps": R{"time_reward"}=? [ F "Done" ]
+
+Type:        DTMC
+Modules:     main 
+Variables:   x 
+
+---------------------------------------------------------------------
+
+Model checking: "exp_steps": R{"time_reward"}=? [ F "Done" ]
+Model constants: N=100,p=7/10
+
+Building model (exact engine)...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.187 secs.
+
+States:      201 (1 initial)
+Transitions: 400
+
+Time for model construction: 0.19 seconds.
+Building reward structure...
+
+Time for model checking: 0.579 seconds.
+
+Result (expected time_reward): 1901475900342344102245054808062
+ As floating point: ~1.901475900342344E30
+
+
+Overall running time: 1.373 seconds.	</pre>
+</div>
+</body>
+</html>

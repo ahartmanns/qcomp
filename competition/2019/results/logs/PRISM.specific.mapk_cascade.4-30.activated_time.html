@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - mapk_cascade activated_time 4-30</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#mapk_cascade">mapk_cascade</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">T</span> = 30</td></tr>
+		<tr><td>Property:</td><td><span class="tt">activated_time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g mapk_cascade.prism mapk_cascade.props --property activated_time -const N=4,T=30 -sparse -gs</pre>
+	Select best engine and numerical method
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">10.36508321762085s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">7.141083358034049e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 22:03:42 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g mapk_cascade.prism mapk_cascade.props --property activated_time -const 'N=4,T=30' -sparse -gs
+
+Parsing model file "mapk_cascade.prism"...
+
+Parsing properties file "mapk_cascade.props"...
+
+3 properties:
+(1) "activated_T": R{"activated"}=? [ I=T ]
+(2) "activated_time": R{"time"}=? [ F kpp=N ]
+(3) "reactions": R{"reactions"}=? [ C<=T ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: "activated_time": R{"time"}=? [ F kpp=N ]
+Model constants: N=4
+
+Building model...
+Model constants: N=4
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 3.40 seconds (average 0.077364, setup 0.00)
+
+Time for model construction: 3.63 seconds.
+
+Type:        CTMC
+States:      99535 (1 initial)
+Transitions: 910872
+
+Rate matrix: 111563 nodes (14 terminal), 910872 minterms, vars: 58r/58c
+
+Diagonals vector: 52485 nodes (128 terminal), 99535 minterms
+Embedded Markov chain: 929797 nodes (681 terminal), 910872 minterms
+
+Prob0: 23 iterations in 0.37 seconds (average 0.016043, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.002000, setup 0.00)
+
+goal = 1461, inf = 0, maybe = 98074
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix... [n=99535, nnz=900381, compact] [3.5 MB]
+Creating vector for diagonals... [dist=1, compact] [194.4 KB]
+Creating vector for RHS... [dist=128, compact] [195.4 KB]
+Allocating iteration vector... [777.6 KB]
+TOTAL: [4.7 MB]
+
+Starting iterations...
+
+Gauss-Seidel: 777 iterations in 4.11 seconds (average 0.003185, setup 1.63)
+
+Value in the initial state: 40.67359825294628
+
+Time for model checking: 5.87 seconds.
+
+Result: 40.67359825294628 (value in the initial state)
+
+
+Overall running time: 10.074 seconds.	</pre>
+</div>
+</body>
+</html>

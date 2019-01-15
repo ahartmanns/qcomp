@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - cluster below_min 64-2000-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#cluster">cluster</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 64, <span class="tt">T</span> = 2000, <span class="tt">t</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">below_min</span> (exp-reward-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g cluster.prism cluster.props --property below_min -const N=64,T=2000,t=20 -sparse</pre>
+	Select best engine
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">51.99366116523743s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.3796637635561605e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 21:18:52 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g cluster.prism cluster.props --property below_min -const 'N=64,T=2000,t=20' -sparse
+
+Parsing model file "cluster.prism"...
+
+Parsing properties file "cluster.props"...
+
+8 properties:
+(1) "below_min": R{"time_not_min"}=? [ C<=T ]
+(2) "operational": R{"percent_op"}=? [ I=t ]
+(3) "premium_steady": S=? [ "premium" ]
+(4) "qos1": P=? [ F<=T !"minimum" ]
+(5) "qos2": P=? [ F[t,t] !"minimum" ]
+(6) "qos3": P=? [ "minimum" U<=t "premium" ]
+(7) "qos4": P=? [ !"minimum" U>=t "minimum" ]
+(8) "repairs": R{"num_repairs"}=? [ C<=T ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: "below_min": R{"time_not_min"}=? [ C<=T ]
+Model constants: N=64
+Property constants: T=2000
+
+Building model...
+Model constants: N=64
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.04 seconds (average 0.000316, setup 0.00)
+
+Time for model construction: 0.098 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 8225 nodes (71 terminal), 733216 minterms, vars: 23r/23c
+
+Computing rewards...
+Engine: Sparse
+
+Building sparse matrix... [n=151060, nnz=733216, compact] [2.9 MB]
+Creating vector for diagonals... [dist=3049, compact] [318.9 KB]
+Allocating iteration vectors... [3 x 1.2 MB]
+TOTAL: [6.7 MB]
+
+Uniformisation: q.t = 51.257040 x 2000.000000 = 102514.080000
+Fox-Glynn: left = 100270, right = 105233
+
+Starting iterations...
+Iteration 1200 (of 105233): max relative diff=0.009807, 5.00 sec so far
+Iteration 2392 (of 105233): max relative diff=0.004218, 10.01 sec so far
+Iteration 3578 (of 105233): max relative diff=0.003260, 15.01 sec so far
+Iteration 4773 (of 105233): max relative diff=0.002520, 20.01 sec so far
+Iteration 5961 (of 105233): max relative diff=0.002254, 25.02 sec so far
+Iteration 7149 (of 105233): max relative diff=0.001778, 30.02 sec so far
+Iteration 8347 (of 105233): max relative diff=0.000431, 35.02 sec so far
+Iteration 9543 (of 105233): max relative diff=0.000036, 40.02 sec so far
+Iteration 10739 (of 105233): max relative diff=0.000003, 45.02 sec so far
+Iteration 11950 (of 105233): max relative diff=0.000000, 50.03 sec so far
+
+Steady state detected at iteration 12101
+
+Iterative method: 12101 iterations in 51.11 seconds (average 0.004186, setup 0.46)
+
+Value in the initial state: 0.004219443769591423
+
+Time for model checking: 51.144 seconds.
+
+Result: 0.004219443769591423 (value in the initial state)
+
+
+Overall running time: 51.79 seconds.	</pre>
+</div>
+</body>
+</html>

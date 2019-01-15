@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm - resource-gathering expgold 1300-100-100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>Storm</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#resource-gathering">resource-gathering</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">B</span> = 1300, <span class="tt">GOLD_TO_COLLECT</span> = 100, <span class="tt">GEM_TO_COLLECT</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">expgold</span> (exp-reward-step-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism resource-gathering.pm --prop resource-gathering.prctl expgold --constants B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 --engine dd --ddlib sylvan --sylvan:maxmem 9000</pre>
+	Dd engine with sylvan. Memory limit for sylvan set to 0.75*available memory.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">3.0582704544067383s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.2362977323890876e-10</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.3.1 (dev)
+
+Date: Thu Dec 13 02:55:11 2018
+Command line arguments: --prism resource-gathering.pm --prop resource-gathering.prctl expgold --constants 'B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100' --engine dd --ddlib sylvan '--sylvan:maxmem' 9000
+Current working directory: /home/qcomp
+
+Time for model input parsing: 0.005s.
+
+ WARN (DdPrismModelBuilder.cpp:1196): The reward model does not assign any non-zero rewards.
+Time for model construction: 1.282s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	958894 (36 nodes)
+Transitions: 	3325526 (619 nodes)
+Choices: 	3080702
+Reward Models:  rew_gold
+Variables: 	rows: 7 meta variables (23 DD variables), columns: 7 meta variables (23 DD variables), nondeterminism: 4 meta variables (4 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (24 nodes)
+   * success
+-------------------------------------------------------------- 
+
+Model checking property "expgold": R[exp]{"rew_gold"}max=? [C<=1300] ...
+Result (for initial states): 145.2875015
+Time for model checking: 1.170s.	</pre>
+</div>
+</body>
+</html>
