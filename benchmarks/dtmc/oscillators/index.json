@@ -56,7 +56,7 @@
 		{
 			"name": "time_to_synch",
 			"description": "The time taken to reach a state where the oscillators have achieved the desired degree of synchrony.",
-			"type": "exp-time"
+			"type": "exp-reward"
 		},
 		{
 			"name": "power_consumption",
