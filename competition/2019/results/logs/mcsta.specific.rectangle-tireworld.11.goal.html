@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - rectangle-tireworld goal 11</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#rectangle-tireworld">rectangle-tireworld</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">xy</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">goal</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe rectangle-tireworld.11.jani --props goal --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">129.10893964767456s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">8.1842069e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">rectangle-tireworld.11.jani:model: info: jani_from_ppddl is an MDP model.
+rectangle-tireworld.11.jani: info: Need 4 bytes per state.
+rectangle-tireworld.11.jani: info: Explored 242 states.
+
+Peak memory usage: 1351 MB
+Analysis results for rectangle-tireworld.11.jani
+
++ State space exploration
+  State size:  4 bytes
+  States:      242
+  Transitions: 15367
+  Branches:    16084
+  Rate:        2 states/s
+  Time:        121.0 s
+
++ Property goal
+  Probability: 0.999999918157931
+  Bounds:      [0.999999918157931, 1]
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 8.87882060802046E-07
+    Iterations:  23
+    Time:        0.0 s	</pre>
+</div>
+</body>
+</html>

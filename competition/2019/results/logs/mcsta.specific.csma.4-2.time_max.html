@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - csma time_max 4-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time_max</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe csma.4-2.jani --props time_max --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">6.939238786697388s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.0006792275253105e-06</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">csma.4-2.jani:model: info: csma.4-2 is an MDP model.
+csma.4-2.jani: info: Need 24 bytes per state.
+csma.4-2.jani: info: Explored 761962 states.
+
+Peak memory usage: 217 MB
+Analysis results for csma.4-2.jani
+
++ State space exploration
+  State size:  24 bytes
+  States:      761962
+  Transitions: 825504
+  Branches:    1327068
+  Rate:        233444 states/s
+  Time:        3.4 s
+
++ Property time_max
+  Value:  142.212026788722
+  Bounds: [142.212026788722, infinity)
+  Time:   2.7 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.4 s
+    Min. prob. 1 states:          761962
+    Time for min. prob. 1 states: 0.1 s
+
+  + Value iteration
+    Final error: 8.98535738394959E-07
+    Iterations:  79
+    Time:        2.3 s	</pre>
+</div>
+</body>
+</html>

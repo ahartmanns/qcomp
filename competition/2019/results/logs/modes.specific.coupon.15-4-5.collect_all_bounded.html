@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - coupon collect_all_bounded 15-4-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#coupon">coupon</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 15, <span class="tt">DRAWS</span> = 4, <span class="tt">B</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">collect_all_bounded</span> (prob-reach-reward-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono modes/modes.exe coupon.15-4.jani --props collect_all_bounded -E B=5 --width 1e-3 --relative-width -O out.txt Minimal --unsafe --max-run-length 0 --timeout 1680 </pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '--max-run-length 0' = do not impose a limit on the maximum length of a simulation run (which is anyway more of a model debugging feature), '--timeout 1680' = stop after 28 minutes of simulation and return the estimate at that point even if the desired confidence is not yet met.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1681.3931248188019s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '44522635900197/25000000000000000' is tagged as incorrect. The reference result is '28849226678272/16218292236328125' (approx. 0.0017788079199640542) which means a relative error of '0.0011791694990138377' which is larger than the goal precision '0.001'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">0.0011791694990138377</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">coupon.15-4.jani:model: info: coupon.15-4 is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+coupon.15-4.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 68 MB
+Analysis results for coupon.15-4.jani
+Experiment B=5
+Status:          Timeout (1680 s, 1% done)
+Simulation time: 1680.0 s
+
++ Property Property "collect_all_bounded"
+  Estimated probability: 0.00178090543600788
+  Runs used:             30720890
+  Run type:              MDP
+  Status:                Timeout (1% done)
+
+  + Error bounds
+    Statement: Aborted: no error bounds	</pre>
+</div>
+</body>
+</html>

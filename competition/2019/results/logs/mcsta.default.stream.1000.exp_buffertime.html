@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - stream exp_buffertime 1000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#stream">stream</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_buffertime</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe stream.jani --props exp_buffertime -E N=1000 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">214.7545871734619s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.952387567152376e-06</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">stream.jani:model: info: stream is an MA model.
+stream.jani: info: Need 6 bytes per state.
+stream.jani: info: Explored 1502501 states for N=1000.
+stream.jani:properties[0]: warning: Computing minimum expected reward in property "exp_buffertime" without checking for zero-reward end components.
+
+Peak memory usage: 222 MB
+Analysis results for stream.jani
+Experiment N=1000
+
++ State space exploration
+  State size:  6 bytes
+  States:      1502501
+  Transitions: 2002001
+  Branches:    3001001
+  Rate:        445449 states/s
+  Time:        4.5 s
+
++ Property exp_buffertime
+  Value:  8.91944356106751
+  Bounds: [8.91944356106751, infinity)
+  Time:   209.5 s
+
+  + Precomputations
+    Max. prob. 1 states:          1502501
+    Time for max. prob. 1 states: 196.7 s
+
+  + Value iteration
+    Final error: 9.50759551986529E-07
+    Iterations:  178
+    Time:        12.7 s	</pre>
+</div>
+</body>
+</html>

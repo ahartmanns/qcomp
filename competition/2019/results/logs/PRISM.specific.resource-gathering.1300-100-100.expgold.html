@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - resource-gathering expgold 1300-100-100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#resource-gathering">resource-gathering</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">B</span> = 1300, <span class="tt">GOLD_TO_COLLECT</span> = 100, <span class="tt">GEM_TO_COLLECT</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">expgold</span> (exp-reward-step-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g resource-gathering.pm resource-gathering.prctl --property expgold -const B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -sparse</pre>
+	Select best engine
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">36.79999136924744s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.756139514895092e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Tue Dec 11 01:15:51 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g resource-gathering.pm_fixed resource-gathering.prctl_fixed --property expgold -const 'B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100' -sparse
+
+Parsing model file "resource-gathering.pm_fixed"...
+
+Parsing properties file "resource-gathering.prctl_fixed"...
+
+3 properties:
+(1) "expgold": R{"rew_gold"}max=? [ C<=B ]
+(2) "expsteps": R{"time_reward"}min=? [ F "success" ]
+(3) "prgoldgem": Pmax=? [ F<=B "success" ]
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter 
+Variables:   gold gem attacked x y required_gold required_gem 
+
+---------------------------------------------------------------------
+
+Model checking: "expgold": R{"rew_gold"}max=? [ C<=B ]
+Model constants: GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100,B=1300
+
+Building model...
+Model constants: GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100,B=1300
+
+Computing reachable states...
+
+Reachability (BFS): 1215 iterations in 0.73 seconds (average 0.000600, setup 0.00)
+
+Time for model construction: 0.78 seconds.
+
+Type:        MDP
+States:      958894 (1 initial)
+Transitions: 3325526
+Choices:     3080702
+
+Transition matrix: 898 nodes (4 terminal), 3325526 minterms, vars: 23r/23c/4nd
+
+Computing rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=958894, nc=3080702, nnz=3325526, k=4] [53.5 MB]
+Building sparse matrix (transition rewards)... [n=958894, nc=3080702, nnz=61206, k=4] [16.1 MB]
+Creating vector for state rewards... [7.3 MB]
+Allocating iteration vectors... [2 x 7.3 MB]
+TOTAL: [91.5 MB]
+
+Starting iterations...
+Iteration 188 (of 1300): 5.02 sec so far
+Iteration 378 (of 1300): 10.02 sec so far
+Iteration 567 (of 1300): 15.02 sec so far
+Iteration 755 (of 1300): 20.03 sec so far
+Iteration 944 (of 1300): 25.04 sec so far
+Iteration 1133 (of 1300): 30.06 sec so far
+
+Iterative method: 1300 iterations in 35.20 seconds (average 0.026496, setup 0.75)
+
+Value in the initial state: 145.28750146751008
+
+Time for model checking: 35.229 seconds.
+
+Result: 145.28750146751008 (value in the initial state)
+
+
+Overall running time: 36.6 seconds.	</pre>
+</div>
+</body>
+</html>

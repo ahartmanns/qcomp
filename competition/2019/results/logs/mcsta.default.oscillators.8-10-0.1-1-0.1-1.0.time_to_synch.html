@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - oscillators time_to_synch 8-10-0.1-1-0.1-1.0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#oscillators">oscillators</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 8, <span class="tt">T</span> = 10, <span class="tt">epsilon</span> = 0.1, <span class="tt">R</span> = 1, <span class="tt">mu</span> = 0.1, <span class="tt">lambda</span> = 1.0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time_to_synch</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe oscillators.8-10-0.1-1.jani --props time_to_synch -E mu=0.1,lambda=1.0 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1307.0864796638489s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">oscillators.8-10-0.1-1.jani:model: info: oscillators.8-10-0.1-1 is a DTMC model.
+oscillators.8-10-0.1-1.jani: info: Need 11 bytes per state.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Stacktrace:
+
+  at <unknown> <0xffffffff>
+  at Modest.StateSpace.StateSpaceExploration`1<CompiledAutomata.State1>.GenerateBranches (Modest.Exploration.Network`1<CompiledAutomata.State1>,Modest.StateSpace.PartitionedStateSpace,int,Modest.StateSpace.StateSet`1<CompiledAutomata.State1>,int,int[],double[],double[],Modest.Exploration.Synchronisation,CompiledAutomata.State1&,Modest.StateSpace.StateSpaceExploration`1/StatePartitionIndexGetter<CompiledAutomata.State1>,System.Collections.Generic.Dictionary`2<int, Modest.StateSpace.StateSet`1<CompiledAutomata.State1>>,System.Collections.Generic.Dictionary`2<int, Modest.Disposer>,Modest.Modularity.LocationErrorHandler,double) [0x0004d] in <7b6845e0e8834aad82d2f2017b8673a1>:0
+  at Modest.StateSpace.StateSpaceExploration`1<CompiledAutomata.State1>.ExploreStateSpacePartition (Modest.Exploration.Network`1<CompiledAutomata.State1>,Modest.StateSpace.PartitionedStateSpace,int,Modest.StateSpace.StateSpaceExploration`1/StatePartitionIndexGetter<CompiledAutomata.State1>,int[],int[],int[],ulong,System.Collections.Generic.Dictionary`2<int, Modest.StateSpace.StateSet`1<CompiledAutomata.State1>>,System.Collections.Generic.List`1<bool>,Modest.StateSpace.StateSpaceExploration/Configuration,Modest.StateSpace.StateSpaceExploration/Diagnostics,Modest.StateSpace.StateSpaceExploration`1/StatusCallbackData<CompiledAutomata.State1>,Modest.Modularity.OperationState,Modest.Modularity.LocationErrorHandler) [0x0072b] in <7b6845e0e8834aad82d2f2017b8673a1>:0
+  at Modest.StateSpace.StateSpaceExploration`1<CompiledAutomata.State1>.ExploreStateSpace (Modest.Exploration.Network`1<CompiledAutomata.State1>,Modest.StateSpace.StateSpaceExploration`1/StatePartitionGetter<CompiledAutomata.State1>,int[],int[],int[],ulong,Modest.StateSpace.StateSpaceExploration/Configuration,Modest.StateSpace.StateSpaceExploration/Diagnostics,string,Modest.Modularity.OperationState,Modest.Modularity.LocationErrorHandler) [0x00225] in <7b6845e0e8834aad82d2f2017b8673a1>:0
+  at Modest.ModelChecking.MAModelChecker`1/StateSpaceExplorer<CompiledAutomata.State1>.ExploreStateSpace (Modest.StateSpace.StateSpaceExploration/Diagnostics,string,Modest.Modularity.OperationState,Modest.Modularity.LocationErrorHandler) [0x00096] in <1763fe9490634aaba21fcfe7ad846dc8>:0
+  at Modest.ModelChecking.MAModelChecker`1<CompiledAutomata.State1>.ModelCheck (string,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler) [0x0023d] in <1763fe9490634aaba21fcfe7ad846dc8>:0
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheckGeneric<CompiledAutomata.State1> (Modest.Exploration.Network`1<CompiledAutomata.State1>,object,string,Modest.StateSpace.StateProjections,object,Modest.StateSpace.ComponentisedExpression[],object,Modest.Modularity.ILocation,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler) [0x000b5] in <1763fe9490634aaba21fcfe7ad846dc8>:0
+[ERROR] FATAL UNHANDLED EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object
+  at Modest.StateSpace.StateSpaceExploration`1[T].GenerateBranches (Modest.Exploration.Network`1[T] network, Modest.StateSpace.PartitionedStateSpace stateSpace, System.Int32 partitionIndex, Modest.StateSpace.StateSet`1[T] stateSet, System.Int32 rewardCount, System.Int32[] branchRewardExpressions, System.Double[] branchRewardValues, System.Double[] rateRewardValues, Modest.Exploration.Synchronisation sync, T& currentState, Modest.StateSpace.StateSpaceExploration`1+StatePartitionIndexGetter[T] getPartition, System.Collections.Generic.Dictionary`2[TKey,TValue] partitionStates, System.Collections.Generic.Dictionary`2[TKey,TValue] partitionsWithOpenQueues, Modest.Modularity.LocationErrorHandler leh, System.Double probabilityWeight) [0x0004d] in <7b6845e0e8834aad82d2f2017b8673a1>:0 
+  at Modest.StateSpace.StateSpaceExploration`1[T].ExploreStateSpacePartition (Modest.Exploration.Network`1[T] network, Modest.StateSpace.PartitionedStateSpace stateSpace, System.Int32 partitionIndex, Modest.StateSpace.StateSpaceExploration`1+StatePartitionIndexGetter[T] getPartition, System.Int32[] atomicPropositionExpressions, System.Int32[] branchRewardExpressions, System.Int32[] rateRewardExpressions, System.UInt64 terminalStates, System.Collections.Generic.Dictionary`2[TKey,TValue] partitionStates, System.Collections.Generic.List`1[T] partitionDone, Modest.StateSpace.StateSpaceExploration+Configuration configuration, Modest.StateSpace.StateSpaceExploration+Diagnostics diagnostics, Modest.StateSpace.StateSpaceExploration`1+StatusCallbackData[T] statusData, Modest.Modularity.OperationState operationState, Modest.Modularity.LocationErrorHandler leh) [0x0072b] in <7b6845e0e8834aad82d2f2017b8673a1>:0 
+  at Modest.StateSpace.StateSpaceExploration`1[T].ExploreStateSpace (Modest.Exploration.Network`1[T] network, Modest.StateSpace.StateSpaceExploration`1+StatePartitionGetter[T] getStatePartition, System.Int32[] atomicPropositionExpressions, System.Int32[] branchRewardExpressions, System.Int32[] rateRewardExpressions, System.UInt64 terminalStates, Modest.StateSpace.StateSpaceExploration+Configuration configuration, Modest.StateSpace.StateSpaceExploration+Diagnostics diagnostics, System.String experimentString, Modest.Modularity.OperationState operationState, Modest.Modularity.LocationErrorHandler leh) [0x00225] in <7b6845e0e8834aad82d2f2017b8673a1>:0 
+  at Modest.ModelChecking.MAModelChecker`1+StateSpaceExplorer[T].ExploreStateSpace (Modest.StateSpace.StateSpaceExploration+Diagnostics diagnostics, System.String experimentString, Modest.Modularity.OperationState operationState, Modest.Modularity.LocationErrorHandler leh) [0x00096] in <1763fe9490634aaba21fcfe7ad846dc8>:0 
+  at Modest.ModelChecking.MAModelChecker`1[T].ModelCheck (System.String experimentString, Modest.Modularity.OperationState operationState, Modest.Modularity.ComponentErrorHandler ceh) [0x0023d] in <1763fe9490634aaba21fcfe7ad846dc8>:0 
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheckGeneric[T] (Modest.Exploration.Network`1[T] network, System.Object expInfoObj, System.String experimentString, Modest.StateSpace.StateProjections projections, System.Object propertiesObj, Modest.StateSpace.ComponentisedExpression[] distanceExps, System.Object parametersObj, Modest.Modularity.ILocation documentLocation, Modest.Modularity.OperationState operationState, Modest.Modularity.ComponentErrorHandler ceh) [0x000b5] in <1763fe9490634aaba21fcfe7ad846dc8>:0 
+  at (wrapper delegate-invoke) type_16777215.invoke_AnalysisDataSet_Network`1<State1>_object_string_StateProjections_object_ComponentisedExpression[]_object_ILocation_OperationState_ComponentErrorHandler(Modest.Exploration.Network`1<CompiledAutomata.State1>,object,string,Modest.StateSpace.StateProjections,object,Modest.StateSpace.ComponentisedExpression[],object,Modest.Modularity.ILocation,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler)
+  at invoke Modest.Exploration.Network`1__CompiledAutomata.State1\, CompiledAutomata16609498465160872835\, Version=0.0.0.0\, Culture=neutral\, PublicKeyToken=null__ : System.Object : System.String : Modest.StateSpace.StateProjections : System.Object : Modest.StateSpace.ComponentisedExpression__ : System.Object : Modest.Modularity.ILocation : Modest.Modularity.OperationState : Modest.Modularity.ComponentErrorHandler : Modest.Modularity.AnalysisDataSet.GeneratedClass.DoInvoke (System.Object , System.Object[] , System.Reflection.MethodInfo ) [0x00011] in <83d7f2a8c0ae4af6a3abed2f964412b0>:0 
+  at Modest.DirectInvoker.InvokeDirect (System.Reflection.MethodInfo method, System.Object instance, System.Object[] parameters) [0x00189] in <a58b0ef0c1dd41a3a2a0ed31c6d8bc32>:0 
+  at Modest.Exploration.NetworkGenericMethod.Invoke (System.Object network) [0x00021] in <32e23b74f64d4048a06342a068acf2b3>:0 
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheck (Modest.Automaton.NSHAModel model, Modest.ModelChecking.ModelCheckingAnalysisEngine+CompilationParameters compilationParams, System.Object parametersObj, Modest.Modularity.OperationState operationState, Modest.Modularity.IErrorHandler errors) [0x00999] in <1763fe9490634aaba21fcfe7ad846dc8>:0 
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.Analyze (Modest.ModelChecking.ModelCheckingAnalysisEngine+AnalysisParams analysisParameters, Modest.Automaton.NSHAModel model, System.Collections.Generic.IEnumerable`1[T] modelParameters, Modest.Modularity.OperationState operationState, Modest.Modularity.IErrorHandler errors) [0x009bc] in <1763fe9490634aaba21fcfe7ad846dc8>:0 
+  at Modest.Modularity.AnalysisEngine`3[M,EP,AP].Analyze (Modest.Modularity.IParameterObject analysisParameters, Modest.Modularity.IModel model, System.Collections.Generic.IEnumerable`1[T] experiments, Modest.Modularity.OperationState operationState, Modest.Modularity.IErrorHandler errors) [0x00114] in <178377de54a5492f9e9f3f5211c42168>:0 
+  at Modest.Executables.Mcsta.Program.Run (Modest.Executables.Mcsta.Program+McstaParams parameters, System.Diagnostics.Stopwatch time) [0x003f1] in <4b1e1250c87d49299d26188a88456e8b>:0 
+  at Modest.Executables.Mcsta.Program.Main (System.String[] args) [0x0007a] in <4b1e1250c87d49299d26188a88456e8b>:0	</pre>
+</div>
+</body>
+</html>

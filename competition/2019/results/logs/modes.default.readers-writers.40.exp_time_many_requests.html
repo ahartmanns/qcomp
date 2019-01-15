@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - readers-writers exp_time_many_requests 40</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#readers-writers">readers-writers</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 40</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_time_many_requests</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono modes/modes.exe readers-writers.40.jani --props exp_time_many_requests --width 1e-3 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--width 1e-3' = request error 1e-3, '--relative-width' = use relative error, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">144.63219928741455s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.00011406250332620471</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">readers-writers.40.jani:model: info: ReadersWriters is an MA model and will be simulated as an MA.
+readers-writers.40.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 68 MB
+Analysis results for readers-writers.40.jani
+Status:          Finished
+Simulation time: 143.3 s
+
++ Property Property "exp_time_many_requests"
+  Estimated value:     3.72969270694109
+  Confidence interval: [3.7259630438591, 3.73342237002308]
+  Runs used:           728680
+  Run type:            MA
+  Status:              Finished
+
+  + Sample data
+    Mean:     3.72969270694109
+    Variance: 2.6386383552336
+    Skewness: 1.69249798574769
+    Kurtosis: 7.72396969116214
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.05	</pre>
+</div>
+</body>
+</html>

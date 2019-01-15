@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - consensus disagree 6-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">disagree</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe consensus.6.jani --props disagree -E K=2 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">81.12005996704102s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.644135029231794e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">consensus.6.jani:model: info: consensus.6 is an MDP model.
+consensus.6.jani: info: Need 19 bytes per state.
+consensus.6.jani: info: Explored 1258240 states for K=2.
+
+Peak memory usage: 275 MB
+Analysis results for consensus.6.jani
+Experiment K=2
+
++ State space exploration
+  State size:  19 bytes
+  States:      1258240
+  Transitions: 5008128
+  Branches:    6236736
+  Rate:        150094 states/s
+  Time:        10.0 s
+
++ Property disagree
+  Probability: 0.363624224962214
+  Bounds:      [0.363624224962214, 1]
+  Time:        70.3 s
+
+  + Value iteration
+    Final error: 9.8573262065094E-07
+    Iterations:  736
+    Time:        70.2 s	</pre>
+</div>
+</body>
+</html>

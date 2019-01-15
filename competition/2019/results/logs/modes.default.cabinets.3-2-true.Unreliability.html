@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - cabinets Unreliability 3-2-true</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#cabinets">cabinets</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 3, <span class="tt">P</span> = 2, <span class="tt">R</span> = True</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unreliability</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono modes/modes.exe cabinets.3-2-true.jani --props Unreliability --width 1e-3 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--width 1e-3' = request error 1e-3, '--relative-width' = use relative error, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.6386699676513672s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">cabinets.3-2-true.jani:model: info: cabinets.3-2-true.jani is an MA model and will be simulated as an MA.
+cabinets.3-2-true.jani: info: Using default value of 0.95 for the confidence parameter.
+cabinets.3-2-true.jani:model: error: Encountered structural nondeterminism between REPAIR !11/REPAIRED !0 !FALSE and ONLINE !1/ONLINE !0.
+
+Peak memory usage: 56 MB
+Analysis results for cabinets.3-2-true.jani
+Status:          Error
+Simulation time: 0.2 s
+
++ Property Property "Unreliability"
+  Estimated probability: 0
+  Runs used:             2710
+  Run type:              MA
+  Status:                Error
+
+  + Error bounds
+    Statement: Aborted: no error bounds	</pre>
+</div>
+</body>
+</html>

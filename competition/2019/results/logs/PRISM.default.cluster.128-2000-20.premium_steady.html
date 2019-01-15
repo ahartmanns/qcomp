@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - cluster premium_steady 128-2000-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#cluster">cluster</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 128, <span class="tt">T</span> = 2000, <span class="tt">t</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">premium_steady</span> (steady-state-prob)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g cluster.prism cluster.props --property premium_steady -const N=128,T=2000,t=20</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">24.85216784477234s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 20:47:51 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g cluster.prism cluster.props --property premium_steady -const 'N=128,T=2000,t=20'
+
+Parsing model file "cluster.prism"...
+
+Parsing properties file "cluster.props"...
+
+8 properties:
+(1) "below_min": R{"time_not_min"}=? [ C<=T ]
+(2) "operational": R{"percent_op"}=? [ I=t ]
+(3) "premium_steady": S=? [ "premium" ]
+(4) "qos1": P=? [ F<=T !"minimum" ]
+(5) "qos2": P=? [ F[t,t] !"minimum" ]
+(6) "qos3": P=? [ "minimum" U<=t "premium" ]
+(7) "qos4": P=? [ !"minimum" U>=t "minimum" ]
+(8) "repairs": R{"num_repairs"}=? [ C<=T ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: "premium_steady": S=? [ "premium" ]
+Model constants: N=128
+
+Building model...
+Model constants: N=128
+
+Computing reachable states...
+
+Reachability (BFS): 261 iterations in 0.14 seconds (average 0.000548, setup 0.00)
+
+Time for model construction: 0.222 seconds.
+
+Type:        CTMC
+States:      597012 (1 initial)
+Transitions: 2908192
+
+Rate matrix: 17481 nodes (134 terminal), 2908192 minterms, vars: 25r/25c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:597012
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=25, nodes=18162] [851.3 KB]
+Adding explicit sparse matrices... [levels=13, num=534, compact] [812.5 KB]
+Creating vector for diagonals... [dist=6345, compact] [1.2 MB]
+Allocating iteration vectors... [2 x 4.6 MB]
+TOTAL: [11.9 MB]
+
+Starting iterations...
+Iteration 264: max relative diff=0.300908, 5.00 sec so far
+Iteration 531: max relative diff=0.137387, 10.02 sec so far
+Iteration 795: max relative diff=0.098617, 15.04 sec so far
+Iteration 1060: max relative diff=0.000631, 20.04 sec so far
+
+Jacobi: 1147 iterations in 23.57 seconds (average 0.018915, setup 1.87)
+
+BSCC 1 probability: 0.9979378911301338
+
+All states are in BSCCs (so no reachability probabilities computed)
+
+Value in the initial state: 0.9979378911301338
+
+Time for model checking: 23.973 seconds.
+
+Result: 0.9979378911301338 (value in the initial state)
+
+
+Overall running time: 24.621 seconds.	</pre>
+</div>
+</body>
+</html>

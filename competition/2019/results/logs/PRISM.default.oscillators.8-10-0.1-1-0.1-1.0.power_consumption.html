@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - oscillators power_consumption 8-10-0.1-1-0.1-1.0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#oscillators">oscillators</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 8, <span class="tt">T</span> = 10, <span class="tt">epsilon</span> = 0.1, <span class="tt">R</span> = 1, <span class="tt">mu</span> = 0.1, <span class="tt">lambda</span> = 1.0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">power_consumption</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g oscillators.8-10-0.1-1.prism oscillators.props --property power_consumption -const mu=0.1,lambda=1.0</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">61.154335737228394s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.790221368113651e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 20:43:45 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g oscillators.8-10-0.1-1.prism oscillators.props --property power_consumption -const 'mu=0.1,lambda=1.0'
+
+Parsing model file "oscillators.8-10-0.1-1.prism"...
+
+Parsing properties file "oscillators.props"...
+
+2 properties:
+(1) "time_to_synch": R{"time_to_synch"}=? [ F order_parameter>=lambda ]
+(2) "power_consumption": R{"power_consumption"}=? [ F order_parameter>=lambda ]
+
+Type:        DTMC
+Modules:     oscillator_population 
+Variables:   k_1 k_2 k_3 k_4 k_5 k_6 k_7 k_8 k_9 k_10 
+
+---------------------------------------------------------------------
+
+Model checking: "power_consumption": R{"power_consumption"}=? [ F order_parameter>=lambda ]
+Model constants: mu=0.1,lambda=1
+
+Building model...
+Model constants: mu=0.1,lambda=1
+
+Computing reachable states...
+
+Reachability (BFS): 2 iterations in 0.10 seconds (average 0.051500, setup 0.00)
+
+Time for model construction: 48.309 seconds.
+
+Type:        DTMC
+States:      24311 (1 initial)
+Transitions: 76623
+
+Transition matrix: 80638 nodes (438 terminal), 76623 minterms, vars: 40r/40c
+
+Prob0: 15 iterations in 1.25 seconds (average 0.083533, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.001000, setup 0.00)
+
+goal = 2, inf = 0, maybe = 24309
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=40, nodes=80630] [3.7 MB]
+Adding explicit sparse matrices... [levels=40, num=1, compact] [397.7 KB]
+Creating vector for diagonals... [dist=1, compact] [47.5 KB]
+Creating vector for RHS... [dist=100, compact] [48.3 KB]
+Allocating iteration vectors... [2 x 189.9 KB]
+TOTAL: [4.5 MB]
+
+Starting iterations...
+
+Jacobi: 3193 iterations in 2.56 seconds (average 0.000465, setup 1.07)
+
+Value in the initial state: 0.006226641960789421
+
+Time for model checking: 4.036 seconds.
+
+Result: 0.006226641960789421 (value in the initial state)
+
+
+Overall running time: 60.859 seconds.	</pre>
+</div>
+</body>
+</html>

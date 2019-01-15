@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - crowds positive 5-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 5, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files crowds.prism --property-input-files crowds.props --property-input-names positive --translate-messages false --value-floating-point-output-native true --const TotalRuns=5,CrowdSize=20</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">40.26588702201843s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.268675243421467e-09</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property positive
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 45768 45768
+build-model-states-explored 104192 58424
+build-model-states-explored 202124 97932
+build-model-states-explored 246470 44346
+build-model-states-explored 291036 44566
+build-model-states-explored 380609 89572
+build-model-states-explored 448498 67889
+build-model-states-explored 526649 78150
+build-model-states-explored 625240 98592
+build-model-states-explored 650529 25288
+build-model-states-explored 689482 38953
+build-model-states-explored 733227 43746
+build-model-states-explored 775478 42251
+build-model-states-explored 861809 86331
+build-model-states-explored 963062 101253
+build-model-states-explored 1050301 87238
+build-model-states-explored 1152393 102093
+build-model-states-explored 1233493 81100
+build-model-states-explored 1302464 68971
+build-model-states-explored 1361450 58986
+build-model-states-explored 1400278 38828
+build-model-states-explored 1441771 41492
+build-model-states-explored 1483733 41962
+build-model-states-explored 1524720 40988
+build-model-states-explored 1566136 41416
+build-model-states-explored 1595808 29671
+build-model-states-explored 1652907 57100
+build-model-states-explored 1710119 57212
+build-model-states-explored 1804444 94324
+build-model-states-explored 1944600 140157
+build-model-done 2061951 30
+iterating
+iterating-progress-unbounded 38 0.006718174112770758 1
+iterating-progress-unbounded 85 1.1013859445463403E-4 2
+iterating-progress-unbounded 133 2.380296974524576E-7 3
+iterating-progress-unbounded 181 3.530507552973461E-10 4
+iterating-done 191 4
+model-checking-done 38
+positive: 0.0860690540691096	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm - crowds positive 6-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>Storm</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 6, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism crowds.prism --prop crowds.props positive --constants TotalRuns=6,CrowdSize=20 --engine dd --ddlib sylvan --sylvan:maxmem 9000 --bisimulation --bisimulation:quot sparse</pre>
+	Dd engine with sylvan. Memory limit for sylvan set to 0.75*available memory. Apply strong bisimulation on the symbolic model and extract the quotient in a sparse representation.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">4.527973651885986s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.2784038122451533e-10</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.3.1 (dev)
+
+Date: Wed Dec 12 19:21:02 2018
+Command line arguments: --prism crowds.prism --prop crowds.props positive --constants 'TotalRuns=6,CrowdSize=20' --engine dd --ddlib sylvan '--sylvan:maxmem' 9000 --bisimulation '--bisimulation:quot' sparse
+Current working directory: /home/qcomp
+
+Time for model input parsing: 0.009s.
+
+ WARN (DdPrismModelBuilder.cpp:692): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:692): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:692): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:692): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:692): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:835): Guard of a command overlaps with previous guards.
+Time for model construction: 1.995s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	10291282 (5401 nodes)
+Transitions: 	37068802 (28651 nodes)
+Reward Models:  none
+Variables: 	rows: 32 meta variables (78 DD variables), columns: 32 meta variables (78 DD variables)
+Labels: 	2
+   * deadlock -> 219604 state(s) (403 nodes)
+   * init -> 1 state(s) (79 nodes)
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 2.001s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	101
+Transitions: 	151
+Reward Models:  none
+State Labels: 	3 labels
+   * (observe0 > 1) -> 1 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "positive": P=? [F (observe0 > 1)] ...
+Result (for initial states): 0.1204763709
+Time for model checking: 0.000s.	</pre>
+</div>
+</body>
+</html>

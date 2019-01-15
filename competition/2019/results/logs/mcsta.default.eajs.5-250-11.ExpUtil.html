@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - eajs ExpUtil 5-250-11</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#eajs">eajs</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5, <span class="tt">energy_capacity</span> = 250, <span class="tt">B</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">ExpUtil</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe eajs.5.jani --props ExpUtil -E energy_capacity=250,B=11 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">27.455461978912354s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">9.813145219955859e-13</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">eajs.5.jani:model: info: eajs.5 is an MDP model.
+eajs.5.jani: info: Need 21 bytes per state.
+eajs.5.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+eajs.5.jani: info: Explored 3049471 states for energy_capacity=250, B=11.
+
+Peak memory usage: 465 MB
+Analysis results for eajs.5.jani
+Experiment energy_capacity=250, B=11
+
++ State space exploration
+  State size:  21 bytes
+  States:      3049471
+  Transitions: 4250853
+  Branches:    6960278
+  Rate:        175449 states/s
+  Time:        19.3 s
+
++ Property ExpUtil
+  Value:  10.0329406884256
+  Bounds: [10.0329406884256, infinity)
+  Time:   6.3 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 2.9 s
+    Min. prob. 1 states:          3049471
+    Time for min. prob. 1 states: 0.2 s
+
+  + Value iteration
+    Final error: 5.64653858152544E-08
+    Iterations:  22
+    Time:        3.0 s	</pre>
+</div>
+</body>
+</html>

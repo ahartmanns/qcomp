@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - nand reliable 40-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#nand">nand</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 40, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">reliable</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files nand.prism --property-input-files nand.props --property-input-names reliable --translate-messages false --value-floating-point-output-native true --const N=40,K=4</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">75.04337000846863s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.016485166654637e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property reliable
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 56144 56143
+build-model-states-explored 180751 124607
+build-model-states-explored 322271 141520
+build-model-states-explored 470113 147843
+build-model-states-explored 602777 132663
+build-model-states-explored 751838 149062
+build-model-states-explored 898964 147126
+build-model-states-explored 1048576 149612
+build-model-states-explored 1161846 113269
+build-model-states-explored 1314767 152921
+build-model-states-explored 1461545 146777
+build-model-states-explored 1613778 152233
+build-model-states-explored 1753582 139804
+build-model-states-explored 1907968 154385
+build-model-states-explored 2061149 153181
+build-model-states-explored 2127532 66383
+build-model-states-explored 2278026 150495
+build-model-states-explored 2430856 152829
+build-model-states-explored 2584771 153915
+build-model-states-explored 2724166 139395
+build-model-states-explored 2876658 152492
+build-model-states-explored 3028232 151574
+build-model-states-explored 3178070 149839
+build-model-states-explored 3296493 118423
+build-model-states-explored 3449231 152738
+build-model-states-explored 3603466 154234
+build-model-states-explored 3755979 152512
+build-model-states-explored 3909662 153683
+build-model-done 3999522 28
+iterating
+iterating-progress-unbounded 32 0.9999894990839039 1
+iterating-progress-unbounded 70 0.9996089662843953 2
+iterating-progress-unbounded 108 0.9980567694139139 3
+iterating-progress-unbounded 146 0.9937566782399779 4
+iterating-progress-unbounded 184 0.9693167602805224 5
+iterating-progress-unbounded 222 0.9176426139013846 6
+iterating-progress-unbounded 260 0.8611669547160479 7
+iterating-progress-unbounded 297 0.7925117139778025 8
+iterating-progress-unbounded 335 0.756401150811209 9
+iterating-progress-unbounded 373 0.7541159337019007 10
+iterating-progress-unbounded 410 0.7514746282315368 11
+iterating-progress-unbounded 448 0.7482794888292327 12
+iterating-progress-unbounded 486 0.7426829526211284 13
+iterating-progress-unbounded 523 0.7312774688079429 14
+iterating-progress-unbounded 560 0.7181676219391366 15
+iterating-progress-unbounded 598 0.7017515314747065 16
+iterating-progress-unbounded 635 0.6854605028429295 17
+iterating-progress-unbounded 673 0.6830932472356753 18
+iterating-progress-unbounded 710 0.6824680294746507 19
+iterating-progress-unbounded 748 0.6816906156703799 20
+iterating-progress-unbounded 785 0.6806456217224237 21
+iterating-progress-unbounded 823 0.6783066303448444 22
+iterating-progress-unbounded 860 0.6748270388350168 23
+iterating-progress-unbounded 897 0.6702462379031899 24
+iterating-progress-unbounded 935 0.6654686875273024 25
+iterating-progress-unbounded 972 0.6618892211398806 26
+iterating-progress-unbounded 1010 0.6616983596915088 27
+iterating-progress-unbounded 1047 0.6614746176347204 28
+iterating-progress-unbounded 1084 0.6612005419224253 29
+iterating-progress-unbounded 1121 0.660772166374625 30
+iterating-progress-unbounded 1159 0.6597294808553661 31
+iterating-progress-unbounded 1196 0.6584651520080179 32
+iterating-progress-unbounded 1233 0.6567833323141339 33
+iterating-progress-unbounded 1270 0.655004296199711 34
+iterating-progress-unbounded 1307 0.6537262461279904 35
+iterating-progress-unbounded 1344 0.6506427089247756 36
+iterating-progress-unbounded 1381 0.644007343049152 37
+iterating-progress-unbounded 1418 0.630731004206818 38
+iterating-done 1442 38
+model-checking-done 73
+reliable: 0.6186822208151964	</pre>
+</div>
+</body>
+</html>

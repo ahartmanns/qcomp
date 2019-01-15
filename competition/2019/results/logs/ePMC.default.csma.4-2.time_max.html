@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - csma time_max 4-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time_max</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files csma.4-2.prism --property-input-files csma.props --property-input-names time_max --translate-messages false --value-floating-point-output-native true</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">298.73945784568787s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.4850545756850572e-12</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property time_max
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 1728 1728
+build-model-states-explored 3775 2047
+build-model-states-explored 5832 2057
+build-model-states-explored 7961 2129
+build-model-states-explored 10093 2132
+build-model-states-explored 12236 2143
+build-model-states-explored 14369 2133
+build-model-states-explored 16522 2153
+build-model-states-explored 18647 2125
+build-model-states-explored 20788 2141
+build-model-states-explored 22934 2146
+build-model-states-explored 25077 2143
+build-model-states-explored 27199 2122
+build-model-states-explored 29294 2095
+build-model-states-explored 31440 2146
+build-model-states-explored 33588 2148
+build-model-states-explored 35730 2142
+build-model-states-explored 37871 2141
+build-model-states-explored 40016 2145
+build-model-states-explored 42169 2153
+build-model-states-explored 44308 2139
+build-model-states-explored 46444 2136
+build-model-states-explored 48596 2152
+build-model-states-explored 50740 2144
+build-model-states-explored 52870 2130
+build-model-states-explored 54937 2067
+build-model-states-explored 57079 2142
+build-model-states-explored 59224 2145
+build-model-states-explored 61378 2154
+build-model-states-explored 63516 2138
+build-model-states-explored 65603 2087
+build-model-states-explored 67755 2152
+build-model-states-explored 69902 2147
+build-model-states-explored 72437 2535
+build-model-states-explored 75148 2711
+build-model-states-explored 77868 2720
+build-model-states-explored 80586 2718
+build-model-states-explored 83315 2729
+build-model-states-explored 86042 2727
+build-model-states-explored 88766 2724
+build-model-states-explored 91493 2727
+build-model-states-explored 94202 2709
+build-model-states-explored 96930 2728
+build-model-states-explored 99656 2726
+build-model-states-explored 102376 2720
+build-model-states-explored 105090 2714
+build-model-states-explored 107811 2721
+build-model-states-explored 110533 2722
+build-model-states-explored 113099 2566
+build-model-states-explored 115824 2725
+build-model-states-explored 118551 2727
+build-model-states-explored 121282 2731
+build-model-states-explored 124012 2730
+build-model-states-explored 126732 2720
+build-model-states-explored 129452 2720
+build-model-states-explored 132138 2686
+build-model-states-explored 134857 2719
+build-model-states-explored 137576 2719
+build-model-states-explored 140296 2720
+build-model-states-explored 143021 2725
+build-model-states-explored 145741 2720
+build-model-states-explored 148462 2721
+build-model-states-explored 151176 2714
+build-model-states-explored 153891 2715
+build-model-states-explored 156603 2712
+build-model-states-explored 159322 2719
+build-model-states-explored 162044 2722
+build-model-states-explored 164765 2721
+build-model-states-explored 167480 2715
+build-model-states-explored 170202 2722
+build-model-states-explored 172920 2718
+build-model-states-explored 175638 2718
+build-model-states-explored 178362 2724
+build-model-states-explored 181081 2719
+build-model-states-explored 183797 2716
+build-model-states-explored 186512 2715
+build-model-states-explored 189230 2718
+build-model-states-explored 191942 2712
+build-model-states-explored 194662 2720
+build-model-states-explored 197344 2682
+build-model-states-explored 200064 2720
+build-model-states-explored 202784 2720
+build-model-states-explored 205506 2722
+build-model-states-explored 208224 2718
+build-model-states-explored 210915 2691
+build-model-states-explored 213648 2733
+build-model-states-explored 216386 2738
+build-model-states-explored 219122 2736
+build-model-states-explored 221847 2725
+build-model-states-explored 224591 2744
+build-model-states-explored 227342 2751
+build-model-states-explored 230096 2754
+build-model-states-explored 232849 2753
+build-model-states-explored 235272 2423
+build-model-states-explored 238000 2728
+build-model-states-explored 240734 2734
+build-model-states-explored 243466 2732
+build-model-states-explored 246210 2744
+build-model-states-explored 248953 2743
+build-model-states-explored 251699 2746
+build-model-states-explored 254448 2749
+build-model-states-explored 257195 2747
+build-model-states-explored 259933 2738
+build-model-states-explored 262658 2725
+build-model-states-explored 265383 2725
+build-model-states-explored 268119 2736
+build-model-states-explored 270856 2737
+build-model-states-explored 273597 2741
+build-model-states-explored 276342 2745
+build-model-states-explored 279048 2706
+build-model-states-explored 281793 2745
+build-model-states-explored 284534 2741
+build-model-states-explored 287269 2735
+build-model-states-explored 290006 2737
+build-model-states-explored 292738 2732
+build-model-states-explored 295472 2734
+build-model-states-explored 298206 2734
+build-model-states-explored 300941 2735
+build-model-states-explored 303679 2738
+build-model-states-explored 306417 2738
+build-model-states-explored 309169 2752
+build-model-states-explored 311913 2744
+build-model-states-explored 314651 2738
+build-model-states-explored 317390 2739
+build-model-states-explored 320122 2732
+build-model-states-explored 322851 2729
+build-model-states-explored 325582 2731
+build-model-states-explored 328317 2735
+build-model-states-explored 331053 2736
+build-model-states-explored 333792 2739
+build-model-states-explored 336533 2741
+build-model-states-explored 339278 2745
+build-model-states-explored 342018 2740
+build-model-states-explored 344757 2739
+build-model-states-explored 347488 2731
+build-model-states-explored 350214 2726
+build-model-states-explored 352946 2732
+build-model-states-explored 355652 2706
+build-model-states-explored 358379 2727
+build-model-states-explored 361113 2734
+build-model-states-explored 363848 2735
+build-model-states-explored 366577 2729
+build-model-states-explored 369295 2718
+build-model-states-explored 372016 2721
+build-model-states-explored 374736 2720
+build-model-states-explored 377462 2726
+build-model-states-explored 380184 2722
+build-model-states-explored 382913 2729
+build-model-states-explored 385648 2735
+build-model-states-explored 388379 2731
+build-model-states-explored 391110 2731
+build-model-states-explored 393839 2729
+build-model-states-explored 396560 2721
+build-model-states-explored 399289 2729
+build-model-states-explored 402011 2722
+build-model-states-explored 404667 2656
+build-model-states-explored 407390 2723
+build-model-states-explored 410115 2725
+build-model-states-explored 412848 2733
+build-model-states-explored 415576 2728
+build-model-states-explored 418313 2737
+build-model-states-explored 421042 2729
+build-model-states-explored 423764 2722
+build-model-states-explored 426487 2723
+build-model-states-explored 429212 2725
+build-model-states-explored 431923 2711
+build-model-states-explored 434640 2717
+build-model-states-explored 437380 2740
+build-model-states-explored 440108 2728
+build-model-states-explored 442838 2730
+build-model-states-explored 445568 2730
+build-model-states-explored 448308 2740
+build-model-states-explored 451027 2719
+build-model-states-explored 453759 2732
+build-model-states-explored 456487 2728
+build-model-states-explored 459215 2728
+build-model-states-explored 461935 2720
+build-model-states-explored 464657 2722
+build-model-states-explored 467412 2755
+build-model-states-explored 470141 2729
+build-model-states-explored 472888 2747
+build-model-states-explored 475279 2391
+build-model-states-explored 477733 2454
+build-model-states-explored 480461 2728
+build-model-states-explored 483188 2727
+build-model-states-explored 485918 2730
+build-model-states-explored 488644 2726
+build-model-states-explored 491366 2722
+build-model-states-explored 494118 2752
+build-model-states-explored 496871 2753
+build-model-states-explored 499603 2732
+build-model-states-explored 502331 2728
+build-model-states-explored 505073 2742
+build-model-states-explored 507800 2727
+build-model-states-explored 510487 2687
+build-model-states-explored 513178 2691
+build-model-states-explored 515870 2692
+build-model-states-explored 518540 2670
+build-model-states-explored 521224 2684
+build-model-states-explored 523921 2697
+build-model-states-explored 526595 2674
+build-model-states-explored 529276 2681
+build-model-states-explored 532030 2754
+build-model-states-explored 534798 2768
+build-model-states-explored 537545 2747
+build-model-states-explored 540284 2739
+build-model-states-explored 543031 2747
+build-model-states-explored 545790 2759
+build-model-states-explored 548531 2741
+build-model-states-explored 551302 2771
+build-model-states-explored 554057 2755
+build-model-states-explored 556803 2746
+build-model-states-explored 559557 2754
+build-model-states-explored 562249 2692
+build-model-states-explored 565000 2751
+build-model-states-explored 567753 2753
+build-model-states-explored 570485 2732
+build-model-states-explored 573198 2713
+build-model-states-explored 575951 2753
+build-model-states-explored 578720 2769
+build-model-states-explored 581480 2760
+build-model-states-explored 584251 2771
+build-model-states-explored 587002 2751
+build-model-states-explored 589765 2763
+build-model-states-explored 592523 2758
+build-model-states-explored 595285 2762
+build-model-states-explored 598034 2749
+build-model-states-explored 600796 2762
+build-model-states-explored 603560 2764
+build-model-states-explored 606316 2756
+build-model-states-explored 609086 2770
+build-model-states-explored 611849 2763
+build-model-states-explored 614607 2758
+build-model-states-explored 617373 2766
+build-model-states-explored 620126 2753
+build-model-states-explored 622883 2757
+build-model-states-explored 625640 2757
+build-model-states-explored 628405 2765
+build-model-states-explored 631164 2759
+build-model-states-explored 633934 2770
+build-model-states-explored 636699 2765
+build-model-states-explored 639467 2768
+build-model-states-explored 642226 2759
+build-model-states-explored 644988 2762
+build-model-states-explored 647746 2758
+build-model-states-explored 650510 2764
+build-model-states-explored 653254 2744
+build-model-states-explored 656014 2760
+build-model-states-explored 658782 2768
+build-model-states-explored 661549 2767
+build-model-states-explored 664311 2762
+build-model-states-explored 667074 2763
+build-model-states-explored 669832 2758
+build-model-states-explored 672591 2759
+build-model-states-explored 675351 2760
+build-model-states-explored 678106 2755
+build-model-states-explored 680862 2756
+build-model-states-explored 683623 2761
+build-model-states-explored 686388 2765
+build-model-states-explored 689155 2767
+build-model-states-explored 691914 2759
+build-model-states-explored 694680 2766
+build-model-states-explored 697444 2764
+build-model-states-explored 700214 2770
+build-model-states-explored 702978 2764
+build-model-states-explored 705732 2754
+build-model-states-explored 708492 2760
+build-model-states-explored 711259 2767
+build-model-states-explored 714024 2765
+build-model-states-explored 716788 2764
+build-model-states-explored 719560 2772
+build-model-states-explored 722338 2778
+build-model-states-explored 725099 2761
+build-model-states-explored 727876 2777
+build-model-states-explored 730570 2694
+build-model-states-explored 733293 2723
+build-model-states-explored 736015 2722
+build-model-states-explored 738741 2726
+build-model-states-explored 741466 2725
+build-model-states-explored 744205 2739
+build-model-states-explored 746949 2744
+build-model-states-explored 749691 2742
+build-model-states-explored 752429 2738
+build-model-states-explored 755164 2735
+build-model-states-explored 757902 2738
+build-model-states-explored 760645 2743
+build-model-done 761962 286
+iterating
+iterating-progress-unbounded 84 1.1324532959221614 1
+iterating-progress-unbounded 177 0.9998436378185431 2
+iterating-progress-unbounded 270 0.006709794830442206 3
+iterating-progress-unbounded 363 1.361038613367782E-6 4
+iterating-progress-unbounded 455 2.972058155137347E-10 5
+iterating-done 476 5
+model-checking-done 297
+time_max: 142.2121690969899	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - eajs ExpUtil 6-300-13</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#eajs">eajs</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">energy_capacity</span> = 300, <span class="tt">B</span> = 13</td></tr>
+		<tr><td>Property:</td><td><span class="tt">ExpUtil</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g eajs.6.prism eajs.props --property ExpUtil -const energy_capacity=300,B=13 -sparse</pre>
+	Select best engine
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">67.670818567276s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.674533047156748e-09</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 23:11:22 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g eajs.6.prism eajs.props_fixed --property ExpUtil -const 'energy_capacity=300,B=13' -sparse
+
+Parsing model file "eajs.6.prism"...
+
+Parsing properties file "eajs.props_fixed"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F emptyBattery ]
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_4 Process_6 Process_5 
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 t_4 loc_4 loc_6 t_6 t_5 loc_5 
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F emptyBattery ]
+Model constants: energy_capacity=300
+
+Building model...
+Model constants: energy_capacity=300
+
+Computing reachable states...
+
+Reachability (BFS): 89 iterations in 0.23 seconds (average 0.002640, setup 0.00)
+
+Time for model construction: 1.262 seconds.
+
+Type:        MDP
+States:      7901694 (1 initial)
+Transitions: 19722777
+Choices:     11897412
+
+Transition matrix: 38911 nodes (7 terminal), 19722777 minterms, vars: 50r/50c/5nd
+
+Prob0E: 300 iterations in 0.62 seconds (average 0.002067, setup 0.00)
+
+Prob1A: 1 iterations in 0.01 seconds (average 0.008000, setup 0.00)
+
+goal = 28620, inf = 0, maybe = 7873074
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=7901694, nc=11854302, nnz=19651307, k=12] [300.3 MB]
+Building sparse matrix (transition rewards)... [n=7901694, nc=11854302, nnz=257760, k=12] [78.3 MB]
+Creating vector for state rewards... [60.3 MB]
+Creating vector for inf... [60.3 MB]
+Allocating iteration vectors... [2 x 60.3 MB]
+TOTAL: [619.7 MB]
+
+Starting iterations...
+Iteration 24: max relative diff=0.203774, 5.07 sec so far
+Iteration 47: max relative diff=0.065179, 10.24 sec so far
+Iteration 70: max relative diff=0.038132, 15.41 sec so far
+Iteration 93: max relative diff=0.025062, 20.43 sec so far
+Iteration 117: max relative diff=0.017262, 25.52 sec so far
+Iteration 142: max relative diff=0.011755, 30.70 sec so far
+
+Iterative method: 153 iterations in 64.71 seconds (average 0.215392, setup 31.75)
+
+Value in the initial state: 12.05111075489705
+
+Time for model checking: 65.604 seconds.
+
+Result: 12.05111075489705 (value in the initial state)
+
+
+Overall running time: 67.447 seconds.	</pre>
+</div>
+</body>
+</html>

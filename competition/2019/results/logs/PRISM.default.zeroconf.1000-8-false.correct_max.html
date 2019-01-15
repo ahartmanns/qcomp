@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - zeroconf correct_max 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g zeroconf.prism zeroconf.props --property correct_max -const N=1000,K=8,reset=false</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">195.3612561225891s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.1108812419475163e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Tue Dec 11 01:45:42 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g zeroconf.prism zeroconf.props --property correct_max -const 'N=1000,K=8,reset=false'
+
+Parsing model file "zeroconf.prism"...
+
+Parsing properties file "zeroconf.props"...
+
+2 properties:
+(1) "correct_max": Pmax=? [ F (l=4&ip=1) ]
+(2) "correct_min": Pmin=? [ F (l=4&ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: "correct_max": Pmax=? [ F (l=4&ip=1) ]
+Model constants: reset=false,N=1000,K=8
+
+Building model...
+Model constants: reset=false,N=1000,K=8
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 68.56 seconds (average 0.115819, setup 0.00)
+
+Time for model construction: 69.429 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+Choices:     3443961
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Prob0A: 131 iterations in 4.17 seconds (average 0.031855, setup 0.00)
+
+Prob1E: 2127 iterations in 92.23 seconds (average 0.043363, setup 0.00)
+
+yes = 171749, no = 611330, maybe = 1087259
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=9, levels=58, nodes=272480] [12.5 MB]
+Adding sparse bits... [levels=24-43, num=4846, compact=9/9] [8.0 MB]
+Creating vector for yes... [dist=2, compact] [3.6 MB]
+Allocating iteration vectors... [3 x 14.3 MB]
+TOTAL: [66.8 MB]
+
+Starting iterations...
+Iteration 61: max relative diff=1.000000, 5.06 sec so far
+Iteration 122: max relative diff=0.991530, 10.14 sec so far
+Iteration 182: max relative diff=0.000975, 15.20 sec so far
+Iteration 242: max relative diff=0.000029, 20.22 sec so far
+Iteration 303: max relative diff=0.000006, 25.27 sec so far
+
+Iterative method: 311 iterations in 28.47 seconds (average 0.083379, setup 2.54)
+
+Value in the initial state: 4.801413635072425E-8
+
+Time for model checking: 125.083 seconds.
+
+Result: 4.801413635072425E-8 (value in the initial state)
+
+
+Overall running time: 194.984 seconds.	</pre>
+</div>
+</body>
+</html>

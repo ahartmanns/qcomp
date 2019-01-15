@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - consensus steps_min 6-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe consensus.6.jani --props steps_min -E K=2 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">79.34986710548401s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.1073308583333335e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">consensus.6.jani:model: info: consensus.6 is an MDP model.
+consensus.6.jani: info: Need 19 bytes per state.
+consensus.6.jani: info: Explored 1258240 states for K=2.
+consensus.6.jani:properties[4]: warning: Computing minimum expected reward in property "steps_min" without checking for zero-reward end components.
+
+Peak memory usage: 578 MB
+Analysis results for consensus.6.jani
+Experiment K=2
+
++ State space exploration
+  State size:  19 bytes
+  States:      1258240
+  Transitions: 5008128
+  Branches:    6236736
+  Rate:        88590 states/s
+  Time:        14.6 s
+
++ Property steps_min
+  Value:  431.977936330692
+  Bounds: [431.977936330692, infinity)
+  Time:   63.9 s
+
+  + Precomputations
+    Max. prob. 1 states:          1258240
+    Time for max. prob. 1 states: 7.7 s
+
+  + Value iteration
+    Final error: 9.97595465754807E-07
+    Iterations:  576
+    Time:        56.1 s	</pre>
+</div>
+</body>
+</html>

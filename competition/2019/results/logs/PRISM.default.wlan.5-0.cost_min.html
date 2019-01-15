@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - wlan cost_min 5-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 5, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">cost_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g wlan.5.prism wlan.props --property cost_min -const COL=0</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">95.43125915527344s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Tue Dec 11 01:21:15 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g wlan.5.prism wlan.props --property cost_min -const COL=0
+
+Parsing model file "wlan.5.prism"...
+
+Parsing properties file "wlan.props"...
+
+7 properties:
+(1) "collisions": Pmax=? [ F col=COL ]
+(2) "cost_max": R{"cost"}max=? [ F s1=12&s2=12 ]
+(3) "cost_min": R{"cost"}min=? [ F s1=12&s2=12 ]
+(4) "num_collisions": R{"collisions"}max=? [ F s1=12&s2=12 ]
+(5) "sent": P>=1 [ F s1=12&s2=12 ]
+(6) "time_max": R{"time"}max=? [ F s1=12&s2=12 ]
+(7) "time_min": R{"time"}min=? [ F s1=12&s2=12 ]
+
+Type:        MDP
+Modules:     medium station1 station2 
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
+
+---------------------------------------------------------------------
+
+Model checking: "cost_min": R{"cost"}min=? [ F s1=12&s2=12 ]
+Model constants: COL=0
+
+Building model...
+Model constants: COL=0
+
+Computing reachable states...
+
+Reachability (BFS): 170 iterations in 0.34 seconds (average 0.001994, setup 0.00)
+
+Time for model construction: 0.493 seconds.
+
+Type:        MDP
+States:      1295218 (1 initial)
+Transitions: 2929960
+Choices:     1646074
+
+Transition matrix: 17250 nodes (7 terminal), 2929960 minterms, vars: 45r/45c/7nd
+
+Prob0A: 1565 iterations in 21.23 seconds (average 0.013565, setup 0.00)
+
+Prob1E: 1566 iterations in 21.66 seconds (average 0.013833, setup 0.00)
+
+Warning: PRISM hasn't checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 1, inf = 0, maybe = 1295217
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=1295218, nc=1646073, nnz=2929959, k=3] [44.8 MB]
+Building sparse matrix (transition rewards)... [n=1295218, nc=1646073, nnz=328891, k=3] [15.0 MB]
+Creating vector for state rewards... [9.9 MB]
+Creating vector for inf... [9.9 MB]
+Allocating iteration vectors... [2 x 9.9 MB]
+TOTAL: [99.3 MB]
+
+Starting iterations...
+Iteration 156: max relative diff=0.362500, 5.01 sec so far
+Iteration 312: max relative diff=0.219697, 10.01 sec so far
+Iteration 469: max relative diff=0.156757, 15.03 sec so far
+Iteration 627: max relative diff=0.122363, 20.06 sec so far
+Iteration 786: max relative diff=0.100000, 25.09 sec so far
+Iteration 946: max relative diff=0.084302, 30.10 sec so far
+Iteration 1108: max relative diff=0.072864, 35.12 sec so far
+Iteration 1272: max relative diff=0.064159, 40.13 sec so far
+Iteration 1437: max relative diff=0.057199, 45.15 sec so far
+
+Iterative method: 1580 iterations in 51.55 seconds (average 0.031311, setup 2.08)
+
+Value in the initial state: 7625.0
+
+Time for model checking: 94.238 seconds.
+
+Result: 7625.0 (value in the initial state)
+
+
+Overall running time: 95.194 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

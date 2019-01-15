@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - wlan cost_min 4-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 4, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">cost_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files wlan.4.prism --property-input-files wlan.props --property-input-names cost_min --translate-messages false --value-floating-point-output-native true --const COL=0</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">103.082763671875s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property cost_min
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 7642 7642
+build-model-states-explored 17369 9727
+build-model-states-explored 28583 11214
+build-model-states-explored 39048 10465
+build-model-states-explored 49330 10282
+build-model-states-explored 59341 10011
+build-model-states-explored 70885 11544
+build-model-states-explored 82172 11287
+build-model-states-explored 96660 14488
+build-model-states-explored 110736 14076
+build-model-states-explored 124293 13557
+build-model-states-explored 136248 11955
+build-model-states-explored 149953 13705
+build-model-states-explored 163934 13981
+build-model-states-explored 177930 13996
+build-model-states-explored 190775 12845
+build-model-states-explored 205500 14725
+build-model-states-explored 219289 13789
+build-model-states-explored 234330 15041
+build-model-states-explored 249342 15012
+build-model-states-explored 264308 14966
+build-model-states-explored 279277 14969
+build-model-states-explored 294359 15082
+build-model-states-explored 309565 15206
+build-model-states-explored 324769 15204
+build-model-states-explored 339510 14741
+build-model-done 345000 26
+iterating
+iterating-progress-unbounded 168 1000.0 1
+iterating-progress-unbounded 353 1000.0 2
+iterating-progress-unbounded 539 500.0 3
+iterating-done 565 3
+model-checking-done 101
+cost_min: 7625.0	</pre>
+</div>
+</body>
+</html>

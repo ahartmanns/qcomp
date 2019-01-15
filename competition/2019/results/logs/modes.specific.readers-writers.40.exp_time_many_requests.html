@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - readers-writers exp_time_many_requests 40</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#readers-writers">readers-writers</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 40</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_time_many_requests</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono modes/modes.exe readers-writers.40.jani --props exp_time_many_requests --width 1e-3 --relative-width -O out.txt Minimal --unsafe --max-run-length 0 --timeout 1680  -R Uniform</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '--max-run-length 0' = do not impose a limit on the maximum length of a simulation run (which is anyway more of a model debugging feature), '--timeout 1680' = stop after 28 minutes of simulation and return the estimate at that point even if the desired confidence is not yet met, '-R Uniform' = use uniform resolution of structural nondeterminism (since it is known to be spurious for this model and property).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">139.43762707710266s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0005202321387986344</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">readers-writers.40.jani:model: info: ReadersWriters is an MA model and will be simulated as an MA.
+readers-writers.40.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 66 MB
+Analysis results for readers-writers.40.jani
+Status:          Finished
+Simulation time: 138.1 s
+
++ Property Property "exp_time_many_requests"
+  Estimated value:     3.73120742209607
+  Confidence interval: [3.72747623667934, 3.7349386075128]
+  Runs used:           731470
+  Run type:            MA
+  Status:              Finished
+
+  + Sample data
+    Mean:     3.73120742209607
+    Variance: 2.65090399458041
+    Skewness: 1.72228623310657
+    Kurtosis: 7.99547881610405
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.05	</pre>
+</div>
+</body>
+</html>

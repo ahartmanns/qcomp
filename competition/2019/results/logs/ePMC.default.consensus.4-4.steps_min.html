@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - consensus steps_min 4-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files consensus.4.prism --property-input-files consensus.props --property-input-names steps_min --translate-messages false --value-floating-point-output-native true --const K=4</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">20.442108392715454s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.0455078125e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property steps_min
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 20854 20853
+build-model-done 43136 1
+iterating
+iterating-progress-unbounded 718 0.41881202995159583 1
+iterating-progress-unbounded 1518 0.08937269121770441 2
+iterating-progress-unbounded 2318 0.019071705580017806 3
+iterating-progress-unbounded 3118 0.004069810909186344 4
+iterating-progress-unbounded 3919 8.703320444283236E-4 5
+iterating-progress-unbounded 4719 1.8808416939464223E-4 6
+iterating-progress-unbounded 5516 4.054923192597926E-5 7
+iterating-progress-unbounded 6314 8.80903098732233E-6 8
+iterating-progress-unbounded 7109 1.910663513626787E-6 9
+iterating-progress-unbounded 7906 4.099237003174494E-7 10
+iterating-progress-unbounded 8691 9.043014870258048E-8 11
+iterating-progress-unbounded 9490 1.9552544472389854E-8 12
+iterating-progress-unbounded 10290 4.184130375506356E-9 13
+iterating-progress-unbounded 11090 8.944880391936749E-10 14
+iterating-progress-unbounded 11890 1.9099388737231493E-10 15
+iterating-done 12587 15
+model-checking-done 19
+steps_min: 767.9999999766105	</pre>
+</div>
+</body>
+</html>

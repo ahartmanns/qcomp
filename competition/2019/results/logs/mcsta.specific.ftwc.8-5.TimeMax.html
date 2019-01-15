@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - ftwc TimeMax 8-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#ftwc">ftwc</a> <span class="tt">v.3</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 8, <span class="tt">TIME_BOUND</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">TimeMax</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe ftwc.jani --props TimeMax -E N=8,TIME_BOUND=5 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">80.97281694412231s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '187357953630649/100000000' is tagged as incorrect. The reference result is '1995676.507611351401187121129' (approx. 1995676.5076113513) which means a relative error of '0.06118074289054026' which is larger than the goal precision '0.001'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">0.06118074289054026</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">ftwc.jani:model: info: ftwc is an MA model.
+ftwc.jani: info: Need at least 40 bytes per state.
+ftwc.jani: info: Explored 10299 states for N=8, TIME_BOUND=5.
+
+Peak memory usage: 50 MB
+Analysis results for ftwc.jani
+Experiment N=8, TIME_BOUND=5
+
++ State space exploration
+  Min. state size: 40 bytes
+  States:          10299
+  Transitions:     12635
+  Branches:        26983
+  Rate:            108411 states/s
+  Time:            0.1 s
+
++ Property TimeMax
+  Value:  1873579.53630649
+  Bounds: [1873579.53630649, infinity)
+  Time:   80.0 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          10299
+    Time for min. prob. 1 states: 0.0 s
+
+  + Value iteration
+    Final error: 9.99990488763053E-07
+    Iterations:  182126
+    Time:        80.0 s	</pre>
+</div>
+</body>
+</html>

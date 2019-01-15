@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - crowds positive 6-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 6, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono modes/modes.exe crowds.jani --props positive -E TotalRuns=6,CrowdSize=20 --width 1e-3 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--width 1e-3' = request error 1e-3, '--relative-width' = use relative error, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1421.272781610489s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.00033762613213355724</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">crowds.jani:model: info: crowds is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+crowds.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 67 MB
+Analysis results for crowds.jani
+Experiment TotalRuns=6, CrowdSize=20
+Status:          Finished
+Simulation time: 1419.9 s
+
++ Property Property "positive"
+  Estimated probability: 0.120435694913483
+  Runs used:             53957940
+  Run type:              MDP
+  Status:                Finished
+
+  + Error bounds
+    Statement: Adaptive: P(error > εp̂) < δ
+    ε:         0.001
+    δ:         0.05	</pre>
+</div>
+</body>
+</html>

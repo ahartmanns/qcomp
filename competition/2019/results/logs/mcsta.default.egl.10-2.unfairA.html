@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - egl unfairA 10-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#egl">egl</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 10, <span class="tt">L</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">unfairA</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe egl.jani --props unfairA -E N=10,L=2 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">236.95467925071716s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">egl.jani:model: info: egl is a DTMC model.
+egl.jani: info: Need 87 bytes per state.
+egl.jani: info: Explored 45598737 states for N=10, L=2.
+
+Peak memory usage: 7154 MB
+Analysis results for egl.jani
+Experiment N=10, L=2
+
++ State space exploration
+  State size:  87 bytes
+  States:      45598737
+  Transitions: 45598737
+  Branches:    46647312
+  Rate:        211999 states/s
+  Time:        229.8 s
+
++ Property unfairA
+  Probability: 0.50048828125
+  Bounds:      [0.50048828125, 0.50048828125]
+  Time:        4.5 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        3.1 s	</pre>
+</div>
+</body>
+</html>

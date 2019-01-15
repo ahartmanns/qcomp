@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - csma all_before_max 4-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">all_before_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g csma.4-2.prism csma.props --property all_before_max</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">43.31485939025879s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">9.594017489617365e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 23:07:37 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g csma.4-2.prism csma.props --property all_before_max
+
+Parsing model file "csma.4-2.prism"...
+
+Parsing properties file "csma.props"...
+
+5 properties:
+(1) "all_before_max": Pmax=? [ !"collision_max_backoff" U "all_delivered" ]
+(2) "all_before_min": Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+(3) "some_before": Pmin=? [ F min_backoff_after_success<K ]
+(4) "time_max": R{"time"}max=? [ F "all_delivered" ]
+(5) "time_min": R{"time"}min=? [ F "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 station4 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 s4 x4 bc4 cd4 
+
+---------------------------------------------------------------------
+
+Model checking: "all_before_max": Pmax=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 193 iterations in 1.96 seconds (average 0.010150, setup 0.00)
+
+Time for model construction: 2.197 seconds.
+
+Type:        MDP
+States:      761962 (1 initial)
+Transitions: 1327068
+Choices:     825504
+
+Transition matrix: 52233 nodes (4 terminal), 1327068 minterms, vars: 54r/54c/17nd
+
+Prob0A: 186 iterations in 3.36 seconds (average 0.018070, setup 0.00)
+
+Prob1E: 1017 iterations in 27.50 seconds (average 0.027037, setup 0.00)
+
+yes = 142601, no = 25408, maybe = 593953
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=18, levels=54, nodes=144135] [6.6 MB]
+Adding sparse bits... [levels=26-54, num=998, compact=18/18] [14.4 MB]
+Creating vector for yes... [dist=2, compact] [1.5 MB]
+Allocating iteration vectors... [3 x 5.8 MB]
+TOTAL: [39.9 MB]
+
+Starting iterations...
+Iteration 96: max relative diff=1.000000, 5.02 sec so far
+
+Iterative method: 172 iterations in 9.57 seconds (average 0.052297, setup 0.58)
+
+Value in the initial state: 0.776459404375732
+
+Time for model checking: 40.416 seconds.
+
+Result: 0.776459404375732 (value in the initial state)
+
+
+Overall running time: 43.052 seconds.	</pre>
+</div>
+</body>
+</html>

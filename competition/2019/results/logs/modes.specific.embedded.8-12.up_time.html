@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - embedded up_time 8-12</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#embedded">embedded</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_COUNT</span> = 8, <span class="tt">T</span> = 12</td></tr>
+		<tr><td>Property:</td><td><span class="tt">up_time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono modes/modes.exe embedded.jani --props up_time -E MAX_COUNT=8,T=12 --width 1e-3 --relative-width -O out.txt Minimal --unsafe --max-run-length 0 --timeout 1680 </pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '--max-run-length 0' = do not impose a limit on the maximum length of a simulation run (which is anyway more of a model debugging feature), '--timeout 1680' = stop after 28 minutes of simulation and return the estimate at that point even if the desired confidence is not yet met.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1681.5035817623138s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.000804848492397134</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">embedded.jani:model: info: embedded is a CTMC model and will be simulated as an MA.
+embedded.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 67 MB
+Analysis results for embedded.jani
+Experiment MAX_COUNT=8, T=12.0
+Status:          Timeout (1680 s)
+Simulation time: 1680.1 s
+
++ Property Property "up_time"
+  Estimated value:     477.16801627579
+  Confidence interval: [474.307802160578, 480.028230391002]
+  Runs used:           56490
+  Run type:            MA
+  Status:              Timeout
+
+  + Sample data
+    Mean:     477.16801627579
+    Variance: 120301.899269905
+    Skewness: 1.40054518955669
+    Kurtosis: 5.99020520472149
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.05	</pre>
+</div>
+</body>
+</html>

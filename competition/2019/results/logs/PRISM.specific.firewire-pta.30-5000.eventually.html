@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - firewire-pta eventually 30-5000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#firewire-pta">firewire-pta</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">delay</span> = 30, <span class="tt">T</span> = 5000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">eventually</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g firewire-pta.prism firewire-pta.props --property eventually -const delay=30,T=5000 </pre>
+	Use default settings
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.934746503829956s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Tue Dec 11 01:56:07 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g firewire-pta.prism firewire-pta.props --property eventually -const 'delay=30,T=5000'
+
+Parsing model file "firewire-pta.prism"...
+
+Parsing properties file "firewire-pta.props"...
+
+2 properties:
+(1) "deadline": Pmin=? [ F<=T "done" ]
+(2) "eventually": Pmin=? [ F "done" ]
+
+Type:        PTA
+Modules:     wire12 node1 wire21 node2 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 
+
+---------------------------------------------------------------------
+
+Model checking: "eventually": Pmin=? [ F "done" ]
+Model constants: delay=30
+
+Building PTA...
+
+PTA: 6 clocks, 65 locations, 127 transitions
+Target (s1=8&s2=7|s1=7&s2=8) satisfied by 4 locations.
+
+Building initial STPG...
+
+Building forwards reachability graph... 215 states
+Graph constructed in 0.043 secs.
+Graph: 215 symbolic states (1 initial, 14 target)
+
+Model checking STPG...
+STPG model checked in 0.037 secs.
+215/215 states converged.
+Diff across 1 initial state: 0.0
+Lower/upper bounds for 1 initial state: 1.0 - 1.0
+
+Initial STPG: 215 states (1 initial), 290 transitions, 268 choices, 201 choice sets, p1max/avg = 1/0.93, p2max/avg = 2/1.33
+Final STPG: 215 states (1 initial), 290 transitions, 268 choices, 201 choice sets, p1max/avg = 1/0.93, p2max/avg = 2/1.33
+
+Terminated after 0 refinements in 0.19 secs.
+
+Abstraction-refinement time breakdown:
+* 0.14 secs (72.3%) = Building initial STPG
+* 0.00 secs (0.0%) = Rebuilding STPG (0 x avg 0.00 secs)
+* 0.04 secs (19.7%) = model checking STPG (1 x avg 0.04 secs) (lb=62.2%) (prob0=45.9%) (pre=86.5%) (iters=2)
+* 0.00 secs (0.0%) = refinement (0 x avg 0.00 secs)
+
+Final diff across 1 initial state: 0.0
+Final lower/upper bounds for 1 initial state: 1.0 - 1.0
+
+Model checking completed in 0.344 secs.
+
+Result (minimum probability): 1.0
+
+
+Overall running time: 0.718 seconds.	</pre>
+</div>
+</body>
+</html>

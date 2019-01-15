@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - philosophers MaxPrReachDeadlock 16-1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#philosophers">philosophers</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 16, <span class="tt">TIME_BOUND</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MaxPrReachDeadlock</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files philosophers.16.jani --model-input-type jani --property-input-names MaxPrReachDeadlock --translate-messages false --value-floating-point-output-native true --const TIME_BOUND=1</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">130.5485429763794s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.977797e-10</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+model-checking
+analysing-property MaxPrReachDeadlock
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 7275 7275
+build-model-states-explored 18254 10979
+build-model-states-explored 29793 11539
+build-model-states-explored 40382 10589
+build-model-states-explored 51932 11550
+build-model-states-explored 63489 11557
+build-model-states-explored 74759 11270
+build-model-states-explored 85308 10549
+build-model-states-explored 95373 10065
+build-model-states-explored 106216 10843
+build-model-states-explored 117253 11037
+build-model-states-explored 128995 11742
+build-model-states-explored 140183 11187
+build-model-states-explored 151317 11134
+build-model-states-explored 161237 9920
+build-model-states-explored 172573 11336
+build-model-states-explored 183806 11233
+build-model-states-explored 194375 10569
+build-model-states-explored 204988 10613
+build-model-states-explored 215951 10963
+build-model-states-explored 222996 7045
+build-model-states-explored 233691 10695
+build-model-states-explored 244291 10600
+build-model-states-explored 255997 11706
+build-model-states-explored 266959 10962
+build-model-states-explored 278066 11107
+build-model-states-explored 288800 10734
+build-model-states-explored 299913 11113
+build-model-states-explored 310118 10205
+build-model-states-explored 320820 10702
+build-model-states-explored 331550 10730
+build-model-states-explored 340649 9098
+build-model-states-explored 351712 11064
+build-model-states-explored 362372 10660
+build-model-states-explored 372717 10345
+build-model-states-explored 382755 10038
+build-model-states-explored 393299 10544
+build-model-states-explored 404157 10858
+build-model-states-explored 414270 10113
+build-model-states-explored 425010 10740
+build-model-states-explored 435544 10534
+build-model-states-explored 446933 11389
+build-model-states-explored 458979 12046
+build-model-states-explored 470616 11637
+build-model-states-explored 482200 11584
+build-model-states-explored 493545 11344
+build-model-states-explored 504507 10963
+build-model-states-explored 516094 11587
+build-model-states-explored 526376 10282
+build-model-states-explored 536975 10599
+build-model-states-explored 548140 11165
+build-model-states-explored 559238 11098
+build-model-states-explored 564255 5017
+build-model-states-explored 570822 6567
+build-model-states-explored 582066 11244
+build-model-states-explored 593021 10955
+build-model-states-explored 603523 10502
+build-model-states-explored 613861 10338
+build-model-states-explored 623993 10131
+build-model-states-explored 634414 10421
+build-model-states-explored 645601 11188
+build-model-states-explored 656274 10673
+build-model-states-explored 666675 10400
+build-model-states-explored 677693 11018
+build-model-states-explored 688890 11197
+build-model-states-explored 700871 11981
+build-model-states-explored 712820 11949
+build-model-states-explored 719904 7084
+build-model-states-explored 731387 11483
+build-model-states-explored 742650 11263
+build-model-states-explored 753877 11227
+build-model-states-explored 765068 11191
+build-model-states-explored 776590 11522
+build-model-states-explored 787553 10963
+build-model-states-explored 798239 10686
+build-model-states-explored 809576 11337
+build-model-states-explored 821119 11543
+build-model-states-explored 832809 11690
+build-model-states-explored 844479 11670
+build-model-states-explored 855935 11456
+build-model-states-explored 866899 10964
+build-model-states-explored 877780 10881
+build-model-states-explored 888366 10586
+build-model-states-explored 899678 11312
+build-model-states-explored 911254 11576
+build-model-states-explored 922218 10964
+build-model-states-explored 933869 11651
+build-model-states-explored 946498 12629
+build-model-states-explored 959116 12618
+build-model-states-explored 971505 12389
+build-model-states-explored 983492 11987
+build-model-states-explored 995660 12168
+build-model-states-explored 1007605 11945
+build-model-states-explored 1019738 12133
+build-model-states-explored 1031445 11707
+build-model-states-explored 1043394 11949
+build-model-states-explored 1054194 10800
+build-model-states-explored 1066512 12318
+build-model-states-explored 1078616 12104
+build-model-states-explored 1090612 11995
+build-model-states-explored 1102363 11752
+build-model-states-explored 1114215 11852
+build-model-states-explored 1126497 12282
+build-model-states-explored 1139218 12721
+build-model-states-explored 1152433 13215
+build-model-states-explored 1165398 12965
+build-model-states-explored 1178539 13141
+build-model-states-explored 1191591 13052
+build-model-states-explored 1204398 12807
+build-model-states-explored 1217630 13232
+build-model-states-explored 1230278 12648
+build-model-states-explored 1242593 12315
+build-model-states-explored 1254968 12375
+build-model-states-explored 1268571 13603
+build-model-states-explored 1282321 13749
+build-model-states-explored 1295942 13622
+build-model-states-explored 1309306 13364
+build-model-states-explored 1324039 14733
+build-model-done 1331714 118
+iterating
+iterating-progress-unbounded 26 0.07975857236324962 1
+iterating-progress-unbounded 60 0.009893525165636796 2
+iterating-progress-unbounded 94 2.0099001829354535E-4 3
+iterating-progress-unbounded 128 2.861725759473188E-6 4
+iterating-progress-unbounded 161 4.532260866607629E-8 5
+iterating-progress-unbounded 193 7.239808752501631E-10 6
+iterating-done 209 6
+num-states-in-filter 1 "initial"
+printing-all-filter-results
+print-filter 0 0 0.9999999996022203
+model-checking-done 129
+MaxPrReachDeadlock: 0.9999999996022203	</pre>
+</div>
+</body>
+</html>

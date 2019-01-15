@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - bluetooth time 1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#bluetooth">bluetooth</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">mrec</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files bluetooth.prism --property-input-files bluetooth.props --property-input-names time --translate-messages false --value-floating-point-output-native true --const mrec=1</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">131.1619610786438s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '655809805393219/5000000000000' is tagged as incorrect. The reference result is '8229' (approx. 8229.0) which means a relative error of '0.9840610084969444' which is larger than the goal precision '0.001'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">0.9840610084969444</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property time
+start-building-explorer
+start-building-initial-states-explorer	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.HashMap.resize(HashMap.java:704)
+	at java.base/java.util.HashMap.putVal(HashMap.java:663)
+	at java.base/java.util.HashMap.put(HashMap.java:612)
+	at epmc.jani.explorer.VariableValuesEnumerator.lambda$generalEnumerateBDD$0(VariableValuesEnumerator.java:473)
+	at epmc.jani.explorer.VariableValuesEnumerator$$Lambda$40/1291586632.call(Unknown Source)
+	at epmc.dd.EnumerateSAT.terminalCase(EnumerateSAT.java:178)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:135)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:151)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:151)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:151)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:151)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:151)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:151)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:145)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:151)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:151)	</pre>
+</div>
+</body>
+</html>

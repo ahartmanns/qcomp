@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - csma all_before_max 3-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 3, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">all_before_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe csma.3-4.jani --props all_before_max --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">8.532838106155396s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.88014107718098e-16</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">csma.3-4.jani:model: info: csma.3-4 is an MDP model.
+csma.3-4.jani: info: Need 19 bytes per state.
+csma.3-4.jani: info: Explored 1460287 states.
+
+Peak memory usage: 311 MB
+Analysis results for csma.3-4.jani
+
++ State space exploration
+  State size:  19 bytes
+  States:      1460287
+  Transitions: 1471059
+  Branches:    2396727
+  Rate:        308729 states/s
+  Time:        4.9 s
+
++ Property all_before_max
+  Probability: 0.932446928845812
+  Bounds:      [0.932446928845812, 1]
+  Time:        2.7 s
+
+  + Value iteration
+    Final error: 3.00170928903001E-07
+    Iterations:  55
+    Time:        2.7 s	</pre>
+</div>
+</body>
+</html>

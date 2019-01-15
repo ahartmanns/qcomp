@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - repudiation_malicious deadline 20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#repudiation_malicious">repudiation_malicious</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">T</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">deadline</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g repudiation_malicious.prism repudiation_malicious.props --property deadline -const T=20</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">22.756476402282715s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Correctness of result is not checked because no reference result is available.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Tue Dec 11 01:56:08 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g repudiation_malicious.prism repudiation_malicious.props --property deadline -const T=20
+
+Parsing model file "repudiation_malicious.prism"...
+
+Parsing properties file "repudiation_malicious.props"...
+
+2 properties:
+(1) "deadline": Pmax=? [ F<T "gains_information" ]
+(2) "eventually": Pmax=? [ F "gains_information" ]
+
+Type:        PTA
+Modules:     originator recipient 
+Variables:   o x r y 
+
+---------------------------------------------------------------------
+
+Model checking: "deadline": Pmax=? [ F<T "gains_information" ]
+Property constants: T=20
+
+Building PTA...
+
+PTA: 2 clocks, 35 locations, 73 transitions
+Target (o=10) satisfied by 5 locations.
+Modifying PTA to encode time bound from property...
+New PTA: 3 clocks, 36 locations, 90 transitions
+
+Building initial STPG...
+
+Building forwards reachability graph... 25707 states
+Graph constructed in 0.401 secs.
+Graph: 25707 symbolic states (1 initial, 305 target)
+
+Model checking STPG...
+STPG model checked in 1.304 secs.
+23047/25707 states converged.
+Diff across 1 initial state: 0.005657962875194822
+Lower/upper bounds for 1 initial state: 0.1 - 0.10565796287519483
+Max diff over all states: 1.0
+1642 refineable states.
+
+Refinement 1...
+827 states successfully refined in 2.085 secs.
+2833+0=2833 states of STPG rebuilt in 0.0 secs.
+New STPG has 26534 states.
+
+Model checking STPG...
+STPG model checked in 0.875 secs.
+24088/26534 states converged.
+Diff across 1 initial state: 0.005657962875194822
+Lower/upper bounds for 1 initial state: 0.1 - 0.10565796287519483
+Max diff over all states: 1.0
+1662 refineable states.
+
+Refinement 2...
+877 states successfully refined in 2.246 secs.
+2483+0=2483 states of STPG rebuilt in 0.0 secs.
+New STPG has 27411 states.
+
+Model checking STPG...
+STPG model checked in 0.934 secs.
+25537/27411 states converged.
+Diff across 1 initial state: 0.005657962875194822
+Lower/upper bounds for 1 initial state: 0.1 - 0.10565796287519483
+Max diff over all states: 1.0
+1031 refineable states.
+
+Refinement 3...
+576 states successfully refined in 1.827 secs.
+2073+0=2073 states of STPG rebuilt in 0.0 secs.
+New STPG has 28059 states.
+
+Model checking STPG...
+STPG model checked in 1.062 secs.
+26282/28059 states converged.
+Diff across 1 initial state: 9.463503751948321E-4
+Lower/upper bounds for 1 initial state: 0.1047116125 - 0.10565796287519483
+Max diff over all states: 0.19509065236558698
+1051 refineable states.
+
+Refinement 4...
+753 states successfully refined in 2.654 secs.
+2315+0=2315 states of STPG rebuilt in 0.0 secs.
+New STPG has 28986 states.
+
+Model checking STPG...
+STPG model checked in 1.053 secs.
+27077/28986 states converged.
+Diff across 1 initial state: 9.463503751948321E-4
+Lower/upper bounds for 1 initial state: 0.1047116125 - 0.10565796287519483
+Max diff over all states: 0.1056572644488625
+906 refineable states.
+
+Refinement 5...
+584 states successfully refined in 2.004 secs.
+1768+0=1768 states of STPG rebuilt in 0.0 secs.
+New STPG has 29591 states.
+
+Model checking STPG...
+STPG model checked in 1.218 secs.
+27518/29591 states converged.
+Diff across 1 initial state: 9.463503751948321E-4
+Lower/upper bounds for 1 initial state: 0.1047116125 - 0.10565796287519483
+Max diff over all states: 0.1056572644488625
+596 refineable states.
+
+Refinement 6...
+497 states successfully refined in 1.798 secs.
+1565+0=1565 states of STPG rebuilt in 0.0 secs.
+New STPG has 30088 states.
+
+Model checking STPG...
+STPG model checked in 1.58 secs.
+27883/30088 states converged.
+Diff across 1 initial state: 8.466138073370821E-7
+Lower/upper bounds for 1 initial state: 0.10565711626138749 - 0.10565796287519483
+
+Initial STPG: 25707 states (1 initial), 76866 transitions, 63657 choices, 28365 choice sets, p1max/avg = 4/1.10, p2max/avg = 5/2.24
+Final STPG: 30088 states (1 initial), 103658 transitions, 82743 choices, 33260 choice sets, p1max/avg = 10/1.11, p2max/avg = 15/2.49
+
+Terminated after 6 refinements in 22.05 secs.
+
+Abstraction-refinement time breakdown:
+* 1.37 secs (6.2%) = Building initial STPG
+* 0.00 secs (0.0%) = Rebuilding STPG (6 x avg 0.00 secs)
+* 8.03 secs (36.4%) = model checking STPG (7 x avg 1.15 secs) (lb=30.5%) (prob0=17.2%) (pre=93.4%) (iters=332)
+* 12.61 secs (57.2%) = refinement (6 x avg 2.10 secs)
+
+Final diff across 1 initial state: 8.466138073370821E-7
+Final lower/upper bounds for 1 initial state: 0.10565711626138749 - 0.10565796287519483
+
+Model checking completed in 22.157 secs.
+
+Result (maximum probability): 0.10565753956829116
+
+
+Overall running time: 22.534 seconds.	</pre>
+</div>
+</body>
+</html>

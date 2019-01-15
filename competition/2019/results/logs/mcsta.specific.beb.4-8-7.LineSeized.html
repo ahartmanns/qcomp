@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - beb LineSeized 4-8-7</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#beb">beb</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">H</span> = 4, <span class="tt">K</span> = 8, <span class="tt">N</span> = 7</td></tr>
+		<tr><td>Property:</td><td><span class="tt">LineSeized</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe beb.4-8.jani --props LineSeized -E N=7 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">66.02648425102234s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.935520337411146e-10</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">beb.4-8.jani:model: info: beb-4-8 is an MDP model.
+beb.4-8.jani: info: Need 20 bytes per state.
+beb.4-8.jani: info: Explored 19401892 states for N=7.
+
+Peak memory usage: 3744 MB
+Analysis results for beb.4-8.jani
+Experiment N=7
+
++ State space exploration
+  State size:  20 bytes
+  States:      19401892
+  Transitions: 20164086
+  Branches:    34723782
+  Rate:        430627 states/s
+  Time:        46.9 s
+
++ Property LineSeized
+  Probability: 0.999885498058698
+  Bounds:      [0.999885498058698, 1]
+  Time:        18.0 s
+
+  + Value iteration
+    Final error: 4.71002189842665E-07
+    Iterations:  26
+    Time:        18.0 s	</pre>
+</div>
+</body>
+</html>

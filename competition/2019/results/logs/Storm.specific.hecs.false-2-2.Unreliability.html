@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm - hecs Unreliability false-2-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>Storm</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#hecs">hecs</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">R</span> = False, <span class="tt">N</span> = 2, <span class="tt">k</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unreliability</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm-dft --dftfile hecs.false-2-2.dft --timebound 1 --max --symmetryreduction</pre>
+	Use Storm-dft. Enable symmetry reduction.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.09058046340942383s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm-dft 1.3.1 (dev)
+
+Date: Thu Dec 13 09:59:41 2018
+Command line arguments: --dftfile hecs.false-2-2.dft --timebound 1 --max --symmetryreduction
+Current working directory: /home/qcomp
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	301
+Transitions: 	1405
+Reward Models:  none
+State Labels: 	2 labels
+   * failed -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.009s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.001s
+Total:		0.011s
+Result: [0.0002199758094]	</pre>
+</div>
+</body>
+</html>

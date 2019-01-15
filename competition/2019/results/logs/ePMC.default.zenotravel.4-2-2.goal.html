@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - zenotravel goal 4-2-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#zenotravel">zenotravel</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">c</span> = 4, <span class="tt">p</span> = 2, <span class="tt">a</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">goal</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files zenotravel.4-2-2.jani --model-input-type jani --property-input-names goal --translate-messages false --value-floating-point-output-native true</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">45.18734431266785s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">8e-16</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+model-checking
+analysing-property goal
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 9880 9880
+build-model-states-explored 27046 17166
+build-model-states-explored 46641 19595
+build-model-states-explored 64655 18014
+build-model-states-explored 83817 19162
+build-model-states-explored 100075 16258
+build-model-states-explored 119635 19560
+build-model-states-explored 138494 18859
+build-model-states-explored 157567 19073
+build-model-states-explored 176641 19074
+build-model-states-explored 189598 12957
+build-model-states-explored 208723 19125
+build-model-states-explored 227713 18990
+build-model-states-explored 246799 19086
+build-model-states-explored 265094 18295
+build-model-states-explored 284175 19081
+build-model-states-explored 302807 18632
+build-model-states-explored 321585 18778
+build-model-states-explored 339635 18050
+build-model-states-explored 347193 7558
+build-model-states-explored 365830 18636
+build-model-states-explored 384387 18558
+build-model-states-explored 402368 17981
+build-model-states-explored 420909 18541
+build-model-states-explored 439156 18247
+build-model-states-explored 456989 17833
+build-model-done 462400 26
+iterating
+iterating-progress-unbounded 42 0.022296667328050856 1
+iterating-progress-unbounded 90 0.013572258525152592 2
+iterating-progress-unbounded 139 0.008809684779768845 3
+iterating-progress-unbounded 188 0.002849765880820976 4
+iterating-progress-unbounded 236 5.934029748885239E-4 5
+iterating-progress-unbounded 285 9.635882334246837E-5 6
+iterating-progress-unbounded 333 1.4694546636606631E-5 7
+iterating-progress-unbounded 381 2.141376693853836E-6 8
+iterating-progress-unbounded 429 3.0588469823733533E-7 9
+iterating-progress-unbounded 478 4.733194802764018E-8 10
+iterating-progress-unbounded 526 7.533720092212093E-9 11
+iterating-progress-unbounded 575 1.1384904130551377E-9 12
+iterating-progress-unbounded 623 1.769092650150128E-10 13
+iterating-done 657 13
+num-states-in-filter 1 "initial"
+model-checking-done 43
+goal: 0.9999999999999992	</pre>
+</div>
+</body>
+</html>

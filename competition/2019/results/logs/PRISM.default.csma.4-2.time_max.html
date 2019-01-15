@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - csma time_max 4-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time_max</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g csma.4-2.prism csma.props --property time_max</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">14.458322286605835s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.3012508401996453e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 23:09:04 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g csma.4-2.prism csma.props --property time_max
+
+Parsing model file "csma.4-2.prism"...
+
+Parsing properties file "csma.props"...
+
+5 properties:
+(1) "all_before_max": Pmax=? [ !"collision_max_backoff" U "all_delivered" ]
+(2) "all_before_min": Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+(3) "some_before": Pmin=? [ F min_backoff_after_success<K ]
+(4) "time_max": R{"time"}max=? [ F "all_delivered" ]
+(5) "time_min": R{"time"}min=? [ F "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 station4 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 s4 x4 bc4 cd4 
+
+---------------------------------------------------------------------
+
+Model checking: "time_max": R{"time"}max=? [ F "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 193 iterations in 2.17 seconds (average 0.011244, setup 0.00)
+
+Time for model construction: 2.216 seconds.
+
+Type:        MDP
+States:      761962 (1 initial)
+Transitions: 1327068
+Choices:     825504
+
+Transition matrix: 52233 nodes (4 terminal), 1327068 minterms, vars: 54r/54c/17nd
+
+Prob0E: 204 iterations in 2.93 seconds (average 0.014363, setup 0.00)
+
+Prob1A: 1 iterations in 0.01 seconds (average 0.011000, setup 0.00)
+
+goal = 9, inf = 0, maybe = 761953
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=761962, nc=825495, nnz=1327059, k=4] [21.2 MB]
+Building sparse matrix (transition rewards)... [n=761962, nc=825495, nnz=456769, k=4] [11.3 MB]
+Creating vector for state rewards... [5.8 MB]
+Creating vector for inf... [5.8 MB]
+Allocating iteration vectors... [2 x 5.8 MB]
+TOTAL: [55.8 MB]
+
+Starting iterations...
+Iteration 258: max relative diff=0.001357, 5.01 sec so far
+
+Iterative method: 370 iterations in 8.59 seconds (average 0.019349, setup 1.43)
+
+Value in the initial state: 142.21031856044027
+
+Time for model checking: 11.551 seconds.
+
+Result: 142.21031856044027 (value in the initial state)
+
+
+Overall running time: 14.205 seconds.	</pre>
+</div>
+</body>
+</html>

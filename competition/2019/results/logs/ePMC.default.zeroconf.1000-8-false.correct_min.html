@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - zeroconf correct_min 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_min</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files zeroconf.prism --property-input-files zeroconf.props --property-input-names correct_min --translate-messages false --value-floating-point-output-native true --const N=1000,K=8,reset=false</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">61.54427456855774s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.73361995019755e-12</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property correct_min
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 28953 28953
+build-model-states-explored 73626 44673
+build-model-states-explored 118241 44614
+build-model-states-explored 161567 43326
+build-model-states-explored 206610 45043
+build-model-states-explored 252099 45488
+build-model-states-explored 292635 40537
+build-model-states-explored 337136 44501
+build-model-states-explored 382140 45004
+build-model-states-explored 424837 42697
+build-model-states-explored 469691 44854
+build-model-states-explored 515000 45308
+build-model-states-explored 560379 45380
+build-model-states-explored 594394 34015
+build-model-states-explored 639708 45314
+build-model-states-explored 684548 44840
+build-model-states-explored 729525 44977
+build-model-states-explored 774181 44656
+build-model-states-explored 816415 42234
+build-model-states-explored 856703 40288
+build-model-states-explored 901746 45043
+build-model-states-explored 945471 43725
+build-model-states-explored 990386 44914
+build-model-states-explored 1035015 44630
+build-model-states-explored 1079295 44280
+build-model-states-explored 1123824 44529
+build-model-states-explored 1145829 22004
+build-model-states-explored 1190289 44461
+build-model-states-explored 1234262 43973
+build-model-states-explored 1278403 44140
+build-model-states-explored 1322254 43852
+build-model-states-explored 1366431 44177
+build-model-states-explored 1410357 43926
+build-model-states-explored 1454292 43935
+build-model-states-explored 1498221 43928
+build-model-states-explored 1541939 43719
+build-model-states-explored 1585283 43343
+build-model-states-explored 1628627 43345
+build-model-states-explored 1652981 24354
+build-model-states-explored 1696884 43903
+build-model-states-explored 1740698 43814
+build-model-states-explored 1784463 43765
+build-model-states-explored 1828126 43663
+build-model-states-explored 1869349 41223
+build-model-done 1870338 44
+iterating
+iterating-progress-unbounded 18 0.34867844009999993 1
+iterating-progress-unbounded 40 0.033200433012245206 2
+iterating-progress-unbounded 61 1.6032048937716036E-4 3
+iterating-progress-unbounded 83 2.3151776601672045E-6 4
+iterating-progress-unbounded 104 1.119106483759843E-9 5
+iterating-progress-unbounded 126 8.181298874585137E-10 6
+iterating-progress-unbounded 147 6.279092501753746E-10 7
+iterating-progress-unbounded 168 5.091941530964775E-10 8
+iterating-progress-unbounded 190 4.262324396039598E-10 9
+iterating-progress-unbounded 211 3.5310544651364344E-10 10
+iterating-done 227 10
+model-checking-done 60
+correct_min: 5.040105212921102E-9	</pre>
+</div>
+</body>
+</html>

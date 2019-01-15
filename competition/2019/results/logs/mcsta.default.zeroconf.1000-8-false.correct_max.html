@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - zeroconf correct_max 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe zeroconf.jani --props correct_max -E N=1000,K=8,reset=false --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">12.511339902877808s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.95212634034944e-17</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">zeroconf.jani:model: info: zeroconf is an MDP model.
+zeroconf.jani: info: Need 24 bytes per state.
+zeroconf.jani: info: Explored 1868787 states for N=1000, K=8, reset=False.
+
+Peak memory usage: 272 MB
+Analysis results for zeroconf.jani
+Experiment N=1000, K=8, reset=False
+
++ State space exploration
+  State size:  24 bytes
+  States:      1868787
+  Transitions: 3430379
+  Branches:    4224736
+  Rate:        274418 states/s
+  Time:        7.9 s
+
++ Property correct_max
+  Probability: 4.80141363507243E-08
+  Bounds:      [4.80141363507243E-08, 1]
+  Time:        3.1 s
+
+  + Value iteration
+    Final error: 1.68281610432463E-07
+    Iterations:  26
+    Time:        3.1 s	</pre>
+</div>
+</body>
+</html>

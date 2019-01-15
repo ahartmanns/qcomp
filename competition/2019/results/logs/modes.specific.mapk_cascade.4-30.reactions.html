@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - mapk_cascade reactions 4-30</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#mapk_cascade">mapk_cascade</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">T</span> = 30</td></tr>
+		<tr><td>Property:</td><td><span class="tt">reactions</span> (exp-reward-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono modes/modes.exe mapk_cascade.jani --props reactions -E N=4,T=30 --width 1e-3 --relative-width -O out.txt Minimal --unsafe --max-run-length 0 --timeout 1680 </pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '--max-run-length 0' = do not impose a limit on the maximum length of a simulation run (which is anyway more of a model debugging feature), '--timeout 1680' = stop after 28 minutes of simulation and return the estimate at that point even if the desired confidence is not yet met.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">249.735533952713s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.00020335147597495853</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">mapk_cascade.jani:model: info: mapk_cascade is a CTMC model and will be simulated as an MA.
+mapk_cascade.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 67 MB
+Analysis results for mapk_cascade.jani
+Experiment N=4, T=30.0
+Status:          Finished
+Simulation time: 248.4 s
+
++ Property Property "reactions"
+  Estimated value:     48.4811668779663
+  Confidence interval: [48.4326859346743, 48.5296478212584]
+  Runs used:           402270
+  Run type:            MA
+  Status:              Finished
+
+  + Sample data
+    Mean:     48.4811668779663
+    Variance: 246.129452730057
+    Skewness: -0.0713153882453409
+    Kurtosis: 3.31622741531009
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.05	</pre>
+</div>
+</body>
+</html>

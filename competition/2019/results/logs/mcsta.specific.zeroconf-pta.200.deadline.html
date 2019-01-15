@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - zeroconf-pta deadline 200</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#zeroconf-pta">zeroconf-pta</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">T</span> = 200</td></tr>
+		<tr><td>Property:</td><td><span class="tt">deadline</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe zeroconf-pta.jani --props deadline -E T=200 --relative-width -O out.txt Minimal --unsafe -S Memory --bounded-alg StateElimination</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small, '--bounded-alg StateElimination' = use state elimination for the reward-bounded property, which tends to work well for PTA and reward-bounded properties.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.9478702545166016s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Correctness of result is not checked because no reference result is available.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">zeroconf-pta.jani:model: info: zeroconf-pta is a PTA model.
+zeroconf-pta.jani: info: Need 9 bytes per state.
+zeroconf-pta.jani: info: Explored 498 states for T=200.
+
+Peak memory usage: 46 MB
+Analysis results for zeroconf-pta.jani
+Experiment T=200
+
++ State space exploration
+  State size:  9 bytes
+  States:      498
+  Transitions: 616
+  Branches:    641
+  Rate:        14647 states/s
+  Time:        0.0 s
+
++ Property deadline
+  Probability: 0.00122154193400425
+  Bounds:      [0.00122154193400425, 0.00122154193400425]
+  CDF:         { (0, 0), ..., (99, 0), (100, 0.000651605), ..., (121, 0.000651605), (122, 0.000915505025), ..., (141, 0.000915505025), (142, 0.00096564602975), (143, 0.00096564602975), (144, 0.001072525539875), ..., (161, 0.001072525539875), (162, 0.0010820523307775), (163, 0.0010820523307775), (164, 0.001122666544625), (165, 0.001122666544625), (166, 0.00116595274622563), ..., (181, 0.00116595274622563), (182, 0.0011677628364971), (183, 0.0011677628364971), (184, 0.00117933788744364), (185, 0.00117933788744364), (186, 0.00120401102235599), (187, 0.00120401102235599), (188, 0.00122154193400425), ..., (200, 0.00122154193400425) }
+  Time:        0.1 s
+
+  + State elimination
+    States:      444
+    Transitions: 562
+    Branches:    687
+    Time:        0.0 s
+
+  + Value iteration
+    Time: 0.0 s	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - embedded actuators 8-12</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#embedded">embedded</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_COUNT</span> = 8, <span class="tt">T</span> = 12</td></tr>
+		<tr><td>Property:</td><td><span class="tt">actuators</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g embedded.prism embedded.props --property actuators -const MAX_COUNT=8,T=12</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.7617521286010742s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.3259379998166505e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 21:19:43 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g embedded.prism embedded.props --property actuators -const 'MAX_COUNT=8,T=12'
+
+Parsing model file "embedded.prism"...
+
+Parsing properties file "embedded.props"...
+
+14 properties:
+(1) "actuators": P=? [ !"down" U "fail_actuators" ]
+(2) "actuators_T": P=? [ !"down" U<=(T*3600) "fail_sensors" ]
+(3) "danger_T": R{"danger"}=? [ C<=(T*3600) ]
+(4) "danger_time": R{"danger"}=? [ F "down" ]
+(5) "down_T": R{"down"}=? [ C<=(T*3600) ]
+(6) "failure_T": P=? [ F<=(T*3600) "down" ]
+(7) "io": P=? [ !"down" U "fail_io" ]
+(8) "io_T": P=? [ !"down" U<=(T*3600) "fail_io" ]
+(9) "main": P=? [ !"down" U "fail_main" ]
+(10) "main_T": P=? [ !"down" U<=(T*3600) "fail_main" ]
+(11) "sensors": P=? [ !"down" U "fail_sensors" ]
+(12) "sensors_T": P=? [ !"down" U<=(T*3600) "fail_sensors" ]
+(13) "up_T": R{"up"}=? [ C<=(T*3600) ]
+(14) "up_time": R{"up"}=? [ F "down" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: "actuators": P=? [ !"down" U "fail_actuators" ]
+Model constants: MAX_COUNT=8
+
+Building model...
+Model constants: MAX_COUNT=8
+
+Computing reachable states...
+
+Reachability (BFS): 21 iterations in 0.01 seconds (average 0.000667, setup 0.00)
+
+Time for model construction: 0.032 seconds.
+
+Type:        CTMC
+States:      8548 (1 initial)
+Transitions: 36041
+
+Rate matrix: 1819 nodes (9 terminal), 36041 minterms, vars: 16r/16c
+
+Diagonals vector: 841 nodes (69 terminal), 8548 minterms
+Embedded Markov chain: 14290 nodes (309 terminal), 36041 minterms
+
+Prob0: 4 iterations in 0.02 seconds (average 0.004500, setup 0.00)
+
+Prob1: 2 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 1064, no = 6356, maybe = 1128
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=16, nodes=7951] [372.7 KB]
+Adding explicit sparse matrices... [levels=16, num=1, compact] [38.1 KB]
+Creating vector for diagonals... [dist=5, compact] [16.7 KB]
+Creating vector for RHS... [dist=2, compact] [16.7 KB]
+Allocating iteration vectors... [2 x 66.8 KB]
+TOTAL: [577.8 KB]
+
+Starting iterations...
+
+Jacobi: 687 iterations in 0.17 seconds (average 0.000134, setup 0.07)
+
+Value in the initial state: 0.10529804738570911
+
+Time for model checking: 0.098 seconds.
+
+Result: 0.10529804738570911 (value in the initial state)
+
+
+Overall running time: 0.542 seconds.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - egl messagesB 10-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#egl">egl</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 10, <span class="tt">L</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">messagesB</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono modes/modes.exe egl.jani --props messagesB -E N=10,L=2 --width 1e-3 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--width 1e-3' = request error 1e-3, '--relative-width' = use relative error, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">303.23639583587646s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.00013963943668954807</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">egl.jani:model: info: egl is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+egl.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 72 MB
+Analysis results for egl.jani
+Experiment N=10, L=2
+Status:          Finished
+Simulation time: 301.7 s
+
++ Property Property "messagesB"
+  Estimated value:     4.01129270720495
+  Confidence interval: [4.00728142064276, 4.01530399376715]
+  Runs used:           4098840
+  Run type:            MDP
+  Status:              Finished
+
+  + Sample data
+    Mean:     4.01129270720495
+    Variance: 17.1684924180858
+    Skewness: 0.15790871820621
+    Kurtosis: 1.22588306199328
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.05	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - consensus steps_min 6-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism --javamaxmem 11g consensus.6.prism consensus.props --property steps_min -const K=2 -sparse</pre>
+	Select best engine
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">185.9745590686798s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.00034355438198611113</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.4.dev
+Date: Mon Dec 10 23:02:26 CET 2018
+Hostname: qcomp2019
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism --javamaxmem 11g consensus.6.prism consensus.props --property steps_min -const K=2 -sparse
+
+Parsing model file "consensus.6.prism"...
+
+Parsing properties file "consensus.props"...
+
+5 properties:
+(1) "c1": P>=1 [ F "finished" ]
+(2) "c2": Pmin=? [ F "finished"&"all_coins_equal_1" ]
+(3) "disagree": Pmax=? [ F "finished"&!"agree" ]
+(4) "steps_max": R{"steps"}max=? [ F "finished" ]
+(5) "steps_min": R{"steps"}min=? [ F "finished" ]
+
+Type:        MDP
+Modules:     process1 process2 process3 process4 process5 process6 
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4 pc5 coin5 pc6 coin6 
+
+---------------------------------------------------------------------
+
+Model checking: "steps_min": R{"steps"}min=? [ F "finished" ]
+Model constants: K=2
+
+Building model...
+Model constants: K=2
+
+Computing reachable states...
+
+Reachability (BFS): 149 iterations in 0.14 seconds (average 0.000913, setup 0.00)
+
+Time for model construction: 0.151 seconds.
+
+Type:        MDP
+States:      1258240 (1 initial)
+Transitions: 6236736
+Choices:     5008128
+
+Transition matrix: 7075 nodes (3 terminal), 6236736 minterms, vars: 24r/24c/6nd
+
+Prob0A: 49 iterations in 0.43 seconds (average 0.008694, setup 0.00)
+
+Prob1E: 50 iterations in 0.42 seconds (average 0.008440, setup 0.00)
+
+Warning: PRISM hasn't checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 384, inf = 0, maybe = 1257856
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=1258240, nc=5007744, nnz=6236352, k=6] [95.3 MB]
+Building sparse matrix (transition rewards)... [n=1258240, nc=5007744, nnz=0, k=6] [23.9 MB]
+Creating vector for state rewards... [9.6 MB]
+Creating vector for inf... [9.6 MB]
+Allocating iteration vectors... [2 x 9.6 MB]
+TOTAL: [157.6 MB]
+
+Starting iterations...
+Iteration 78: max relative diff=0.012666, 5.05 sec so far
+Iteration 155: max relative diff=0.005682, 10.07 sec so far
+Iteration 232: max relative diff=0.003304, 15.10 sec so far
+Iteration 309: max relative diff=0.002162, 20.12 sec so far
+Iteration 386: max relative diff=0.001509, 25.14 sec so far
+Iteration 463: max relative diff=0.001096, 30.16 sec so far
+Iteration 540: max relative diff=0.000821, 35.18 sec so far
+Iteration 617: max relative diff=0.000623, 40.20 sec so far
+Iteration 694: max relative diff=0.000479, 45.21 sec so far
+Iteration 771: max relative diff=0.000372, 50.23 sec so far
+Iteration 848: max relative diff=0.000291, 55.25 sec so far
+Iteration 925: max relative diff=0.000228, 60.27 sec so far
+Iteration 1002: max relative diff=0.000181, 65.29 sec so far
+Iteration 1079: max relative diff=0.000143, 70.31 sec so far
+Iteration 1156: max relative diff=0.000114, 75.35 sec so far
+Iteration 1233: max relative diff=0.000090, 80.39 sec so far
+Iteration 1310: max relative diff=0.000072, 85.40 sec so far
+Iteration 1387: max relative diff=0.000057, 90.42 sec so far
+Iteration 1464: max relative diff=0.000046, 95.45 sec so far
+Iteration 1541: max relative diff=0.000037, 100.46 sec so far
+Iteration 1618: max relative diff=0.000029, 105.47 sec so far
+Iteration 1695: max relative diff=0.000024, 110.49 sec so far
+Iteration 1772: max relative diff=0.000019, 115.51 sec so far
+Iteration 1849: max relative diff=0.000015, 120.53 sec so far
+Iteration 1926: max relative diff=0.000012, 125.54 sec so far
+Iteration 2003: max relative diff=0.000010, 130.55 sec so far
+Iteration 2080: max relative diff=0.000008, 135.59 sec so far
+Iteration 2157: max relative diff=0.000006, 140.61 sec so far
+Iteration 2234: max relative diff=0.000005, 145.62 sec so far
+Iteration 2311: max relative diff=0.000004, 150.64 sec so far
+Iteration 2388: max relative diff=0.000003, 155.66 sec so far
+Iteration 2465: max relative diff=0.000003, 160.68 sec so far
+Iteration 2542: max relative diff=0.000002, 165.70 sec so far
+Iteration 2619: max relative diff=0.000002, 170.71 sec so far
+Iteration 2696: max relative diff=0.000001, 175.73 sec so far
+Iteration 2773: max relative diff=0.000001, 180.74 sec so far
+
+Iterative method: 2796 iterations in 184.06 seconds (average 0.065179, setup 1.82)
+
+Value in the initial state: 431.851584506982
+
+Time for model checking: 185.041 seconds.
+
+Result: 431.851584506982 (value in the initial state)
+
+
+Overall running time: 185.766 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

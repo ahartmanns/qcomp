@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - sms Unreliability 3-true</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#sms">sms</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">A</span> = 3, <span class="tt">R</span> = True</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unreliability</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe sms.3-true.jani --props Unreliability --relative-width -O out.txt Minimal</pre>
+	Default settings: '--relative-width' = use relative error for sound methods, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.1229517459869385s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.4580528634536565e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">sms.3-true.jani:model: info: sms.3-true.jani is an MA model.
+sms.3-true.jani: info: Need 33 bytes per state.
+sms.3-true.jani: info: Explored 198 states.
+sms.3-true.jani: info: Identified 154 maximal end components.
+
+Peak memory usage: 60 MB
+Analysis results for sms.3-true.jani
+
++ State space exploration
+  State size:  33 bytes
+  States:      198
+  Transitions: 198
+  Branches:    243
+  Rate:        1571 states/s
+  Time:        0.1 s
+
++ Property Unreliability
+  Probability: 0.0238355085249987
+  Bounds:      [0.0238349126521824, 0.023836104397815]
+  Time:        0.1 s
+
+  + Precomputations
+    Max. prob. 0 states:          0
+    Time for max. prob. 0 states: 0.0 s
+
+  + End components
+    Iterations:  3
+    Time:        0.0 s
+    MECs:        154
+    Transitions: 198
+    Branches:    243
+
+  + Unif+
+    Time:             0.0 s
+    Max. exit rate:   3.02412356
+    Iterations:       2
+    Final unif. rate: 3.02412356	</pre>
+</div>
+</body>
+</html>

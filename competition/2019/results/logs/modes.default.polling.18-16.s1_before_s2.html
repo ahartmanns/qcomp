@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - polling s1_before_s2 18-16</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#polling">polling</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 18, <span class="tt">T</span> = 16</td></tr>
+		<tr><td>Property:</td><td><span class="tt">s1_before_s2</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono modes/modes.exe polling.18.jani --props s1_before_s2 -E T=16 --width 1e-3 --relative-width -O out.txt Minimal</pre>
+	Default settings: '--width 1e-3' = request error 1e-3, '--relative-width' = use relative error, '-O out.txt Minimal' = write the property results into file out.txt with minimal formatting (will be read by get_result).
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">8.699465274810791s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">polling.18.jani:model: info: polling.18 is a CTMC model and will be simulated as an MA.
+polling.18.jani: info: Using default value of 0.95 for the confidence parameter.
+polling.18.jani:model: error: Run length exceeded.
+
+Peak memory usage: 70 MB
+Analysis results for polling.18.jani
+Experiment T=16.0
+Status:          Error
+Simulation time: 7.3 s
+
++ Property Property "s1_before_s2"
+  Estimated probability: 0.557377049180328
+  Runs used:             1220
+  Run type:              MA
+  Status:                Error
+
+  + Error bounds
+    Statement: Aborted: no error bounds	</pre>
+</div>
+</body>
+</html>

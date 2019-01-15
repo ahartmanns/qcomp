@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM-TUM - consensus steps_min 4-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>PRISM-TUM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./pet/bin/pet reachability --only-result -m consensus.4.prism -p consensus.props --property steps_min -const K=4</pre>
+	Default settings.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">2.4276015758514404s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
+		<tr><td>Note(s):</td><td>Result '' is tagged as incorrect because it is different from the reference result '768'.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Exception in thread "main" java.lang.IllegalArgumentException: Could not construct a predicate from R{"steps"}min=? [ F pc1=3&pc2=3&pc3=3&pc4=3 ].
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:216)
+	at de.tum.in.pet.implementation.reachability.PrismQuery.parse(PrismQuery.java:46)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.main(ReachChecker.java:346)
+	at de.tum.in.pet.PET.main(PET.java:30)	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - firewire deadline false-36-800</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#firewire">firewire</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">explicit_timer</span> = False, <span class="tt">delay</span> = 36, <span class="tt">deadline</span> = 800</td></tr>
+		<tr><td>Property:</td><td><span class="tt">deadline</span> (prob-reach-reward-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe firewire.false.jani --props deadline -E delay=36,deadline=800 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">36.638795375823975s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">firewire.false.jani:model: info: firewire.false is an MDP model.
+firewire.false.jani: info: Need 14 bytes per state.
+firewire.false.jani: info: Explored 212268 states for delay=36, deadline=800.
+
+Peak memory usage: 112 MB
+Analysis results for firewire.false.jani
+Experiment delay=36, deadline=800
+
++ State space exploration
+  State size:  14 bytes
+  States:      212268
+  Transitions: 478752
+  Branches:    481788
+  Rate:        199313 states/s
+  Time:        1.1 s
+
++ Property deadline
+  Probability: 0.939453125
+  Bounds:      [0.939453125, 1]
+  CDF:         { (0, 0), ..., (202, 0), (203, 0.5), ..., (323, 0.5), (324, 0.625), ..., (405, 0.625), (406, 0.75), ..., (444, 0.75), (445, 0.78125), ..., (526, 0.78125), (527, 0.84375), ..., (565, 0.84375), (566, 0.8515625), ..., (608, 0.8515625), (609, 0.8828125), ..., (647, 0.8828125), (648, 0.90625), ..., (686, 0.90625), (687, 0.908203125), ..., (729, 0.908203125), (730, 0.931640625), ..., (768, 0.931640625), (769, 0.939453125), ..., (800, 0.939453125) }
+  Time:        34.6 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2374
+    Time:        34.6 s	</pre>
+</div>
+</body>
+</html>

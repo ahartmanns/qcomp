@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - oscillators time_to_synch 8-10-0.1-1-0.1-1.0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#oscillators">oscillators</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 8, <span class="tt">T</span> = 10, <span class="tt">epsilon</span> = 0.1, <span class="tt">R</span> = 1, <span class="tt">mu</span> = 0.1, <span class="tt">lambda</span> = 1.0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time_to_synch</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono modes/modes.exe oscillators.8-10-0.1-1.jani --props time_to_synch -E mu=0.1,lambda=1.0 --width 1e-3 --relative-width -O out.txt Minimal --unsafe --max-run-length 0 --timeout 1680 </pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '--max-run-length 0' = do not impose a limit on the maximum length of a simulation run (which is anyway more of a model debugging feature), '--timeout 1680' = stop after 28 minutes of simulation and return the estimate at that point even if the desired confidence is not yet met.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">581.1784722805023s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">-9</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">oscillators.8-10-0.1-1.jani:model: info: oscillators.8-10-0.1-1 is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+oscillators.8-10-0.1-1.jani: info: Using default value of 0.95 for the confidence parameter.	</pre>
+</div>
+</body>
+</html>

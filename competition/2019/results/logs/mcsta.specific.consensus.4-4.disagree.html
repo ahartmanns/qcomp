@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - consensus disagree 4-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">disagree</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe consensus.4.jani --props disagree -E K=4 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">4.135899782180786s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.00010721592977268305</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">consensus.4.jani:model: info: consensus.4 is an MDP model.
+consensus.4.jani: info: Need 13 bytes per state.
+consensus.4.jani: info: Explored 43136 states for K=4.
+
+Peak memory usage: 61 MB
+Analysis results for consensus.4.jani
+Experiment K=4
+
++ State space exploration
+  State size:  13 bytes
+  States:      43136
+  Transitions: 115840
+  Branches:    144352
+  Rate:        247908 states/s
+  Time:        0.2 s
+
++ Property disagree
+  Probability: 0.156056330469396
+  Bounds:      [0.156056330469396, 1]
+  Time:        3.1 s
+
+  + Value iteration
+    Final error: 9.98146239021119E-07
+    Iterations:  1246
+    Time:        3.1 s	</pre>
+</div>
+</body>
+</html>

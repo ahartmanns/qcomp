@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - wlan sent 4-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 4, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">sent</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files wlan.4.prism --property-input-files wlan.props --property-input-names sent --translate-messages false --value-floating-point-output-native true --const COL=0</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">42.275139808654785s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property sent
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 7156 7156
+build-model-states-explored 16874 9718
+build-model-states-explored 28105 11231
+build-model-states-explored 38780 10675
+build-model-states-explored 49040 10260
+build-model-states-explored 59184 10144
+build-model-states-explored 70641 11457
+build-model-states-explored 82149 11508
+build-model-states-explored 95759 13610
+build-model-states-explored 110043 14284
+build-model-states-explored 123879 13836
+build-model-states-explored 135855 11976
+build-model-states-explored 149584 13729
+build-model-states-explored 163552 13968
+build-model-states-explored 177515 13963
+build-model-states-explored 190571 13056
+build-model-states-explored 205402 14831
+build-model-states-explored 219273 13871
+build-model-states-explored 234600 15327
+build-model-states-explored 249940 15340
+build-model-states-explored 265222 15282
+build-model-states-explored 280510 15288
+build-model-states-explored 295857 15347
+build-model-states-explored 311225 15368
+build-model-states-explored 326652 15427
+build-model-states-explored 341513 14861
+build-model-done 345000 26
+iterating
+iterating-progress-unbounded 179 1.0 1
+iterating-progress-unbounded 374 1.0 2
+iterating-progress-unbounded 569 0.003899905088882938 3
+iterating-progress-unbounded 764 0.003899905088882938 4
+iterating-progress-unbounded 959 0.0020487543598410873 5
+iterating-progress-unbounded 1154 2.2531463149566555E-5 6
+iterating-progress-unbounded 1349 1.4038366023427784E-5 7
+iterating-progress-unbounded 1544 1.5862947915223913E-6 8
+iterating-progress-unbounded 1739 9.615329343848344E-8 9
+iterating-progress-unbounded 1935 1.9885677438047367E-8 10
+iterating-progress-unbounded 2130 8.464865475232841E-10 11
+iterating-progress-unbounded 2320 1.9378065818642654E-10 12
+iterating-done 2445 12
+model-checking-done 40
+sent: true	</pre>
+</div>
+</body>
+</html>

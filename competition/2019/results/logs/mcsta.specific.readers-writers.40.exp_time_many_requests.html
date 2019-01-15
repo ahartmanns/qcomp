@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - readers-writers exp_time_many_requests 40</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#readers-writers">readers-writers</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 40</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_time_many_requests</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe readers-writers.40.jani --props exp_time_many_requests --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">24.79895782470703s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.1885410637663105e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">readers-writers.40.jani:model: info: ReadersWriters is an MA model.
+readers-writers.40.jani: info: Need 14 bytes per state.
+readers-writers.40.jani: info: Explored 1884366 states.
+readers-writers.40.jani:properties[1]: warning: Computing minimum expected reward in property "exp_time_many_requests" without checking for zero-reward end components.
+
+Peak memory usage: 422 MB
+Analysis results for readers-writers.40.jani
+
++ State space exploration
+  State size:  14 bytes
+  States:      1884366
+  Transitions: 1884366
+  Branches:    3815040
+  Rate:        453845 states/s
+  Time:        4.4 s
+
++ Property exp_time_many_requests
+  Value:  3.7292230127534
+  Bounds: [3.7292230127534, infinity)
+  Time:   19.6 s
+
+  + Precomputations
+    Max. prob. 1 states:          1884366
+    Time for max. prob. 1 states: 5.7 s
+
+  + Value iteration
+    Final error: 9.62977663077294E-07
+    Iterations:  170
+    Time:        13.8 s	</pre>
+</div>
+</body>
+</html>

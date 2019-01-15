@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - resource-gathering expsteps 1300-100-100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#resource-gathering">resource-gathering</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">B</span> = 1300, <span class="tt">GOLD_TO_COLLECT</span> = 100, <span class="tt">GEM_TO_COLLECT</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">expsteps</span> (exp-steps)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe resource-gathering.jani --props expsteps -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 --relative-width -O out.txt Minimal --unsafe -S Memory</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">194.46015906333923s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.664901719197708e-09</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">resource-gathering.jani:model: info: resource-gathering is an MDP model.
+resource-gathering.jani: info: Need 10 bytes per state.
+resource-gathering.jani: info: Explored 958801 states for B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100.
+resource-gathering.jani:properties[1]: warning: Computing minimum expected reward in property "expsteps" without checking for zero-reward end components.
+
+Peak memory usage: 391 MB
+Analysis results for resource-gathering.jani
+Experiment B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100
+
++ State space exploration
+  State size:  10 bytes
+  States:      958801
+  Transitions: 3080401
+  Branches:    3325201
+  Rate:        230039 states/s
+  Time:        4.4 s
+
++ Property expsteps
+  Value:  1292.59258397759
+  Bounds: [1292.59258397759, infinity)
+  Time:   189.2 s
+
+  + Precomputations
+    Max. prob. 1 states:          958801
+    Time for max. prob. 1 states: 141.8 s
+
+  + Value iteration
+    Final error: 5.71902101317378E-07
+    Iterations:  657
+    Time:        47.4 s	</pre>
+</div>
+</body>
+</html>

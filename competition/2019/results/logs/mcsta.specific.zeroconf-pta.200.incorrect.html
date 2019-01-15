@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - zeroconf-pta incorrect 200</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#zeroconf-pta">zeroconf-pta</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">T</span> = 200</td></tr>
+		<tr><td>Property:</td><td><span class="tt">incorrect</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono mcsta/mcsta.exe zeroconf-pta.jani --props incorrect -E T=200 --relative-width -O out.txt Minimal --unsafe -S Memory --chainopt</pre>
+	Settings specific for this benchmark: '--unsafe' = compile model without bounds and assignment checks, '-S Memory' = store all data in memory since the model is small, '--chainopt' = use state chain compression during state space exploration, which tends to work well for PTA and unbounded properties.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.8935935497283936s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.9380212312683267e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">zeroconf-pta.jani:model: info: zeroconf-pta is a PTA model.
+zeroconf-pta.jani: info: Need 9 bytes per state.
+zeroconf-pta.jani: info: Explored 198 states for T=200.
+
+Peak memory usage: 46 MB
+Analysis results for zeroconf-pta.jani
+Experiment T=200
+
++ State space exploration
+  State size:  9 bytes
+  States:      198
+  Transitions: 316
+  Branches:    341
+  Rate:        5657 states/s
+  Time:        0.0 s
+
++ Property incorrect
+  Probability: 0.00130151334159124
+  Bounds:      [0.00130151334159124, 1]
+  Time:        0.0 s
+
+  + Value iteration
+    Final error: 5.93408306744745E-07
+    Iterations:  26
+    Time:        0.0 s	</pre>
+</div>
+</body>
+</html>

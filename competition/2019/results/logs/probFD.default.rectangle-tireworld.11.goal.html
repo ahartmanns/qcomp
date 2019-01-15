@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>probFD - rectangle-tireworld goal 11</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>probFD</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#rectangle-tireworld">rectangle-tireworld</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">xy</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">goal</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">python2.7 probfd-qcomp19/builds/release64/bin/translate/translate.py domain.pddl p06-x11-y11-h4-v3-u40-s6.pddl
+probfd-qcomp19/builds/release64/bin/downward --sas output.sas --engine fretpi-hdp --heuristic hmax --enable-caching --epsilon 1e-6</pre>
+	Probabilistic-FD FRET-pi + HDP configuration
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">3.7575950622558594s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0, 0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Parsing...
+Parsing: [0.020s CPU, 0.016s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.019s wall-clock]
+Preparing model... [0.010s CPU, 0.008s wall-clock]
+Generated 328 rules.
+Computing model... [0.300s CPU, 0.291s wall-clock]
+17060 relevant atoms
+2994 auxiliary atoms
+20054 final queue length
+52076 total queue pushes
+Completing instantiation... [1.260s CPU, 1.269s wall-clock]
+Instantiating: [1.580s CPU, 1.594s wall-clock]
+Computing fact groups...
+Finding invariants...
+5 initial candidates
+Finding invariants: [0.010s CPU, 0.008s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+1 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.009s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.050s CPU, 0.046s wall-clock]
+Translating task: [1.100s CPU, 1.093s wall-clock]
+109 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+2 propositions removed
+Detecting unreachable propositions: [0.520s CPU, 0.527s wall-clock]
+Reordering and filtering variables...
+3 of 3 variables necessary.
+0 of 2 mutex groups necessary.
+15854 of 15854 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.120s CPU, 0.125s wall-clock]
+Translator variables: 3
+Translator derived variables: 0
+Translator facts: 24
+Translator goal facts: 3
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 15854
+Translator axioms: 0
+Translator task size: 92033
+Translator peak memory: 135996 KB
+Writing output... [0.150s CPU, 0.146s wall-clock]
+Done! [3.530s CPU, 3.547s wall-clock]	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Warning: :types specification not allowed here (cf. PDDL BNF)	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">reading input... [t=6.9604e-05s]
+done reading input! [t=0.0295424s]
+variables: 3
+goals: 3
+actions: 15854
+axioms: 0
+has conditional effects: 0
+reconstructing probabilistic actions... [t=0.0295664s]
+done reconstructing probabilistic actions! [t=0.052386s]
+probabilistic actions: 15369 (with 16089 outcomes)
+constructing successor generator... [t=0.056033s]
+done constructing successor generator! [t=0.0572919s]
+Bytes per state: 4
+Property: MaxProb
+Preparing hmax dead end detection heuristic... [t=0.0579257s]
+hmax initialization done! [t=0.0608085s]
+Engine: FRET-pi with HDP
+Starting trap elimination heuristic search wrapper...
+Initial state reward: 1
+Expansions: 100
+Registered states: 229
+Generated states: 1333
+Cached transitions: 719
+Expansion cache hits: 132
+Transition cache hits: 26519
+Approximate transition cache memory usage: 25KB
+Solver time: 0.004174916000000007676s
+Total time: 0.06508464699999999548s	</pre>
+</div>
+</body>
+</html>
