@@ -17,13 +17,13 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files eajs.5.prism --property-input-files eajs.props --property-input-names ExpUtil --translate-messages false --value-floating-point-output-native true --const energy_capacity=250,B=11</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files eajs.5.prism --property-input-files eajs.props --property-input-names ExpUtil --translate-messages false --value-floating-point-output-native true --const energy_capacity=250,B=11</pre>
 	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">39.720266819000244s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">204.72263193130493s</td></tr>
 		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
 	</table>
 </div>
@@ -32,11 +32,37 @@
 	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
 assertions-disabled
 start-parsing
-done-parsing	</pre>
+done-parsing
+model-checking
+analysing-property ExpUtil	</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
-	<pre style="overflow:auto; padding-bottom: 1.5ex">line: 1, column: 11: Unexpected character "^"	</pre>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at epmc.expression.standard.ExpressionOperator.replaceChildren(ExpressionOperator.java:134)
+	at epmc.prism.model.convert.PRISM2JANIConverter.prism2jani(PRISM2JANIConverter.java:926)
+	at epmc.prism.model.convert.PRISM2JANIConverter.prism2jani(PRISM2JANIConverter.java:872)
+	at epmc.prism.model.convert.PRISM2JANIConverter.prism2jani(PRISM2JANIConverter.java:924)
+	at epmc.prism.model.convert.PRISM2JANIConverter.prism2jani(PRISM2JANIConverter.java:872)
+	at epmc.prism.model.convert.PRISM2JANIConverter.prism2jani(PRISM2JANIConverter.java:924)
+	at epmc.prism.model.convert.PRISM2JANIConverter.prism2jani(PRISM2JANIConverter.java:872)
+	at epmc.prism.model.convert.PRISM2JANIConverter.prism2jani(PRISM2JANIConverter.java:924)
+	at epmc.prism.model.convert.PRISM2JANIConverter.prism2jani(PRISM2JANIConverter.java:872)
+	at epmc.prism.model.convert.PRISM2JANIConverter.moduleToAutomaton(PRISM2JANIConverter.java:830)
+	at epmc.prism.model.convert.PRISM2JANIConverter.computeAutomata(PRISM2JANIConverter.java:663)
+	at epmc.prism.model.convert.PRISM2JANIConverter.convert(PRISM2JANIConverter.java:228)
+	at epmc.prism.model.LowLevelPRISMBuilder.toJANI(LowLevelPRISMBuilder.java:80)
+	at epmc.prism.model.LowLevelPRISMBuilder.build(LowLevelPRISMBuilder.java:93)
+	at epmc.modelchecker.UtilModelChecker.buildLowLevel(UtilModelChecker.java:150)
+	at epmc.modelchecker.UtilModelChecker.buildLowLevel(UtilModelChecker.java:169)
+	at epmc.modelchecker.ModelChecker.prepareLowLevel(ModelChecker.java:222)
+	at epmc.modelchecker.ModelChecker.checkProperty(ModelChecker.java:247)
+	at epmc.modelchecker.ModelChecker.check(ModelChecker.java:192)
+	at epmc.command.CommandTaskCheck.executeInServer(CommandTaskCheck.java:67)
+	at epmc.jani.interaction.Analyse.execute(Analyse.java:111)
+	at epmc.jani.interaction.commandline.StartInConsoleJaniInteractionNoJani.execute(StartInConsoleJaniInteractionNoJani.java:91)
+	at epmc.jani.interaction.commandline.StartInConsoleJaniInteractionNoJani.process(StartInConsoleJaniInteractionNoJani.java:68)
+	at epmc.main.EPMC.main(EPMC.java:52)	</pre>
 </div>
 </body>
 </html>

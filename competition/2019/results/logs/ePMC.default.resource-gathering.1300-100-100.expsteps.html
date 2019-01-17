@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>epmc - resource-gathering expsteps 1300-100-100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../style.css">
+</head>
+<body>
+<h1>epmc</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../benchmarks/index.html#resource-gathering">resource-gathering</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">B</span> = 1300, <span class="tt">GOLD_TO_COLLECT</span> = 100, <span class="tt">GEM_TO_COLLECT</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">expsteps</span> (exp-steps)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax java -Xms10240m -Xmx10240m -jar ./epmc-standard.jar check --model-input-files resource-gathering.pm --property-input-files resource-gathering.prctl --property-input-names expsteps --translate-messages false --value-floating-point-output-native true --const B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100</pre>
+	Default settings. The option --translate-messages is set to false to ease the parsing of the output while the --value-floating-point-output-native is set to true to get the float values printed in full, instead of with only 7 digits of precision given by the default %.7f format. 
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.9709126949310303s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '1' is tagged as incorrect. The reference result is '34900/27' (approx. 1292.5925925925926) which means a relative error of '0.9992263610315186' which is larger than the goal precision '0.001'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">0.9992263610315186</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">running-epmc-revision bcbb8ed631893b5fa072e28d29126ca3ba5337e0
+assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property expsteps
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-done 99 0
+iterating
+iterating-done 2 0
+model-checking-done 0
+expsteps: 1.0	</pre>
+</div>
+</body>
+</html>
