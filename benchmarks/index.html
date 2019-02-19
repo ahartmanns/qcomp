@@ -13,18 +13,32 @@
 
 <h1>Quantitative Verification Benchmark Set</h1>
 <div class="belowh1">
-	<a href="../index.html">⮌</a> &nbsp;|&nbsp; License: <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> &nbsp;|&nbsp; <a href="contributing.html">Contributing</a> &nbsp;|&nbsp;&thinsp; <a href="conversions.html">JANI Converters</a>
+	<a href="../index.html">⮌</a> &nbsp;|&nbsp; <span data-bind="visible: showLicensing">License: <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></span><a data-bind="click: function() { showLicensing(true); }, visible: !showLicensing()" style="cursor: pointer;">License: CC-BY 4.0</a> &nbsp;|&nbsp; <a href="contributing.html">Contributing</a> &nbsp;|&nbsp;&thinsp; <a href="conversions.html">JANI Converters</a>
 </div>
-<p>
-	The models and results in this benchmark set on <a href="../index.html">qcomp.org</a> are provided under the terms of the
-	<a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
-	Please cite the publication linked as "first presented in" for each model.
-	To contribute a new model, update an existing model, or add new results for an existing model, please consider our
-	<a href="contributing.html">information for contributors</a>.
-	For general questions or comments concerning the benchmark set, contact
-	<script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script>.
-	If you have questions concerning a specific model, please contact the submitter listed for that model.
-</p>
+
+<div class="box" data-bind="visible: showLicensing" style="margin-top: 2.75ex;">
+	<div class="boxlabelo"><div class="boxlabel">Licensing and Citations</div></div>
+	<div style="text-align: justify;">
+		<div data-bind="click: function() { showLicensing(false); }" class="linkcolour clickable" style="position: absolute; top: 0px; right: 0.5ex; text-transform: uppercase; font-size: 90%;">
+			(<span style="font-size: 90%; font-weight: bold;">close</span>)
+		</div>
+		<div style="float: right; height: 2ex; width: 8ex;"></div>
+		<div style="margin-bottom: 0.75ex;">
+			This benchmark set, including all models and results, is provided under the terms of the
+			<a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
+			If you <u>redistribute</u> the benchmark set &ndash; modified, in part, or whole &ndash; or individual benchmarks, make sure to keep and appropriately display all necessary license and author information.
+			If you <u>use</u> the benchmark set or individual benchmarks, for example in performance comparisons, please cite the benchmark set or the invidivual benchmarks.
+			To refer to a specific benchmark, cite the publication linked as "first presented in" for each model.
+			Cite the following article to refer to the benchmark set as a whole:
+		</div>
+		<div style="margin-bottom: 0.75ex; font-style: italic; padding: 0ex 2ex;" id="licensing2">
+			Arnd Hartmanns, Michaela Klauck, David Parker, Tim Quatmann, and Enno Ruijters:
+			The Quantitative Verification Benchmark Set.
+			Proceedings of the 24th International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2019).
+			Lecture Notes in Computer Science, vol. 11427, Springer, 2019. <!--[<a href="">DOI</a>]-->
+		</div>
+	</div>
+</div>
 
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabel">Search</div></div>
@@ -104,7 +118,7 @@
 		<a data-bind="click: goToResultsBrowser, css: { disabled: !hasChecked() }" href="results.html" class="nodec">&nbsp;⤷&nbsp;compare results</a>
 	</div>
 </div>
-<div style="height: 1.5ex;"></div>
+
 <!-- ko if: selectedModel() !== null -->
 	<div id="modelDiv" data-bind="with: selectedModel" class="box">
 		<div data-bind="click: $root.close" class="linkcolour clickable" style="position: absolute; top: 0px; right: 0.5ex; text-transform: uppercase; font-size: 90%;">
@@ -390,6 +404,17 @@
 		<!-- /ko -->
 	</div>
 <!-- /ko -->
+
+<div class="box" style="margin-bottom: 64px;">
+	<div class="boxlabelo"><div class="boxlabel">Notes</div></div>
+	<div style="font-style: italic; font-size: 90%;">
+		<!--To contribute a new model, update an existing model, or add new results for an existing model, please consider our
+		<a href="contributing.html">information for contributors</a>.-->
+		For general questions or comments concerning the benchmark set, contact
+		<script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'nnamtraH dnrAs');</script>.
+		If you have questions concerning a specific model, please contact the submitter listed for that model.
+	</div>
+</div>
 
 </body>
 </html>

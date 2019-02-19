@@ -2,6 +2,7 @@
 // View model
 var qmcc = {};
 qmcc.params = [];
+qmcc.showLicensing = ko.observable(true);
 qmcc.modelTypes = [ "CTMC", "DTMC", "MA", "MDP", "PTA" ];
 qmcc.originals = ko.observableArray();
 qmcc.propertyTypes = [ "P", "Pb", "E", "Eb", "Ei", "S" ];
