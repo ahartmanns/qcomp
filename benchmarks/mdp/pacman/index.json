@@ -21,7 +21,7 @@
 	"description": "The benchmark encodes a small variant of the arcade game Pac-Man in which the ghosts behave randomly based on observed behavior. The benchmark has been extended with some manual abstraction in order to improve scalability. In some sense, it is a grid-world with many obstacles: still largely connected, but far fewer actions than states",
 	"references": [
 	],
-	"notes": "learned probabilities.",
+	"notes": "learned probabilities",
 	"parameters": [
 		{
 			"name": "MAXSTEPS",
