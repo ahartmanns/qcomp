@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>QComp 2020 - qcomp.org</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<script type="text/javascript" src="../../script.js"></script>
+</head>
+<body>
+
+<h1>QComp 2020</h1>
+<div class="belowh1">
+	<a href="../../index.html">⮌</a> &nbsp;|&nbsp; <a href="#timeline">Timeline</a> &nbsp;|&nbsp; <a href="#participation">Participation</a> &nbsp;|&nbsp; <a href="#evaluation">Evaluation</a> &nbsp;|&nbsp; <a href="#ltl">LTL</a> &nbsp;|&nbsp; <a href="#organisers">Organisers</a>
+</div>
+<p>
+	The <b>2020 Comparison of Tools for the Analysis of Quantitative Formal Models</b> (<a href="../../index.html">QComp</a> 2020) will be part of <a href="http://isola-conference.org/isola2020/">ISoLA 2020</a>.
+	It is the second <b>friendly competition</b> among verification and analysis tools for quantitative formal models.
+	Based on a <a href="benchmarks.html">curated subset of benchmarks</a> from the <a href="../../benchmarks/index.html">Quantitative Verification Benchmark Set</a>, QComp will compare the performance, versatility, and usability of the participating tools.
+</p>
+<p>
+	QComp 2020 is a flexible and friendly event.
+	There is no global scoring or ranking of tools.
+	Instead, we collect data and publish comparison tables, diagrams, and text about the performance, versatility, and usability of the participating tools.
+	We analyse and highlight every tool's strengths and tradeoffs.
+	The entire performance evaluation and report-writing process will be performed in close collaboration with the participants to quickly include feedback and resolve any setup errors or misunderstandings early.
+	We expect all participants to co-author the competition report.
+</p>
+
+
+<h2 id="timeline">Timeline</h2>
+<p>
+	All deadlines are "anywhere on Earth" (UTC-12) and all dates are in 2020.
+</p>
+<ul>
+	<li>
+		<span style="display: inline-block; width: 12.5ex; font-weight: bold;">February 08:</span>
+		<b>Registration deadline</b>
+		(announce intention to participate, via <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'resinagro eht ot liam-es');</script>)
+	</li>
+	<li>
+		<span style="display: inline-block; width: 12.5ex; font-weight: bold;">March 07:</span>
+		<b>Tool package submission</b> for performance evaluation
+	</li>
+	<li>
+		<span style="display: inline-block; width: 12.5ex;">March 28:</span>
+		Tool and algorithm description submission for competition report
+	</li>
+	<li>
+		<span style="display: inline-block; width: 12.5ex;">April 18:</span>
+		Announcement of the results of the <a href="#evaluation">performance evaluation</a>
+	</li>
+	<li>
+		<span style="display: inline-block; width: 12.5ex;">April 25:</span>
+		Deadline for objections to performance evaluation results
+	</li>
+	<li>
+		<span style="display: inline-block; width: 12.5ex;">May 09:</span>
+		Tool package resubmission (for re-evaluation in case of objections)
+	</li>
+	<li>
+		<span style="display: inline-block; width: 12.5ex;">June 02:</span>
+		Announcement of the results of the performance re-evaluation
+	</li>
+</ul>
+<p>
+	The organisers will make the tool packaging instructions available to the participants around February 15.
+	The purpose of the re-evaluation phase in May is to allow participants to fix bugs in their tools that were not discovered in their own testing prior to the original tool submission.
+	It is not intended for significant changes with the aim of improving the tools' performance.
+</p>
+
+
+<h2 id="participation">Participation</h2>
+<p>
+	Every tool that solves a significant subset of the <a href="benchmarks.html">competition benchmarks</a> is welcome, even if it may not support all model types, the JANI format, or all included kinds of properties.
+	Every participating tool must be associated to exactly one participant (with exceptions), who we expect to co-author the competition report.
+	A participant may participate with multiple tools, or multiple variants (e.g. analysis engines) of the same tool.
+	The currently registered participants are:
+</p>
+<table class="compact">
+	<thead>
+		<tr>
+			<th>Participant</th>
+			<th>Tools</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td rowspan="2">
+				<a href="http://arnd.hartmanns.name/">Arnd Hartmanns</a>
+			</td>
+			<td>
+				<a href="http://www.modestchecker.net/"><b>mcsta</b></a>
+				 [<a href="https://doi.org/10.1007/978-3-319-24953-7_10" class="reference">HH15</a>]:
+				a disk-based explicit-state model checker for MDP, MA, and PTA specified in Modest or JANI, part of the <a href="http://www.modestchecker.net/">Modest Toolset</a> [<a href="https://doi.org/10.1007/978-3-642-54862-8_51" class="reference">HH14</a>]
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="http://www.modestchecker.net/"><b>modes</b></a>
+				[<a href="https://doi.org/10.1007/978-3-319-89963-3_20" class="reference">BDHS18</a>]:
+				a statistical model checker for MDP, MA, and PTA specified in Modest or JANI, part of the <a href="http://www.modestchecker.net/">Modest Toolset</a> [<a href="https://doi.org/10.1007/978-3-642-54862-8_51" class="reference">HH14</a>]
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<h2 id="evaluation">Evaluation</h2>
+<p>
+	The evaluation of performance, versatility, and usability will be performed by the organisers.
+</p>
+
+<h3>Hardware</h3>
+<p>
+	All tools will be evaluated on a standard desktop machine running an up-to-date 64-bit version of Ubuntu Linux 18.04.
+	We plan to use the same machine with an Intel Core i7-920 CPU and 12 GB of RAM that was previously used for <a href="../2019/index.html">QComp 2019</a>.
+	We will use a timeout of 30 minutes per model and tool.
+	The organisers will make the benchmarking scripts available to participants for testing.
+	Participants provide a tool package, installation instructions, and scripts that generate command lines to run the <a href="benchmarks.html">selected benchmarks</a> and extract the tool's results.
+	We will not directly evaluate memory usage, but note that the amount of RAM available in the central server is not high.
+	Thus memory usage will be evaluated indirectly by considering for which (large) models a tool fails due to an out-of-memory situation.
+</p>
+
+<h3>Performance Evaluation Tracks</h3>
+<p>
+	Due to the different types of correctness guarantees on results provided by different analysis methods, we will compare tools in three different tracks:
+</p>
+<ul>
+	<li>
+		<b>ε-correct results</b>:
+		tools that unconditionally guarantee an a priori fixed bound on the difference between the tool's result and the correct value.
+		These tools typically use sound iterative algorithms with floating-point arithmetic like interval iteration.
+	</li>
+	<li>
+		<b>probably ε-correct results</b>:
+		tools/algorithms that guarantee an a priori fixed bound on the difference between the tool's result and the correct value with a certain probability.
+		These tools typically use simulation-based approaches such as statistical model checking.
+		Tools that participate in the <i>ε-correct results</i> track automatically participate in this track, too.
+	</li>
+	<li>
+		<b>often ε-correct results</b>:
+		tools/algorithms that do not guarantee any a priori fixed bound on the difference between the tool's result and the correct value, but often deliver results that meet such a bound.
+		These tools typically use unsound iterative algorithms like standard value iteration, or compute over- or underapproximations.
+		We will perform two evaluations in this track:
+		<ul>
+			<li>one in which we report runtime and the number of incorrect results, and</li>
+			<li>one where we only report the error that the tool achieved within a 10-minute timeout.</li>
+		</ul>
+	</li>
+</ul>
+
+<h3>Tool Parameters</h3>
+<p>
+	All tools will be evaluated in two settings:
+</p>
+<ul>
+	<li>
+		once with <b>default parameters</b> that must be the same for all benchmark instances, and
+	</li>
+	<li>
+		once with <b>tweaked parameters</b> that may additionally take the following criteria, which are given to the script that generates the command lines, into account:
+		<ul>
+			<li>the type of the model (DTMC, CTMC, ...),</li>
+			<li>the type of the property (unbounded probabilistic reachability, unbounded expected reward, ...), and</li>
+			<li>an indication of the expected size of the state space (e.g. less than 100000 states, less than 1 million states, ...).</li>
+		</ul>
+	</li>
+</ul>
+
+<h3>Correctness of Results</h3>
+<p>
+	We expect tools to provide results with a relative error of ± 1e-3.
+	Statistical tools (e.g. simulators) should provide results outside of this error bound with a probability of at most 5 %.
+</p>
+<p>
+	For quantitative benchmarks, it is often not clear what the true, correct numeric result for a property is.
+	This is due to most tools that scale to large models using inexact floating-point arithmetic, and because any result may be affected by bugs in whatever "reference" tool is used.
+	At the same time, it does not make sense to report performance data when a tool provides an incorrect result as this may be due to an error that drastically reduces or increases the analysis time.
+	For this reason, QComp adopts the following pragmatic approach to evaluate the correctness of the results produced by the participating tools:
+	The organisers have used the most trustworthy analysis approach available (e.g. an exact-arithmetic solver for small and a model checker using a sound iterative numerical method for large models) to produce <i>reference results</i> for all selected models.
+	Participants may use any other tool to try to refute the correctness of any of those reference results.
+	If this happens, all participants will discuss and agree on a new reference result, or decide to exclude the affected benchmark.
+	During the performance evaluation phase, every result that does not agree with the reference result up to the desired precision will be considered as incorrect.
+	The number of incorrect results produced by a tool will be listed in the competition report.
+</p>
+
+<h3>Versatility and Usability</h3>
+<p>
+	As part of the competition report, we will also evaluate the versatility and usability of all participating tools.
+	Versatility is determined by the types and sizes of models that the tool is able to successfully analyse in the performance evaluation.
+	Usability is the quality of the tool's documentation (online, or provided as help text or messages within the tool), the availability of an easy-to-use graphical interface, how involved the installation process is, what platforms the tool runs on, whether it provides sensible default parameter settings, and so on.
+	The usability evaluation will follow clearly defined criteria that will be agreed upon among the participants before the performance evaluation starts.
+</p>
+
+
+<h2>Linear Temporal Logic</h2>
+<p>
+	Several participants of <a href="../2019/index.html">QComp 2019</a> expressed an interest in comparing their tools' performance with respect to computing the probabilities of formulas in linear temporal logic (LTL).
+	QComp 2020 will include such an evaluation if it includes tools from at least three participants, and those participants agree on a set of LTL benchmark instances by the tool package submission deadline.
+	These benchmarks have to be available in JANI format, and eventually be added to the <a href="../../benchmarks/index.html">Quantitative Verification Benchmark Set</a>.
+	The organisers will help coordinate such an effort and perform the LTL performance evaluation.
+</p>
+
+
+<h2 id="organisers">Organisers</h2>
+<ul class="none">
+	<li>
+		Organisation &amp; communication:
+		<a href="http://arnd.hartmanns.name/">Arnd Hartmanns</a>
+		<script type="text/javascript">WriteMailLinkHtml('n.etnewtu@snnamtrah.a:otliaml', '<img src="../../email.png" style="width: 13px; height: 11px; vertical-align: middle; margin-left: 2px;" />');</script>
+		(<a href="https://www.utwente.nl/">University of Twente</a>, The Netherlands)
+	</li>
+	<li>
+		Technical setup &amp; tool execution:
+		<a href="https://depend.cs.uni-saarland.de/~klauck/">Michaela Klauck</a>
+		<script type="text/javascript">WriteMailLinkHtml('d.dnalraas-inu.dneped@kcualk:otliame', '<img src="../../email.png" style="width: 13px; height: 11px; vertical-align: middle;" />');</script>
+		(<a href="https://www.uni-saarland.de/">Saarland University</a>, Germany)
+	</li>
+</p>
+
+</body>
+</html>
