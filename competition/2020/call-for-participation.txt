@@ -1,0 +1,21 @@
+Subject: QComp 2020: call for tool participation
+To: concurrency@listserver.tue.nl, types-announce@lists.seas.upenn.edu, qest-announce@iti.uiuc.edu
+>>>
+QComp 2020
+The 2020 Comparison of Tools for the Analysis of Quantitative Formal Models
+http://qcomp.org/competition/2020/
+
+QComp 2020 is the second friendly competition of tools for the analysis of quantitative formal models. We seek *tool participants*.
+
+The competition covers models with a semantics in terms of discrete- and continuous-time Markov chains, Markov decision processes, Markov automata, and probabilistic timed automata. Participation is open to all related analysis tools, in particular both model checkers as well as simulation-based tools.
+
+The QComp 2020 benchmark set is a subset of the Quantitative Verification Benchmark Set available at qcomp.org. All benchmarks are provided in their original format (Galileo, GreatSPN, Modest, PGCL, PPDDL, or PRISM) as well as in the JANI model exchange format (see jani-spec.org).
+
+We expect to publish a competition report co-authored by all participants at ISoLA 2020 (subject to peer review).
+
+The deadline for tool package submission is March 09, 2020.
+We ask participants to register as soon as possible by contacting the organisers:
+
+Arnd Hartmanns (University of Twente, The Netherlands) <...email...>
+Michaela Klauck (Saarland University, Germany) <...email...>
+<<<
