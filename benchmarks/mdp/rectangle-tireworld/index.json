@@ -55,10 +55,6 @@
 				{
 					"states": [
 						{
-							"number": 50,
-							"note": "mcsta"
-						},
-						{
 							"note": "Storm",
 							"number": 50
 						}
@@ -94,10 +90,6 @@
 			"open-parameter-values": [
 				{
 					"states": [
-						{
-							"number": 242,
-							"note": "mcsta"
-						},
 						{
 							"note": "Storm",
 							"number": 242
