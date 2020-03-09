@@ -32,8 +32,8 @@
 	All deadlines are "anywhere on Earth" (UTC-12) and all dates are in 2020.
 </p>
 <ul>
-	<li>
-		<span style="display: inline-block; width: 12.5ex; font-weight: bold;">Now:</span>
+	<li style="color: #A0A0A0;">
+		<span style="display: inline-block; width: 12.5ex; font-weight: bold;">February:</span>
 		<b>Registration</b>
 		(announce intention to participate, via <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'resinagro eht ot liam-es');</script>)
 	</li>
@@ -90,7 +90,7 @@
 			</td>
 			<td>
 				<a href="https://github.com/utwente-fmt/DFTRES"><b>DFTRES</b></a>
-				[<a href="https://doi.org/10.1007/978-3-319-66266-4_2" class="reference">RRBS17</a>]:
+				[<a href="https://doi.org/10.1016/j.ress.2019.02.004" class="reference">RRBS19</a>]:
 				a rare-event simulator using importance sampling for dynamic fault trees specified in the Galileo language or JANI
 			</td>
 		</tr>
@@ -197,27 +197,32 @@
 <ul>
 	<li>
 		<b>correct results</b>:
-		tools that unconditionally guarantee a difference of zero between the tool's result and the correct value.
+		tools/algorithms that unconditionally guarantee a difference of zero between the tool's result and the correct value.
 		These tools could e.g. use techniques based on rational arithmetic, state elimination, or rational search.
+		We check whether the results provided by tools are within a relative error of ± 1e-14 compared to the reference results in order to allow implementations that use (double-precision) floating-point arithmetic, too.
 	</li>
 	<li>
 		<b>ε-correct results</b>:
-		tools that unconditionally guarantee an a priori fixed bound on the difference between the tool's result and the correct value.
+		tools/algorithms that unconditionally guarantee an a priori fixed bound on the difference between the tool's result and the correct value.
+		They must provide results within a relative error of ± 1e-6 compared to the reference results.
 		These tools typically use sound iterative algorithms with floating-point arithmetic like interval iteration.
+		Tools that participate in the <i>correct results</i> track should participate in this track, too.
 	</li>
 	<li>
 		<b>probably ε-correct results</b>:
 		tools/algorithms that guarantee an a priori fixed bound on the difference between the tool's result and the correct value with a certain probability.
+		They must provide results within a relative error of ± 5e-2 compared to the reference results with probability 0.95.
 		These tools typically use simulation-based approaches such as statistical model checking.
-		Tools that participate in the <i>ε-correct results</i> track automatically participate in this track, too.
+		Tools that participate in the <i>ε-correct results</i> track should participate in this track, too.
 	</li>
 	<li>
 		<b>often ε-correct results</b>:
 		tools/algorithms that do not guarantee any a priori fixed bound on the difference between the tool's result and the correct value, but often deliver results that meet such a bound.
 		These tools typically use unsound iterative algorithms like standard value iteration, or compute over- or underapproximations.
+		Tools that participate in the <i>probably ε-correct results</i> track should participate in this track, too.
 		We will perform two evaluations in this track:
 		<ul>
-			<li>one in which we report runtime and the number of incorrect results, and</li>
+			<li>one in which we report runtime and the number of incorrect results, for a relative error of ± 1e-3, and</li>
 			<li>one where we only report the error that the tool achieved within a 10-minute timeout.</li>
 		</ul>
 	</li>
@@ -229,7 +234,7 @@
 </p>
 <ul>
 	<li>
-		once with <b>default parameters</b> that must be the same for all benchmark instances, and
+		once with <b>default parameters</b> that must be the same for all benchmark instances (but that can differ between tracks), and
 	</li>
 	<li>
 		once with <b>tweaked parameters</b> that may additionally take the following criteria, which are given to the script that generates the command lines, into account:
@@ -242,10 +247,6 @@
 </ul>
 
 <h3>Correctness of Results</h3>
-<p>
-	We expect tools to provide results with a relative error of ± 1e-3.
-	Statistical tools (e.g. simulators) should provide results outside of this error bound with a probability of at most 5 %.
-</p>
 <p>
 	For quantitative benchmarks, it is often not clear what the true, correct numeric result for a property is.
 	This is due to most tools that scale to large models using inexact floating-point arithmetic, and because any result may be affected by bugs in whatever "reference" tool is used.
