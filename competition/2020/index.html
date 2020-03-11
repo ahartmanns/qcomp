@@ -38,7 +38,7 @@
 		(announce intention to participate, via <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'resinagro eht ot liam-es');</script>)
 	</li>
 	<li>
-		<span style="display: inline-block; width: 12.5ex; font-weight: bold;">March 09:</span>
+		<span style="display: inline-block; width: 12.5ex; font-weight: bold;">March 11:</span>
 		<b>Tool package submission</b> for performance evaluation
 	</li>
 	<li>
@@ -198,15 +198,22 @@
 	<li>
 		<b>correct results</b>:
 		tools/algorithms that unconditionally guarantee a difference of zero between the tool's result and the correct value.
-		These tools could e.g. use techniques based on rational arithmetic, state elimination, or rational search.
-		We check whether the results provided by tools are within a relative error of ± 1e-14 compared to the reference results in order to allow implementations that use (double-precision) floating-point arithmetic, too.
+		These tools could e.g. use techniques based on parametric model checking, state elimination with rational arithmetic, or rational search.
+		Tools return a reduced fraction (as a string) that must be equal to the reference result.
+	</li>
+	<li>
+		<b>floating-point correct results</b>:
+		tools/algorithms that unconditionally guarantee a difference of zero between the tool's result and the correct value modulo imprecisions of floating-point arithmetic.
+		These tools could e.g. use techniques based on state elimination with floating-point arithmetic.
+		We check whether the results provided by tools are within a relative error of ± 1e-14 compared to the reference results.
+		Tools that participate in the <i>correct results</i> track should participate in this track, too.
 	</li>
 	<li>
 		<b>ε-correct results</b>:
 		tools/algorithms that unconditionally guarantee an a priori fixed bound on the difference between the tool's result and the correct value.
 		They must provide results within a relative error of ± 1e-6 compared to the reference results.
 		These tools typically use sound iterative algorithms with floating-point arithmetic like interval iteration.
-		Tools that participate in the <i>correct results</i> track should participate in this track, too.
+		Tools that participate in the <i>floating-point correct results</i> track should participate in this track, too.
 	</li>
 	<li>
 		<b>probably ε-correct results</b>:
