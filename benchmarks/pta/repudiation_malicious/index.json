@@ -84,10 +84,37 @@
 							"name": "T",
 							"value": 20
 						}
+					],
+					"results": [
+						{
+							"property": "deadline",
+							"value": {
+								"lower": 0.10565711626138749,
+								"upper": 0.10565796287519483
+							},
+							"note": "PRISM"
+						},
+						{
+							"property": "eventually",
+							"value": {
+								"lower": 0.001072402434,
+								"upper": 0.001072402634
+							},
+							"note": "PRISM"
+						}
 					]
 				}
 			]
 		}
 	],
-	"results": []
+	"results": [
+		{
+			"reference": true,
+			"file": "results/PRISM.20.deadline.2020-02-29.json"
+		},
+		{
+			"reference": true,
+			"file": "results/PRISM.20.eventually.2020-02-29.json"
+		}
+	]
 }
