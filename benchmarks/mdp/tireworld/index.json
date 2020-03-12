@@ -183,6 +183,16 @@
 							"number": 94371750,
 							"note": "Storm/dd"
 						}
+					],
+					"results": [
+						{
+							"property": "goal",
+							"value": {
+								"lower": 0.9359999999999999,
+								"upper": 0.9360000000000105
+							},
+							"note": "mcsta"
+						}
 					]
 				}
 			]
@@ -211,6 +221,10 @@
 		{
 			"reference": true,
 			"file": "results/Storm.exact.35.2018-10-03.json"
+		},
+		{
+			"reference": true,
+			"file": "results/mcsta.45.2020-03-11.json"
 		}
 	]
 }
