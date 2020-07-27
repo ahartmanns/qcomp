@@ -12,10 +12,7 @@
 			"notes": "Initial version."
 		}
 	],
-	"author": [
-		"Daniel Bryce <bryce@usu.edu>",
-		"Olivier Buffet <olivier.buffet@loria.fr>"
-	],
+	"author": "Olivier Buffet <olivier.buffet@loria.fr>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"source": "http://icaps-conference.org/ipc2008/probabilistic/wiki/index.php/Results.html",
 	"part-of": {
