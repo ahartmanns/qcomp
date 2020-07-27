@@ -13,12 +13,13 @@
 		}
 	],
 	"author": [
-		"Stuart Cheshire <>",
-		"Bernard Aboba <bernarda@microsoft.com>",
-		"Erik Guttman <>"
+		"Marta Kwiatkowska <Marta.Kwiatkowska@cs.ox.ac.uk>",
+		"Gethin Norman <gethin.norman@glasgow.ac.uk>",
+		"David Parker <d.a.parker@cs.bham.ac.uk>",
+		"Jeremy Sproston <sproston@di.unito.it>"
 	],
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
-	"source": "https://www.rfc-editor.org/info/rfc3927",
+	"source": "https://doi.org/10.1007/s10703-006-0005-2",
 	"part-of": {
 		"name": "the PRISM Benchmark Suite",
 		"url": "http://www.prismmodelchecker.org/benchmarks/"
