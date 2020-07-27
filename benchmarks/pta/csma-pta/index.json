@@ -24,10 +24,11 @@
 		"name": "the PRISM Benchmark Suite",
 		"url": "http://www.prismmodelchecker.org/benchmarks/"
 	},
-	"description": "This is a PRISM case study [1]. The CSMA/CD (Carrier Sense, Multiple Access with Collision Detection) IEEE protocol is designed for networks with a single channel and specifies the behaviour of `N´ stations with the aim of minimising simultaneous use of the channel (data collision). When a station has data to send, it listens to the medium, after which, if the medium was free (no one transmitting), the station starts to send its data. On the other hand, if the medium was sensed busy, the station waits a random amount of time and then repeats this process. `K´ is the maximum backoff count and `COL´ the maximum number of collisions. See [2] for more details",
+	"description": "This is a PRISM case study [1]. The CSMA/CD (Carrier Sense, Multiple Access with Collision Detection) IEEE protocol is designed for networks with a single channel and specifies the behaviour of `N´ stations with the aim of minimising simultaneous use of the channel (data collision). When a station has data to send, it listens to the medium, after which, if the medium was free (no one transmitting), the station starts to send its data. On the other hand, if the medium was sensed busy, the station waits a random amount of time and then repeats this process. `K´ is the maximum backoff count and `COL´ the maximum number of collisions. The model we consider here is a probabilistic extension of the timed automata model given in [3]. See [2] for more details",
 	"references": [
 		"https://doi.org/10.1109/QEST.2012.14",
-		"http://www.prismmodelchecker.org/casestudies/csma.php"
+		"http://www.prismmodelchecker.org/casestudies/csma.php",
+		"https://doi.org/10.1109/32.159837"
 	],
 	"notes": "PRISM benchmark",
 	"parameters": [
