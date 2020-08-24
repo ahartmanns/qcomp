@@ -46,12 +46,12 @@
 	"properties": [
 		{
 			"name": "messagesA",
-			"description": "The expected number of messages from B, where A needs to know a pair once B knows a pair.",
+			"description": "The expected number of messages from B that A needs in order to know a pair once B knows a pair.",
 			"type": "exp-reward"
 		},
 		{
 			"name": "messagesB",
-			"description": "The expected number of messages from A, where B needs to know a pair once A knows a pair.",
+			"description": "The expected number of messages from A that B needs in order to know a pair once A knows a pair.",
 			"type": "exp-reward"
 		},
 		{
