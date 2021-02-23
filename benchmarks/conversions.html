@@ -21,7 +21,7 @@
 
 <h2 id="otherstojani">Conversion of Models to JANI</h2>
 <p>
-	All models in the <a href="index.html">Quantitative Verification Benchmark Set</a> need to be available in the <a href="http://www.jani-spec.org/">JANI</a> model format.
+	All models in the <a href="index.html">Quantitative Verification Benchmark Set</a> need to be available in the <a href="https://jani-spec.org/">JANI</a> model format.
 	The following conversions from other modelling formalisms are available in tools:
 </p>
 <ul class="text continue">
@@ -29,16 +29,16 @@
 		<a href=#galileotojani>Galileo to JANI</a> via <a href="https://github.com/utwente-fmt/DFTRES">DFTRES</a>
 	</li>
 	<li>
-		<a href=#gspntojani>Generalised stochastic Petri nets (GSPN) to JANI</a> via <a href="http://www.stormchecker.org">Storm</a>
+		<a href=#gspntojani>Generalised stochastic Petri nets (GSPN) to JANI</a> via <a href="https://www.stormchecker.org">Storm</a>
 	</li>
 	<li>
-		<a href=#modesttojani>Modest to JANI</a> via <a href="http://www.modestchecker.net">moconv</a>
+		<a href=#modesttojani>Modest to JANI</a> via <a href="https://www.modestchecker.net">moconv</a>
 	</li>
 	<li>
 		<a href=#PPDDLtojani>PPDDL to JANI</a> via <a href="https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip">ppddl2jani</a>
 	</li>
 	<li>
-		<a href=#prismtojani>PRISM to JANI</a> via <a href="http://www.stormchecker.org">Storm</a>
+		<a href=#prismtojani>PRISM to JANI</a> via <a href="https://www.stormchecker.org">Storm</a>
 	</li>
 </ul>
 
@@ -61,7 +61,7 @@
 
 <h3 id="gspntojani">GSPN to JANI</h3>
 <p>
-	GSPN given in <a href="http://www.di.unito.it/~greatspn/index.html">GreatSPN project files</a> can be converted into JANI using <tt>Storm-gspn</tt>, which is part of <a href="http://www.stormchecker.org">Storm</a>.
+	GSPN given in <a href="http://www.di.unito.it/~greatspn/index.html">GreatSPN project files</a> can be converted into JANI using <tt>Storm-gspn</tt>, which is part of <a href="https://www.stormchecker.org">Storm</a>.
 </p>
 <p>
 	For example, the GreatSPN file <a href="ma/readers-writers/readers-writers.pnpro">readers-writers.pnpro</a>, the capacities file <a href="ma/readers-writers/readers-writers.capacities">readers-writers.capacities</a>, and the property file <a href="ma/readers-writers/readers-writers.csl">readers-writers.csl</a> can be converted into a JANI file using <tt>Storm-gspn</tt> version 1.2.4 with the following command:
@@ -70,7 +70,7 @@
 	storm-gspn --gspnfile readers-writers.pnpro --capacitiesfile readers-writers.capacities --prop readers-writers.csl --constants K=35 --to-jani readers-writers-35.jani
 </p>
 <p>
-	Here, the capacities file specifies upper bounds for the number of tokens in each place to guarantee a finite Markov model. The property file contains properties using the syntax of <a href="http://www.prismmodelchecker.org/manual/PropertySpecification/">PRISM properties</a>.
+	Here, the capacities file specifies upper bounds for the number of tokens in each place to guarantee a finite Markov model. The property file contains properties using the syntax of <a href="https://www.prismmodelchecker.org/manual/PropertySpecification/">PRISM properties</a>.
 	The option <tt>--constants</tt> specifies values for constants/templates occurring in the GreatSPN file.
 	In addition, the following options can be used:
 </p>
@@ -86,7 +86,7 @@
 
 <h3 id="modesttojani">Modest to JANI</h3>
 <p>
-	Conversion of input models given in the <a href="http://www.modestchecker.net/Publications/?HHHK13">Modest language</a> is supported by <tt>moconv</tt>, which is part of the <a href="http://www.modestchecker.net">Modest Toolset</a>.
+	Conversion of input models given in the <a href="https://www.modestchecker.net/Publications/?HHHK13">Modest language</a> is supported by <tt>moconv</tt>, which is part of the <a href="https://www.modestchecker.net">Modest Toolset</a>.
 </p>
 <p>
 	For example, the Modest model file <a href="mdp/beb/beb.3.modest">beb.3.modest</a> can be converted into a JANI file using <tt>moconv</tt> with the following command:
@@ -106,7 +106,7 @@
 
 <h3 id="PPDDLtojani">PPDDL to JANI</h3>
 <p>
-	Conversion of input models given in the <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.539.6990&rep=rep1&type=pdf">Probabilistic Planning Domain Definition Language (PPDDL)</a> is supported by <a href="https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip"><tt>ppddl2jani</tt></a>, a script written by <a href="https://fai.cs.uni-saarland.de/steinmetz/">Marcel Steinmetz</a>, which uses parts of the <a href="http://www.fast-downward.org/HomePage">Fast Downward</a> PPDDL parser.
+	Conversion of input models given in the <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.539.6990&rep=rep1&type=pdf">Probabilistic Planning Domain Definition Language (PPDDL)</a> is supported by <a href="https://fai.cs.uni-saarland.de/downloads/ppddl2jani.zip"><tt>ppddl2jani</tt></a>, a script written by <a href="https://fai.cs.uni-saarland.de/steinmetz/">Marcel Steinmetz</a>, which uses parts of the <a href="http://www.fast-downward.org/HomePage">Fast Downward</a> PPDDL parser.
 </p>
 <p>
 	For example, the PPDDL files of the elevator problem <a href="mdp/elevators/p01.pddl">p01.pddl</a> and <a href="mdp/elevators/domain.pddl">domain.pddl</a> can be converted into a JANI file using <tt>ppddl2jani</tt> with the following command: 
@@ -117,7 +117,7 @@
 
 <h3 id="prismtojani">PRISM to JANI</h3>
 <p>
-	Conversion of input models given in the <a href="http://www.prismmodelchecker.org/manual/ThePRISMLanguage/">PRISM launguage</a> is supported by <tt>Storm-conv</tt>, which is part of <a href="http://www.stormchecker.org">Storm</a>.
+	Conversion of input models given in the <a href="https://www.prismmodelchecker.org/manual/ThePRISMLanguage/">PRISM launguage</a> is supported by <tt>Storm-conv</tt>, which is part of <a href="https://www.stormchecker.org">Storm</a>.
 </p>
 <p>
 	For example, the PRISM model file <a href="mdp/resource-gathering/resource-gathering.pm">resource-gathering.pm</a> and the PRISM property file <a href="mdp/resource-gathering/resource-gathering.prctl">resource-gathering.prctl</a> can be converted into a JANI file using <tt>Storm-conv</tt> version 1.2.4 with the following command:
@@ -154,7 +154,7 @@
 
 <h3 id="jani2ppddl">JANI to PPDDL</h3>
 <p>
-	Conversion of JANI MDP models using a restricted JANI syntax into the <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.539.6990&rep=rep1&type=pdf">Probabilistic Planning Domain Definition Language (PPDDL)</a> is supported by <a href="https://dgit.cs.uni-saarland.de/Michaela/jani-ppddl-translation-release"><tt>jani2ppddl</tt></a>, a script written by <a href="https://depend.cs.uni-saarland.de/~klauck">Michaela Klauck</a>.
+	Conversion of JANI MDP models using a restricted JANI syntax into the <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.539.6990&rep=rep1&type=pdf">Probabilistic Planning Domain Definition Language (PPDDL)</a> is supported by <a href="https://dgit.cs.uni-saarland.de/Michaela/jani-ppddl-translation-release"><tt>jani2ppddl</tt></a>, a script written by <a href="https://depend.cs.uni-saarland.de/~klauck">Michaela Klauck</a>.
 </p>
 <p>
 	For example, the JANI file of Rabin's mutual exclusion protocol <a href="mdp/rabin/rabin.3.jani">rabin.3.jani</a> can be converted into a PPDDL domain and a problem file using <tt>jani2ppddl</tt> with the following command, where the configuration file lists the arithmetic expressions used in the model (see the script's webpage for more information).
@@ -165,12 +165,12 @@
 
 <h2 id="janitojani">JANI-to-JANI Conversions</h2>
 <p>
-	<a href="http://www.jani-spec.org/">JANI</a> includes model types and advanced modelling features that might not be supported by some tools.
+	<a href="https://jani-spec.org/">JANI</a> includes model types and advanced modelling features that might not be supported by some tools.
 	The following tools implement conversions to less expressive model types or more conservative fragments of JANI:
 </p>
 <ul>
 	<li>
-		<a href="http://www.modestchecker.net">moconv</a>
+		<a href="https://www.modestchecker.net">moconv</a>
 		<ul>
 			<li>Assignments with discrete nondeterministic expressions to nondeterministic branching</li>
 			<li>Exit rewards to branch rewards</li>
@@ -182,7 +182,7 @@
 		</ul>
 	</li>
 	<li>
-		<a href="http://www.stormchecker.org">Storm</a>
+		<a href="https://www.stormchecker.org">Storm</a>
 		<ul>
 			<li>Arrays to sets of variables</li>
 			<li>Instantiation of open parameters</li>
