@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - egl unfairA 10-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#egl">egl</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 10, <span class="tt">L</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">unfairA</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 egl.jani --props unfairA -E N=10,L=2 -O out.txt Minimal --width 5e-2 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.5865931510925293s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.022719199499687186</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">egl.jani:model: info: egl is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+egl.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 61 MB
+Analysis results for egl.jani
+Experiment N=10, L=2
+Status:          Finished
+Simulation time: 0.4 s
+
++ Property Property &quot;unfairA&quot;
+  Estimated probability: 0.5118589743589743
+  Runs used:             3120
+  Run type:              MDP
+  Status:                Finished
+
+  + Error bounds
+    Statement: Adaptive: P(error &gt; εp̂) &lt; δ
+    ε:         0.05
+    δ:         0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

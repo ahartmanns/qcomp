@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - haddad-monmege target 100-0.7</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#haddad-monmege">haddad-monmege</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 100, <span class="tt">p</span> = 0.7</td></tr>
+		<tr><td>Property:</td><td><span class="tt">target</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -exact -e 1e-6 -maxiters 1000000 haddad-monmege.pm haddad-monmege.prctl --property target -const N=100,p=0.7</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">4.573534250259399s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.34413156928661e-17</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 12:14:21 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -exact -e 1e-6 -maxiters 1000000 haddad-monmege.pm_fixed haddad-monmege.prctl_fixed --property target -const &#x27;N=100,p=0.7&#x27;
+
+Parsing model file &quot;haddad-monmege.pm_fixed&quot;...
+
+Type:        DTMC
+Modules:     main 
+Variables:   x 
+
+Parsing properties file &quot;haddad-monmege.prctl_fixed&quot;...
+
+2 properties:
+(1) &quot;target&quot;: P=? [ F &quot;Target&quot; ]
+(2) &quot;exp_steps&quot;: R{&quot;time_reward&quot;}=? [ F &quot;Done&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;target&quot;: P=? [ F &quot;Target&quot; ]
+Model constants: N=100,p=7/10
+
+Building model (exact engine)...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.19 secs.
+
+States:      201 (1 initial)
+Transitions: 400
+
+Time for model construction: 0.192 seconds.
+
+Time for model checking: 3.631 seconds.
+
+Result (probability): 7/10
+ As floating point: 0.7
+
+
+Overall running time: 4.423 seconds.	</pre>
+</div>
+</body>
+</html>

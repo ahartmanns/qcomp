@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - haddad-monmege exp_steps 100-0.7</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#haddad-monmege">haddad-monmege</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 100, <span class="tt">p</span> = 0.7</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_steps</span> (exp-steps)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta haddad-monmege.jani -E N=100,p=0.7 --props exp_steps -O out.txt Minimal --unsafe --es -S Memory --no-partial-results</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">9.479386806488037s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '15000014999734487/5000000000' is tagged as incorrect. The reference result is '1901475900342344102245054808062' (approx. 1.901475900342344e+30) which means a relative error of '1.0' which is larger than the goal precision '0.001'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">1.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">haddad-monmege.jani:model: info: haddad-monmege is a DTMC model.
+haddad-monmege.jani: info: Need 2 bytes per state.
+haddad-monmege.jani: info: Explored 201 states for N=100, p=0.7.
+
+Peak memory usage: 50 MB
+Analysis results for haddad-monmege.jani
+Experiment N=100, p=0.7
+
++ State space exploration
+  State size:  2 bytes
+  States:      201
+  Transitions: 201
+  Branches:    400
+  Rate:        5154 states/s
+  Time:        0.0 s
+
++ Property exp_steps
+  Value:  3000002.9999468974
+  Bounds: [3000002.9999468974, infinity)
+  Time:   9.0 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          201
+    Time for min. prob. 1 states: 0.0 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 201
+    Transitions:      201
+    Branches:         400
+    Time:             0.0 s
+
+  + Value iteration
+    Final error: 9.999993334678936E-07
+    Iterations:  1000001
+    Time:        8.9 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

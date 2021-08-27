@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - philosophers MaxPrReachDeadlock 20-1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#philosophers">philosophers</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 20, <span class="tt">TIME_BOUND</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MaxPrReachDeadlock</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta philosophers.20.jani -E TIME_BOUND=1 --props MaxPrReachDeadlock -O out.txt Minimal --unsafe --es -S Hybrid --store-compress None --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width --p0 --p1</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1320.1117858886719s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">philosophers.20.jani:model: info: Philosophers20 is a CTMC model.
+philosophers.20.jani: info: Need 88 bytes per state.
+philosophers.20.jani: info: Explored 45239074 states for TIME_BOUND=1.0.
+
+Peak memory usage: 11554 MB
+Analysis results for philosophers.20.jani
+Experiment TIME_BOUND=1.0
+
++ State space exploration
+  State size:  88 bytes
+  States:      45239074
+  Transitions: 45239074
+  Branches:    584892921
+  Rate:        65002 states/s
+  Time:        856.2 s
+
++ Property MaxPrReachDeadlock
+  Probability: 1
+  Time:        461.8 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 392.4 s
+    Min. prob. 1 states:          45239074
+    Time for min. prob. 1 states: 69.3 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

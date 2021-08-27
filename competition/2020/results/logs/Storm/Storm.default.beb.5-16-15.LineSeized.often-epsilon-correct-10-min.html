@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm - beb LineSeized 5-16-15</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#beb">beb</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">H</span> = 5, <span class="tt">K</span> = 16, <span class="tt">N</span> = 15</td></tr>
+		<tr><td>Property:</td><td><span class="tt">LineSeized</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --jani beb.5-16.jani --janiproperty LineSeized --constants N=15 --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 --lra:precision 1e-12  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">620.3024387359619s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">-9</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Wed Mar 18 03:29:24 2020
+Command line arguments: --jani beb.5-16.jani --janiproperty LineSeized --constants N=15 --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.034s.
+
+ WARN (InformationCollector.cpp:17): Truncating the domain size as it does not fit in an unsigned 64 bit number.
+Portfolio engine picked the following settings: 
+	engine=hybrid	 bisimulation=false	 exact=false
+Time for model construction: 9.529s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	1842013522945 (327500 nodes)
+Transitions: 	3543644735688 (1546588 nodes)
+Choices: 	1869419233708
+Reward Models:  none
+Variables: 	rows: 24 meta variables (91 DD variables), columns: 24 meta variables (91 DD variables), nondeterminism: 6 meta variables (6 DD variables)
+Labels: 	2
+   * deadlock -&gt; 6703888276 state(s) (8504 nodes)
+   * init -&gt; 1 state(s) (92 nodes)
+-------------------------------------------------------------- 
+
+Model checking property &quot;LineSeized&quot;: Pmax=? [F line_seized] ...	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">ERROR: The program received signal 2 and will be aborted in 60s.	</pre>
+</div>
+</body>
+</html>

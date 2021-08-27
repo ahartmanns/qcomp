@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - echoring MaxOffline1 100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#echoring">echoring</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">ITERATIONS</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MaxOffline1</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files echoring.jani --model-input-type jani --property-input-names MaxOffline1 --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const ITERATIONS=100</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">2.8905246257781982s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '0' is tagged as incorrect. The reference result is '52504150988881911679596397909897334810442463337338867455399558595210531294562028381304092329458957265562428663685703873991737244215466302098559622143988412917602160114187984683464945325595540353683929308707523274373985663026351878025753854892825464036824627318988744613154308988966388899312417572685940140225453376694398971257874112782293129435261865253155373134329631972167335059791798255746915598672999755177376335845857039300256532807593840648369226080153545357569375050962887423993617460146891841020886333594818635896582520372438266037857587942866627670856390243666083578785397370284467594400445229/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000' (approx. 1.0500830197776383e-06) which means a relative error of '1.0' which is larger than the goal precision '0.001'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">1.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+model-checking
+analysing-property MaxOffline1
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-done 1 0
+iterating
+iterating-done 1 0
+num-states-in-filter 1 &quot;initial&quot;
+model-checking-done 1
+command-check-result-is 0.0 MaxOffline1	</pre>
+</div>
+</body>
+</html>

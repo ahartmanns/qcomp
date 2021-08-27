@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - consensus disagree 4-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">disagree</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta consensus.4.jani -E K=4 --props disagree -O out.txt Minimal --unsafe --es -S Memory --epsilon 0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">10.384488582611084s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.6152700435214278e-14</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">consensus.4.jani:model: info: consensus.4 is an MDP model.
+consensus.4.jani:variables[6]: info: Expanding variable &quot;pc1&quot; into 4 locations in automaton &quot;process1&quot;.
+consensus.4.jani:variables[8]: info: Expanding variable &quot;pc2&quot; into 4 locations in automaton &quot;process2&quot;.
+consensus.4.jani:variables[10]: info: Expanding variable &quot;pc3&quot; into 4 locations in automaton &quot;process3&quot;.
+consensus.4.jani:variables[12]: info: Expanding variable &quot;pc4&quot; into 4 locations in automaton &quot;process4&quot;.
+consensus.4.jani: info: Need 16 bytes per state.
+consensus.4.jani: info: Explored 43136 states for K=4.
+
+Peak memory usage: 73 MB
+Analysis results for consensus.4.jani
+Experiment K=4
+
++ State space exploration
+  State size:  16 bytes
+  States:      43136
+  Transitions: 115840
+  Branches:    144352
+  Rate:        174640 states/s
+  Time:        0.3 s
+
++ Property disagree
+  Probability: 0.15607306398805987
+  Bounds:      [0.15607306398805987, 0.15607306398805987]
+  Time:        9.6 s
+
+  + Essential states
+    Iterations:       3
+    Essential states: 38703
+    Transitions:      109753
+    Branches:         138265
+    Time:             0.0 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  3694
+    Time:        9.6 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

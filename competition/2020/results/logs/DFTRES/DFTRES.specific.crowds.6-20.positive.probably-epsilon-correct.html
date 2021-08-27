@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DFTRES - crowds positive 6-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>DFTRES</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 6, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop positive  --def TotalRuns 6 --def CrowdSize 20 --relErr 0.05 --unsafe-scheduling --fixed-batches crowds.jani</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">36.06281328201294s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.010112437446611151</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Total time: 35.813 s.
+Property positive:
+point estimate: 0.11925806112023303,
+var: 17.072959731434604,
+CI: [0.11403461559467169, 0.12448150664579437] = 0.11925806112023303 +/- 0.005223445525561338	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC-6 - mapk_cascade activated_time 4-30</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC-6</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#mapk_cascade">mapk_cascade</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">T</span> = 30</td></tr>
+		<tr><td>Property:</td><td><span class="tt">activated_time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files mapk_cascade.prism --model-input-type prism --property-input-files mapk_cascade.props --property-input-names activated_time --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-6 --const N=4,T=30</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">12.494310855865479s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.881944046153631e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property activated_time
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 12252 12252
+build-model-states-explored 29850 17598
+build-model-states-explored 46870 17020
+build-model-states-explored 63545 16675
+build-model-states-explored 80040 16495
+build-model-states-explored 97100 17060
+build-model-done 99535 6
+iterating
+iterating-progress-unbounded 360 5.661758348543256E-4 1
+iterating-progress-unbounded 752 2.3301385378158834E-5 2
+iterating-progress-unbounded 1143 1.02967948319107E-6 3
+iterating-done 1235 3
+model-checking-done 11
+command-check-result-is 40.6741104267862 activated_time	</pre>
+</div>
+</body>
+</html>

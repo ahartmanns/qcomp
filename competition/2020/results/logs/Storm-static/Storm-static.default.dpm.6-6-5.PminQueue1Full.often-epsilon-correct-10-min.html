@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - dpm PminQueue1Full 6-6-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#dpm">dpm</a> <span class="tt">v.2</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">C</span> = 6, <span class="tt">TIME_BOUND</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">PminQueue1Full</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --jani dpm.jani --janiproperty PminQueue1Full --constants N=6,C=6,TIME_BOUND=5 --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 --lra:precision 1e-12  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">59.116703033447266s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Thu Apr 30 18:07:21 2020
+Command line arguments: --jani dpm.jani --janiproperty PminQueue1Full --constants &#x27;N=6,C=6,TIME_BOUND=5&#x27; --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.005s.
+
+Time for model construction: 45.260s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	9191028
+Transitions: 	17865498
+Choices: 	10604874
+Markovian St.: 	2276148
+Max. Rate.: 	6.000000000000001
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * (items1 = 6) -&gt; 201684 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	9191028
+Transitions: 	17865498
+Choices: 	10604874
+Markovian St.: 	2276148
+Max. Rate.: 	6.000000000000001
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * (items1 = 6) -&gt; 201684 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;PminQueue1Full&quot;: Pmin=? [F (items1 = 6)] ...
+Result (for initial states): 0.02696610784869368
+Time for model checking: 13.712s.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - nand reliable 40-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#nand">nand</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 40, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">reliable</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files nand.prism --model-input-type prism --property-input-files nand.props --property-input-names reliable --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=40,K=4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">83.54272627830505s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.0164851666546895e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property reliable
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 60932 60930
+build-model-states-explored 175200 114269
+build-model-states-explored 286700 111501
+build-model-states-explored 406350 119649
+build-model-states-explored 524288 117939
+build-model-states-explored 633329 109040
+build-model-states-explored 754022 120694
+build-model-states-explored 874250 120227
+build-model-states-explored 997317 123067
+build-model-states-explored 1080440 83123
+build-model-states-explored 1203026 122587
+build-model-states-explored 1324381 121354
+build-model-states-explored 1444440 120059
+build-model-states-explored 1568461 124021
+build-model-states-explored 1683812 115352
+build-model-states-explored 1806044 122232
+build-model-states-explored 1928177 122133
+build-model-states-explored 2051744 123567
+build-model-states-explored 2097152 45408
+build-model-states-explored 2216961 119808
+build-model-states-explored 2338444 121483
+build-model-states-explored 2460349 121904
+build-model-states-explored 2583640 123291
+build-model-states-explored 2698466 114826
+build-model-states-explored 2818343 119876
+build-model-states-explored 2940388 122045
+build-model-states-explored 3062782 122395
+build-model-states-explored 3172123 109340
+build-model-states-explored 3293979 121856
+build-model-states-explored 3415149 121170
+build-model-states-explored 3538837 123688
+build-model-states-explored 3660502 121665
+build-model-states-explored 3778215 117713
+build-model-states-explored 3899745 121529
+build-model-done 3999522 34
+iterating
+iterating-progress-unbounded 32 0.9999894990839039 1
+iterating-progress-unbounded 70 0.9996089662843953 2
+iterating-progress-unbounded 108 0.9980567694139139 3
+iterating-progress-unbounded 147 0.9937566782399779 4
+iterating-progress-unbounded 185 0.9648630983113318 5
+iterating-progress-unbounded 223 0.9176426139013846 6
+iterating-progress-unbounded 260 0.8611669547160479 7
+iterating-progress-unbounded 298 0.7925117139778025 8
+iterating-progress-unbounded 336 0.756401150811209 9
+iterating-progress-unbounded 373 0.7541159337019007 10
+iterating-progress-unbounded 411 0.7514746282315368 11
+iterating-progress-unbounded 448 0.7482794888292327 12
+iterating-progress-unbounded 485 0.7426829526211284 13
+iterating-progress-unbounded 523 0.7312774688079429 14
+iterating-progress-unbounded 560 0.7181676219391366 15
+iterating-progress-unbounded 597 0.7017515314747065 16
+iterating-progress-unbounded 634 0.6854605028429295 17
+iterating-progress-unbounded 672 0.683153409146387 18
+iterating-progress-unbounded 709 0.6824680294746507 19
+iterating-progress-unbounded 745 0.6816906156703799 20
+iterating-progress-unbounded 782 0.6807587928196744 21
+iterating-progress-unbounded 819 0.6786562152409901 22
+iterating-progress-unbounded 856 0.6752435060955906 23
+iterating-progress-unbounded 892 0.67122328623198 24
+iterating-progress-unbounded 929 0.6660304491617667 25
+iterating-progress-unbounded 965 0.6619050119116421 26
+iterating-progress-unbounded 1000 0.6617619437063473 27
+iterating-progress-unbounded 1037 0.6615286480656399 28
+iterating-progress-unbounded 1073 0.6612658572955696 29
+iterating-progress-unbounded 1109 0.6609518019240701 30
+iterating-progress-unbounded 1145 0.6601010009071658 31
+iterating-progress-unbounded 1181 0.6589120709861573 32
+iterating-progress-unbounded 1217 0.6574922442839547 33
+iterating-progress-unbounded 1252 0.6560246522693304 34
+iterating-progress-unbounded 1288 0.6544459518483114 35
+iterating-progress-unbounded 1324 0.6526801235077788 36
+iterating-progress-unbounded 1360 0.6482749961913259 37
+iterating-progress-unbounded 1395 0.6395348859536775 38
+iterating-progress-unbounded 1431 0.6235902210657527 39
+iterating-done 1442 39
+model-checking-done 82
+command-check-result-is 0.6186822208151964 reliable	</pre>
+</div>
+</body>
+</html>

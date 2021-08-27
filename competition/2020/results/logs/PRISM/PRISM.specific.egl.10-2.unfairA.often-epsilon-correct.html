@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - egl unfairA 10-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#egl">egl</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 10, <span class="tt">L</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">unfairA</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -mtbdd -e 1e-6 -maxiters 1000000 egl.prism egl.props --property unfairA -const N=10,L=2</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.7486941814422607s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 12:02:24 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -mtbdd -e 1e-6 -maxiters 1000000 egl.prism egl.props --property unfairA -const &#x27;N=10,L=2&#x27;
+
+Parsing model file &quot;egl.prism&quot;...
+
+Type:        DTMC
+Modules:     counter partyA partyB 
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39 
+
+Parsing properties file &quot;egl.props&quot;...
+
+4 properties:
+(1) &quot;messagesA&quot;: R{&quot;messages_A_needs&quot;}=? [ F phase=4 ]
+(2) &quot;messagesB&quot;: R{&quot;messages_B_needs&quot;}=? [ F phase=4 ]
+(3) &quot;unfairA&quot;: P=? [ F !&quot;knowA&quot;&amp;&quot;knowB&quot; ]
+(4) &quot;unfairB&quot;: P=? [ F !&quot;knowB&quot;&amp;&quot;knowA&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;unfairA&quot;: P=? [ F !&quot;knowA&quot;&amp;&quot;knowB&quot; ]
+Model constants: N=10,L=2
+
+Building model...
+Model constants: N=10,L=2
+
+Warning: Guard for command 11 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 12 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 13 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 14 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 15 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 16 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 17 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 18 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 19 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 20 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 31 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 32 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 33 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 34 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 35 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 36 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 37 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 38 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 39 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 40 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 51 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 52 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 53 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 54 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 55 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 56 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 57 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 58 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 59 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 60 of module &quot;partyA&quot; is never satisfied.
+
+Warning: Guard for command 11 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 12 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 13 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 14 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 15 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 16 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 17 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 18 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 19 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 20 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 31 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 32 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 33 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 34 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 35 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 36 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 37 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 38 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 39 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 40 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 51 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 52 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 53 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 54 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 55 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 56 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 57 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 58 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 59 of module &quot;partyB&quot; is never satisfied.
+
+Warning: Guard for command 60 of module &quot;partyB&quot; is never satisfied.
+
+Computing reachable states...
+
+Reachability (BFS): 101 iterations in 0.20 seconds (average 0.002030, setup 0.00)
+
+Time for model construction: 0.444 seconds.
+
+Type:        DTMC
+States:      66060286 (1 initial)
+Transitions: 67108861
+
+Transition matrix: 18729 nodes (3 terminal), 67108861 minterms, vars: 169r/169c
+
+Prob0: 63 iterations in 0.29 seconds (average 0.004683, setup 0.00)
+
+Prob1: 3 iterations in 0.03 seconds (average 0.008667, setup 0.00)
+
+yes = 12628991, no = 53429760, maybe = 1535
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=4809] [93.9 Kb]
+Diagonals MTBDD... [nodes=7064] [138.0 Kb]
+
+Starting iterations...
+
+Jacobi: 21 iterations in 0.04 seconds (average 0.001762, setup 0.01)
+
+Value in the initial state: 0.50048828125
+
+Time for model checking: 0.539 seconds.
+
+Result: 0.50048828125 (value in the initial state)
+
+
+Overall running time: 1.571 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 60 warnings during computation.	</pre>
+</div>
+</body>
+</html>

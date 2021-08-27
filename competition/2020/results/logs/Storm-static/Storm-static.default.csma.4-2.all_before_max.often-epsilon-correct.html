@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - csma all_before_max 4-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">all_before_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism csma.4-2.prism --prop csma.props all_before_max --timebounded:precision 1e-3  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">10.272721529006958s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.6687591698995963e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Wed Apr 29 18:44:19 2020
+Command line arguments: --prism csma.4-2.prism --prop csma.props all_before_max &#x27;--timebounded:precision&#x27; 1e-3 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+Time for model input parsing: 0.008s.
+
+Time for model construction: 9.255s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	761962
+Transitions: 	1327068
+Choices: 	825504
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -&gt; 0 item(s)
+   * init -&gt; 1 item(s)
+   * all_delivered -&gt; 9 item(s)
+   * collision_max_backoff -&gt; 3444 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;all_before_max&quot;: Pmax=? [!(&quot;collision_max_backoff&quot;) U &quot;all_delivered&quot;] ...
+Result (for initial states): 0.7764601493
+Time for model checking: 0.975s.	</pre>
+</div>
+</body>
+</html>

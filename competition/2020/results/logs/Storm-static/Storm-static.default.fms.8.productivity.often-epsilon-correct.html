@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - fms productivity 8</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#fms">fms</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">n</span> = 8</td></tr>
+		<tr><td>Property:</td><td><span class="tt">productivity</span> (steady-state-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism fms.prism --prop fms.props productivity --constants n=8 --prismcompat --timebounded:precision 1e-3  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">120.61619734764099s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Correctness of result is not checked because no reference result is available.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Tue Apr 28 19:19:20 2020
+Command line arguments: --prism fms.prism --prop fms.props productivity --constants n=8 --prismcompat &#x27;--timebounded:precision&#x27; 1e-3 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+ WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.006s.
+
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 99.413s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -&gt; 0 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;productivity&quot;: R[exp]{&quot;productivity&quot;}=? [LRA] ...
+Result (for initial states): 116.6583013
+Time for model checking: 21.089s.	</pre>
+</div>
+</body>
+</html>

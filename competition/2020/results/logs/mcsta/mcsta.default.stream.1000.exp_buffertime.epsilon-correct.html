@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - stream exp_buffertime 1000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#stream">stream</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_buffertime</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta stream.jani -E N=1000 --props exp_buffertime -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">171.73880887031555s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">7.894735763001694e-09</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">stream.jani:model: info: stream is an MA model.
+stream.jani:variables[5]: info: Expanding variable &quot;s&quot; into 4 locations in automaton &quot;streamingclient&quot;.
+stream.jani: info: Need 8 bytes per state.
+stream.jani: info: Explored 1502501 states for N=1000.
+stream.jani:properties[0]: warning: Computing minimum expected reward in property &quot;exp_buffertime&quot; without checking for zero-reward end components.
+
+Peak memory usage: 592 MB
+Analysis results for stream.jani
+Experiment N=1000
+
++ State space exploration
+  State size:  8 bytes
+  States:      1502501
+  Transitions: 2002001
+  Branches:    3001001
+  Rate:        723400 states/s
+  Time:        2.3 s
+
++ Property exp_buffertime
+  Value:  8.9195056433443
+  Bounds: [8.919505572925196, 8.919505713763403]
+  Time:   169.0 s
+
+  + Precomputations
+    Max. prob. 1 states:          1502501
+    Time for max. prob. 1 states: 147.0 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 1500502
+    Transitions:      2000002
+    Branches:         2999002
+    Time:             0.4 s
+
+  + Optimistic value iteration
+    Total iterations:  291
+    Verif. attempts:   2
+    Verif. iterations: 104
+    Final epsilon:     2.982933349708086E-07
+    Time:              21.6 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

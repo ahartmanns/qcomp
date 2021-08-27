@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm - egl unfairA 10-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#egl">egl</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 10, <span class="tt">L</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">unfairA</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism egl.prism --prop egl.props unfairA --constants N=10,L=2 --exact  --engine portfolio --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">3.8733320236206055s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Tue Mar 17 11:48:03 2020
+Command line arguments: --prism egl.prism --prop egl.props unfairA --constants &#x27;N=10,L=2&#x27; --exact --engine portfolio --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+Time for model input parsing: 0.020s.
+
+ WARN (InformationCollector.cpp:17): Truncating the domain size as it does not fit in an unsigned 64 bit number.
+Portfolio engine picked the following settings: 
+	engine=dd-to-sparse	 bisimulation=true	 exact=true
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 10))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 11))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 12))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 13))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 14))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 15))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 16))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 17))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 18))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 19))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 10))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 11))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 12))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 13))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 14))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 15))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 16))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 17))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 18))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 19))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 10))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 11))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 12))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 13))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 14))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 15))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 16))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 17))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 18))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 19))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 10))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 11))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 12))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 13))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 14))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 15))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 16))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 17))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 18))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 1) &amp; (n = 19))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 10))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 11))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 12))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 13))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 14))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 15))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 16))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 17))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 18))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 2) &amp; (n = 19))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 10))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 11))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 12))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 13))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 14))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 15))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 16))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 17))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 18))&#x27; is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard &#x27;((phase = 3) &amp; (n = 19))&#x27; is unsatisfiable.
+Time for model construction: 1.383s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	66060286 (7063 nodes)
+Transitions: 	67108861 (18729 nodes)
+Reward Models:  none
+Variables: 	rows: 84 meta variables (169 DD variables), columns: 84 meta variables (169 DD variables)
+Labels: 	4
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (170 nodes)
+   * knowA
+   * knowB
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 2.196s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	829
+Transitions: 	904
+Reward Models:  none
+State Labels: 	6 labels
+   * (((((((((((((((((((((a0 = 2) &amp; (a20 = 2)) | ((a1 = 2) &amp; (a21 = 2))) | ((a2 = 2) &amp; (a22 = 2))) | ((a3 = 2) &amp; (a23 = 2))) | ((a4 = 2) &amp; (a24 = 2))) | ((a5 = 2) &amp; (a25 = 2))) | ((a6 = 2) &amp; (a26 = 2))) | ((a7 = 2) &amp; (a27 = 2))) | ((a8 = 2) &amp; (a28 = 2))) | ((a9 = 2) &amp; (a29 = 2))) | ((a10 = 2) &amp; (a30 = 2))) | ((a11 = 2) &amp; (a31 = 2))) | ((a12 = 2) &amp; (a32 = 2))) | ((a13 = 2) &amp; (a33 = 2))) | ((a14 = 2) &amp; (a34 = 2))) | ((a15 = 2) &amp; (a35 = 2))) | ((a16 = 2) &amp; (a36 = 2))) | ((a17 = 2) &amp; (a37 = 2))) | ((a18 = 2) &amp; (a38 = 2))) | ((a19 = 2) &amp; (a39 = 2))) -&gt; 41 item(s)
+   * knowB -&gt; 41 item(s)
+   * knowA -&gt; 0 item(s)
+   * (((((((((((((((((((((b0 = 2) &amp; (b20 = 2)) | ((b1 = 2) &amp; (b21 = 2))) | ((b2 = 2) &amp; (b22 = 2))) | ((b3 = 2) &amp; (b23 = 2))) | ((b4 = 2) &amp; (b24 = 2))) | ((b5 = 2) &amp; (b25 = 2))) | ((b6 = 2) &amp; (b26 = 2))) | ((b7 = 2) &amp; (b27 = 2))) | ((b8 = 2) &amp; (b28 = 2))) | ((b9 = 2) &amp; (b29 = 2))) | ((b10 = 2) &amp; (b30 = 2))) | ((b11 = 2) &amp; (b31 = 2))) | ((b12 = 2) &amp; (b32 = 2))) | ((b13 = 2) &amp; (b33 = 2))) | ((b14 = 2) &amp; (b34 = 2))) | ((b15 = 2) &amp; (b35 = 2))) | ((b16 = 2) &amp; (b36 = 2))) | ((b17 = 2) &amp; (b37 = 2))) | ((b18 = 2) &amp; (b38 = 2))) | ((b19 = 2) &amp; (b39 = 2))) -&gt; 0 item(s)
+   * init -&gt; 1 item(s)
+   * deadlock -&gt; 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;unfairA&quot;: P=? [F (!(&quot;knowA&quot;) &amp; &quot;knowB&quot;)] ...
+Result (for initial states): 1025/2048 (approx. 0.5004882812)
+Time for model checking: 0.002s.	</pre>
+</div>
+</body>
+</html>

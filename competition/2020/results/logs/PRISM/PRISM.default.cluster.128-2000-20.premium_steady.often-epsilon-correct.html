@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - cluster premium_steady 128-2000-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#cluster">cluster</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 128, <span class="tt">T</span> = 2000, <span class="tt">t</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">premium_steady</span> (steady-state-prob)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 cluster.prism cluster.props --property premium_steady -const N=128,T=2000,t=20</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">65.2724494934082s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.408095131394231e-09</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 12:39:48 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 cluster.prism cluster.props --property premium_steady -const &#x27;N=128,T=2000,t=20&#x27;
+
+Parsing model file &quot;cluster.prism&quot;...
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+Parsing properties file &quot;cluster.props&quot;...
+
+8 properties:
+(1) &quot;below_min&quot;: R{&quot;time_not_min&quot;}=? [ C&lt;=T ]
+(2) &quot;operational&quot;: R{&quot;percent_op&quot;}=? [ I=t ]
+(3) &quot;premium_steady&quot;: S=? [ &quot;premium&quot; ]
+(4) &quot;qos1&quot;: P=? [ F&lt;=T !&quot;minimum&quot; ]
+(5) &quot;qos2&quot;: P=? [ F[t,t] !&quot;minimum&quot; ]
+(6) &quot;qos3&quot;: P=? [ &quot;minimum&quot; U&lt;=t &quot;premium&quot; ]
+(7) &quot;qos4&quot;: P=? [ !&quot;minimum&quot; U&gt;=t &quot;minimum&quot; ]
+(8) &quot;repairs&quot;: R{&quot;num_repairs&quot;}=? [ C&lt;=T ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;premium_steady&quot;: S=? [ &quot;premium&quot; ]
+Model constants: N=128
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: N=128
+
+Computing reachable states...
+
+Reachability (BFS): 261 iterations in 0.32 seconds (average 0.001218, setup 0.00)
+
+Time for model construction: 0.255 seconds.
+
+Type:        CTMC
+States:      597012 (1 initial)
+Transitions: 2908192
+
+Rate matrix: 17481 nodes (134 terminal), 2908192 minterms, vars: 25r/25c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:597012
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=597012, nnz=2908192, compact] [11.7 MB]
+Creating vector for diagonals... [dist=6345, compact] [1.2 MB]
+Allocating iteration vector... [4.6 MB]
+TOTAL: [17.4 MB]
+
+Starting iterations...
+Iteration 390: max relative diff=0.260804, 5.00 sec so far
+Iteration 779: max relative diff=0.000917, 10.01 sec so far
+Iteration 1170: max relative diff=0.000138, 15.02 sec so far
+Iteration 1561: max relative diff=0.000081, 20.03 sec so far
+Iteration 1952: max relative diff=0.000047, 25.03 sec so far
+Iteration 2343: max relative diff=0.000028, 30.04 sec so far
+Iteration 2734: max relative diff=0.000016, 35.05 sec so far
+Iteration 3125: max relative diff=0.000009, 40.06 sec so far
+Iteration 3515: max relative diff=0.000006, 45.07 sec so far
+Iteration 3905: max relative diff=0.000003, 50.07 sec so far
+Iteration 4296: max relative diff=0.000002, 55.08 sec so far
+Iteration 4687: max relative diff=0.000001, 60.08 sec so far
+
+Backwards Gauss-Seidel: 4769 iterations in 63.73 seconds (average 0.012819, setup 2.60)
+
+BSCC 1 probability: 0.9979378926049853
+
+All states are in BSCCs (so no reachability probabilities computed)
+
+Value in the initial state: 0.9979378926049853
+
+Time for model checking: 64.245 seconds.
+
+Result: 0.9979378926049853 (value in the initial state)
+
+
+Overall running time: 65.11 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

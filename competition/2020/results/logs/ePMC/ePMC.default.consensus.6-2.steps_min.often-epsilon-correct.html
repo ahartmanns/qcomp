@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - consensus steps_min 6-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files consensus.6.prism --model-input-type prism --property-input-files consensus.props --property-input-names steps_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const K=2</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">133.2338161468506s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '38609700839315053/100000000000000' is tagged as incorrect. The reference result is '432' (approx. 432.0) which means a relative error of '0.10625692501585525' which is larger than the goal precision '0.001'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">0.10625692501585525</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property steps_min
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 5783 5783
+build-model-states-explored 21507 15724
+build-model-states-explored 41374 19866
+build-model-states-explored 64821 23448
+build-model-states-explored 87454 22633
+build-model-states-explored 115137 27682
+build-model-states-explored 148886 33750
+build-model-states-explored 183425 34538
+build-model-states-explored 201353 17929
+build-model-states-explored 235850 34496
+build-model-states-explored 271471 35621
+build-model-states-explored 307859 36389
+build-model-states-explored 337660 29801
+build-model-states-explored 371613 33952
+build-model-states-explored 407496 35884
+build-model-states-explored 440688 33192
+build-model-states-explored 442401 1713
+build-model-states-explored 468132 25731
+build-model-states-explored 503846 35714
+build-model-states-explored 539357 35511
+build-model-states-explored 572327 32969
+build-model-states-explored 607565 35239
+build-model-states-explored 643445 35880
+build-model-states-explored 679312 35867
+build-model-states-explored 715567 36254
+build-model-states-explored 754522 38956
+build-model-states-explored 798175 43653
+build-model-states-explored 844668 46492
+build-model-states-explored 885428 40761
+build-model-states-explored 930420 44991
+build-model-states-explored 977107 46686
+build-model-states-explored 1000069 22963
+build-model-states-explored 1000069 0
+build-model-states-explored 1006335 6266
+build-model-states-explored 1052308 45973
+build-model-states-explored 1098705 46397
+build-model-states-explored 1138540 39835
+build-model-states-explored 1185190 46650
+build-model-states-explored 1231674 46484
+build-model-done 1258240 39
+iterating
+iterating-progress-unbounded 15 0.12836438923395446 1
+iterating-progress-unbounded 35 0.04441033306977664 2
+iterating-progress-unbounded 54 0.026200460185135645 3
+iterating-progress-unbounded 74 0.017892193614969378 4
+iterating-progress-unbounded 93 0.013423161122154295 5
+iterating-progress-unbounded 113 0.010487112500636494 6
+iterating-progress-unbounded 132 0.008624426862213 7
+iterating-progress-unbounded 152 0.007143247306625321 8
+iterating-progress-unbounded 172 0.006030538338273351 9
+iterating-progress-unbounded 191 0.0051923986857863 10
+iterating-progress-unbounded 210 0.004541204053420779 11
+iterating-progress-unbounded 230 0.0039706911588386915 12
+iterating-progress-unbounded 250 0.0034995800065453953 13
+iterating-progress-unbounded 269 0.003117009321201446 14
+iterating-progress-unbounded 289 0.002780524699331291 15
+iterating-progress-unbounded 308 0.0025012647247051787 16
+iterating-progress-unbounded 328 0.00225100347140936 17
+iterating-progress-unbounded 347 0.0020502487343968478 18
+iterating-progress-unbounded 367 0.0018571694918232038 19
+iterating-progress-unbounded 386 0.0016922991530748295 20
+iterating-progress-unbounded 406 0.0015409231013824292 21
+iterating-progress-unbounded 425 0.0014146728137583624 22
+iterating-progress-unbounded 445 0.0012933625647041566 23
+iterating-progress-unbounded 464 0.0011880002878778525 24
+iterating-progress-unbounded 484 0.0010897417941120044 25
+iterating-progress-unbounded 503 0.0010038751423806457 26
+iterating-progress-unbounded 523 9.23341393831959E-4 27
+iterating-progress-unbounded 542 8.56129019207217E-4 28
+iterating-progress-unbounded 562 7.89164289446874E-4 29
+iterating-progress-unbounded 581 7.300878468864105E-4 30
+iterating-progress-unbounded 601 6.742355472877035E-4 31
+iterating-progress-unbounded 620 6.264243487669887E-4 32
+iterating-progress-unbounded 640 5.793901350013631E-4 33
+iterating-progress-unbounded 660 5.362607980695869E-4 34
+iterating-done 679 34
+model-checking-done 131
+command-check-result-is 386.09700839315053 steps_min	</pre>
+</div>
+</body>
+</html>

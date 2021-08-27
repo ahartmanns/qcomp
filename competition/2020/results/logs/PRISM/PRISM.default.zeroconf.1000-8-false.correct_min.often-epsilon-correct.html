@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - zeroconf correct_min 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_min</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 zeroconf.prism zeroconf.props --property correct_min -const N=1000,K=8,reset=false</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">95.62473106384277s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">7.401666322404552e-17</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sun Mar 15 03:22:26 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 zeroconf.prism zeroconf.props --property correct_min -const &#x27;N=1000,K=8,reset=false&#x27;
+
+Parsing model file &quot;zeroconf.prism&quot;...
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+Parsing properties file &quot;zeroconf.props&quot;...
+
+2 properties:
+(1) &quot;correct_max&quot;: Pmax=? [ F (l=4&amp;ip=1) ]
+(2) &quot;correct_min&quot;: Pmin=? [ F (l=4&amp;ip=1) ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;correct_min&quot;: Pmin=? [ F (l=4&amp;ip=1) ]
+Model constants: reset=false,N=1000,K=8
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: reset=false,N=1000,K=8
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 70.11 seconds (average 0.118431, setup 0.00)
+
+Time for model construction: 71.041 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+Choices:     3443961
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Prob0E: 133 iterations in 5.06 seconds (average 0.038038, setup 0.00)
+
+Prob1A: 91 iterations in 3.20 seconds (average 0.035143, setup 0.00)
+
+yes = 17943, no = 611330, maybe = 1241065
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=1870338, nc=2315321, nnz=2865855, k=4] [36.8 MB]
+Creating vector for yes... [14.3 MB]
+Allocating iteration vectors... [2 x 14.3 MB]
+TOTAL: [79.6 MB]
+
+Starting iterations...
+Iteration 152: max relative diff=0.664762, 5.02 sec so far
+Iteration 295: max relative diff=0.000019, 10.02 sec so far
+
+Iterative method: 345 iterations in 15.37 seconds (average 0.034116, setup 3.60)
+
+Value in the initial state: 5.04010521292984E-9
+
+Time for model checking: 23.77 seconds.
+
+Result: 5.04010521292984E-9 (value in the initial state)
+
+
+Overall running time: 95.411 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - echoring MaxOffline1 100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#echoring">echoring</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">ITERATIONS</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MaxOffline1</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --jani echoring.jani --janiproperty MaxOffline1 --constants ITERATIONS=100 --exact  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">180.4610435962677s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Wed Apr 29 20:23:04 2020
+Command line arguments: --jani echoring.jani --janiproperty MaxOffline1 --constants ITERATIONS=100 --exact --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+Time for model input parsing: 0.052s.
+
+Time for model construction: 145.587s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	4671956
+Transitions: 	8322265
+Choices: 	7520521
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 32227 item(s)
+   * (((is_offline_1 &amp; !(is_offline_2)) &amp; !(is_offline_3)) &amp; (iter &lt;= 100)) -&gt; 2435 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;MaxOffline1&quot;: Pmax=? [F (((is_offline_1 &amp; !(is_offline_2)) &amp; !(is_offline_3)) &amp; (iter &lt;= 100))] ...
+Result (for initial states): 52504150988881911679596397909897334810442463337338867455399558595210531294562028381304092329458957265562428663685703873991737244215466302098559622143988412917602160114187984683464945325595540353683929308707523274373985663026351878025753854892825464036824627318988744613154308988966388899312417572685940140225453376694398971257874112782293129435261865253155373134329631972167335059791798255746915598672999755177376335845857039300256532807593840648369226080153545357569375050962887423993617460146891841020886333594818635896582520372438266037857587942866627670856390243666083578785397370284467594400445229/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 (approx. 1.05008302e-06)
+Time for model checking: 34.158s.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PET - egl unfairA 10-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PET</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#egl">egl</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 10, <span class="tt">L</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">unfairA</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./pet.sh reachability --precision 0.001 --relative-error --only-result -m egl.prism -p egl.props --property unfairA --const N=10,L=2</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">436.4487009048462s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Java heap space
+	at parser.ast.Expression.evaluateBoolean(Expression.java:502)
+	at simulator.Updater.calculateUpdatesForModule(Updater.java:330)
+	at simulator.Updater.calculateTransitions(Updater.java:174)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:418)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:271)
+	at de.tum.in.probmodels.generator.DtmcGenerator.getChoices(DtmcGenerator.java:21)
+	at de.tum.in.probmodels.generator.PrismGenerator.choices(PrismGenerator.java:37)
+	at de.tum.in.probmodels.generator.PrismGenerator.choices(PrismGenerator.java:14)
+	at de.tum.in.probmodels.explorer.DefaultExplorer.exploreState(DefaultExplorer.java:56)
+	at de.tum.in.pet.sampler.UnboundedSampler.explore(UnboundedSampler.java:252)
+	at de.tum.in.pet.sampler.UnboundedSampler.sample(UnboundedSampler.java:188)
+	at de.tum.in.pet.sampler.UnboundedSampler.run(UnboundedSampler.java:112)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.solve(ReachChecker.java:165)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.solve(ReachChecker.java:222)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.solveDtmc(ReachChecker.java:266)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.solve(ReachChecker.java:142)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.main(ReachChecker.java:356)
+	at de.tum.in.pet.Main.main(Main.java:51)	</pre>
+</div>
+</body>
+</html>

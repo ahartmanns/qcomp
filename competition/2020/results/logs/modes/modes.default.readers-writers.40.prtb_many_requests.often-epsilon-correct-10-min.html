@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - readers-writers prtb_many_requests 40</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#readers-writers">readers-writers</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 40</td></tr>
+		<tr><td>Property:</td><td><span class="tt">prtb_many_requests</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 readers-writers.40.jani --props prtb_many_requests -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5448565483093s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.000909823966812455</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">readers-writers.40.jani:model: info: ReadersWriters is an MA model and will be simulated as an MA.
+readers-writers.40.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 59 MB
+Analysis results for readers-writers.40.jani
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property &quot;prtb_many_requests&quot;
+  Estimated max. probability: 0.8296385542168675
+  Runs used (best scheduler): 4150
+  Total runs used:            4807450
+  Schedulers sampled:         4000
+  Best scheduler:             757277345
+  Run type:                   MA
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Adaptive: P(error &gt; εp̂) &lt; δ
+    ε:                  0.02
+    δ:                  0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - cabinets Unreliability 3-2-true</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#cabinets">cabinets</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 3, <span class="tt">P</span> = 2, <span class="tt">R</span> = True</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unreliability</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --jani cabinets.3-2-true.jani --janiproperty Unreliability --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 --lra:precision 1e-12  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4 --engine dd-to-sparse --bisimulation</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">43.30380058288574s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Thu Apr 30 16:22:49 2020
+Command line arguments: --jani cabinets.3-2-true.jani --janiproperty Unreliability --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4 --engine dd-to-sparse --bisimulation
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.010s.
+
+ WARN (model-handling.h:297): Dd-based model builder for Markov Automata is only available for JANI models, automatically converting the PRISM input model.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+Time for model construction: 3.694s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (symbolic)
+States: 	1960162 (27888 nodes)
+Transitions: 	3068096 (218086 nodes)
+Choices: 	2040512
+Reward Models:  none
+Variables: 	rows: 22 meta variables (91 DD variables), columns: 22 meta variables (91 DD variables), nondeterminism: 12 meta variables (12 DD variables)
+Labels: 	2
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (92 nodes)
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 38.779s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	85777
+Transitions: 	353235
+Choices: 	85777
+Markovian St.: 	34535
+Max. Rate.: 	4.186499999999998
+Reward Models:  none
+State Labels: 	3 labels
+   * marked -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
+   * deadlock -&gt; 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;Unreliability&quot;: Pmax=? [true U&lt;=1 marked] ...
+Result (for initial states): 6.673527319768903e-08
+Time for model checking: 0.473s.	</pre>
+</div>
+</body>
+</html>

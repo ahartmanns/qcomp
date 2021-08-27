@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - ftwc TimeMin 8-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#ftwc">ftwc</a> <span class="tt">v.3</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 8, <span class="tt">TIME_BOUND</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">TimeMin</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --jani ftwc.jani --janiproperty TimeMin --constants N=8,TIME_BOUND=5 --sound --precision 5e-2  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">23.409716844558716s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0004884077293382173</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Thu Apr 30 22:52:22 2020
+Command line arguments: --jani ftwc.jani --janiproperty TimeMin --constants &#x27;N=8,TIME_BOUND=5&#x27; --sound --precision 5e-2 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.095s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	10299
+Transitions: 	26983
+Choices: 	12635
+Markovian St.: 	4951
+Max. Rate.: 	2.0307
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * (((workstations_up[0] = 0) | switches_down[0]) &amp; ((workstations_up[1] = 0) | switches_down[1])) -&gt; 1059 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	10299
+Transitions: 	26983
+Choices: 	12635
+Markovian St.: 	4951
+Max. Rate.: 	2.0307
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * (((workstations_up[0] = 0) | switches_down[0]) &amp; ((workstations_up[1] = 0) | switches_down[1])) -&gt; 1059 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;TimeMin&quot;: T[exp]min=? [F (((workstations_up[0] = 0) | switches_down[0]) &amp; ((workstations_up[1] = 0) | switches_down[1]))] ...
+Result (for initial states): 1994365.22
+Time for model checking: 23.281s.	</pre>
+</div>
+</body>
+</html>

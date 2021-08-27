@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - mapk_cascade activated_time 4-30</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#mapk_cascade">mapk_cascade</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">T</span> = 30</td></tr>
+		<tr><td>Property:</td><td><span class="tt">activated_time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 mapk_cascade.prism mapk_cascade.props --property activated_time -const N=4,T=30</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">11.491005659103394s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.00010987232238094972</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 14:24:50 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 mapk_cascade.prism mapk_cascade.props --property activated_time -const &#x27;N=4,T=30&#x27;
+
+Parsing model file &quot;mapk_cascade.prism&quot;...
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+Parsing properties file &quot;mapk_cascade.props&quot;...
+
+3 properties:
+(1) &quot;activated_T&quot;: R{&quot;activated&quot;}=? [ I=T ]
+(2) &quot;activated_time&quot;: R{&quot;time&quot;}=? [ F kpp=N ]
+(3) &quot;reactions&quot;: R{&quot;reactions&quot;}=? [ C&lt;=T ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;activated_time&quot;: R{&quot;time&quot;}=? [ F kpp=N ]
+Model constants: N=4
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: N=4
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 3.86 seconds (average 0.087636, setup 0.00)
+
+Time for model construction: 3.746 seconds.
+
+Type:        CTMC
+States:      99535 (1 initial)
+Transitions: 910872
+
+Rate matrix: 111563 nodes (14 terminal), 910872 minterms, vars: 58r/58c
+
+Diagonals vector: 52485 nodes (128 terminal), 99535 minterms
+Embedded Markov chain: 929797 nodes (681 terminal), 910872 minterms
+
+Prob0: 23 iterations in 0.39 seconds (average 0.016957, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.002000, setup 0.00)
+
+goal = 1461, inf = 0, maybe = 98074
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix... [n=99535, nnz=900381, compact] [3.5 MB]
+Creating vector for diagonals... [dist=1, compact] [194.4 KB]
+Creating vector for RHS... [dist=128, compact] [195.4 KB]
+Allocating iteration vector... [777.6 KB]
+TOTAL: [4.7 MB]
+
+Starting iterations...
+
+Backwards Gauss-Seidel: 1101 iterations in 5.13 seconds (average 0.003160, setup 1.65)
+
+Value in the initial state: 40.672033774081854
+
+Time for model checking: 6.93 seconds.
+
+Result: 40.672033774081854 (value in the initial state)
+
+
+Overall running time: 11.253 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

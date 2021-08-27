@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - consensus steps_min 6-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 consensus.6.prism consensus.props --property steps_min -const K=2</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">185.84221267700195s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.00034355438198611113</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 16:26:19 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 consensus.6.prism consensus.props --property steps_min -const K=2
+
+Parsing model file &quot;consensus.6.prism&quot;...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4 process5 process6 
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4 pc5 coin5 pc6 coin6 
+
+Parsing properties file &quot;consensus.props&quot;...
+
+5 properties:
+(1) &quot;c1&quot;: P&gt;=1 [ F &quot;finished&quot; ]
+(2) &quot;c2&quot;: Pmin=? [ F &quot;finished&quot;&amp;&quot;all_coins_equal_1&quot; ]
+(3) &quot;disagree&quot;: Pmax=? [ F &quot;finished&quot;&amp;!&quot;agree&quot; ]
+(4) &quot;steps_max&quot;: R{&quot;steps&quot;}max=? [ F &quot;finished&quot; ]
+(5) &quot;steps_min&quot;: R{&quot;steps&quot;}min=? [ F &quot;finished&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;steps_min&quot;: R{&quot;steps&quot;}min=? [ F &quot;finished&quot; ]
+Model constants: K=2
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: K=2
+
+Computing reachable states...
+
+Reachability (BFS): 149 iterations in 0.14 seconds (average 0.000940, setup 0.00)
+
+Time for model construction: 0.158 seconds.
+
+Type:        MDP
+States:      1258240 (1 initial)
+Transitions: 6236736
+Choices:     5008128
+
+Transition matrix: 7075 nodes (3 terminal), 6236736 minterms, vars: 24r/24c/6nd
+
+Prob0A: 49 iterations in 0.65 seconds (average 0.013204, setup 0.00)
+
+Prob1E: 50 iterations in 0.45 seconds (average 0.008920, setup 0.00)
+
+Warning: PRISM hasn&#x27;t checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 384, inf = 0, maybe = 1257856
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=1258240, nc=5007744, nnz=6236352, k=6] [95.3 MB]
+Building sparse matrix (transition rewards)... [n=1258240, nc=5007744, nnz=0, k=6] [23.9 MB]
+Creating vector for state rewards... [9.6 MB]
+Creating vector for inf... [9.6 MB]
+Allocating iteration vectors... [2 x 9.6 MB]
+TOTAL: [157.6 MB]
+
+Starting iterations...
+Iteration 78: max relative diff=0.012666, 5.05 sec so far
+Iteration 155: max relative diff=0.005682, 10.05 sec so far
+Iteration 232: max relative diff=0.003304, 15.06 sec so far
+Iteration 310: max relative diff=0.002154, 20.13 sec so far
+Iteration 387: max relative diff=0.001504, 25.14 sec so far
+Iteration 464: max relative diff=0.001093, 30.15 sec so far
+Iteration 541: max relative diff=0.000815, 35.17 sec so far
+Iteration 618: max relative diff=0.000621, 40.19 sec so far
+Iteration 695: max relative diff=0.000478, 45.19 sec so far
+Iteration 772: max relative diff=0.000371, 50.20 sec so far
+Iteration 849: max relative diff=0.000290, 55.20 sec so far
+Iteration 926: max relative diff=0.000228, 60.22 sec so far
+Iteration 1003: max relative diff=0.000180, 65.23 sec so far
+Iteration 1080: max relative diff=0.000143, 70.25 sec so far
+Iteration 1157: max relative diff=0.000113, 75.25 sec so far
+Iteration 1234: max relative diff=0.000090, 80.25 sec so far
+Iteration 1311: max relative diff=0.000072, 85.26 sec so far
+Iteration 1388: max relative diff=0.000057, 90.26 sec so far
+Iteration 1465: max relative diff=0.000046, 95.27 sec so far
+Iteration 1542: max relative diff=0.000037, 100.28 sec so far
+Iteration 1619: max relative diff=0.000029, 105.28 sec so far
+Iteration 1696: max relative diff=0.000023, 110.29 sec so far
+Iteration 1773: max relative diff=0.000019, 115.29 sec so far
+Iteration 1850: max relative diff=0.000015, 120.31 sec so far
+Iteration 1928: max relative diff=0.000012, 125.37 sec so far
+Iteration 2005: max relative diff=0.000010, 130.38 sec so far
+Iteration 2082: max relative diff=0.000008, 135.38 sec so far
+Iteration 2159: max relative diff=0.000006, 140.38 sec so far
+Iteration 2236: max relative diff=0.000005, 145.40 sec so far
+Iteration 2313: max relative diff=0.000004, 150.40 sec so far
+Iteration 2390: max relative diff=0.000003, 155.40 sec so far
+Iteration 2467: max relative diff=0.000003, 160.43 sec so far
+Iteration 2545: max relative diff=0.000002, 165.49 sec so far
+Iteration 2622: max relative diff=0.000002, 170.52 sec so far
+Iteration 2699: max relative diff=0.000001, 175.52 sec so far
+Iteration 2776: max relative diff=0.000001, 180.54 sec so far
+
+Iterative method: 2796 iterations in 183.83 seconds (average 0.065042, setup 1.97)
+
+Value in the initial state: 431.851584506982
+
+Time for model checking: 184.909 seconds.
+
+Result: 431.851584506982 (value in the initial state)
+
+
+Overall running time: 185.662 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 2 warnings during computation.	</pre>
+</div>
+</body>
+</html>

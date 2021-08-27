@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - wlan-large E_or 2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan-large">wlan-large</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">E_or</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/modest/modest convert wlan-large.jani --digital-clocks  --unroll-distrs --output converted_wlan-large.jani --overwrite --experiment K=2
+~/storm/build/bin/storm --jani converted_wlan-large.jani --janiproperty E_or --sound --precision 5e-2  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">47.672465085983276s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0, 0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.768918535620859e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.36-g691a5469c.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Fri May  1 01:21:50 2020
+Command line arguments: --jani converted_wlan-large.jani --janiproperty E_or --sound --precision 5e-2 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+Time for model input parsing: 0.047s.
+
+Time for model construction: 39.233s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	3189783
+Transitions: 	6065855
+Choices: 	6045235
+Reward Models:  E_and_rate_reward
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * (success1_seen | success2_seen) -&gt; 166 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;E_or&quot;: R[exp]{&quot;E_and_rate_reward&quot;}max=? [F (success1_seen | success2_seen)] ...
+Result (for initial states): 33692.45734
+Time for model checking: 7.876s.	</pre>
+</div>
+</body>
+</html>

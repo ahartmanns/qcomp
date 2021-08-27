@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - wlan-large E_or 2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan-large">wlan-large</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">E_or</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 wlan-large.jani --props E_or -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.1945664882659912s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">wlan-large.jani:model: info: wlan-large is an STA model and will be simulated as an SHA.
+wlan-large.jani: info: Using default value of 0.95 for the confidence parameter.
+wlan-large.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+wlan-large.jani:model: error: Encountered temporal nondeterminism for tick.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

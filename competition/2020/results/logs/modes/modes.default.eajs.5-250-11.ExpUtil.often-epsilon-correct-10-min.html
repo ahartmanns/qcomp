@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - eajs ExpUtil 5-250-11</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#eajs">eajs</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5, <span class="tt">energy_capacity</span> = 250, <span class="tt">B</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">ExpUtil</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 eajs.5.jani --props ExpUtil -E energy_capacity=250,B=11 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5533711910248s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.6631957871990143</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">eajs.5.jani:model: info: eajs.5 is an MDP model and will be simulated as an MDP.
+eajs.5.jani:variables[11]: info: Expanding variable &quot;loc_1&quot; into 3 locations in automaton &quot;Process_1&quot;.
+eajs.5.jani:variables[15]: info: Expanding variable &quot;loc_2&quot; into 3 locations in automaton &quot;Process_2&quot;.
+eajs.5.jani:variables[17]: info: Expanding variable &quot;user_1&quot; into 6 locations in automaton &quot;Resources&quot;.
+eajs.5.jani:variables[19]: info: Expanding variable &quot;loc_3&quot; into 3 locations in automaton &quot;Process_3&quot;.
+eajs.5.jani:variables[20]: info: Expanding variable &quot;loc_5&quot; into 3 locations in automaton &quot;Process_5&quot;.
+eajs.5.jani:variables[23]: info: Expanding variable &quot;loc_4&quot; into 3 locations in automaton &quot;Process_4&quot;.
+eajs.5.jani: info: Using default value of 0.95 for the confidence parameter.
+eajs.5.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 61 MB
+Analysis results for eajs.5.jani
+Experiment energy_capacity=250, B=11
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property &quot;ExpUtil&quot;
+  Estimated max. value:       3.37913669064748
+  Max. confidence interval:   [3.311589069684935, 3.446684311610025]
+  Runs used (best scheduler): 1390
+  Total runs used:            8578400
+  Schedulers sampled:         8000
+  Best scheduler:             1823521485
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Max. sample data
+    Mean:     3.37913669064748
+    Variance: 1.650968296636989
+    Skewness: 0.3228499023677422
+    Kurtosis: 2.741629925379005
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. value.
+    Statement:          CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:                  0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

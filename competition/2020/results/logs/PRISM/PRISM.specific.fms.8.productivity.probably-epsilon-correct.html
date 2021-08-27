@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - fms productivity 8</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#fms">fms</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">n</span> = 8</td></tr>
+		<tr><td>Property:</td><td><span class="tt">productivity</span> (steady-state-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 fms.prism fms.props --property productivity -const n=8</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">71.9542944431305s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Correctness of result is not checked because no reference result is available.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 14:04:53 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 fms.prism fms.props --property productivity -const n=8
+
+Parsing model file &quot;fms.prism&quot;...
+
+Type:        CTMC
+Modules:     machine1 machine2 machine3 machine12 
+Variables:   P1 P1wM1 P1M1 P1d P1s P1wP2 M1 P2 P2wM2 P2M2 P2s P2wP1 M2 P3 P3M2 P3s P12 P12wM3 P12M3 P12s M3 
+
+Parsing properties file &quot;fms.props&quot;...
+
+1 property:
+(1) &quot;productivity&quot;: R{&quot;productivity&quot;}=? [ S ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;productivity&quot;: R{&quot;productivity&quot;}=? [ S ]
+Model constants: n=8
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: n=8
+
+Computing reachable states...
+
+Reachability (BFS): 65 iterations in 5.62 seconds (average 0.086400, setup 0.00)
+
+Time for model construction: 6.11 seconds.
+
+Type:        CTMC
+States:      4459455 (1 initial)
+Transitions: 38533968
+
+Rate matrix: 215250 nodes (84 terminal), 38533968 minterms, vars: 70r/70c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:4459455
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=4459455, nnz=38533968, compact] [151.2 MB]
+Creating vector for diagonals... [dist=1070, compact] [8.5 MB]
+Allocating iteration vector... [34.0 MB]
+TOTAL: [193.8 MB]
+
+Starting iterations...
+
+Backwards Gauss-Seidel: 19 iterations in 57.00 seconds (average 0.145947, setup 54.23)
+
+BSCC 1 Reward: 118.42688085428631
+
+All states are in BSCCs (so no reachability probabilities computed)
+
+Value in the initial state: 118.42688085428631
+
+Time for model checking: 65.069 seconds.
+
+Result: 118.42688085428631 (value in the initial state)
+
+
+Overall running time: 71.759 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

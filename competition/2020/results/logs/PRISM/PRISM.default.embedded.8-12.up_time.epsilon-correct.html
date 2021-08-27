@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - embedded up_time 8-12</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#embedded">embedded</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_COUNT</span> = 8, <span class="tt">T</span> = 12</td></tr>
+		<tr><td>Property:</td><td><span class="tt">up_time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 embedded.prism embedded.props --property up_time -const MAX_COUNT=8,T=12</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.6678879261016846s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.7068692134065065e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 13:57:24 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 embedded.prism embedded.props --property up_time -const &#x27;MAX_COUNT=8,T=12&#x27;
+
+Parsing model file &quot;embedded.prism&quot;...
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+Parsing properties file &quot;embedded.props&quot;...
+
+14 properties:
+(1) &quot;actuators&quot;: P=? [ !&quot;down&quot; U &quot;fail_actuators&quot; ]
+(2) &quot;actuators_T&quot;: P=? [ !&quot;down&quot; U&lt;=(T*3600) &quot;fail_sensors&quot; ]
+(3) &quot;danger_T&quot;: R{&quot;danger&quot;}=? [ C&lt;=(T*3600) ]
+(4) &quot;danger_time&quot;: R{&quot;danger&quot;}=? [ F &quot;down&quot; ]
+(5) &quot;down_T&quot;: R{&quot;down&quot;}=? [ C&lt;=(T*3600) ]
+(6) &quot;failure_T&quot;: P=? [ F&lt;=(T*3600) &quot;down&quot; ]
+(7) &quot;io&quot;: P=? [ !&quot;down&quot; U &quot;fail_io&quot; ]
+(8) &quot;io_T&quot;: P=? [ !&quot;down&quot; U&lt;=(T*3600) &quot;fail_io&quot; ]
+(9) &quot;main&quot;: P=? [ !&quot;down&quot; U &quot;fail_main&quot; ]
+(10) &quot;main_T&quot;: P=? [ !&quot;down&quot; U&lt;=(T*3600) &quot;fail_main&quot; ]
+(11) &quot;sensors&quot;: P=? [ !&quot;down&quot; U &quot;fail_sensors&quot; ]
+(12) &quot;sensors_T&quot;: P=? [ !&quot;down&quot; U&lt;=(T*3600) &quot;fail_sensors&quot; ]
+(13) &quot;up_T&quot;: R{&quot;up&quot;}=? [ C&lt;=(T*3600) ]
+(14) &quot;up_time&quot;: R{&quot;up&quot;}=? [ F &quot;down&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;up_time&quot;: R{&quot;up&quot;}=? [ F &quot;down&quot; ]
+Model constants: MAX_COUNT=8
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: MAX_COUNT=8
+
+Computing reachable states...
+
+Reachability (BFS): 21 iterations in 0.02 seconds (average 0.001048, setup 0.00)
+
+Time for model construction: 0.032 seconds.
+
+Type:        CTMC
+States:      8548 (1 initial)
+Transitions: 36041
+
+Rate matrix: 1819 nodes (9 terminal), 36041 minterms, vars: 16r/16c
+
+Diagonals vector: 841 nodes (69 terminal), 8548 minterms
+Embedded Markov chain: 14290 nodes (309 terminal), 36041 minterms
+
+Prob0: 2 iterations in 0.01 seconds (average 0.006500, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 5884, inf = 0, maybe = 2664
+Time for computing an upper bound for expected reward: 0.543 seconds.
+Upper bound for expectation (variant 2): 1069829.465582082
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix... [n=8548, nnz=13628, compact] [62.8 KB]
+Creating vector for diagonals... [dist=5, compact] [16.7 KB]
+Creating vector for RHS... [dist=20, compact] [16.9 KB]
+Allocating iteration vectors... [ 2 x 66.8 KB]
+TOTAL: [230.0 KB]
+
+Starting iterations...
+Max relative diff between upper and lower bound on convergence: 9.81571E-07
+Backwards Gauss-Seidel (interval iteration): 692 iterations in 0.11 seconds (average 0.000156, setup 0.01)
+Maximum finite value in solution vector at end of interval iteration: 477.5526060895734
+
+Value in the initial state: 477.55259836127595
+
+Time for model checking: 0.676 seconds.
+
+Result: 477.55259836127595 (value in the initial state)
+
+
+Overall running time: 1.29 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

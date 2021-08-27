@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC-6 - wlan sent 4-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC-6</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 4, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">sent</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files wlan.4.prism --model-input-type prism --property-input-files wlan.props --property-input-names sent --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-6 --const COL=0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">57.77967071533203s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property sent
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 4668 4668
+build-model-states-explored 11282 6614
+build-model-states-explored 17660 6378
+build-model-states-explored 24651 6991
+build-model-states-explored 31629 6978
+build-model-states-explored 38242 6613
+build-model-states-explored 44235 5993
+build-model-states-explored 50993 6758
+build-model-states-explored 57592 6598
+build-model-states-explored 64064 6473
+build-model-states-explored 71152 7088
+build-model-states-explored 78270 7117
+build-model-states-explored 85384 7115
+build-model-states-explored 92505 7121
+build-model-states-explored 100173 7667
+build-model-states-explored 108250 8078
+build-model-states-explored 116479 8229
+build-model-states-explored 124110 7631
+build-model-states-explored 130231 6121
+build-model-states-explored 137989 7758
+build-model-states-explored 146112 8123
+build-model-states-explored 154218 8106
+build-model-states-explored 162330 8112
+build-model-states-explored 170453 8123
+build-model-states-explored 178598 8145
+build-model-states-explored 185889 7291
+build-model-states-explored 193677 7788
+build-model-states-explored 202163 8486
+build-model-states-explored 209610 7447
+build-model-states-explored 218110 8500
+build-model-states-explored 226599 8489
+build-model-states-explored 234896 8297
+build-model-states-explored 243277 8381
+build-model-states-explored 251635 8358
+build-model-states-explored 259730 8095
+build-model-states-explored 267931 8201
+build-model-states-explored 276282 8351
+build-model-states-explored 284647 8365
+build-model-states-explored 293127 8480
+build-model-states-explored 301619 8492
+build-model-states-explored 310097 8478
+build-model-states-explored 318562 8465
+build-model-states-explored 327047 8485
+build-model-states-explored 335523 8476
+build-model-states-explored 343440 7917
+build-model-done 345000 45
+iterating
+iterating-progress-unbounded 179 2.0 1
+iterating-progress-unbounded 371 2.0 2
+iterating-progress-unbounded 563 2.0 3
+iterating-progress-unbounded 754 0.011964167244408458 4
+iterating-progress-unbounded 946 0.0027937357613354017 5
+iterating-progress-unbounded 1137 2.2767779684792024E-5 6
+iterating-progress-unbounded 1329 1.568717858120315E-5 7
+iterating-progress-unbounded 1520 2.538266387818132E-6 8
+iterating-done 1594 8
+model-checking-done 56
+command-check-result-is true sent	</pre>
+</div>
+</body>
+</html>

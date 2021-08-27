@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - pacman crash 100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#pacman">pacman</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAXSTEPS</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">crash</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 pacman.nm pacman.props --property crash -const MAXSTEPS=100</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="color: red;">&gt 1800s (Timeout)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 17:25:18 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 pacman.nm pacman.props --property crash -const MAXSTEPS=100
+
+Parsing model file &quot;pacman.nm&quot;...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman 
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP 
+
+Parsing properties file &quot;pacman.props&quot;...
+
+1 property:
+(1) &quot;crash&quot;: Pmin=? [ F &quot;Crash&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;crash&quot;: Pmin=? [ F &quot;Crash&quot; ]
+Model constants: MAXSTEPS=100
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: MAXSTEPS=100
+
+Computing reachable states...
+
+Reachability (BFS): 303 iterations in 114.54 seconds (average 0.378030, setup 0.00)
+
+Time for model construction: 1733.719 seconds.
+
+Type:        MDP
+States:      79440921 (1 initial)
+Transitions: 109963876
+Choices:     100215175
+
+Transition matrix: 3640220 nodes (44 terminal), 109963876 minterms, vars: 36r/36c/9nd
+
+
+----------
+Computation aborted after 1800.0995411872864 seconds since the total time limit of 1800 seconds was exceeded.	</pre>
+</div>
+</body>
+</html>

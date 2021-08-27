@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - zeroconf correct_min 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_min</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files zeroconf.prism --model-input-type prism --property-input-files zeroconf.props --property-input-names correct_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=1000,K=8,reset=false</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">88.45959448814392s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.663907622560011e-13</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property correct_min
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 11761 11760
+build-model-states-explored 38586 26826
+build-model-states-explored 67494 28908
+build-model-states-explored 95329 27835
+build-model-states-explored 124182 28853
+build-model-states-explored 150036 25854
+build-model-states-explored 179103 29067
+build-model-states-explored 207819 28716
+build-model-states-explored 236606 28787
+build-model-states-explored 264473 27867
+build-model-states-explored 292635 28162
+build-model-states-explored 315648 23013
+build-model-states-explored 344323 28675
+build-model-states-explored 372838 28515
+build-model-states-explored 401092 28254
+build-model-states-explored 429747 28655
+build-model-states-explored 458300 28553
+build-model-states-explored 485532 27232
+build-model-states-explored 514402 28870
+build-model-states-explored 542644 28242
+build-model-states-explored 571644 29000
+build-model-states-explored 587850 16205
+build-model-states-explored 616815 28965
+build-model-states-explored 645792 28978
+build-model-states-explored 674588 28796
+build-model-states-explored 703340 28752
+build-model-states-explored 732187 28847
+build-model-states-explored 760832 28645
+build-model-states-explored 788735 27903
+build-model-states-explored 817208 28473
+build-model-states-explored 845993 28785
+build-model-states-explored 875057 29064
+build-model-states-explored 904078 29021
+build-model-states-explored 929900 25822
+build-model-states-explored 958695 28795
+build-model-states-explored 987480 28785
+build-model-states-explored 1016047 28567
+build-model-states-explored 1044742 28695
+build-model-states-explored 1072343 27601
+build-model-states-explored 1101233 28890
+build-model-states-explored 1129891 28658
+build-model-states-explored 1144261 14370
+build-model-states-explored 1162297 18036
+build-model-states-explored 1191116 28819
+build-model-states-explored 1219796 28680
+build-model-states-explored 1248627 28831
+build-model-states-explored 1276586 27959
+build-model-states-explored 1303980 27394
+build-model-states-explored 1332723 28742
+build-model-states-explored 1361416 28694
+build-model-states-explored 1390196 28780
+build-model-states-explored 1418892 28695
+build-model-states-explored 1447423 28532
+build-model-states-explored 1476106 28683
+build-model-states-explored 1505054 28947
+build-model-states-explored 1533754 28701
+build-model-states-explored 1562240 28486
+build-model-states-explored 1588753 26513
+build-model-states-explored 1617344 28591
+build-model-states-explored 1646224 28880
+build-model-states-explored 1675128 28904
+build-model-states-explored 1703748 28620
+build-model-states-explored 1732264 28516
+build-model-states-explored 1761221 28957
+build-model-states-explored 1790200 28979
+build-model-states-explored 1818986 28786
+build-model-states-explored 1847409 28422
+build-model-done 1870338 68
+iterating
+iterating-progress-unbounded 18 184.49999999999994 1
+iterating-progress-unbounded 39 533.6999999999999 2
+iterating-progress-unbounded 59 16.937296994111126 3
+iterating-progress-unbounded 80 18.1 4
+iterating-progress-unbounded 101 189.1 5
+iterating-progress-unbounded 122 2.8945225130465775 6
+iterating-progress-unbounded 143 1.1203258166776788 7
+iterating-progress-unbounded 164 0.3066490687511017 8
+iterating-progress-unbounded 185 0.004866085099859521 9
+iterating-progress-unbounded 206 0.0017403191626589503 10
+iterating-progress-unbounded 227 0.0013916924246265038 11
+iterating-progress-unbounded 248 4.5417416468703165E-4 12
+iterating-done 249 12
+model-checking-done 87
+command-check-result-is 5.040105212929001E-9 correct_min	</pre>
+</div>
+</body>
+</html>

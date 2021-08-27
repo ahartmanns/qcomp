@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - mapk_cascade activated_time 4-30</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#mapk_cascade">mapk_cascade</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">T</span> = 30</td></tr>
+		<tr><td>Property:</td><td><span class="tt">activated_time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files mapk_cascade.prism --model-input-type prism --property-input-files mapk_cascade.props --property-input-names activated_time --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=4,T=30</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">10.36910629272461s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '960643498559707/25000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 40.67650299593235), ('upper', 40.67650300406765)])' (approx. OrderedDict([('lower', 40.67650299593235), ('upper', 40.67650300406765)])) which means a relative error of '0.055333248626833746' which is larger than the goal precision '0.001'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">0.055333248626833746</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property activated_time
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 8279 8278
+build-model-states-explored 26791 18513
+build-model-states-explored 45019 18228
+build-model-states-explored 62842 17823
+build-model-states-explored 80494 17652
+build-model-states-explored 98665 18171
+build-model-done 99535 6
+iterating
+iterating-progress-unbounded 358 5.759336118059714E-4 1
+iterating-done 376 1
+model-checking-done 9
+command-check-result-is 38.42573994238828 activated_time	</pre>
+</div>
+</body>
+</html>

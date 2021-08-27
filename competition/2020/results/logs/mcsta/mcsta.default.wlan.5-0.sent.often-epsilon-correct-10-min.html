@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - wlan sent 5-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 5, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">sent</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan.5.jani -E COL=0 --props sent -O out.txt Minimal --unsafe --es -S Memory --epsilon 0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">25.292797803878784s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">wlan.5.jani:model: info: wlan.5 is an MDP model.
+wlan.5.jani:variables[7]: info: Expanding variable &quot;s1&quot; into 12 locations in automaton &quot;station1&quot;.
+wlan.5.jani:variables[12]: info: Expanding variable &quot;s2&quot; into 12 locations in automaton &quot;station2&quot;.
+wlan.5.jani: info: Need 16 bytes per state.
+wlan.5.jani: info: Explored 1295218 states for COL=0.
+
+Peak memory usage: 401 MB
+Analysis results for wlan.5.jani
+Experiment COL=0
+
++ State space exploration
+  State size:  16 bytes
+  States:      1295218
+  Transitions: 1646074
+  Branches:    2929960
+  Rate:        415400 states/s
+  Time:        3.3 s
+
++ Property sent
+  Result:      True
+  Time:        21.3 s
+  Probability: 1
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 21.2 s
+    Min. prob. 1 states:          1295218
+    Time for min. prob. 1 states: 0.1 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

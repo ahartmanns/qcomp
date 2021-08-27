@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - consensus disagree 6-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">disagree</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism consensus.6.prism --prop consensus.props disagree --constants K=2 --exact  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4 --engine dd-to-sparse --bisimulation</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">6.773974657058716s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Wed Apr 29 15:28:58 2020
+Command line arguments: --prism consensus.6.prism --prop consensus.props disagree --constants K=2 --exact --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4 --engine dd-to-sparse --bisimulation
+Current working directory: /
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 0.385s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	1258240 (218 nodes)
+Transitions: 	6236736 (7075 nodes)
+Choices: 	5008128
+Reward Models:  none
+Variables: 	rows: 13 meta variables (24 DD variables), columns: 13 meta variables (24 DD variables), nondeterminism: 6 meta variables (6 DD variables)
+Labels: 	6
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (25 nodes)
+   * agree
+   * all_coins_equal_0
+   * all_coins_equal_1
+   * finished
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 5.258s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5012
+Transitions: 	27185
+Choices: 	21741
+Reward Models:  none
+State Labels: 	6 labels
+   * (((((coin1 = coin2) &amp; (coin2 = coin3)) &amp; (coin3 = coin4)) &amp; (coin4 = coin5)) &amp; (coin5 = coin6)) -&gt; 1121 item(s)
+   * ((((((pc1 = 3) &amp; (pc2 = 3)) &amp; (pc3 = 3)) &amp; (pc4 = 3)) &amp; (pc5 = 3)) &amp; (pc6 = 3)) -&gt; 1 item(s)
+   * finished -&gt; 1 item(s)
+   * agree -&gt; 1121 item(s)
+   * init -&gt; 1 item(s)
+   * deadlock -&gt; 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;disagree&quot;: Pmax=? [F (&quot;finished&quot; &amp; !(&quot;agree&quot;))] ...
+Result (for initial states): 37101798760906709/102027593703751680 (approx. 0.3636447496)
+Time for model checking: 0.823s.	</pre>
+</div>
+</body>
+</html>

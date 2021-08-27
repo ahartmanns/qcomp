@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - dpm PmaxQueuesFullBound 4-8-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#dpm">dpm</a> <span class="tt">v.2</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">C</span> = 8, <span class="tt">TIME_BOUND</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">PmaxQueuesFullBound</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta dpm.jani -E N=4,C=8,TIME_BOUND=5 --props PmaxQueuesFullBound -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --width 1e-3 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">76.84921026229858s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">dpm.jani:model: info: dpm is an MA model.
+dpm.jani: info: Need 16 bytes per state.
+dpm.jani: info: Explored 356426 states for N=4, C=8, TIME_BOUND=5.0.
+dpm.jani: info: Identified 356417 maximal end components.
+
+Peak memory usage: 190 MB
+Analysis results for dpm.jani
+Experiment N=4, C=8, TIME_BOUND=5.0
+
++ State space exploration
+  State size:  16 bytes
+  States:      356426
+  Transitions: 418842
+  Branches:    681242
+  Rate:        415415 states/s
+  Time:        0.9 s
+
++ Property PmaxQueuesFullBound
+  Probability: 2.2335263360845845E-08
+  Bounds:      [2.2316392539366227E-08, 2.2354134182325462E-08]
+  Time:        75.4 s
+
+  + Precomputations
+    Max. prob. 0 states:          0
+    Time for max. prob. 0 states: 0.0 s
+
+  + End components
+    Iterations:  2
+    MECs:        356417
+    Transitions: 418833
+    Branches:    681233
+    Time:        0.3 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 123138
+    Transitions:      185554
+    Branches:         447954
+    Time:             0.1 s
+
+  + Unif+
+    Time:                           75.0 s
+    Max. exit rate:                 4.1
+    Iterations (lower bound):       6
+    Final unif. rate (lower bound): 65.6
+    Iterations (upper bound):       5
+    Final unif. rate (upper bound): 32.8
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

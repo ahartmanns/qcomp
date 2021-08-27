@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - cluster below_min 64-2000-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#cluster">cluster</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 64, <span class="tt">T</span> = 2000, <span class="tt">t</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">below_min</span> (exp-reward-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism cluster.prism --prop cluster.props below_min --constants N=64,T=2000,t=20 --prismcompat --sound --precision 1e-6  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">925.2219560146332s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.369980568031154e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Tue Apr 28 15:55:21 2020
+Command line arguments: --prism cluster.prism --prop cluster.props below_min --constants &#x27;N=64,T=2000,t=20&#x27; --prismcompat --sound --precision 1e-6 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+ WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.004s.
+
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 1.800s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	151060
+Transitions: 	733216
+Reward Models:  time_not_min
+State Labels: 	2 labels
+   * deadlock -&gt; 0 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;below_min&quot;: R[exp]{&quot;time_not_min&quot;}=? [C&lt;=2000] ...
+Result (for initial states): 0.00421944377
+Time for model checking: 923.385s.	</pre>
+</div>
+</body>
+</html>

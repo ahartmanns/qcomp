@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - pnueli-zuck live 5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#pnueli-zuck">pnueli-zuck</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">live</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta pnueli-zuck.5.jani --props live -O out.txt Minimal --unsafe --es -S Memory --epsilon 0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">5.87620210647583s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">pnueli-zuck.5.jani:model: info: pnueli-zuck.5 is an MDP model.
+pnueli-zuck.5.jani:variables[0]: info: Expanding variable &quot;p0&quot; into 16 locations in automaton &quot;process0&quot;.
+pnueli-zuck.5.jani:variables[1]: info: Expanding variable &quot;p1&quot; into 16 locations in automaton &quot;process1&quot;.
+pnueli-zuck.5.jani:variables[2]: info: Expanding variable &quot;p2&quot; into 16 locations in automaton &quot;process2&quot;.
+pnueli-zuck.5.jani:variables[3]: info: Expanding variable &quot;p3&quot; into 16 locations in automaton &quot;process3&quot;.
+pnueli-zuck.5.jani:variables[4]: info: Expanding variable &quot;p4&quot; into 16 locations in automaton &quot;process4&quot;.
+pnueli-zuck.5.jani: info: Need 16 bytes per state.
+pnueli-zuck.5.jani: info: Explored 307523 states.
+
+Peak memory usage: 289 MB
+Analysis results for pnueli-zuck.5.jani
+
++ State space exploration
+  State size:  16 bytes
+  States:      307523
+  Transitions: 1753715
+  Branches:    1886851
+  Rate:        191723 states/s
+  Time:        1.7 s
+
++ Property live
+  Probability: 1
+  Bounds:      [1, 1]
+  Time:        3.4 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 303428
+    Transitions:      1749620
+    Branches:         1882756
+    Time:             0.2 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  74
+    Time:        3.2 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC-6 - bluetooth time 1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC-6</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#bluetooth">bluetooth</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">mrec</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files bluetooth.prism --model-input-type prism --property-input-files bluetooth.props --property-input-names time --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-6 --const mrec=1</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">570.848536491394s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property time
+start-building-explorer
+start-building-initial-states-explorer	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Java heap space
+	at epmc.dd.cudd.LibraryDDCUDD.walkerHigh(LibraryDDCUDD.java:535)
+	at epmc.dd.Walker.high(Walker.java:81)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:144)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)	</pre>
+</div>
+</body>
+</html>

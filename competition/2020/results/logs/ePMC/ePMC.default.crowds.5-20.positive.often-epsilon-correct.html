@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - crowds positive 5-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 5, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files crowds.prism --model-input-type prism --property-input-files crowds.props --property-input-names positive --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const TotalRuns=5,CrowdSize=20</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">62.38677716255188s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '1714007023450651/20000000000000000' is tagged as incorrect. The reference result is '317474548144042278373095748974301/3688602718160800000000000000000000' (approx. 0.08606905443651044) which means a relative error of '0.004283807535609316' which is larger than the goal precision '0.001'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">0.004283807535609316</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property positive
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 21555 21554
+build-model-states-explored 52788 31234
+build-model-states-explored 90621 37833
+build-model-states-explored 130503 39882
+build-model-states-explored 194338 63835
+build-model-states-explored 223649 29311
+build-model-states-explored 246283 22632
+build-model-states-explored 267073 20792
+build-model-states-explored 302850 35777
+build-model-states-explored 366231 63380
+build-model-states-explored 403001 36770
+build-model-states-explored 443272 40271
+build-model-states-explored 488113 44841
+build-model-states-explored 544330 56217
+build-model-states-explored 613259 68928
+build-model-states-explored 637373 24115
+build-model-states-explored 655084 17711
+build-model-states-explored 675958 20874
+build-model-states-explored 697073 21115
+build-model-states-explored 721628 24554
+build-model-states-explored 744187 22560
+build-model-states-explored 766806 22619
+build-model-states-explored 790741 23934
+build-model-states-explored 854248 63508
+build-model-states-explored 917187 62939
+build-model-states-explored 984715 67527
+build-model-states-explored 1048576 63862
+build-model-states-explored 1099190 50614
+build-model-states-explored 1166737 67547
+build-model-states-explored 1221675 54938
+build-model-states-explored 1291854 70179
+build-model-states-explored 1345755 53901
+build-model-states-explored 1361450 15695
+build-model-states-explored 1383454 22004
+build-model-states-explored 1405623 22169
+build-model-states-explored 1427878 22255
+build-model-states-explored 1449973 22094
+build-model-states-explored 1472176 22204
+build-model-states-explored 1494373 22197
+build-model-states-explored 1516512 22138
+build-model-states-explored 1538716 22205
+build-model-states-explored 1560789 22073
+build-model-states-explored 1582993 22204
+build-model-states-explored 1605132 22139
+build-model-states-explored 1627426 22294
+build-model-states-explored 1649743 22317
+build-model-states-explored 1672161 22418
+build-model-states-explored 1694505 22344
+build-model-states-explored 1716743 22238
+build-model-states-explored 1738971 22228
+build-model-states-explored 1810282 71311
+build-model-states-explored 1890380 80097
+build-model-states-explored 1970345 79966
+build-model-states-explored 2054675 84330
+build-model-done 2061951 54
+iterating
+iterating-progress-unbounded 40 0.057643608004448975 1
+iterating-done 87 2
+model-checking-done 61
+command-check-result-is 0.08570035117253255 positive	</pre>
+</div>
+</body>
+</html>

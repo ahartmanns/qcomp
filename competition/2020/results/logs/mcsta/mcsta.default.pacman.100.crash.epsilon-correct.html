@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - pacman crash 100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#pacman">pacman</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAXSTEPS</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">crash</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta pacman.jani -E MAXSTEPS=100 --props crash -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">293.5284035205841s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.1597780225524697e-16</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">pacman.jani:model: info: pacman is an MDP model.
+pacman.jani:variables[1]: info: Expanding variable &quot;pMove&quot; into 3 locations in automaton &quot;arbiter&quot;.
+pacman.jani: info: Need 16 bytes per state.
+pacman.jani: info: Explored 16115358 states for MAXSTEPS=100.
+
+Peak memory usage: 3655 MB
+Analysis results for pacman.jani
+Experiment MAXSTEPS=100
+
++ State space exploration
+  State size:  16 bytes
+  States:      16115358
+  Transitions: 20214527
+  Branches:    22140403
+  Rate:        56270 states/s
+  Time:        287.8 s
+
++ Property crash
+  Probability: 0.5511176224662503
+  Bounds:      [0.5511176224662503, 0.5511176224662503]
+  Time:        4.4 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 3176039
+    Transitions:      7275208
+    Branches:         9201000
+    Time:             3.6 s
+
+  + Optimistic value iteration
+    Total iterations:  3
+    Verif. attempts:   1
+    Verif. iterations: 1
+    Final epsilon:     1E-06
+    Time:              0.8 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

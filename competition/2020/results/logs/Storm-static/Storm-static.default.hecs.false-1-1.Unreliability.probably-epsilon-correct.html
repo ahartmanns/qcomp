@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - hecs Unreliability false-1-1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#hecs">hecs</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">R</span> = False, <span class="tt">N</span> = 1, <span class="tt">k</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unreliability</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm-dft --dftfile hecs.false-1-1.dft --timebound 1 --max --sound --precision 5e-2 </pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.06763148307800293s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm-dft 1.5.1
+
+Date: Thu Apr 30 22:53:30 2020
+Command line arguments: --dftfile hecs.false-1-1.dft --timebound 1 --max --sound --precision 5e-2
+Current working directory: /
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	25
+Transitions: 	71
+Reward Models:  none
+State Labels: 	4 labels
+   * System_1_dc -&gt; 0 item(s)
+   * System_1_failed -&gt; 0 item(s)
+   * init -&gt; 1 item(s)
+   * failed -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+Times:
+Exploration:	0.001s
+Building:	0.000s
+Bisimulation:	0.000s
+Modelchecking:	0.000s
+Total:		0.002s
+Result: [0.000109993954]	</pre>
+</div>
+</body>
+</html>

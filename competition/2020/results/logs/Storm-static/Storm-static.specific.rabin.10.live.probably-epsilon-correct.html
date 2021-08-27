@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - rabin live 10</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#rabin">rabin</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 10</td></tr>
+		<tr><td>Property:</td><td><span class="tt">live</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism rabin.10.prism --prop rabin.10.props live --sound --precision 5e-2  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4 --engine hybrid</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">2.208712100982666s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Thu Apr 30 05:50:23 2020
+Command line arguments: --prism rabin.10.prism --prop rabin.10.props live --sound --precision 5e-2 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4 --engine hybrid
+Current working directory: /
+
+Time for model input parsing: 0.051s.
+
+Time for model construction: 1.482s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	40000000000 (4989 nodes)
+Transitions: 	151486089440 (177311 nodes)
+Choices: 	65743044720
+Reward Models:  none
+Variables: 	rows: 43 meta variables (96 DD variables), columns: 43 meta variables (96 DD variables), nondeterminism: 10 meta variables (10 DD variables)
+Labels: 	2
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (97 nodes)
+-------------------------------------------------------------- 
+
+Model checking property &quot;live&quot;: Pmax=? [F ((((((((((p1 = 2) | (p2 = 2)) | (p3 = 2)) | (p4 = 2)) | (p5 = 2)) | (p6 = 2)) | (p7 = 2)) | (p8 = 2)) | (p9 = 2)) | (p10 = 2))] ...
+Result (for initial states): 1
+Time for model checking: 0.099s.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DFTRES - hecs Unreliability false-1-1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>DFTRES</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#hecs">hecs</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">R</span> = False, <span class="tt">N</span> = 1, <span class="tt">k</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unreliability</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unreliability  --def R False --def N 1 --def k 1 --relErr 1e-99 --unsafe-scheduling hecs.false-1-1.jani</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.3199994564056s</td></tr>
+		<tr><td>Return code:</td><td style="tt">130</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0003571128174210073</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Total time: 599.95 s.
+Property Unreliability:
+point estimate: 1.0995457378489907E-4,
+var: 1.924564906517045E-8,
+CI: [1.0991698526669879E-4, 1.0999216230309935E-4] = 1.0995457378489907E-4 +/- 3.75885182002779E-8	</pre>
+</div>
+</body>
+</html>

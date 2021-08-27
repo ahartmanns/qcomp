@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - wlan-large E_or 2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan-large">wlan-large</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">E_or</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan-large.jani -E K=2 --props E_or -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">20.523709535598755s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.1686671230787754e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">wlan-large.jani:model: info: wlan-large is an STA model.
+wlan-large.jani: info: Need 16 bytes per state.
+wlan-large.jani: info: Explored 3189783 states for K=2.
+
+Peak memory usage: 1039 MB
+Analysis results for wlan-large.jani
+Experiment K=2
+
++ State space exploration
+  State size:  16 bytes
+  States:      3189783
+  Transitions: 6045235
+  Branches:    6065855
+  Rate:        223593 states/s
+  Time:        14.7 s
+
++ Property E_or
+  Value:  33692.45840887166
+  Bounds: [33692.45733978932, 33692.459477954]
+  Time:   4.8 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 3.3 s
+    Min. prob. 1 states:          3189783
+    Time for min. prob. 1 states: 0.2 s
+
+  + Essential states
+    Iterations:       11
+    Essential states: 139882
+    Transitions:      326004
+    Branches:         346624
+    Time:             1.2 s
+
+  + Optimistic value iteration
+    Total iterations:  10
+    Verif. attempts:   1
+    Verif. iterations: 2
+    Final epsilon:     1E-06
+    Time:              0.1 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

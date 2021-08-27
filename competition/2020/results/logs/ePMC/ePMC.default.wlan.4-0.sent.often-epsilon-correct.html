@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - wlan sent 4-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 4, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">sent</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files wlan.4.prism --model-input-type prism --property-input-files wlan.props --property-input-names sent --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const COL=0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">55.30375266075134s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property sent
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 4703 4703
+build-model-states-explored 11222 6519
+build-model-states-explored 17700 6478
+build-model-states-explored 24825 7125
+build-model-states-explored 31998 7173
+build-model-states-explored 38590 6592
+build-model-states-explored 44783 6193
+build-model-states-explored 51646 6863
+build-model-states-explored 58310 6664
+build-model-states-explored 64971 6661
+build-model-states-explored 72076 7105
+build-model-states-explored 79306 7230
+build-model-states-explored 86530 7224
+build-model-states-explored 93738 7208
+build-model-states-explored 101270 7532
+build-model-states-explored 109239 7969
+build-model-states-explored 116905 7666
+build-model-states-explored 124037 7132
+build-model-states-explored 129869 5832
+build-model-states-explored 137005 7136
+build-model-states-explored 144590 7585
+build-model-states-explored 152181 7590
+build-model-states-explored 159787 7607
+build-model-states-explored 167397 7610
+build-model-states-explored 174983 7586
+build-model-states-explored 182561 7578
+build-model-states-explored 188860 6299
+build-model-states-explored 196737 7877
+build-model-states-explored 204595 7858
+build-model-states-explored 211540 6945
+build-model-states-explored 219433 7893
+build-model-states-explored 227507 8074
+build-model-states-explored 236029 8522
+build-model-states-explored 244552 8523
+build-model-states-explored 253083 8531
+build-model-states-explored 261589 8506
+build-model-states-explored 269971 8382
+build-model-states-explored 278464 8493
+build-model-states-explored 287001 8537
+build-model-states-explored 295662 8661
+build-model-states-explored 304317 8655
+build-model-states-explored 313003 8686
+build-model-states-explored 321662 8659
+build-model-states-explored 330327 8665
+build-model-states-explored 338597 8270
+build-model-done 345000 45
+iterating
+iterating-progress-unbounded 180 2.0 1
+iterating-progress-unbounded 373 2.0 2
+iterating-progress-unbounded 564 2.0 3
+iterating-progress-unbounded 756 0.011823112259130023 4
+iterating-progress-unbounded 947 0.0027674692481487123 5
+iterating-done 1066 5
+model-checking-done 54
+command-check-result-is true sent	</pre>
+</div>
+</body>
+</html>

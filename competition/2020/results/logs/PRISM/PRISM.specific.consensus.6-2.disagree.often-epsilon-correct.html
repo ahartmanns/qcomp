@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - consensus disagree 6-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">disagree</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 consensus.6.prism consensus.props --property disagree -const K=2</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">147.040429353714s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.6416600330326686e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 15:42:01 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 consensus.6.prism consensus.props --property disagree -const K=2
+
+Parsing model file &quot;consensus.6.prism&quot;...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4 process5 process6 
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4 pc5 coin5 pc6 coin6 
+
+Parsing properties file &quot;consensus.props&quot;...
+
+5 properties:
+(1) &quot;c1&quot;: P&gt;=1 [ F &quot;finished&quot; ]
+(2) &quot;c2&quot;: Pmin=? [ F &quot;finished&quot;&amp;&quot;all_coins_equal_1&quot; ]
+(3) &quot;disagree&quot;: Pmax=? [ F &quot;finished&quot;&amp;!&quot;agree&quot; ]
+(4) &quot;steps_max&quot;: R{&quot;steps&quot;}max=? [ F &quot;finished&quot; ]
+(5) &quot;steps_min&quot;: R{&quot;steps&quot;}min=? [ F &quot;finished&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;disagree&quot;: Pmax=? [ F &quot;finished&quot;&amp;!&quot;agree&quot; ]
+Model constants: K=2
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: K=2
+
+Computing reachable states...
+
+Reachability (BFS): 149 iterations in 0.18 seconds (average 0.001195, setup 0.00)
+
+Time for model construction: 0.165 seconds.
+
+Type:        MDP
+States:      1258240 (1 initial)
+Transitions: 6236736
+Choices:     5008128
+
+Transition matrix: 7075 nodes (3 terminal), 6236736 minterms, vars: 24r/24c/6nd
+
+Prob0A: 115 iterations in 1.30 seconds (average 0.011348, setup 0.00)
+
+Prob1E: 1925 iterations in 27.29 seconds (average 0.014177, setup 0.00)
+
+yes = 583956, no = 27270, maybe = 647014
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=1258240, nc=2997228, nnz=3756780, k=6] [47.1 MB]
+Creating vector for yes... [9.6 MB]
+Allocating iteration vectors... [2 x 9.6 MB]
+TOTAL: [75.9 MB]
+
+Starting iterations...
+Iteration 164: max relative diff=0.211638, 5.03 sec so far
+Iteration 326: max relative diff=0.049996, 10.06 sec so far
+Iteration 488: max relative diff=0.021213, 15.07 sec so far
+Iteration 650: max relative diff=0.010714, 20.09 sec so far
+Iteration 812: max relative diff=0.005886, 25.11 sec so far
+Iteration 974: max relative diff=0.003396, 30.13 sec so far
+Iteration 1136: max relative diff=0.002020, 35.14 sec so far
+Iteration 1296: max relative diff=0.001226, 40.16 sec so far
+Iteration 1458: max relative diff=0.000753, 45.18 sec so far
+Iteration 1620: max relative diff=0.000467, 50.20 sec so far
+Iteration 1782: max relative diff=0.000291, 55.23 sec so far
+Iteration 1944: max relative diff=0.000182, 60.25 sec so far
+Iteration 2106: max relative diff=0.000114, 65.26 sec so far
+Iteration 2268: max relative diff=0.000071, 70.27 sec so far
+Iteration 2430: max relative diff=0.000045, 75.28 sec so far
+Iteration 2592: max relative diff=0.000028, 80.30 sec so far
+Iteration 2754: max relative diff=0.000018, 85.32 sec so far
+Iteration 2916: max relative diff=0.000011, 90.34 sec so far
+Iteration 3078: max relative diff=0.000007, 95.36 sec so far
+Iteration 3240: max relative diff=0.000004, 100.38 sec so far
+Iteration 3402: max relative diff=0.000003, 105.40 sec so far
+Iteration 3564: max relative diff=0.000002, 110.41 sec so far
+Iteration 3726: max relative diff=0.000001, 115.42 sec so far
+
+Iterative method: 3759 iterations in 117.61 seconds (average 0.030976, setup 1.17)
+
+Value in the initial state: 0.36362423396240773
+
+Time for model checking: 146.107 seconds.
+
+Result: 0.36362423396240773 (value in the initial state)
+
+
+Overall running time: 146.847 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

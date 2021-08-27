@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ModestFRETpiLRTDP - wlan cost_min 5-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ModestFRETpiLRTDP</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 5, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">cost_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe wlan.5.jani --epsilon 1e-3 --props cost_min -E COL=0 --timeout 580</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">3.5455687046051025s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">wlan.5.jani:model: info: wlan.5 is an MDP model.
+wlan.5.jani: info: Need 15 bytes per state.
+Throw exception
+wlan.5.jani:properties[2]: warning: Computing minimum expected reward in property &quot;cost_min&quot; without checking for zero-reward end components.
+
+Peak memory usage: 64 MB
+Analysis results for wlan.5.jani
+Experiment COL=0
+
++ Property cost_min
+  Value: 7625
+  Time:  2.2 s	</pre>
+</div>
+</body>
+</html>

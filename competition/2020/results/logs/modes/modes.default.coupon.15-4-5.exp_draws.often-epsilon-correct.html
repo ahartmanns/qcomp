@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - coupon exp_draws 15-4-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#coupon">coupon</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 15, <span class="tt">DRAWS</span> = 4, <span class="tt">B</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_draws</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 coupon.15-4.jani --props exp_draws -E B=5 -O out.txt Minimal --width 1e-3 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">19.671817779541016s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0002831891703885857</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">coupon.15-4.jani:model: info: coupon.15-4 is a DTMC model and will be simulated as an MDP using uniform resolution of nondeterminism.
+coupon.15-4.jani: info: Using default value of 0.95 for the confidence parameter.
+coupon.15-4.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 57 MB
+Analysis results for coupon.15-4.jani
+Experiment B=5
+Status:          Finished
+Simulation time: 18.6 s
+
++ Property Property &quot;exp_draws&quot;
+  Estimated value:     12.814728595909363
+  Confidence interval: [12.801913880968973, 12.827543310849753]
+  Runs used:           449330
+  Run type:            MDP
+  Status:              Finished
+
+  + Sample data
+    Mean:     12.814728595909363
+    Variance: 19.208220538074144
+    Skewness: 1.3349553424998433
+    Kurtosis: 6.145886532496762
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

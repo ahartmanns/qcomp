@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - zeroconf correct_max 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 zeroconf.jani --props correct_max -E N=1000,K=8,reset=false -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5496289730072s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.3980948695678434</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">zeroconf.jani:model: info: zeroconf is an MDP model and will be simulated as an MDP.
+zeroconf.jani:variables[21]: info: Expanding variable &quot;l&quot; into 5 locations in automaton &quot;host0&quot;.
+zeroconf.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 58 MB
+Analysis results for zeroconf.jani
+Experiment N=1000, K=8, reset=False
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property &quot;correct_max&quot;
+  Estimated max. probability: 2.8899955002770062E-08
+  Runs used (best scheduler): 34602130
+  Total runs used:            35602130
+  Schedulers sampled:         0
+  Best scheduler:             1676002098
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Aborted: no error bounds	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

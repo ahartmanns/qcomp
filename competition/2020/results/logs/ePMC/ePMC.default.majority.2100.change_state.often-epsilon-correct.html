@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - majority change_state 2100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#majority">majority</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">T</span> = 2100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">change_state</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files majority.prism --model-input-type prism --property-input-files majority.props --property-input-names change_state --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const T=2100</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">44.409607887268066s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.5832343964140127e-06</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property change_state
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 11322 11322
+build-model-states-explored 26540 15218
+build-model-states-explored 43207 16667
+build-model-states-explored 59451 16244
+build-model-states-explored 75893 16442
+build-model-states-explored 92513 16620
+build-model-states-explored 108669 16156
+build-model-states-explored 125336 16667
+build-model-states-explored 141197 15861
+build-model-states-explored 158138 16941
+build-model-states-explored 175220 17082
+build-model-done 192000 11
+iterating-progress-bounded 227 7233 0.03138393474353657 1
+iterating-progress-bounded 476 7233 0.06580948430803263 2
+iterating-progress-bounded 730 7233 0.1009263099682013 3
+iterating-progress-bounded 984 7233 0.13604313562836998 4
+iterating-progress-bounded 1238 7233 0.17115996128853864 5
+iterating-progress-bounded 1493 7233 0.20641504216784184 6
+iterating-progress-bounded 1748 7233 0.24167012304714502 7
+iterating-progress-bounded 2003 7233 0.2769252039264482 8
+iterating-progress-bounded 2258 7233 0.31218028480575144 9
+iterating-progress-bounded 2512 7233 0.3472971104659201 10
+iterating-progress-bounded 2764 7233 0.3821374256878197 11
+iterating-progress-bounded 3018 7233 0.4172542513479884 12
+iterating-progress-bounded 3273 7233 0.45250933222729156 13
+iterating-progress-bounded 3528 7233 0.4877644131065948 14
+iterating-progress-bounded 3783 7233 0.523019493985898 15
+iterating-progress-bounded 4037 7233 0.5581363196460667 16
+iterating-progress-bounded 4292 7233 0.5933914005253699 17
+iterating-progress-bounded 4547 7233 0.628646481404673 18
+iterating-progress-bounded 4802 7233 0.6639015622839762 19
+iterating-progress-bounded 5056 7233 0.6990183879441448 20
+iterating-progress-bounded 5309 7233 0.7339969583851791 21
+iterating-progress-bounded 5564 7233 0.7692520392644823 22
+iterating-progress-bounded 5819 7233 0.8045071201437854 23
+iterating-progress-bounded 6072 7233 0.8394856905848196 24
+iterating-progress-bounded 6325 7233 0.8744642610258537 25
+iterating-progress-bounded 6580 7233 0.9097193419051569 26
+iterating-progress-bounded 6835 7233 0.9449744227844601 27
+iterating-progress-bounded 7090 7233 0.9802295036637633 28
+model-checking-done 43
+command-check-result-is 0.05429927922835047 change_state	</pre>
+</div>
+</body>
+</html>

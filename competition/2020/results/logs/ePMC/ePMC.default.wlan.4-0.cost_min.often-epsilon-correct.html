@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - wlan cost_min 4-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 4, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">cost_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files wlan.4.prism --model-input-type prism --property-input-files wlan.props --property-input-names cost_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const COL=0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">129.35116958618164s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property cost_min
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 4340 4340
+build-model-states-explored 10807 6467
+build-model-states-explored 17340 6533
+build-model-states-explored 24426 7086
+build-model-states-explored 31617 7191
+build-model-states-explored 38306 6689
+build-model-states-explored 44416 6110
+build-model-states-explored 51270 6854
+build-model-states-explored 57958 6688
+build-model-states-explored 64555 6597
+build-model-states-explored 71781 7226
+build-model-states-explored 79024 7243
+build-model-states-explored 86167 7143
+build-model-states-explored 94777 8610
+build-model-states-explored 102831 8054
+build-model-states-explored 111399 8568
+build-model-states-explored 119809 8410
+build-model-states-explored 126569 6760
+build-model-states-explored 133262 6693
+build-model-states-explored 141442 8180
+build-model-states-explored 149635 8193
+build-model-states-explored 157759 8124
+build-model-states-explored 165976 8217
+build-model-states-explored 174224 8247
+build-model-states-explored 182456 8233
+build-model-states-explored 189243 6787
+build-model-states-explored 197837 8594
+build-model-states-explored 206441 8604
+build-model-states-explored 213655 7214
+build-model-states-explored 222212 8557
+build-model-states-explored 230747 8535
+build-model-states-explored 239269 8522
+build-model-states-explored 247823 8554
+build-model-states-explored 256362 8539
+build-model-states-explored 264777 8415
+build-model-states-explored 273330 8553
+build-model-states-explored 281886 8556
+build-model-states-explored 290512 8626
+build-model-states-explored 299157 8645
+build-model-states-explored 307835 8678
+build-model-states-explored 316505 8670
+build-model-states-explored 325154 8649
+build-model-states-explored 333844 8690
+build-model-states-explored 341937 8093
+build-model-done 345000 44
+iterating
+iterating-progress-unbounded 160 0.22727272727272727 1
+iterating-progress-unbounded 339 0.11299435028248588 2
+iterating-progress-unbounded 520 0.03389830508474576 3
+iterating-done 546 3
+model-checking-done 128
+command-check-result-is 7625.0 cost_min	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DFTRES - ftpp Unavailability 2-2-true</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>DFTRES</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#ftpp">ftpp</a> <span class="tt">v.2</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 2, <span class="tt">k</span> = 2, <span class="tt">R</span> = True</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unavailability</span> (steady-state-prob)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop Unavailability  --def N 2 --def k 2 --def R True --relErr 0.001 --unsafe-scheduling --fixed-batches ftpp.2-2-true.jani</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">27.409754753112793s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Correctness of result is not checked because no reference result is available.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Total time: 27.163 s.
+Property Unavailability:
+point estimate: 1.7615094788505613E-20,
+var: 1.301694450843743E-40,
+CI: [1.7600671735864315E-20, 1.762951784114691E-20] = 1.7615094788505613E-20 +/- 1.442305264129734E-23	</pre>
+</div>
+</body>
+</html>

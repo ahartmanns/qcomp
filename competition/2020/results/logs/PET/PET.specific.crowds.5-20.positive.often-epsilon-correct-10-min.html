@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PET - crowds positive 5-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PET</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 5, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./smc.sh crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const TotalRuns=5,CrowdSize=20</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.1137523651123s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">130</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Thu Mar 19 09:17:38 UTC 2020
+Hostname: 68eec9c801d9
+Memory limits: cudd=1g, java(heap)=8.9g
+Command line: prism crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams &#x27;S:1000000;Av:10;e:0.001;d:0.05;p:0.05;post:64&#x27; -const &#x27;TotalRuns=5,CrowdSize=20&#x27; -javamaxmem 10g
+
+Parsing the model file &quot;crowds.prism&quot;...
+
+Parsing properties file &quot;crowds.props&quot;...
+
+1 property:
+(1) &quot;positive&quot;: P=? [ F observe0&gt;1 ]
+
+Type:        DTMC
+Modules:     crowds 
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19 
+
+---------------------------------------------------------------------
+
+Model checking: &quot;positive&quot;: P=? [ F observe0&gt;1 ]
+Model constants: TotalRuns=5,CrowdSize=20
+Starting heuristic: RTDP_ADJ
+IsMDP false Collapse false break false
+ColourParams: S:1000000 Av: 10 eps: 0.001 delta: 0.05 pmin: 0.05
+TransDelta: 7.8125E-11
+HeuristicSG: Version try0
+Grey
+======================================
+
+JSON: {&quot;Trials&quot;:100000,&quot;Precision&quot;:0.83725543581328,&quot;PartialTransDelta&quot;:6.46482617375384E-8,&quot;Value&quot;:{&quot;Upper&quot;:0.8540145420215938,&quot;Lower&quot;:0.016759106208313786},&quot;ActionsOfs0&quot;:{&quot;Action0&quot;:&quot;[0.01675912936806176;0.8539956398497698]&quot;},&quot;GlobalTimerSecs&quot;:305.228,&quot;AvgConf&quot;:0.9142506686329093,&quot;StateInfos&quot;:{&quot;num00&quot;:38578,&quot;num11&quot;:766,&quot;numStates&quot;:259689,&quot;num01&quot;:219443,&quot;avgDist&quot;:0.84736107705185,&quot;numWorking&quot;:902,&quot;numUnset&quot;:0,&quot;numClose&quot;:39344}}	</pre>
+</div>
+</body>
+</html>

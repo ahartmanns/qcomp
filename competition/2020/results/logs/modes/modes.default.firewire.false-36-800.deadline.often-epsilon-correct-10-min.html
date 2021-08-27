@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - firewire deadline false-36-800</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#firewire">firewire</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">explicit_timer</span> = False, <span class="tt">delay</span> = 36, <span class="tt">deadline</span> = 800</td></tr>
+		<tr><td>Property:</td><td><span class="tt">deadline</span> (prob-reach-reward-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 firewire.false.jani --props deadline -E delay=36,deadline=800 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5474762916565s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.031054583995760512</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">firewire.false.jani:model: info: firewire.false is an MDP model and will be simulated as an MDP.
+firewire.false.jani:variables[7]: info: Expanding variable &quot;s1&quot; into 9 locations in automaton &quot;node1&quot;.
+firewire.false.jani:variables[8]: info: Expanding variable &quot;w21&quot; into 10 locations in automaton &quot;wire21&quot;.
+firewire.false.jani:variables[12]: info: Expanding variable &quot;s2&quot; into 9 locations in automaton &quot;node2&quot;.
+firewire.false.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 59 MB
+Analysis results for firewire.false.jani
+Experiment delay=36, deadline=800
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property &quot;deadline&quot;
+  Estimated min. probability: 0.9686274509803922
+  Runs used (best scheduler): 1020
+  Total runs used:            5880050
+  Schedulers sampled:         5000
+  Best scheduler:             1570667008
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is an upper bound for the true min. probability.
+    Statement:          Adaptive: P(error &gt; εp̂) &lt; δ
+    ε:                  0.02
+    δ:                  0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

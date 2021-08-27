@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - embedded up_time 8-12</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#embedded">embedded</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_COUNT</span> = 8, <span class="tt">T</span> = 12</td></tr>
+		<tr><td>Property:</td><td><span class="tt">up_time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta embedded.jani -E MAX_COUNT=8,T=12 --props up_time -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width --p0 --p1</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">10.14117980003357s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.011078767588863232</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">embedded.jani:model: info: embedded is a CTMC model.
+embedded.jani: info: Need 16 bytes per state.
+embedded.jani: info: Explored 5820 states for MAX_COUNT=8, T=12.0.
+
+Peak memory usage: 54 MB
+Analysis results for embedded.jani
+Experiment MAX_COUNT=8, T=12.0
+
++ State space exploration
+  State size:  16 bytes
+  States:      5820
+  Transitions: 5820
+  Branches:    16788
+  Rate:        84348 states/s
+  Time:        0.1 s
+
++ Property up_time
+  Value:  472.26168182517654
+  Bounds: [454.97477551564975, 489.54858813470327]
+  Time:   9.6 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          5820
+    Time for min. prob. 1 states: 0.0 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 2666
+    Transitions:      2666
+    Branches:         13634
+    Time:             0.0 s
+
+  + Optimistic value iteration
+    Total iterations:  61134
+    Verif. attempts:   12
+    Verif. iterations: 20517
+    Final epsilon:     4.132842291174597E-06
+    Time:              9.5 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

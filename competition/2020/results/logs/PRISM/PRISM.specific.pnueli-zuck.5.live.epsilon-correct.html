@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - pnueli-zuck live 5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#pnueli-zuck">pnueli-zuck</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">live</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 pnueli-zuck.5.prism pnueli-zuck.props --property live</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.6688551902770996s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 23:25:21 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 pnueli-zuck.5.prism pnueli-zuck.props --property live
+
+Parsing model file &quot;pnueli-zuck.5.prism&quot;...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 
+Variables:   p0 p1 p2 p3 p4 
+
+Parsing properties file &quot;pnueli-zuck.props&quot;...
+
+1 property:
+(1) &quot;live&quot;: Pmax=? [ F (p1=10) ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;live&quot;: Pmax=? [ F (p1=10) ]
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 38 iterations in 0.21 seconds (average 0.005579, setup 0.00)
+
+Time for model construction: 0.182 seconds.
+
+Type:        MDP
+States:      397435 (1 initial)
+Transitions: 2492035
+Choices:     2323315
+
+Transition matrix: 5161 nodes (3 terminal), 2492035 minterms, vars: 20r/20c/5nd
+
+Prob0A: 45 iterations in 0.48 seconds (average 0.010756, setup 0.00)
+
+Prob1E: 46 iterations in 0.20 seconds (average 0.004304, setup 0.00)
+
+yes = 397435, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.472 seconds.
+
+Result: 1.0 (value in the initial state)
+
+
+Overall running time: 1.245 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

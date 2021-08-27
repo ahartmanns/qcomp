@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - eajs ExpUtil 5-250-11</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#eajs">eajs</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5, <span class="tt">energy_capacity</span> = 250, <span class="tt">B</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">ExpUtil</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 eajs.5.prism eajs.props --property ExpUtil -const energy_capacity=250,B=11</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">21.742945194244385s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">7.937975309890451e-09</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 17:09:48 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 eajs.5.prism eajs.props_fixed --property ExpUtil -const &#x27;energy_capacity=250,B=11&#x27;
+
+Parsing model file &quot;eajs.5.prism&quot;...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4 
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4 
+
+Parsing properties file &quot;eajs.props_fixed&quot;...
+
+1 property:
+(1) &quot;ExpUtil&quot;: R{&quot;utilityLocal&quot;}max=? [ F emptyBattery ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;ExpUtil&quot;: R{&quot;utilityLocal&quot;}max=? [ F emptyBattery ]
+Model constants: energy_capacity=250
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: energy_capacity=250
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.16 seconds (average 0.002178, setup 0.00)
+
+Time for model construction: 0.779 seconds.
+
+Type:        MDP
+States:      3049471 (1 initial)
+Transitions: 6977654
+Choices:     4256193
+
+Transition matrix: 25363 nodes (7 terminal), 6977654 minterms, vars: 43r/43c/5nd
+
+Prob0E: 250 iterations in 0.85 seconds (average 0.003420, setup 0.00)
+
+Prob1A: 1 iterations in 0.01 seconds (average 0.005000, setup 0.00)
+
+goal = 13476, inf = 0, maybe = 3035995
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=3049471, nc=4237377, nnz=6946802, k=10] [107.3 MB]
+Building sparse matrix (transition rewards)... [n=3049471, nc=4237377, nnz=105040, k=10] [29.0 MB]
+Creating vector for state rewards... [23.3 MB]
+Creating vector for inf... [23.3 MB]
+Allocating iteration vectors... [2 x 23.3 MB]
+TOTAL: [229.4 MB]
+
+Starting iterations...
+Iteration 64: max relative diff=0.044599, 5.05 sec so far
+
+Iterative method: 128 iterations in 19.69 seconds (average 0.077109, setup 9.82)
+
+Value in the initial state: 10.03294060879421
+
+Time for model checking: 20.206 seconds.
+
+Result: 10.03294060879421 (value in the initial state)
+
+
+Overall running time: 21.57 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

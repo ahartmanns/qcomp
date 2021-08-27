@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - cabinets Unavailability 3-2-true</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#cabinets">cabinets</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 3, <span class="tt">P</span> = 2, <span class="tt">R</span> = True</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unavailability</span> (steady-state-prob)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --jani cabinets.3-2-true.jani --janiproperty Unavailability --exact  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">687.3246412277222s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Thu Apr 30 15:52:35 2020
+Command line arguments: --jani cabinets.3-2-true.jani --janiproperty Unavailability --exact --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+Time for model input parsing: 0.010s.
+
+Time for model construction: 125.931s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4427421
+Transitions: 	7983998
+Choices: 	5385842
+Markovian St.: 	354294
+Max. Rate.: 	8373/2000
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * marked -&gt; 2617147 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4427421
+Transitions: 	7983998
+Choices: 	5385842
+Markovian St.: 	354294
+Max. Rate.: 	8373/2000
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * marked -&gt; 2617147 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;Unavailability&quot;: LRAmax=? [marked] ...	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">ERROR: The program received signal 11 and will be aborted in 3s.
+Received signal 11	</pre>
+</div>
+</body>
+</html>

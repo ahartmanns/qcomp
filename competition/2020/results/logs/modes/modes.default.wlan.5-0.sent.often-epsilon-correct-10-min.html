@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - wlan sent 5-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 5, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">sent</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 wlan.5.jani --props sent -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5531833171844s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">wlan.5.jani:model: info: wlan.5 is an MDP model and will be simulated as an MDP.
+wlan.5.jani:variables[7]: info: Expanding variable &quot;s1&quot; into 12 locations in automaton &quot;station1&quot;.
+wlan.5.jani:variables[12]: info: Expanding variable &quot;s2&quot; into 12 locations in automaton &quot;station2&quot;.
+wlan.5.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 64 MB
+Analysis results for wlan.5.jani
+Experiment COL=0
+Status:          Finished
+Simulation time: 599.3 s
+
++ Property Property &quot;sent&quot;
+  Decision:                   undecided
+  Estimated min. probability: 1
+  Runs used (best scheduler): 250
+  Total runs used:            20399650
+  Schedulers sampled:         20000
+  Best scheduler:             666765129
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is an upper bound for the true min. probability.
+    Statement:          Adaptive: P(error &gt; εp̂) &lt; δ
+    ε:                  0.02
+    δ:                  0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

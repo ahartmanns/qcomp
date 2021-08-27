@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - eajs ExpUtil 5-250-11</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#eajs">eajs</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5, <span class="tt">energy_capacity</span> = 250, <span class="tt">B</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">ExpUtil</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta eajs.5.jani -E energy_capacity=250,B=11 --props ExpUtil -O out.txt Minimal --unsafe --es -S Memory --epsilon 0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">17.866981506347656s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.4422885903006456e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">eajs.5.jani:model: info: eajs.5 is an MDP model.
+eajs.5.jani:variables[11]: info: Expanding variable &quot;loc_1&quot; into 3 locations in automaton &quot;Process_1&quot;.
+eajs.5.jani:variables[15]: info: Expanding variable &quot;loc_2&quot; into 3 locations in automaton &quot;Process_2&quot;.
+eajs.5.jani:variables[17]: info: Expanding variable &quot;user_1&quot; into 6 locations in automaton &quot;Resources&quot;.
+eajs.5.jani:variables[19]: info: Expanding variable &quot;loc_3&quot; into 3 locations in automaton &quot;Process_3&quot;.
+eajs.5.jani:variables[20]: info: Expanding variable &quot;loc_5&quot; into 3 locations in automaton &quot;Process_5&quot;.
+eajs.5.jani:variables[23]: info: Expanding variable &quot;loc_4&quot; into 3 locations in automaton &quot;Process_4&quot;.
+eajs.5.jani: info: Need 24 bytes per state.
+eajs.5.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+eajs.5.jani: info: Explored 3049471 states for energy_capacity=250, B=11.
+
+Peak memory usage: 1332 MB
+Analysis results for eajs.5.jani
+Experiment energy_capacity=250, B=11
+
++ State space exploration
+  State size:  24 bytes
+  States:      3049471
+  Transitions: 4250853
+  Branches:    6960278
+  Rate:        258649 states/s
+  Time:        12.2 s
+
++ Property ExpUtil
+  Value:  10.032940688435431
+  Bounds: [10.032940688435431, 10.032940688435431]
+  Time:   5.0 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 1.9 s
+    Min. prob. 1 states:          3049471
+    Time for min. prob. 1 states: 0.2 s
+
+  + Essential states
+    Iterations:       4
+    Essential states: 1432081
+    Transitions:      2633463
+    Branches:         5342888
+    Time:             1.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  18
+    Time:        1.8 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

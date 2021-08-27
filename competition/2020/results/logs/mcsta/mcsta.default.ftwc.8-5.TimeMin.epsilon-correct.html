@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - ftwc TimeMin 8-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#ftwc">ftwc</a> <span class="tt">v.3</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 8, <span class="tt">TIME_BOUND</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">TimeMin</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta ftwc.jani -E N=8,TIME_BOUND=5 --props TimeMin -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">232.88129138946533s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">9.592731839545099e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">ftwc.jani:model: info: ftwc is an MA model.
+ftwc.jani: info: Need at least 40 bytes per state.
+ftwc.jani: info: Explored 10299 states for N=8, TIME_BOUND=5.
+ftwc.jani:properties[3]: warning: Computing minimum expected reward in property &quot;TimeMin&quot; without checking for zero-reward end components.
+
+Peak memory usage: 59 MB
+Analysis results for ftwc.jani
+Experiment N=8, TIME_BOUND=5
+
++ State space exploration
+  Min. state size: 40 bytes
+  States:          10299
+  Transitions:     12635
+  Branches:        26983
+  Rate:            73564 states/s
+  Time:            0.1 s
+
++ Property TimeMin
+  Value:  1995337.8452852038
+  Bounds: [1995335.885277953, 1995339.8052924545]
+  Time:   232.2 s
+
+  + Precomputations
+    Max. prob. 1 states:          10299
+    Time for max. prob. 1 states: 0.0 s
+
+  + Essential states
+    Iterations:       3
+    Essential states: 5205
+    Transitions:      7541
+    Branches:         21889
+    Time:             0.0 s
+
+  + Optimistic value iteration
+    Total iterations:  857218
+    Verif. attempts:   15
+    Verif. iterations: 46721
+    Final epsilon:     3.0333463193117323E-11
+    Time:              232.2 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

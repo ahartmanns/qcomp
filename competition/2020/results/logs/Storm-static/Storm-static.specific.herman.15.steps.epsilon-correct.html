@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - herman steps 15</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#herman">herman</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 15</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism herman.15.prism --prop herman.props steps --sound --precision 1e-6  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4 --engine dd-to-sparse --bisimulation</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">3.202493906021118s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.95e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Tue Apr 28 12:22:07 2020
+Command line arguments: --prism herman.15.prism --prop herman.props steps --sound --precision 1e-6 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4 --engine dd-to-sparse --bisimulation
+Current working directory: /
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 0.059s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	32768 (1 nodes)
+Transitions: 	14348878 (897 nodes)
+Reward Models:  steps
+Variables: 	rows: 15 meta variables (15 DD variables), columns: 15 meta variables (15 DD variables)
+Labels: 	3
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 32768 state(s) (1 nodes)
+   * stable
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 2.851s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	612
+Transitions: 	104721
+Reward Models:  steps
+State Labels: 	4 labels
+   * (((((((((((((((((x1 = x2) ? 1 : 0) + ((x2 = x3) ? 1 : 0)) + ((x3 = x4) ? 1 : 0)) + ((x4 = x5) ? 1 : 0)) + ((x5 = x6) ? 1 : 0)) + ((x6 = x7) ? 1 : 0)) + ((x7 = x8) ? 1 : 0)) + ((x8 = x9) ? 1 : 0)) + ((x9 = x10) ? 1 : 0)) + ((x10 = x11) ? 1 : 0)) + ((x11 = x12) ? 1 : 0)) + ((x12 = x13) ? 1 : 0)) + ((x13 = x14) ? 1 : 0)) + ((x14 = x15) ? 1 : 0)) + ((x15 = x1) ? 1 : 0)) = 1) -&gt; 1 item(s)
+   * stable -&gt; 1 item(s)
+   * init -&gt; 612 item(s)
+   * deadlock -&gt; 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;steps&quot;: R[exp]=? [F &quot;stable&quot;] ...
+Result (for initial states): 33.33333465
+Time for model checking: 0.019s.	</pre>
+</div>
+</body>
+</html>

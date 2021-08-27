@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - bluetooth time 1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#bluetooth">bluetooth</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">mrec</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -mtbdd -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 bluetooth.prism bluetooth.props --property time -const mrec=1</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">17.805126667022705s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 11:33:56 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -mtbdd -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 bluetooth.prism bluetooth.props --property time -const mrec=1
+
+Parsing model file &quot;bluetooth.prism&quot;...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies 
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec 
+
+Parsing properties file &quot;bluetooth.props&quot;...
+
+1 property:
+(1) &quot;time&quot;: filter(max, R=? [ F rec=mrec ], &quot;init&quot;)
+
+---------------------------------------------------------------------
+
+Model checking: &quot;time&quot;: filter(max, R=? [ F rec=mrec ], &quot;init&quot;)
+Model constants: mrec=1
+
+Building model...
+Model constants: mrec=1
+
+Computing reachable states...
+
+Reachability (BFS): 50 iterations in 0.17 seconds (average 0.003440, setup 0.00)
+
+Time for model construction: 14.895 seconds.
+
+Type:        DTMC
+States:      3411945339 (536870912 initial)
+Transitions: 5035263739
+
+Transition matrix: 14727 nodes (4 terminal), 5035263739 minterms, vars: 52r/52c
+
+Prob0: 49 iterations in 0.58 seconds (average 0.011918, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 1636000575, inf = 0, maybe = 1775944764
+Time for computing an upper bound for expected reward: 0.715 seconds.
+Upper bound for expectation (variant 2): 9.53212245182E11
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=11441] [223.5 Kb]
+Diagonals MTBDD... [nodes=4425] [86.4 Kb]
+
+Starting iterations...
+
+Jacobi (interval iteration): 48 iterations in 1.00 seconds (average 0.020604, setup 0.01)
+Maximum finite value in solution vector at end of interval iteration: 8229.0
+
+Maximum value over states satisfying filter: 8229.0
+
+There are 32768 states with (approximately) this value.
+The first 10 states are displayed below. To view them all, enable verbose mode or use a print filter.
+4479:(0,0,0,0,1,1,0,1,2,0,3,128,0)
+4735:(0,0,0,0,1,1,0,1,2,0,5,128,0)
+4991:(0,0,0,0,1,1,0,1,2,0,7,128,0)
+5247:(0,0,0,0,1,1,0,1,2,0,9,128,0)
+5503:(0,0,0,0,1,1,0,1,2,0,11,128,0)
+5759:(0,0,0,0,1,1,0,1,2,0,13,128,0)
+6015:(0,0,0,0,1,1,0,1,2,0,15,128,0)
+6271:(0,0,0,0,1,1,0,1,2,1,1,128,0)
+233777:(0,0,0,0,2,1,0,1,2,0,3,128,0)
+234033:(0,0,0,0,2,1,0,1,2,0,5,128,0)
+
+Time for model checking: 2.083 seconds.
+
+Result: 8229.0 (maximum value over states satisfying filter)
+
+
+Overall running time: 17.608 seconds.	</pre>
+</div>
+</body>
+</html>

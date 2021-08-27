@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - oscillators time_to_synch 8-10-0.1-1-0.1-1.0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#oscillators">oscillators</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 8, <span class="tt">T</span> = 10, <span class="tt">epsilon</span> = 0.1, <span class="tt">R</span> = 1, <span class="tt">mu</span> = 0.1, <span class="tt">lambda</span> = 1.0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time_to_synch</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 oscillators.8-10-0.1-1.prism oscillators.props --property time_to_synch -const mu=0.1,lambda=1.0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">84.80553030967712s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.012679426244023611</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 12:34:45 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 oscillators.8-10-0.1-1.prism oscillators.props --property time_to_synch -const &#x27;mu=0.1,lambda=1.0&#x27;
+
+Parsing model file &quot;oscillators.8-10-0.1-1.prism&quot;...
+
+Type:        DTMC
+Modules:     oscillator_population 
+Variables:   k_1 k_2 k_3 k_4 k_5 k_6 k_7 k_8 k_9 k_10 
+
+Parsing properties file &quot;oscillators.props&quot;...
+
+2 properties:
+(1) &quot;time_to_synch&quot;: R{&quot;time_to_synch&quot;}=? [ F order_parameter&gt;=lambda ]
+(2) &quot;power_consumption&quot;: R{&quot;power_consumption&quot;}=? [ F order_parameter&gt;=lambda ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;time_to_synch&quot;: R{&quot;time_to_synch&quot;}=? [ F order_parameter&gt;=lambda ]
+Model constants: mu=0.1,lambda=1
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: mu=0.1,lambda=1
+
+Computing reachable states...
+
+Reachability (BFS): 2 iterations in 0.11 seconds (average 0.055000, setup 0.00)
+
+Time for model construction: 50.066 seconds.
+
+Type:        DTMC
+States:      24311 (1 initial)
+Transitions: 76623
+
+Transition matrix: 80638 nodes (438 terminal), 76623 minterms, vars: 40r/40c
+
+Prob0: 15 iterations in 0.36 seconds (average 0.024000, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.002000, setup 0.00)
+
+goal = 2, inf = 0, maybe = 24309
+Time for computing an upper bound for expected reward: 22.099 seconds.
+Upper bound for expectation (variant 2): 5.671076743569936E8
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix... [n=24311, nnz=76621, compact] [397.7 KB]
+Creating vector for diagonals... [dist=1, compact] [47.5 KB]
+Creating vector for RHS... [dist=9, compact] [47.6 KB]
+Allocating iteration vectors... [ 2 x 189.9 KB]
+TOTAL: [872.6 KB]
+
+Starting iterations...
+Max relative diff between upper and lower bound on convergence: 0.0498056
+Backwards Gauss-Seidel (interval iteration): 3314 iterations in 2.44 seconds (average 0.000707, setup 0.10)
+Maximum finite value in solution vector at end of interval iteration: 85.08602628553254
+
+Value in the initial state: 6.083591730349234
+
+Time for model checking: 26.481 seconds.
+
+Result: 6.083591730349234 (value in the initial state)
+
+
+Overall running time: 84.5 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

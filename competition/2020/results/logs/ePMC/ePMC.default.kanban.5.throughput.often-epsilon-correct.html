@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - kanban throughput 5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#kanban">kanban</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">t</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">throughput</span> (steady-state-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files kanban.prism --model-input-type prism --property-input-files kanban.props --property-input-names throughput --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const t=5</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">177.68129539489746s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.00027475231236910347</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property throughput
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 17289 17289
+build-model-states-explored 47800 30511
+build-model-states-explored 77152 29352
+build-model-states-explored 107014 29862
+build-model-states-explored 133793 26779
+build-model-states-explored 162906 29112
+build-model-states-explored 191095 28189
+build-model-states-explored 219456 28362
+build-model-states-explored 244284 24828
+build-model-states-explored 270495 26211
+build-model-states-explored 298965 28470
+build-model-states-explored 326379 27414
+build-model-states-explored 353608 27229
+build-model-states-explored 381860 28252
+build-model-states-explored 408478 26617
+build-model-states-explored 436307 27830
+build-model-states-explored 463307 27000
+build-model-states-explored 484713 21405
+build-model-states-explored 511011 26298
+build-model-states-explored 535717 24707
+build-model-states-explored 562063 26346
+build-model-states-explored 589903 27840
+build-model-states-explored 615565 25661
+build-model-states-explored 643149 27584
+build-model-states-explored 669294 26145
+build-model-states-explored 695116 25821
+build-model-states-explored 721987 26871
+build-model-states-explored 747215 25228
+build-model-states-explored 773745 26530
+build-model-states-explored 801101 27356
+build-model-states-explored 826800 25699
+build-model-states-explored 853963 27163
+build-model-states-explored 880614 26651
+build-model-states-explored 895080 14466
+build-model-states-explored 920403 25323
+build-model-states-explored 948061 27658
+build-model-states-explored 973093 25032
+build-model-states-explored 999306 26212
+build-model-states-explored 1026722 27417
+build-model-states-explored 1048576 21854
+build-model-states-explored 1072178 23602
+build-model-states-explored 1098653 26475
+build-model-states-explored 1125276 26623
+build-model-states-explored 1150371 25095
+build-model-states-explored 1176410 26039
+build-model-states-explored 1204009 27599
+build-model-states-explored 1229924 25915
+build-model-states-explored 1254850 24926
+build-model-states-explored 1281350 26500
+build-model-states-explored 1308708 27358
+build-model-states-explored 1333810 25102
+build-model-states-explored 1359343 25533
+build-model-states-explored 1385774 26431
+build-model-states-explored 1412817 27043
+build-model-states-explored 1437667 24850
+build-model-states-explored 1463495 25828
+build-model-states-explored 1488929 25434
+build-model-states-explored 1515699 26770
+build-model-states-explored 1540765 25066
+build-model-states-explored 1566799 26034
+build-model-states-explored 1594069 27270
+build-model-states-explored 1620268 26199
+build-model-states-explored 1645249 24981
+build-model-states-explored 1671368 26119
+build-model-states-explored 1698798 27430
+build-model-states-explored 1724216 25418
+build-model-states-explored 1737284 13068
+build-model-states-explored 1759576 22292
+build-model-states-explored 1790013 30437
+build-model-states-explored 1820920 30907
+build-model-states-explored 1849362 28442
+build-model-states-explored 1879015 29652
+build-model-states-explored 1910613 31599
+build-model-states-explored 1940082 29469
+build-model-states-explored 1969139 29057
+build-model-states-explored 2000154 31015
+build-model-states-explored 2030560 30406
+build-model-states-explored 2059746 29186
+build-model-states-explored 2090933 31186
+build-model-states-explored 2108911 17979
+build-model-states-explored 2138663 29752
+build-model-states-explored 2168795 30132
+build-model-states-explored 2201027 32232
+build-model-states-explored 2230526 29498
+build-model-states-explored 2262349 31822
+build-model-states-explored 2293700 31352
+build-model-states-explored 2324587 30887
+build-model-states-explored 2357001 32414
+build-model-states-explored 2388519 31518
+build-model-states-explored 2421264 32745
+build-model-states-explored 2454617 33352
+build-model-states-explored 2488389 33772
+build-model-states-explored 2524030 35642
+build-model-done 2546432 93
+iterating
+iterating-progress-unbounded 7 6.2320261437908515 1
+iterating-progress-unbounded 19 1.0478133825605733 2
+iterating-progress-unbounded 31 0.3604124856542768 3
+iterating-progress-unbounded 43 0.1955548246154737 4
+iterating-progress-unbounded 55 0.1231566834024871 5
+iterating-progress-unbounded 67 0.08416716006482018 6
+iterating-progress-unbounded 79 0.060774240856829885 7
+iterating-progress-unbounded 91 0.045810924499339684 8
+iterating-progress-unbounded 103 0.035762628155198775 9
+iterating-progress-unbounded 115 0.028585796229209443 10
+iterating-progress-unbounded 127 0.023307734229247326 11
+iterating-progress-unbounded 139 0.01932381314342229 12
+iterating-progress-unbounded 150 0.016517691243764364 13
+iterating-progress-unbounded 162 0.01413139780831222 14
+iterating-progress-unbounded 174 0.012216915196799603 15
+iterating-progress-unbounded 186 0.010703862375740657 16
+iterating-progress-unbounded 198 0.00945232138410964 17
+iterating-progress-unbounded 210 0.008408320933998795 18
+iterating-progress-unbounded 222 0.007548536733665944 19
+iterating-progress-unbounded 234 0.0068131410069978485 20
+iterating-progress-unbounded 246 0.006192482331453451 21
+iterating-progress-unbounded 257 0.005698542951804903 22
+iterating-progress-unbounded 269 0.005233222945589902 23
+iterating-progress-unbounded 281 0.004823088808403014 24
+iterating-progress-unbounded 293 0.004458392924973824 25
+iterating-progress-unbounded 305 0.004132414285718554 26
+iterating-progress-unbounded 316 0.003862912715037734 27
+iterating-progress-unbounded 328 0.003596655236009758 28
+iterating-progress-unbounded 340 0.0033557439952994293 29
+iterating-progress-unbounded 352 0.0031420053611752397 30
+iterating-progress-unbounded 364 0.0029469062068299104 31
+iterating-progress-unbounded 375 0.002782595161575453 32
+iterating-progress-unbounded 387 0.0026174834708941 33
+iterating-progress-unbounded 399 0.002465589211262535 34
+iterating-progress-unbounded 411 0.002326151595076314 35
+iterating-progress-unbounded 423 0.002198223987877862 36
+iterating-progress-unbounded 435 0.002079747201854797 37
+iterating-progress-unbounded 446 0.0019786913211469036 38
+iterating-progress-unbounded 458 0.001875956540696445 39
+iterating-progress-unbounded 470 0.0017808344811416224 40
+iterating-progress-unbounded 482 0.0016922394340713382 41
+iterating-progress-unbounded 494 0.0016095852415672512 42
+iterating-progress-unbounded 506 0.0015324986526944575 43
+iterating-progress-unbounded 518 0.0014604439023003404 44
+iterating-progress-unbounded 530 0.0013930194923959438 45
+iterating-progress-unbounded 541 0.0013349526682184696 46
+iterating-progress-unbounded 553 0.0012753771706826534 47
+iterating-progress-unbounded 565 0.0012194477598302 48
+iterating-progress-unbounded 577 0.0011668938740009803 49
+iterating-progress-unbounded 589 0.0011174683702622318 50
+iterating-progress-unbounded 601 0.001070945100934504 51
+iterating-progress-unbounded 613 0.0010271168069783464 52
+iterating-progress-unbounded 625 9.857932756114401E-4 53
+iterating-progress-unbounded 637 9.467997198246544E-4 54
+iterating-progress-unbounded 648 9.129648855809168E-4 55
+iterating-progress-unbounded 660 8.779985592371378E-4 56
+iterating-progress-unbounded 672 8.449278082359164E-4 57
+iterating-progress-unbounded 684 8.136258660156211E-4 58
+iterating-progress-unbounded 696 7.839756918298659E-4 59
+iterating-progress-unbounded 708 7.558691398278602E-4 60
+iterating-progress-unbounded 720 7.292062083353239E-4 61
+iterating-progress-unbounded 732 7.038943600548235E-4 62
+iterating-progress-unbounded 744 6.798479052534773E-4 63
+iterating-progress-unbounded 756 6.569874411490872E-4 64
+iterating-progress-unbounded 768 6.352393416050304E-4 65
+iterating-progress-unbounded 780 6.145352920228454E-4 66
+iterating-progress-unbounded 792 5.948118649423107E-4 67
+iterating-progress-unbounded 804 5.760101324057921E-4 68
+iterating-progress-unbounded 815 5.595380364247858E-4 69
+iterating-progress-unbounded 827 5.423530282101592E-4 70
+iterating-progress-unbounded 839 5.259403573404382E-4 71
+iterating-progress-unbounded 851 5.102555769619624E-4 72
+iterating-done 861 72
+model-checking-done 176
+command-check-result-is 0.3072091425685244 throughput	</pre>
+</div>
+</body>
+</html>

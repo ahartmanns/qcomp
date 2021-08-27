@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC - fms productivity 8</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#fms">fms</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">n</span> = 8</td></tr>
+		<tr><td>Property:</td><td><span class="tt">productivity</span> (steady-state-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files fms.prism --model-input-type prism --property-input-files fms.props --property-input-names productivity --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const n=8</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">601.3485345840454s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Correctness of result is not checked because no reference result is available.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property productivity
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 9356 9356
+build-model-states-explored 22721 13365
+build-model-states-explored 36306 13585
+build-model-states-explored 50295 13989
+build-model-states-explored 64282 13986
+build-model-states-explored 76720 12439
+build-model-states-explored 90846 14126
+build-model-states-explored 103504 12658
+build-model-states-explored 116583 13079
+build-model-states-explored 130395 13812
+build-model-states-explored 141939 11544
+build-model-states-explored 154781 12842
+build-model-states-explored 169264 14483
+build-model-states-explored 181996 12732
+build-model-states-explored 195030 13034
+build-model-states-explored 208084 13054
+build-model-states-explored 222246 14162
+build-model-states-explored 235415 13168
+build-model-states-explored 248118 12704
+build-model-states-explored 259187 11069
+build-model-states-explored 271136 11949
+build-model-states-explored 284350 13214
+build-model-states-explored 298486 14136
+build-model-states-explored 310230 11744
+build-model-states-explored 322757 12527
+build-model-states-explored 335505 12748
+build-model-states-explored 348313 12808
+build-model-states-explored 361515 13202
+build-model-states-explored 375792 14277
+build-model-states-explored 389530 13737
+build-model-states-explored 401820 12291
+build-model-states-explored 414123 12303
+build-model-states-explored 426840 12717
+build-model-states-explored 439415 12575
+build-model-states-explored 451982 12567
+build-model-states-explored 465082 13100
+build-model-states-explored 479412 14330
+build-model-states-explored 493262 13850
+build-model-states-explored 505161 11899
+build-model-states-explored 514924 9763
+build-model-states-explored 525465 10541
+build-model-states-explored 538073 12608
+build-model-states-explored 550214 12141
+build-model-states-explored 562808 12594
+build-model-states-explored 575214 12406
+build-model-states-explored 588318 13104
+build-model-states-explored 602246 13928
+build-model-states-explored 615546 13300
+build-model-states-explored 627684 12138
+build-model-states-explored 638205 10521
+build-model-states-explored 651021 12816
+build-model-states-explored 663035 12014
+build-model-states-explored 675888 12853
+build-model-states-explored 688075 12187
+build-model-states-explored 700951 12876
+build-model-states-explored 713462 12511
+build-model-states-explored 726939 13477
+build-model-states-explored 741439 14500
+build-model-states-explored 754747 13308
+build-model-states-explored 768441 13694
+build-model-states-explored 780367 11925
+build-model-states-explored 792515 12149
+build-model-states-explored 805167 12652
+build-model-states-explored 817200 12033
+build-model-states-explored 829915 12715
+build-model-states-explored 841979 12064
+build-model-states-explored 854738 12758
+build-model-states-explored 867037 12299
+build-model-states-explored 879943 12906
+build-model-states-explored 893967 14023
+build-model-states-explored 907782 13816
+build-model-states-explored 921120 13338
+build-model-states-explored 934663 13543
+build-model-states-explored 946316 11653
+build-model-states-explored 958280 11964
+build-model-states-explored 970861 12581
+build-model-states-explored 982839 11978
+build-model-states-explored 989022 6183
+build-model-states-explored 1001284 12261
+build-model-states-explored 1014000 12717
+build-model-states-explored 1026127 12127
+build-model-states-explored 1038811 12684
+build-model-states-explored 1048606 9795
+build-model-states-explored 1061561 12955
+build-model-states-explored 1075672 14111
+build-model-states-explored 1089037 13365
+build-model-states-explored 1101860 12823
+build-model-states-explored 1115781 13921
+build-model-states-explored 1127823 12042
+build-model-states-explored 1139442 11619
+build-model-states-explored 1151152 11710
+build-model-states-explored 1163580 12428
+build-model-states-explored 1175325 11745
+build-model-states-explored 1186877 11552
+build-model-states-explored 1199052 12175
+build-model-states-explored 1211541 12489
+build-model-states-explored 1223514 11973
+build-model-states-explored 1235828 12314
+build-model-states-explored 1248131 12303
+build-model-states-explored 1261120 12989
+build-model-states-explored 1275002 13882
+build-model-states-explored 1287690 12687
+build-model-states-explored 1300426 12737
+build-model-states-explored 1313289 12863
+build-model-states-explored 1326284 12995
+build-model-states-explored 1337585 11301
+build-model-states-explored 1348068 10483
+build-model-states-explored 1358173 10105
+build-model-states-explored 1370623 12450
+build-model-states-explored 1383351 12728
+build-model-states-explored 1395041 11689
+build-model-states-explored 1407220 12180
+build-model-states-explored 1420138 12918
+build-model-states-explored 1432253 12115
+build-model-states-explored 1444642 12389
+build-model-states-explored 1457706 13064
+build-model-states-explored 1470641 12935
+build-model-states-explored 1484922 14281
+build-model-states-explored 1498781 13859
+build-model-states-explored 1511716 12935
+build-model-states-explored 1524759 13043
+build-model-states-explored 1538691 13932
+build-model-states-explored 1551737 13046
+build-model-states-explored 1563652 11915
+build-model-states-explored 1575242 11590
+build-model-states-explored 1587216 11974
+build-model-states-explored 1599947 12731
+build-model-states-explored 1611931 11984
+build-model-states-explored 1623578 11647
+build-model-states-explored 1635671 12093
+build-model-states-explored 1648478 12807
+build-model-states-explored 1660765 12287
+build-model-states-explored 1672778 12013
+build-model-states-explored 1685755 12977
+build-model-states-explored 1698589 12834
+build-model-states-explored 1713004 14415
+build-model-states-explored 1726558 13554
+build-model-states-explored 1739655 13097
+build-model-states-explored 1752592 12937
+build-model-states-explored 1766044 13452
+build-model-states-explored 1779850 13806
+build-model-states-explored 1791899 12049
+build-model-states-explored 1803424 11525
+build-model-states-explored 1814961 11537
+build-model-states-explored 1827056 12095
+build-model-states-explored 1839681 12625
+build-model-states-explored 1852037 12356
+build-model-states-explored 1863676 11639
+build-model-states-explored 1875724 12048
+build-model-states-explored 1888420 12696
+build-model-states-explored 1900815 12395
+build-model-states-explored 1913007 12192
+build-model-states-explored 1926010 13003
+build-model-states-explored 1937054 11044
+build-model-states-explored 1939978 2924
+build-model-states-explored 1954591 14613
+build-model-states-explored 1967924 13332
+build-model-states-explored 1980665 12742
+build-model-states-explored 1993564 12899
+build-model-states-explored 2006824 13260
+build-model-states-explored 2020440 13616
+build-model-states-explored 2033010 12570
+build-model-states-explored 2044831 11821
+build-model-states-explored 2056333 11502
+build-model-states-explored 2067764 11431
+build-model-states-explored 2079739 11975
+build-model-states-explored 2092749 13010
+build-model-states-explored 2099330 6581
+build-model-states-explored 2110941 11611
+build-model-states-explored 2122890 11948
+build-model-states-explored 2135319 12430
+build-model-states-explored 2148024 12705
+build-model-states-explored 2160084 12060
+build-model-states-explored 2173013 12929
+build-model-states-explored 2186305 13292
+build-model-states-explored 2200680 14375
+build-model-states-explored 2214019 13339
+build-model-states-explored 2226809 12790
+build-model-states-explored 2239670 12861
+build-model-states-explored 2252621 12951
+build-model-states-explored 2266032 13411
+build-model-states-explored 2279328 13296
+build-model-states-explored 2290882 11554
+build-model-states-explored 2302349 11467
+build-model-states-explored 2313792 11443
+build-model-states-explored 2325897 12104
+build-model-states-explored 2338360 12464
+build-model-states-explored 2350605 12245
+build-model-states-explored 2362284 11679
+build-model-states-explored 2374233 11949
+build-model-states-explored 2386605 12372
+build-model-states-explored 2399179 12574
+build-model-states-explored 2411345 12166
+build-model-states-explored 2424484 13139
+build-model-states-explored 2438524 14040
+build-model-states-explored 2452239 13715
+build-model-states-explored 2464998 12759
+build-model-states-explored 2477716 12717
+build-model-states-explored 2490426 12711
+build-model-states-explored 2503577 13151
+build-model-states-explored 2516823 13246
+build-model-states-explored 2529756 12933
+build-model-states-explored 2541281 11524
+build-model-states-explored 2552535 11255
+build-model-states-explored 2563920 11385
+build-model-states-explored 2575914 11994
+build-model-states-explored 2588088 12174
+build-model-states-explored 2600555 12467
+build-model-states-explored 2612158 11603
+build-model-states-explored 2623993 11835
+build-model-states-explored 2636298 12305
+build-model-states-explored 2648535 12237
+build-model-states-explored 2660908 12373
+build-model-states-explored 2674073 13165
+build-model-states-explored 2688448 14375
+build-model-states-explored 2701472 13024
+build-model-states-explored 2714120 12648
+build-model-states-explored 2726059 11939
+build-model-states-explored 2738507 12448
+build-model-states-explored 2751769 13262
+build-model-states-explored 2764915 13146
+build-model-states-explored 2777190 12275
+build-model-states-explored 2788843 11653
+build-model-states-explored 2799910 11067
+build-model-states-explored 2810777 10867
+build-model-states-explored 2822664 11887
+build-model-states-explored 2834892 12228
+build-model-states-explored 2846818 11926
+build-model-states-explored 2858120 11302
+build-model-states-explored 2869963 11843
+build-model-states-explored 2882377 12414
+build-model-states-explored 2894655 12278
+build-model-states-explored 2907247 12592
+build-model-states-explored 2921190 13943
+build-model-states-explored 2929185 7995
+build-model-states-explored 2942381 13196
+build-model-states-explored 2955508 13127
+build-model-states-explored 2968698 13190
+build-model-states-explored 2981715 13017
+build-model-states-explored 2995470 13755
+build-model-states-explored 3009297 13827
+build-model-states-explored 3021179 11882
+build-model-states-explored 3032976 11797
+build-model-states-explored 3044746 11770
+build-model-states-explored 3057185 12439
+build-model-states-explored 3070078 12893
+build-model-states-explored 3082477 12399
+build-model-states-explored 3094828 12351
+build-model-states-explored 3107567 12739
+build-model-states-explored 3120652 13084
+build-model-states-explored 3134128 13477
+build-model-states-explored 3148885 14757
+build-model-states-explored 3162795 13910
+build-model-states-explored 3175984 13189
+build-model-states-explored 3189185 13201
+build-model-states-explored 3201736 12551
+build-model-states-explored 3215828 14092
+build-model-states-explored 3229642 13814
+build-model-states-explored 3241915 12273
+build-model-states-explored 3253752 11837
+build-model-states-explored 3265551 11799
+build-model-states-explored 3278039 12488
+build-model-states-explored 3291099 13060
+build-model-states-explored 3303646 12547
+build-model-states-explored 3315952 12306
+build-model-states-explored 3329144 13192
+build-model-states-explored 3342410 13266
+build-model-states-explored 3357211 14801
+build-model-states-explored 3371189 13978
+build-model-states-explored 3384353 13164
+build-model-states-explored 3397704 13351
+build-model-states-explored 3410321 12617
+build-model-states-explored 3424322 14001
+build-model-states-explored 3438101 13779
+build-model-states-explored 3450463 12362
+build-model-states-explored 3462411 11948
+build-model-states-explored 3474489 12078
+build-model-states-explored 3486738 12249
+build-model-states-explored 3499639 12901
+build-model-states-explored 3512247 12608
+build-model-states-explored 3525243 12996
+build-model-states-explored 3539508 14265
+build-model-states-explored 3553860 14352
+build-model-states-explored 3567135 13275
+build-model-states-explored 3580368 13233
+build-model-states-explored 3593567 13199
+build-model-states-explored 3607516 13949
+build-model-states-explored 3621379 13863
+build-model-states-explored 3633807 12428
+build-model-states-explored 3645866 12059
+build-model-states-explored 3658019 12153
+build-model-states-explored 3670611 12592
+build-model-states-explored 3683072 12461
+build-model-states-explored 3696078 13006
+build-model-states-explored 3710177 14099
+build-model-states-explored 3724528 14351
+build-model-states-explored 3738199 13671
+build-model-states-explored 3751542 13343
+build-model-states-explored 3764411 12869
+build-model-states-explored 3778592 14181
+build-model-states-explored 3792188 13596
+build-model-states-explored 3804291 12103
+build-model-states-explored 3816631 12340
+build-model-states-explored 3829380 12749
+build-model-states-explored 3842196 12816
+build-model-states-explored 3850144 7948
+build-model-states-explored 3850144 0
+build-model-states-explored 3857729 7585
+build-model-states-explored 3872572 14843
+build-model-states-explored 3886419 13847
+build-model-states-explored 3899797 13378
+build-model-states-explored 3913396 13599
+build-model-states-explored 3927232 13836
+build-model-states-explored 3939936 12704
+build-model-states-explored 3951858 11922
+build-model-states-explored 3964920 13062
+build-model-states-explored 3977937 13017
+build-model-states-explored 3992477 14540
+build-model-states-explored 4006393 13916
+build-model-states-explored 4019888 13495
+build-model-states-explored 4033498 13610
+build-model-states-explored 4047587 14089
+build-model-states-explored 4060261 12674
+build-model-states-explored 4072905 12644
+build-model-states-explored 4085894 12989
+build-model-states-explored 4100489 14595
+build-model-states-explored 4114587 14098
+build-model-states-explored 4128298 13711
+build-model-states-explored 4142196 13898
+build-model-states-explored 4155777 13581
+build-model-states-explored 4168361 12584
+build-model-states-explored 4181629 13268
+build-model-states-explored 4194303 12674
+build-model-states-explored 4197687 3384
+build-model-states-explored 4211581 13894
+build-model-states-explored 4225538 13957
+build-model-states-explored 4238890 13352
+build-model-states-explored 4251941 13051
+build-model-states-explored 4266814 14873
+build-model-states-explored 4280614 13800
+build-model-states-explored 4295017 14403
+build-model-states-explored 4308099 13082
+build-model-states-explored 4323059 14960
+build-model-states-explored 4337301 14242
+build-model-states-explored 4350795 13494
+build-model-states-explored 4365622 14827
+build-model-states-explored 4380060 14438
+build-model-states-explored 4394693 14633
+build-model-states-explored 4409235 14542
+build-model-states-explored 4424518 15283
+build-model-states-explored 4439939 15421
+build-model-states-explored 4456228 16289
+build-model-done 4459455 352
+iterating
+iterating-progress-unbounded 2 4.143613323536138 1
+iterating-progress-unbounded 9 0.3279340073182586 2
+iterating-progress-unbounded 15 0.17510191334534875 3
+iterating-progress-unbounded 21 0.12051992662482928 4
+iterating-progress-unbounded 27 0.09210804298468642 5
+iterating-progress-unbounded 33 0.07438121058190089 6
+iterating-progress-unbounded 39 0.06206625733961788 7
+iterating-progress-unbounded 45 0.052889382327130405 8
+iterating-progress-unbounded 51 0.04572558617742895 9
+iterating-progress-unbounded 57 0.03996107713932199 10
+iterating-progress-unbounded 63 0.03521182186284247 11
+iterating-progress-unbounded 69 0.03122189066949923 12
+iterating-progress-unbounded 75 0.02782822771982546 13
+iterating-progress-unbounded 81 0.024919809898400633 14
+iterating-progress-unbounded 87 0.02255489340638432 15
+iterating-progress-unbounded 93 0.02067265284683016 16
+iterating-progress-unbounded 100 0.01877794063463156 17
+iterating-progress-unbounded 106 0.01735813657294595 18
+iterating-progress-unbounded 112 0.016095823135654667 19
+iterating-progress-unbounded 118 0.014968154004614065 20
+iterating-progress-unbounded 124 0.013956433642846553 21
+iterating-progress-unbounded 130 0.013045226917760807 22
+iterating-progress-unbounded 136 0.012221683762649484 23
+iterating-progress-unbounded 142 0.011475020918955055 24
+iterating-progress-unbounded 148 0.010796120543660113 25
+iterating-progress-unbounded 154 0.010177216985728757 26
+iterating-progress-unbounded 160 0.009611650778538029 27
+iterating-progress-unbounded 166 0.009093674271192188 28
+iterating-progress-unbounded 172 0.008618297161812755 29
+iterating-progress-unbounded 178 0.008181163004116476 30
+iterating-progress-unbounded 185 0.007714434997249954 31
+iterating-progress-unbounded 191 0.007347651101796917 32
+iterating-progress-unbounded 197 0.007008477923075326 33
+iterating-progress-unbounded 203 0.006694321416776058 34
+iterating-progress-unbounded 209 0.006402870490360874 35
+iterating-progress-unbounded 215 0.006132060721684256 36
+iterating-progress-unbounded 221 0.00588004377427198 37
+iterating-progress-unbounded 227 0.005645161416401039 38
+iterating-progress-unbounded 233 0.005425923290122619 39
+iterating-progress-unbounded 239 0.005220987760419723 40
+iterating-progress-unbounded 245 0.005029145316426279 41
+iterating-progress-unbounded 251 0.004849304105835819 42
+iterating-progress-unbounded 257 0.004680477267830638 43
+iterating-progress-unbounded 263 0.004521771794949659 44
+iterating-progress-unbounded 269 0.0043750397784198085 45
+iterating-progress-unbounded 276 0.004214516042426869 46
+iterating-progress-unbounded 282 0.0040850958369710155 47
+iterating-progress-unbounded 288 0.0039626174102590965 48
+iterating-progress-unbounded 294 0.0038465648724487138 49
+iterating-progress-unbounded 300 0.0037364684571602157 50
+iterating-progress-unbounded 306 0.00363189988451344 51
+iterating-progress-unbounded 312 0.003532468231010221 52
+iterating-progress-unbounded 318 0.003459951088465065 53
+iterating-progress-unbounded 324 0.00339018263049678 54
+iterating-progress-unbounded 330 0.003322708639465707 55
+iterating-progress-unbounded 336 0.003257415739828587 56
+iterating-progress-unbounded 342 0.003194198563129413 57
+iterating-progress-unbounded 348 0.0031329589796884024 58
+iterating-progress-unbounded 354 0.00307360542263227 59
+iterating-progress-unbounded 361 0.0030066294406442644 60
+iterating-progress-unbounded 367 0.00295107584607727 61
+iterating-progress-unbounded 373 0.0028971552454853337 62
+iterating-progress-unbounded 379 0.0028447977227068063 63
+iterating-progress-unbounded 385 0.002793937485300768 64
+iterating-progress-unbounded 391 0.002744512537776858 65
+iterating-progress-unbounded 397 0.0026964643882466856 66
+iterating-progress-unbounded 403 0.00264973778437745 67
+iterating-progress-unbounded 409 0.002604280475099278 68
+iterating-progress-unbounded 415 0.0025600429950122555 69
+iterating-progress-unbounded 421 0.0025169784688477714 70
+iterating-progress-unbounded 427 0.0024750424336942977 71
+iterating-progress-unbounded 433 0.0024341926770019215 72
+iterating-progress-unbounded 439 0.0023943890886328908 73
+iterating-progress-unbounded 445 0.002355593525450364 74
+iterating-progress-unbounded 452 0.0023115577355420193 75
+iterating-progress-unbounded 458 0.0022748239969320643 76
+iterating-progress-unbounded 464 0.002238989123009256 77
+iterating-progress-unbounded 470 0.002204021937856718 78
+iterating-progress-unbounded 476 0.002169892688331263 79
+iterating-progress-unbounded 482 0.002136572962175014 80
+iterating-progress-unbounded 488 0.0021040356120713057 81
+iterating-progress-unbounded 494 0.0020722546851005856 82
+iterating-progress-unbounded 500 0.002041205357113628 83
+iterating-progress-unbounded 506 0.002010863871596862 84
+iterating-progress-unbounded 512 0.001981207482641566 85
+iterating-progress-unbounded 518 0.001952214401673473 86
+iterating-progress-unbounded 524 0.0019238637476401805 87
+iterating-progress-unbounded 530 0.0018961355003636467 88
+iterating-progress-unbounded 536 0.001869010456824252 89
+iterating-progress-unbounded 543 0.0018381024131400774 90
+iterating-progress-unbounded 549 0.0018122220785799228 91
+iterating-progress-unbounded 555 0.0017868890781295762 92
+iterating-progress-unbounded 561 0.001762087199212138 93
+iterating-progress-unbounded 567 0.0017378008592647304 94
+iterating-progress-unbounded 573 0.0017140150757710257 95
+iterating-progress-unbounded 579 0.0016907154379860517 96
+iterating-progress-unbounded 585 0.0016678880802440696 97
+iterating-progress-unbounded 591 0.0016455196567353148 98
+iterating-progress-unbounded 597 0.0016235973176649452 99
+iterating-progress-unbounded 603 0.001602108686694585 100
+iterating-progress-unbounded 609 0.001581293918596766 101
+iterating-progress-unbounded 615 0.0015616074946834925 102
+iterating-progress-unbounded 621 0.0015422961622304004 103
+iterating-progress-unbounded 628 0.0015202265822486793 104
+iterating-progress-unbounded 634 0.0015016930102842235 105
+iterating-progress-unbounded 640 0.0014835031096441193 106
+iterating-progress-unbounded 646 0.0014656477131508006 107
+iterating-progress-unbounded 652 0.0014481179874202602 108
+iterating-progress-unbounded 658 0.001430905417636747 109
+iterating-progress-unbounded 664 0.0014140017931472673 110
+iterating-progress-unbounded 670 0.0013973991938206246 111
+iterating-progress-unbounded 676 0.001381089977127231 112
+iterating-progress-unbounded 682 0.0013650667658951653 113
+iterating-progress-unbounded 688 0.0013493224366985632 114
+iterating-progress-unbounded 694 0.0013338501088491724 115
+iterating-progress-unbounded 700 0.0013186431339440839 116
+iterating-progress-unbounded 706 0.001303695085948978 117
+iterating-progress-unbounded 713 0.0012865746739759397 118
+iterating-progress-unbounded 719 0.001272166591621654 119
+iterating-progress-unbounded 725 0.0012579984498990186 120
+iterating-progress-unbounded 731 0.0012440646530849217 121
+iterating-progress-unbounded 737 0.0012303597839185892 122
+iterating-progress-unbounded 743 0.0012168785963405507 123
+iterating-progress-unbounded 749 0.0012036160085812388 124
+iterating-progress-unbounded 755 0.0011905670965777825 125
+iterating-progress-unbounded 761 0.0011777270877027387 126
+iterating-progress-unbounded 767 0.0011650913547900283 127
+iterating-progress-unbounded 773 0.0011526554104364256 128
+iterating-progress-unbounded 779 0.0011404149015709524 129
+iterating-progress-unbounded 785 0.0011283656042701535 130
+iterating-progress-unbounded 791 0.0011165034188159164 131
+iterating-progress-unbounded 797 0.0011048243649741116 132
+iterating-progress-unbounded 803 0.0010933245774868692 133
+iterating-progress-unbounded 810 0.0010801297284557707 134
+iterating-progress-unbounded 816 0.0010690056130338533 135
+iterating-progress-unbounded 822 0.0010580492347739587 136
+iterating-progress-unbounded 828 0.0010472571632773086 137
+iterating-progress-unbounded 834 0.0010366260628423577 138
+iterating-progress-unbounded 840 0.001026152689051959 139
+iterating-progress-unbounded 846 0.0010158338855112436 140
+iterating-progress-unbounded 852 0.0010056665807227734 141
+iterating-progress-unbounded 858 9.956477850971957E-4 142
+iterating-progress-unbounded 864 9.857745880899127E-4 143
+iterating-progress-unbounded 870 9.760441554595799E-4 144
+iterating-progress-unbounded 876 9.664537266397537E-4 145
+iterating-progress-unbounded 882 9.57000612223687E-4 146
+iterating-progress-unbounded 888 9.476821915491822E-4 147
+iterating-progress-unbounded 894 9.384959103867769E-4 148
+iterating-progress-unbounded 901 9.279422735550197E-4 149
+iterating-progress-unbounded 907 9.190338352515131E-4 150
+iterating-progress-unbounded 913 9.102498616872626E-4 151
+iterating-progress-unbounded 919 9.015880525637626E-4 152
+iterating-progress-unbounded 925 8.930461634827907E-4 153
+iterating-progress-unbounded 931 8.846220041572416E-4 154
+iterating-progress-unbounded 937 8.763134366844983E-4 155
+iterating-progress-unbounded 943 8.681183738976137E-4 156
+iterating-progress-unbounded 949 8.600347777758981E-4 157
+iterating-progress-unbounded 955 8.520606579162062E-4 158
+iterating-progress-unbounded 961 8.441940700690184E-4 159
+iterating-progress-unbounded 967 8.36433114727001E-4 160
+iterating-progress-unbounded 973 8.28775935768504E-4 161
+iterating-progress-unbounded 979 8.212207191534973E-4 162
+iterating-progress-unbounded 986 8.125328054040295E-4 163
+iterating-progress-unbounded 992 8.051924768873351E-4 164
+iterating-progress-unbounded 998 7.979486299116943E-4 165
+iterating-progress-unbounded 1004 7.907996127990193E-4 166
+iterating-progress-unbounded 1010 7.837438099580692E-4 167
+iterating-progress-unbounded 1016 7.767796408543167E-4 168
+iterating-progress-unbounded 1022 7.699055590165E-4 169
+iterating-progress-unbounded 1028 7.6312005107936E-4 170
+iterating-progress-unbounded 1034 7.564216358623755E-4 171
+iterating-progress-unbounded 1040 7.498088634794841E-4 172
+iterating-progress-unbounded 1046 7.432803144822051E-4 173
+iterating-progress-unbounded 1052 7.368345990347519E-4 174
+iterating-progress-unbounded 1058 7.30470356112949E-4 175
+iterating-progress-unbounded 1064 7.241862527362897E-4 176
+iterating-progress-unbounded 1070 7.17980983225321E-4 177
+iterating-progress-unbounded 1076 7.118532684827121E-4 178
+iterating-progress-unbounded 1083 7.048006180594594E-4 179
+iterating-progress-unbounded 1089 6.988366730651066E-4 180
+iterating-progress-unbounded 1095 6.929464000111948E-4 181
+iterating-progress-unbounded 1101 6.871286233689122E-4 182
+iterating-progress-unbounded 1107 6.813821908531715E-4 183
+iterating-progress-unbounded 1113 6.757059728467805E-4 184
+iterating-progress-unbounded 1119 6.700988618326779E-4 185
+iterating-progress-unbounded 1125 6.645597718563092E-4 186
+iterating-progress-unbounded 1131 6.590876379943475E-4 187
+iterating-progress-unbounded 1137 6.536814158465086E-4 188
+iterating-progress-unbounded 1143 6.483400810439871E-4 189
+iterating-progress-unbounded 1149 6.430626287694023E-4 190
+iterating-progress-unbounded 1155 6.378480732944834E-4 191
+iterating-progress-unbounded 1161 6.326954475305633E-4 192
+iterating-progress-unbounded 1167 6.276038025948847E-4 193
+iterating-progress-unbounded 1174 6.217393819453749E-4 194
+iterating-progress-unbounded 1180 6.167766911039547E-4 195
+iterating-progress-unbounded 1186 6.118720916806831E-4 196
+iterating-progress-unbounded 1192 6.070247062462104E-4 197
+iterating-progress-unbounded 1198 6.022336735278877E-4 198
+iterating-progress-unbounded 1204 5.974981480478496E-4 199
+iterating-progress-unbounded 1210 5.928172997707783E-4 200
+iterating-progress-unbounded 1216 5.88190313765184E-4 201
+iterating-progress-unbounded 1222 5.836163898692278E-4 202
+iterating-progress-unbounded 1228 5.790947423702651E-4 203
+iterating-progress-unbounded 1234 5.746245996907753E-4 204
+iterating-progress-unbounded 1240 5.702052040835346E-4 205
+iterating-progress-unbounded 1246 5.658358113358581E-4 206
+iterating-progress-unbounded 1252 5.615156904797966E-4 207
+iterating-progress-unbounded 1258 5.572441235117087E-4 208
+iterating-progress-unbounded 1265 5.523210551695288E-4 209
+iterating-progress-unbounded 1271 5.481522852435682E-4 210
+iterating-progress-unbounded 1277 5.440298779971558E-4 211
+iterating-progress-unbounded 1283 5.399531665833436E-4 212
+iterating-progress-unbounded 1289 5.359214957813534E-4 213
+iterating-progress-unbounded 1295 5.31934221757645E-4 214
+iterating-progress-unbounded 1301 5.279907118341037E-4 215
+iterating-progress-unbounded 1307 5.240903442588555E-4 216
+iterating-progress-unbounded 1313 5.202325079866052E-4 217
+iterating-progress-unbounded 1319 5.164166024604375E-4 218
+iterating-progress-unbounded 1325 5.126420374043071E-4 219
+iterating-progress-unbounded 1331 5.089082326126813E-4 220
+iterating-progress-unbounded 1337 5.052146177537022E-4 221
+iterating-progress-unbounded 1343 5.015606321720595E-4 222
+iterating-done 1347 222
+model-checking-done 600
+command-check-result-is 122.11659328336827 productivity	</pre>
+</div>
+</body>
+</html>

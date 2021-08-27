@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - mapk_cascade activated_time 4-30</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#mapk_cascade">mapk_cascade</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">T</span> = 30</td></tr>
+		<tr><td>Property:</td><td><span class="tt">activated_time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta mapk_cascade.jani -E N=4,T=30 --props activated_time -O out.txt Minimal --unsafe --es -S Memory --epsilon 0 --p0 --p1</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">22.38205361366272s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">mapk_cascade.jani:model: info: mapk_cascade is a CTMC model.
+mapk_cascade.jani: info: Need 32 bytes per state.
+mapk_cascade.jani: info: Explored 99535 states for N=4, T=30.0.
+
+Peak memory usage: 177 MB
+Analysis results for mapk_cascade.jani
+Experiment N=4, T=30.0
+
++ State space exploration
+  State size:  32 bytes
+  States:      99535
+  Transitions: 99535
+  Branches:    901842
+  Rate:        77279 states/s
+  Time:        1.3 s
+
++ Property activated_time
+  Value:  40.67650299679535
+  Bounds: [40.67650299679535, 40.67650299679535]
+  Time:   20.5 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          99535
+    Time for min. prob. 1 states: 0.0 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 98076
+    Transitions:      98076
+    Branches:         900383
+    Time:             0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2556
+    Time:        20.4 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

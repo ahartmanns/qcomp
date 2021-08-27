@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - consensus steps_min 6-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism consensus.6.prism --prop consensus.props steps_min --constants K=2 --signal-timeout 60 --general:precision 1e-12 --gmm++:precision 1e-12 --native:precision 1e-12 --minmax:precision 1e-12 --timebounded:precision 1e-6 --lra:precision 1e-12  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">67.66214871406555s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.7428703703703706e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Wed Apr 29 17:35:43 2020
+Command line arguments: --prism consensus.6.prism --prop consensus.props steps_min --constants K=2 --signal-timeout 60 &#x27;--general:precision&#x27; 1e-12 &#x27;--gmm++:precision&#x27; 1e-12 &#x27;--native:precision&#x27; 1e-12 &#x27;--minmax:precision&#x27; 1e-12 &#x27;--timebounded:precision&#x27; 1e-6 &#x27;--lra:precision&#x27; 1e-12 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.005s.
+
+Time for model construction: 11.608s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	1258240
+Transitions: 	6236736
+Choices: 	5008128
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * finished -&gt; 384 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;steps_min&quot;: R[exp]{&quot;steps&quot;}min=? [F &quot;finished&quot;] ...
+Result (for initial states): 432.0000000161692
+Time for model checking: 56.004s.	</pre>
+</div>
+</body>
+</html>

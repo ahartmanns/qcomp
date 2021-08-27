@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ePMC-6 - pnueli-zuck live 5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ePMC-6</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#pnueli-zuck">pnueli-zuck</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">live</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files pnueli-zuck.5.prism --model-input-type prism --property-input-files pnueli-zuck.props --property-input-names live --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-6</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">31.50078582763672s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">assertions-disabled
+start-parsing
+done-parsing
+model-checking
+analysing-property live
+start-building-explorer
+start-building-initial-states-explorer
+done-building-initial-states-explorer
+done-building-explorer
+build-model-start
+build-model-states-explored 6077 6077
+build-model-states-explored 21181 15104
+build-model-states-explored 37817 16636
+build-model-states-explored 53895 16077
+build-model-states-explored 70890 16996
+build-model-states-explored 87793 16903
+build-model-states-explored 102851 15058
+build-model-states-explored 119833 16982
+build-model-states-explored 136868 17035
+build-model-states-explored 153831 16963
+build-model-states-explored 170732 16901
+build-model-states-explored 183868 13136
+build-model-states-explored 200744 16876
+build-model-states-explored 217704 16960
+build-model-states-explored 234491 16787
+build-model-states-explored 251450 16959
+build-model-states-explored 268254 16803
+build-model-states-explored 285161 16907
+build-model-states-explored 302039 16878
+build-model-states-explored 318901 16862
+build-model-states-explored 335696 16795
+build-model-states-explored 352053 16357
+build-model-states-explored 362502 10449
+build-model-states-explored 378234 15732
+build-model-states-explored 394697 16463
+build-model-done 397435 25
+iterating
+iterating-progress-unbounded 53 0.013881877839475013 1
+iterating-done 90 1
+model-checking-done 30
+command-check-result-is 1.0 live	</pre>
+</div>
+</body>
+</html>

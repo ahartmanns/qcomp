@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - polling s1_before_s2 18-16</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#polling">polling</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 18, <span class="tt">T</span> = 16</td></tr>
+		<tr><td>Property:</td><td><span class="tt">s1_before_s2</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism polling.18.prism --prop polling.props s1_before_s2 --constants T=16 --prismcompat --timebounded:precision 1e-3  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4 --engine hybrid</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">15.528366327285767s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.844566260517549e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Wed Apr 29 10:37:25 2020
+Command line arguments: --prism polling.18.prism --prop polling.props s1_before_s2 --constants T=16 --prismcompat &#x27;--timebounded:precision&#x27; 1e-3 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4 --engine hybrid
+Current working directory: /
+
+ WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.011s.
+
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 0.442s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	7077888 (57 nodes)
+Transitions: 	68485120 (2743 nodes)
+Reward Models:  none
+Variables: 	rows: 20 meta variables (24 DD variables), columns: 20 meta variables (24 DD variables)
+Labels: 	2
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (25 nodes)
+-------------------------------------------------------------- 
+
+Model checking property &quot;s1_before_s2&quot;: P=? [!(((s = 2) &amp; (a = 1))) U ((s = 1) &amp; (a = 1))] ...
+Result (for initial states): 0.5389973198
+Time for model checking: 14.915s.	</pre>
+</div>
+</body>
+</html>

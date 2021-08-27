@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - zeroconf correct_max 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 zeroconf.prism zeroconf.props --property correct_max -const N=1000,K=8,reset=false</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">213.5708451271057s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.386035220065041e-16</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sun Mar 15 03:14:52 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 zeroconf.prism zeroconf.props --property correct_max -const &#x27;N=1000,K=8,reset=false&#x27;
+
+Parsing model file &quot;zeroconf.prism&quot;...
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+Parsing properties file &quot;zeroconf.props&quot;...
+
+2 properties:
+(1) &quot;correct_max&quot;: Pmax=? [ F (l=4&amp;ip=1) ]
+(2) &quot;correct_min&quot;: Pmin=? [ F (l=4&amp;ip=1) ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;correct_max&quot;: Pmax=? [ F (l=4&amp;ip=1) ]
+Model constants: reset=false,N=1000,K=8
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: reset=false,N=1000,K=8
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 69.16 seconds (average 0.116831, setup 0.00)
+
+Time for model construction: 70.171 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+Choices:     3443961
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Prob0A: 131 iterations in 4.30 seconds (average 0.032809, setup 0.00)
+
+Prob1E: 2127 iterations in 93.87 seconds (average 0.044131, setup 0.00)
+
+yes = 171749, no = 611330, maybe = 1087259
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building quotient MDP, collapsing maximal end components as well as yes and no states...
+Time for computing maximal end components: 3.724 seconds, found 0 MECs.
+Time for building MEC quotient: 13.57 seconds.
+
+Quotient MDP:
+States:      1087261 (1 initial)
+Transitions: 3619193
+Choices:     3139484
+
+Transition matrix: 1267651 nodes (6 terminal), 3619193 minterms, vars: 58r/58c/66nd
+Note: Interval iteration is configured to enforce monotonicity from below.
+
+Building sparse matrix... [n=1087261, nc=1997482, nnz=2477184, k=4] [31.3 MB]
+Creating vector for yes... [8.3 MB]
+Creating vector for maybe... [8.3 MB]
+Allocating iteration vectors... [4 x 8.3 MB]
+TOTAL: [81.1 MB]
+
+Starting iterations (interval iteration)...
+Iteration 122: max relative diff=1.000000, 5.01 sec so far
+Iteration 245: max relative diff=0.999797, 10.02 sec so far
+Iteration 372: max relative diff=0.660420, 15.06 sec so far
+Max relative diff between upper and lower bound on convergence: 0.0436502
+Iterative method (interval iteration): 446 iterations in 21.28 seconds (average 0.040249, setup 3.33)
+
+Value in the initial state: 4.8014136350724334E-8
+
+Time for model checking: 142.317 seconds.
+
+Result: 4.8014136350724334E-8 (value in the initial state)
+
+
+Overall running time: 213.094 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

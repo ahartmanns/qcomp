@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - eajs ExpUtil 5-250-11</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#eajs">eajs</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5, <span class="tt">energy_capacity</span> = 250, <span class="tt">B</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">ExpUtil</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 eajs.5.prism eajs.props --property ExpUtil -const energy_capacity=250,B=11</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">53.74776077270508s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.4422885903006456e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 17:10:10 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -e 5e-2 -heuristic speed -ddextraactionvars 100 -maxiters 1000000 eajs.5.prism eajs.props_fixed --property ExpUtil -const &#x27;energy_capacity=250,B=11&#x27;
+
+Parsing model file &quot;eajs.5.prism&quot;...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4 
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4 
+
+Parsing properties file &quot;eajs.props_fixed&quot;...
+
+1 property:
+(1) &quot;ExpUtil&quot;: R{&quot;utilityLocal&quot;}max=? [ F emptyBattery ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;ExpUtil&quot;: R{&quot;utilityLocal&quot;}max=? [ F emptyBattery ]
+Model constants: energy_capacity=250
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: energy_capacity=250
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.16 seconds (average 0.002219, setup 0.00)
+
+Time for model construction: 0.785 seconds.
+
+Type:        MDP
+States:      3049471 (1 initial)
+Transitions: 6977654
+Choices:     4256193
+
+Transition matrix: 25363 nodes (7 terminal), 6977654 minterms, vars: 43r/43c/5nd
+
+Prob0E: 250 iterations in 0.67 seconds (average 0.002688, setup 0.00)
+
+Prob1A: 1 iterations in 0.01 seconds (average 0.006000, setup 0.00)
+
+goal = 13476, inf = 0, maybe = 3035995
+Time for computing an upper bound for expected reward: 5.464 seconds.
+Upper bound for max expectation (variant 2): 10488.0
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=3049471, nc=4237377, nnz=6946802, k=10] [107.3 MB]
+Building sparse matrix (transition rewards)... [n=3049471, nc=4237377, nnz=105040, k=10] [29.0 MB]
+Creating vector for state rewards... [23.3 MB]
+Creating vector for inf... [23.3 MB]
+Creating vector for lower bounds... [23.3 MB]
+Creating vector for upper bounds... [23.3 MB]
+Allocating iteration vectors... [4 x 23.3 MB]
+TOTAL: [322.4 MB]
+
+Starting iterations (interval iteration)...
+Iteration 34: max relative diff=0.999995, 5.10 sec so far
+Iteration 68: max relative diff=0.999810, 10.12 sec so far
+Iteration 103: max relative diff=0.999713, 15.21 sec so far
+Iteration 138: max relative diff=0.999563, 20.23 sec so far
+Iteration 174: max relative diff=0.999428, 25.34 sec so far
+Iteration 210: max relative diff=0.999296, 30.37 sec so far
+Iteration 247: max relative diff=0.999043, 35.48 sec so far
+Max relative diff between upper and lower bound on convergence: 0
+Iterative method: 249 iterations in 45.89 seconds (average 0.143582, setup 10.14)
+Maximum finite value in solution vector at end of interval iteration: 10.06278478984203
+
+Value in the initial state: 10.032940688435431
+
+Time for model checking: 52.183 seconds.
+
+Result: 10.032940688435431 (value in the initial state)
+
+
+Overall running time: 53.56 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - csma all_before_max 3-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 3, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">all_before_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 csma.3-4.jani --props all_before_max -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5495908260345s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.009358171862987685</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">csma.3-4.jani:model: info: csma.3-4 is an MDP model and will be simulated as an MDP.
+csma.3-4.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 60 MB
+Analysis results for csma.3-4.jani
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property &quot;all_before_max&quot;
+  Estimated max. probability: 0.9237209302325582
+  Runs used (best scheduler): 2150
+  Total runs used:            7947700
+  Schedulers sampled:         7000
+  Best scheduler:             1861717377
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Adaptive: P(error &gt; εp̂) &lt; δ
+    ε:                  0.02
+    δ:                  0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

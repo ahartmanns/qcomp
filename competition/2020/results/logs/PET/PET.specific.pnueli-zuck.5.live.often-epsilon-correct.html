@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PET - pnueli-zuck live 5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PET</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#pnueli-zuck">pnueli-zuck</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">live</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./smc.sh pnueli-zuck.5.prism pnueli-zuck.props -prop live -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:100000,Av:10,e:0.001,d:0.05,p:0.05,post:64</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.7829954624176025s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Fri Mar 20 08:04:07 UTC 2020
+Hostname: 68eec9c801d9
+Memory limits: cudd=1g, java(heap)=8.9g
+Command line: prism pnueli-zuck.5.prism pnueli-zuck.props -prop live -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams &#x27;S:100000;Av:10;e:0.001;d:0.05;p:0.05;post:64&#x27; -javamaxmem 10g
+
+Parsing the model file &quot;pnueli-zuck.5.prism&quot;...
+
+Parsing properties file &quot;pnueli-zuck.props&quot;...
+
+1 property:
+(1) &quot;live&quot;: Pmax=? [ F (p1=10) ]
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 
+Variables:   p0 p1 p2 p3 p4 
+
+---------------------------------------------------------------------
+
+Model checking: &quot;live&quot;: Pmax=? [ F (p1=10) ]
+Starting heuristic: RTDP_ADJ
+IsMDP false Collapse false break false
+ColourParams: S:100000 Av: 10 eps: 0.001 delta: 0.05 pmin: 0.05
+TransDelta: 7.812500000000001E-10
+HeuristicSG: Version try0
+Grey
+======================================
+
+JSON: {&quot;Trials&quot;:100000,&quot;Precision&quot;:0,&quot;PartialTransDelta&quot;:0.004166666666666667,&quot;Value&quot;:{&quot;Upper&quot;:1,&quot;Lower&quot;:1},&quot;ActionsOfs0&quot;:{&quot;Action0&quot;:&quot;[0.0;1.0]&quot;,&quot;Action1&quot;:&quot;[0.0;1.0]&quot;,&quot;Action2&quot;:&quot;[0.0;1.0]&quot;,&quot;Action3&quot;:&quot;[1.0;1.0]&quot;,&quot;Action4&quot;:&quot;[0.0;1.0]&quot;},&quot;GlobalTimerSecs&quot;:0.213,&quot;AvgConf&quot;:0.99757256010906,&quot;StateInfos&quot;:{&quot;num00&quot;:0,&quot;num11&quot;:11,&quot;numStates&quot;:154,&quot;num01&quot;:143,&quot;avgDist&quot;:0.9285714285714286,&quot;numWorking&quot;:0,&quot;numUnset&quot;:0,&quot;numClose&quot;:11}}
+
+Model checking completed in 0.304 secs.
+
+Result (maximum probability): 1.0	</pre>
+</div>
+</body>
+</html>

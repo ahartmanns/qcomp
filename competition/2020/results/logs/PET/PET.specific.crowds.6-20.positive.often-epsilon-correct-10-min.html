@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PET - crowds positive 6-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PET</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 6, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./smc.sh crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:10000000,Av:10,e:0.001,d:0.05,p:0.05,post:64 -const TotalRuns=6,CrowdSize=20</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">270.3823790550232s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Thu Mar 19 12:07:40 UTC 2020
+Hostname: 68eec9c801d9
+Memory limits: cudd=1g, java(heap)=8.9g
+Command line: prism crowds.prism crowds.props -prop positive -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams &#x27;S:10000000;Av:10;e:0.001;d:0.05;p:0.05;post:64&#x27; -const &#x27;TotalRuns=6,CrowdSize=20&#x27; -javamaxmem 10g
+
+Parsing the model file &quot;crowds.prism&quot;...
+
+Parsing properties file &quot;crowds.props&quot;...
+
+1 property:
+(1) &quot;positive&quot;: P=? [ F observe0&gt;1 ]
+
+Type:        DTMC
+Modules:     crowds 
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19 
+
+---------------------------------------------------------------------
+
+Model checking: &quot;positive&quot;: P=? [ F observe0&gt;1 ]
+Model constants: TotalRuns=6,CrowdSize=20
+Starting heuristic: RTDP_ADJ
+IsMDP false Collapse false break false
+ColourParams: S:10000000 Av: 10 eps: 0.001 delta: 0.05 pmin: 0.05
+TransDelta: 2.37526000926207E-11
+HeuristicSG: Version try0
+Grey
+======================================	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:3308)
+	at java.util.BitSet.ensureCapacity(BitSet.java:337)
+	at java.util.BitSet.expandTo(BitSet.java:352)
+	at java.util.BitSet.set(BitSet.java:447)
+	at explicit.ECComputerDefault.translateStates(ECComputerDefault.java:211)
+	at explicit.ECComputerDefault.findEndComponents(ECComputerDefault.java:119)
+	at explicit.ECComputerDefault.computeMECStates(ECComputerDefault.java:74)
+	at heuristics.search.colours.White.handleBEC(White.java:65)
+	at heuristics.search.HeuristicSG.explore(HeuristicSG.java:84)
+	at heuristics.search.HeuristicSG.heuristicStep(HeuristicSG.java:213)
+	at heuristics.search.Heuristic.compute(Heuristic.java:77)
+	at heuristics.HeuristicsSMGModelChecker.checkExpressionProb(HeuristicsSMGModelChecker.java:332)
+	at heuristics.HeuristicsSMGModelChecker.checkExpression(HeuristicsSMGModelChecker.java:219)
+	at heuristics.HeuristicsSMGModelChecker.check(HeuristicsSMGModelChecker.java:173)
+	at prism.Prism.modelCheck(Prism.java:2944)
+	at prism.PrismCL.run(PrismCL.java:358)
+	at prism.PrismCL.go(PrismCL.java:212)
+	at prism.PrismCL.main(PrismCL.java:2471)	</pre>
+</div>
+</body>
+</html>

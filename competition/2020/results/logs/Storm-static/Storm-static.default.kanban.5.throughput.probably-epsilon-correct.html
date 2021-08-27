@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - kanban throughput 5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#kanban">kanban</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">t</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">throughput</span> (steady-state-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism kanban.prism --prop kanban.props throughput --constants t=5 --prismcompat --sound --precision 5e-2  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">99.27868247032166s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.001932239428365911</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Tue Apr 28 21:31:53 2020
+Command line arguments: --prism kanban.prism --prop kanban.props throughput --constants t=5 --prismcompat --sound --precision 5e-2 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+ WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.004s.
+
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1264): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 42.103s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	2546432
+Transitions: 	24460016
+Reward Models:  throughput
+State Labels: 	2 labels
+   * deadlock -&gt; 0 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;throughput&quot;: R[exp]{&quot;throughput&quot;}=? [LRA] ...
+Result (for initial states): 0.3065313207
+Time for model checking: 57.116s.	</pre>
+</div>
+</body>
+</html>
