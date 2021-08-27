@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - philosophers MinExpTimeDeadlock 16-1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#philosophers">philosophers</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 16, <span class="tt">TIME_BOUND</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MinExpTimeDeadlock</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 philosophers.16.jani --props MinExpTimeDeadlock -E TIME_BOUND=1 -O out.txt Minimal -N 2147483647</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5537266731262s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">8.045948887885528e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">philosophers.16.jani:model: info: Philosophers16 is a CTMC model and will be simulated as an MA.
+philosophers.16.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 60 MB
+Analysis results for philosophers.16.jani
+Experiment TIME_BOUND=1.0
+Status:          Cancelled
+Simulation time: 599.5 s
+
++ Property Property &quot;MinExpTimeDeadlock&quot;
+  Estimated value:     10.782105856389409
+  Confidence interval: [10.77782121775729, 10.786390495021527]
+  Runs used:           7221350
+  Run type:            MA
+  Status:              Cancelled
+
+  + Sample data
+    Mean:     10.782105856389409
+    Variance: 34.51044910842342
+    Skewness: 1.4255123709246458
+    Kurtosis: 6.397986321524787
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - crowds positive 5-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 5, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 crowds.prism crowds.props --property positive -const TotalRuns=5,CrowdSize=20</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">7.755246877670288s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">3.359871332445212e-06</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 11:35:37 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 crowds.prism crowds.props --property positive -const &#x27;TotalRuns=5,CrowdSize=20&#x27;
+
+Parsing model file &quot;crowds.prism&quot;...
+
+Type:        DTMC
+Modules:     crowds 
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19 
+
+Parsing properties file &quot;crowds.props&quot;...
+
+1 property:
+(1) &quot;positive&quot;: P=? [ F observe0&gt;1 ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;positive&quot;: P=? [ F observe0&gt;1 ]
+Model constants: TotalRuns=5,CrowdSize=20
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: TotalRuns=5,CrowdSize=20
+
+Warning: Guard for command 6 of module &quot;crowds&quot; is never satisfied.
+
+Warning: Guard for command 7 of module &quot;crowds&quot; is never satisfied.
+
+Warning: Guard for command 8 of module &quot;crowds&quot; is never satisfied.
+
+Warning: Guard for command 9 of module &quot;crowds&quot; is never satisfied.
+
+Warning: Guard for command 10 of module &quot;crowds&quot; is never satisfied.
+
+Warning: Guard for command 2 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 3 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 4 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 5 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 11 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 12 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 13 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 14 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 15 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 16 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 17 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 18 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 19 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 20 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 21 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 22 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 23 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 24 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 25 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 26 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 27 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 28 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 29 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 30 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 31 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 32 of module &quot;crowds&quot; overlaps with previous commands.
+
+Warning: Guard for command 33 of module &quot;crowds&quot; overlaps with previous commands.
+
+Computing reachable states...
+
+Reachability (BFS): 47 iterations in 0.36 seconds (average 0.007574, setup 0.00)
+
+Time for model construction: 0.418 seconds.
+
+Warning: Deadlocks detected and fixed in 53130 states
+
+Type:        DTMC
+States:      2061951 (1 initial)
+Transitions: 7374951
+
+Transition matrix: 33232 nodes (7 terminal), 7374951 minterms, vars: 78r/78c
+
+Prob0: 14 iterations in 0.09 seconds (average 0.006214, setup 0.00)
+
+Prob1: 30 iterations in 0.12 seconds (average 0.004100, setup 0.00)
+
+yes = 47399, no = 1745849, maybe = 268703
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=2061951, nnz=1756343, compact] [8.7 MB]
+Creating vector for diagonals... [dist=1, compact] [3.9 MB]
+Creating vector for RHS... [dist=2, compact] [3.9 MB]
+Allocating iteration vector... [15.7 MB]
+TOTAL: [32.3 MB]
+
+Starting iterations...
+
+Backwards Gauss-Seidel: 131 iterations in 6.35 seconds (average 0.025702, setup 2.98)
+
+Value in the initial state: 0.08606876525556183
+
+Time for model checking: 6.583 seconds.
+
+Result: 0.08606876525556183 (value in the initial state)
+
+
+Overall running time: 7.578 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 34 warnings during computation.	</pre>
+</div>
+</body>
+</html>

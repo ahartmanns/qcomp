@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - sms Unavailability 3-true</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#sms">sms</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">A</span> = 3, <span class="tt">R</span> = True</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unavailability</span> (steady-state-prob)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 sms.3-true.jani --props Unavailability -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5534870624542s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">sms.3-true.jani:model: info: sms.3-true.jani is an MA model and will be simulated as an MA.
+sms.3-true.jani: info: Using default value of 0.95 for the confidence parameter.
+sms.3-true.jani:properties[1]: warning: Cycle detection is not available for long-run average properties.
+sms.3-true.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 66 MB
+Analysis results for sms.3-true.jani
+Status:          Finished
+Simulation time: 599.4 s
+
++ Property Property &quot;Unavailability&quot;
+  Estimated max. value:       1
+  Max. confidence interval:   [1, 1]
+  Runs used (best scheduler): 50
+  Total runs used:            1014050
+  Schedulers sampled:         1000
+  Best scheduler:             1084106047
+  Run type:                   MA
+  Status:                     Finished
+
+  + Max. sample data
+    Mean: 1
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. value.
+    Statement:          CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:                  0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

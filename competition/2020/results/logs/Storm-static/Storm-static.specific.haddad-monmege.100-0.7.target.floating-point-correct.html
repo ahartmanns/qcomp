@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - haddad-monmege target 100-0.7</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#haddad-monmege">haddad-monmege</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 100, <span class="tt">p</span> = 0.7</td></tr>
+		<tr><td>Property:</td><td><span class="tt">target</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism haddad-monmege.pm --prop haddad-monmege.prctl target --constants N=100,p=0.7 --exact floats --general:precision 1e-20  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4 --engine sparse</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.0492854118347168s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '124344978758084873638621/12500000000000000000000000000000000000' is tagged as incorrect. The reference result is '7/10' (approx. 0.7) which means a relative error of '0.9999999999999858' which is larger than the goal precision '1e-14'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">0.9999999999999858</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Tue Apr 28 11:25:24 2020
+Command line arguments: --prism haddad-monmege.pm --prop haddad-monmege.prctl target --constants &#x27;N=100,p=0.7&#x27; --exact floats &#x27;--general:precision&#x27; 1e-20 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4 --engine sparse
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.001s.
+
+Time for model construction: 0.021s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	201
+Transitions: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * Target -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;target&quot;: P=? [F &quot;Target&quot;] ...
+Result (for initial states): 9.94759830064678989108968e-15
+Time for model checking: 0.000s.	</pre>
+</div>
+</body>
+</html>

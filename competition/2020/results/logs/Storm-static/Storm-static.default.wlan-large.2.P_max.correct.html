@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - wlan-large P_max 2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan-large">wlan-large</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">P_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/modest/modest convert wlan-large.jani --digital-clocks  --unroll-distrs --output converted_wlan-large.jani --overwrite --experiment K=2
+~/storm/build/bin/storm --jani converted_wlan-large.jani --janiproperty P_max --exact  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">24.922232151031494s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0, 0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.36-g691a5469c.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Fri May  1 01:24:11 2020
+Command line arguments: --jani converted_wlan-large.jani --janiproperty P_max --exact --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+Time for model input parsing: 0.042s.
+
+Time for model construction: 22.875s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	761958
+Transitions: 	1507007
+Choices: 	1505953
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * ((bc1 = 2) | (bc2 = 2)) -&gt; 128 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;P_max&quot;: Pmax=? [F ((bc1 = 2) | (bc2 = 2))] ...
+Result (for initial states): 1/16 (approx. 0.0625)
+Time for model checking: 1.440s.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - firewire deadline false-36-800</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#firewire">firewire</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">explicit_timer</span> = False, <span class="tt">delay</span> = 36, <span class="tt">deadline</span> = 800</td></tr>
+		<tr><td>Property:</td><td><span class="tt">deadline</span> (prob-reach-reward-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism firewire.false.prism --prop firewire.false.props deadline --constants delay=36,deadline=800 --sound --precision 1e-6  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4 --engine dd-to-sparse --bisimulation</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">27.652034997940063s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Wed Apr 29 23:19:53 2020
+Command line arguments: --prism firewire.false.prism --prop firewire.false.props deadline --constants &#x27;delay=36,deadline=800&#x27; --sound --precision 1e-6 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4 --engine dd-to-sparse --bisimulation
+Current working directory: /
+
+Time for model input parsing: 0.010s.
+
+Time for model construction: 1.344s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	212268 (18185 nodes)
+Transitions: 	481788 (88920 nodes)
+Choices: 	478752
+Reward Models:  time
+Variables: 	rows: 10 meta variables (56 DD variables), columns: 10 meta variables (56 DD variables), nondeterminism: 14 meta variables (14 DD variables)
+Labels: 	3
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (57 nodes)
+   * done
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 22.054s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	31745
+Transitions: 	54288
+Choices: 	54101
+Reward Models:  time
+State Labels: 	3 labels
+   * (((s1 = 8) &amp; (s2 = 7)) | ((s1 = 7) &amp; (s2 = 8))) -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
+   * deadlock -&gt; 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;deadline&quot;: Pmin=? [true Urew{&quot;time&quot;}&lt;=800 (((s1 = 8) &amp; (s2 = 7)) | ((s1 = 7) &amp; (s2 = 8)))] ...
+Result (for initial states): 0.939453125
+Time for model checking: 3.913s.	</pre>
+</div>
+</body>
+</html>

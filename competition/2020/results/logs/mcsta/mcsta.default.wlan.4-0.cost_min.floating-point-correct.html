@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - wlan cost_min 4-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 4, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">cost_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta wlan.4.jani -E COL=0 --props cost_min -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --epsilon 0 --absolute-epsilon</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">14.709834575653076s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">wlan.4.jani:model: info: wlan.4 is an MDP model.
+wlan.4.jani:variables[7]: info: Expanding variable &quot;s1&quot; into 12 locations in automaton &quot;station1&quot;.
+wlan.4.jani:variables[12]: info: Expanding variable &quot;s2&quot; into 12 locations in automaton &quot;station2&quot;.
+wlan.4.jani: info: Need 16 bytes per state.
+wlan.4.jani: info: Explored 345000 states for COL=0.
+wlan.4.jani:properties[2]: warning: Computing minimum expected reward in property &quot;cost_min&quot; without checking for zero-reward end components.
+
+Peak memory usage: 181 MB
+Analysis results for wlan.4.jani
+Experiment COL=0
+
++ State space exploration
+  State size:  16 bytes
+  States:      345000
+  Transitions: 440206
+  Branches:    762252
+  Rate:        382908 states/s
+  Time:        0.9 s
+
++ Property cost_min
+  Value:  7625
+  Bounds: [7625, infinity)
+  Time:   13.1 s
+
+  + Precomputations
+    Max. prob. 1 states:          345000
+    Time for max. prob. 1 states: 12.9 s
+
+  + Essential states
+    Iterations:       14
+    Essential states: 6151
+    Transitions:      10499
+    Branches:         81553
+    Time:             0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  8
+    Time:        0.0 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

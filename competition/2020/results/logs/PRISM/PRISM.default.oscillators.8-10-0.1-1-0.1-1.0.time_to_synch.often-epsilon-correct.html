@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - oscillators time_to_synch 8-10-0.1-1-0.1-1.0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#oscillators">oscillators</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 8, <span class="tt">T</span> = 10, <span class="tt">epsilon</span> = 0.1, <span class="tt">R</span> = 1, <span class="tt">mu</span> = 0.1, <span class="tt">lambda</span> = 1.0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time_to_synch</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 oscillators.8-10-0.1-1.prism oscillators.props --property time_to_synch -const mu=0.1,lambda=1.0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">60.17646670341492s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.5831150066669494e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 12:32:44 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 oscillators.8-10-0.1-1.prism oscillators.props --property time_to_synch -const &#x27;mu=0.1,lambda=1.0&#x27;
+
+Parsing model file &quot;oscillators.8-10-0.1-1.prism&quot;...
+
+Type:        DTMC
+Modules:     oscillator_population 
+Variables:   k_1 k_2 k_3 k_4 k_5 k_6 k_7 k_8 k_9 k_10 
+
+Parsing properties file &quot;oscillators.props&quot;...
+
+2 properties:
+(1) &quot;time_to_synch&quot;: R{&quot;time_to_synch&quot;}=? [ F order_parameter&gt;=lambda ]
+(2) &quot;power_consumption&quot;: R{&quot;power_consumption&quot;}=? [ F order_parameter&gt;=lambda ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;time_to_synch&quot;: R{&quot;time_to_synch&quot;}=? [ F order_parameter&gt;=lambda ]
+Model constants: mu=0.1,lambda=1
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: mu=0.1,lambda=1
+
+Computing reachable states...
+
+Reachability (BFS): 2 iterations in 0.10 seconds (average 0.051500, setup 0.00)
+
+Time for model construction: 49.86 seconds.
+
+Type:        DTMC
+States:      24311 (1 initial)
+Transitions: 76623
+
+Transition matrix: 80638 nodes (438 terminal), 76623 minterms, vars: 40r/40c
+
+Prob0: 15 iterations in 0.95 seconds (average 0.063333, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.002000, setup 0.00)
+
+goal = 2, inf = 0, maybe = 24309
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix... [n=24311, nnz=76621, compact] [397.7 KB]
+Creating vector for diagonals... [dist=1, compact] [47.5 KB]
+Creating vector for RHS... [dist=9, compact] [47.6 KB]
+Allocating iteration vector... [189.9 KB]
+TOTAL: [682.7 KB]
+
+Starting iterations...
+
+Backwards Gauss-Seidel: 1605 iterations in 0.83 seconds (average 0.000455, setup 0.10)
+
+Value in the initial state: 6.007085676647806
+
+Time for model checking: 2.229 seconds.
+
+Result: 6.007085676647806 (value in the initial state)
+
+
+Overall running time: 59.885 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

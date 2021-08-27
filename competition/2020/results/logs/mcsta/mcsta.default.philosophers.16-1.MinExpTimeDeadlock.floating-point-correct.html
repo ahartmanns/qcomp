@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - philosophers MinExpTimeDeadlock 16-1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#philosophers">philosophers</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 16, <span class="tt">TIME_BOUND</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MinExpTimeDeadlock</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta philosophers.16.jani -E TIME_BOUND=1 --props MinExpTimeDeadlock -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --epsilon 0 --absolute-epsilon</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">37.0132360458374s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '1078297345256119/100000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 10.782973448921704), ('upper', 10.782973451078297)])' (approx. OrderedDict([('lower', 10.782973448921704), ('upper', 10.782973451078297)])) which means a relative error of '1.3752174878464596e-10' which is larger than the goal precision '1e-14'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">1.3752174878464596e-10</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">philosophers.16.jani:model: info: Philosophers16 is a CTMC model.
+philosophers.16.jani: info: Need 72 bytes per state.
+philosophers.16.jani: info: Explored 1331714 states for TIME_BOUND=1.0.
+
+Peak memory usage: 1800 MB
+Analysis results for philosophers.16.jani
+Experiment TIME_BOUND=1.0
+
++ State space exploration
+  State size:  72 bytes
+  States:      1331714
+  Transitions: 1331714
+  Branches:    13774113
+  Rate:        100681 states/s
+  Time:        13.8 s
+
++ Property MinExpTimeDeadlock
+  Value:  10.78297345256119
+  Bounds: [10.78297345256119, 10.78297345256119]
+  Time:   22.6 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.6 s
+    Min. prob. 1 states:          1331714
+    Time for min. prob. 1 states: 0.2 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 1331715
+    Transitions:      1331715
+    Branches:         13774114
+    Time:             0.9 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  185
+    Time:        20.9 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

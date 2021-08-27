@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - speed-ind change_state 2100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#speed-ind">speed-ind</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">T</span> = 2100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">change_state</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 speed-ind.prism speed-ind.props --property change_state -const T=2100</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">241.07750391960144s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 14:55:16 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 speed-ind.prism speed-ind.props --property change_state -const T=2100
+
+Parsing model file &quot;speed-ind.prism&quot;...
+
+Type:        CTMC
+Modules:     S1_def S2_def S3_def S4_def Y_def Z_def CC_def XX_def 
+Variables:   S1 S2 S3 S4 Y Z CC XX 
+
+Parsing properties file &quot;speed-ind.props&quot;...
+
+1 property:
+(1) &quot;change_state&quot;: P=? [ F&lt;=T ((S2&gt;80)&amp;(S3&lt;20)) ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;change_state&quot;: P=? [ F&lt;=T ((S2&gt;80)&amp;(S3&lt;20)) ]
+Property constants: T=2100
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 38 iterations in 0.04 seconds (average 0.001105, setup 0.00)
+
+Time for model construction: 32.148 seconds.
+
+Type:        CTMC
+States:      743424 (1 initial)
+Transitions: 9518080
+
+Rate matrix: 33024 nodes (187 terminal), 9518080 minterms, vars: 58r/58c
+
+Computing probabilities...
+Engine: Sparse
+
+Number of non-absorbing states: 718848 of 743424 (96.7%)
+
+Building sparse matrix... [n=743424, nnz=9219072, compact] [35.9 MB]
+Creating vector for diagonals... [5.7 MB]
+Allocating iteration vectors... [3 x 5.7 MB]
+TOTAL: [58.6 MB]
+
+Uniformisation: q.t = 2.797911 x 2100.000000 = 5875.612619
+Fox-Glynn: left = 5336, right = 6527
+
+Starting iterations...
+Iteration 167 (of 6527): max relative diff=0.068254, 5.01 sec so far
+Iteration 335 (of 6527): max relative diff=0.028921, 10.03 sec so far
+Iteration 503 (of 6527): max relative diff=0.015778, 15.05 sec so far
+Iteration 671 (of 6527): max relative diff=0.009411, 20.06 sec so far
+Iteration 839 (of 6527): max relative diff=0.005904, 25.08 sec so far
+Iteration 1007 (of 6527): max relative diff=0.003982, 30.10 sec so far
+Iteration 1175 (of 6527): max relative diff=0.003030, 35.11 sec so far
+Iteration 1343 (of 6527): max relative diff=0.002377, 40.12 sec so far
+Iteration 1511 (of 6527): max relative diff=0.001912, 45.13 sec so far
+Iteration 1679 (of 6527): max relative diff=0.001571, 50.15 sec so far
+Iteration 1847 (of 6527): max relative diff=0.001314, 55.15 sec so far
+Iteration 2015 (of 6527): max relative diff=0.001117, 60.16 sec so far
+Iteration 2183 (of 6527): max relative diff=0.000963, 65.18 sec so far
+Iteration 2351 (of 6527): max relative diff=0.000842, 70.20 sec so far
+Iteration 2519 (of 6527): max relative diff=0.000745, 75.22 sec so far
+Iteration 2687 (of 6527): max relative diff=0.000666, 80.24 sec so far
+Iteration 2854 (of 6527): max relative diff=0.000601, 85.25 sec so far
+Iteration 3022 (of 6527): max relative diff=0.000547, 90.28 sec so far
+Iteration 3190 (of 6527): max relative diff=0.000501, 95.29 sec so far
+Iteration 3358 (of 6527): max relative diff=0.000462, 100.30 sec so far
+Iteration 3526 (of 6527): max relative diff=0.000429, 105.32 sec so far
+Iteration 3694 (of 6527): max relative diff=0.000400, 110.34 sec so far
+Iteration 3862 (of 6527): max relative diff=0.000374, 115.34 sec so far
+Iteration 4029 (of 6527): max relative diff=0.000352, 120.35 sec so far
+Iteration 4197 (of 6527): max relative diff=0.000331, 125.35 sec so far
+Iteration 4365 (of 6527): max relative diff=0.000314, 130.36 sec so far
+Iteration 4533 (of 6527): max relative diff=0.000297, 135.38 sec so far
+Iteration 4701 (of 6527): max relative diff=0.000283, 140.38 sec so far
+Iteration 4867 (of 6527): max relative diff=0.000270, 145.41 sec so far
+Iteration 5034 (of 6527): max relative diff=0.000258, 150.42 sec so far
+Iteration 5202 (of 6527): max relative diff=0.000247, 155.44 sec so far
+Iteration 5369 (of 6527): max relative diff=0.000237, 160.46 sec so far
+Iteration 5531 (of 6527): max relative diff=0.000228, 165.48 sec so far
+Iteration 5693 (of 6527): max relative diff=0.000219, 170.50 sec so far
+Iteration 5854 (of 6527): max relative diff=0.000211, 175.51 sec so far
+Iteration 6015 (of 6527): max relative diff=0.000204, 180.54 sec so far
+Iteration 6177 (of 6527): max relative diff=0.000197, 185.57 sec so far
+Iteration 6338 (of 6527): max relative diff=0.000191, 190.60 sec so far
+Iteration 6498 (of 6527): max relative diff=0.000185, 195.62 sec so far
+
+Iterative method: 6527 iterations in 207.20 seconds (average 0.030108, setup 10.68)
+
+Value in the initial state: 0.04229449797846471
+
+Time for model checking: 207.274 seconds.
+
+Result: 0.04229449797846471 (value in the initial state)
+
+
+Overall running time: 240.025 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

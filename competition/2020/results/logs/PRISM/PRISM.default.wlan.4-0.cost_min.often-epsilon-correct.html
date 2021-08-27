@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - wlan cost_min 4-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 4, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">cost_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 wlan.4.prism wlan.props --property cost_min -const COL=0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">21.573160409927368s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 23:49:08 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 wlan.4.prism wlan.props --property cost_min -const COL=0
+
+Parsing model file &quot;wlan.4.prism&quot;...
+
+Type:        MDP
+Modules:     medium station1 station2 
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
+
+Parsing properties file &quot;wlan.props&quot;...
+
+7 properties:
+(1) &quot;collisions&quot;: Pmax=? [ F col=COL ]
+(2) &quot;cost_max&quot;: R{&quot;cost&quot;}max=? [ F s1=12&amp;s2=12 ]
+(3) &quot;cost_min&quot;: R{&quot;cost&quot;}min=? [ F s1=12&amp;s2=12 ]
+(4) &quot;num_collisions&quot;: R{&quot;collisions&quot;}max=? [ F s1=12&amp;s2=12 ]
+(5) &quot;sent&quot;: P&gt;=1 [ F s1=12&amp;s2=12 ]
+(6) &quot;time_max&quot;: R{&quot;time&quot;}max=? [ F s1=12&amp;s2=12 ]
+(7) &quot;time_min&quot;: R{&quot;time&quot;}min=? [ F s1=12&amp;s2=12 ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;cost_min&quot;: R{&quot;cost&quot;}min=? [ F s1=12&amp;s2=12 ]
+Model constants: COL=0
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: COL=0
+
+Computing reachable states...
+
+Reachability (BFS): 145 iterations in 0.27 seconds (average 0.001862, setup 0.00)
+
+Time for model construction: 0.407 seconds.
+
+Type:        MDP
+States:      345000 (1 initial)
+Transitions: 762252
+Choices:     440206
+
+Transition matrix: 14365 nodes (6 terminal), 762252 minterms, vars: 43r/43c/7nd
+
+Prob0A: 797 iterations in 6.12 seconds (average 0.007680, setup 0.00)
+
+Prob1E: 798 iterations in 7.36 seconds (average 0.009226, setup 0.00)
+
+Warning: PRISM hasn&#x27;t checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 1, inf = 0, maybe = 344999
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=345000, nc=440205, nnz=762251, k=3] [11.7 MB]
+Building sparse matrix (transition rewards)... [n=345000, nc=440205, nnz=93239, k=3] [4.1 MB]
+Creating vector for state rewards... [2.6 MB]
+Creating vector for inf... [2.6 MB]
+Allocating iteration vectors... [2 x 2.6 MB]
+TOTAL: [26.3 MB]
+
+Starting iterations...
+Iteration 637: max relative diff=0.120332, 5.01 sec so far
+
+Iterative method: 818 iterations in 7.02 seconds (average 0.007809, setup 0.63)
+
+Value in the initial state: 7625.0
+
+Time for model checking: 20.351 seconds.
+
+Result: 7625.0 (value in the initial state)
+
+
+Overall running time: 21.383 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 2 warnings during computation.	</pre>
+</div>
+</body>
+</html>

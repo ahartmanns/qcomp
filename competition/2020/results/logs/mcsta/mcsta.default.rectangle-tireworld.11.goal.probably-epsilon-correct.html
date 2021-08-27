@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - rectangle-tireworld goal 11</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#rectangle-tireworld">rectangle-tireworld</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">xy</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">goal</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta rectangle-tireworld.11.jani --props goal -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 5e-2 --width 5e-2 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">7.515087604522705s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0010079221040395</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">rectangle-tireworld.11.jani:model: info: jani_from_ppddl is an MDP model.
+rectangle-tireworld.11.jani:variables[2]: info: Expanding variable &quot;var2&quot; into 11 locations in automaton &quot;aut&quot;.
+rectangle-tireworld.11.jani: info: Need 4 bytes per state.
+rectangle-tireworld.11.jani: info: Explored 242 states.
+
+Peak memory usage: 362 MB
+Analysis results for rectangle-tireworld.11.jani
+
++ State space exploration
+  State size:  4 bytes
+  States:      242
+  Transitions: 15367
+  Branches:    16084
+  Rate:        903 states/s
+  Time:        0.3 s
+
++ Property goal
+  Probability: 0.9989920778959605
+  Bounds:      [0.997984155791921, 1]
+  Time:        0.0 s
+
+  + Essential states
+    Iterations:       1
+    Essential states: 242
+    Transitions:      15367
+    Branches:         16084
+    Time:             0.0 s
+
+  + Optimistic value iteration
+    Total iterations:  13
+    Verif. attempts:   1
+    Verif. iterations: 1
+    Final epsilon:     0.05
+    Time:              0.0 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

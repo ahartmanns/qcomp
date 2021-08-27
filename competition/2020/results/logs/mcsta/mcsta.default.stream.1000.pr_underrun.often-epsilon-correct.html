@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - stream pr_underrun 1000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#stream">stream</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">pr_underrun</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta stream.jani -E N=1000 --props pr_underrun -O out.txt Minimal --unsafe --es -S Memory --no-partial-results</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.3950080871582031s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.207691470804388e-16</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">stream.jani:model: info: stream is an MA model.
+stream.jani:variables[5]: info: Expanding variable &quot;s&quot; into 4 locations in automaton &quot;streamingclient&quot;.
+stream.jani: info: Need 8 bytes per state.
+stream.jani: info: Explored 503501 states for N=1000.
+
+Peak memory usage: 202 MB
+Analysis results for stream.jani
+Experiment N=1000
+
++ State space exploration
+  State size:  8 bytes
+  States:      503501
+  Transitions: 504500
+  Branches:    1004999
+  Rate:        752617 states/s
+  Time:        0.7 s
+
++ Property pr_underrun
+  Probability: 0.27123157288019745
+  Bounds:      [0.27123157288019745, 0.27123157288019745]
+  Time:        0.2 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 502501
+    Transitions:      503500
+    Branches:         1003999
+    Time:             0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  3
+    Time:        0.1 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

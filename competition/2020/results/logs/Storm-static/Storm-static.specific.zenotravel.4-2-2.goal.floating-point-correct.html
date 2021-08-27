@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - zenotravel goal 4-2-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#zenotravel">zenotravel</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">c</span> = 4, <span class="tt">p</span> = 2, <span class="tt">a</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">goal</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --jani zenotravel.4-2-2.jani --janiproperty goal --exact floats --general:precision 1e-20  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4 --engine hybrid</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">6.3231165409088135s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Thu Apr 30 14:44:18 2020
+Command line arguments: --jani zenotravel.4-2-2.jani --janiproperty goal --exact floats &#x27;--general:precision&#x27; 1e-20 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4 --engine hybrid
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.029s.
+
+Time for model construction: 4.937s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	459900 (65 nodes)
+Transitions: 	3818556 (164713 nodes)
+Choices: 	2976444
+Reward Models:  none
+Variables: 	rows: 9 meta variables (27 DD variables), columns: 9 meta variables (27 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	2
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (28 nodes)
+-------------------------------------------------------------- 
+
+Model checking property &quot;goal&quot;: Pmax=? [F ((var7 = 1) &amp; (var6 = 2))] ...
+Result (for initial states): 1
+Time for model checking: 1.069s.	</pre>
+</div>
+</body>
+</html>

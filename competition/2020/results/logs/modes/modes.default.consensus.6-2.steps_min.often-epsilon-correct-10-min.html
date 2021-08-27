@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - consensus steps_min 6-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 consensus.6.jani --props steps_min -E K=2 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5445983409882s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.20462774152619237</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">consensus.6.jani:model: info: consensus.6 is an MDP model and will be simulated as an MDP.
+consensus.6.jani:variables[6]: info: Expanding variable &quot;pc1&quot; into 4 locations in automaton &quot;process1&quot;.
+consensus.6.jani:variables[8]: info: Expanding variable &quot;pc2&quot; into 4 locations in automaton &quot;process2&quot;.
+consensus.6.jani:variables[10]: info: Expanding variable &quot;pc3&quot; into 4 locations in automaton &quot;process3&quot;.
+consensus.6.jani:variables[12]: info: Expanding variable &quot;pc4&quot; into 4 locations in automaton &quot;process4&quot;.
+consensus.6.jani:variables[14]: info: Expanding variable &quot;pc5&quot; into 4 locations in automaton &quot;process5&quot;.
+consensus.6.jani:variables[16]: info: Expanding variable &quot;pc6&quot; into 4 locations in automaton &quot;process6&quot;.
+consensus.6.jani: info: Using default value of 0.95 for the confidence parameter.
+consensus.6.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 59 MB
+Analysis results for consensus.6.jani
+Experiment K=2
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property &quot;steps_min&quot;
+  Estimated min. value:       520.3991843393151
+  Min. confidence interval:   [509.99648495202564, 530.8018837266045]
+  Runs used (best scheduler): 6130
+  Total runs used:            1294130
+  Schedulers sampled:         1000
+  Best scheduler:             429328836
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Min. sample data
+    Mean:     520.3991843393151
+    Variance: 172685.7056935752
+    Skewness: 1.8634858638410479
+    Kurtosis: 8.174441629508395
+
+  + Error bounds
+    Scheduler sampling: The result is an upper bound for the true min. value.
+    Statement:          CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:                  0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - bitcoin-attack P_MWinMax 20-6</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#bitcoin-attack">bitcoin-attack</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MALICIOUS</span> = 20, <span class="tt">CD</span> = 6</td></tr>
+		<tr><td>Property:</td><td><span class="tt">P_MWinMax</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --jani bitcoin-attack.jani --janiproperty P_MWinMax --constants MALICIOUS=20,CD=6 --timebounded:precision 1e-3  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.06034135818481445s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.934297887278123e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Thu Apr 30 15:51:48 2020
+Command line arguments: --jani bitcoin-attack.jani --janiproperty P_MWinMax --constants &#x27;MALICIOUS=20,CD=6&#x27; &#x27;--timebounded:precision&#x27; 1e-3 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+Time for model input parsing: 0.001s.
+
+Time for model construction: 0.022s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	177
+Transitions: 	284
+Choices: 	227
+Markovian St.: 	63
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * ((m_len &gt;= 6) &amp; (m_diff &gt; 0)) -&gt; 6 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	177
+Transitions: 	284
+Choices: 	227
+Markovian St.: 	63
+Max. Rate.: 	1
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * ((m_len &gt;= 6) &amp; (m_diff &gt; 0)) -&gt; 6 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;P_MWinMax&quot;: Pmax=? [true U&lt;=2880 ((m_len &gt;= 6) &amp; (m_diff &gt; 0))] ...
+Result (for initial states): 0.5350757915
+Time for model checking: 0.008s.	</pre>
+</div>
+</body>
+</html>

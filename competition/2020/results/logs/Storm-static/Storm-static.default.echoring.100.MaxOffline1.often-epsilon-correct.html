@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - echoring MaxOffline1 100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#echoring">echoring</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">ITERATIONS</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MaxOffline1</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --jani echoring.jani --janiproperty MaxOffline1 --constants ITERATIONS=100 --timebounded:precision 1e-3  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">58.92658519744873s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.117563680395085e-10</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Wed Apr 29 20:29:02 2020
+Command line arguments: --jani echoring.jani --janiproperty MaxOffline1 --constants ITERATIONS=100 &#x27;--timebounded:precision&#x27; 1e-3 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+Time for model input parsing: 0.039s.
+
+Time for model construction: 53.670s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	4671956
+Transitions: 	8322265
+Choices: 	7520521
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -&gt; 32227 item(s)
+   * (((is_offline_1 &amp; !(is_offline_2)) &amp; !(is_offline_3)) &amp; (iter &lt;= 100)) -&gt; 2435 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;MaxOffline1&quot;: Pmax=? [F (((is_offline_1 &amp; !(is_offline_2)) &amp; !(is_offline_3)) &amp; (iter &lt;= 100))] ...
+Result (for initial states): 1.05008302e-06
+Time for model checking: 5.149s.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ModestFRETpiLRTDP - beb LineSeized 5-16-15</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ModestFRETpiLRTDP</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#beb">beb</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">H</span> = 5, <span class="tt">K</span> = 16, <span class="tt">N</span> = 15</td></tr>
+		<tr><td>Property:</td><td><span class="tt">LineSeized</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe beb.5-16.jani --epsilon 1e-3 -E N=15 --props LineSeized</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">757.4015617370605s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">-6</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">beb.5-16.jani:model: info: beb-5-16 is an MDP model.
+beb.5-16.jani: info: Need 24 bytes per state.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Stacktrace:
+
+  at &lt;unknown&gt; &lt;0xffffffff&gt;
+  at (wrapper managed-to-native) System.Array.FastCopy (System.Array,int,System.Array,int,int) &lt;0x00070&gt;
+  at System.Array.Copy (System.Array,int,System.Array,int,int) &lt;0x0008a&gt;
+  at System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, bool&gt;.Resize (int,bool) &lt;0x000bb&gt;
+  at System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, bool&gt;.Resize () &lt;0x00030&gt;
+  at System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, bool&gt;.Insert (CompiledAutomata.State1,bool,bool) &lt;0x0030e&gt;
+  at System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, bool&gt;.set_Item (CompiledAutomata.State1,bool) &lt;0x0003c&gt;
+  at Modest.ModelChecking.MDP.DeadEndCheck`1&lt;CompiledAutomata.State1&gt;.MarkNonDeadEnds (System.Collections.Generic.List`1&lt;CompiledAutomata.State1&gt;&amp;,CompiledAutomata.State1&amp;) &lt;0x0021f&gt;
+  at Modest.ModelChecking.MDP.DeadEndCheck`1&lt;CompiledAutomata.State1&gt;.CheckDE (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;&amp;,CompiledAutomata.State1) &lt;0x006eb&gt;
+  at Modest.ModelChecking.MDP.DeadEndCheck`1&lt;CompiledAutomata.State1&gt;.IsDeadEnd (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;&amp;,CompiledAutomata.State1) &lt;0x0007f&gt;
+  at Modest.ModelChecking.MDP.VIComponents`1&lt;CompiledAutomata.State1&gt;.InitializeValue (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;&amp;,CompiledAutomata.State1&amp;,System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, double&gt;&amp;) &lt;0x00c9b&gt;
+  at Modest.ModelChecking.MDP.VIComponents`1&lt;CompiledAutomata.State1&gt;.Qvalue (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;&amp;,CompiledAutomata.State1,Modest.Exploration.Synchronisation,System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, double&gt;&amp;) &lt;0x009a3&gt;
+  at Modest.ModelChecking.MDP.VIComponents`1&lt;CompiledAutomata.State1&gt;.GreedyAction (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;&amp;,CompiledAutomata.State1,System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, double&gt;&amp;,System.Collections.Generic.List`1&lt;System.Collections.Generic.HashSet`1&lt;CompiledAutomata.State1&gt;&gt;&amp;) &lt;0x00d73&gt;
+  at Modest.ModelChecking.MDP.LRTDP`1&lt;CompiledAutomata.State1&gt;.CheckSolved (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;&amp;,CompiledAutomata.State1,double,System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, double&gt;&amp;,System.Collections.Generic.HashSet`1&lt;CompiledAutomata.State1&gt;&amp;,System.Collections.Generic.List`1&lt;System.Collections.Generic.HashSet`1&lt;CompiledAutomata.State1&gt;&gt;&amp;) &lt;0x01827&gt;
+  at Modest.ModelChecking.MDP.LRTDP`1&lt;CompiledAutomata.State1&gt;.LrtdpTrial (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;&amp;,CompiledAutomata.State1,double,System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, double&gt;&amp;,System.Collections.Generic.HashSet`1&lt;CompiledAutomata.State1&gt;&amp;,System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, Modest.Exploration.Synchronisation&gt;&amp;,System.Collections.Generic.List`1&lt;System.Collections.Generic.HashSet`1&lt;CompiledAutomata.State1&gt;&gt;&amp;) &lt;0x04a0b&gt;
+  at Modest.ModelChecking.MDP.LRTDP`1&lt;CompiledAutomata.State1&gt;.LrtdpMain (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;&amp;,double,CompiledAutomata.State1,System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, double&gt;&amp;,System.Collections.Generic.HashSet`1&lt;CompiledAutomata.State1&gt;&amp;,System.Collections.Generic.Dictionary`2&lt;CompiledAutomata.State1, Modest.Exploration.Synchronisation&gt;&amp;,System.Collections.Generic.List`1&lt;System.Collections.Generic.HashSet`1&lt;CompiledAutomata.State1&gt;&gt;&amp;) &lt;0x0006b&gt;
+  at Modest.ModelChecking.MDP.FRET`1&lt;CompiledAutomata.State1&gt;.FretMain (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;,Modest.Modularity.OperationState,int,int,double,bool,bool,double) &lt;0x006eb&gt;
+  at Modest.ModelChecking.MAModelChecker`1&lt;CompiledAutomata.State1&gt;.CheckPropertyFRET (Modest.ModelChecking.ReachabilityPropertyInfo,int,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler) &lt;0x00203&gt;
+  at Modest.ModelChecking.MAModelChecker`1&lt;CompiledAutomata.State1&gt;.ModelCheckFRET (string,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler) &lt;0x00887&gt;
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheckGeneric&lt;CompiledAutomata.State1&gt; (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;,object,string,Modest.StateSpace.StateProjections,object,Modest.StateSpace.ComponentisedExpression[],object,Modest.Modularity.ILocation,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler) &lt;0x0039b&gt;
+  at (wrapper delegate-invoke) type_16777215.invoke_AnalysisDataSet_Network`1&lt;State1&gt;_object_string_StateProjections_object_ComponentisedExpression[]_object_ILocation_OperationState_ComponentErrorHandler (Modest.Exploration.Network`1&lt;CompiledAutomata.State1&gt;,object,string,Modest.StateSpace.StateProjections,object,Modest.StateSpace.ComponentisedExpression[],object,Modest.Modularity.ILocation,Modest.Modularity.OperationState,Modest.Modularity.ComponentErrorHandler) &lt;0x00110&gt;
+  at invoke Modest.Exploration.Network`1__CompiledAutomata.State1, CompiledAutomata10290305332792909696, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null__ . System.Object . System.String . Modest.StateSpace.StateProjections . System.Object . Modest.StateSpace.ComponentisedExpression__ . System.Object . Modest.Modularity.ILocation . Modest.Modularity.OperationState . Modest.Modularity.ComponentErrorHandler . Modest.Modularity.AnalysisDataSet.GeneratedClass.DoInvoke (object,object[],System.Reflection.MethodInfo) &lt;0x00374&gt;
+  at Modest.DirectInvoker.InvokeDirect (System.Reflection.MethodInfo,object,object[]) &lt;0x0068b&gt;
+  at Modest.Exploration.NetworkGenericMethod.Invoke (object) &lt;0x00087&gt;
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheck (Modest.Automaton.NSHAModel,Modest.ModelChecking.ModelCheckingAnalysisEngine/CompilationParameters,object,Modest.Modularity.OperationState,Modest.Modularity.IErrorHandler) &lt;0x0270f&gt;
+  at Modest.ModelChecking.ModelCheckingAnalysisEngine.Analyze (Modest.ModelChecking.ModelCheckingAnalysisEngine/AnalysisParams,Modest.Automaton.NSHAModel,System.Collections.Generic.IEnumerable`1&lt;Modest.Modularity.IExperiment&gt;,Modest.Modularity.OperationState,Modest.Modularity.IErrorHandler) &lt;0x02b6b&gt;
+  at Modest.Modularity.AnalysisEngine`3&lt;M_REF, EP_REF, AP_REF&gt;.Analyze (Modest.Modularity.IParameterObject,Modest.Modularity.IModel,System.Collections.Generic.IEnumerable`1&lt;Modest.Modularity.IExperiment&gt;,Modest.Modularity.OperationState,Modest.Modularity.IErrorHandler) &lt;0x003de&gt;
+  at Modest.Executables.FretLrtdp.ProgramFretLrtdp.Run (Modest.Executables.FretLrtdp.ProgramFretLrtdp/FretParams,System.Diagnostics.Stopwatch) &lt;0x0188d&gt;
+  at Modest.Executables.FretLrtdp.ProgramFretLrtdp.Main (string[]) &lt;0x001f7&gt;
+  at (wrapper runtime-invoke) &lt;Module&gt;.runtime_invoke_void_object (object,intptr,intptr,intptr) &lt;0x000d1&gt;
+
+Native stacktrace:
+
+	mono(+0xc8514) [0x558b65c6b514]
+	mono(+0x1217ce) [0x558b65cc47ce]
+	mono(+0x3d7e3) [0x558b65be07e3]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x12890) [0x7f69cc699890]
+	mono(+0x28522c) [0x558b65e2822c]
+	mono(+0x16971d) [0x558b65d0c71d]
+	[0x41265f11]
+
+Debug info from gdb:
+
+
+=================================================================
+Got a SIGSEGV while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================	</pre>
+</div>
+</body>
+</html>

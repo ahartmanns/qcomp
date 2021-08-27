@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - echoring MaxOffline1 100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#echoring">echoring</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">ITERATIONS</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MaxOffline1</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta echoring.jani -E ITERATIONS=100 --props MaxOffline1 -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">5.612792491912842s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.945315112277927e-09</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">echoring.jani:model: info: echoring is an MDP model.
+echoring.jani: info: Need 48 bytes per state.
+echoring.jani: info: Explored 836418 states for ITERATIONS=100.
+
+Peak memory usage: 322 MB
+Analysis results for echoring.jani
+Experiment ITERATIONS=100
+
++ State space exploration
+  State size:  48 bytes
+  States:      836418
+  Transitions: 1339820
+  Branches:    1489542
+  Rate:        227349 states/s
+  Time:        3.8 s
+
++ Property MaxOffline1
+  Probability: 1.0500830270707957E-06
+  Bounds:      [1.0500830197772468E-06, 1.0500830343643446E-06]
+  Time:        0.4 s
+
+  + Essential states
+    Iterations:       4
+    Essential states: 297856
+    Transitions:      635931
+    Branches:         755896
+    Time:             0.3 s
+
+  + Optimistic value iteration
+    Total iterations:  9
+    Verif. attempts:   1
+    Verif. iterations: 2
+    Final epsilon:     1E-06
+    Time:              0.2 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

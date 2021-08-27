@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - csma all_before_max 3-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 3, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">all_before_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta csma.3-4.jani --props all_before_max -O out.txt Minimal --unsafe --es -S Memory --epsilon 0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">5.9574456214904785s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.627997924459708e-17</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">csma.3-4.jani:model: info: csma.3-4 is an MDP model.
+csma.3-4.jani: info: Need 24 bytes per state.
+csma.3-4.jani: info: Explored 1459469 states.
+
+Peak memory usage: 432 MB
+Analysis results for csma.3-4.jani
+
++ State space exploration
+  State size:  24 bytes
+  States:      1459469
+  Transitions: 1469580
+  Branches:    2395050
+  Rate:        330271 states/s
+  Time:        4.6 s
+
++ Property all_before_max
+  Probability: 0.9324469288458123
+  Bounds:      [0.9324469288458123, 0.9324469288458123]
+  Time:        0.8 s
+
+  + Essential states
+    Iterations:       19
+    Essential states: 60755
+    Transitions:      69314
+    Branches:         819767
+    Time:             0.7 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  12
+    Time:        0.1 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

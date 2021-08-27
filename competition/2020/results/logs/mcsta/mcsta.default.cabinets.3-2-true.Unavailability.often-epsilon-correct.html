@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - cabinets Unavailability 3-2-true</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#cabinets">cabinets</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 3, <span class="tt">P</span> = 2, <span class="tt">R</span> = True</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unavailability</span> (steady-state-prob)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta cabinets.3-2-true.jani --props Unavailability -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --width 1e-3 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">63.266063928604126s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Correctness of result is not checked because no reference result is available.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">cabinets.3-2-true.jani:model: info: cabinets.3-2-true.jani is an MA model.
+cabinets.3-2-true.jani: info: Need 24 bytes per state.
+cabinets.3-2-true.jani: info: Explored 4427421 states.
+
+Peak memory usage: 1377 MB
+Analysis results for cabinets.3-2-true.jani
+
++ State space exploration
+  State size:  24 bytes
+  States:      4427421
+  Transitions: 5385842
+  Branches:    7983998
+  Rate:        74323 states/s
+  Time:        60.0 s
+
++ Property Unavailability
+  Value: 6.658486331437074E-08
+  Time:  2.4 s
+
+  + Essential states
+    Iterations:       14
+    Essential states: 354294
+    Transitions:      354294
+    Branches:         2952450
+    Time:             1.5 s
+
+  + LongRunAverage
+    Time:                   0.8354363
+    Max. end components:    1
+    Max. exit rate:         4.186499999999997
+    Min. exit rate:         4
+    Avg. exit rate:         4.1243333333294085
+    Max number of actions:  0
+    Min number of actions:  2147483647
+    Avg. number of actions: 0
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - consensus disagree 6-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">disagree</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta consensus.6.jani -E K=2 --props disagree -O out.txt Minimal --unsafe --es -S Memory --epsilon 0</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">220.65306162834167s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.2215798022463565e-14</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">consensus.6.jani:model: info: consensus.6 is an MDP model.
+consensus.6.jani:variables[6]: info: Expanding variable &quot;pc1&quot; into 4 locations in automaton &quot;process1&quot;.
+consensus.6.jani:variables[8]: info: Expanding variable &quot;pc2&quot; into 4 locations in automaton &quot;process2&quot;.
+consensus.6.jani:variables[10]: info: Expanding variable &quot;pc3&quot; into 4 locations in automaton &quot;process3&quot;.
+consensus.6.jani:variables[12]: info: Expanding variable &quot;pc4&quot; into 4 locations in automaton &quot;process4&quot;.
+consensus.6.jani:variables[14]: info: Expanding variable &quot;pc5&quot; into 4 locations in automaton &quot;process5&quot;.
+consensus.6.jani:variables[16]: info: Expanding variable &quot;pc6&quot; into 4 locations in automaton &quot;process6&quot;.
+consensus.6.jani: info: Need 24 bytes per state.
+consensus.6.jani: info: Explored 1258240 states for K=2.
+
+Peak memory usage: 775 MB
+Analysis results for consensus.6.jani
+Experiment K=2
+
++ State space exploration
+  State size:  24 bytes
+  States:      1258240
+  Transitions: 5008128
+  Branches:    6236736
+  Rate:        234265 states/s
+  Time:        5.7 s
+
++ Property disagree
+  Probability: 0.3636447495629016
+  Bounds:      [0.3636447495629016, 0.3636447495629016]
+  Time:        214.4 s
+
+  + Essential states
+    Iterations:       4
+    Essential states: 1197415
+    Transitions:      4840501
+    Branches:         6069109
+    Time:             0.8 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2116
+    Time:        213.5 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ModestFRETpiLRTDP - elevators goal b-11-9</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>ModestFRETpiLRTDP</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#elevators">elevators</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">variant</span> = b, <span class="tt">p</span> = 11, <span class="tt">c</span> = 9</td></tr>
+		<tr><td>Property:</td><td><span class="tt">goal</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mono ./modest-fret-pi-lrtdp-master/FretLrtdp.exe elevators.b-11-9.jani --epsilon 1e-3 --timeout 580</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">3.0403501987457275s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">elevators.b-11-9.jani:model: info: jani_from_ppddl is an MDP model.
+elevators.b-11-9.jani: info: Need 61 bytes per state.
+
+Peak memory usage: 69 MB
+Analysis results for elevators.b-11-9.jani
+
++ Property goal
+  Probability: 1
+  Time:        1.9 s	</pre>
+</div>
+</body>
+</html>

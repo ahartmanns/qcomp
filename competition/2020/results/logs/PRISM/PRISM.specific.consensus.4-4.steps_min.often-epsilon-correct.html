@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - consensus steps_min 4-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 consensus.4.prism consensus.props --property steps_min -const K=4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">8.984677076339722s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.000617011416096875</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 15:28:14 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 consensus.4.prism consensus.props --property steps_min -const K=4
+
+Parsing model file &quot;consensus.4.prism&quot;...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4 
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4 
+
+Parsing properties file &quot;consensus.props&quot;...
+
+5 properties:
+(1) &quot;c1&quot;: P&gt;=1 [ F &quot;finished&quot; ]
+(2) &quot;c2&quot;: Pmin=? [ F &quot;finished&quot;&amp;&quot;all_coins_equal_1&quot; ]
+(3) &quot;disagree&quot;: Pmax=? [ F &quot;finished&quot;&amp;!&quot;agree&quot; ]
+(4) &quot;steps_max&quot;: R{&quot;steps&quot;}max=? [ F &quot;finished&quot; ]
+(5) &quot;steps_min&quot;: R{&quot;steps&quot;}min=? [ F &quot;finished&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;steps_min&quot;: R{&quot;steps&quot;}min=? [ F &quot;finished&quot; ]
+Model constants: K=4
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: K=4
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.14 seconds (average 0.000713, setup 0.00)
+
+Time for model construction: 0.103 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+Choices:     115840
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Prob0A: 57 iterations in 0.15 seconds (average 0.002579, setup 0.00)
+
+Prob1E: 58 iterations in 0.08 seconds (average 0.001431, setup 0.00)
+
+Warning: PRISM hasn&#x27;t checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 64, inf = 0, maybe = 43072
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=43136, nc=115776, nnz=144288, k=4] [2.3 MB]
+Building sparse matrix (transition rewards)... [n=43136, nc=115776, nnz=0, k=4] [620.8 KB]
+Creating vector for state rewards... [337.0 KB]
+Creating vector for inf... [337.0 KB]
+Allocating iteration vectors... [2 x 337.0 KB]
+TOTAL: [4.2 MB]
+
+Starting iterations...
+Iteration 2923: max relative diff=0.000015, 5.00 sec so far
+
+Iterative method: 4613 iterations in 7.95 seconds (average 0.001712, setup 0.06)
+
+Value in the initial state: 767.5261352324376
+
+Time for model checking: 8.073 seconds.
+
+Result: 767.5261352324376 (value in the initial state)
+
+
+Overall running time: 8.805 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 2 warnings during computation.	</pre>
+</div>
+</body>
+</html>

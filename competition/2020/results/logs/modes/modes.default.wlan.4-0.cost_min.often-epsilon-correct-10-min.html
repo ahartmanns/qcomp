@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - wlan cost_min 4-0</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 4, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">cost_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 wlan.4.jani --props cost_min -E COL=0 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.547200679779s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0007868852459016393</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">wlan.4.jani:model: info: wlan.4 is an MDP model and will be simulated as an MDP.
+wlan.4.jani:variables[7]: info: Expanding variable &quot;s1&quot; into 12 locations in automaton &quot;station1&quot;.
+wlan.4.jani:variables[12]: info: Expanding variable &quot;s2&quot; into 12 locations in automaton &quot;station2&quot;.
+wlan.4.jani: info: Using default value of 0.95 for the confidence parameter.
+wlan.4.jani: warning: Using the Chow-Robbins method for relative-width sequential confidence intervals, which guarantees the requested confidence only asymptotically for decreasing width.
+
+Peak memory usage: 63 MB
+Analysis results for wlan.4.jani
+Experiment COL=0
+Status:          Finished
+Simulation time: 599.4 s
+
++ Property Property &quot;cost_min&quot;
+  Estimated min. value:       7631
+  Min. confidence interval:   [7550.432975448693, 7711.567024551307]
+  Runs used (best scheduler): 50
+  Total runs used:            20726950
+  Schedulers sampled:         20000
+  Best scheduler:             670004618
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Min. sample data
+    Mean:     7631
+    Variance: 64886.73469387752
+    Skewness: -0.021581839084568573
+    Kurtosis: 1.517649877643577
+
+  + Error bounds
+    Scheduler sampling: The result is an upper bound for the true min. value.
+    Statement:          CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:                  0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

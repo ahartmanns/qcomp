@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - resource-gathering expgold 1300-100-100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#resource-gathering">resource-gathering</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">B</span> = 1300, <span class="tt">GOLD_TO_COLLECT</span> = 100, <span class="tt">GEM_TO_COLLECT</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">expgold</span> (exp-reward-step-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 resource-gathering.pm resource-gathering.prctl --property expgold -const B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">37.278345823287964s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.756139514894884e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 23:33:58 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 resource-gathering.pm_fixed resource-gathering.prctl_fixed --property expgold -const &#x27;B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100&#x27;
+
+Parsing model file &quot;resource-gathering.pm_fixed&quot;...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter 
+Variables:   gold gem attacked x y required_gold required_gem 
+
+Parsing properties file &quot;resource-gathering.prctl_fixed&quot;...
+
+3 properties:
+(1) &quot;expgold&quot;: R{&quot;rew_gold&quot;}max=? [ C&lt;=B ]
+(2) &quot;expsteps&quot;: R{&quot;time_reward&quot;}min=? [ F &quot;success&quot; ]
+(3) &quot;prgoldgem&quot;: Pmax=? [ F&lt;=B &quot;success&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;expgold&quot;: R{&quot;rew_gold&quot;}max=? [ C&lt;=B ]
+Model constants: GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100,B=1300
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100,B=1300
+
+Computing reachable states...
+
+Reachability (BFS): 1215 iterations in 0.93 seconds (average 0.000761, setup 0.00)
+
+Time for model construction: 0.881 seconds.
+
+Type:        MDP
+States:      958894 (1 initial)
+Transitions: 3325526
+Choices:     3080702
+
+Transition matrix: 898 nodes (4 terminal), 3325526 minterms, vars: 23r/23c/4nd
+
+Computing rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=958894, nc=3080702, nnz=3325526, k=4] [53.5 MB]
+Building sparse matrix (transition rewards)... [n=958894, nc=3080702, nnz=61206, k=4] [16.1 MB]
+Creating vector for state rewards... [7.3 MB]
+Allocating iteration vectors... [2 x 7.3 MB]
+TOTAL: [91.5 MB]
+
+Starting iterations...
+Iteration 187 (of 1300): 5.02 sec so far
+Iteration 375 (of 1300): 10.04 sec so far
+Iteration 563 (of 1300): 15.07 sec so far
+Iteration 750 (of 1300): 20.08 sec so far
+Iteration 938 (of 1300): 25.10 sec so far
+Iteration 1125 (of 1300): 30.10 sec so far
+
+Iterative method: 1300 iterations in 35.77 seconds (average 0.026737, setup 1.01)
+
+Value in the initial state: 145.28750146751008
+
+Time for model checking: 35.621 seconds.
+
+Result: 145.28750146751008 (value in the initial state)
+
+
+Overall running time: 37.1 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - herman steps 15</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#herman">herman</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 15</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 herman.15.prism herman.props --property steps</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">16.05742835998535s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.963881698e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 12:14:37 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 herman.15.prism herman.props --property steps
+
+Parsing model file &quot;herman.15.prism&quot;...
+
+Type:        DTMC
+Modules:     process1 process2 process3 process4 process5 process6 process7 process8 process9 process10 process11 process12 process13 process14 process15 
+Variables:   x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 
+
+Parsing properties file &quot;herman.props&quot;...
+
+1 property:
+(1) &quot;steps&quot;: filter(max, R=? [ F &quot;stable&quot; ], &quot;init&quot;)
+
+---------------------------------------------------------------------
+
+Model checking: &quot;steps&quot;: filter(max, R=? [ F &quot;stable&quot; ], &quot;init&quot;)
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 1 iterations in 0.00 seconds (average 0.001000, setup 0.00)
+
+Time for model construction: 0.025 seconds.
+
+Type:        DTMC
+States:      32768 (32768 initial)
+Transitions: 14348908
+
+Transition matrix: 810 nodes (9 terminal), 14348908 minterms, vars: 15r/15c
+
+Prob0: 6 iterations in 0.02 seconds (average 0.003167, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 30, inf = 0, maybe = 32738
+Time for computing an upper bound for expected reward: 0.87 seconds.
+Upper bound for expectation (variant 2): 3523713.2050052434
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix... [n=32768, nnz=14348846, compact] [54.9 MB]
+Creating vector for diagonals... [dist=2, compact] [64.0 KB]
+Creating vector for RHS... [dist=2, compact] [64.0 KB]
+Allocating iteration vectors... [ 2 x 256.0 KB]
+TOTAL: [55.5 MB]
+
+Starting iterations...
+Iteration 113: max relative diff=0.894607, 5.03 sec so far
+Iteration 226: max relative diff=0.000399, 10.07 sec so far
+Max relative diff between upper and lower bound on convergence: 9.92788E-07
+Backwards Gauss-Seidel (interval iteration): 294 iterations in 14.33 seconds (average 0.044561, setup 1.23)
+Maximum finite value in solution vector at end of interval iteration: 33.33334987960566
+
+Maximum value over states satisfying filter: 33.33334987960566
+
+There are 10 states with (approximately) this value:
+5285:(0,0,1,0,1,0,0,1,0,1,0,0,1,0,1)
+9513:(0,1,0,0,1,0,1,0,0,1,0,1,0,0,1)
+10570:(0,1,0,1,0,0,1,0,1,0,0,1,0,1,0)
+11627:(0,1,0,1,1,0,1,0,1,1,0,1,0,1,1)
+13741:(0,1,1,0,1,0,1,1,0,1,0,1,1,0,1)
+19026:(1,0,0,1,0,1,0,0,1,0,1,0,0,1,0)
+21140:(1,0,1,0,0,1,0,1,0,0,1,0,1,0,0)
+22197:(1,0,1,0,1,1,0,1,0,1,1,0,1,0,1)
+23254:(1,0,1,1,0,1,0,1,1,0,1,0,1,1,0)
+27482:(1,1,0,1,0,1,1,0,1,0,1,1,0,1,0)
+
+Time for model checking: 15.225 seconds.
+
+Result: 33.33334987960566 (maximum value over states satisfying filter)
+
+
+Overall running time: 15.865 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

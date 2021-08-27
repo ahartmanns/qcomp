@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - resource-gathering prgoldgem 1300-100-100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#resource-gathering">resource-gathering</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">B</span> = 1300, <span class="tt">GOLD_TO_COLLECT</span> = 100, <span class="tt">GEM_TO_COLLECT</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">prgoldgem</span> (prob-reach-step-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 resource-gathering.jani --props prgoldgem -E B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5496809482574s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">resource-gathering.jani:model: info: resource-gathering is an MDP model and will be simulated as an MDP.
+resource-gathering.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 58 MB
+Analysis results for resource-gathering.jani
+Experiment B=1300, GOLD_TO_COLLECT=100, GEM_TO_COLLECT=100
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property &quot;prgoldgem&quot;
+  Estimated max. probability: 0
+  Runs used (best scheduler): 155100
+  Total runs used:            1155100
+  Schedulers sampled:         0
+  Best scheduler:             2006595713
+  Run type:                   MDP
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is a lower bound for the true max. probability.
+    Statement:          Aborted: no error bounds	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

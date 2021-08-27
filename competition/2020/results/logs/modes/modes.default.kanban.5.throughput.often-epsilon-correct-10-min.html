@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - kanban throughput 5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#kanban">kanban</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">t</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">throughput</span> (steady-state-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 kanban.jani --props throughput -E t=5 -O out.txt Minimal -N 2147483647</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5475602149963s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0001655125517317234</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">kanban.jani:model: info: kanban is a CTMC model and will be simulated as an MA.
+kanban.jani: info: Using default value of 0.95 for the confidence parameter.
+kanban.jani:properties[0]: warning: Cycle detection is not available for long-run average properties.
+
+Peak memory usage: 58 MB
+Analysis results for kanban.jani
+Experiment t=5
+Status:          Cancelled
+Simulation time: 599.5 s
+
++ Property Property &quot;throughput&quot;
+  Estimated value:     0.3071755923333293
+  Confidence interval: [0.30717496138491873, 0.3071762232817399]
+  Runs used:           714780
+  Status:              Cancelled
+
+  + Sample data
+    Mean:     0.3071755923333293
+    Variance: 7.407367836583771E-08
+    Skewness: -0.13424794580004532
+    Kurtosis: 1582.7299140805128
+
+  + Error bounds
+    Statement: CI: 100(1 - α)% of intervals contain true value (CLT assumption)
+    α:         0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

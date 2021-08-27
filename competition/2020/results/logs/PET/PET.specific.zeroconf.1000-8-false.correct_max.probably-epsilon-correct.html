@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PET - zeroconf correct_max 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PET</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./smc.sh zeroconf.prism zeroconf.props -prop correct_max -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const N=1000,K=8,reset=false</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">33.72512698173523s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '0' is tagged as incorrect. The reference result is '204392810629026880136859869044853643232139570253339605249616747925069429431708835626822535242827175026478539031800561588349023614450484995832774846002835469177135061861507348047754643745562828130746032126027305173906839741168733374545992511270087922234415828945357118271408276185301642866567599241759081502931536978823367096281239141564097570316773306531880179526524741020702721263081607229957686751399396603328477745344354571874994701456051076623820636613837877343737161701360161022233159734273797466349315083104593564570085383192724369771587424991411897558006954779774509831325843510065747273021810208924634712057909821543563828830967274089625880617757552389766636149339006214445189915879529013644692743425476255404209816162404818533882574366613894842886862174109802835205609832315302081/4256929857823915052700756989958152776568049052884134649211467604923339040905874178594338896517084907554508292780892772396818828905984885450089144966336425963078228853980215726284516717733191760705851629935674304208430327077705439913965388632007838290853680938474735425117264729027596732486675434999746467231391889910460425718699918469846183512749753468162660308300729997690438857378777759570745797470679752206930776922536684380894419859324595269962912450649319002657674224885905443775286828611652563404494142257464820895612245719546265664834263630934851469462823688466092261692037741383291525407627815966633088983332465733016838969109773442446582309378498609162304068140880817453327924601050231414996844488571062942944611285664988168054564961174982354809038325739616556701582662909609832315302081' (approx. 4.80141363507243e-08) which means a relative error of '1.0' which is larger than the goal precision '0.05'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">1.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Fri Mar 20 14:45:02 UTC 2020
+Hostname: 68eec9c801d9
+Memory limits: cudd=1g, java(heap)=8.9g
+Command line: prism zeroconf.prism zeroconf.props -prop correct_max -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams &#x27;S:1000000;Av:10;e:0.05;d:0.05;p:0.05;post:64&#x27; -const &#x27;N=1000,K=8,reset=false&#x27; -javamaxmem 10g
+
+Parsing the model file &quot;zeroconf.prism&quot;...
+
+Parsing properties file &quot;zeroconf.props&quot;...
+
+2 properties:
+(1) &quot;correct_max&quot;: Pmax=? [ F (l=4&amp;ip=1) ]
+(2) &quot;correct_min&quot;: Pmin=? [ F (l=4&amp;ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: &quot;correct_max&quot;: Pmax=? [ F (l=4&amp;ip=1) ]
+Model constants: reset=false,N=1000,K=8
+Starting heuristic: RTDP_ADJ
+IsMDP false Collapse false break false
+ColourParams: S:1000000 Av: 10 eps: 0.05 delta: 0.05 pmin: 0.05
+TransDelta: 7.8125E-11
+HeuristicSG: Version try0
+Grey
+======================================
+
+JSON: {&quot;Trials&quot;:100000,&quot;Precision&quot;:0.04772158208979027,&quot;PartialTransDelta&quot;:1.666666666666667E-4,&quot;Value&quot;:{&quot;Upper&quot;:0.04772158208979027,&quot;Lower&quot;:0},&quot;ActionsOfs0&quot;:{&quot;Action0&quot;:&quot;[0.0;0.04772158208979027]&quot;},&quot;GlobalTimerSecs&quot;:32.868,&quot;AvgConf&quot;:0.8585371058070091,&quot;StateInfos&quot;:{&quot;num00&quot;:235,&quot;num11&quot;:0,&quot;numStates&quot;:520,&quot;num01&quot;:283,&quot;avgDist&quot;:0.5455397142434047,&quot;numWorking&quot;:2,&quot;numUnset&quot;:0,&quot;numClose&quot;:235}}
+
+Model checking completed in 32.955 secs.
+
+Result (maximum probability): 0.0	</pre>
+</div>
+</body>
+</html>

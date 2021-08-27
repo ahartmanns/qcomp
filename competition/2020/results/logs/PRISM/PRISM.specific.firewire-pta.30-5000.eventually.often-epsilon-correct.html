@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - firewire-pta eventually 30-5000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#firewire-pta">firewire-pta</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">delay</span> = 30, <span class="tt">T</span> = 5000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">eventually</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -mtbdd -e 1e-6 -maxiters 1000000 firewire-pta.prism firewire-pta.props --property eventually -const delay=30,T=5000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.4274663925170898s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sun Mar 15 03:29:36 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -mtbdd -e 1e-6 -maxiters 1000000 firewire-pta.prism firewire-pta.props --property eventually -const &#x27;delay=30,T=5000&#x27;
+
+Parsing model file &quot;firewire-pta.prism&quot;...
+
+Type:        PTA
+Modules:     wire12 node1 wire21 node2 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 
+
+Parsing properties file &quot;firewire-pta.props&quot;...
+
+2 properties:
+(1) &quot;deadline&quot;: Pmin=? [ F&lt;=T &quot;done&quot; ]
+(2) &quot;eventually&quot;: Pmin=? [ F &quot;done&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;eventually&quot;: Pmin=? [ F &quot;done&quot; ]
+Model constants: delay=30
+
+Building PTA...
+
+PTA: 6 clocks, 65 locations, 127 transitions
+Target (s1=8&amp;s2=7|s1=7&amp;s2=8) satisfied by 4 locations.
+
+Building initial STPG...
+
+Building forwards reachability graph... 215 states
+Graph constructed in 0.05 secs.
+Graph: 215 symbolic states (1 initial, 14 target)
+
+Model checking STPG...
+STPG model checked in 0.032 secs.
+215/215 states converged.
+Diff across 1 initial state: 0.0
+Lower/upper bounds for 1 initial state: 1.0 - 1.0
+
+Initial STPG: 215 states (1 initial), 290 transitions, 268 choices, 201 choice sets, p1max/avg = 1/0.93, p2max/avg = 2/1.33
+Final STPG: 215 states (1 initial), 290 transitions, 268 choices, 201 choice sets, p1max/avg = 1/0.93, p2max/avg = 2/1.33
+
+Terminated after 0 refinements in 0.20 secs.
+
+Abstraction-refinement time breakdown:
+* 0.15 secs (76.1%) = Building initial STPG
+* 0.00 secs (0.0%) = Rebuilding STPG (0 x avg 0.00 secs)
+* 0.03 secs (15.9%) = model checking STPG (1 x avg 0.03 secs) (lb=65.6%) (prob0=50.0%) (pre=87.5%) (iters=2)
+* 0.00 secs (0.0%) = refinement (0 x avg 0.00 secs)
+
+Final diff across 1 initial state: 0.0
+Final lower/upper bounds for 1 initial state: 1.0 - 1.0
+
+Model checking completed in 0.359 secs.
+
+Result (minimum probability): 1.0
+
+
+Overall running time: 0.869 seconds.	</pre>
+</div>
+</body>
+</html>

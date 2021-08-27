@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - dpm PminQueue1Full 6-6-5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#dpm">dpm</a> <span class="tt">v.2</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">C</span> = 6, <span class="tt">TIME_BOUND</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">PminQueue1Full</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta dpm.jani -E N=6,C=6,TIME_BOUND=5 --props PminQueue1Full -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">28.12315845489502s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">dpm.jani:model: info: dpm is an MA model.
+dpm.jani: info: Need 16 bytes per state.
+dpm.jani: info: Explored 9191028 states for N=6, C=6, TIME_BOUND=5.0.
+
+Peak memory usage: 2593 MB
+Analysis results for dpm.jani
+Experiment N=6, C=6, TIME_BOUND=5.0
+
++ State space exploration
+  State size:  16 bytes
+  States:      9191028
+  Transitions: 10604874
+  Branches:    17865498
+  Rate:        487821 states/s
+  Time:        19.7 s
+
++ Property PminQueue1Full
+  Probability: 0.026966107848695964
+  Bounds:      [0.026966107848695964, 0.026966107848695964]
+  Time:        7.8 s
+
+  + Precomputations
+    Min. prob. 0 states:          1080450
+    Time for min. prob. 0 states: 0.7 s
+    Min. prob. 1 states:          403368
+    Time for min. prob. 1 states: 0.5 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 1512632
+    Transitions:      2331373
+    Branches:         9591997
+    Time:             1.5 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  51
+    Time:        5.0 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

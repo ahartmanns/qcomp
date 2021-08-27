@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - hecs Unreliability false-1-1</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#hecs">hecs</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">R</span> = False, <span class="tt">N</span> = 1, <span class="tt">k</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unreliability</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta hecs.false-1-1.jani --props Unreliability -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --width 1e-3 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.6118519306182861s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.409126998041749e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">hecs.false-1-1.jani:model: info: hecs-false-1-1.jani is an MA model.
+hecs.false-1-1.jani: info: Need 24 bytes per state.
+hecs.false-1-1.jani: info: Explored 7084 states.
+hecs.false-1-1.jani: info: Identified 6043 maximal end components.
+
+Peak memory usage: 68 MB
+Analysis results for hecs.false-1-1.jani
+
++ State space exploration
+  State size:  24 bytes
+  States:      7084
+  Transitions: 7085
+  Branches:    9504
+  Rate:        47544 states/s
+  Time:        0.2 s
+
++ Property Unreliability
+  Probability: 0.00010999670389645116
+  Bounds:      [0.00010999395404759997, 0.00010999945374530235]
+  Time:        0.0 s
+
+  + Precomputations
+    Max. prob. 0 states:          0
+    Time for max. prob. 0 states: 0.0 s
+
+  + End components
+    Iterations:  2
+    MECs:        6043
+    Transitions: 6044
+    Branches:    8463
+    Time:        0.0 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 338
+    Transitions:      338
+    Branches:         2757
+    Time:             0.0 s
+
+  + Unif+
+    Time:             0.0 s
+    Max. exit rate:   0.0006120000000000001
+    Iterations:       2
+    Final unif. rate: 0.0006120000000000001
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

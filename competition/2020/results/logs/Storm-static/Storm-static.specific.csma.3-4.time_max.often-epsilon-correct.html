@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - csma time_max 3-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 3, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time_max</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism csma.3-4.prism --prop csma.props time_max --timebounded:precision 1e-3  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4 --engine hybrid</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">7.942528247833252s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.2513474498144536e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Wed Apr 29 18:42:23 2020
+Command line arguments: --prism csma.3-4.prism --prop csma.props time_max &#x27;--timebounded:precision&#x27; 1e-3 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4 --engine hybrid
+Current working directory: /
+
+Time for model input parsing: 0.009s.
+
+Time for model construction: 1.108s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	1460287 (15094 nodes)
+Transitions: 	2396727 (75138 nodes)
+Choices: 	1471059
+Reward Models:  time
+Variables: 	rows: 15 meta variables (51 DD variables), columns: 15 meta variables (51 DD variables), nondeterminism: 13 meta variables (13 DD variables)
+Labels: 	5
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (52 nodes)
+   * all_delivered
+   * collision_max_backoff
+   * one_delivered
+-------------------------------------------------------------- 
+
+Model checking property &quot;time_max&quot;: R[exp]{&quot;time&quot;}max=? [F &quot;all_delivered&quot;] ...
+Result (for initial states): 116.8182532
+Time for model checking: 6.527s.	</pre>
+</div>
+</body>
+</html>

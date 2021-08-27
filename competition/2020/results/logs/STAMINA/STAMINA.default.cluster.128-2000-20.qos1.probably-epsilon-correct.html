@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>STAMINA - cluster qos1 128-2000-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>STAMINA</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#cluster">cluster</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 128, <span class="tt">T</span> = 2000, <span class="tt">t</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">qos1</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">perl ./convert.pl cluster.props label qos1 T 2000
+./stamina/stamina/bin/stamina cluster.prism newcluster.props -kappa 1e-9 -const N=128,T=2000,t=20</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">223.36865901947021s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0, 0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '5498880147078249/4611686018427387904' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])' (approx. OrderedDict([('lower', 0.001072402434), ('upper', 0.001072402634)])) which means a relative error of '0.1118767546219302' which is larger than the goal precision '0.05'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">0.1118767546219302</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5
+Date: Wed Apr 01 07:41:19 UTC 2020
+Hostname: cb4ac6bf600d
+Memory limits: cudd=1g, java(heap)=2g
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+Generator:   stamina.InfCTMCModelGenerator
+Type:        CTMC
+
+========================================================================
+Approximation&lt;1&gt; : kappa = 1.0E-9
+========================================================================
+
+---------------------------------------------------------------------
+
+Building model...
+
+Computing reachable states... 9 10017 states
+ 10017 states
+Reachable states exploration and model construction done in 1.468 secs.
+Sorting reachable states list...
+
+Time for model construction: 1.593 seconds.
+
+Type:        CTMC
+States:      10017 (1 initial)
+Transitions: 46759
+
+---------------------------------------------------------------------
+
+Verifying Lower Bound for qos1_min .....
+
+---------------------------------------------------------------------
+
+Model checking: &quot;qos1_min&quot;: P=? [ F&lt;=2000 !&quot;minimum&quot; ]
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 41.318415 x 2000.0 = 82636.83
+Fox-Glynn (1.25E-7): left = 80621, right = 85077
+Backwards transient probability computation took 85078 iters and 110.525 seconds.
+
+Value in the initial state: 0.0011923795603399295
+
+Time for model checking: 110.545 seconds.
+
+Result: 0.0011923795603399295 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Verifying Upper Bound for qos1_max .....
+
+---------------------------------------------------------------------
+
+Model checking: &quot;qos1_max&quot;: P=? [ F&lt;=2000 !&quot;minimum&quot; ]
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 41.318415 x 2000.0 = 82636.83
+Fox-Glynn (1.25E-7): left = 80621, right = 85077
+Backwards transient probability computation took 85078 iters and 110.171 seconds.
+
+Value in the initial state: 0.0011923795603399295
+
+Time for model checking: 110.174 seconds.
+
+Result: 0.0011923795603399295 (value in the initial state)
+
+========================================================================
+
+Property: &quot;qos1&quot;: P=? [ F&lt;=2000 !&quot;minimum&quot; ]
+
+ProbMin: 0.0011923795603399295 (value in the initial state)
+
+ProbMax: 0.0011923795603399295 (value in the initial state)
+
+========================================================================	</pre>
+</div>
+</body>
+</html>

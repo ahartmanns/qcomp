@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - stream pr_underrun_tb 1000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#stream">stream</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">pr_underrun_tb</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 stream.jani --props pr_underrun_tb -E N=1000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.5466454029083s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.006158119539102727</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">stream.jani:model: info: stream is an MA model and will be simulated as an MA.
+stream.jani:variables[5]: info: Expanding variable &quot;s&quot; into 4 locations in automaton &quot;streamingclient&quot;.
+stream.jani: info: Using default value of 0.95 for the confidence parameter.
+
+Peak memory usage: 59 MB
+Analysis results for stream.jani
+Experiment N=1000
+Status:          Finished
+Simulation time: 599.5 s
+
++ Property Property &quot;pr_underrun_tb&quot;
+  Estimated min. probability: 0.018822402899963238
+  Runs used (best scheduler): 1169670
+  Total runs used:            121233360
+  Schedulers sampled:         37000
+  Best scheduler:             1877586013
+  Run type:                   MA
+  Status:                     Finished
+
+  + Error bounds
+    Scheduler sampling: The result is an upper bound for the true min. probability.
+    Statement:          Adaptive: P(error &gt; εp̂) &lt; δ
+    ε:                  0.02
+    δ:                  0.050000000000000044	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

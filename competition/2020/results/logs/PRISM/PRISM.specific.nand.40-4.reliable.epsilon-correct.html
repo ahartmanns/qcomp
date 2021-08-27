@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - nand reliable 40-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#nand">nand</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 40, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">reliable</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 nand.prism nand.props --property reliable -const N=40,K=4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">16.05951762199402s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.50138676865112e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 12:15:57 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 nand.prism nand.props --property reliable -const &#x27;N=40,K=4&#x27;
+
+Parsing model file &quot;nand.prism&quot;...
+
+Type:        DTMC
+Modules:     multiplex 
+Variables:   u c s z zx zy x y 
+
+Parsing properties file &quot;nand.props&quot;...
+
+1 property:
+(1) &quot;reliable&quot;: P=? [ F s=4&amp;z/N&lt;0.1 ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;reliable&quot;: P=? [ F s=4&amp;z/N&lt;0.1 ]
+Model constants: N=40,K=4
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: N=40,K=4
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 4.70 seconds (average 0.003258, setup 0.00)
+
+Time for model construction: 4.855 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Prob0: 1442 iterations in 4.01 seconds (average 0.002782, setup 0.00)
+
+Prob1: 1297 iterations in 3.66 seconds (average 0.002825, setup 0.00)
+
+yes = 141, no = 375263, maybe = 3624118
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=3999522, nnz=5699366, compact] [25.6 MB]
+Creating vector for diagonals... [dist=1, compact] [7.6 MB]
+Creating vector for RHS... [dist=2, compact] [7.6 MB]
+Allocating iteration vectors... [ 2 x 30.5 MB]
+TOTAL: [101.8 MB]
+
+Starting iterations...
+Max relative diff between upper and lower bound on convergence: 0
+Backwards Gauss-Seidel (interval iteration): 1 iterations in 2.52 seconds (average 0.076000, setup 2.45)
+
+Value in the initial state: 0.6186822208151961
+
+Time for model checking: 10.45 seconds.
+
+Result: 0.6186822208151961 (value in the initial state)
+
+
+Overall running time: 15.877 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

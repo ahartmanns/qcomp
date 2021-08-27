@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - stream exp_buffertime 1000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#stream">stream</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_buffertime</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism stream.ma --prop stream.csl exp_buffertime --constants N=1000 --exact  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">33.76974010467529s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Fri May  1 01:06:18 2020
+Command line arguments: --prism stream.ma --prop stream.csl exp_buffertime --constants N=1000 --exact --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4
+Current working directory: /
+
+Time for model input parsing: 0.006s.
+
+Time for model construction: 18.791s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1502501
+Transitions: 	3001001
+Choices: 	2002001
+Markovian St.: 	1001001
+Max. Rate.: 	8
+Reward Models:  buffering
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * done -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1502501
+Transitions: 	3001001
+Choices: 	2002001
+Markovian St.: 	1001001
+Max. Rate.: 	8
+Reward Models:  buffering
+State Labels: 	3 labels
+   * deadlock -&gt; 0 item(s)
+   * done -&gt; 1 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;exp_buffertime&quot;: R[exp]{&quot;buffering&quot;}min=? [F &quot;done&quot;] ...
+Result (for initial states): 4000296146463847098310864263634423914836767359338666081680434839202633176175944835603384754262910558987235871718746140024248987886727587484410249120643089020630884563738907513961936570219758813042355246319131762815388815989618440516494797219018946754993629191203712330205282342959267185327074343139033487340401390100903833079370568060213520613067377809755496713965444996024304117384475854000536382644863605857104782047725418570659881778080987601337412396108392474119605527990269896939414251339208175004932615431994404792059880640511653620458797873644746281859191934262699791320138884720183523420213125/448488552841505673528450469210032025008717852378396562686579194072564945856394653850257611842385261686892954937104477645877780844087130988838254436002598900543476520098876093752690543547812675279019246054935493143678185404868704546669207132970571695198847642805321870347439959396966061131000641492071612036500659800720541037509294862530914292581776470704800791862135257150476594266547973795942452669207838277325767258308678827571890789686926497076331599351180046564667803842147156402969070145377463213888204787436429748157612446950906462925450296030791504591545034378214229573507677553758534574800896 (approx. 8.919505573)
+Time for model checking: 13.778s.	</pre>
+</div>
+</body>
+</html>

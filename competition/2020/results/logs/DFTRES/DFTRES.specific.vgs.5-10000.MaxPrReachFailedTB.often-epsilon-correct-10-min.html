@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DFTRES - vgs MaxPrReachFailedTB 5-10000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>DFTRES</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#vgs">vgs</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">NR_VARIANT</span> = 5, <span class="tt">TIME_BOUND</span> = 10000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MaxPrReachFailedTB</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xmx6G -XX:+UseParallelGC -jar DFTRES/DFTRES.jar -s 0 --prop MaxPrReachFailedTB  --def NR_VARIANT 5 --def TIME_BOUND 10000 --relErr 1e-99 --unsafe-scheduling --fixed-batches vgs.5.jani</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">600.0420210361481s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">130</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Exception in thread &quot;Thread-0&quot; java.lang.NullPointerException
+	at Main.terminate(Main.java:469)
+	at Main$1.run(Main.java:666)	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - kanban throughput 5</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#kanban">kanban</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">t</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">throughput</span> (steady-state-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 kanban.prism kanban.props --property throughput -const t=5</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">30.435271739959717s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.149864821633621e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 14:07:36 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 kanban.prism kanban.props --property throughput -const t=5
+
+Parsing model file &quot;kanban.prism&quot;...
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4 
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4 
+
+Parsing properties file &quot;kanban.props&quot;...
+
+1 property:
+(1) &quot;throughput&quot;: R{&quot;throughput&quot;}=? [ S ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;throughput&quot;: R{&quot;throughput&quot;}=? [ S ]
+Model constants: t=5
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+Model constants: t=5
+
+Computing reachable states...
+
+Reachability (BFS): 71 iterations in 0.26 seconds (average 0.003676, setup 0.00)
+
+Time for model construction: 0.24 seconds.
+
+Type:        CTMC
+States:      2546432 (1 initial)
+Transitions: 24460016
+
+Rate matrix: 6308 nodes (14 terminal), 24460016 minterms, vars: 48r/48c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:2546432
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=2546432, nnz=24460016, compact] [95.7 MB]
+Creating vector for diagonals... [dist=187, compact] [4.9 MB]
+Allocating iteration vector... [19.4 MB]
+TOTAL: [120.0 MB]
+
+Starting iterations...
+Iteration 61: max relative diff=0.005125, 5.05 sec so far
+Iteration 122: max relative diff=0.000052, 10.10 sec so far
+
+Backwards Gauss-Seidel: 175 iterations in 28.74 seconds (average 0.082817, setup 14.24)
+
+BSCC 1 Reward: 0.30712474345277757
+
+All states are in BSCCs (so no reachability probabilities computed)
+
+Value in the initial state: 0.30712474345277757
+
+Time for model checking: 29.479 seconds.
+
+Result: 0.30712474345277757 (value in the initial state)
+
+
+Overall running time: 30.274 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

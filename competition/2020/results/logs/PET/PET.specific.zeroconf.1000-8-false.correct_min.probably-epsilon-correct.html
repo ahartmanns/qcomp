@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PET - zeroconf correct_min 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PET</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_min</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./smc.sh zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams S:1000000,Av:10,e:0.05,d:0.05,p:0.05,post:64 -const N=1000,K=8,reset=false</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">18.756184101104736s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>The tool result '0' is tagged as incorrect. The reference result is '322687697779/64024000322687697779' (approx. 5.040105212929839e-09) which means a relative error of '1.0' which is larger than the goal precision '0.05'.</td></tr>
+		<tr><td>Relative Error:</td><td style="tt; color: red">1.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Fri Mar 20 15:26:49 UTC 2020
+Hostname: 68eec9c801d9
+Memory limits: cudd=1g, java(heap)=8.9g
+Command line: prism zeroconf.prism zeroconf.props -prop correct_min -heuristic RTDP_ADJ -RTDP_ADJ_OPTS 1 -colourParams &#x27;S:1000000;Av:10;e:0.05;d:0.05;p:0.05;post:64&#x27; -const &#x27;N=1000,K=8,reset=false&#x27; -javamaxmem 10g
+
+Parsing the model file &quot;zeroconf.prism&quot;...
+
+Parsing properties file &quot;zeroconf.props&quot;...
+
+2 properties:
+(1) &quot;correct_max&quot;: Pmax=? [ F (l=4&amp;ip=1) ]
+(2) &quot;correct_min&quot;: Pmin=? [ F (l=4&amp;ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: &quot;correct_min&quot;: Pmin=? [ F (l=4&amp;ip=1) ]
+Model constants: reset=false,N=1000,K=8
+Starting heuristic: RTDP_ADJ
+IsMDP false Collapse false break false
+ColourParams: S:1000000 Av: 10 eps: 0.05 delta: 0.05 pmin: 0.05
+TransDelta: 7.8125E-11
+HeuristicSG: Version try0
+Grey
+======================================
+
+JSON: {&quot;Trials&quot;:100000,&quot;Precision&quot;:0.047811582089790416,&quot;PartialTransDelta&quot;:2.631578947368421E-4,&quot;Value&quot;:{&quot;Upper&quot;:0.047811582089790416,&quot;Lower&quot;:0},&quot;ActionsOfs0&quot;:{&quot;Action0&quot;:&quot;[0.0;0.047811582089790416]&quot;},&quot;GlobalTimerSecs&quot;:17.903,&quot;AvgConf&quot;:0.6168426707379404,&quot;StateInfos&quot;:{&quot;num00&quot;:224,&quot;num11&quot;:0,&quot;numStates&quot;:356,&quot;num01&quot;:127,&quot;avgDist&quot;:0.36399122321002064,&quot;numWorking&quot;:5,&quot;numUnset&quot;:0,&quot;numClose&quot;:224}}
+
+Model checking completed in 17.991 secs.
+
+Result (minimum probability): 0.0	</pre>
+</div>
+</body>
+</html>

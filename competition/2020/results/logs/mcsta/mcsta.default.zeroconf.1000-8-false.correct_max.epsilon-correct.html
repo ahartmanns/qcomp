@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - zeroconf correct_max 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta zeroconf.jani -E N=1000,K=8,reset=false --props correct_max -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --alg OptimisticValueIteration --epsilon 1e-6 --width 1e-6 --relative-width</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">13.372882604598999s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">6.386035220065041e-16</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">zeroconf.jani:model: info: zeroconf is an MDP model.
+zeroconf.jani:variables[21]: info: Expanding variable &quot;l&quot; into 5 locations in automaton &quot;host0&quot;.
+zeroconf.jani: info: Need 24 bytes per state.
+zeroconf.jani: info: Explored 1868787 states for N=1000, K=8, reset=False.
+
+Peak memory usage: 710 MB
+Analysis results for zeroconf.jani
+Experiment N=1000, K=8, reset=False
+
++ State space exploration
+  State size:  24 bytes
+  States:      1868787
+  Transitions: 3430379
+  Branches:    4224736
+  Rate:        394675 states/s
+  Time:        5.0 s
+
++ Property correct_max
+  Probability: 4.8014136350724334E-08
+  Bounds:      [4.801413635072433E-08, 4.801413635072434E-08]
+  Time:        7.8 s
+
+  + Essential states
+    Iterations:       37
+    Essential states: 1312763
+    Transitions:      2800966
+    Branches:         3572836
+    Time:             4.8 s
+
+  + Optimistic value iteration
+    Total iterations:  32
+    Verif. attempts:   1
+    Verif. iterations: 12
+    Final epsilon:     1E-06
+    Time:              3.0 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mcsta - crowds positive 6-20</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>mcsta</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 6, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">mcsta/modest mcsta crowds.jani -E TotalRuns=6,CrowdSize=20 --props positive -O out.txt Minimal --unsafe --es -S Memory --no-partial-results --p0 --p1 --epsilon 0 --absolute-epsilon</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">44.12491154670715s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.2810910126389685e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">crowds.jani:model: info: crowds is a DTMC model.
+crowds.jani: info: Need 40 bytes per state.
+crowds.jani: warning: The probabilities for a transition do not sum up to 1. Results will likely be affected by floating-point errors.
+crowds.jani: info: Explored 10291282 states for TotalRuns=6, CrowdSize=20.
+
+Peak memory usage: 3439 MB
+Analysis results for crowds.jani
+Experiment TotalRuns=6, CrowdSize=20
+
++ State space exploration
+  State size:  40 bytes
+  States:      10291282
+  Transitions: 10291282
+  Branches:    37068802
+  Rate:        398501 states/s
+  Time:        27.1 s
+
++ Property positive
+  Probability: 0.12047637088459798
+  Bounds:      [0.12047637088459798, 0.12047637088459798]
+  Time:        16.3 s
+
+  + Precomputations
+    Min. prob. 0 states:          8587502
+    Time for min. prob. 0 states: 2.5 s
+    Min. prob. 1 states:          21252
+    Time for min. prob. 1 states: 0.4 s
+
+  + Essential states
+    Iterations:       2
+    Essential states: 1275122
+    Transitions:      1275122
+    Branches:         10200962
+    Time:             1.3 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  140
+    Time:        12.2 s
+
+Exported results to file &quot;/out.txt&quot;.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.42-gb5e9d523c.	</pre>
+</div>
+</body>
+</html>

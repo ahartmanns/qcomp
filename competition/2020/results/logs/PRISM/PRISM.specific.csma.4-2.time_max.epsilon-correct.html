@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - csma time_max 4-2</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time_max</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 csma.4-2.prism csma.props --property time_max</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">58.6254403591156s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.5515613265457076e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 17:04:25 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 csma.4-2.prism csma.props --property time_max
+
+Parsing model file &quot;csma.4-2.prism&quot;...
+
+Type:        MDP
+Modules:     bus station1 station2 station3 station4 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 s4 x4 bc4 cd4 
+
+Parsing properties file &quot;csma.props&quot;...
+
+5 properties:
+(1) &quot;all_before_max&quot;: Pmax=? [ !&quot;collision_max_backoff&quot; U &quot;all_delivered&quot; ]
+(2) &quot;all_before_min&quot;: Pmin=? [ !&quot;collision_max_backoff&quot; U &quot;all_delivered&quot; ]
+(3) &quot;some_before&quot;: Pmin=? [ F min_backoff_after_success&lt;K ]
+(4) &quot;time_max&quot;: R{&quot;time&quot;}max=? [ F &quot;all_delivered&quot; ]
+(5) &quot;time_min&quot;: R{&quot;time&quot;}min=? [ F &quot;all_delivered&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;time_max&quot;: R{&quot;time&quot;}max=? [ F &quot;all_delivered&quot; ]
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 193 iterations in 2.12 seconds (average 0.011000, setup 0.00)
+
+Time for model construction: 2.256 seconds.
+
+Type:        MDP
+States:      761962 (1 initial)
+Transitions: 1327068
+Choices:     825504
+
+Transition matrix: 52233 nodes (4 terminal), 1327068 minterms, vars: 54r/54c/17nd
+
+Prob0E: 204 iterations in 3.32 seconds (average 0.016279, setup 0.00)
+
+Prob1A: 1 iterations in 0.01 seconds (average 0.011000, setup 0.00)
+
+goal = 9, inf = 0, maybe = 761953
+Time for computing an upper bound for expected reward: 30.811 seconds.
+Upper bound for max expectation (variant 2): 465891.3109526639
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=761962, nc=825495, nnz=1327059, k=4] [21.2 MB]
+Building sparse matrix (transition rewards)... [n=761962, nc=825495, nnz=456769, k=4] [11.3 MB]
+Creating vector for state rewards... [5.8 MB]
+Creating vector for inf... [5.8 MB]
+Creating vector for lower bounds... [5.8 MB]
+Creating vector for upper bounds... [5.8 MB]
+Allocating iteration vectors... [4 x 5.8 MB]
+TOTAL: [79.0 MB]
+
+Starting iterations (interval iteration)...
+Iteration 142: max relative diff=0.999856, 5.02 sec so far
+Iteration 286: max relative diff=0.995220, 10.04 sec so far
+Iteration 430: max relative diff=0.011282, 15.05 sec so far
+Max relative diff between upper and lower bound on convergence: 9.32765E-07
+Iterative method: 565 iterations in 21.53 seconds (average 0.034968, setup 1.77)
+Maximum finite value in solution vector at end of interval iteration: 148.30524919803696
+
+Value in the initial state: 142.21223382622642
+
+Time for model checking: 55.545 seconds.
+
+Result: 142.21223382622642 (value in the initial state)
+
+
+Overall running time: 58.438 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm-static - resource-gathering expgold 1300-100-100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>Storm-static</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#resource-gathering">resource-gathering</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">B</span> = 1300, <span class="tt">GOLD_TO_COLLECT</span> = 100, <span class="tt">GEM_TO_COLLECT</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">expgold</span> (exp-reward-step-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">~/storm/build/bin/storm --prism resource-gathering.pm --prop resource-gathering.prctl expgold --constants B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 --exact floats --general:precision 1e-20  --ddlib sylvan --sylvan:maxmem 6114 --sylvan:threads 4 --engine dd-to-sparse --bisimulation</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.4837191104888916s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.775930467116904e-15</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.5.1
+
+Date: Thu Apr 30 07:06:16 2020
+Command line arguments: --prism resource-gathering.pm --prop resource-gathering.prctl expgold --constants &#x27;B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100&#x27; --exact floats &#x27;--general:precision&#x27; 1e-20 --ddlib sylvan &#x27;--sylvan:maxmem&#x27; 6114 &#x27;--sylvan:threads&#x27; 4 --engine dd-to-sparse --bisimulation
+Current working directory: /
+
+ WARN (GeneralSettings.cpp:110): Setting the precision option with module prefix does not effect all solvers. Consider setting --precision instead of --general:precision.
+Time for model input parsing: 0.005s.
+
+ WARN (DdPrismModelBuilder.cpp:1171): The reward model does not assign any non-zero rewards.
+Time for model construction: 0.916s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	958894 (36 nodes)
+Transitions: 	3325526 (619 nodes)
+Choices: 	3080702
+Reward Models:  rew_gold
+Variables: 	rows: 7 meta variables (23 DD variables), columns: 7 meta variables (23 DD variables), nondeterminism: 4 meta variables (4 DD variables)
+Labels: 	3
+   * deadlock -&gt; 0 state(s) (1 nodes)
+   * init -&gt; 1 state(s) (24 nodes)
+   * success
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.510s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	48
+Transitions: 	166
+Choices: 	154
+Reward Models:  rew_gold
+State Labels: 	2 labels
+   * deadlock -&gt; 0 item(s)
+   * init -&gt; 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property &quot;expgold&quot;: R[exp]{&quot;rew_gold&quot;}max=? [C&lt;=1300] ...
+Result (for initial states): 145.287501467510082875378
+Time for model checking: 0.002s.	</pre>
+</div>
+</body>
+</html>

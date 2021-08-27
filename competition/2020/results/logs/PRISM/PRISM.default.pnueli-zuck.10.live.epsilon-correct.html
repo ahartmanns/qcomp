@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - pnueli-zuck live 10</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#pnueli-zuck">pnueli-zuck</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 10</td></tr>
+		<tr><td>Property:</td><td><span class="tt">live</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 pnueli-zuck.10.prism pnueli-zuck.props --property live</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">14.927441120147705s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 23:25:30 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -ii -heuristic speed -e 1e-6 -ddextraactionvars 100 -maxiters 1000000 pnueli-zuck.10.prism pnueli-zuck.props --property live
+
+Parsing model file &quot;pnueli-zuck.10.prism&quot;...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9 
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 
+
+Parsing properties file &quot;pnueli-zuck.props&quot;...
+
+1 property:
+(1) &quot;live&quot;: Pmax=? [ F (p1=10) ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;live&quot;: Pmax=? [ F (p1=10) ]
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 1.56 seconds (average 0.021329, setup 0.00)
+
+Time for model construction: 1.559 seconds.
+
+Type:        MDP
+States:      69994757110 (1 initial)
+Transitions: 891923978050
+Choices:     827929876290
+
+Transition matrix: 22186 nodes (3 terminal), 891923978050 minterms, vars: 40r/40c/10nd
+
+Warning: Switching to MTBDD engine, as number of states is too large for Sparse engine.
+
+Prob0A: 90 iterations in 5.76 seconds (average 0.063967, setup 0.00)
+
+Prob1E: 91 iterations in 6.66 seconds (average 0.073176, setup 0.00)
+
+yes = 69994757110, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 12.484 seconds.
+
+Result: 1.0 (value in the initial state)
+
+
+Overall running time: 14.706 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 2 warnings during computation.	</pre>
+</div>
+</body>
+</html>

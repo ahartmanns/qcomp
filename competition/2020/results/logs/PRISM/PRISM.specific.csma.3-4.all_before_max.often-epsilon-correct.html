@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PRISM - csma all_before_max 3-4</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PRISM</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#csma">csma</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 3, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">all_before_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (specific)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./fix-syntax ./prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 csma.3-4.prism csma.props --property all_before_max</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">42.4298939704895s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.98341080534183e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">PRISM
+=====
+
+Version: 4.5.dev
+Date: Sat Mar 14 16:48:19 UTC 2020
+Hostname: e72bdd194fc5
+Memory limits: cudd=4g, java(heap)=11g
+Command line: prism -javamaxmem 11g -cuddmaxmem 4g -heuristic speed -e 1e-6 -maxiters 1000000 csma.3-4.prism csma.props --property all_before_max
+
+Parsing model file &quot;csma.3-4.prism&quot;...
+
+Type:        MDP
+Modules:     bus station1 station2 station3 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 
+
+Parsing properties file &quot;csma.props&quot;...
+
+5 properties:
+(1) &quot;all_before_max&quot;: Pmax=? [ !&quot;collision_max_backoff&quot; U &quot;all_delivered&quot; ]
+(2) &quot;all_before_min&quot;: Pmin=? [ !&quot;collision_max_backoff&quot; U &quot;all_delivered&quot; ]
+(3) &quot;some_before&quot;: Pmin=? [ F min_backoff_after_success&lt;K ]
+(4) &quot;time_max&quot;: R{&quot;time&quot;}max=? [ F &quot;all_delivered&quot; ]
+(5) &quot;time_min&quot;: R{&quot;time&quot;}min=? [ F &quot;all_delivered&quot; ]
+
+---------------------------------------------------------------------
+
+Model checking: &quot;all_before_max&quot;: Pmax=? [ !&quot;collision_max_backoff&quot; U &quot;all_delivered&quot; ]
+
+Warning: Switching to sparse engine and (backwards) Gauss Seidel (default for heuristic=speed).
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 135 iterations in 2.29 seconds (average 0.016963, setup 0.00)
+
+Time for model construction: 2.4 seconds.
+
+Type:        MDP
+States:      1460287 (1 initial)
+Transitions: 2396727
+Choices:     1471059
+
+Transition matrix: 75002 nodes (6 terminal), 2396727 minterms, vars: 51r/51c/13nd
+
+Prob0A: 133 iterations in 3.89 seconds (average 0.029278, setup 0.00)
+
+Prob1E: 533 iterations in 32.23 seconds (average 0.060469, setup 0.00)
+
+yes = 710317, no = 31622, maybe = 718348
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=1460287, nc=726132, nnz=1461423, k=3] [18.8 MB]
+Creating vector for yes... [11.1 MB]
+Allocating iteration vectors... [2 x 11.1 MB]
+TOTAL: [52.2 MB]
+
+Starting iterations...
+
+Iterative method: 97 iterations in 2.84 seconds (average 0.018031, setup 1.09)
+
+Value in the initial state: 0.9324464641692023
+
+Time for model checking: 39.157 seconds.
+
+Result: 0.9324464641692023 (value in the initial state)
+
+
+Overall running time: 42.186 seconds.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.	</pre>
+</div>
+</body>
+</html>

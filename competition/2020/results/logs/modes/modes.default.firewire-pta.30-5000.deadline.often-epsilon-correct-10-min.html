@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>modes - firewire-pta deadline 30-5000</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>modes</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#firewire-pta">firewire-pta</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">delay</span> = 30, <span class="tt">T</span> = 5000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">deadline</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">modes/modest modes --unsafe --max-run-length 0 firewire-pta.jani --props deadline -E delay=30,T=5000 -O out.txt Minimal --width 2e-2 --relative-width --lss Interruptible 1000000 -L 1000 --digital-clocks</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.2388052940368652s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">firewire-pta.jani:model: info: firewire-pta is a PTA model and will be simulated as an SHA.
+firewire-pta.jani:variables[3]: info: Expanding variable &quot;w12&quot; into 10 locations in automaton &quot;wire12&quot;.
+firewire-pta.jani:variables[6]: info: Expanding variable &quot;s1&quot; into 9 locations in automaton &quot;node1&quot;.
+firewire-pta.jani:variables[8]: info: Expanding variable &quot;w21&quot; into 10 locations in automaton &quot;wire21&quot;.
+firewire-pta.jani:variables[11]: info: Expanding variable &quot;s2&quot; into 9 locations in automaton &quot;node2&quot;.
+firewire-pta.jani: info: Using default value of 0.95 for the confidence parameter.
+firewire-pta.jani:constants[7]: warning: Cannot determine whether the rewards used in a reward bound are non-negative, simulation runs may not terminate.
+firewire-pta.jani:model: error: Encountered temporal nondeterminism for snd_idle12.	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">The Modest Toolset (www.modestchecker.net), version v3.1.41-g4406ba5c5.	</pre>
+</div>
+</body>
+</html>

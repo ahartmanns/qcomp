@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PET - pacman crash 100</title>
+	<link rel="stylesheet" type="text/css" href="../../../../../style.css">
+</head>
+<body>
+<h1>PET</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="../../../../../benchmarks/index.html#pacman">pacman</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAXSTEPS</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">crash</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">./pet.sh reachability --precision 0.05 --relative-error --only-result -m pacman.nm -p pacman.props --property crash --const MAXSTEPS=100</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1459.225091934204s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Java heap space
+	at de.tum.in.pet.sampler.UnboundedSampler$$Lambda$18/0x00000008400da440.get$Lambda(Unknown Source)
+	at java.base/java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(DirectMethodHandle$Holder)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00000008400d9840.linkToTargetMethod(LambdaForm$MH)
+	at de.tum.in.pet.sampler.UnboundedSampler.sampleNextState(UnboundedSampler.java:244)
+	at de.tum.in.pet.sampler.UnboundedSampler.sample(UnboundedSampler.java:158)
+	at de.tum.in.pet.sampler.UnboundedSampler.run(UnboundedSampler.java:112)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.solve(ReachChecker.java:165)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.solve(ReachChecker.java:222)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.solveMdp(ReachChecker.java:250)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.solve(ReachChecker.java:144)
+	at de.tum.in.pet.implementation.reachability.ReachChecker.main(ReachChecker.java:356)
+	at de.tum.in.pet.Main.main(Main.java:51)	</pre>
+</div>
+</body>
+</html>
