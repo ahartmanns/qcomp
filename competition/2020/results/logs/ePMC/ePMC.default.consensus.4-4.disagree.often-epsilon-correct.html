@@ -17,15 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files consensus.4.prism --model-input-type prism --property-input-files consensus.props --property-input-names disagree --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const K=4</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files consensus.4.prism --model-input-type prism --property-input-files consensus.props --property-input-names disagree --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-6 --const K=4</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">7.065051078796387s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">11.484796285629272s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Note(s):</td><td>The tool result '2941176161555561/20000000000000000' is tagged as incorrect. The reference result is '45666330762076479/292595849630842880' (approx. 0.15607306398806395) which means a relative error of '0.05775664089592864' which is larger than the goal precision '0.001'.</td></tr>
-		<tr><td>Relative Error:</td><td style="tt; color: red">0.05775664089592864</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.52340564152121e-05</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -40,15 +39,19 @@ start-building-initial-states-explorer
 done-building-initial-states-explorer
 done-building-explorer
 build-model-start
-build-model-states-explored 17732 17731
+build-model-states-explored 16499 16498
 build-model-done 43136 1
 iterating
-iterating-progress-unbounded 792 0.019421358156781976 1
-iterating-progress-unbounded 1676 0.0029403000895289453 2
-iterating-progress-unbounded 2559 6.652928080398998E-4 3
-iterating-done 2731 3
-model-checking-done 5
-command-check-result-is 0.14705880807777805 disagree	</pre>
+iterating-progress-unbounded 798 0.01914609466511378 1
+iterating-progress-unbounded 1687 0.002888524517598791 2
+iterating-progress-unbounded 2574 6.490218880098335E-4 3
+iterating-progress-unbounded 3462 1.4847147543751624E-4 4
+iterating-progress-unbounded 4349 3.320446305838085E-5 5
+iterating-progress-unbounded 5237 7.123241592866622E-6 6
+iterating-progress-unbounded 6124 1.5011148394216882E-6 7
+iterating-done 6741 7
+model-checking-done 10
+command-check-result-is 0.15606444343964274 disagree	</pre>
 </div>
 </body>
 </html>

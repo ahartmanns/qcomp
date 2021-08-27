@@ -17,15 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files mapk_cascade.prism --model-input-type prism --property-input-files mapk_cascade.props --property-input-names activated_time --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const N=4,T=30</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files mapk_cascade.prism --model-input-type prism --property-input-files mapk_cascade.props --property-input-names activated_time --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-6 --const N=4,T=30</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">10.36910629272461s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">12.494310855865479s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Note(s):</td><td>The tool result '960643498559707/25000000000000' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 40.67650299593235), ('upper', 40.67650300406765)])' (approx. OrderedDict([('lower', 40.67650299593235), ('upper', 40.67650300406765)])) which means a relative error of '0.055333248626833746' which is larger than the goal precision '0.001'.</td></tr>
-		<tr><td>Relative Error:</td><td style="tt; color: red">0.055333248626833746</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.881944046153631e-05</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -40,18 +39,20 @@ start-building-initial-states-explorer
 done-building-initial-states-explorer
 done-building-explorer
 build-model-start
-build-model-states-explored 8279 8278
-build-model-states-explored 26791 18513
-build-model-states-explored 45019 18228
-build-model-states-explored 62842 17823
-build-model-states-explored 80494 17652
-build-model-states-explored 98665 18171
+build-model-states-explored 12252 12252
+build-model-states-explored 29850 17598
+build-model-states-explored 46870 17020
+build-model-states-explored 63545 16675
+build-model-states-explored 80040 16495
+build-model-states-explored 97100 17060
 build-model-done 99535 6
 iterating
-iterating-progress-unbounded 358 5.759336118059714E-4 1
-iterating-done 376 1
-model-checking-done 9
-command-check-result-is 38.42573994238828 activated_time	</pre>
+iterating-progress-unbounded 360 5.661758348543256E-4 1
+iterating-progress-unbounded 752 2.3301385378158834E-5 2
+iterating-progress-unbounded 1143 1.02967948319107E-6 3
+iterating-done 1235 3
+model-checking-done 11
+command-check-result-is 40.6741104267862 activated_time	</pre>
 </div>
 </body>
 </html>

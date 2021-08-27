@@ -17,12 +17,12 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files philosophers.20.jani --model-input-type jani --property-input-names MaxPrReachDeadlockTB --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const TIME_BOUND=1</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files philosophers.20.jani --model-input-type jani --property-input-names MaxPrReachDeadlockTB --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-6 --const TIME_BOUND=1</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">1.83912992477417s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">1.8116564750671387s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
 		<tr><td>Note(s):</td><td>The tool result '0' is tagged as incorrect. The reference result is 'OrderedDict([('lower', 6.320794925e-06), ('upper', 6.320994925e-06)])' (approx. OrderedDict([('lower', 6.320794925e-06), ('upper', 6.320994925e-06)])) which means a relative error of '1.0' which is larger than the goal precision '0.001'.</td></tr>
 		<tr><td>Relative Error:</td><td style="tt; color: red">1.0</td></tr>

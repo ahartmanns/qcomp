@@ -17,12 +17,12 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files bluetooth.prism --model-input-type prism --property-input-files bluetooth.props --property-input-names time --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const mrec=1</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files bluetooth.prism --model-input-type prism --property-input-files bluetooth.props --property-input-names time --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-6 --const mrec=1</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">578.6926488876343s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">570.848536491394s</td></tr>
 		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
 	</table>
 </div>
@@ -49,17 +49,12 @@ start-building-initial-states-explorer	</pre>
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
-	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
-	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
-	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
-	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
-	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
-	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
@@ -70,6 +65,11 @@ start-building-initial-states-explorer	</pre>
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
+	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:152)
 	at epmc.dd.EnumerateSAT.recurse(EnumerateSAT.java:146)	</pre>
 </div>
 </body>

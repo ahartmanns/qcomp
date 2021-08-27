@@ -17,15 +17,14 @@
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Invocation (default)</div></div>
-	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files consensus.4.prism --model-input-type prism --property-input-files consensus.props --property-input-names steps_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-3 --const K=4</pre>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; margin-bottom: 0ex;  margin-top: 0ex;">java -Xms10240m -Xmx10240m -jar ./root/epmc-standard.jar check --model-input-files consensus.4.prism --model-input-type prism --property-input-files consensus.props --property-input-names steps_min --translate-messages false --value-floating-point-output-native true --graphsolver-iterative-stop-criterion relative --graphsolver-iterative-tolerance 1e-6 --const K=4</pre>
 </div>
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
 	<table style="margin-bottom: 0.75ex;">
-		<tr><td>Walltime:</td><td style="tt">6.567133188247681s</td></tr>
+		<tr><td>Walltime:</td><td style="tt">10.496257781982422s</td></tr>
 		<tr><td>Return code:</td><td style="tt">0</td></tr>
-		<tr><td>Note(s):</td><td>The tool result '154538050586231/250000000000' is tagged as incorrect. The reference result is '768' (approx. 768.0) which means a relative error of '0.1951143198633802' which is larger than the goal precision '0.001'.</td></tr>
-		<tr><td>Relative Error:</td><td style="tt; color: red">0.1951143198633802</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0002465025772942708</td></tr>
 	</table>
 </div>
 <div class="box">
@@ -40,13 +39,17 @@ start-building-initial-states-explorer
 done-building-initial-states-explorer
 done-building-explorer
 build-model-start
-build-model-states-explored 8275 8275
+build-model-states-explored 18448 18447
 build-model-done 43136 1
 iterating
-iterating-progress-unbounded 707 7.551254177458448E-4 1
-iterating-done 874 1
-model-checking-done 5
-command-check-result-is 618.152202344924 steps_min	</pre>
+iterating-progress-unbounded 729 7.143500101057112E-4 1
+iterating-progress-unbounded 1525 1.2138258077135184E-4 2
+iterating-progress-unbounded 2326 2.475283477627456E-5 3
+iterating-progress-unbounded 3127 5.217494870483328E-6 4
+iterating-progress-unbounded 3928 1.109787893882705E-6 5
+iterating-done 4343 5
+model-checking-done 9
+command-check-result-is 767.810686020638 steps_min	</pre>
 </div>
 </body>
 </html>
