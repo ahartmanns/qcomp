@@ -13,19 +13,42 @@
 	<a href="../../index.html">⮌</a> &nbsp;|&nbsp; <a href="#timeline">Timeline</a> &nbsp;|&nbsp; <a href="#participation">Participation</a> &nbsp;|&nbsp; <a href="#evaluation">Evaluation</a> &nbsp;|&nbsp; <a href="#ltl">LTL</a> &nbsp;|&nbsp; <a href="#organisers">Organisers</a>
 </div>
 <p>
-	The <b>2020 Comparison of Tools for the Analysis of Quantitative Formal Models</b> (<a href="../../index.html">QComp</a> 2020) will be part of <a href="https://isola-conference.org/isola2020/">ISoLA 2020</a>.
+	The <b>2020 Comparison of Tools for the Analysis of Quantitative Formal Models</b> (<a href="../../index.html">QComp</a> 2020) was part of <a href="https://isola-conference.org/isola2020/">ISoLA 2020</a>.
 	It is the second <b>friendly competition</b> among verification and analysis tools for quantitative formal models.
-	Based on a <a href="benchmarks.html">curated subset of benchmarks</a> from the <a href="../../benchmarks/index.html">Quantitative Verification Benchmark Set</a>, QComp will compare the performance, versatility, and usability of the participating tools.
+	Based on a <a href="benchmarks.html">curated subset of benchmarks</a> from the <a href="../../benchmarks/index.html">Quantitative Verification Benchmark Set</a>, QComp compares the performance, versatility, and usability of the participating tools.
 </p>
 <p>
-	QComp 2020 is a flexible and friendly event.
+	QComp 2020 was a flexible and friendly event.
 	There is no global scoring or ranking of tools.
-	Instead, we collect data and publish comparison tables, diagrams, and text about the performance, versatility, and usability of the participating tools.
+	Instead, we collected data and publish comparison tables, diagrams, and text about the performance, versatility, and usability of the participating tools.
 	We analyse and highlight every tool's strengths and tradeoffs.
-	The entire performance evaluation and report-writing process will be performed in close collaboration with the participants to quickly include feedback and resolve any setup errors or misunderstandings early.
-	We expect all participants to co-author the competition report.
+	The entire performance evaluation and report-writing process was performed in close collaboration with the participants to quickly include feedback and resolve any setup errors or misunderstandings early.
+	All participants co-authored the competition report.
 </p>
 
+<h2 id="results">Results</h2>
+<p>
+	The results of QComp 2020 are <b><a href="https://doi.org/10.1007/978-3-030-83723-5_15">published</a></b> in
+</p>
+<p style="padding-left: 2ex; font-style: italic;">
+	Carlos E. Budde, Arnd Hartmanns, Michaela Klauck, Jan Křetínský, David Parker, Tim Quatmann, Andrea Turrini, and Zhen Zhang:
+	On Correctness, Precision, and Performance in Quantitative Verification.
+	Proceedings of the 9th International Symposium on Leveraging Applications of Formal Methods (ISoLA 2020).
+	Lecture Notes in Computer Science, vol. 12479, Springer, 2021
+</p>
+<p>
+	The complete data of the performance evaluation is available via the interactive results tables for the individual tracks:
+</p>
+<ul>
+	<li><a href="results/table_correct.html" target="_blank">correct results track</a></li>
+	<li><a href="results/table_floating-point-correct.html" target="_blank">floating-point correct results track</a></li>
+	<li><a href="results/table_epsilon-correct.html" target="_blank">ε-correct results track</a></li>
+	<li><a href="results/table_probably-epsilon-correct.html" target="_blank">probably ε-correct results track</a></li>
+	<li><a href="results/table_often-epsilon-correct.html" target="_blank">often ε-correct results track</a> (<a href="results/table_often-epsilon-correct-10-min.html" target="_blank">10-minute variant</a>)</li>
+</ul>
+<p>
+	The tools and scripts used in the performance evaluation as well as the generated data will available in a replication package.
+</p>
 
 <h2 id="timeline">Timeline</h2>
 <p>
@@ -34,7 +57,7 @@
 <ul>
 	<li>
 		<span style="display: inline-block; width: 12.5ex; font-weight: bold;">February:</span>
-		<b>Registration</b>
+		Registration
 		(announce intention to participate, via <script type="text/javascript">WriteMailLink('n.etnewtu@snnamtrah.a:otliaml', 'resinagro eht ot liam-es');</script>)
 	</li>
 	<li>
@@ -71,10 +94,12 @@
 
 <h2 id="participation">Participation</h2>
 <p>
-	Every tool that solves a significant subset of the <a href="benchmarks.html">competition benchmarks</a> is welcome, even if it may not support all model types, the JANI format, or all included kinds of properties.
-	Every participating tool must be associated to exactly one participant (with exceptions), who we expect to co-author the competition report.
-	A participant may participate with multiple tools, or multiple variants (e.g. analysis engines) of the same tool.
-	The currently registered participants are:
+	Every tool that solves a significant subset of the <a href="benchmarks.html">competition benchmarks</a> was welcome, even if it may not support all model types, the JANI format, or all included kinds of properties.
+	Every participating tool is associated to exactly one participant (with exceptions), who co-authored the competition report.
+	A participant was allowed to participate with multiple tools, or multiple variants (e.g. analysis engines) of the same tool.
+</p>
+<p>
+	The following tools participated in QComp 2020:
 </p>
 <table class="compact">
 	<thead>
@@ -176,23 +201,23 @@
 
 <h2 id="evaluation">Evaluation</h2>
 <p>
-	The evaluation of performance, versatility, and usability will be performed by the organisers.
+	The evaluation of performance, versatility, and usability was performed by the organisers.
 </p>
 
 <h3>Hardware</h3>
 <p>
-	All tools will be evaluated on a standard desktop machine running an up-to-date 64-bit version of Ubuntu Linux 18.04.
-	We plan to use the same machine with an Intel Core i7-920 CPU and 12 GB of RAM that was previously used for <a href="../2019/index.html">QComp 2019</a>.
-	We will use a timeout of 30 minutes per model and tool.
-	The organisers will make the benchmarking scripts available to participants for testing.
-	Participants provide a tool package, installation instructions, and scripts that generate command lines to run the <a href="benchmarks.html">selected benchmarks</a> and extract the tool's results.
-	We will not directly evaluate memory usage, but note that the amount of RAM available in the central server is not high.
-	Thus memory usage will be evaluated indirectly by considering for which (large) models a tool fails due to an out-of-memory situation.
+	All tools were evaluated on a standard desktop machine running an up-to-date 64-bit version of Ubuntu Linux 18.04.
+	We used the same machine with an Intel Core i7-920 CPU and 12 GB of RAM that was previously used for <a href="../2019/index.html">QComp 2019</a>.
+	We used a timeout of 30 minutes per model and tool.
+	The organisers had made the benchmarking scripts available to participants for testing.
+	Participants provided a tool package, installation instructions, and scripts that generate command lines to run the <a href="benchmarks.html">selected benchmarks</a> and extract the tool's results.
+	We did not directly evaluate memory usage, but note that the amount of RAM available in the central server is not high.
+	Thus memory usage was evaluated indirectly by considering for which (large) models a tool fails due to an out-of-memory situation.
 </p>
 
 <h3>Performance Evaluation Tracks</h3>
 <p>
-	Due to the different types of correctness guarantees on results provided by different analysis methods, we will compare tools in three different tracks:
+	Due to the different types of correctness guarantees on results provided by different analysis methods, we compare tools in three different tracks:
 </p>
 <ul>
 	<li>
@@ -205,7 +230,7 @@
 		<b>floating-point correct results</b>:
 		tools/algorithms that unconditionally guarantee a difference of zero between the tool's result and the correct value modulo imprecisions of floating-point arithmetic.
 		These tools could e.g. use techniques based on state elimination with floating-point arithmetic.
-		We check whether the results provided by tools are within a relative error of ± 1e-14 compared to the reference results.
+		We checked whether the results provided by tools are within a relative error of ± 1e-14 compared to the reference results.
 		Tools that participate in the <i>correct results</i> track should participate in this track, too.
 	</li>
 	<li>
@@ -227,7 +252,7 @@
 		tools/algorithms that do not guarantee any a priori fixed bound on the difference between the tool's result and the correct value, but often deliver results that meet such a bound.
 		These tools typically use unsound iterative algorithms like standard value iteration, or compute over- or underapproximations.
 		Tools that participate in the <i>probably ε-correct results</i> track should participate in this track, too.
-		We will perform two evaluations in this track:
+		We performed two evaluations in this track:
 		<ul>
 			<li>one in which we report runtime and the number of incorrect results, for a relative error of ± 1e-3, and</li>
 			<li>one where we only report the error that the tool achieved within a 10-minute timeout.</li>
@@ -237,19 +262,14 @@
 
 <h3>Tool Parameters</h3>
 <p>
-	All tools will be evaluated in two settings:
+	All tools were evaluated in two settings:
 </p>
 <ul>
 	<li>
-		once with <b>default parameters</b> that must be the same for all benchmark instances (but that can differ between tracks), and
+		once with <b>default parameters</b> that must be the same for all benchmark instances (but that can differ per track, model type, and property type), and
 	</li>
 	<li>
-		once with <b>tweaked parameters</b> that may additionally take the following criteria, which are given to the script that generates the command lines, into account:
-		<ul>
-			<li>the type of the model (DTMC, CTMC, ...),</li>
-			<li>the type of the property (unbounded probabilistic reachability, unbounded expected reward, ...), and</li>
-			<li>an indication of the expected size of the state space (e.g. less than 100000 states, less than 1 million states, ...).</li>
-		</ul>
+		once with <b>specific parameters</b> that may be different for each benchmark instance.
 	</li>
 </ul>
 
@@ -262,16 +282,8 @@
 	The organisers have used the most trustworthy analysis approach available (e.g. an exact-arithmetic solver for small and a model checker using a sound iterative numerical method for large models) to produce <i>reference results</i> for all selected models.
 	Participants may use any other tool to try to refute the correctness of any of those reference results.
 	If this happens, all participants will discuss and agree on a new reference result, or decide to exclude the affected benchmark.
-	During the performance evaluation phase, every result that does not agree with the reference result up to the desired precision will be considered as incorrect.
-	The number of incorrect results produced by a tool will be listed in the competition report.
-</p>
-
-<h3>Versatility and Usability</h3>
-<p>
-	As part of the competition report, we will also evaluate the versatility and usability of all participating tools.
-	Versatility is determined by the types and sizes of models that the tool is able to successfully analyse in the performance evaluation.
-	Usability is the quality of the tool's documentation (online, or provided as help text or messages within the tool), the availability of an easy-to-use graphical interface, how involved the installation process is, what platforms the tool runs on, whether it provides sensible default parameter settings, and so on.
-	The usability evaluation will follow clearly defined criteria that will be agreed upon among the participants before the performance evaluation starts.
+	During the performance evaluation phase, every result that does not agree with the reference result up to the desired precision is considered as incorrect.
+	The number of incorrect results produced by a tool is listed in the competition report.
 </p>
 
 
@@ -281,6 +293,9 @@
 	QComp 2020 will include such an evaluation if it includes tools from at least three participants, and those participants agree on a set of LTL benchmark instances by the tool package submission deadline.
 	These benchmarks have to be available in JANI format, and eventually be added to the <a href="../../benchmarks/index.html">Quantitative Verification Benchmark Set</a>.
 	The organisers will help coordinate such an effort and perform the LTL performance evaluation.
+</p>
+<p style="font-style: italic;">
+	QComp 2020 ultimately did not include an LTL evaluation.
 </p>
 
 
