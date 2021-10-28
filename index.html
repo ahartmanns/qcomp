@@ -8,76 +8,60 @@
 </head>
 <body>
 
-<h1>Quantitative Modelling and Verification</h1>
+<h1>qcomp.org</h1>
 <div class="belowh1">
-	<a href="#qvbs">Benchmark Set</a> &nbsp;|&nbsp; <a href="#qcomp">Competition</a>
+	<a href="#qvbs">Benchmark Set</a> &nbsp;|&nbsp;
+	<a href="#qcomp">Competition</a> &nbsp;|&nbsp;
+	<a href="#rrrr">Workshop</a>
 </div>
 <p>
-	<b>qcomp.org</b> is the home of the <b><a href="benchmarks/index.html">QVBS</a></b>: the Quantitative Verification Benchmark Set, and of <b><a href="#qcomp">QComp</a></b>: the Comparison of Tools for the Analysis of Quantitative Formal Models.
-	The source code for this website is mostly <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>-licensed and available on <a href="https://github.com/ahartmanns/qcomp">GitHub</a>.
+	<b>qcomp.org</b> is the home of
+	the Quantitative Verification Benchmark Set (<b><a href="benchmarks/">QVBS</a></b>),
+	the Comparison of Tools for the Analysis of Quantitative Formal Models (<b><a href="#qcomp">QComp</a></b>),
+	and the Workshop on Reproducibility and Replication of Research Results (<b><a href="#rrrr">RRRR</a></b>).
 </p>
 
 <h2 id="qvbs">Quantitative Verification Benchmark Set</h2>
 <p>
-	The <a href="benchmarks/index.html"><b>Quantitative Verification Benchmark Set</b></a> is a collection of probabilistic models – Markov models, fault trees, stochastic Petri nets and others – to serve as a benchmark set for the benefit of algorithm and tool developers as well as the foundation of <a href="#qcomp">QComp</a>.
-	The benchmark set's models are
-</p>
-<ul class="text continue">
-	<li>
-		<b>formal</b>:
-		they have an unambiguous, mathematically defined semantics in terms of discrete- or continuous-time Markov chains (DTMC or CTMC), Markov decision processes (MDP), Markov automata (MA) or probabilistic timed automata (PTA);
-	</li>
-	<li>
-		<b>portable</b>:
-		they are provided both in their original modelling language – e.g. the <a href="https://www.prismmodelchecker.org/manual/ThePRISMLanguage/Introduction">PRISM language</a> or <a href="https://www.modestchecker.net/">Modest</a> – as well as the <a href="https://jani-spec.org/">JANI</a> exchange format for model exchange between tools (and we keep a list of <a href="benchmarks/conversions.html">JANI converters</a>);
-	</li>
-	<li>
-		<b>scalable</b>:
-		most models are parameterised, allowing their underlying state spaces to be scaled from a few hundred to billions of states;
-	</li>
-	<li>
-		<b>diverse</b>:
-		the repository includes models from different areas – such as probabilistic model checking, dependability evaluation, and probabilistic planning – that were built for very different analysis approaches and tools; and
-	</li>
-	<li>
-		<b>open</b>:
-		all models and data are open-access and may be used subject to the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
-	</li>
-</ul>
-<p class="continue">
-	Every model is accompanied by a set of <b>properties</b>: queries for quantities of interest to be computed by analysis tools.
-	The benchmark set collects models with queries for unbounded and bounded reachability probabilities, for unbounded and bounded variants of various forms of expected accumulated rewards, and for steady-state values.
-	Alongside its various models, the repository also provides tool <b>results</b>:
-	property values and performance data obtained by applying different tools to the models across different hardware configurations.
-	Throughout, all data necessary for <b>replicability</b> is available, for example the command lines used to convert the models from their original modelling language into JANI or the precise hardware and runtime configuration that a set of results was obtained in.
-	The benchmark set is hosted on <a href="https://github.com/ahartmanns/qcomp">GitHub</a> and accepts <a href="benchmarks/contributing.html">contributions</a>.
+	The <a href="benchmarks/"><b>Quantitative Verification Benchmark Set</b></a> is a collection of probabilistic models to serve as a benchmark set for the benefit of algorithm and tool developers as well as the foundation of <a href="#qcomp">QComp</a>.
 </p>
 <p style="font-weight: bold;">
-	<a href="benchmarks/index.html">Browse the benchmark set...</a>
+	<a href="benchmarks/">Browse the benchmark set...</a>
 </p>
 
 
 <h2 id="qcomp">QComp: Quantitative Verification Competition</h2>
-<!--<div style="float: right; margin: 0px 0px 24px 48px;">
-	<a href="competition/2019/poster.jpg"><img src="competition/2019/poster.png" style="width: 300px; height: 425px;" /></a>
-</div>-->
 <p>
 	The <b>Comparison of Tools for the Analysis of Quantitative Formal Models</b></a> (QComp) is the friendly competition among verification and analysis tools for quantitative formal models.
-	Drawing its benchmarks from the <a href="benchmarks/index.html">Quantitative Verification Benchmark Set</a>, it compares the performance, versatility, and usability of the participating tools.
+	Drawing its benchmarks from the <a href="benchmarks/">Quantitative Verification Benchmark Set</a>, it compares the performance, versatility, and usability of the participating tools.
 </p>
 <ul class="text continue">
 	<li>
-		<a href="competition/2020/index.html">QComp 2020</a>
-		was part of <a href="https://isola-conference.org/isola2020/">ISoLA 2020</a>.
+		<a href="competition/2020/">QComp 2020</a>
+		was part of <a href="https://isola-conference.org/isola2021/">ISoLA 2020/2021</a> in Rhodes, Greece.
 	</li>
 	<li>
-		<a href="competition/2019/index.html">QComp 2019</a>
-		was part of the <a href="https://tacas.info/toolympics.php">TACAS 2019 TOOLympics</a>.
+		<a href="competition/2019/">QComp 2019</a>
+		was part of the <a href="https://tacas.info/toolympics.php">TACAS 2019 TOOLympics</a> in Prague, Czech Republic.
 	</li>
 </ul class="text continue">
-
 <p style="font-weight: bold;">
-	<a href="competition/2020/index.html">Read more about the next QComp...</a>
+	<a href="competition/2020/">Read more about the most recent QComp...</a>
+</p>
+
+
+<h2 id="rrrr">Reproducibility and Replication of Research Results</h2>
+<p>
+	The Workshop on Reproducibility and Replication of Research Results provides a forum to present novel approaches to foster reproducibility of research results, and replication studies of existing work, in the broad area of formal methods research.
+	Its first edition, <a href="rrrr/2022/">RRRR 2022</a>, will be part of <a href="https://etaps.org/2022/workshops">ETAPS 2022</a> in Munich, Germany.
+</p>
+<p style="font-weight: bold;">
+	<a href="rrrr/2022/">Read more about RRRR 2022...</a>
+</p>
+
+
+<p class="footer">
+	The source code for this website is mostly <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>-licensed and available on <a href="https://github.com/ahartmanns/qcomp">GitHub</a>.
 </p>
 
 </body>

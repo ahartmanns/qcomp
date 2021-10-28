@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>QComp - Quantitative Verification Benchmark Set - qcomp.org</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script type="text/javascript" src="../script.js"></script>
+</head>
+<body onload="init()">
+
+<h1>Quantitative Verification Benchmark Set</h1>
+<div class="belowh1">
+	<a href="index.html">⮌</a> &nbsp;|&nbsp;
+	<a href="#contents">Materials</a> &nbsp;|&nbsp;
+	<a href="#reproducibility">Reproducibility</a> &nbsp;|&nbsp;
+	<a href="#open">Openness</a>
+</div>
+
+<p>
+	The <a href="benchmarks/index.html"><b>Quantitative Verification Benchmark Set</b></a> is a collection of probabilistic models – Markov models, fault trees, stochastic Petri nets and others – to serve as a benchmark set for the benefit of algorithm and tool developers as well as the foundation of <a href="../#qcomp">QComp</a>.
+</p>
+
+
+<h2 id="contents">Available Materials</h2>
+<p>
+	The benchmark set comprises benchmark models, properties for verification, and tool results.
+</p>
+
+<h3>Models</h3>
+<p>
+	The benchmark set's models are
+</p>
+<ul class="text continue">
+	<li>
+		<b>formal</b>:
+		they have an unambiguous, mathematically defined semantics in terms of discrete- or continuous-time Markov chains (DTMC or CTMC), Markov decision processes (MDP), Markov automata (MA) or probabilistic timed automata (PTA);
+	</li>
+	<li>
+		<b>portable</b>:
+		they are provided both in their original modelling language – e.g. the <a href="https://www.prismmodelchecker.org/manual/ThePRISMLanguage/Introduction">PRISM language</a> or <a href="https://www.modestchecker.net/">Modest</a> – as well as the <a href="https://jani-spec.org/">JANI</a> exchange format for model exchange between tools (and we keep a list of <a href="benchmarks/conversions.html">JANI converters</a>);
+	</li>
+	<li>
+		<b>scalable</b>:
+		most models are parameterised, allowing their underlying state spaces to be scaled from a few hundred to billions of states;
+	</li>
+	<li>
+		<b>diverse</b>:
+		the repository includes models from different areas – such as probabilistic model checking, dependability evaluation, and probabilistic planning – that were built for very different analysis approaches and tools; and
+	</li>
+	<li>
+		<b>open</b>:
+		all models and data are open-access and may be used subject to the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.
+	</li>
+</ul>
+
+<h3>Properties</h3>
+<p>
+	Every model is accompanied by a set of <b>properties</b>: queries for quantities of interest to be computed by analysis tools.
+	The benchmark set collects models with queries for unbounded and bounded reachability probabilities, for unbounded and bounded variants of various forms of expected accumulated rewards, and for steady-state values.
+</p>
+
+<h3>Results</h3>
+<p>
+	Alongside its various models, the repository also provides tool <b>results</b>:
+	property values and performance data obtained by applying different tools to the models across different hardware configurations.
+</p>
+
+
+<h2 id="reproducibility">Reproducibility</h2>
+<p>
+	Throughout, all data necessary for <b>reproducibility</b> is available, for example the command lines used to convert the models from their original modelling language into JANI or the precise hardware and runtime configuration that a set of results was obtained in.
+</p>
+
+
+<h2 id="open">Openness</h2>
+<p>
+	The benchmark set is hosted on <a href="https://github.com/ahartmanns/qcomp">GitHub</a> and accepts <a href="contributing.html">contributions</a>.
+</p>
+
+
+</body>
+</html>

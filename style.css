@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	margin: 16px auto; width: 67%; min-width: 960px; max-width: 1280px; padding: 0px;
+	margin: 16px auto; width: 67%; min-width: 800px; max-width: 1280px; padding: 0px;
 	font-family: 'Tajawal', sans-serif; font-size: 15px;
 	background-color: #FFFFFF; color: #000000;
 	hyphens: auto;
@@ -22,11 +22,11 @@ body {
 h1 {
 	font-size: 28px; font-weight: bold;
 	color: #404040;
-	padding: 0px; margin-top: 20px; margin-bottom: 1ex;
+	padding: 0px 0px 4px 0px; margin-top: 20px; margin-bottom: 1ex; border-bottom: 1px solid #D0D0D0;
 }
 
 div.belowh1 {
-	padding: 0px; margin-top: -1ex; margin-bottom: 1ex;
+	padding: 0px; margin-top: -1ex; margin-bottom: 2ex;
 }
 
 h2 {
@@ -133,6 +133,11 @@ label {
 	margin: 0px; padding: 0px !important;
 }
 
+p.footer {
+	margin: 2.5ex 0ex 1ex 0ex; border-top: 1px solid #D0D0D0; padding: 1.6ex 0ex 1ex 0ex;
+	font-style: italic;
+}
+
 /* Tables */
 
 table {
@@ -142,7 +147,8 @@ table {
 thead {
 }
 
-tr.evenrow {}
+tr.evenrow {
+}
 
 tr.oddrow {
 	/*background-color: #F0F0F0;*/
@@ -211,6 +217,7 @@ label, input, button, select {
 
 
 /* Lists */
+
 ul.text {
 	list-style: '— ' outside; padding: 0em 0em 0em 0.9em; margin: 0ex;
 }

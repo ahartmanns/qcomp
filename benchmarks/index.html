@@ -13,7 +13,10 @@
 
 <h1>Quantitative Verification Benchmark Set</h1>
 <div class="belowh1">
-	<a href="../index.html">⮌</a> &nbsp;|&nbsp; <span data-bind="visible: showLicensing">License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></span><a data-bind="click: function() { showLicensing(true); }, visible: !showLicensing()" style="cursor: pointer;">License: CC-BY 4.0</a> &nbsp;|&nbsp; <a href="contributing.html">Contributing</a> &nbsp;|&nbsp;&thinsp; <a href="conversions.html">JANI Converters</a>
+	<a href="../index.html">⮌</a> &nbsp;|&nbsp; <span data-bind="visible: showLicensing">License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></span><a data-bind="click: function() { showLicensing(true); }, visible: !showLicensing()" style="cursor: pointer;">License: CC-BY 4.0</a> &nbsp;|&nbsp;
+	<a href="about.html">About</a> &nbsp;|&nbsp;
+	<a href="contributing.html">Contributing</a> &nbsp;|&nbsp;
+	&thinsp;<a href="conversions.html">JANI Converters</a>
 </div>
 
 <div class="box" data-bind="visible: showLicensing" style="margin-top: 2.75ex;">
@@ -43,7 +46,7 @@
 <div class="box">
 	<div class="boxlabelo"><div class="boxlabel">Search</div></div>
 	<fieldset>
-		<input type="text" data-bind="value: filter.name, valueUpdate: 'input'" placeholder="Show all models" style="width: 32ex;" />
+		<input type="text" data-bind="value: filter.name, valueUpdate: 'input'" placeholder="Show all models" style="width: 20ex;" />
 		&nbsp;of type&nbsp;
 		<select data-bind="options: modelTypes, optionsCaption: '(all)', value: filter.type"></select>
 		&nbsp;/&nbsp;
@@ -51,7 +54,7 @@
 		&nbsp;with a&nbsp;
 		<select data-bind="options: propertyTypes, optionsCaption: '(all)', value: filter.propertyType"></select>
 		&nbsp;property and&nbsp;
-		<input type="text" data-bind="value: filter.minStates, valueUpdate: 'input'" placeholder="zero" style="width: 12ex;" />
+		<input type="text" data-bind="value: filter.minStates, valueUpdate: 'input'" placeholder="zero" style="width: 8ex;" />
 		-
 		<input type="text" data-bind="value: filter.maxStates, valueUpdate: 'input'" placeholder="infinity" style="width: 12ex;" />
 		&nbsp;states
