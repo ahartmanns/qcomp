@@ -186,6 +186,18 @@ td {
 	padding: 0ex 1ex;
 }
 
+table.programme tr.newblock td {
+	padding-top: 0.67ex;
+}
+
+table.programme td {
+	padding-bottom: 0.33ex;
+}
+
+table.programme th {
+	font-weight: bold;
+}
+
 
 /* Form elements */
 
