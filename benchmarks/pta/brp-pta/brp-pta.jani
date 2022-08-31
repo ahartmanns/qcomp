@@ -181,60 +181,10 @@
 			}
 		},
 		{
-			"name": "T_1_1",
-			"expression": {
-				"op": "filter",
-				"fun": "∃",
-				"values": {
-					"op": "=",
-					"left": {
-						"op": "Pmax",
-						"exp": {
-							"op": "F",
-							"exp": {
-								"op": "∨",
-								"left": "channel_k_overflow",
-								"right": "channel_l_overflow"
-							}
-						}
-					},
-					"right": 0
-				},
-				"states": {
-					"op": "initial"
-				}
-			}
-		},
-		{
 			"name": "T_2",
 			"expression": {
 				"op": "filter",
 				"fun": "∀",
-				"values": {
-					"op": "=",
-					"left": {
-						"op": "Pmax",
-						"exp": {
-							"op": "F",
-							"exp": {
-								"op": "∧",
-								"left": "inTransitK",
-								"right": "inTransitL"
-							}
-						}
-					},
-					"right": 0
-				},
-				"states": {
-					"op": "initial"
-				}
-			}
-		},
-		{
-			"name": "T_2_1",
-			"expression": {
-				"op": "filter",
-				"fun": "∃",
 				"values": {
 					"op": "=",
 					"left": {
@@ -277,63 +227,10 @@
 			}
 		},
 		{
-			"name": "T_A1_1",
-			"expression": {
-				"op": "filter",
-				"fun": "∃",
-				"values": {
-					"op": "=",
-					"left": {
-						"op": "Pmax",
-						"exp": {
-							"op": "F",
-							"exp": "premature_timeout"
-						}
-					},
-					"right": 0
-				},
-				"states": {
-					"op": "initial"
-				}
-			}
-		},
-		{
 			"name": "T_A2",
 			"expression": {
 				"op": "filter",
 				"fun": "∀",
-				"values": {
-					"op": "=",
-					"left": {
-						"op": "Pmax",
-						"exp": {
-							"op": "F",
-							"exp": {
-								"op": "∧",
-								"left": {
-									"op": "∧",
-									"left": "s_restart_seen",
-									"right": "get_k_seen"
-								},
-								"right": {
-									"op": "¬",
-									"exp": "r_timeout_seen"
-								}
-							}
-						}
-					},
-					"right": 0
-				},
-				"states": {
-					"op": "initial"
-				}
-			}
-		},
-		{
-			"name": "T_A2_1",
-			"expression": {
-				"op": "filter",
-				"fun": "∃",
 				"values": {
 					"op": "=",
 					"left": {
@@ -387,63 +284,10 @@
 			}
 		},
 		{
-			"name": "P_A_1",
-			"expression": {
-				"op": "filter",
-				"fun": "∃",
-				"values": {
-					"op": "=",
-					"left": {
-						"op": "Pmax",
-						"exp": {
-							"op": "F",
-							"exp": {
-								"op": "∧",
-								"left": "s_nok_seen",
-								"right": "r_ok_seen"
-							}
-						}
-					},
-					"right": 0
-				},
-				"states": {
-					"op": "initial"
-				}
-			}
-		},
-		{
 			"name": "P_B",
 			"expression": {
 				"op": "filter",
 				"fun": "∀",
-				"values": {
-					"op": "=",
-					"left": {
-						"op": "Pmax",
-						"exp": {
-							"op": "F",
-							"exp": {
-								"op": "∧",
-								"left": "s_ok_seen",
-								"right": {
-									"op": "¬",
-									"exp": "r_ok_seen"
-								}
-							}
-						}
-					},
-					"right": 0
-				},
-				"states": {
-					"op": "initial"
-				}
-			}
-		},
-		{
-			"name": "P_B_1",
-			"expression": {
-				"op": "filter",
-				"fun": "∃",
 				"values": {
 					"op": "=",
 					"left": {
