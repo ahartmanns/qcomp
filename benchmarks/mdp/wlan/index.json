@@ -144,7 +144,7 @@
 						},
 						{
 							"property": "sent",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -228,7 +228,7 @@
 						},
 						{
 							"property": "sent",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -312,7 +312,7 @@
 						},
 						{
 							"property": "sent",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -396,7 +396,7 @@
 						},
 						{
 							"property": "sent",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -480,7 +480,7 @@
 						},
 						{
 							"property": "sent",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -564,7 +564,7 @@
 						},
 						{
 							"property": "sent",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -648,7 +648,7 @@
 						},
 						{
 							"property": "sent",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{

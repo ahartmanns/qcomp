@@ -89,7 +89,7 @@
 					"results": [
 						{
 							"property": "eventually_elected",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -139,7 +139,7 @@
 					"results": [
 						{
 							"property": "eventually_elected",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -189,7 +189,7 @@
 					"results": [
 						{
 							"property": "eventually_elected",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -239,7 +239,7 @@
 					"results": [
 						{
 							"property": "eventually_elected",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -285,7 +285,7 @@
 					"results": [
 						{
 							"property": "eventually_elected",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -335,7 +335,7 @@
 					"results": [
 						{
 							"property": "eventually_elected",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -385,7 +385,7 @@
 					"results": [
 						{
 							"property": "eventually_elected",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -435,7 +435,7 @@
 					"results": [
 						{
 							"property": "eventually_elected",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -485,7 +485,7 @@
 					"results": [
 						{
 							"property": "eventually_elected",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{

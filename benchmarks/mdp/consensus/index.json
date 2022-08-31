@@ -105,7 +105,7 @@
 					"results": [
 						{
 							"property": "c1",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -154,7 +154,7 @@
 					"results": [
 						{
 							"property": "c1",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -203,7 +203,7 @@
 					"results": [
 						{
 							"property": "c1",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -252,7 +252,7 @@
 					"results": [
 						{
 							"property": "c1",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -322,7 +322,7 @@
 					"results": [
 						{
 							"property": "c1",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{
@@ -371,7 +371,7 @@
 					"results": [
 						{
 							"property": "c1",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{

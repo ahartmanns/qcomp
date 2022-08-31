@@ -120,7 +120,7 @@
 					"results": [
 						{
 							"property": "elected",
-							"value": "true",
+							"value": true,
 							"note": "Storm/exact"
 						},
 						{

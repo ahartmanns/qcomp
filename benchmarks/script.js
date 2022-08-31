@@ -84,9 +84,9 @@ function CapitaliseFirst(str)
 function resultValueToString(value)
 {
 	if(typeof value === "object" && value.hasOwnProperty("approx")) return value["approx"];
-	if(typeof value === "object" && value.hasOwnProperty("lower") && value.hasOwnProperty("upper")) return "[" + value["lower"] + ", " + value["upper"] + "]";
-	if(typeof value === 'number') return value.toString();
-	return value;
+	else if(typeof value === "object" && (value.hasOwnProperty("lower") || value.hasOwnProperty("upper"))) return (value.hasOwnProperty("lower") ? "[" + value["lower"] : "(-∞") + ", " + (value.hasOwnProperty("upper") ? value["upper"] + "]" : "∞)");
+	else if(typeof value === "number" || typeof value === "boolean") return value.toString();
+	else return value;
 }
 function numberToOrderString(number)
 {
