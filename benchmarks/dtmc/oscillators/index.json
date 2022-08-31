@@ -116,12 +116,12 @@
 					"results": [
 						{
 							"property": "time_to_synch",
-							"value": "Infinity",
+							"value": "∞",
 							"note": "Storm/exact"
 						},
 						{
 							"property": "power_consumption",
-							"value": "Infinity",
+							"value": "∞",
 							"note": "Storm/exact"
 						}
 					]
