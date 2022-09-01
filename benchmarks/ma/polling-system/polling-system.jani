@@ -107,47 +107,6 @@
 			}
 		},
 		{
-			"name": "PminBothFullIsOne_1",
-			"expression": {
-				"op": "filter",
-				"fun": "∃",
-				"values": {
-					"op": "=",
-					"left": {
-						"op": "Pmin",
-						"exp": {
-							"op": "F",
-							"exp": {
-								"op": "∧",
-								"left": {
-									"op": "=",
-									"left": {
-										"op": "aa",
-										"exp": "size",
-										"index": 0
-									},
-									"right": "C"
-								},
-								"right": {
-									"op": "=",
-									"left": {
-										"op": "aa",
-										"exp": "size",
-										"index": 1
-									},
-									"right": "C"
-								}
-							}
-						}
-					},
-					"right": 1
-				},
-				"states": {
-					"op": "initial"
-				}
-			}
-		},
-		{
 			"name": "TminBothFull",
 			"expression": {
 				"op": "filter",

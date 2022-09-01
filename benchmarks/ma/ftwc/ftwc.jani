@@ -195,63 +195,6 @@
 			}
 		},
 		{
-			"name": "ReachMinIsOne_1",
-			"expression": {
-				"op": "filter",
-				"fun": "∃",
-				"values": {
-					"op": "=",
-					"left": {
-						"op": "Pmin",
-						"exp": {
-							"op": "F",
-							"exp": {
-								"op": "∧",
-								"left": {
-									"op": "∨",
-									"left": {
-										"op": "=",
-										"left": {
-											"op": "aa",
-											"exp": "workstations_up",
-											"index": 0
-										},
-										"right": 0
-									},
-									"right": {
-										"op": "aa",
-										"exp": "switches_down",
-										"index": 0
-									}
-								},
-								"right": {
-									"op": "∨",
-									"left": {
-										"op": "=",
-										"left": {
-											"op": "aa",
-											"exp": "workstations_up",
-											"index": 1
-										},
-										"right": 0
-									},
-									"right": {
-										"op": "aa",
-										"exp": "switches_down",
-										"index": 1
-									}
-								}
-							}
-						}
-					},
-					"right": 1
-				},
-				"states": {
-					"op": "initial"
-				}
-			}
-		},
-		{
 			"name": "TimeMax",
 			"expression": {
 				"op": "filter",
