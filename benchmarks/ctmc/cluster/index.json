@@ -263,8 +263,8 @@
 						{
 							"property": "below_min",
 							"value": {
-								"lower": 0.00421944387,
-								"upper": 0.00421944367
+								"lower": 0.00421944367,
+								"upper": 0.00421944387
 							},
 							"note": "Storm"
 						}
