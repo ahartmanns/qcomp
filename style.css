@@ -2,6 +2,7 @@
 
 html {
 	box-sizing: border-box;
+	font-size: 18px;
 }
 
 *, *:before, *:after {
@@ -10,7 +11,7 @@ html {
 
 body {
 	margin: 16px auto; width: 67%; min-width: 800px; max-width: 1280px; padding: 0px;
-	font-family: 'Tajawal', sans-serif; font-size: 15px;
+	font-family: 'Tajawal', sans-serif;
 	background-color: #FFFFFF; color: #000000;
 	hyphens: auto;
 	line-height: 1.3;
@@ -20,37 +21,37 @@ body {
 .clickable { cursor: pointer; }
 
 h1 {
-	font-size: 28px; font-weight: bold;
+	font-size: 187%; font-weight: bold;
 	color: #404040;
-	padding: 0px 0px 4px 0px; margin-top: 20px; margin-bottom: 1ex; border-bottom: 1px solid #D0D0D0;
+	padding: 0px 0px 0.2rem 0px; margin-top: 1.5rem; margin-bottom: 1ex; border-bottom: 1px solid #D0D0D0;
 }
 
 div.belowh1 {
-	padding: 0px; margin-top: -1ex; margin-bottom: 2ex;
+	padding: 0px; margin-top: -0.5rem; margin-bottom: 1rem;
 }
 
 h2 {
-	font-size: 20px; font-weight: bold;
+	font-size: 133%; font-weight: bold;
 	color: #202020;
-	padding: 0px; margin-top: 16px; margin-bottom: 0px;
+	padding: 0px; margin-top: 1.1rem; margin-bottom: 0px;
 }
 
 h3 {
-	font-size: 15px; font-weight: bold;
+	font-size: 100%; font-weight: bold;
 	color: #000000;
-	padding: 0px; margin-top: 10px; margin-bottom: 0px;
+	padding: 0px; margin-top: 0.7rem; margin-bottom: 0px;
 }
 
 h4 {
-	font-size: 15px; font-weight: bold;
+	font-size: 100%; font-weight: bold;
 	color: #000000;
 	padding: 0px; margin: 0px;
 }
 
 h5 {
-	font-size: 13px; font-weight: bold;
+	font-size: 87%; font-weight: bold;
 	color: #606060;
-	padding: 0px; margin: 0px; margin-top: 2px;
+	padding: 0px; margin: 0px; margin-top: 0.2rem;
 }
 
 p {
@@ -58,11 +59,11 @@ p {
 }
 
 ul, ol {
-	padding: 0px; padding-left: 16px; margin: 0px; text-align: justify;
+	padding: 0px; padding-left: 2.1ex; margin: 0px; text-align: justify;
 }
 
 li {
-	padding: 0px; margin: 0px; margin-bottom: 2px;
+	padding: 0px; margin: 0px; margin-bottom: 0.45ex;
 }
 
 .linkcolour {
